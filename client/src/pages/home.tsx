@@ -1,6 +1,14 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Doors from "@/components/Doors";
+import Timeline from "@/components/Timeline";
+import StatsShowcase from "@/components/StatsShowcase";
+import PhotoGallery from "@/components/PhotoGallery";
+import Testimonials from "@/components/Testimonials";
+import BookPreview from "@/components/BookPreview";
+import MediaKit from "@/components/MediaKit";
+import ParticleEffect from "@/components/ParticleEffect";
+import BrandStory from "@/components/BrandStory";
 import Section from "@/components/Section";
 import Lookbook from "@/components/Lookbook";
 import PressStrip from "@/components/PressStrip";
@@ -14,15 +22,21 @@ export default function Home() {
   const { theme, changeTheme } = useTheme();
 
   return (
-    <div className="bg-background text-foreground font-sans antialiased">
+    <div className="bg-background text-foreground font-sans antialiased relative">
+      <ParticleEffect density={30} />
       <Header theme={theme} onThemeChange={changeTheme} />
       <Hero />
       <Doors />
+      <Timeline />
+      <StatsShowcase />
+      <PhotoGallery />
+      <BookPreview />
+      <Testimonials />
       <Section 
         id="athlete"
         eyebrow="ATHLETE"
         title="Two-Sport Dominance"
-        description="Standing at 6'7-6'8 and weighing 245-260 lbs, Kiminou excelled as a varsity basketball captain and football player. From Cristo Rey De La Salle to Ygnacio Valley High School, his athletic journey showcased versatility, leadership, and the discipline that shapes character both on and off the field."
+        description="Standing at 6 feet 8 inches and weighing 300 lbs, Kiminou dominated as a varsity basketball captain and football lineman. His transfer to Ygnacio Valley High School brought experience and leadership to rebuild the program, showcasing the versatility that defines elite two-sport athletes."
         image="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
         imageAlt="Multi-sport athlete in basketball and football"
         primaryButton="VIEW SPORTS CAREER"
@@ -34,7 +48,7 @@ export default function Home() {
         id="author"
         eyebrow="AUTHOR"
         title="Four Books by Age 18"
-        description="Kiminou has published four poetry collections exploring themes of love, faith, identity, and personal growth. From 'The Spirit Of Solomon' to 'Hopeless Romantic', his works showcase mature introspection and emotional depth, remarkable for someone so young. His writing style features vivid imagery and raw honesty."
+        description="Four published poetry collections by age 18: The Spirit Of Solomon, Our Father?, Poems from a Black Boy, and Hopeless Romantic. His work explores faith, identity, love, and the Black experience with remarkable depth and authentic voice that resonates with readers worldwide."
         image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
         imageAlt="Published poetry books and writing"
         primaryButton="VIEW BOOKS"
@@ -46,7 +60,7 @@ export default function Home() {
         id="entrepreneur"
         eyebrow="ENTREPRENEUR"
         title="The Tee Shirt Teens"
-        description="While balancing academics and athletics, Kiminou founded The Tee Shirt Teens, a youth-driven clothing brand focused on empowering young people through fashion and creativity. The brand's mission centers on helping youth express themselves with unique apparel while building authentic community connections."
+        description="Founded The Tee Shirt Teens while maintaining his demanding athletic schedule—a testament to entrepreneurial vision and time management. The brand serves as a platform for authentic youth expression, combining fashion with purpose to build community and empower the next generation."
         image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
         imageAlt="The Tee Shirt Teens clothing brand"
         primaryButton="VISIT STORE"
@@ -58,7 +72,7 @@ export default function Home() {
         id="designer"
         eyebrow="DESIGNER"
         title="Creative Vision in Action"
-        description="As a content creator and creative designer, Kiminou develops fashion concepts, community programs, and digital content that empowers youth. His design philosophy emphasizes creativity with purpose—building platforms for expression, identity, and truth through art, writing, and entrepreneurship."
+        description="Beyond sports and literature, Kiminou channels creativity into visual design and content creation. His work bridges traditional and digital media, developing community programs and creative content that amplifies youth voices and builds authentic connections across diverse audiences."
         image="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
         imageAlt="Creative design and content creation"
         primaryButton="VIEW PORTFOLIO"
@@ -68,6 +82,8 @@ export default function Home() {
       />
       <Lookbook />
       <PressStrip />
+      <BrandStory />
+      <MediaKit />
       <About />
       <Contact />
       <Footer />
