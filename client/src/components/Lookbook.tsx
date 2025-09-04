@@ -4,33 +4,33 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const lookbookImages = [
   {
     src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-    alt: "Athletic excellence in action",
-    title: "Athletic Excellence",
-    description: "Championship performance on the field"
+    alt: "Basketball and football athlete",
+    title: "Two-Sport Athlete",
+    description: "Varsity basketball captain and football player at 6'8\" tall"
   },
   {
     src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-    alt: "Literary achievement celebration",
-    title: "Literary Recognition",
-    description: "Celebrated work touching hearts and minds"
+    alt: "Published author with four poetry books",
+    title: "Published Author",
+    description: "Four poetry books published by age 18, exploring love, faith, and identity"
   },
   {
     src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-    alt: "Entrepreneurial innovation presentation",
-    title: "Innovation Showcase",
-    description: "Presenting breakthrough solutions"
+    alt: "The Tee Shirt Teens clothing brand founder",
+    title: "Fashion Entrepreneur",
+    description: "Founded The Tee Shirt Teens brand while balancing athletics and academics"
   },
   {
     src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-    alt: "Architectural design process",
-    title: "Design Excellence",
-    description: "Creating spaces that inspire"
+    alt: "Creative design and content creation",
+    title: "Creative Designer",
+    description: "Content creator developing youth-focused fashion and community programs"
   },
   {
     src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-    alt: "Leadership and mentoring",
-    title: "Leadership Impact",
-    description: "Inspiring the next generation"
+    alt: "Community leadership and youth advocacy",
+    title: "Youth Leader",
+    description: "Essay contest winner and community advocate continuing his grandmother's legacy"
   }
 ];
 
@@ -63,7 +63,7 @@ export default function Lookbook() {
             className="text-xl opacity-90 font-light max-w-2xl mx-auto animate-on-scroll"
             data-testid="lookbook-description"
           >
-            A curated collection of moments that define excellence across all domains.
+            Highlights from the multifaceted journey of an 18-year-old Bay Area renaissance talent.
           </p>
         </div>
       </div>

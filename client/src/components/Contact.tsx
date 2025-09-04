@@ -33,10 +33,10 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div ref={titleRef} className="text-center mb-16 animate-on-scroll">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6" data-testid="contact-title">
-            Let's Create Together
+            Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto" data-testid="contact-description">
-            Whether you're interested in collaboration, consultation, or conversation, let's explore how we can work together.
+            Whether you're interested in collaboration, book discussions, or business inquiries, let's start a conversation.
           </p>
         </div>
 
@@ -48,15 +48,15 @@ export default function Contact() {
             <div className="space-y-4 text-muted-foreground">
               <div className="flex items-center space-x-3" data-testid="contact-email">
                 <Mail className="w-5 h-5" />
-                <span>hello@kiminouknox.com</span>
+                <span>hello@thett.shop</span>
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-phone">
                 <Phone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
+                <span>Contact via email or social media</span>
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-location">
                 <MapPin className="w-5 h-5" />
-                <span>New York, NY</span>
+                <span>Bay Area, California</span>
               </div>
             </div>
 
@@ -66,15 +66,19 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://instagram.com/hofkiminou" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
-                  aria-label="LinkedIn"
-                  data-testid="social-link-linkedin"
+                  aria-label="Instagram"
+                  data-testid="social-link-instagram-main"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://twitter.com/KnoxKiminou" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
                   aria-label="Twitter"
                   data-testid="social-link-twitter"
@@ -82,20 +86,24 @@ export default function Contact() {
                   <Twitter className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://instagram.com/theteeshirteenss" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
-                  aria-label="Instagram"
-                  data-testid="social-link-instagram"
+                  aria-label="The Tee Shirt Teens Instagram"
+                  data-testid="social-link-business-instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://thett.shop" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
-                  aria-label="GitHub"
-                  data-testid="social-link-github"
+                  aria-label="The Tee Shirt Teens Website"
+                  data-testid="social-link-website"
                 >
-                  <Github className="w-5 h-5" />
+                  <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -148,7 +156,8 @@ export default function Contact() {
                 >
                   <option value="">Select a topic</option>
                   <option value="collaboration">Collaboration</option>
-                  <option value="consultation">Consultation</option>
+                  <option value="books">Book Discussion</option>
+                  <option value="business">Business Inquiry</option>
                   <option value="speaking">Speaking Engagement</option>
                   <option value="media">Media Inquiry</option>
                   <option value="other">Other</option>

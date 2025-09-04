@@ -4,29 +4,29 @@ const doors = [
   {
     id: "athlete",
     title: "ATHLETE",
-    subtitle: "Excellence in Motion",
-    description: "Discover the journey of athletic mastery and the pursuit of physical excellence.",
+    subtitle: "Basketball & Football",
+    description: "6'7\"-6'8\" multi-sport athlete who excelled in basketball and football throughout high school, serving as team captain at Ygnacio Valley High School.",
     image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
   },
   {
     id: "author",
     title: "AUTHOR",
-    subtitle: "Words That Transform",
-    description: "Explore the literary works that inspire, challenge, and illuminate the human experience.",
+    subtitle: "Published Poet",
+    description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic' - all published by age 18.",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
   },
   {
     id: "entrepreneur",
     title: "ENTREPRENEUR",
-    subtitle: "Vision in Action",
-    description: "Experience the innovative ventures that shape industries and create lasting impact.",
+    subtitle: "The Tee Shirt Teens",
+    description: "Founder of The Tee Shirt Teens clothing brand - a youth-driven fashion venture focused on empowering young people through creative design and self-expression.",
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
   },
   {
-    id: "architect",
-    title: "ARCHITECT",
-    subtitle: "Space Reimagined",
-    description: "Witness the architectural innovations that redefine how we inhabit and experience space.",
+    id: "designer",
+    title: "DESIGNER",
+    subtitle: "Creative Visionary",
+    description: "Content creator and creative designer who develops fashion concepts, community programs, and digital content that empowers youth and builds authentic connections.",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
   },
 ];
@@ -58,7 +58,7 @@ export default function Doors() {
             className="text-xl text-muted-foreground font-light max-w-2xl mx-auto animate-on-scroll"
             data-testid="doors-description"
           >
-            Four doors, four journeys. Each path reveals a different facet of excellence.
+            Four doors, four journeys. Explore the multifaceted talents of an 18-year-old renaissance individual.
           </p>
         </div>
 

@@ -64,7 +64,7 @@ export default function Hero() {
           style={{animationDelay: '0.6s'}}
           data-testid="hero-subtitle"
         >
-          ATHLETE • AUTHOR • ENTREPRENEUR • ARCHITECT
+          ATHLETE • AUTHOR • ENTREPRENEUR • DESIGNER
         </p>
         <div 
           className="flex flex-col sm:flex-row gap-6 justify-center animate-fadeInUp" 
