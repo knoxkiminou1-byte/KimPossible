@@ -34,10 +34,10 @@ export default function Hero() {
         muted 
         loop 
         playsInline
-        poster="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
+        poster="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&h=1080"
         data-testid="hero-video"
       >
-        <source src="https://sample-videos.com/zip/10/mp4/720/mp4-25s.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
       
       {/* Fallback Image for Reduced Motion */}
@@ -72,14 +72,14 @@ export default function Hero() {
         >
           <button 
             onClick={scrollToDoors}
-            className="px-8 py-4 bg-white text-black font-medium uppercase tracking-[0.1em] hover:bg-gray-100 transition-colors"
+            className="luxury-button px-8 py-4 bg-white text-black font-medium uppercase tracking-[0.1em] hover:bg-gray-100 transition-all duration-300 hover:scale-105"
             data-testid="button-enter-house"
           >
             ENTER THE HOUSE
           </button>
           <button 
             onClick={scrollToAbout}
-            className="px-8 py-4 border-2 border-white text-white font-medium uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-colors"
+            className="luxury-button px-8 py-4 border-2 border-white text-white font-medium uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all duration-300 hover:scale-105"
             data-testid="button-read-work"
           >
             READ THE WORK

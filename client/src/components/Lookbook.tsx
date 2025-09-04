@@ -3,31 +3,31 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const lookbookImages = [
   {
-    src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+    src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=750",
     alt: "Basketball and football athlete",
     title: "Two-Sport Athlete",
     description: "Varsity basketball captain and football player at 6'8\" tall"
   },
   {
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=750",
     alt: "Published author with four poetry books",
     title: "Published Author",
     description: "Four poetry books published by age 18, exploring love, faith, and identity"
   },
   {
-    src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=750",
     alt: "The Tee Shirt Teens clothing brand founder",
     title: "Fashion Entrepreneur",
     description: "Founded The Tee Shirt Teens brand while balancing athletics and academics"
   },
   {
-    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+    src: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=750",
     alt: "Creative design and content creation",
     title: "Creative Designer",
     description: "Content creator developing youth-focused fashion and community programs"
   },
   {
-    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=750",
     alt: "Community leadership and youth advocacy",
     title: "Youth Leader",
     description: "Essay contest winner and community advocate continuing his grandmother's legacy"
@@ -78,15 +78,17 @@ export default function Lookbook() {
           {lookbookImages.map((item, index) => (
             <div 
               key={index}
-              className="lookbook-item w-80 md:w-96 flex-shrink-0"
+              className="lookbook-item luxury-card w-80 md:w-96 flex-shrink-0"
               data-testid={`lookbook-item-${index}`}
             >
-              <img 
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-96 object-cover rounded-lg shadow-2xl" 
-                loading="lazy"
-              />
+              <div className="overflow-hidden rounded-lg">
+                <img 
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-96 object-cover transition-transform duration-500 hover:scale-110" 
+                  loading="lazy"
+                />
+              </div>
               <div className="mt-6">
                 <h3 className="font-serif text-xl font-semibold mb-2" data-testid={`lookbook-title-${index}`}>
                   {item.title}

@@ -49,7 +49,7 @@ export default function About() {
                 />
                 <button 
                   type="submit" 
-                  className="px-6 py-3 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] rounded-r-md hover:bg-primary/90 transition-colors"
+                  className="luxury-button px-6 py-3 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] rounded-r-md hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                   data-testid="newsletter-submit-button"
                 >
                   SUBSCRIBE

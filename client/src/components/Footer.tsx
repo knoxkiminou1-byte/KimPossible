@@ -10,28 +10,30 @@ export default function Footer() {
     { name: "Athlete", href: "#athlete" },
     { name: "Author", href: "#author" },
     { name: "Entrepreneur", href: "#entrepreneur" },
-    { name: "Architect", href: "#architect" }
+    { name: "Designer", href: "#designer" }
   ];
 
   const resources = [
-    { name: "Publications", href: "#" },
-    { name: "Speaking", href: "#" },
-    { name: "Consulting", href: "#" },
-    { name: "Mentoring", href: "#" }
+    { name: "Poetry Books", href: "#author" },
+    { name: "Speaking Engagements", href: "#contact" },
+    { name: "Athletic Achievements", href: "#athlete" },
+    { name: "Youth Mentorship", href: "#contact" },
+    { name: "Fashion Brand", href: "https://thett.shop" }
   ];
 
   const connect = [
-    { name: "LinkedIn", href: "#" },
-    { name: "Twitter", href: "#" },
-    { name: "Instagram", href: "#" },
+    { name: "Instagram", href: "https://instagram.com/hofkiminou" },
+    { name: "Twitter", href: "https://twitter.com/KnoxKiminou" },
+    { name: "Business IG", href: "https://instagram.com/theteeshirteenss" },
+    { name: "The Tee Shirt Teens", href: "https://thett.shop" },
     { name: "Contact", href: "#contact" }
   ];
 
   const legal = [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Use", href: "#" },
-    { name: "Accessibility", href: "#" },
-    { name: "Sitemap", href: "#" }
+    { name: "Book Excerpts", href: "#author" },
+    { name: "Athletic Stats", href: "#athlete" },
+    { name: "Business Inquiries", href: "#contact" },
+    { name: "Media Kit", href: "#contact" }
   ];
 
   return (
@@ -42,7 +44,7 @@ export default function Footer() {
             KIMINOU KNOX
           </h2>
           <p className="text-lg opacity-90" data-testid="footer-subtitle">
-            ATHLETE • AUTHOR • ENTREPRENEUR • ARCHITECT
+            ATHLETE • AUTHOR • ENTREPRENEUR • DESIGNER
           </p>
         </div>
         
@@ -123,7 +125,7 @@ export default function Footer() {
         
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-sm opacity-80" data-testid="footer-copyright">
-            © 2024 Kiminou Knox. All rights reserved. | Designed with excellence in mind.
+            © 2025 Kiminou Knox. All rights reserved. | Bay Area Renaissance • Class of 2025
           </p>
         </div>
       </div>

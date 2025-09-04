@@ -87,10 +87,24 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
           <div className="flex items-center">
             <button 
               onClick={() => scrollToSection('#hero')}
-              className="text-2xl font-serif font-bold tracking-tight text-foreground hover:text-accent transition-colors"
+              className="luxury-logo group relative overflow-hidden"
               data-testid="logo-button"
             >
-              KIMINOU KNOX
+              <span className="logo-text block text-2xl font-serif font-bold tracking-[0.15em] text-foreground transition-all duration-700 group-hover:tracking-[0.3em] group-hover:scale-110">
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-0">K</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-75">I</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-150">M</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-225">I</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-300">N</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-375">O</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-450">U</span>
+                <span className="inline-block mx-2"> </span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-525">K</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-600">N</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-675">O</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-750">X</span>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
             </button>
           </div>
 

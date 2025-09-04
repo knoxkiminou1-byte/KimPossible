@@ -6,28 +6,28 @@ const doors = [
     title: "ATHLETE",
     subtitle: "Basketball & Football",
     description: "6'7\"-6'8\" multi-sport athlete who excelled in basketball and football throughout high school, serving as team captain at Ygnacio Valley High School.",
-    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
   },
   {
     id: "author",
     title: "AUTHOR",
     subtitle: "Published Poet",
     description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic' - all published by age 18.",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
   },
   {
     id: "entrepreneur",
     title: "ENTREPRENEUR",
     subtitle: "The Tee Shirt Teens",
     description: "Founder of The Tee Shirt Teens clothing brand - a youth-driven fashion venture focused on empowering young people through creative design and self-expression.",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
   },
   {
     id: "designer",
     title: "DESIGNER",
     subtitle: "Creative Visionary",
     description: "Content creator and creative designer who develops fashion concepts, community programs, and digital content that empowers youth and builds authentic connections.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
   },
 ];
 
@@ -70,11 +70,11 @@ export default function Doors() {
               <div
                 key={door.id}
                 ref={doorRef}
-                className="door-card group cursor-pointer animate-on-scroll"
+                className="door-card luxury-card group cursor-pointer animate-on-scroll"
                 onClick={() => scrollToSection(door.id)}
                 data-testid={`door-card-${door.id}`}
               >
-                <div className="bg-card border border-border rounded-lg overflow-hidden h-96">
+                <div className="bg-card border border-border rounded-lg overflow-hidden h-96 shadow-xl hover:shadow-2xl transition-all duration-500">
                   <div 
                     className="h-64 bg-cover bg-center" 
                     style={{ backgroundImage: `url('${door.image}')` }}

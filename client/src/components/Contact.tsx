@@ -158,8 +158,10 @@ export default function Contact() {
                   <option value="collaboration">Collaboration</option>
                   <option value="books">Book Discussion</option>
                   <option value="business">Business Inquiry</option>
+                  <option value="athletics">Athletic Partnership</option>
                   <option value="speaking">Speaking Engagement</option>
                   <option value="media">Media Inquiry</option>
+                  <option value="mentorship">Youth Mentorship</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -180,7 +182,7 @@ export default function Contact() {
               </div>
               <button 
                 type="submit" 
-                className="w-full px-6 py-3 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-colors"
+                className="luxury-button w-full px-6 py-3 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                 data-testid="contact-submit-button"
               >
                 SEND MESSAGE

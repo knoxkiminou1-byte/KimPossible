@@ -1,13 +1,16 @@
 export default function PressStrip() {
   const pressOutlets = [
-    "The New York Times",
-    "Harvard Business Review", 
-    "Architectural Digest",
-    "Sports Illustrated",
-    "Forbes",
-    "The Atlantic",
-    "Dezeen",
-    "Fast Company"
+    "Miles Hall Foundation",
+    "National Honor Society", 
+    "Breaking Barriers Youth Summit",
+    "NCSA Sports",
+    "MaxPreps",
+    "BookShop.org",
+    "The Tee Shirt Teens",
+    "2020 U.S. Census Campaign",
+    "East Palo Alto Community",
+    "Cristo Rey De La Salle",
+    "Ygnacio Valley High School"
   ];
 
   return (

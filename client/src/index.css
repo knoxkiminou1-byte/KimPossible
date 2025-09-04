@@ -216,3 +216,87 @@
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
+/* Luxury Logo Animations */
+.luxury-logo {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.luxury-logo:hover {
+  transform: scale(1.05);
+}
+
+.animation-delay-0 { transition-delay: 0ms; }
+.animation-delay-75 { transition-delay: 75ms; }
+.animation-delay-150 { transition-delay: 150ms; }
+.animation-delay-225 { transition-delay: 225ms; }
+.animation-delay-300 { transition-delay: 300ms; }
+.animation-delay-375 { transition-delay: 375ms; }
+.animation-delay-450 { transition-delay: 450ms; }
+.animation-delay-525 { transition-delay: 525ms; }
+.animation-delay-600 { transition-delay: 600ms; }
+.animation-delay-675 { transition-delay: 675ms; }
+.animation-delay-750 { transition-delay: 750ms; }
+
+/* Luxury Effects */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Luxury Card Effects */
+.luxury-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.luxury-card:hover::before {
+  left: 100%;
+}
+
+.luxury-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Enhanced Button Styles */
+.luxury-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.luxury-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+}
+
+.luxury-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
