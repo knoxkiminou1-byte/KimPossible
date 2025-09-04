@@ -23,7 +23,11 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground font-sans antialiased relative">
-      <ParticleEffect density={30} />
+      <ParticleEffect 
+        density={120} 
+        effects={['sparkle', 'glow', 'star', 'dust']}
+        colors={["#8B5CF6", "#06B6D4", "#10B981", "#F59E0B", "#EF4444", "#EC4899"]}
+      />
       <Header theme={theme} onThemeChange={changeTheme} />
       <Hero />
       <Doors />
