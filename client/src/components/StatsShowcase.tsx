@@ -13,11 +13,12 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: "GPA",
-    value: 3.25,
+    label: "Honor Roll Recognition",
+    value: 4,
+    suffix: " times",
     icon: <Book className="w-6 h-6" />,
     color: "text-blue-400",
-    description: "Academic Excellence"
+    description: "Multiple time honor roll student"
   },
   {
     label: "Height & Weight",
