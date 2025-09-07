@@ -126,32 +126,6 @@ export default function Splash() {
           -webkit-user-drag: none;
         }
 
-        .caption {
-          position: absolute;
-          left: 2rem;
-          bottom: 1.25rem;
-          font-weight: 700;
-          letter-spacing: .02em;
-          text-shadow: 0 2px 12px rgba(0,0,0,.55);
-          display: flex;
-          align-items: center;
-          gap: .6rem;
-        }
-        
-        .caption .pulse {
-          width: .85rem;
-          height: .85rem;
-          border-radius: 999px;
-          background: var(--accent);
-          box-shadow: 0 0 0 0 rgba(255,212,0,.7);
-          animation: pulse 1.3s infinite;
-        }
-        
-        @keyframes pulse { 
-          to { 
-            box-shadow: 0 0 0 16px rgba(255,212,0,0); 
-          } 
-        }
 
         .hotspot {
           position: absolute;
@@ -240,10 +214,6 @@ export default function Splash() {
           
           <div className="hotspot" id="hotspot"></div>
           
-          <div className="caption">
-            <div className="pulse"></div>
-            <span>Click the hand to enter</span>
-          </div>
           
           <button className="enter-btn" id="enterBtn">ENTER</button>
         </div>
