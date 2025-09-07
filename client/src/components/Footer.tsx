@@ -124,6 +124,11 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/20 pt-8 text-center">
+          <div className="mb-4">
+            <p className="text-sm opacity-80 mb-2">
+              Get in touch: <a href="mailto:knoxkiminou1@gmail.com" className="underline hover:opacity-100 transition-opacity" data-testid="footer-email">knoxkiminou1@gmail.com</a>
+            </p>
+          </div>
           <p className="text-sm opacity-80" data-testid="footer-copyright">
             © 2025 Kiminou Knox. All rights reserved. | Bay Area Renaissance • Class of 2025
           </p>

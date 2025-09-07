@@ -7,12 +7,15 @@ import Home from "@/pages/home";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import BlogAdmin from "@/pages/BlogAdmin";
+import Books from "@/pages/Books";
 import NotFound from "@/pages/not-found";
+import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/books" component={Books} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/admin/blog" component={BlogAdmin} />
@@ -25,6 +28,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <LuxuryCursor />
         <Toaster />
         <Router />
       </TooltipProvider>

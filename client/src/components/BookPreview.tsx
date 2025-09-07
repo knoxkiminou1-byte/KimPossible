@@ -1,82 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Book, X, Download, ExternalLink, Heart, FileText, Calendar, Clock, ArrowRight } from "lucide-react";
+import { Book, X, Download, ExternalLink, Heart, FileText, Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 import { format } from "date-fns";
-// Book covers - using elegant placeholder images for now
-const bookSpirit = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=600";
-const bookFather = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=600";
-const bookBlackBoy = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=600";
-const bookRomantic = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=600";
+import PDFModal from "@/components/PDFModal";
 
 interface BookData {
   id: string;
   title: string;
   subtitle: string;
   cover: string;
+  pdf: string;
   year: number;
+  isbn?: string | null;
   themes: string[];
-  excerpt: string;
   description: string;
-  buyLink: string;
+  buyLinks: {
+    amazon?: string | null;
+    googleBooks?: string | null;
+    bookshop?: string | null;
+    bn?: string | null;
+  };
   featured?: boolean;
 }
 
-const books: BookData[] = [
-  {
-    id: "spirit-solomon",
-    title: "The Spirit Of Solomon",
-    subtitle: "Wisdom Beyond Years",
-    cover: bookSpirit,
-    year: 2020,
-    themes: ["Wisdom", "Faith", "Growth"],
-    excerpt: `"In the quiet chambers of the heart,\nWhere wisdom whispers soft and low,\nI seek the spirit that won't depart—\nThe ancient truths that help us grow.\n\nSolomon's temple built with care,\nEach stone a lesson, each beam a prayer..."`,
-    description: "My first published work, exploring themes of wisdom, spiritual growth, and finding guidance in uncertain times. Written when I was just 14, this collection established my voice as a poet.",
-    buyLink: "https://bookshop.org/",
-    featured: true
-  },
-  {
-    id: "our-father",
-    title: "Our Father?",
-    subtitle: "Questions of Faith and Family",
-    cover: bookFather,
-    year: 2022,
-    themes: ["Faith", "Family", "Questions"],
-    excerpt: `"Our Father, who art in heaven—\nBut what of fathers here on earth?\nThe ones who teach us how to pray,\nAnd show us what a man is worth.\n\nSome are present, some are gone,\nSome are perfect, some are flawed..."`,
-    description: "A deeper exploration of faith, family relationships, and the complex nature of father figures—both divine and earthly. This collection asks difficult questions while seeking authentic answers.",
-    buyLink: "https://bookshop.org/"
-  },
-  {
-    id: "black-boy",
-    title: "Poems from a Black Boy",
-    subtitle: "Identity, Heritage, and Hope",
-    cover: bookBlackBoy,
-    year: 2022,
-    themes: ["Identity", "Heritage", "Social Justice"],
-    excerpt: `"I am the dream deferred,\nThe song that rises from the pain,\nThe voice that will not be deterred,\nThe sun that shines through acid rain.\n\nMy skin tells stories of the past,\nMy words write futures yet to come..."`,
-    description: "Raw, honest poetry about growing up Black in America. These poems confront racism, celebrate heritage, and envision a future where young Black voices are heard and valued.",
-    buyLink: "https://bookshop.org/"
-  },
-  {
-    id: "hopeless-romantic",
-    title: "Hopeless Romantic",
-    subtitle: "Love, Loss, and Everything Between",
-    cover: bookRomantic,
-    year: 2024,
-    themes: ["Love", "Relationships", "Growth"],
-    excerpt: `"I am hopelessly, helplessly,\nA romantic in an age of swipes,\nSeeking sonnets in text messages,\nFinding poetry in your smile.\n\nCall me old-fashioned, call me naive,\nBut I still believe in forever..."`,
-    description: "My most recent and personal collection, exploring the complexities of young love, heartbreak, and the courage to remain vulnerable in a cynical world.",
-    buyLink: "https://bookshop.org/",
-    featured: true
-  }
-];
-
 export default function BookPreview() {
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null);
+  const [books, setBooks] = useState<BookData[]>([]);
+  const [pdfModal, setPdfModal] = useState<{id: string, url: string, title: string} | null>(null);
   const booksRef = useScrollAnimation();
   const blogRef = useScrollAnimation();
+
+  // Load books from JSON
+  useEffect(() => {
+    fetch("/books.json")
+      .then(r => r.json())
+      .then(setBooks)
+      .catch(() => setBooks([]));
+  }, []);
 
   // Fetch latest blog posts
   const { data: latestPosts = [] } = useQuery<BlogPost[]>({
@@ -102,8 +65,16 @@ export default function BookPreview() {
               Published Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="books-subtitle">
-              Four poetry collections exploring wisdom, faith, identity, and love—all published before age 19
+              Poetry collections exploring wisdom, faith, identity, and love—with live PDF previews and real purchase links
             </p>
+            <div className="mt-6">
+              <Link href="/books">
+                <button className="inline-flex items-center gap-2 text-primary hover:underline transition-all" data-testid="view-all-books">
+                  <span>View All Books</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -361,20 +332,18 @@ export default function BookPreview() {
                   </p>
                 </div>
 
-                {/* Excerpt */}
+                {/* Sample Preview */}
                 <div className="mb-8">
-                  <h3 className="font-bold mb-3">Excerpt</h3>
-                  <blockquote className="bg-muted/30 p-4 rounded-lg border-l-4 border-primary">
-                    <pre className="font-serif text-sm leading-relaxed whitespace-pre-wrap">
-                      {selectedBook.excerpt}
-                    </pre>
-                  </blockquote>
+                  <h3 className="font-bold mb-3">Published {selectedBook.year}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {selectedBook.isbn ? `ISBN: ${selectedBook.isbn}` : "Available in digital format"}
+                  </p>
                 </div>
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href={selectedBook.buyLink}
+                    href={selectedBook.buyLinks.amazon || selectedBook.buyLinks.googleBooks || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="luxury-button flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
@@ -383,15 +352,29 @@ export default function BookPreview() {
                     <ExternalLink className="w-4 h-4" />
                     Purchase Book
                   </a>
-                  <button className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-border font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors">
-                    <Download className="w-4 h-4" />
-                    Sample PDF
+                  <button 
+                    onClick={() => setPdfModal({ id: selectedBook.id, url: selectedBook.pdf, title: selectedBook.title })}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-border font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
+                    data-testid="book-sample-pdf"
+                  >
+                    <BookOpen className="w-4 h-4" />
+                    Read Sample
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      )}
+
+      {/* PDF Modal */}
+      {pdfModal && (
+        <PDFModal
+          title={pdfModal.title}
+          pdfUrl={pdfModal.url}
+          open={!!pdfModal}
+          onClose={() => setPdfModal(null)}
+        />
       )}
     </>
   );
