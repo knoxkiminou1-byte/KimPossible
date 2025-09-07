@@ -34,16 +34,16 @@ export default function Hero() {
         muted 
         loop 
         playsInline
-        poster="/photos/hero-portrait.jpg"
+        poster="/kiminou-splash-art.png"
         data-testid="hero-video"
       >
-        <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        <source src="/kiminou-splash-art.png" type="video/mp4" />
       </video>
       
       {/* Fallback Image for Reduced Motion */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" 
-        style={{backgroundImage: "url('/photos/hero-portrait.jpg')"}}
+        style={{backgroundImage: "url('/kiminou-splash-art.png')"}}
         data-testid="hero-fallback"
       />
 
