@@ -143,7 +143,20 @@ const getCategoryConfig = (category: string) => {
 export default function Timeline() {
   const timelineRef = useScrollAnimation();
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
   const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const toggleExpanded = (index: number) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -195,8 +208,8 @@ export default function Timeline() {
         </div>
 
         <div className="relative">
-          {/* Animated Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full">
+          {/* Animated Timeline Line - Responsive positioning */}
+          <div className="absolute left-6 md:left-1/2 transform md:-translate-x-0.5 w-0.5 md:w-1 h-full">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/30 to-transparent animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-primary/0 via-primary/60 to-primary/0 h-full timeline-line"></div>
           </div>
@@ -208,17 +221,19 @@ export default function Timeline() {
               const isVisible = visibleItems.has(index);
               const config = getCategoryConfig(event.category);
               
+              const isExpanded = expandedItems.has(index);
+              
               return (
                 <div 
                   key={`${event.year}-${index}`}
                   className={`timeline-item relative flex items-center transition-all duration-1000 delay-${index * 100} ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  } ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
+                  } ${isLeft ? 'flex-row' : 'flex-row-reverse'} md:flex-row`}
                   data-index={index}
                   data-testid={`timeline-event-${index}`}
                 >
-                  {/* Animated Arrow Connector */}
-                  <div className={`absolute top-1/2 z-20 ${isLeft ? 'left-1/2 ml-8' : 'right-1/2 mr-8'} transform -translate-y-1/2`}>
+                  {/* Animated Arrow Connector - Hide on mobile */}
+                  <div className={`hidden md:block absolute top-1/2 z-20 ${isLeft ? 'left-1/2 ml-8' : 'right-1/2 mr-8'} transform -translate-y-1/2`}>
                     <div className={`flex items-center gap-2 ${isLeft ? '' : 'flex-row-reverse'}`}>
                       <div className={`w-8 h-px bg-gradient-to-r ${isLeft ? 'from-primary/60 to-transparent' : 'from-transparent to-primary/60'} ${isVisible ? 'animate-pulse' : ''}`}></div>
                       <div className={`${isVisible ? 'animate-bounce' : ''}`}>
@@ -227,20 +242,20 @@ export default function Timeline() {
                     </div>
                   </div>
 
-                  {/* Timeline Dot with Advanced Animation */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 z-30">
-                    <div className={`relative w-8 h-8 ${isVisible ? 'animate-pulse' : ''}`}>
-                      {/* Outer Glow Ring */}
-                      <div className={`absolute inset-0 rounded-full bg-primary/20 ${config.glow} ${isVisible ? 'animate-ping' : ''}`}></div>
+                  {/* Timeline Dot - Simplified for Mobile */}
+                  <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 z-30">
+                    <div className={`relative w-6 h-6 md:w-8 md:h-8 ${isVisible ? 'animate-pulse' : ''}`}>
+                      {/* Outer Glow Ring - Desktop only */}
+                      <div className={`hidden md:block absolute inset-0 rounded-full bg-primary/20 ${config.glow} ${isVisible ? 'animate-ping' : ''}`}></div>
                       {/* Main Dot */}
-                      <div className="absolute inset-0 bg-primary rounded-full border-4 border-background shadow-2xl">
-                        <div className="absolute inset-1 bg-background rounded-full flex items-center justify-center">
-                          <div className={`w-2.5 h-2.5 bg-primary rounded-full ${isVisible ? 'animate-pulse' : ''}`}></div>
+                      <div className="absolute inset-0 bg-primary rounded-full border-2 md:border-4 border-background shadow-lg md:shadow-2xl">
+                        <div className="absolute inset-0.5 md:inset-1 bg-background rounded-full flex items-center justify-center">
+                          <div className={`w-1.5 h-1.5 md:w-2.5 md:h-2.5 bg-primary rounded-full ${isVisible ? 'animate-pulse' : ''}`}></div>
                         </div>
                       </div>
-                      {/* Floating Sparkles */}
+                      {/* Floating Sparkles - Desktop only */}
                       {isVisible && (
-                        <div className="absolute -inset-2">
+                        <div className="hidden md:block absolute -inset-2">
                           <Sparkles className="absolute -top-1 -left-1 w-3 h-3 text-primary/60 animate-bounce" style={{ animationDelay: '0.5s' }} />
                           <Zap className="absolute -bottom-1 -right-1 w-3 h-3 text-primary/60 animate-bounce" style={{ animationDelay: '1s' }} />
                         </div>
@@ -248,9 +263,26 @@ export default function Timeline() {
                     </div>
                   </div>
 
-                  {/* Content Card with Elaborate Effects */}
-                  <div className={`w-5/12 ${isLeft ? 'pr-12' : 'pl-12'}`}>
-                    <div className={`luxury-card relative p-8 bg-gradient-to-br ${config.gradient} border border-border/50 rounded-2xl shadow-2xl hover:shadow-4xl transition-all duration-700 group backdrop-blur-sm ${isVisible ? 'hover:scale-105' : ''}`}>
+                  {/* Content Card with Mobile-Friendly Effects */}
+                  <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-12' : 'md:pl-12'} px-4 md:px-0`}>
+                    <div 
+                      className={`luxury-card relative p-6 md:p-8 bg-gradient-to-br ${config.gradient} border border-border/50 rounded-2xl shadow-2xl hover:shadow-4xl transition-all duration-700 group backdrop-blur-sm cursor-pointer touch-manipulation ${
+                        isVisible ? 'hover:scale-105 active:scale-95' : ''
+                      } ${
+                        isExpanded ? 'scale-105 shadow-4xl' : ''
+                      }`}
+                      onClick={() => toggleExpanded(index)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          toggleExpanded(index);
+                        }
+                      }}
+                      aria-expanded={isExpanded}
+                      aria-label={`Expand details for ${event.title}`}
+                    >
                       {/* Category Badge with Glow */}
                       <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-full text-sm font-semibold border mb-6 ${config.color} ${isVisible ? 'animate-pulse' : ''}`}>
                         <div className="p-1 bg-current/20 rounded-full">
@@ -260,19 +292,23 @@ export default function Timeline() {
                         <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
                       </div>
 
-                      {/* Event Image with Advanced Hover */}
+                      {/* Event Image with Mobile-Friendly Interactions */}
                       {event.image && (
                         <div className="mb-6 overflow-hidden rounded-xl relative group">
                           <img 
                             src={event.image}
                             alt={event.title}
-                            className="w-full h-56 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                            className="w-full h-48 md:h-56 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                          {/* Achievement Badge Overlay */}
+                          <div className={`absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-500 ${
+                            isExpanded ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'
+                          }`}></div>
+                          {/* Achievement Badge - Always visible on mobile, hover on desktop */}
                           {event.achievement && (
-                            <div className="absolute top-4 right-4 px-3 py-1 bg-primary/90 text-primary-foreground text-xs font-bold rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                            <div className={`absolute top-4 right-4 px-3 py-2 bg-primary/95 text-primary-foreground text-xs font-bold rounded-full transition-all duration-500 md:opacity-0 md:translate-y-2 ${
+                              isExpanded ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-0 md:group-hover:opacity-100 md:group-hover:translate-y-0'
+                            }`}>
                               {event.achievement}
                             </div>
                           )}
@@ -289,22 +325,35 @@ export default function Timeline() {
                         </p>
                       </div>
 
-                      {/* Interactive Hover Effects */}
-                      <div className="absolute inset-0 rounded-2xl">
+                      {/* Interactive Touch & Hover Effects */}
+                      <div className="absolute inset-0 rounded-2xl pointer-events-none">
                         {/* Animated Border Gradient */}
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-                        {/* Corner Accents */}
-                        <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-500 transform rotate-0 group-hover:rotate-45"></div>
-                        <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-500 transform rotate-0 group-hover:-rotate-45"></div>
+                        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 transition-opacity duration-500 animate-pulse ${
+                          isExpanded ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'
+                        }`}></div>
+                        {/* Corner Accents - Always visible on mobile when expanded */}
+                        <div className={`absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-primary/50 transition-all duration-500 ${
+                          isExpanded ? 'opacity-100 rotate-45' : 'opacity-60 rotate-0 md:opacity-0 md:group-hover:opacity-100 md:group-hover:rotate-45'
+                        }`}></div>
+                        <div className={`absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-primary/50 transition-all duration-500 ${
+                          isExpanded ? 'opacity-100 -rotate-45' : 'opacity-60 rotate-0 md:opacity-0 md:group-hover:opacity-100 md:group-hover:-rotate-45'
+                        }`}></div>
                       </div>
 
                       {/* Bottom Accent Line */}
-                      <div className="mt-6 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                      <div className={`mt-6 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent transition-transform duration-700 ${
+                        isExpanded ? 'scale-x-100' : 'scale-x-75 md:scale-x-0 md:group-hover:scale-x-100'
+                      }`}></div>
+
+                      {/* Tap/Click Indicator for Mobile */}
+                      <div className="md:hidden absolute top-4 left-4 text-xs text-muted-foreground/60 font-medium">
+                        {isExpanded ? 'Tap to close' : 'Tap to expand'}
+                      </div>
                     </div>
                   </div>
 
-                  {/* Spacer */}
-                  <div className="w-2/12"></div>
+                  {/* Spacer - Hide on mobile */}
+                  <div className="hidden md:block md:w-2/12"></div>
                 </div>
               );
             })}
