@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Splash from "@/pages/Splash";
 import Home from "@/pages/home";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
@@ -14,7 +15,8 @@ import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Splash} />
+      <Route path="/home" component={Home} />
       <Route path="/books" component={Books} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
