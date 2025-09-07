@@ -19,7 +19,7 @@ const storyChapters: StoryChapter[] = [
     title: "The Vision",
     year: "2023",
     description: "From balancing athletics and academics emerged an idea: clothing that speaks to the authentic youth experience.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/athlete-action.jpg",
     icon: <Target className="w-6 h-6" />,
     quote: "Fashion should empower, not just dress. It should give young people a voice.",
     details: [
@@ -34,7 +34,7 @@ const storyChapters: StoryChapter[] = [
     title: "Building Community",
     year: "2023",
     description: "The Tee Shirt Teens became more than a brand—it became a platform for young voices and genuine connection.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/athlete-action.jpg",
     icon: <Users className="w-6 h-6" />,
     quote: "We're not just selling shirts. We're building a movement of young people who refuse to be silent.",
     details: [
@@ -49,7 +49,7 @@ const storyChapters: StoryChapter[] = [
     title: "Expanding Impact",
     year: "2024",
     description: "Growth through purpose—each design telling a story, each purchase supporting youth empowerment initiatives.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/athlete-action.jpg",
     icon: <Heart className="w-6 h-6" />,
     quote: "Every design has meaning. Every purchase has purpose. Every customer has a voice.",
     details: [
@@ -64,7 +64,7 @@ const storyChapters: StoryChapter[] = [
     title: "The Next Chapter",
     year: "2025",
     description: "Expanding beyond clothing to create comprehensive platforms for youth expression, creativity, and empowerment.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/athlete-action.jpg",
     icon: <Shirt className="w-6 h-6" />,
     quote: "This is just the beginning. The Tee Shirt Teens will be the voice of a generation.",
     details: [

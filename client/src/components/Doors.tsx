@@ -6,28 +6,28 @@ const doors = [
     title: "ATHLETE",
     subtitle: "Basketball & Football",
     description: "6'7\"-6'8\" multi-sport athlete who excelled in basketball and football throughout high school, serving as team captain at Ygnacio Valley High School.",
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/athlete-action.jpg",
   },
   {
     id: "author",
     title: "AUTHOR",
     subtitle: "Published Poet",
     description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic' - all published by age 18.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/author-portrait.jpg",
   },
   {
     id: "entrepreneur",
     title: "ENTREPRENEUR",
     subtitle: "The Tee Shirt Teens",
     description: "Founder of The Tee Shirt Teens clothing brand - a youth-driven fashion venture focused on empowering young people through creative design and self-expression.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/entrepreneur-style.jpg",
   },
   {
     id: "designer",
     title: "DESIGNER",
     subtitle: "Creative Visionary",
     description: "Content creator and creative designer who develops fashion concepts, community programs, and digital content that empowers youth and builds authentic connections.",
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    image: "/photos/creative-designer.jpg",
   },
 ];
 

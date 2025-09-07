@@ -12,42 +12,42 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    src: "/photos/athlete-action.jpg",
     alt: "Basketball action shot",
     title: "Court Dominance",
     category: "athlete",
     description: "Commanding the basketball court with 6'8\" presence and leadership as team captain"
   },
   {
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    src: "/photos/author-portrait.jpg",
     alt: "Poetry writing session",
     title: "Literary Creation",
     category: "author",
     description: "Crafting verses that explore love, faith, identity, and the Black experience"
   },
   {
-    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    src: "/photos/entrepreneur-style.jpg",
     alt: "The Tee Shirt Teens brand",
     title: "Fashion Innovation", 
     category: "entrepreneur",
     description: "Building The Tee Shirt Teens into a voice for authentic youth expression"
   },
   {
-    src: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    src: "/photos/creative-designer.jpg",
     alt: "Creative design work",
     title: "Visual Storytelling",
     category: "designer",
     description: "Developing content and community programs that resonate with young audiences"
   },
   {
-    src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    src: "/photos/hero-portrait.jpg",
     alt: "Football training",
     title: "Gridiron Power",
     category: "athlete",
     description: "300-pound lineman bringing strength and strategy to Ygnacio Valley football"
   },
   {
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    src: "/photos/author-portrait.jpg",
     alt: "Book collection",
     title: "Published Works",
     category: "author",
