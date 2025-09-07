@@ -39,7 +39,7 @@ const Card = ({ children, className = "" }: any) => (
 // --- Main Component ---
 export default function Portfolio() {
   const socials = [
-    { name: "Instagram", href: "https://instagram.com/hofkiminou", icon: Instagram },
+    { name: "Instagram", href: "https://instagram.com/kiminouhof", icon: Instagram },
     { name: "X / Twitter", href: "https://twitter.com/KnoxKiminou", icon: Twitter },
   ];
 
@@ -127,10 +127,10 @@ export default function Portfolio() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="mailto:contact@kiminouknox.com"
+                  href="mailto:kiminouknowledge@gmail.com"
                   className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow"
                 >
-                  <span className="inline-flex items-center gap-2"><Mail className="w-4 h-4"/> Email me</span>
+                  <span className="inline-flex items-center gap-2"><Mail className="w-4 h-4"/> kiminouknowledge@gmail.com</span>
                 </a>
                 {socials.map((s) => (
                   <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow">
@@ -248,10 +248,10 @@ export default function Portfolio() {
                 </p>
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a
-                    href="mailto:contact@kiminouknox.com"
+                    href="mailto:kiminouknowledge@gmail.com"
                     className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2"
                   >
-                    <Mail className="w-4 h-4"/> contact@kiminouknox.com
+                    <Mail className="w-4 h-4"/> kiminouknowledge@gmail.com
                   </a>
                   {socials.map((s) => (
                     <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2">

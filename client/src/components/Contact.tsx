@@ -48,15 +48,15 @@ export default function Contact() {
             <div className="space-y-4 text-muted-foreground">
               <div className="flex items-center space-x-3" data-testid="contact-email">
                 <Mail className="w-5 h-5" />
-                <a href="mailto:knoxkiminou1@gmail.com" className="hover:underline transition-all">knoxkiminou1@gmail.com</a>
+                <a href="mailto:kiminouknowledge@gmail.com" className="hover:underline transition-all">kiminouknowledge@gmail.com</a>
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-phone">
                 <Phone className="w-5 h-5" />
-                <span>Contact via email or social media</span>
+                <a href="tel:+15108218465" className="hover:underline transition-all">(510) 821-8465</a>
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-location">
                 <MapPin className="w-5 h-5" />
-                <span>Bay Area, California</span>
+                <span>Oakland/East Palo Alto, CA</span>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com/hofkiminou" 
+                  href="https://instagram.com/kiminouhof" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 

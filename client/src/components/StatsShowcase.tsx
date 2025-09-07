@@ -13,50 +13,49 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: "Poetry Books Published",
-    value: 4,
+    label: "GPA",
+    value: 3.25,
     icon: <Book className="w-6 h-6" />,
     color: "text-blue-400",
-    description: "Published by age 18"
+    description: "Academic Excellence"
   },
   {
-    label: "Height",
+    label: "Height & Weight",
     value: 6,
-    suffix: "'7\"",
+    suffix: "'7\" / 235 lbs",
     icon: <Target className="w-6 h-6" />,
     color: "text-green-400",
-    description: "Dominant presence"
+    description: "Athletic Profile"
   },
   {
-    label: "Poetry Books",
-    value: 4,
-    suffix: " published",
+    label: "PSAT Score",
+    value: 1200,
     icon: <Trophy className="w-6 h-6" />,
     color: "text-red-400",
-    description: "Published works"
+    description: "Standardized Testing"
   },
   {
-    label: "Brand Established",
-    value: 2023,
-    suffix: "+",
-    icon: <Users className="w-6 h-6" />,
-    color: "text-purple-400",
-    description: "The Tee Shirt Teens founder"
-  },
-  {
-    label: "Leadership Positions",
-    value: 3,
+    label: "Honor Roll",
+    value: 4,
+    suffix: " times",
     icon: <Star className="w-6 h-6" />,
     color: "text-yellow-400",
-    description: "Team Captain & Founder"
+    description: "Academic Recognition"
   },
   {
-    label: "Community Awards",
-    value: 1,
+    label: "Published Books",
+    value: 4,
+    icon: <Book className="w-6 h-6" />,
+    color: "text-purple-400",
+    description: "Poetry Collections"
+  },
+  {
+    label: "Major Awards",
+    value: 2,
     suffix: "+",
     icon: <Heart className="w-6 h-6" />,
     color: "text-pink-400",
-    description: "Miles Hall Foundation"
+    description: "Miles Hall & Bethune Cookman"
   }
 ];
 

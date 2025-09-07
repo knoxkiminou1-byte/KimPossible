@@ -5,7 +5,7 @@ const doors = [
     id: "athlete",
     title: "ATHLETE",
     subtitle: "Basketball Excellence",
-    description: "6'7\" basketball athlete who served as team captain at Ygnacio Valley High School, demonstrating exceptional leadership and court presence.",
+    description: "6'7\", 235 lbs multi-sport athlete (Basketball Guard/Forward/Center, Football DE/TE) who served as varsity captain with features in PrepHoops & 247Sports, demonstrating exceptional leadership across multiple positions.",
     image: "/photos/athletic-pose.jpg",
   },
   {
@@ -19,7 +19,7 @@ const doors = [
     id: "entrepreneur",
     title: "ENTREPRENEUR",
     subtitle: "The Tee Shirt Teens",
-    description: "Founder of The Tee Shirt Teens clothing brand, a youth driven fashion venture focused on empowering young people through creative design and self expression.",
+    description: "Co-Owner of The TeeShirtTeens apparel brand while maintaining demanding athletic schedule, showcasing entrepreneurial vision and time management skills that inspire youth empowerment.",
     image: "/photos/entrepreneur-style.jpg",
   },
   {
