@@ -24,7 +24,7 @@ export default function About() {
             Kiminou Knox is an 18-year-old multi-talented individual from the Bay Area of California, distinguished as an athlete, published author, entrepreneur, and creative designer. Standing at 6'7", he excelled in basketball throughout high school.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-2">
-            The grandson of the late Dr. Faye McNair-Knox—a respected community leader and former executive director of One East Palo Alto—Kiminou carries forward a legacy of advocacy and community engagement. A National Honor Society member and four-time Honor Roll student, he graduated from Ygnacio Valley High School in 2025.
+            The son of Rashida Knox and grandson of the late Dr. Faye McNair-Knox—a respected community leader and former executive director of One East Palo Alto—Kiminou carries forward a family legacy of advocacy and community engagement. A National Honor Society member and four-time Honor Roll student, he graduated from Ygnacio Valley High School in 2025.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-12" data-testid="about-description-3">
             Beyond athletics, Kiminou has authored four published poetry books and founded The Tee Shirt Teens clothing brand. His journey represents the intersection of athletic discipline, literary expression, entrepreneurial vision, and creative design—a unique perspective on pursuing excellence across multiple domains.
