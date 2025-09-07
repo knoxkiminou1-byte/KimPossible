@@ -40,11 +40,11 @@ export default function Home() {
         <Testimonials />
         <Section 
           id="athlete"
-        eyebrow="ATHLETE"
-        title="Basketball Excellence"
-        description="Standing at 6'7\" and 235 lbs, Kiminou is a multi-sport athlete (Basketball Guard/Forward/Center, Football DE/TE) who served as varsity captain at Ygnacio Valley High School. Featured in PrepHoops and 247Sports as Redwood Christian MVP and Pine Valley MVP, he's registered with NCAA eligibility and earned CaliHoop Top Team Player Selection."
-        image="/photos/athletic-pose.jpg"
-        imageAlt="Basketball athlete in athletic pose"
+          eyebrow="ATHLETE"
+          title="Basketball Excellence"
+          description="Standing at 6 feet 7 inches and 235 lbs, Kiminou is a multi-sport athlete who served as varsity captain at Ygnacio Valley High School. Featured in PrepHoops and 247Sports as Redwood Christian MVP and Pine Valley MVP, he is registered with NCAA eligibility and earned CaliHoop Top Team Player Selection."
+          image="/photos/athletic-pose.jpg"
+          imageAlt="Basketball athlete in athletic pose"
           primaryButton="VIEW SPORTS CAREER"
           secondaryButton="READ ATHLETIC STORY"
           imageLeft={false}
