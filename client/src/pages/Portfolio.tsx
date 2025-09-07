@@ -161,8 +161,8 @@ export default function Portfolio() {
             >
               <div className="rounded-2xl overflow-hidden border shadow-sm">
                 <img
-                  src="/photos/author-reading-book.jpg"
-                  alt="Kiminou Knox reading his book"
+                  src="/photos/brown-suit-author.jpg"
+                  alt="Kiminou Knox in brown suit"
                   className="w-full aspect-[4/5] object-cover"
                 />
               </div>

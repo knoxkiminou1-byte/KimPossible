@@ -29,6 +29,44 @@ export default function Section({
   const contentRef = useScrollAnimation();
   const imageRef = useScrollAnimation();
 
+  const handlePrimaryClick = () => {
+    switch (primaryButton) {
+      case "VIEW SPORTS CAREER":
+        window.scrollTo({ top: document.getElementById('athlete')?.offsetTop || 0, behavior: 'smooth' });
+        break;
+      case "VIEW BOOKS":
+        window.location.href = "/books";
+        break;
+      case "VISIT STORE":
+        window.open("https://thett.shop", "_blank");
+        break;
+      case "VIEW PORTFOLIO":
+        window.location.href = "/portfolio";
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSecondaryClick = () => {
+    switch (secondaryButton) {
+      case "READ ATHLETIC STORY":
+        window.scrollTo({ top: document.getElementById('athlete')?.offsetTop || 0, behavior: 'smooth' });
+        break;
+      case "READ EXCERPTS":
+        window.location.href = "/books";
+        break;
+      case "BRAND STORY":
+        window.scrollTo({ top: document.getElementById('entrepreneur')?.offsetTop || 0, behavior: 'smooth' });
+        break;
+      case "DESIGN PROCESS":
+        window.scrollTo({ top: document.getElementById('designer')?.offsetTop || 0, behavior: 'smooth' });
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <section id={id} className={`py-32 ${background}`} data-testid={`section-${id}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -59,12 +97,14 @@ export default function Section({
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
+                onClick={handlePrimaryClick}
                 className="luxury-button px-6 py-3 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                 data-testid={`section-primary-button-${id}`}
               >
                 {primaryButton}
               </button>
               <button 
+                onClick={handleSecondaryClick}
                 className="luxury-button px-6 py-3 border border-border text-foreground font-medium uppercase tracking-[0.1em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105"
                 data-testid={`section-secondary-button-${id}`}
               >
