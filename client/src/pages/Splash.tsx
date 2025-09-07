@@ -165,8 +165,8 @@ export default function Splash() {
           transform: translate(-50%, -50%);
           cursor: pointer;
           border-radius: 50%;
-          background: rgba(255,212,0,.12);
-          border: 2px solid rgba(255,212,0,.3);
+          background: rgba(255,212,0,.08);
+          border: 2px solid rgba(255,212,0,.2);
           backdrop-filter: blur(2px);
           transition: all .25s ease;
           animation: glow 2s ease-in-out infinite alternate;
@@ -196,23 +196,29 @@ export default function Splash() {
 
         .enter-btn {
           position: absolute;
-          right: 2rem;
-          bottom: 1.25rem;
-          padding: .75rem 1.5rem;
+          left: var(--hotspot-left);
+          top: var(--hotspot-top);
+          transform: translate(-50%, -50%);
+          padding: .5rem 1rem;
           background: var(--accent);
           color: var(--bg);
           border: none;
-          border-radius: 8px;
-          font-weight: 600;
+          border-radius: 25px;
+          font-weight: 700;
           cursor: pointer;
           transition: all .2s ease;
           text-decoration: none;
           display: inline-block;
+          font-size: 0.9rem;
+          letter-spacing: 0.05em;
+          box-shadow: 0 4px 15px rgba(255,212,0,.4);
+          z-index: 10;
         }
         
         .enter-btn:hover {
           background: #ffdf33;
-          transform: translateY(-2px);
+          transform: translate(-50%, -50%) scale(1.1);
+          box-shadow: 0 6px 20px rgba(255,212,0,.6);
         }
 
         .fade-out {
