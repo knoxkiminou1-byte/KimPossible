@@ -76,7 +76,7 @@ export default function Splash() {
     <>
       <style dangerouslySetInnerHTML={{__html: `
         :root {
-          --hotspot-left: 15%;
+          --hotspot-left: 18%;
           --hotspot-top: 80%;
           --hotspot-width: 15%;
           --hotspot-height: 20%;
@@ -96,13 +96,10 @@ export default function Splash() {
 
         .splash {
           position: relative;
-          width: min(1200px, 92vw);
-          aspect-ratio: 16 / 9;
-          border-radius: 18px;
-          box-shadow: 0 20px 60px rgba(0,0,0,.45);
+          width: 100vw;
+          height: 100vh;
           overflow: hidden;
           background: #111;
-          transform: translateY(6px);
           animation: rise .7s cubic-bezier(.2,.9,.2,1) both;
         }
         
