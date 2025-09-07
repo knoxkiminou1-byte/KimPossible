@@ -40,9 +40,7 @@ const Card = ({ children, className = "" }: any) => (
 export default function Portfolio() {
   const socials = [
     { name: "Instagram", href: "https://instagram.com/hofkiminou", icon: Instagram },
-    { name: "YouTube", href: "#", icon: Youtube },
     { name: "X / Twitter", href: "https://twitter.com/KnoxKiminou", icon: Twitter },
-    { name: "Amazon Author", href: "#", icon: LinkIcon },
   ];
 
   const novelsMajor = [
@@ -133,12 +131,6 @@ export default function Portfolio() {
                   className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow"
                 >
                   <span className="inline-flex items-center gap-2"><Mail className="w-4 h-4"/> Email me</span>
-                </a>
-                <a
-                  href="#"
-                  className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow"
-                >
-                  <span className="inline-flex items-center gap-2"><FileText className="w-4 h-4"/> Download résumé</span>
                 </a>
                 {socials.map((s) => (
                   <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow">
