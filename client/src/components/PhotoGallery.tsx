@@ -19,7 +19,7 @@ const galleryImages: GalleryImage[] = [
     description: "Commanding the basketball court with 6'7\" presence and leadership as team captain"
   },
   {
-    src: "/photos/brown-suit-author.jpg",
+    src: "/photos/author-reading-book.jpg",
     alt: "Poetry writing session",
     title: "Literary Creation",
     category: "author",

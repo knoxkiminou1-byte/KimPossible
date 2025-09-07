@@ -55,7 +55,7 @@ export default function Home() {
         eyebrow="AUTHOR"
         title="Four Books by Age 18"
         description="Four published poetry collections by age 18: The Spirit Of Solomon, Our Father?, Poems from a Black Boy, and Hopeless Romantic. His work explores faith, identity, love, and the Black experience with remarkable depth and authentic voice that resonates with readers worldwide."
-        image="/photos/brown-suit-author.jpg"
+        image="/photos/author-reading-book.jpg"
         imageAlt="Published poetry books and writing"
           primaryButton="VIEW BOOKS"
           secondaryButton="READ EXCERPTS"

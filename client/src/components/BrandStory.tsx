@@ -34,7 +34,7 @@ const storyChapters: StoryChapter[] = [
     title: "Building Community",
     year: "2023",
     description: "The Tee Shirt Teens became more than a brand—it became a platform for young voices and genuine connection.",
-    image: "/photos/athlete-action.jpg",
+    image: "/photos/youth-leader-portrait.jpg",
     icon: <Users className="w-6 h-6" />,
     quote: "We're not just selling shirts. We're building a movement of young people who refuse to be silent.",
     details: [

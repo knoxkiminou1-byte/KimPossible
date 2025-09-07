@@ -13,7 +13,7 @@ const doors = [
     title: "AUTHOR",
     subtitle: "Published Poet",
     description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic', all published by age 18.",
-    image: "/photos/brown-suit-author.jpg",
+    image: "/photos/author-reading-book.jpg",
   },
   {
     id: "entrepreneur",

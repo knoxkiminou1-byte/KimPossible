@@ -38,7 +38,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Literary Debut",
     category: "literary", 
     icon: <Book className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMijA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/author-reading-book.jpg"
   },
   {
     year: "2021",
@@ -56,7 +56,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Three Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
-    image: "/photos/brown-suit-author.jpg"
+    image: "/photos/author-reading-book.jpg"
   },
   {
     year: "2023", 
@@ -74,7 +74,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Community Recognition",
     category: "personal",
     icon: <Heart className="w-5 h-5" />,
-    image: "/photos/creative-designer.jpg"
+    image: "/photos/youth-leader-portrait.jpg"
   },
   {
     year: "2024",
@@ -92,7 +92,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Fourth Poetry Book",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
-    image: "/photos/brown-suit-author.jpg"
+    image: "/photos/author-reading-book.jpg"
   },
   {
     year: "2025",
