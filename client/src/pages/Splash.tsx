@@ -185,6 +185,39 @@ export default function Splash() {
           box-shadow: 0 4px 15px rgba(255,212,0,.4);
           z-index: 10;
         }
+
+        /* Mobile responsiveness for iPhone and small screens */
+        @media (max-width: 768px) {
+          :root {
+            --hotspot-left: 18%;
+            --hotspot-top: 75%;
+            --hotspot-width: 20%;
+            --hotspot-height: 15%;
+          }
+          
+          .enter-btn {
+            padding: .4rem .8rem;
+            font-size: 0.8rem;
+          }
+          
+          .hotspot {
+            border-width: 1px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          :root {
+            --hotspot-left: 20%;
+            --hotspot-top: 70%;
+            --hotspot-width: 25%;
+            --hotspot-height: 20%;
+          }
+          
+          .enter-btn {
+            padding: .35rem .7rem;
+            font-size: 0.75rem;
+          }
+        }
         
         .enter-btn:hover {
           background: #ffdf33;

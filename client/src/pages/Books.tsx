@@ -62,7 +62,7 @@ export default function BooksPage() {
                   {b.themes.map(t => <span key={t} className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs">{t}</span>)}
                 </div>
 
-                <div className="mt-6 grid grid-cols-2 gap-2">
+                <div className={`mt-6 gap-2 ${(b.buyLinks.amazon || b.buyLinks.googleBooks) ? 'grid grid-cols-2' : 'flex'}`}>
                   <button
                     onClick={() => setOpen({ id: b.id, url: b.pdf, title: b.title })}
                     className="group inline-flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -70,15 +70,17 @@ export default function BooksPage() {
                   >
                     <BookOpen className="w-4 h-4" /> Read Sample
                   </button>
-                  <a 
-                    href={b.buyLinks.amazon || b.buyLinks.googleBooks || "#"} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 transition-colors"
-                    data-testid={`button-buy-book-${b.id}`}
-                  >
-                    <ExternalLink className="w-4 h-4" /> Buy Book
-                  </a>
+                  {(b.buyLinks.amazon || b.buyLinks.googleBooks) && (
+                    <a 
+                      href={b.buyLinks.amazon || b.buyLinks.googleBooks} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 transition-colors"
+                      data-testid={`button-buy-book-${b.id}`}
+                    >
+                      <ExternalLink className="w-4 h-4" /> Buy Book
+                    </a>
+                  )}
                   {b.buyLinks.bookshop && (
                     <a 
                       href={b.buyLinks.bookshop} 
