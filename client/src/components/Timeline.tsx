@@ -20,16 +20,16 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Foundation Years",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/athletic-pose.jpg"
   },
   {
     year: "2019",
     title: "Athletic Emergence", 
-    description: "Began dominating on the court and field, reaching 6'8\" and showing exceptional two-sport ability",
+    description: "Began excelling on the basketball court, reaching 6'7\" and showing exceptional athletic ability",
     achievement: "Multi-Sport Excellence",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/athletic-pose.jpg"
   },
   {
     year: "2020",
@@ -47,7 +47,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Team Captain",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/athletic-pose.jpg"
   },
   {
     year: "2022",
@@ -56,7 +56,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Three Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/brown-suit-author.jpg"
   },
   {
     year: "2023", 
@@ -65,7 +65,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Entrepreneur Debut",
     category: "business",
     icon: <Users className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/entrepreneur-style.jpg"
   },
   {
     year: "2024",
@@ -74,16 +74,16 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Community Recognition",
     category: "personal",
     icon: <Heart className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/creative-designer.jpg"
   },
   {
     year: "2024",
     title: "Transfer to Ygnacio Valley",
-    description: "Joined football team as 300-pound lineman, bringing experience and leadership",
+    description: "Continued athletic excellence at Ygnacio Valley, bringing leadership and basketball experience",
     achievement: "Program Builder",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/athletic-pose.jpg"
   },
   {
     year: "2024",
@@ -92,7 +92,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Fourth Poetry Book",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/brown-suit-author.jpg"
   },
   {
     year: "2025",
@@ -101,7 +101,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Renaissance Man",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400"
+    image: "/photos/creative-designer.jpg"
   }
 ];
 

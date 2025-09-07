@@ -12,14 +12,14 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "/photos/athlete-action.jpg",
+    src: "/photos/athletic-pose.jpg",
     alt: "Basketball action shot",
     title: "Court Dominance",
     category: "athlete",
-    description: "Commanding the basketball court with 6'8\" presence and leadership as team captain"
+    description: "Commanding the basketball court with 6'7\" presence and leadership as team captain"
   },
   {
-    src: "/photos/author-portrait.jpg",
+    src: "/photos/brown-suit-author.jpg",
     alt: "Poetry writing session",
     title: "Literary Creation",
     category: "author",
@@ -40,11 +40,11 @@ const galleryImages: GalleryImage[] = [
     description: "Developing content and community programs that resonate with young audiences"
   },
   {
-    src: "/photos/hero-portrait.jpg",
-    alt: "Football training",
-    title: "Gridiron Power",
+    src: "/photos/athletic-pose.jpg",
+    alt: "Athletic excellence",
+    title: "Athletic Excellence",
     category: "athlete",
-    description: "300-pound lineman bringing strength and strategy to Ygnacio Valley football"
+    description: "6'7\" basketball leader bringing dedication and strategy to Ygnacio Valley"
   },
   {
     src: "/photos/author-portrait.jpg",

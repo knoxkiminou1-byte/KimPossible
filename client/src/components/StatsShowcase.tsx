@@ -22,33 +22,33 @@ const stats: Stat[] = [
   {
     label: "Height",
     value: 6,
-    suffix: "'8\"",
+    suffix: "'7\"",
     icon: <Target className="w-6 h-6" />,
     color: "text-green-400",
     description: "Dominant presence"
   },
   {
-    label: "Football Weight",
-    value: 300,
-    suffix: " lbs",
+    label: "Poetry Books",
+    value: 4,
+    suffix: " published",
     icon: <Trophy className="w-6 h-6" />,
     color: "text-red-400",
-    description: "Powerful lineman"
+    description: "Published works"
   },
   {
-    label: "Years Business Experience",
-    value: 2,
+    label: "Brand Established",
+    value: 2023,
     suffix: "+",
     icon: <Users className="w-6 h-6" />,
     color: "text-purple-400",
     description: "The Tee Shirt Teens founder"
   },
   {
-    label: "Sports Played Varsity",
-    value: 2,
+    label: "Leadership Positions",
+    value: 3,
     icon: <Star className="w-6 h-6" />,
     color: "text-yellow-400",
-    description: "Basketball & Football"
+    description: "Team Captain & Founder"
   },
   {
     label: "Community Awards",

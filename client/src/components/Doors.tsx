@@ -4,16 +4,16 @@ const doors = [
   {
     id: "athlete",
     title: "ATHLETE",
-    subtitle: "Basketball & Football",
-    description: "6'7\"-6'8\" multi-sport athlete who excelled in basketball and football throughout high school, serving as team captain at Ygnacio Valley High School.",
-    image: "/photos/athlete-action.jpg",
+    subtitle: "Basketball Excellence",
+    description: "6'7\" basketball athlete who served as team captain at Ygnacio Valley High School, demonstrating exceptional leadership and court presence.",
+    image: "/photos/athletic-pose.jpg",
   },
   {
     id: "author",
     title: "AUTHOR",
     subtitle: "Published Poet",
     description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic' - all published by age 18.",
-    image: "/photos/author-portrait.jpg",
+    image: "/photos/brown-suit-author.jpg",
   },
   {
     id: "entrepreneur",

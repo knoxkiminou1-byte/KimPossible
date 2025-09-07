@@ -3,13 +3,13 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const lookbookImages = [
   {
-    src: "/photos/athlete-action.jpg",
-    alt: "Basketball and football athlete",
-    title: "Two-Sport Athlete",
-    description: "Varsity basketball captain and football player at 6'8\" tall"
+    src: "/photos/athletic-pose.jpg",
+    alt: "Basketball athlete",
+    title: "Basketball Excellence",
+    description: "Varsity basketball captain at 6'7\" tall"
   },
   {
-    src: "/photos/author-portrait.jpg",
+    src: "/photos/brown-suit-author.jpg",
     alt: "Published author with four poetry books",
     title: "Published Author",
     description: "Four poetry books published by age 18, exploring love, faith, and identity"
