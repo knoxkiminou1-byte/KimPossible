@@ -12,14 +12,14 @@ const doors = [
     id: "author",
     title: "AUTHOR",
     subtitle: "Published Poet",
-    description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic' - all published by age 18.",
+    description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic', all published by age 18.",
     image: "/photos/brown-suit-author.jpg",
   },
   {
     id: "entrepreneur",
     title: "ENTREPRENEUR",
     subtitle: "The Tee Shirt Teens",
-    description: "Founder of The Tee Shirt Teens clothing brand - a youth-driven fashion venture focused on empowering young people through creative design and self-expression.",
+    description: "Founder of The Tee Shirt Teens clothing brand, a youth driven fashion venture focused on empowering young people through creative design and self expression.",
     image: "/photos/entrepreneur-style.jpg",
   },
   {
@@ -58,7 +58,7 @@ export default function Doors() {
             className="text-xl text-muted-foreground font-light max-w-2xl mx-auto animate-on-scroll"
             data-testid="doors-description"
           >
-            Four doors, four journeys. Explore the multifaceted talents of an 18-year-old renaissance individual.
+            Four doors, four journeys. Explore the multifaceted talents of an 18 year old renaissance individual.
           </p>
         </div>
 

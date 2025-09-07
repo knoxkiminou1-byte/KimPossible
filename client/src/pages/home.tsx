@@ -66,7 +66,7 @@ export default function Home() {
           id="entrepreneur"
         eyebrow="ENTREPRENEUR"
         title="The Tee Shirt Teens"
-        description="Founded The Tee Shirt Teens while maintaining his demanding athletic schedule—a testament to entrepreneurial vision and time management. The brand serves as a platform for authentic youth expression, combining fashion with purpose to build community and empower the next generation."
+        description="Founded The Tee Shirt Teens while maintaining his demanding athletic schedule, a testament to entrepreneurial vision and time management. The brand serves as a platform for authentic youth expression, combining fashion with purpose to build community and empower the next generation."
         image="/photos/entrepreneur-style.jpg"
         imageAlt="The Tee Shirt Teens clothing brand"
           primaryButton="VISIT STORE"

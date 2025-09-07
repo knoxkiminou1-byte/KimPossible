@@ -34,7 +34,7 @@ export default function PDFModal({ title, pdfUrl, open, onClose }: Props) {
           <X className="h-6 w-6" />
         </button>
         <div className="h-12 border-b border-white/10 flex items-center px-5 text-white/90 text-sm">
-          <span className="truncate">{title} — Sample</span>
+          <span className="truncate">{title} Sample</span>
           <a
             href={pdfUrl}
             target="_blank"
