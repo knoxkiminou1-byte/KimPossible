@@ -76,8 +76,8 @@ export default function Splash() {
     <>
       <style dangerouslySetInnerHTML={{__html: `
         :root {
-          --hotspot-left: 25%;
-          --hotspot-top: 50%;
+          --hotspot-left: 15%;
+          --hotspot-top: 20%;
           --hotspot-width: 15%;
           --hotspot-height: 20%;
           --bg: #0d0d0f;
