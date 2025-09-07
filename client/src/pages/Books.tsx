@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { ExternalLink, BookOpen, Download, Heart } from "lucide-react";
-import PDFModal from "@/components/PDFModal";
+import PoemModal from "@/components/PDFModal";
+
+type Poem = {
+  title: string;
+  content: string;
+};
 
 type Book = {
   id: string; 
@@ -9,7 +14,7 @@ type Book = {
   year: number; 
   isbn?: string | null;
   cover: string; 
-  pdf: string; 
+  samplePoems: Poem[]; 
   themes: string[]; 
   description: string; 
   featured?: boolean;
@@ -23,7 +28,7 @@ type Book = {
 
 export default function BooksPage() {
   const [books, setBooks] = useState<Book[]>([]);
-  const [open, setOpen] = useState<{id: string, url: string, title: string} | null>(null);
+  const [open, setOpen] = useState<{id: string, poems: Poem[], title: string} | null>(null);
 
   useEffect(() => {
     fetch("/books.json")
@@ -37,7 +42,7 @@ export default function BooksPage() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <h1 className="font-serif text-5xl font-bold tracking-tight">Published Works</h1>
-          <p className="text-muted-foreground mt-4">Real covers, real links, live PDF previews.</p>
+          <p className="text-muted-foreground mt-4">Real covers, real links, sample poems from each collection.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
@@ -64,7 +69,7 @@ export default function BooksPage() {
 
                 <div className={`mt-6 gap-2 ${(b.buyLinks.amazon || b.buyLinks.googleBooks) ? 'grid grid-cols-2' : 'flex'}`}>
                   <button
-                    onClick={() => setOpen({ id: b.id, url: b.pdf, title: b.title })}
+                    onClick={() => setOpen({ id: b.id, poems: b.samplePoems, title: b.title })}
                     className="group inline-flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                     data-testid={`button-read-sample-${b.id}`}
                   >
@@ -100,9 +105,9 @@ export default function BooksPage() {
       </div>
 
       {open && (
-        <PDFModal
+        <PoemModal
           title={open.title}
-          pdfUrl={open.url}
+          poems={open.poems}
           open={!!open}
           onClose={() => setOpen(null)}
         />

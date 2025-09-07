@@ -5,14 +5,19 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Book, X, Download, ExternalLink, Heart, FileText, Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 import { format } from "date-fns";
-import PDFModal from "@/components/PDFModal";
+import PoemModal from "@/components/PDFModal";
+
+interface Poem {
+  title: string;
+  content: string;
+}
 
 interface BookData {
   id: string;
   title: string;
   subtitle: string;
   cover: string;
-  pdf: string;
+  samplePoems: Poem[];
   year: number;
   isbn?: string | null;
   themes: string[];
@@ -29,7 +34,7 @@ interface BookData {
 export default function BookPreview() {
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null);
   const [books, setBooks] = useState<BookData[]>([]);
-  const [pdfModal, setPdfModal] = useState<{id: string, url: string, title: string} | null>(null);
+  const [poemModal, setPoemModal] = useState<{id: string, poems: Poem[], title: string} | null>(null);
   const booksRef = useScrollAnimation();
   const blogRef = useScrollAnimation();
 
@@ -353,9 +358,9 @@ export default function BookPreview() {
                     Purchase Book
                   </a>
                   <button 
-                    onClick={() => setPdfModal({ id: selectedBook.id, url: selectedBook.pdf, title: selectedBook.title })}
+                    onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
                     className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-border font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
-                    data-testid="book-sample-pdf"
+                    data-testid="book-sample-poems"
                   >
                     <BookOpen className="w-4 h-4" />
                     Read Sample
@@ -367,13 +372,13 @@ export default function BookPreview() {
         </div>
       )}
 
-      {/* PDF Modal */}
-      {pdfModal && (
-        <PDFModal
-          title={pdfModal.title}
-          pdfUrl={pdfModal.url}
-          open={!!pdfModal}
-          onClose={() => setPdfModal(null)}
+      {/* Poem Modal */}
+      {poemModal && (
+        <PoemModal
+          title={poemModal.title}
+          poems={poemModal.poems}
+          open={!!poemModal}
+          onClose={() => setPoemModal(null)}
         />
       )}
     </>
