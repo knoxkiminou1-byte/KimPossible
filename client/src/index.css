@@ -381,3 +381,16 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* Additional luxury styling from your uploaded files */
+.scrollbar::-webkit-scrollbar { height: 10px; width: 10px; }
+.scrollbar::-webkit-scrollbar-thumb { background: #ffffff22; border-radius: 10px; }
+.glass { backdrop-filter: blur(8px); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); }
+.grain { 
+  position: fixed; 
+  inset: -50px; 
+  pointer-events: none; 
+  opacity: .04; 
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay; 
+}
