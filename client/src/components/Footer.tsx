@@ -22,11 +22,12 @@ export default function Footer() {
   ];
 
   const connect = [
-    { name: "Instagram", href: "https://instagram.com/hofkiminou" },
-    { name: "Twitter", href: "https://twitter.com/KnoxKiminou" },
-    { name: "Business IG", href: "https://instagram.com/theteeshirteenss" },
-    { name: "The Tee Shirt Teens", href: "https://thett.shop" },
-    { name: "Contact", href: "#contact" }
+    { name: "Instagram @hofkiminou", href: "https://instagram.com/hofkiminou", external: true },
+    { name: "X @KnoxKiminou", href: "https://x.com/KnoxKiminou", external: true },
+    { name: "X @KiminouKnox", href: "https://x.com/KiminouKnox", external: true },
+    { name: "Business IG", href: "https://instagram.com/theteeshirteenss", external: true },
+    { name: "The Tee Shirt Teens", href: "https://thett.shop", external: true },
+    { name: "Contact", href: "#contact", external: false }
   ];
 
   const legal = [
@@ -92,13 +93,25 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-80">
               {connect.map((item) => (
                 <li key={item.name}>
-                  <button 
-                    onClick={() => item.href.startsWith('#') ? scrollToSection(item.href) : window.open(item.href)}
-                    className="hover:opacity-100 transition-opacity"
-                    data-testid={`footer-connect-${item.name.toLowerCase()}`}
-                  >
-                    {item.name}
-                  </button>
+                  {item.href.startsWith('#') ? (
+                    <button 
+                      onClick={() => scrollToSection(item.href)}
+                      className="hover:opacity-100 transition-opacity"
+                      data-testid={`footer-connect-${item.name.toLowerCase().replace(/[@\s]/g, '-')}`}
+                    >
+                      {item.name}
+                    </button>
+                  ) : (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer external"
+                      className="hover:opacity-100 transition-opacity"
+                      data-testid={`footer-connect-${item.name.toLowerCase().replace(/[@\s]/g, '-')}`}
+                    >
+                      {item.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

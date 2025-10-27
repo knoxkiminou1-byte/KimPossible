@@ -1,5 +1,8 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import LatestReleases from "@/components/LatestReleases";
+import MilesHallFeature from "@/components/MilesHallFeature";
 import Doors from "@/components/Doors";
 import Timeline from "@/components/Timeline";
 import StatsShowcase from "@/components/StatsShowcase";
@@ -21,8 +24,43 @@ import { useTheme } from "@/hooks/useTheme";
 export default function Home() {
   const { theme, changeTheme } = useTheme();
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kiminou Knox",
+    "url": "https://kiminouknox.com/",
+    "sameAs": [
+      "https://x.com/KnoxKiminou",
+      "https://x.com/KiminouKnox",
+      "https://www.instagram.com/hofkiminou"
+    ],
+    "jobTitle": "Athlete, Author, Entrepreneur"
+  };
+
   return (
-    <div className="bg-background text-foreground font-sans antialiased relative">
+    <>
+      <Helmet>
+        <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
+        <meta name="description" content="Official website of Kiminou Knox - 18-year-old athlete, published author, entrepreneur, and creative from the Bay Area. Four published poetry books, NCAA registered athlete, and youth advocate." />
+        <link rel="canonical" href="https://kiminouknox.com/home" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
+        <meta property="og:description" content="18-year-old athlete, published author, entrepreneur, and creative from the Bay Area" />
+        <meta property="og:url" content="https://kiminouknox.com/home" />
+        <meta property="og:image" content="https://kiminouknox.com/og/home.jpg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
+        <meta name="twitter:description" content="18-year-old athlete, published author, entrepreneur, and creative" />
+        <meta name="twitter:image" content="https://kiminouknox.com/og/home.jpg" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(personSchema)}
+        </script>
+      </Helmet>
+
+      <div className="bg-background text-foreground font-sans antialiased relative">
       <ParticleEffect 
         density={120} 
         effects={['sparkle', 'glow', 'star', 'dust']}
@@ -32,6 +70,7 @@ export default function Home() {
       <div className="relative z-10">
         <Header theme={theme} onThemeChange={changeTheme} />
         <Hero />
+        <LatestReleases />
         <Doors />
         <Timeline />
         <StatsShowcase />
@@ -87,6 +126,7 @@ export default function Home() {
           background="bg-background"
         />
         <Lookbook />
+        <MilesHallFeature />
         <PressStrip />
         <BrandStory />
         <MediaKit />
@@ -96,5 +136,6 @@ export default function Home() {
         <ContactFAB />
       </div>
     </div>
+    </>
   );
 }

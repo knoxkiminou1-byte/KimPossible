@@ -10,6 +10,9 @@ import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import BlogAdmin from "@/pages/BlogAdmin";
 import Books from "@/pages/Books";
+import BookDetail from "@/pages/BookDetail";
+import Press from "@/pages/Press";
+import Sports from "@/pages/Sports";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 
@@ -20,6 +23,9 @@ function Router() {
       <Route path="/home" component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/books" component={Books} />
+      <Route path="/books/:id" component={BookDetail} />
+      <Route path="/press" component={Press} />
+      <Route path="/sports" component={Sports} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/admin/blog" component={BlogAdmin} />

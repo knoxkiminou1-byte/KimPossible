@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ExternalLink, BookOpen, Download, Heart } from "lucide-react";
+import { ExternalLink, BookOpen, Download, Heart, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 import PoemModal from "@/components/PDFModal";
 
 type Poem = {
@@ -13,14 +14,20 @@ type Book = {
   subtitle: string; 
   year: number; 
   isbn?: string | null;
+  datePublished?: string;
   cover: string; 
   samplePoems: Poem[]; 
   themes: string[]; 
   description: string; 
   featured?: boolean;
   buyLinks: { 
-    amazon?: string | null; 
-    googleBooks?: string | null; 
+    amazon?: string | null;
+    amazonUK?: string | null;
+    googleBooks?: string | null;
+    goodreads?: string | null;
+    waterstones?: string | null;
+    hatchards?: string | null;
+    booksAMillion?: string | null;
     bookshop?: string | null; 
     bn?: string | null 
   };
@@ -67,34 +74,32 @@ export default function BooksPage() {
                   {b.themes.map(t => <span key={t} className="px-2 py-1 bg-muted text-muted-foreground rounded-full text-xs">{t}</span>)}
                 </div>
 
-                <div className={`mt-6 gap-2 ${(b.buyLinks.amazon || b.buyLinks.googleBooks) ? 'grid grid-cols-2' : 'flex'}`}>
-                  <button
-                    onClick={() => setOpen({ id: b.id, poems: b.samplePoems, title: b.title })}
-                    className="group inline-flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
-                    data-testid={`button-read-sample-${b.id}`}
-                  >
-                    <BookOpen className="w-4 h-4" /> Read Sample
-                  </button>
+                <div className="mt-6 space-y-3">
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => setOpen({ id: b.id, poems: b.samplePoems, title: b.title })}
+                      className="group inline-flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                      data-testid={`button-read-sample-${b.id}`}
+                    >
+                      <BookOpen className="w-4 h-4" /> Read Sample
+                    </button>
+                    <Link 
+                      href={`/books/${b.id}`}
+                      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 transition-colors"
+                      data-testid={`link-view-details-${b.id}`}
+                    >
+                      View Details <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                   {(b.buyLinks.amazon || b.buyLinks.googleBooks) && (
                     <a 
                       href={b.buyLinks.amazon || b.buyLinks.googleBooks || ""} 
                       target="_blank" 
-                      rel="noreferrer"
-                      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 transition-colors"
-                      data-testid={`button-buy-book-${b.id}`}
+                      rel="noopener noreferrer external"
+                      className="block text-center px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg text-sm transition-colors"
+                      data-testid={`button-buy-quick-${b.id}`}
                     >
-                      <ExternalLink className="w-4 h-4" /> Buy Book
-                    </a>
-                  )}
-                  {b.buyLinks.bookshop && (
-                    <a 
-                      href={b.buyLinks.bookshop} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="col-span-2 text-center underline text-sm opacity-80 hover:opacity-100 transition-opacity"
-                      data-testid={`link-bookshop-${b.id}`}
-                    >
-                      Also on Bookshop.org
+                      <ExternalLink className="w-4 h-4 inline mr-2" /> Buy Now
                     </a>
                   )}
                 </div>
