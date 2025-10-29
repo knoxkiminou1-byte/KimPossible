@@ -141,7 +141,7 @@ export default function Portfolio() {
               <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-600">
                 <Badge>Author Universe Builder</Badge>
                 <Badge>Poetry Collections (4 completed)</Badge>
-                <Badge>Oakland–East Bay</Badge>
+                <Badge>East Palo Alto, California</Badge>
               </div>
             </motion.div>
 
@@ -168,10 +168,10 @@ export default function Portfolio() {
             <Card>
               <div className="flex items-center gap-3 mb-2">
                 <MapPin className="w-4 h-4"/>
-                <p className="text-sm font-medium">Oakland–East Bay roots</p>
+                <p className="text-sm font-medium">East Palo Alto, California</p>
               </div>
               <p className="text-zinc-600 text-sm">
-                Student‑athlete and author weaving faith, community, and creative discipline.
+                Student athlete and author weaving faith, community, and creative discipline.
               </p>
             </Card>
             <Card>

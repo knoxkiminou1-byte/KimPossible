@@ -55,7 +55,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About - Kiminou Knox</title>
-        <meta name="description" content="Writer and athlete from the Oakland East Bay. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose." />
+        <meta name="description" content="Writer and athlete from East Palo Alto, California. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose." />
         <link rel="canonical" href="https://kiminouknox.com/about" />
         
         <meta property="og:type" content="website" />
@@ -66,7 +66,7 @@ export default function About() {
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About - Kiminou Knox" />
-        <meta name="twitter:description" content="Writer and athlete from Oakland East Bay" />
+        <meta name="twitter:description" content="Writer and athlete from East Palo Alto, California" />
         <meta name="twitter:image" content="https://kiminouknox.com/og/about.jpg" />
         
         <script type="application/ld+json">
@@ -87,7 +87,7 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from the Oakland East Bay, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, I create work that helps people feel deeply and act with purpose.
+                I am a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, I create work that helps people feel deeply and act with purpose.
               </p>
 
               <p data-testid="about-stats">

@@ -21,7 +21,7 @@ export default function About() {
           </h2>
           <div className="h-px w-24 bg-accent mb-12 mx-auto"></div>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8" data-testid="about-description-1">
-            Kiminou Knox is a 19 year old writer and athlete from the Oakland East Bay, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, he creates work that helps people feel deeply and act with purpose.
+            Kiminou Knox is a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, he creates work that helps people feel deeply and act with purpose.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-2">
             Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. His accomplishments include 6 published works and recognition through 5 major awards. Academically, he scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.

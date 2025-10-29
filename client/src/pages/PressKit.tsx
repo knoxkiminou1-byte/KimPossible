@@ -19,10 +19,10 @@ export default function PressKit() {
     message: ""
   });
 
-  const bio = "I am a writer and athlete from the Oakland East Bay. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose.";
+  const bio = "I am a writer and athlete from East Palo Alto, California. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose.";
 
   const books = [
-    { title: "Black Boy Poems", pitch: "Poetry that speaks in a clear Oakland voice" },
+    { title: "Black Boy Poems", pitch: "Poetry that speaks with a clear voice" },
     { title: "Boys Raised in Silence", pitch: "Poems for what we were never allowed to feel" },
     { title: "The Spirit of Solomon", pitch: "A modern Solomon story in verse" },
     { title: "Hopeless Romantic", pitch: "Love as faith as fight" },

@@ -56,7 +56,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-location">
                 <MapPin className="w-5 h-5" />
-                <span>Oakland/East Palo Alto, CA</span>
+                <span>East Palo Alto, California</span>
               </div>
             </div>
 
