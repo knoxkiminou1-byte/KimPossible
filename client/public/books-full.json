@@ -1,0 +1,79 @@
+[
+  {
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Poetry that speaks in a clear Oakland voice",
+    "year": 2024,
+    "isbn": "9798316662975",
+    "datePublished": "2024-09-29",
+    "cover": "/books/poems-from-a-black-boy-cover.jpg",
+    "description": "Poetry that speaks in a clear Oakland voice",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
+      "amazonUK": "https://www.amazon.co.uk/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
+      "goodreads": "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
+      "waterstones": "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+      "hatchards": "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+      "booksAMillion": "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975"
+    }
+  },
+  {
+    "id": "boys-raised-in-silence",
+    "title": "Boys Raised in Silence",
+    "subtitle": "Poems for what we were never allowed to feel",
+    "year": 2025,
+    "isbn": "TBD",
+    "datePublished": "2025",
+    "cover": "/books/boys-raised-in-silence-cover.jpg",
+    "description": "Poems for what we were never allowed to feel",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+    }
+  },
+  {
+    "id": "spirit-solomon",
+    "title": "The Spirit of Solomon",
+    "subtitle": "A modern Solomon story in verse",
+    "year": 2025,
+    "isbn": "9798316662975",
+    "datePublished": "2025-01-15",
+    "cover": "/books/spirit-of-solomon-cover.jpg",
+    "description": "A modern Solomon story in verse",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Spirit_of_Solomon?id=yIRsEQAAQBAJ",
+      "bookshop": "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60"
+    }
+  },
+  {
+    "id": "hopeless-romantic",
+    "title": "Hopeless Romantic",
+    "subtitle": "Love as faith as fight",
+    "year": 2025,
+    "isbn": "9798291608128",
+    "datePublished": "2025-03-05",
+    "cover": "/books/hopeless-romantic-cover.jpg",
+    "description": "Love as faith as fight",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+      "amazonUK": "https://www.amazon.co.uk/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ",
+      "waterstones": "https://www.waterstones.com/book/hopeless-romantic/kiminou-knox/9798291608128",
+      "hatchards": "https://www.hatchards.co.uk/book/hopeless-romantic/kiminou-knox/9798291608128"
+    }
+  },
+  {
+    "id": "kiminou-great-chua-wise",
+    "title": "The Adventures of Kiminou the Great and Chua the Wise",
+    "subtitle": "A children story of courage and care",
+    "year": 2025,
+    "isbn": "TBD",
+    "datePublished": "2025",
+    "cover": "/books/kiminou-chua-cover.jpg",
+    "description": "A children story of courage and care",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+    }
+  }
+]

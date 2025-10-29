@@ -3,7 +3,7 @@
   <!-- Home / Splash -->
   <url>
     <loc>https://kiminouknox.com/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,17 +11,57 @@
   <!-- Home -->
   <url>
     <loc>https://kiminouknox.com/home</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Books -->
+  <!-- About -->
+  <url>
+    <loc>https://kiminouknox.com/about</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Works -->
+  <url>
+    <loc>https://kiminouknox.com/works</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Speaking -->
+  <url>
+    <loc>https://kiminouknox.com/speaking</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact -->
+  <url>
+    <loc>https://kiminouknox.com/contact</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Press Kit -->
+  <url>
+    <loc>https://kiminouknox.com/press-kit</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Books (old route) -->
   <url>
     <loc>https://kiminouknox.com/books</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
   
   <!-- Individual Book Pages -->

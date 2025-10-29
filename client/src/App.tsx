@@ -5,6 +5,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Splash from "@/pages/Splash";
 import Home from "@/pages/home";
+import About from "@/pages/About";
+import Works from "@/pages/Works";
+import Speaking from "@/pages/Speaking";
+import Contact from "@/pages/Contact";
+import PressKit from "@/pages/PressKit";
 import Portfolio from "@/pages/Portfolio";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
@@ -21,11 +26,16 @@ function Router() {
     <Switch>
       <Route path="/" component={Splash} />
       <Route path="/home" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/works" component={Works} />
+      <Route path="/speaking" component={Speaking} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/press-kit" component={PressKit} />
+      <Route path="/press" component={Press} />
+      <Route path="/sports" component={Sports} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/books" component={Books} />
       <Route path="/books/:id" component={BookDetail} />
-      <Route path="/press" component={Press} />
-      <Route path="/sports" component={Sports} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/admin/blog" component={BlogAdmin} />

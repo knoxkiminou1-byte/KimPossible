@@ -25,16 +25,18 @@ export default function Footer() {
     { name: "Instagram @hofkiminou", href: "https://instagram.com/hofkiminou", external: true },
     { name: "X @KnoxKiminou", href: "https://x.com/KnoxKiminou", external: true },
     { name: "X @KiminouKnox", href: "https://x.com/KiminouKnox", external: true },
+    { name: "YouTube", href: "https://www.youtube.com/@KiminouKnoxVevo", external: true },
+    { name: "Amazon Author Page", href: "https://www.amazon.com/stores/author/B0DGM5Z5Q8", external: true },
     { name: "Business IG", href: "https://instagram.com/theteeshirteenss", external: true },
     { name: "The Tee Shirt Teens", href: "https://thett.shop", external: true },
     { name: "Contact", href: "#contact", external: false }
   ];
 
   const legal = [
-    { name: "Book Excerpts", href: "#author" },
-    { name: "Athletic Stats", href: "#athlete" },
-    { name: "Business Inquiries", href: "#contact" },
-    { name: "Media Kit", href: "#contact" }
+    { name: "Press Kit", href: "/press-kit" },
+    { name: "Speaking", href: "/speaking" },
+    { name: "Book Excerpts", href: "/works" },
+    { name: "Contact", href: "/contact" }
   ];
 
   return (

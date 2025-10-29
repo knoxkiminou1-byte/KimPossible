@@ -108,6 +108,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  html, body, p, h1, h2, h3, h4, h5, h6, li, blockquote {
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;

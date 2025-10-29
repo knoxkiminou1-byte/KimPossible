@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Palette, Menu, Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Github } from "lucide-react";
+import { Palette, Menu } from "lucide-react";
 import { Theme } from "@/hooks/useTheme";
+import { Link } from "wouter";
 
 interface HeaderProps {
   theme: Theme;
@@ -8,21 +9,10 @@ interface HeaderProps {
 }
 
 export default function Header({ theme, onThemeChange }: HeaderProps) {
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [previewImage, setPreviewImage] = useState("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300");
   
-  const megaMenuRef = useRef<HTMLDivElement>(null);
   const themeMenuRef = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout>();
-
-  const menuItems = [
-    { name: "ATHLETE", href: "#athlete", preview: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" },
-    { name: "AUTHOR", href: "#author", preview: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" },
-    { name: "ENTREPRENEUR", href: "#entrepreneur", preview: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" },
-    { name: "DESIGNER", href: "#designer", preview: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" }
-  ];
 
   const themes = [
     { name: "Maison", value: "maison" as Theme },
@@ -31,34 +21,9 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
     { name: "Street", value: "street" as Theme }
   ];
 
-  const openMegaMenu = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setIsMegaMenuOpen(true);
-  };
-
-  const closeMegaMenu = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsMegaMenuOpen(false);
-    }, 150);
-  };
-
-  const handleMenuItemHover = (preview: string) => {
-    setPreviewImage(preview);
-  };
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-    setIsMegaMenuOpen(false);
-  };
-
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setIsMegaMenuOpen(false);
         setIsThemeMenuOpen(false);
         setIsMobileMenuOpen(false);
       }
@@ -85,11 +50,8 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <button 
-              onClick={() => scrollToSection('#hero')}
-              className="luxury-logo group relative overflow-hidden"
-              data-testid="logo-button"
-            >
+            <Link href="/home">
+              <a className="luxury-logo group relative overflow-hidden block" data-testid="logo-button">
               <span className="logo-text block text-2xl font-serif font-bold tracking-[0.15em] text-foreground transition-all duration-700 group-hover:tracking-[0.3em] group-hover:scale-110">
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-0">K</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-75">I</span>
@@ -105,91 +67,42 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-750">X</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
-            </button>
+              </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-12">
-            <div className="relative group">
-              <button 
-                className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium"
-                onMouseEnter={openMegaMenu}
-                onMouseLeave={closeMegaMenu}
-                aria-haspopup="true"
-                aria-expanded={isMegaMenuOpen}
-                data-testid="portfolio-trigger"
-              >
-                PORTFOLIO
-              </button>
-              
-              {/* Mega Menu */}
-              <div 
-                ref={megaMenuRef}
-                className={`mega-menu absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-[600px] ${isMegaMenuOpen ? 'active' : ''}`}
-                onMouseEnter={openMegaMenu}
-                onMouseLeave={closeMegaMenu}
-                role="menu"
-                data-testid="mega-menu"
-              >
-                <div className="bg-card border border-border rounded-lg shadow-2xl overflow-hidden">
-                  <div className="grid grid-cols-2 gap-0">
-                    {/* Image Preview */}
-                    <div className="bg-muted p-6">
-                      <img 
-                        src={previewImage}
-                        alt="Portfolio preview" 
-                        className="w-full h-48 object-cover rounded-md transition-opacity duration-300"
-                        loading="lazy"
-                        data-testid="menu-preview"
-                      />
-                    </div>
-                    
-                    {/* Menu Links */}
-                    <div className="p-6 space-y-4">
-                      <div className="space-y-3">
-                        {menuItems.map((item) => (
-                          <button
-                            key={item.name}
-                            onClick={() => scrollToSection(item.href)}
-                            onMouseEnter={() => handleMenuItemHover(item.preview)}
-                            className="block text-sm text-muted-foreground hover:text-foreground transition-colors font-medium w-full text-left"
-                            role="menuitem"
-                            data-testid={`menu-item-${item.name.toLowerCase()}`}
-                          >
-                            {item.name}
-                          </button>
-                        ))}
-                      </div>
-                      <div className="pt-4 border-t border-border">
-                        <button 
-                          onClick={() => scrollToSection('#lookbook')}
-                          className="block text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
-                          role="menuitem"
-                          data-testid="menu-item-lookbook"
-                        >
-                          LOOKBOOK
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <button 
-              onClick={() => scrollToSection('#about')}
-              className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium"
-              data-testid="nav-about"
-            >
-              ABOUT
-            </button>
-            <button 
-              onClick={() => scrollToSection('#contact')}
-              className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium"
-              data-testid="nav-contact"
-            >
-              CONTACT
-            </button>
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/home">
+              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-home">
+                HOME
+              </a>
+            </Link>
+            <Link href="/about">
+              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-about">
+                ABOUT
+              </a>
+            </Link>
+            <Link href="/works">
+              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-works">
+                WORKS
+              </a>
+            </Link>
+            <Link href="/press">
+              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-press">
+                PRESS
+              </a>
+            </Link>
+            <Link href="/speaking">
+              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-speaking">
+                SPEAKING
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-contact">
+                CONTACT
+              </a>
+            </Link>
           </div>
 
           {/* Theme Switcher & Mobile Menu */}
@@ -240,30 +153,36 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-background border-t border-border" data-testid="mobile-menu">
           <div className="px-6 py-4 space-y-4">
-            {menuItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium w-full text-left"
-                data-testid={`mobile-menu-${item.name.toLowerCase()}`}
-              >
-                {item.name}
-              </button>
-            ))}
-            <button 
-              onClick={() => scrollToSection('#about')}
-              className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium w-full text-left"
-              data-testid="mobile-menu-about"
-            >
-              ABOUT
-            </button>
-            <button 
-              onClick={() => scrollToSection('#contact')}
-              className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium w-full text-left"
-              data-testid="mobile-menu-contact"
-            >
-              CONTACT
-            </button>
+            <Link href="/home">
+              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-home-mobile">
+                HOME
+              </a>
+            </Link>
+            <Link href="/about">
+              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-about-mobile">
+                ABOUT
+              </a>
+            </Link>
+            <Link href="/works">
+              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-works-mobile">
+                WORKS
+              </a>
+            </Link>
+            <Link href="/press">
+              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-press-mobile">
+                PRESS
+              </a>
+            </Link>
+            <Link href="/speaking">
+              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-speaking-mobile">
+                SPEAKING
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-contact-mobile">
+                CONTACT
+              </a>
+            </Link>
           </div>
         </div>
       )}
