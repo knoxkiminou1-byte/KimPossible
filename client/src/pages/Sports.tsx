@@ -60,7 +60,7 @@ export default function Sports() {
               <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-8 text-center">
                 <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
                 <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">Height</p>
-                <p className="text-4xl font-bold mb-2">6'7"</p>
+                <p className="text-3xl font-bold mb-2">6 feet 7 inches</p>
                 <p className="text-xs text-muted-foreground">
                   Source: <a href="https://www.ncsasports.org" target="_blank" rel="noopener noreferrer external" className="text-primary hover:underline">NCSA</a>
                 </p>

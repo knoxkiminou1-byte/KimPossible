@@ -5,14 +5,14 @@ const doors = [
     id: "athlete",
     title: "ATHLETE",
     subtitle: "Basketball Excellence",
-    description: "6'7\", 235 lbs multi-sport athlete (Basketball Guard/Forward/Center, Football DE/TE) who served as varsity captain with features in PrepHoops & 247Sports, demonstrating exceptional leadership across multiple positions.",
+    description: "6 feet 7 inches, 235 lbs multi sport athlete (Basketball Guard/Forward/Center, Football DE/TE) who served as varsity captain with features in PrepHoops and 247Sports, demonstrating exceptional leadership across multiple positions.",
     image: "/photos/athletic-pose.jpg",
   },
   {
     id: "author",
     title: "AUTHOR",
     subtitle: "Published Poet",
-    description: "Four published poetry books including 'The Spirit Of Solomon', 'Our Father?', 'Poems from a Black Boy', and 'Hopeless Romantic', all published by age 18.",
+    description: "Six published works including Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise, all published by age 19.",
     image: "/photos/author-reading-book.jpg",
   },
   {
@@ -58,7 +58,7 @@ export default function Doors() {
             className="text-xl text-muted-foreground font-light max-w-2xl mx-auto animate-on-scroll"
             data-testid="doors-description"
           >
-            Four doors, four journeys. Explore the multifaceted talents of an 18 year old renaissance individual.
+            Four doors, four journeys. Explore the multifaceted talents of a 19 year old renaissance individual.
           </p>
         </div>
 
