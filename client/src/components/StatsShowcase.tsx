@@ -13,12 +13,25 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: "Honor Roll Recognition",
-    value: 4,
-    suffix: " times",
+    label: "SAT Score",
+    value: 1380,
+    icon: <Trophy className="w-6 h-6" />,
+    color: "text-red-400",
+    description: "Standardized Testing"
+  },
+  {
+    label: "Published Books",
+    value: 6,
     icon: <Book className="w-6 h-6" />,
-    color: "text-blue-400",
-    description: "Multiple time honor roll student"
+    color: "text-purple-400",
+    description: "Poetry and Stories"
+  },
+  {
+    label: "Major Awards",
+    value: 5,
+    icon: <Star className="w-6 h-6" />,
+    color: "text-yellow-400",
+    description: "Recognition and Honors"
   },
   {
     label: "Height & Weight",
@@ -29,34 +42,20 @@ const stats: Stat[] = [
     description: "Athletic Profile"
   },
   {
-    label: "PSAT Score",
-    value: 1200,
-    icon: <Trophy className="w-6 h-6" />,
-    color: "text-red-400",
-    description: "Standardized Testing"
-  },
-  {
     label: "Honor Roll",
     value: 4,
     suffix: " times",
-    icon: <Star className="w-6 h-6" />,
-    color: "text-yellow-400",
+    icon: <Heart className="w-6 h-6" />,
+    color: "text-pink-400",
     description: "Academic Recognition"
   },
   {
-    label: "Published Books",
-    value: 4,
-    icon: <Book className="w-6 h-6" />,
-    color: "text-purple-400",
-    description: "Poetry Collections"
-  },
-  {
-    label: "Major Awards",
-    value: 2,
-    suffix: "+",
-    icon: <Heart className="w-6 h-6" />,
-    color: "text-pink-400",
-    description: "Miles Hall & Bethune Cookman"
+    label: "Age",
+    value: 19,
+    suffix: " years",
+    icon: <Users className="w-6 h-6" />,
+    color: "text-blue-400",
+    description: "Young achiever"
   }
 ];
 
@@ -180,7 +179,7 @@ export default function StatsShowcase() {
           <div className="inline-flex items-center gap-6 px-8 py-4 bg-card border border-border rounded-full">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-              <span>18 Years Old</span>
+              <span>19 Years Old</span>
             </div>
             <div className="w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
