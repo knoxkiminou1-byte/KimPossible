@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     name: "Coach Martinez",
     role: "Head Basketball Coach",
     organization: "Cristo Rey De La Salle",
-    content: "Kiminou's leadership on and off the court is extraordinary. At 6'8\", he dominates physically, but it's his mental game and team-first attitude that sets him apart. A true captain.",
+    content: "Kiminou's leadership on and off the court is extraordinary. At 6 feet 7 inches, he dominates physically, but it's his mental game and team first attitude that sets him apart. A true captain.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
     rating: 5,
     category: "athletic"
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     name: "Ms. Rodriguez",
     role: "English Department Head", 
     organization: "Ygnacio Valley High School",
-    content: "Reading Kiminou's poetry is like witnessing raw talent transform into refined artistry. Four published books by 18? That's not just impressive—it's unprecedented for someone his age.",
+    content: "Reading Kiminou's poetry is like witnessing raw talent transform into refined artistry. Six published works by 19? That's not just impressive, it's unprecedented for someone his age.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
     rating: 5,
     category: "literary"
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Chen",
     role: "Young Entrepreneur",
     organization: "Bay Area Youth Business Network",
-    content: "The Tee Shirt Teens isn't just a brand—it's a movement. Kiminou understands our generation in a way that resonates authentically. His business instincts are incredible.",
+    content: "The Tee Shirt Teens is not just a brand, it's a movement. Kiminou understands our generation in a way that resonates authentically. His business instincts are incredible.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
     rating: 5,
     category: "business"
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
     name: "Marcus Thompson",
     role: "Teammate & Friend",
     organization: "Ygnacio Valley Football",
-    content: "Playing alongside Kiminou changed my perspective. He's 300 pounds of pure determination, but it's his heart that makes him unstoppable. On and off the field, he elevates everyone.",
+    content: "Playing alongside Kiminou changed my perspective. At 235 pounds of pure determination, it's his heart that makes him unstoppable. On and off the field, he elevates everyone.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
     rating: 5,
     category: "athletic"

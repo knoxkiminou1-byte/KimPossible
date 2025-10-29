@@ -101,7 +101,7 @@ export default function BrandStory() {
             The Tee Shirt Teens Story
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="brand-story-subtitle">
-            From Bay Area athlete to fashion entrepreneur—building a brand that empowers youth voices
+            From Bay Area athlete to fashion entrepreneur building a brand that empowers youth voices
           </p>
         </div>
 

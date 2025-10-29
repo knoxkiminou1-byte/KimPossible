@@ -41,18 +41,18 @@ export default function Home() {
     <>
       <Helmet>
         <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
-        <meta name="description" content="Official website of Kiminou Knox - 18-year-old athlete, published author, entrepreneur, and creative from the Bay Area. Four published poetry books, NCAA registered athlete, and youth advocate." />
+        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Six published works, NCAA registered athlete, and youth advocate." />
         <link rel="canonical" href="https://kiminouknox.com/home" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta property="og:description" content="18-year-old athlete, published author, entrepreneur, and creative from the Bay Area" />
+        <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
         <meta property="og:url" content="https://kiminouknox.com/home" />
         <meta property="og:image" content="https://kiminouknox.com/og/home.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta name="twitter:description" content="18-year-old athlete, published author, entrepreneur, and creative" />
+        <meta name="twitter:description" content="19 year old athlete, published author, entrepreneur, and creative" />
         <meta name="twitter:image" content="https://kiminouknox.com/og/home.jpg" />
         
         <script type="application/ld+json">
@@ -81,7 +81,7 @@ export default function Home() {
           id="athlete"
           eyebrow="ATHLETE"
           title="Basketball Excellence"
-          description="Standing at 6 feet 7 inches and 235 lbs, Kiminou is a multi-sport athlete who served as varsity captain at Ygnacio Valley High School. Featured in PrepHoops and 247Sports as Redwood Christian MVP and Pine Valley MVP, he is registered with NCAA eligibility and earned CaliHoop Top Team Player Selection."
+          description="Standing at 6 feet 7 inches and 235 lbs, Kiminou is a multi sport athlete who served as varsity captain at Ygnacio Valley High School. Featured in PrepHoops and 247Sports as Redwood Christian MVP and Pine Valley MVP, he is registered with NCAA eligibility and earned CaliHoop Top Team Player Selection."
           image="/photos/athletic-pose.jpg"
           imageAlt="Basketball athlete in athletic pose"
           primaryButton="VIEW SPORTS CAREER"
@@ -92,8 +92,8 @@ export default function Home() {
         <Section 
           id="author"
         eyebrow="AUTHOR"
-        title="Four Books by Age 18"
-        description="Four published poetry collections by age 18: The Spirit Of Solomon, Our Father?, Poems from a Black Boy, and Hopeless Romantic. His work explores faith, identity, love, and the Black experience with remarkable depth and authentic voice that resonates with readers worldwide."
+        title="Six Books by Age 19"
+        description="Six published works by age 19: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. His work explores faith, identity, love, and the Black experience with remarkable depth and authentic voice that resonates with readers worldwide."
         image="/photos/brown-suit-author.jpg"
         imageAlt="Published poetry books and writing"
           primaryButton="VIEW BOOKS"
@@ -105,7 +105,7 @@ export default function Home() {
           id="entrepreneur"
         eyebrow="ENTREPRENEUR"
         title="The Tee Shirt Teens"
-        description="Co-Owner of The TeeShirtTeens, a youth-run apparel brand that he founded while maintaining his demanding athletic and academic schedule. This platform for authentic youth expression combines fashion with purpose, featuring original designs ranging from playful humor to inspirational art that empowers the next generation."
+        description="Co Owner of The TeeShirtTeens, a youth run apparel brand that he founded while maintaining his demanding athletic and academic schedule. This platform for authentic youth expression combines fashion with purpose, featuring original designs ranging from playful humor to inspirational art that empowers the next generation."
         image="/photos/entrepreneur-style.jpg"
         imageAlt="The Tee Shirt Teens clothing brand"
           primaryButton="VISIT STORE"
@@ -117,7 +117,7 @@ export default function Home() {
           id="designer"
         eyebrow="DESIGNER"
         title="Creative Vision in Action"
-        description="Beyond sports and literature, Kiminou channels creativity into media production and content creation. He has contributed to political campaigns for Vivian Flowers and Regina Wallace-Jones, participated in 2020 Census PSA commercials, and creates original music and spoken word content that bridges traditional and digital media to amplify youth voices."
+        description="Beyond sports and literature, Kiminou channels creativity into media production and content creation. He has contributed to political campaigns for Vivian Flowers and Regina Wallace Jones, participated in 2020 Census PSA commercials, and creates original music and spoken word content that bridges traditional and digital media to amplify youth voices."
         image="/photos/creative-designer.jpg"
         imageAlt="Creative design and content creation"
           primaryButton="VIEW PORTFOLIO"

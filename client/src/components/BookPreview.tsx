@@ -70,7 +70,7 @@ export default function BookPreview() {
               Published Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="books-subtitle">
-              Poetry collections exploring wisdom, faith, identity, and love—with live PDF previews and real purchase links
+              Poetry collections exploring wisdom, faith, identity, and love with live PDF previews and real purchase links
             </p>
             <div className="mt-6">
               <Link href="/books">
