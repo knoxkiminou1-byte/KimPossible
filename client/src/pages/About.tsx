@@ -87,31 +87,31 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from the Oakland East Bay. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose.
+                I am a 19 year old writer and athlete from the Oakland East Bay, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, I create work that helps people feel deeply and act with purpose.
               </p>
 
               <p data-testid="about-stats">
-                I have 6 published works and 5 major awards. I scored 1380 on the SAT.
+                My work includes 6 published books and recognition through 5 major awards. Academically, I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
               </p>
 
               <p data-testid="about-family">
-                My family is my compass. I am the son of Rashida Knox a top Bay Area marketer and a presidential singer. My grandmother Dr Faye McNair Knox served the One East Palo Alto community and taught me that service is a promise you renew each day.
+                My family serves as my compass. I am the son of Rashida Knox, a distinguished Bay Area marketer and presidential singer whose dedication to excellence shapes my approach to every endeavor. My grandmother, Dr. Faye McNair Knox, devoted her life to serving the One East Palo Alto community as its executive director, teaching me that service is a promise you renew each day.
               </p>
 
               <p data-testid="about-work">
-                On the page I write about Black boy life love and becoming. On the court I play forward and center. The same discipline runs through both. Show up. Do the work. Leave the space better than you found it.
+                On the page, I explore Black boy life, love, and becoming through verse and narrative. On the court, I play forward and center, bringing the same discipline to both arenas. The principles remain constant: show up, do the work, leave every space better than you found it.
               </p>
 
               <p data-testid="about-books">
-                Recent books include Black Boy Poems Our Father Boys Raised in Silence The Spirit of Solomon Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise. I am building an author universe that connects poems stories essays film pages and live work.
+                My published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work.
               </p>
 
               <p data-testid="about-speaking">
-                I speak on craft discipline voice and the cost of silence. I work with teams schools and community groups to turn ideas into action.
+                As a speaker, I address craft, discipline, voice, and the cost of silence. I collaborate with teams, schools, and community organizations to transform ideas into meaningful action that creates lasting change.
               </p>
 
               <p data-testid="about-closing" className="font-medium">
-                Thank you for reading. Let us build work that lasts.
+                Thank you for taking the time to learn about my journey. Together, let us build work that endures.
               </p>
             </div>
           </div>

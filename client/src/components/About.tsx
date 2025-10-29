@@ -21,19 +21,19 @@ export default function About() {
           </h2>
           <div className="h-px w-24 bg-accent mb-12 mx-auto"></div>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8" data-testid="about-description-1">
-            Kiminou Knox is a 19 year old writer and athlete from the Oakland East Bay. He tells stories that carry faith grit and love. He builds books poems and youth projects that help people feel and act with purpose.
+            Kiminou Knox is a 19 year old writer and athlete from the Oakland East Bay, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, he creates work that helps people feel deeply and act with purpose.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-2">
-            Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. He has 6 published works and 5 major awards. He scored 1380 on the SAT.
+            Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. His accomplishments include 6 published works and recognition through 5 major awards. Academically, he scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-3">
-            His family is his compass. He is the son of Rashida Knox a top Bay Area marketer and presidential singer. His grandmother Dr Faye McNair Knox served the One East Palo Alto community and taught him that service is a promise you renew each day.
+            His family serves as his compass. He is the son of Rashida Knox, a distinguished Bay Area marketer and presidential singer whose dedication to excellence shapes his approach to every endeavor. His grandmother, Dr. Faye McNair Knox, devoted her life to serving the One East Palo Alto community as its executive director, teaching him that service is a promise you renew each day.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-4">
-            On the page he writes about Black boy life love and becoming. On the court he plays forward and center. The same discipline runs through both. Show up. Do the work. Leave the space better than you found it.
+            On the page, he explores Black boy life, love, and becoming through verse and narrative. On the court, he plays forward and center, bringing the same discipline to both arenas. The principles remain constant: show up, do the work, leave every space better than you found it.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-12" data-testid="about-description-5">
-            Recent books include Black Boy Poems Our Father Boys Raised in Silence The Spirit of Solomon Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise. He is building an author universe that connects poems stories essays film pages and live work. He speaks on craft discipline voice and the cost of silence, working with teams schools and community groups to turn ideas into action.
+            His published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. He is building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work. As a speaker, he addresses craft, discipline, voice, and the cost of silence, collaborating with teams, schools, and community organizations to transform ideas into meaningful action.
           </p>
           
           {/* Newsletter Signup */}
