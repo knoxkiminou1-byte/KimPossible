@@ -48,7 +48,7 @@ export default function Works() {
     <>
       <Helmet>
         <title>Works - Kiminou Knox</title>
-        <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
         <link rel="canonical" href="https://kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />

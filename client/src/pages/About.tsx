@@ -85,9 +85,13 @@ export default function About() {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <div className="space-y-6 text-foreground/90 leading-relaxed text-lg">
+            <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a writer and athlete from the Oakland East Bay. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose.
+                I am a 19 year old writer and athlete from the Oakland East Bay. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose.
+              </p>
+
+              <p data-testid="about-stats">
+                I have 6 published works and 5 major awards. I scored 1380 on the SAT.
               </p>
 
               <p data-testid="about-family">
@@ -99,7 +103,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                Recent books include Black Boy Poems Boys Raised in Silence The Spirit of Solomon Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise. I am building an author universe that connects poems stories essays film pages and live work.
+                Recent books include Black Boy Poems Our Father Boys Raised in Silence The Spirit of Solomon Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise. I am building an author universe that connects poems stories essays film pages and live work.
               </p>
 
               <p data-testid="about-speaking">
