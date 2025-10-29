@@ -19,7 +19,7 @@ export default function Press() {
       link: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist"
     },
     {
-      date: "2024 2025",
+      date: "2024 to 2025",
       source: "Amazon",
       fact: "Poetry collections active on major stores",
       link: "https://www.amazon.com/stores/author/B0DGM5Z5Q8"

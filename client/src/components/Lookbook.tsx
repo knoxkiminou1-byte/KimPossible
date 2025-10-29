@@ -6,13 +6,13 @@ const lookbookImages = [
     src: "/photos/athletic-pose.jpg",
     alt: "Basketball athlete",
     title: "Basketball Excellence",
-    description: "Varsity basketball captain at 6'7\" tall"
+    description: "Varsity basketball captain at 6 feet 7 inches tall"
   },
   {
     src: "/photos/brown-suit-author.jpg",
-    alt: "Published author with four poetry books",
+    alt: "Published author with six works",
     title: "Published Author",
-    description: "Four poetry books published by age 18, exploring love, faith, and identity"
+    description: "Six published works by age 19, exploring love, faith, and identity"
   },
   {
     src: "/photos/entrepreneur-style.jpg",
@@ -63,7 +63,7 @@ export default function Lookbook() {
             className="text-xl opacity-90 font-light max-w-2xl mx-auto animate-on-scroll"
             data-testid="lookbook-description"
           >
-            Highlights from the multifaceted journey of an 18-year-old Bay Area renaissance talent.
+            Highlights from the multifaceted journey of a 19 year old Bay Area renaissance talent.
           </p>
         </div>
       </div>

@@ -25,8 +25,8 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2019",
     title: "Athletic Emergence", 
-    description: "Began excelling on the basketball court, reaching 6'7\" and showing exceptional athletic ability",
-    achievement: "Multi-Sport Excellence",
+    description: "Began excelling on the basketball court, reaching 6 feet 7 inches and showing exceptional athletic ability",
+    achievement: "Multi Sport Excellence",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
     image: "/photos/athletic-pose.jpg"
@@ -34,7 +34,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2020",
     title: "First Poetry Publication",
-    description: "Published 'The Spirit Of Solomon' - the beginning of a literary journey",
+    description: "Published The Spirit of Solomon, the beginning of a literary journey",
     achievement: "Literary Debut",
     category: "literary", 
     icon: <Book className="w-5 h-5" />,
@@ -52,8 +52,8 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2022",
     title: "Literary Expansion",
-    description: "Released 'Our Father?' and 'Poems from a Black Boy' - exploring faith, identity, and experience",
-    achievement: "Three Books Published",
+    description: "Released Our Father, Black Boy Poems, and Boys Raised in Silence, exploring faith, identity, and experience",
+    achievement: "Four Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
     image: "/photos/author-reading-book.jpg"
@@ -87,9 +87,9 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     year: "2024",
-    title: "Hopeless Romantic",
-    description: "Released fourth poetry collection, showcasing emotional depth and maturity",
-    achievement: "Fourth Poetry Book",
+    title: "Hopeless Romantic and Kiminou the Great",
+    description: "Released Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise, showcasing emotional depth and creative storytelling",
+    achievement: "Six Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
     image: "/photos/author-reading-book.jpg"
