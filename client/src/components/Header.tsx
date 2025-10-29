@@ -50,8 +50,7 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/home">
-              <a className="luxury-logo group relative overflow-hidden block" data-testid="logo-button">
+            <Link href="/home" className="luxury-logo group relative overflow-hidden block" data-testid="logo-button">
               <span className="logo-text block text-2xl font-serif font-bold tracking-[0.15em] text-foreground transition-all duration-700 group-hover:tracking-[0.3em] group-hover:scale-110">
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-0">K</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-75">I</span>
@@ -67,41 +66,28 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-750">X</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
-              </a>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/home">
-              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-home">
-                HOME
-              </a>
+            <Link href="/home" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-home">
+              HOME
             </Link>
-            <Link href="/about">
-              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-about">
-                ABOUT
-              </a>
+            <Link href="/about" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-about">
+              ABOUT
             </Link>
-            <Link href="/works">
-              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-works">
-                WORKS
-              </a>
+            <Link href="/works" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-works">
+              WORKS
             </Link>
-            <Link href="/press">
-              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-press">
-                PRESS
-              </a>
+            <Link href="/press" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-press">
+              PRESS
             </Link>
-            <Link href="/speaking">
-              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-speaking">
-                SPEAKING
-              </a>
+            <Link href="/speaking" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-speaking">
+              SPEAKING
             </Link>
-            <Link href="/contact">
-              <a className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-contact">
-                CONTACT
-              </a>
+            <Link href="/contact" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-contact">
+              CONTACT
             </Link>
           </div>
 
@@ -153,35 +139,23 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-background border-t border-border" data-testid="mobile-menu">
           <div className="px-6 py-4 space-y-4">
-            <Link href="/home">
-              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-home-mobile">
-                HOME
-              </a>
+            <Link href="/home" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-home-mobile">
+              HOME
             </Link>
-            <Link href="/about">
-              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-about-mobile">
-                ABOUT
-              </a>
+            <Link href="/about" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-about-mobile">
+              ABOUT
             </Link>
-            <Link href="/works">
-              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-works-mobile">
-                WORKS
-              </a>
+            <Link href="/works" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-works-mobile">
+              WORKS
             </Link>
-            <Link href="/press">
-              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-press-mobile">
-                PRESS
-              </a>
+            <Link href="/press" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-press-mobile">
+              PRESS
             </Link>
-            <Link href="/speaking">
-              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-speaking-mobile">
-                SPEAKING
-              </a>
+            <Link href="/speaking" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-speaking-mobile">
+              SPEAKING
             </Link>
-            <Link href="/contact">
-              <a className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-contact-mobile">
-                CONTACT
-              </a>
+            <Link href="/contact" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-contact-mobile">
+              CONTACT
             </Link>
           </div>
         </div>
