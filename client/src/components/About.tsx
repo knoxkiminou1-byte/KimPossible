@@ -21,13 +21,19 @@ export default function About() {
           </h2>
           <div className="h-px w-24 bg-accent mb-12 mx-auto"></div>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8" data-testid="about-description-1">
-            Kiminou Knox is a 19 year old multi talented individual from Oakland and East Palo Alto, CA, distinguished as a student athlete, published author, and entrepreneur. Standing at 6 feet 7 inches and weighing 235 lbs, he excelled as a varsity basketball captain and multi sport athlete in both basketball and football positions.
+            Kiminou Knox is a 19 year old writer and athlete from the Oakland East Bay. He tells stories that carry faith grit and love. He builds books poems and youth projects that help people feel and act with purpose.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-2">
-            The grandson of the late Dr. Faye McNair Knox, a respected community advocate and former executive director of One East Palo Alto, Kiminou carries forward a family legacy of community engagement. A National Honor Society member (4 years) and four time Honor Roll recipient with a 3.25 GPA, he graduated from Ygnacio Valley High School in 2025 with a SAT score of 1380 and NCAA eligibility registration.
+            Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. He has 6 published works and 5 major awards. He scored 1380 on the SAT.
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-12" data-testid="about-description-3">
-            Beyond athletics, Kiminou has authored six published works including Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. He also co founded The TeeShirtTeens clothing brand. Winner of five major awards including the Miles Hall Breaking Barriers Award, he has also contributed media work for political campaigns and the 2020 Census. His journey represents the intersection of athletic discipline, literary expression, entrepreneurial vision, and community service.
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-3">
+            His family is his compass. He is the son of Rashida Knox a top Bay Area marketer and presidential singer. His grandmother Dr Faye McNair Knox served the One East Palo Alto community and taught him that service is a promise you renew each day.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-4">
+            On the page he writes about Black boy life love and becoming. On the court he plays forward and center. The same discipline runs through both. Show up. Do the work. Leave the space better than you found it.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-12" data-testid="about-description-5">
+            Recent books include Black Boy Poems Our Father Boys Raised in Silence The Spirit of Solomon Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise. He is building an author universe that connects poems stories essays film pages and live work. He speaks on craft discipline voice and the cost of silence, working with teams schools and community groups to turn ideas into action.
           </p>
           
           {/* Newsletter Signup */}
