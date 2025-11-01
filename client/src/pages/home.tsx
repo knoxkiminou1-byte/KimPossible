@@ -12,6 +12,7 @@ import BookPreview from "@/components/BookPreview";
 import MediaKit from "@/components/MediaKit";
 import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
+import PoemOfTheDay from "@/components/PoemOfTheDay";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
@@ -69,6 +70,7 @@ export default function Home() {
         <WhoIsKiminou />
         <Milestones />
         <StatsShowcase />
+        <PoemOfTheDay />
         <LatestReleases />
         <BookPreview />
         <PhotoGallery />

@@ -74,18 +74,18 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
             <Link href="/home" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-home">
               HOME
             </Link>
-            <Link href="/about" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-about">
-              ABOUT
+            <Link href="/books" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-books">
+              BOOKS
             </Link>
-            <Link href="/works" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-works">
-              WORKS
-            </Link>
-            <Link href="/press" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-press">
-              PRESS
+            <Link href="/sports" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-basketball">
+              BASKETBALL
             </Link>
             <Link href="/speaking" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-speaking">
               SPEAKING
             </Link>
+            <a href="https://thett.shop" target="_blank" rel="noopener noreferrer" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-brand">
+              BRAND
+            </a>
             <Link href="/contact" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-contact">
               CONTACT
             </Link>
@@ -142,18 +142,18 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
             <Link href="/home" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-home-mobile">
               HOME
             </Link>
-            <Link href="/about" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-about-mobile">
-              ABOUT
+            <Link href="/books" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-books-mobile">
+              BOOKS
             </Link>
-            <Link href="/works" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-works-mobile">
-              WORKS
-            </Link>
-            <Link href="/press" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-press-mobile">
-              PRESS
+            <Link href="/sports" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-basketball-mobile">
+              BASKETBALL
             </Link>
             <Link href="/speaking" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-speaking-mobile">
               SPEAKING
             </Link>
+            <a href="https://thett.shop" target="_blank" rel="noopener noreferrer" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-brand-mobile">
+              BRAND
+            </a>
             <Link href="/contact" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-contact-mobile">
               CONTACT
             </Link>

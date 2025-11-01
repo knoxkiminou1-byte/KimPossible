@@ -13,13 +13,6 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: "SAT Score",
-    value: 1380,
-    icon: <Trophy className="w-6 h-6" />,
-    color: "text-red-400",
-    description: "Standardized Testing"
-  },
-  {
     label: "Published Books",
     value: 6,
     icon: <Book className="w-6 h-6" />,
@@ -34,7 +27,7 @@ const stats: Stat[] = [
     description: "Recognition and Honors"
   },
   {
-    label: "Height & Weight",
+    label: "Height",
     value: 6,
     suffix: "'7\" / 235 lbs",
     icon: <Target className="w-6 h-6" />,
@@ -42,20 +35,11 @@ const stats: Stat[] = [
     description: "Athletic Profile"
   },
   {
-    label: "Honor Roll",
-    value: 4,
-    suffix: " times",
-    icon: <Heart className="w-6 h-6" />,
-    color: "text-pink-400",
-    description: "Academic Recognition"
-  },
-  {
-    label: "Age",
-    value: 19,
-    suffix: " years",
-    icon: <Users className="w-6 h-6" />,
+    label: "Class of",
+    value: 2025,
+    icon: <Trophy className="w-6 h-6" />,
     color: "text-blue-400",
-    description: "Young achiever"
+    description: "Graduation Year"
   }
 ];
 
@@ -174,25 +158,6 @@ export default function StatsShowcase() {
           ))}
         </div>
 
-        {/* Additional Context */}
-        <div className="mt-16 text-center" data-testid="stats-context">
-          <div className="inline-flex items-center gap-6 px-8 py-4 bg-card border border-border rounded-full">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-              <span>19 Years Old</span>
-            </div>
-            <div className="w-px h-6 bg-border"></div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-              <span>Class of 2025</span>
-            </div>
-            <div className="w-px h-6 bg-border"></div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-              <span>Bay Area Native</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
