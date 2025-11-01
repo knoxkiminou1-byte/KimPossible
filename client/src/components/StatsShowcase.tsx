@@ -107,9 +107,9 @@ export default function StatsShowcase() {
   const statsRef = useScrollAnimation();
 
   return (
-    <section className="py-12 bg-muted/30" data-testid="stats-showcase">
+    <section className="py-8 bg-muted/30" data-testid="stats-showcase">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16" ref={statsRef}>
+        <div className="text-center mb-8" ref={statsRef}>
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="stats-title">
             By The Numbers
           </h2>

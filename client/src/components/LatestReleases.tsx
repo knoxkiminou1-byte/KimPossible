@@ -36,7 +36,7 @@ export default function LatestReleases() {
   if (books.length === 0) return null;
 
   return (
-    <section className="relative py-12 bg-background overflow-hidden">
+    <section className="relative py-8 bg-background overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -46,7 +46,7 @@ export default function LatestReleases() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
