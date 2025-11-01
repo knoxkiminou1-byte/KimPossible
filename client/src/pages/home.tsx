@@ -69,13 +69,13 @@ export default function Home() {
         <WhoIsKiminou />
         <StatsShowcase />
         <PoemOfTheDay />
-        <FeaturedBookPromo />
         <BookPreview />
         <PhotoGallery />
         <MilesHallFeature />
         <PressStrip />
         <Testimonials />
         <MediaKit />
+        <FeaturedBookPromo />
         <Contact />
         <Footer />
         <ContactFAB />
