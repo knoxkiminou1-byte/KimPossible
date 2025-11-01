@@ -134,5 +134,68 @@
       "bn": null
     },
     "featured": true
+  },
+  {
+    "id": "boys-raised-in-silence",
+    "title": "Boys Raised in Silence",
+    "subtitle": "Breaking the Quiet, Finding Voice",
+    "year": 2024,
+    "isbn": "9798316735821",
+    "datePublished": "2024-06-15",
+    "cover": "/books/boys-raised-in-silence-cover.jpg",
+    "samplePoems": [
+      {
+        "title": "The Quiet",
+        "content": "We were taught to swallow pain\nlike bitter medicine,\nto smile through the ache,\nto carry burdens\nthat would break men twice our size.\n\nSilence was strength,\nthey said.\nTears were weakness.\nVulnerability was surrender.\n\nSo we learned to hide\nbehind masks of toughness,\nburied our emotions\nin unmarked graves,\nbuilt walls so high\neven we forgot\nwhat we were protecting.\n\nBut silence doesn't heal wounds.\nIt just lets them fester\nin the dark."
+      },
+      {
+        "title": "Breaking Point",
+        "content": "There comes a moment\nwhen the weight becomes too much,\nwhen the mask cracks,\nwhen the walls crumble,\nwhen silence\nfinally screams.\n\nFor me, it was midnight,\nalone in my room,\nrealizing that strength\nisn't about holding it all in—\nit's about having the courage\nto let it out.\n\nTo speak.\nTo cry.\nTo ask for help.\nTo admit\nthat I'm not okay,\nand that's okay."
+      },
+      {
+        "title": "Voice",
+        "content": "They tried to silence us\nwith expectations,\nwith stereotypes,\nwith the weight\nof what it means\nto be a man.\n\nBut our voices\nwere always there,\nwaiting beneath the surface,\nready to rise.\n\nNow I speak\nnot just for myself,\nbut for every boy\nwho was told to be quiet,\nevery man\nwho learned too late\nthat vulnerability\nis not the opposite of strength—\nit's the foundation."
+      }
+    ],
+    "themes": ["Silence", "Masculinity", "Healing"],
+    "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+      "waterstones": "https://www.waterstones.com/book/boys-raised-in-silence/kiminou-knox/9798316735821",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "adventures-kiminou-chua",
+    "title": "The Adventures of Kiminou the Great and Chua the Wise",
+    "subtitle": "A Journey of Friendship and Discovery",
+    "year": 2023,
+    "isbn": "9798316591204",
+    "datePublished": "2023-11-20",
+    "cover": "/books/adventures-kiminou-chua-cover.jpg",
+    "samplePoems": [
+      {
+        "title": "The Beginning",
+        "content": "In a land where stories bloom like flowers,\nwhere wisdom grows on ancient trees,\ntwo friends embarked on a journey\nthat would change everything.\n\nKiminou the Great,\nwith courage in his heart\nand dreams too big for one world,\nmet Chua the Wise,\nwho saw the truth\nin every shadow,\nheard the lesson\nin every silence.\n\nTogether, they learned\nthat greatness and wisdom\nare not opposites—\nthey are partners\non the path to becoming."
+      },
+      {
+        "title": "The Lesson of the Mountain",
+        "content": "Kiminou wanted to climb the highest peak,\nto plant his flag at the summit,\nto prove his greatness to the world.\n\nBut Chua said,\n'The mountain does not need you\nto climb it.\nIt simply is.\nPerhaps the lesson\nis not in conquering,\nbut in appreciating.\nNot in reaching the top,\nbut in honoring the journey.'\n\nAnd Kiminou learned\nthat true greatness\nisn't about being seen—\nit's about seeing clearly."
+      },
+      {
+        "title": "The Gift of Friendship",
+        "content": "They say you cannot choose your family,\nbut you can choose your friends.\n\nKiminou and Chua chose each other,\nnot because they were alike,\nbut because they were different—\ndifferent in all the right ways.\n\nOne saw adventure where the other saw caution.\nOne saw possibility where the other saw danger.\nOne rushed forward while the other paused to think.\n\nAnd together,\nthey were unstoppable,\nbalanced,\ncomplete.\n\nBecause the greatest adventures\nare always better\nwhen shared with someone\nwho helps you see\nwhat you couldn't see alone."
+      }
+    ],
+    "themes": ["Friendship", "Growth", "Adventure"],
+    "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Adventures_of_Kiminou_and_Chua?id=KhVrEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
   }
 ]

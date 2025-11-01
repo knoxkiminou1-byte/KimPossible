@@ -7,9 +7,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function Speaking() {
   const { toast } = useToast();
+  const { theme, changeTheme } = useTheme();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -77,7 +79,7 @@ export default function Speaking() {
         <meta name="twitter:image" content="https://kiminouknox.com/og/speaking.jpg" />
       </Helmet>
 
-      <Header theme="maison" onThemeChange={() => {}} />
+      <Header theme={theme} onThemeChange={changeTheme} />
 
       <main className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { ExternalLink, BookOpen, Download, Heart, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
+import { useTheme } from "@/hooks/useTheme";
 
 type Poem = {
   title: string;
@@ -36,6 +40,7 @@ type Book = {
 export default function BooksPage() {
   const [books, setBooks] = useState<Book[]>([]);
   const [open, setOpen] = useState<{id: string, poems: Poem[], title: string} | null>(null);
+  const { theme, changeTheme } = useTheme();
 
   useEffect(() => {
     fetch("/books.json")
@@ -45,7 +50,27 @@ export default function BooksPage() {
   }, []);
 
   return (
-    <section className="min-h-screen bg-background text-foreground py-20">
+    <>
+      <Helmet>
+        <title>Published Books - Kiminou Knox</title>
+        <meta name="description" content="Explore all 6 published works by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
+        <link rel="canonical" href="https://kiminouknox.com/books" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Published Books - Kiminou Knox" />
+        <meta property="og:description" content="Six published works of poetry and stories" />
+        <meta property="og:url" content="https://kiminouknox.com/books" />
+        <meta property="og:image" content="https://kiminouknox.com/og/books.jpg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Published Books - Kiminou Knox" />
+        <meta name="twitter:description" content="Six published works of poetry and stories" />
+        <meta name="twitter:image" content="https://kiminouknox.com/og/books.jpg" />
+      </Helmet>
+
+      <Header theme={theme} onThemeChange={changeTheme} />
+
+      <section className="min-h-screen bg-background text-foreground py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <h1 className="font-serif text-5xl font-bold tracking-tight">Published Works</h1>
@@ -109,14 +134,17 @@ export default function BooksPage() {
         </div>
       </div>
 
-      {open && (
-        <PoemModal
-          title={open.title}
-          poems={open.poems}
-          open={!!open}
-          onClose={() => setOpen(null)}
-        />
-      )}
-    </section>
+        {open && (
+          <PoemModal
+            title={open.title}
+            poems={open.poems}
+            open={!!open}
+            onClose={() => setOpen(null)}
+          />
+        )}
+      </section>
+
+      <Footer />
+    </>
   );
 }
