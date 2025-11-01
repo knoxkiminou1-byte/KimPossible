@@ -6,6 +6,7 @@ import { Book, X, Download, ExternalLink, Heart, FileText, Calendar, Clock, Arro
 import type { BlogPost } from "@shared/schema";
 import { format } from "date-fns";
 import PoemModal from "@/components/PDFModal";
+import backgroundImage from "@assets/Gemini_Generated_Image_qfccptqfccptqfcc_1762031474581.png";
 
 interface Poem {
   title: string;
@@ -63,8 +64,20 @@ export default function BookPreview() {
 
   return (
     <>
-      <section className="py-24 bg-background" data-testid="book-preview-section">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section 
+        className="py-24 bg-background relative" 
+        data-testid="book-preview-section"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/75"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16" ref={booksRef}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="books-title">
               Published Works
