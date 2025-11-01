@@ -157,7 +157,6 @@ export default function StatsShowcase() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

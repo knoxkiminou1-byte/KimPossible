@@ -13,7 +13,7 @@ export default function FeaturedBookPromo() {
   }, []);
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-cyan-950 dark:via-blue-950 dark:to-teal-950 overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-cyan-950 dark:via-blue-950 dark:to-teal-950 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-3xl"></div>
@@ -102,21 +102,21 @@ export default function FeaturedBookPromo() {
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4" />
-                  <span>Published 2023</span>
+                  <span>Published 2025</span>
                 </div>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
-                  href="https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5"
+                  href="https://play.google.com/store/books/details/Kiminou_Knox_Adventures_of_Kiminou_and_Chua?id=KhVrEQAAQBAJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl"
-                  data-testid="featured-book-buy-amazon"
+                  data-testid="featured-book-buy-google"
                 >
                   <ExternalLink className="w-5 h-5" />
-                  Buy on Amazon
+                  Buy on Google Books
                 </a>
                 <Link
                   href="/books/adventures-kiminou-chua"
