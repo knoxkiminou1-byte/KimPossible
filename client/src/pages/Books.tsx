@@ -132,7 +132,6 @@ export default function BooksPage() {
             </article>
           ))}
         </div>
-      </div>
 
         {open && (
           <PoemModal
@@ -142,6 +141,7 @@ export default function BooksPage() {
             onClose={() => setOpen(null)}
           />
         )}
+      </div>
       </section>
 
       <Footer />
