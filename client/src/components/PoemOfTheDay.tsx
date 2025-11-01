@@ -34,6 +34,13 @@ export default function PoemOfTheDay() {
         setIsLoading(false);
       } catch (error) {
         console.error('Failed to load poems:', error);
+        // Show a default poem on error instead of hiding the section
+        setPoem({
+          title: "Rising",
+          text: "Every morning I decide\nTo stand when I could fall\nTo speak when I could hide\nTo answer destiny's call\n\nNot perfect, not without fear\nBut present, here, awake\nEach day another year\nOf choices that I make",
+          sourceBook: "Black Boy Poems",
+          rating: "General"
+        });
         setIsLoading(false);
       }
     }
@@ -41,8 +48,20 @@ export default function PoemOfTheDay() {
     loadPoem();
   }, []);
 
-  if (isLoading || !poem) {
-    return null; // Hide section until loaded to avoid empty space
+  if (isLoading) {
+    return (
+      <section id="poem-of-the-day" className="py-16 bg-muted/50" data-testid="poem-of-the-day">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-muted-foreground">Loading poem...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (!poem) {
+    return null;
   }
 
   return (
