@@ -1,0 +1,302 @@
+Kiminou, this is Zephyr.
+
+Below is the cleaned and upgraded checklist for Repl it. It calls out what is wrong on the current site, what needs to be removed or rebuilt, and what must be added. It is written so Repl it can act without guessing.
+
+You can paste this whole thing straight to Repl it.
+
+---
+
+TASK LIST FOR REPL IT
+Project: KiminouKnox dot com
+Owner: Kiminou Knox
+
+Read everything. Then execute in order.
+
+SECTION 1. CORE CLEANUP AND STRUCTURE
+
+1. Remove or rewrite anything that repeats the same message
+
+   * Right now the site tells the same story in different sections. Athlete. Author. Entrepreneur. Designer. We say it in the hero. Then again in Visual Journey. Then again in the blocks below. Then again in By The Numbers.
+   * Action
+
+     * Keep one strong high level identity block near the top of the page. Call it something like Who is Kiminou and state Athlete Author Entrepreneur Designer in one clean paragraph with one call to action.
+     * Remove any other blocks later on the page that restate the same thing using different art cards and different wording. Do not echo the same pitch four times.
+
+2. Fix duplicate sections
+
+   * The site shows Published Works more than once.
+   * The site shows Visual Journey more than once.
+   * The site shows different carousels that introduce basically the same concept.
+   * Action
+
+     * Keep only one Published Works section on the home page. It should list all current books with cover art and two buttons under each book. Learn More and Buy.
+     * Keep only one Visual Journey section on the home page. The Visual Journey section should clearly be about Kiminou. Remove any repeat copies of that section further down the page.
+     * Delete any leftover cloned blocks that repeat those sections.
+
+3. Clean up sections that are half finished or look empty
+
+   * Some grids appear with big empty space or slow loading content. It looks like a bug even if it is just lazy loading.
+   * Action
+
+     * Do not render a section until its content is loaded. If a section is empty or still fetching, hide it until populated to avoid giant dead zones on scroll.
+     * This especially matters at the top where Latest Releases loads in.
+
+4. Fix navigation and top menu consistency
+
+   * Each main lane of your career needs its own page instead of dumping everything into one long scroll wall.
+   * Action
+
+     * Create and link these pages in the nav bar
+
+       * Books
+       * Speaker and Media
+       * Basketball
+       * Brand and Tee Shirt Teens
+       * Contact
+     * Each of those pages will hold the deep content that is currently stacked on the home page.
+     * The home page will then act as a highlight reel that links into each deeper page.
+
+5. Create a clean hero section that immediately explains who this is
+
+   * The hero art is strong but it is abstract. A new visitor might not know in the first three seconds who they are looking at or why they should care.
+   * Action
+
+     * Keep the art.
+     * Add a tight intro statement in plain language under your name. Example format
+
+       * My name is Kiminou Knox. I am a Bay Area writer and basketball athlete building a legacy through books sport and youth leadership.
+     * Keep two main hero buttons
+
+       * Read the Work
+       * Book Me or Work With Me
+     * Remove confusing labels like Enter the House unless Enter the House actually takes people somewhere clear and valuable.
+
+SECTION 2. TIMELINE AND JOURNEY CLEANUP
+
+6. The Journey timeline section is too long and too detailed for a home page
+
+   * The timeline repeats school history and team transfers and awards line by line. It feels like a college application essay not a public brand page.
+   * It also visually stretches the page and kills momentum in the middle of the scroll.
+   * Action
+
+     * Remove the full vertical timeline from the home page.
+     * Replace it with a short block called Milestones or About Kiminou that uses three to four high impact bullets only. For example
+
+       * Scholar and published author with multiple books on faith love and mental survival
+       * Bay Area multi sport athlete and team captain with varsity leadership experience
+       * Founder of The Tee Shirt Teens a youth run creative brand
+       * Honored for community voice and public speaking including recognition from Miles Hall Foundation
+     * Link that block to a dedicated About page or Biography page where you can keep the full timeline for scouts schools press etc.
+     * Style note for that About page
+
+       * Make the timeline clean and minimal. Remove extra fluff phrases like The story continues and Class of 2025 and Beyond unless they are section headers with visual style.
+       * Use consistent tense. Do not jump between past tense and present tense every other line.
+
+SECTION 3. BY THE NUMBERS SECTION
+
+7. By The Numbers has potential but right now it raises questions
+
+   * Some numbers feel unverified. Example SAT score callout. Number of published books. Awards. Height weight. It all sits in big stat cards like a scouting report.
+   * Also there is some tag stacking like 19 Years Old Class of 2025 Bay Area Native repeating identity info a viewer already got up top.
+   * Action
+
+     * Keep only numbers that are locked true right now and that you want a viewer to repeat about you out loud.
+     * Required stats to keep
+
+       * Height and weight
+       * Class year
+       * Published books count
+       * Major awards or honors
+     * Remove any stat that is not final or that shifts often. If it can change month to month it should not be hard coded in a giant card on the site.
+     * Remove repeated identity badges that say the same thing more than once.
+     * Make each stat box the same visual style. Same font size. Same spacing. Right now spacing and font weight are not always consistent.
+
+SECTION 4. ATHLETE BLOCKS AND CREDIBILITY
+
+8. The basketball and athlete sections are strong but scattered
+
+   * You have claims about captain status leadership NCAA eligibility and multi sport ability. Some of that is repeated in different ways across the page.
+   * Action
+
+     * Move all deep basketball language to its own Basketball page.
+     * That Basketball page should include
+
+       * Height and weight
+       * Positions
+       * Strength benchmarks
+       * Team history and leadership
+       * Training mindset and current goal path
+     * On the home page keep only a single Athlete card with a short pitch and one call to action button that links to the Basketball page.
+
+SECTION 5. BOOKS AND COVERS
+
+9. Published Works section needs to feel like a real bookstore shelf
+
+   * You already have multiple books. You already have cover art. This is your proof you are not just talking.
+   * Right now the language under each book sometimes bleeds into the same tone. Faith pain resilience survival. Repeating the same tone for every book makes them blend instead of stand apart.
+   * Action
+
+     * For each book show
+
+       * Cover image
+       * One sentence hook that says what that specific book is about in its own lane. No recycled language.
+       * Two buttons Learn More and Buy
+     * Confirm all Buy links go to working live purchase pages.
+     * Confirm all Learn More links go to real internal detail pages for that book and not dead placeholders.
+     * Use the public domain cover art from Keenan Mac for these books. That art is cleared. Compress all cover images and export them as WebP to reduce file size for faster load on mobile.
+     * Add descriptive alt text for each cover for accessibility and search.
+
+SECTION 6. THE TEE SHIRT TEENS
+
+10. The Tee Shirt Teens block is good content but it is long and drifts into full essay mode
+
+    * It reads more like a grant proposal than a brand landing.
+    * Also it repeats the message that this is youth led and message driven several times in different phrases.
+    * Action
+
+      * On the home page shorten this block to a sharp pitch
+
+        * The Tee Shirt Teens is an Oakland born youth brand built on voice not trend. Every design comes from lived story not AI clip art. We create street pieces built for kids who feel unseen.
+      * Add one call to action button that links to a Tee Shirt Teens page. That dedicated page can carry the full story of the brand founding story mission roadmap and the youth empowerment message.
+
+SECTION 7. TESTIMONIALS AND PRESS
+
+11. The testimonials section looks good visually but right now the quotes float without enough context
+
+    * A quote like This moved me to tears hits harder if I know who said it and why I should listen to them.
+    * Action
+
+      * For each testimonial card add attribution
+
+        * Full name
+        * Role or relationship to you. Example Varsity Coach. English Teacher. Youth Program Director. Reader.
+      * If you cannot name a person because of privacy then remove the quote or rewrite it to be general social proof such as Readers call this book honest and dangerous in the best way
+      * If a testimonial repeats the same praise as another testimonial remove the weaker one. Do not stack three versions of He is inspiring.
+
+12. Media kit and press area
+
+    * You have a Media Kit section with links for Official Bio High Resolution Photos Athletic Stats Book Press Kit Brand Assets Media Contact Sheet. This is excellent and professional.
+    * Action
+
+      * Make sure each download link actually points to a working file.
+      * All media images must either be your own or clearly in public domain.
+      * Write a note that says All images of Kiminou Knox are cleared for editorial use when credited as Photo courtesy of Kiminou Knox unless marked private.
+      * Keep the commercial use language so people know they cannot just slap you on merch.
+
+SECTION 8. POEM OF THE DAY FEATURE
+
+13. Add a Poem of the Day section to the home page
+
+    * This will give the site daily motion and prove you are active as an author.
+    * Source material will come from your own books. You said you have already given PDFs to the system. Those PDFs are the source pool.
+    * Action
+
+      * Build a back end or script that loads a library of poems taken from your books. Store them in a structured data file such as poems dot json. Each entry should include
+
+        * title
+        * poem text
+        * source book
+        * content rating note if needed
+      * Each calendar day select one poem based on date mod list length or true random.
+      * Render a Poem of the Day block on the home page with
+
+        * Title of the poem
+        * Body text of the poem
+        * A small credit line that says From the book Title by Kiminou Knox and a button Read the Book which links to that book page
+      * Style this block with a calm background and readable typography. Treat it like a living journal not like an ad.
+      * Make sure long poems scroll inside the block so they do not blow out the whole page height on mobile.
+
+SECTION 9. VISUAL STYLE AND MOTION
+
+14. Visual style should stay creative but become more intentional and more sleek
+
+    * Right now the site uses high drama art, glow effects, and strong type. That is your flavor and we keep it. The problem is overuse. When every block is loud, nothing stands out.
+    * Action
+
+      * Set a limited color palette and stick to it across the page. Choose one primary color, one accent, and a dark background color or texture. No random new palette halfway down.
+      * Use motion with discipline. Add subtle fade in or slide in reveal when elements enter viewport. Avoid heavy bounce or cartoon motion.
+      * Use consistent spacing units for padding and margin. Use the same radius on cards. Everything should feel like it belongs in the same design system.
+
+15. Typography cleanup
+
+    * Heading fonts and body fonts need to be consistent. We cannot have five different looks for sentences that say almost the same message.
+    * Action
+
+      * Define H1 H2 H3 Body and Caption styles in code and apply them everywhere.
+      * Remove random all caps unless it is a section label.
+      * Make sure long paragraphs break into short lines for readability on phone screens.
+
+SECTION 10. ACCESSIBILITY AND TECH HEALTH
+
+16. Accessibility fixes
+
+    * Every image needs alt text.
+    * Every interactive button needs clear labels a screen reader can understand.
+    * Color contrast must pass WCAG AA. Dark text on dark background is not allowed.
+    * Action
+
+      * Add alt text for all book covers, athlete photos, brand photos, and hero images.
+      * Check light text on dark overlays and dark text on photo backgrounds. If the contrast is weak add a subtle gradient layer behind the text.
+      * Make sure carousels can be navigated with keyboard input.
+
+17. Performance fixes
+
+    * Large high resolution images slow first load.
+    * Some sections leave blank containers while waiting for lazy content.
+    * Action
+
+      * Convert all images to WebP or AVIF and scale them to realistic display size.
+      * Use responsive image attributes so mobile devices do not download giant desktop versions.
+      * Lazy load below the fold sections but do not show an empty ghost area while they load. Use a tasteful skeleton loader or hide the section until ready.
+
+18. Basic SEO and metadata
+
+    * You need clean page titles and meta descriptions for each main page.
+    * Action
+
+      * Add unique meta title and meta description to Home Books Basketball Speaker and Media Tee Shirt Teens Contact.
+      * Use semantic HTML tags. One H1 per page. Logical heading order after that.
+
+SECTION 11. CONTACT AND CALL TO ACTION
+
+19. Contact section audit
+
+    * You already have a contact block at the bottom with big text inviting coaching and collaboration. That is good. Keep it.
+    * Action
+
+      * Make sure that form actually submits somewhere and does not throw silent errors.
+      * Add a short note about what types of inquiries you want. Example Speaking Requests Brand Collabs Team Tryouts Media Requests.
+      * Remove any extra dramatic language that does not actually tell them how to reach you. Clear beats poetic here.
+
+SECTION 12. FINAL INTEGRATION AND DEPLOYMENT
+
+20. Build staging and test everything before pushing live
+
+    * Action
+
+      * Create a staging branch or staging environment.
+      * Implement all changes there first.
+      * Test on phone vertical. Test on small laptop. Test in dark mode if you support dark mode.
+      * Confirm all buttons and internal links work. No dead pages. No 404 pages.
+      * Confirm each download in the Media Kit works.
+      * Confirm Buy links for each book work.
+      * Confirm Poem of the Day block pulls content and does not render blank.
+
+21. Document what changed
+
+    * After implementing all changes create a short change log inside the repo that lists
+
+      * What was removed
+      * What was merged
+      * What was added
+      * Known issues that still need owner review from Kiminou
+
+---
+
+Summary for Repl it
+
+You are rebuilding KiminouKnox dot com so that it is clean precise powerful and recruit ready. This means
+
+Take out repetition. Kill dead weight. Move deep info into its own pages instead of stacking everything on home. Use the Keenan Mac public domain covers. Add Poem of the Day using poems from the PDFs provided. Tighten visuals. Improve load speed accessibility and mobile experience. Make the site feel intentional not bloated.
+
+That is the standard. Do not freestyle away from this plan.
