@@ -36,7 +36,7 @@ export default function LatestReleases() {
   if (books.length === 0) return null;
 
   return (
-    <section className="relative py-24 bg-background overflow-hidden">
+    <section className="relative py-12 bg-background overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
