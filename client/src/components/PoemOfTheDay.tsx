@@ -11,15 +11,25 @@ interface Poem {
 }
 
 export default function PoemOfTheDay() {
-  const [poem, setPoem] = useState<Poem | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  // Start with a default poem so section is always visible
+  const [poem, setPoem] = useState<Poem>({
+    title: "Rising",
+    text: "Every morning I decide\nTo stand when I could fall\nTo speak when I could hide\nTo answer destiny's call\n\nNot perfect, not without fear\nBut present, here, awake\nEach day another year\nOf choices that I make",
+    sourceBook: "Black Boy Poems",
+    rating: "General"
+  });
   const containerRef = useScrollAnimation();
 
   useEffect(() => {
     async function loadPoem() {
       try {
+        console.log('Loading poems from /poems.json...');
         const response = await fetch('/poems.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const poems: Poem[] = await response.json();
+        console.log('Loaded poems:', poems.length);
         
         // Select poem based on day of year for daily rotation
         const now = new Date();
@@ -30,39 +40,16 @@ export default function PoemOfTheDay() {
         
         // Use modulo to cycle through poems
         const poemIndex = dayOfYear % poems.length;
+        console.log('Selected poem index:', poemIndex, 'Title:', poems[poemIndex].title);
         setPoem(poems[poemIndex]);
-        setIsLoading(false);
       } catch (error) {
         console.error('Failed to load poems:', error);
-        // Show a default poem on error instead of hiding the section
-        setPoem({
-          title: "Rising",
-          text: "Every morning I decide\nTo stand when I could fall\nTo speak when I could hide\nTo answer destiny's call\n\nNot perfect, not without fear\nBut present, here, awake\nEach day another year\nOf choices that I make",
-          sourceBook: "Black Boy Poems",
-          rating: "General"
-        });
-        setIsLoading(false);
+        // Keep the default poem on error
       }
     }
 
     loadPoem();
   }, []);
-
-  if (isLoading) {
-    return (
-      <section id="poem-of-the-day" className="py-16 bg-muted/50" data-testid="poem-of-the-day">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-muted-foreground">Loading poem...</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (!poem) {
-    return null;
-  }
 
   return (
     <section id="poem-of-the-day" className="py-16 bg-muted/50" data-testid="poem-of-the-day">
