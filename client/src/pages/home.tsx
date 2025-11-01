@@ -7,7 +7,6 @@ import WhoIsKiminou from "@/components/WhoIsKiminou";
 import PhotoGallery from "@/components/PhotoGallery";
 import Testimonials from "@/components/Testimonials";
 import BookPreview from "@/components/BookPreview";
-import MediaKit from "@/components/MediaKit";
 import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
@@ -73,7 +72,6 @@ export default function Home() {
         <MilesHallFeature />
         <PressStrip />
         <Testimonials />
-        <MediaKit />
         <Contact />
         <Footer />
         <ContactFAB />
