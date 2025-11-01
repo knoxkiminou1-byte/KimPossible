@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import LatestReleases from "@/components/LatestReleases";
 import MilesHallFeature from "@/components/MilesHallFeature";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
-import Milestones from "@/components/Milestones";
 import StatsShowcase from "@/components/StatsShowcase";
 import PhotoGallery from "@/components/PhotoGallery";
 import Testimonials from "@/components/Testimonials";
@@ -68,7 +67,6 @@ export default function Home() {
         <Header theme={theme} onThemeChange={changeTheme} />
         <Hero />
         <WhoIsKiminou />
-        <Milestones />
         <StatsShowcase />
         <PoemOfTheDay />
         <LatestReleases />

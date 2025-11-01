@@ -16,6 +16,8 @@ The website features an immersive experience with hero video backgrounds, elegan
 - Removed SAT score, Honor Roll, and Age from stats display to keep only stable, recruit-ready information
 - Added Poem of the Day feature with daily rotation from 7-poem library
 - Content follows strict no-hyphen/no-em-dash policy via CSS
+- Removed Milestones section to eliminate repetitive content
+- Reduced spacing between sections for tighter, more streamlined layout
 
 ## Books Library
 - Added 2 missing books to books.json: Boys Raised in Silence and The Adventures of Kiminou the Great and Chua the Wise
