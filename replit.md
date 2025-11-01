@@ -18,6 +18,7 @@ The website features an immersive experience with hero video backgrounds, elegan
 - Content follows strict no-hyphen/no-em-dash policy via CSS
 - Removed Milestones section to eliminate repetitive content
 - Reduced spacing between sections for tighter, more streamlined layout
+- Replaced generic "Latest Releases" section with dedicated Featured Book Promo highlighting "The Adventures of Kiminou the Great and Chua the Wise"
 
 ## Books Library
 - Added 2 missing books to books.json: Boys Raised in Silence and The Adventures of Kiminou the Great and Chua the Wise

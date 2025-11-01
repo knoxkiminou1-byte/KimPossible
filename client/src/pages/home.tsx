@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import LatestReleases from "@/components/LatestReleases";
+import FeaturedBookPromo from "@/components/FeaturedBookPromo";
 import MilesHallFeature from "@/components/MilesHallFeature";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
 import StatsShowcase from "@/components/StatsShowcase";
@@ -69,7 +69,7 @@ export default function Home() {
         <WhoIsKiminou />
         <StatsShowcase />
         <PoemOfTheDay />
-        <LatestReleases />
+        <FeaturedBookPromo />
         <BookPreview />
         <PhotoGallery />
         <MilesHallFeature />
