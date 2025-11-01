@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import backgroundImage from "@assets/Gemini_Generated_Image_x6vcgzx6vcgzx6vc_1762031697968.png";
 
 interface GalleryImage {
   src: string;
@@ -105,8 +106,20 @@ export default function PhotoGallery() {
 
   return (
     <>
-      <section className="py-24 bg-background" data-testid="photo-gallery">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section 
+        className="py-24 bg-background relative" 
+        data-testid="photo-gallery"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/75"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16" ref={galleryRef}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="gallery-title">
               Visual Journey
