@@ -46,10 +46,10 @@ export default function PoemOfTheDay() {
   }
 
   return (
-    <section id="poem-of-the-day" className="py-6 bg-muted/30" data-testid="poem-of-the-day">
+    <section id="poem-of-the-day" className="py-16 bg-muted/50" data-testid="poem-of-the-day">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div ref={containerRef} className="animate-on-scroll">
-          <div className="text-center mb-6">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 mb-4">
               <BookOpen className="w-5 h-5 text-primary" />
               <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-medium">
