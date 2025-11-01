@@ -82,7 +82,7 @@ export default function Contact() {
               Contact
             </h1>
             <p className="text-lg text-muted-foreground">
-              Reach out for speaking engagements media inquiries or collaboration opportunities. For press materials visit the <Link href="/press-kit"><a className="underline hover:text-foreground transition-colors">press kit</a></Link>.
+              Reach out for speaking engagements media inquiries or collaboration opportunities. For press materials visit the <Link href="/press-kit" className="underline hover:text-foreground transition-colors">press kit</Link>.
             </p>
           </div>
 

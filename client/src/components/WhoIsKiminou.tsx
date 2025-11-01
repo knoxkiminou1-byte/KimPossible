@@ -105,10 +105,12 @@ export default function WhoIsKiminou() {
                       {item.cta} →
                     </a>
                   ) : (
-                    <Link href={item.link}>
-                      <a className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid={`identity-link-${item.id}`}>
-                        {item.cta} →
-                      </a>
+                    <Link 
+                      href={item.link}
+                      className="inline-flex items-center text-sm font-medium text-primary hover:underline" 
+                      data-testid={`identity-link-${item.id}`}
+                    >
+                      {item.cta} →
                     </Link>
                   )}
                 </div>

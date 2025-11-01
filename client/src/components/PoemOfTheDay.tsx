@@ -75,13 +75,12 @@ export default function PoemOfTheDay() {
               <p className="text-sm text-muted-foreground mb-4" data-testid="poem-source">
                 From the book <span className="font-medium text-foreground">{poem.sourceBook}</span> by Kiminou Knox
               </p>
-              <Link href="/books">
-                <a 
-                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
-                  data-testid="poem-read-book-link"
-                >
-                  Read the Book →
-                </a>
+              <Link 
+                href="/books"
+                className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                data-testid="poem-read-book-link"
+              >
+                Read the Book →
               </Link>
             </div>
           </div>
