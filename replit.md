@@ -4,6 +4,35 @@ This is a luxury personal portfolio website for Kiminou Knox, designed to showca
 
 The website features an immersive experience with hero video backgrounds, elegant navigation with mega-menus, smooth scroll animations, lookbook galleries, press recognition strips, and comprehensive contact forms. The design emphasizes luxury through generous white space, crisp typography, high-quality imagery, and subtle hover effects.
 
+# Recent Changes (November 1, 2025)
+
+## Navigation Restructuring
+- Updated Header navigation to include Books, Basketball, Speaking, Brand (external link to thett.shop), and Contact
+- Removed duplicate navigation items and consolidated menu structure
+- Brand link opens in new tab to external store
+
+## Homepage Optimizations
+- Simplified Stats section from 6 metrics to 4 verified metrics (Published Books, Major Awards, Height/Weight, Class Year)
+- Removed SAT score, Honor Roll, and Age from stats display to keep only stable, recruit-ready information
+- Added Poem of the Day feature with daily rotation from 7-poem library
+- Content follows strict no-hyphen/no-em-dash policy via CSS
+
+## Books Library
+- Added 2 missing books to books.json: Boys Raised in Silence and The Adventures of Kiminou the Great and Chua the Wise
+- Now featuring all 6 published works with complete details, sample poems, and purchase links
+- Books page updated with proper SEO metadata and consistent Header/Footer structure
+
+## Page Consistency
+- Updated Books, Sports, and Speaking pages with unified theming using useTheme hook
+- Added SEO meta tags (title, description, Open Graph) to all dedicated pages
+- Integrated Header and Footer components across all pages for consistent navigation
+
+## Poem of the Day Feature
+- Created PoemOfTheDay.tsx component with deterministic daily rotation based on day-of-year
+- Poem library stored in client/public/poems.json with 7 poems
+- Integrated into homepage with scroll animations
+- Fetches from static JSON, rotates automatically each calendar day
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
