@@ -89,7 +89,7 @@ export default function MilesHallFeature() {
             </div>
           </motion.div>
 
-          {/* Right Column - YouTube Embed */}
+          {/* Right Column - Video Embed */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -98,12 +98,12 @@ export default function MilesHallFeature() {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted">
-              {/* YouTube Shorts Embed - Replace with actual video ID */}
-              <div className="relative w-full" style={{ paddingBottom: '177.78%' }}> {/* 9:16 aspect ratio for Shorts */}
+              {/* Embedded Video from Miles Hall Foundation website */}
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 aspect ratio */}
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
-                  title="Miles Hall Foundation Youth Summit Recognition"
+                  src="https://www.themileshallfoundation.org/post/youth-summit-essay-finalist"
+                  title="Kiminou Knox - Miles Hall Foundation Youth Summit Essay Winner"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
