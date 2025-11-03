@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Book, X, Download, ExternalLink, Heart, FileText, Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
-import type { BlogPost } from "@shared/schema";
-import { format } from "date-fns";
+import { Book, X, ExternalLink, Heart, ArrowRight, BookOpen } from "lucide-react";
 import PoemModal from "@/components/PDFModal";
 import backgroundImage from "@assets/Gemini_Generated_Image_qfccptqfccptqfcc_1762031474581.png";
 
@@ -37,7 +34,6 @@ export default function BookPreview() {
   const [books, setBooks] = useState<BookData[]>([]);
   const [poemModal, setPoemModal] = useState<{id: string, poems: Poem[], title: string} | null>(null);
   const booksRef = useScrollAnimation();
-  const blogRef = useScrollAnimation();
 
   // Load books from JSON
   useEffect(() => {
@@ -46,11 +42,6 @@ export default function BookPreview() {
       .then(setBooks)
       .catch(() => setBooks([]));
   }, []);
-
-  // Fetch latest blog posts
-  const { data: latestPosts = [] } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog/posts?published=true"],
-  });
 
   const openPreview = (book: BookData) => {
     setSelectedBook(book);
@@ -180,123 +171,6 @@ export default function BookPreview() {
               Shop All Books
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Latest Articles/Blog Section */}
-      <section className="py-24 bg-muted/30" data-testid="blog-section">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16" ref={blogRef}>
-            <div className="inline-flex items-center gap-2 mb-4">
-              <FileText className="w-6 h-6 text-primary" />
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">Author's Journal</span>
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="blog-title">
-              Latest Articles
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="blog-subtitle">
-              Thoughts, insights, and stories from my journey as an athlete, author, and entrepreneur
-            </p>
-          </div>
-
-          {latestPosts.length > 0 ? (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {latestPosts.slice(0, 3).map((post, index) => (
-                  <div 
-                    key={post.id}
-                    className="luxury-card group relative"
-                    data-testid={`blog-card-${index}`}
-                  >
-                    <div className="bg-card border border-border rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
-                      {/* Article Header */}
-                      <div className="p-6 flex-grow">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-xs text-primary font-medium uppercase tracking-wider">Article</span>
-                          <div className="flex items-center text-xs text-muted-foreground gap-2">
-                            <Calendar className="w-3 h-3" />
-                            {post.publishedAt && format(new Date(post.publishedAt), "MMM d")}
-                          </div>
-                        </div>
-                        
-                        <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                          {post.title}
-                        </h3>
-                        
-                        {post.excerpt && (
-                          <p className="text-muted-foreground mb-4 line-clamp-3 leading-relaxed">
-                            {post.excerpt}
-                          </p>
-                        )}
-
-                        {/* Tags */}
-                        {post.tags && post.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {post.tags.slice(0, 2).map((tag) => (
-                              <span 
-                                key={tag}
-                                className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full"
-                              >
-                                #{tag}
-                              </span>
-                            ))}
-                            {post.tags.length > 2 && (
-                              <span className="px-2 py-1 bg-muted/50 text-muted-foreground text-xs rounded-full">
-                                +{post.tags.length - 2}
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Article Footer */}
-                      <div className="p-6 pt-0 mt-auto">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center text-xs text-muted-foreground">
-                            <Clock className="w-3 h-3 mr-1" />
-                            {post.readTime || 5} min read
-                          </div>
-                          <Link href={`/blog/${post.slug}`}>
-                            <button className="luxury-button inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-primary hover:text-primary-foreground hover:bg-primary transition-all duration-300 rounded-lg border border-primary/20 hover:border-primary group">
-                              Read Article
-                              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Blog Call to Action */}
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-6">
-                  Explore more thoughts, insights, and behind-the-scenes stories
-                </p>
-                <Link href="/blog">
-                  <button className="luxury-button inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-all duration-300 hover:scale-105" data-testid="blog-view-all-link">
-                    <FileText className="w-5 h-5" />
-                    View All Articles
-                  </button>
-                </Link>
-              </div>
-            </>
-          ) : (
-            <div className="text-center py-12">
-              <FileText className="w-16 h-16 text-muted-foreground/50 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Coming Soon</h3>
-              <p className="text-muted-foreground mb-6">
-                I'm working on some exciting new articles. Check back soon for fresh insights and stories!
-              </p>
-              <Link href="/admin/blog">
-                <button className="luxury-button inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-lg">
-                  <FileText className="w-4 h-4" />
-                  Write First Article
-                </button>
-              </Link>
-            </div>
-          )}
         </div>
       </section>
 

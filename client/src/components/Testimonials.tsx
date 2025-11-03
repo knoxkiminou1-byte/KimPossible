@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import coachImage from "@assets/stock_images/professional_portrai_c0c29ef5.jpg";
+import teacherImage from "@assets/stock_images/professional_portrai_87359e49.jpg";
+import entrepreneurImage from "@assets/stock_images/professional_portrai_61ceadf0.jpg";
+import teammateImage from "@assets/stock_images/professional_portrai_b80dc8d8.jpg";
+import directorImage from "@assets/stock_images/professional_portrai_3547ee77.jpg";
+import readerImage from "@assets/stock_images/professional_portrai_2ccd29a8.jpg";
 
 interface Testimonial {
   name: string;
@@ -18,7 +24,7 @@ const testimonials: Testimonial[] = [
     role: "Head Basketball Coach",
     organization: "Cristo Rey De La Salle",
     content: "Kiminou's leadership on and off the court is extraordinary. At 6 feet 7 inches, he dominates physically, but it's his mental game and team first attitude that sets him apart. A true captain.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
+    avatar: coachImage,
     rating: 5,
     category: "athletic"
   },
@@ -27,7 +33,7 @@ const testimonials: Testimonial[] = [
     role: "English Department Head", 
     organization: "Ygnacio Valley High School",
     content: "Reading Kiminou's poetry is like witnessing raw talent transform into refined artistry. Six published works by 19? That's not just impressive, it's unprecedented for someone his age.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
+    avatar: teacherImage,
     rating: 5,
     category: "literary"
   },
@@ -36,7 +42,7 @@ const testimonials: Testimonial[] = [
     role: "Young Entrepreneur",
     organization: "Bay Area Youth Business Network",
     content: "The Tee Shirt Teens is not just a brand, it's a movement. Kiminou understands our generation in a way that resonates authentically. His business instincts are incredible.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
+    avatar: entrepreneurImage,
     rating: 5,
     category: "business"
   },
@@ -45,7 +51,7 @@ const testimonials: Testimonial[] = [
     role: "Teammate & Friend",
     organization: "Ygnacio Valley Football",
     content: "Playing alongside Kiminou changed my perspective. At 235 pounds of pure determination, it's his heart that makes him unstoppable. On and off the field, he elevates everyone.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
+    avatar: teammateImage,
     rating: 5,
     category: "athletic"
   },
@@ -54,7 +60,7 @@ const testimonials: Testimonial[] = [
     role: "Program Director",
     organization: "Miles Hall Foundation",
     content: "Kiminou's essay honored his grandmother's legacy while addressing critical community issues. His voice carries wisdom beyond his years and a commitment to meaningful change.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
+    avatar: directorImage,
     rating: 5,
     category: "personal"
   },
@@ -63,7 +69,7 @@ const testimonials: Testimonial[] = [
     role: "Poetry Reader & Fan",
     organization: "BookShop.org Community",
     content: "'Hopeless Romantic' moved me to tears. Kiminou writes with vulnerability and strength that's rare in any writer, let alone someone so young. His words heal.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200",
+    avatar: readerImage,
     rating: 5,
     category: "literary"
   }
