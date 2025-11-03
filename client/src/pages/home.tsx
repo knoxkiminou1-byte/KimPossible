@@ -10,7 +10,6 @@ import BookPreview from "@/components/BookPreview";
 import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
 import { useTheme } from "@/hooks/useTheme";
@@ -72,7 +71,6 @@ export default function Home() {
         <MilesHallFeature />
         <PressStrip />
         <Testimonials />
-        <Contact />
         <Footer />
         <ContactFAB />
       </div>
