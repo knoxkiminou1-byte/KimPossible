@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
-import coachImage from "@assets/stock_images/professional_portrai_c0c29ef5.jpg";
-import teacherImage from "@assets/stock_images/professional_portrai_87359e49.jpg";
-import entrepreneurImage from "@assets/stock_images/professional_portrai_61ceadf0.jpg";
-import teammateImage from "@assets/stock_images/professional_portrai_b80dc8d8.jpg";
-import directorImage from "@assets/stock_images/professional_portrai_3547ee77.jpg";
-import readerImage from "@assets/stock_images/professional_portrai_2ccd29a8.jpg";
+import coachImage from "@assets/stock_images/hispanic_male_basket_bda609d8.jpg";
+import teacherImage from "@assets/stock_images/hispanic_female_teac_ec6c82ff.jpg";
+import entrepreneurImage from "@assets/stock_images/young_asian_female_e_ebdc3282.jpg";
+import teammateImage from "@assets/stock_images/black_male_athlete_f_3482c3ba.jpg";
+import directorImage from "@assets/stock_images/black_female_doctor__f790a86a.jpg";
+import readerImage from "@assets/stock_images/young_person_reading_ebde28b9.jpg";
 
 interface Testimonial {
   name: string;
