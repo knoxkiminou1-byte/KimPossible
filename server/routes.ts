@@ -4,10 +4,12 @@ import { storage } from "./storage";
 import { 
   insertBlogCategorySchema, 
   insertBlogPostSchema,
+  contactFormSchema,
   type BlogPost,
   type BlogCategory 
 } from "@shared/schema";
 import { z } from "zod";
+import nodemailer from "nodemailer";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Blog Categories API
@@ -196,6 +198,50 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error unpublishing post:", error);
       res.status(500).json({ error: "Failed to unpublish post" });
+    }
+  });
+
+  // Contact form API
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const validatedData = contactFormSchema.parse(req.body);
+      
+      // Create transporter using Gmail SMTP
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.GMAIL_USER || 'knoxkiminou1@gmail.com',
+          pass: process.env.GMAIL_APP_PASSWORD
+        }
+      });
+
+      // Email content
+      const mailOptions = {
+        from: process.env.GMAIL_USER || 'knoxkiminou1@gmail.com',
+        to: 'knoxkiminou1@gmail.com',
+        subject: `Contact Form: ${validatedData.subject}`,
+        replyTo: validatedData.email,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>From:</strong> ${validatedData.name}</p>
+          <p><strong>Email:</strong> ${validatedData.email}</p>
+          <p><strong>Subject:</strong> ${validatedData.subject}</p>
+          <hr />
+          <p><strong>Message:</strong></p>
+          <p>${validatedData.message.replace(/\n/g, '<br>')}</p>
+        `
+      };
+
+      // Send email
+      await transporter.sendMail(mailOptions);
+      
+      res.status(200).json({ message: "Email sent successfully" });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Invalid form data", details: error.errors });
+      }
+      console.error("Error sending contact email:", error);
+      res.status(500).json({ error: "Failed to send email" });
     }
   });
 
