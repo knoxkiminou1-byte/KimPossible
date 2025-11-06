@@ -215,6 +215,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       });
 
+      // Build additional fields section if present
+      let additionalFields = '';
+      if (validatedData.organization) {
+        additionalFields += `<p><strong>Organization:</strong> ${validatedData.organization}</p>`;
+      }
+      if (validatedData.dateWindow) {
+        additionalFields += `<p><strong>Date Window:</strong> ${validatedData.dateWindow}</p>`;
+      }
+      if (validatedData.talkTheme) {
+        additionalFields += `<p><strong>Talk Theme:</strong> ${validatedData.talkTheme}</p>`;
+      }
+
       // Email content
       const mailOptions = {
         from: process.env.GMAIL_USER || 'knoxkiminou1@gmail.com',
@@ -226,6 +238,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           <p><strong>From:</strong> ${validatedData.name}</p>
           <p><strong>Email:</strong> ${validatedData.email}</p>
           <p><strong>Subject:</strong> ${validatedData.subject}</p>
+          ${additionalFields}
           <hr />
           <p><strong>Message:</strong></p>
           <p>${validatedData.message.replace(/\n/g, '<br>')}</p>

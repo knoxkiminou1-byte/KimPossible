@@ -70,6 +70,10 @@ export const contactFormSchema = z.object({
   email: z.string().email("Valid email is required"),
   subject: z.string().min(1, "Subject is required"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  // Optional fields for different contact forms
+  organization: z.string().optional(),
+  dateWindow: z.string().optional(),
+  talkTheme: z.string().optional(),
 });
 
 export type ContactForm = z.infer<typeof contactFormSchema>;
