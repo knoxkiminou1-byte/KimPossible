@@ -68,10 +68,13 @@ export type BlogPost = typeof blogPosts.$inferSelect;
 export const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Valid email is required"),
+  inquiryType: z.enum(["speaking", "press", "book", "basketball", "other"], {
+    required_error: "Please select an inquiry type",
+  }),
+  organization: z.string().optional(),
   subject: z.string().min(1, "Subject is required"),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  // Optional fields for different contact forms
-  organization: z.string().optional(),
+  // Optional fields for speaking engagements
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
 });

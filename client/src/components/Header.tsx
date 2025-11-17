@@ -1,30 +1,13 @@
-import { useState, useRef, useEffect } from "react";
-import { Palette, Menu } from "lucide-react";
-import { Theme } from "@/hooks/useTheme";
+import { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
 import { Link } from "wouter";
 
-interface HeaderProps {
-  theme: Theme;
-  onThemeChange: (theme: Theme) => void;
-}
-
-export default function Header({ theme, onThemeChange }: HeaderProps) {
-  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
+export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-  const themeMenuRef = useRef<HTMLDivElement>(null);
-
-  const themes = [
-    { name: "Maison", value: "maison" as Theme },
-    { name: "Noir", value: "noir" as Theme },
-    { name: "Editorial", value: "editorial" as Theme },
-    { name: "Street", value: "street" as Theme }
-  ];
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setIsThemeMenuOpen(false);
         setIsMobileMenuOpen(false);
       }
     };
@@ -33,24 +16,13 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (themeMenuRef.current && !themeMenuRef.current.contains(event.target as Node)) {
-        setIsThemeMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border" data-testid="header-main">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/home" className="luxury-logo group relative overflow-hidden block" data-testid="logo-button">
+            <Link href="/" className="luxury-logo group relative overflow-hidden block" data-testid="logo-button">
               <span className="logo-text block text-2xl font-serif font-bold tracking-[0.15em] text-foreground transition-all duration-700 group-hover:tracking-[0.3em] group-hover:scale-110">
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[-2px] animation-delay-0">K</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-y-[2px] animation-delay-75">I</span>
@@ -71,13 +43,13 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/home" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-home">
+            <Link href="/" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-home">
               HOME
             </Link>
             <Link href="/books" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-books">
               BOOKS
             </Link>
-            <Link href="/sports" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-basketball">
+            <Link href="/basketball" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-basketball">
               BASKETBALL
             </Link>
             <Link href="/speaking" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-speaking">
@@ -91,38 +63,8 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
             </Link>
           </div>
 
-          {/* Theme Switcher & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            {/* Theme Switcher */}
-            <div className="relative" ref={themeMenuRef}>
-              <button 
-                onClick={() => setIsThemeMenuOpen(!isThemeMenuOpen)}
-                className="p-2 rounded-md bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors" 
-                aria-label="Switch theme"
-                data-testid="theme-trigger"
-              >
-                <Palette className="w-4 h-4" />
-              </button>
-              <div className={`absolute right-0 mt-2 w-40 bg-popover border border-border rounded-md shadow-lg transition-all duration-200 ${isThemeMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}>
-                <div className="py-2">
-                  {themes.map((themeOption) => (
-                    <button 
-                      key={themeOption.value}
-                      onClick={() => {
-                        onThemeChange(themeOption.value);
-                        setIsThemeMenuOpen(false);
-                      }}
-                      className="w-full px-4 py-2 text-left text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
-                      data-testid={`theme-${themeOption.value}`}
-                    >
-                      {themeOption.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
+          <div className="flex items-center">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 rounded-md bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors" 
@@ -139,13 +81,13 @@ export default function Header({ theme, onThemeChange }: HeaderProps) {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-background border-t border-border" data-testid="mobile-menu">
           <div className="px-6 py-4 space-y-4">
-            <Link href="/home" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-home-mobile">
+            <Link href="/" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-home-mobile">
               HOME
             </Link>
             <Link href="/books" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-books-mobile">
               BOOKS
             </Link>
-            <Link href="/sports" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-basketball-mobile">
+            <Link href="/basketball" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-basketball-mobile">
               BASKETBALL
             </Link>
             <Link href="/speaking" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-speaking-mobile">

@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
-import { useTheme } from "@/hooks/useTheme";
 
 type Poem = {
   title: string;
@@ -40,7 +39,6 @@ type Book = {
 export default function BooksPage() {
   const [books, setBooks] = useState<Book[]>([]);
   const [open, setOpen] = useState<{id: string, poems: Poem[], title: string} | null>(null);
-  const { theme, changeTheme } = useTheme();
 
   useEffect(() => {
     fetch("/books.json")
@@ -68,7 +66,7 @@ export default function BooksPage() {
         <meta name="twitter:image" content="https://kiminouknox.com/og/books.jpg" />
       </Helmet>
 
-      <Header theme={theme} onThemeChange={changeTheme} />
+      <Header />
 
       <section className="min-h-screen bg-background text-foreground py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

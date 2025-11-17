@@ -4,6 +4,50 @@ This is a luxury personal portfolio website for Kiminou Knox, designed to showca
 
 The website features an immersive experience with hero video backgrounds, elegant navigation with mega-menus, smooth scroll animations, lookbook galleries, press recognition strips, and comprehensive contact forms. The design emphasizes luxury through generous white space, crisp typography, high-quality imagery, and subtle hover effects.
 
+# Recent Changes (November 17, 2025)
+
+## Major Cleanup and Simplification
+
+### Routing Structure
+- Changed root path (`/`) to directly show Home page instead of Splash
+- Added `/splash` route for optional splash screen access
+- Added redirect from `/home` to `/` for canonical URL
+- Added redirects from `/press-kit` and `/presskit` to `/contact`
+- Added `/basketball` route aliasing to `/sports`
+
+### Press Kit Removal
+- Completely removed Press Kit page and all related components
+- Removed all Press Kit links from Footer, Contact page, Press page, and navigation
+- Redirected all Press Kit traffic to Contact page for unified media inquiries
+
+### Contact Form Unification
+- Created unified `ContactForm` component (`client/src/components/ContactForm.tsx`)
+- Single reusable form with inquiry type selector (Speaking, Press/Media, Book, Basketball, Other)
+- Conditional fields based on inquiry type (organization, date window, talk theme)
+- Replaced separate contact forms on Contact and Speaking pages
+- All contact forms now send emails to knoxkiminou1@gmail.com with inquiry type in subject line
+
+### Footer Navigation Cleanup
+- **Portfolio**: Reduced from 4 to 2 items (Athlete → /basketball, Author → /books)
+- **Resources**: Reduced from 5 to 3 items (Poetry Books → /books, Speaking Engagements → /speaking, Athletic Achievements → /basketball)
+- **Connect**: Updated Contact link from hash anchor to `/contact` route
+- **Legal**: Reduced from 4 to 2 items (Speaking → /speaking, Contact → /contact)
+- Removed all hash anchor navigation (#athlete, #author, etc.)
+- Removed Fashion Brand and Youth Mentorship temporary placeholders
+- All internal links now use `Link` component from wouter for proper routing
+
+### Theme System Removal
+- Removed all theme switching UI and controls (Palette button, theme menu)
+- Removed `useTheme` hook entirely
+- Hard-coded site to single "Maison" theme
+- Updated Header component to no longer accept theme props
+- Removed theme props from all page components (Home, Books, Sports, Contact, Speaking, etc.)
+
+### Email Integration
+- Updated contact form schema to include `inquiryType` enum
+- Server-side email formatting includes inquiry type in subject line
+- All optional fields (organization, dateWindow, talkTheme) properly captured and displayed in emails
+
 # Recent Changes (November 1, 2025)
 
 ## Navigation Restructuring
@@ -54,15 +98,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Design System
 - **Typography**: Cormorant Garamond (serif) for headings and Inter (sans-serif) for body text
-- **Theming**: Multi-theme support (Maison, Noir, Editorial, Street) using CSS custom properties
+- **Theming**: Single "Maison" theme with consistent CSS custom properties (theme switching removed for simplicity)
 - **Layout**: Mobile-first responsive design with max-width containers and grid systems
 - **Color Palette**: Neutral base with luxury-focused contrast ratios and accessibility compliance
 
 ## Component Architecture
-- **Modular Structure**: Reusable components organized by feature (Header, Hero, Doors, Section, etc.)
+- **Modular Structure**: Reusable components organized by feature (Header, Hero, ContactForm, Section, etc.)
 - **Composition Pattern**: Flexible component composition using slots and forwarded refs
-- **Custom Hooks**: Scroll animations, theme management, and responsive behavior
+- **Custom Hooks**: Scroll animations and responsive behavior
 - **Accessibility**: ARIA labels, keyboard navigation, and screen reader support
+- **Unified Forms**: Single ContactForm component reused across Contact and Speaking pages with configurable defaults
 
 ## Backend Architecture
 - **Server**: Express.js with TypeScript for API endpoints

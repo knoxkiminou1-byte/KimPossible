@@ -60,7 +60,7 @@ export default function Press() {
         </script>
       </Helmet>
 
-      <Header theme="maison" onThemeChange={() => {}} />
+      <Header />
 
       <main className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
@@ -69,7 +69,7 @@ export default function Press() {
               Press
             </h1>
             <p className="text-lg text-muted-foreground">
-              Selected features and announcements that verify public facts about my work. For media requests use the contact form or visit the <Link href="/press-kit"><a className="underline hover:text-foreground transition-colors">press kit</a></Link>.
+              Selected features and announcements that verify public facts about my work. For media requests use the <Link href="/contact" className="underline hover:text-foreground transition-colors">contact form</Link>.
             </p>
           </div>
 

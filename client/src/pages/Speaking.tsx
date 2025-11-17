@@ -1,64 +1,9 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { useTheme } from "@/hooks/useTheme";
+import ContactForm from "@/components/ContactForm";
 
 export default function Speaking() {
-  const { toast } = useToast();
-  const { theme, changeTheme } = useTheme();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    organization: "",
-    dateWindow: "",
-    talkTheme: "",
-    message: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          subject: `Speaking Request: ${formData.talkTheme}`
-        })
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Request submitted",
-          description: "Thank you for your interest. We will be in touch soon."
-        });
-        setFormData({ name: "", email: "", organization: "", dateWindow: "", talkTheme: "", message: "" });
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (error) {
-      toast({
-        title: "Submission failed",
-        description: "Please try again or contact us directly.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   return (
     <>
@@ -79,7 +24,7 @@ export default function Speaking() {
         <meta name="twitter:image" content="https://kiminouknox.com/og/speaking.jpg" />
       </Helmet>
 
-      <Header theme={theme} onThemeChange={changeTheme} />
+      <Header />
 
       <main className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -122,107 +67,13 @@ export default function Speaking() {
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="text-3xl font-serif font-bold mb-6 text-foreground">
-              Request a speaking engagement
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    data-testid="input-name"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    data-testid="input-email"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="organization">Organization</Label>
-                <Input
-                  id="organization"
-                  name="organization"
-                  type="text"
-                  required
-                  value={formData.organization}
-                  onChange={handleChange}
-                  data-testid="input-organization"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="dateWindow">Date window</Label>
-                  <Input
-                    id="dateWindow"
-                    name="dateWindow"
-                    type="text"
-                    placeholder="e.g., March 2025 or Spring 2025"
-                    required
-                    value={formData.dateWindow}
-                    onChange={handleChange}
-                    data-testid="input-date-window"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="talkTheme">Talk theme</Label>
-                  <select
-                    id="talkTheme"
-                    name="talkTheme"
-                    required
-                    value={formData.talkTheme}
-                    onChange={handleChange}
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    data-testid="select-talk-theme"
-                  >
-                    <option value="">Select a theme</option>
-                    <option value="Discipline and faith">Discipline and faith in daily practice</option>
-                    <option value="Black boy voice">Black boy voice and the cost of silence</option>
-                    <option value="Creative work">Building creative work that lasts</option>
-                    <option value="Custom">Custom topic</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your event audience and what you hope to achieve"
-                  data-testid="textarea-message"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full md:w-auto"
-                data-testid="button-submit-speaking"
-              >
-                {isSubmitting ? "Submitting..." : "Submit request"}
-              </Button>
-            </form>
+            <ContactForm
+              title="Request a Speaking Engagement"
+              description="Tell us about your event audience and what you hope to achieve. I'll get back to you as soon as possible."
+              defaultInquiryType="speaking"
+              showSpeakingFields={true}
+              successMessage="Thank you for your interest. We will be in touch soon to discuss your speaking engagement."
+            />
           </div>
         </div>
       </main>

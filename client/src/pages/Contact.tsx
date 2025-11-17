@@ -1,58 +1,9 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "wouter";
+import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message sent",
-          description: "Thank you for reaching out. I will get back to you soon."
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        throw new Error('Submission failed');
-      }
-    } catch (error) {
-      toast({
-        title: "Submission failed",
-        description: "Please try again or email directly.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   return (
     <>
@@ -73,16 +24,16 @@ export default function Contact() {
         <meta name="twitter:image" content="https://kiminouknox.com/og/contact.jpg" />
       </Helmet>
 
-      <Header theme="maison" onThemeChange={() => {}} />
+      <Header />
 
       <main className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="mb-16">
+          <div className="mb-12">
             <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="contact-heading">
               Contact
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Reach out for speaking engagements media inquiries or collaboration opportunities. For press materials visit the <Link href="/press-kit" className="underline hover:text-foreground transition-colors">press kit</Link>.
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              Reach out for speaking engagements, media inquiries, or collaboration opportunities. Select your inquiry type below and we'll get back to you as soon as possible.
             </p>
           </div>
 
@@ -90,6 +41,18 @@ export default function Contact() {
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-serif font-bold mb-6 text-foreground">Connect</h2>
               <div className="space-y-4 text-muted-foreground">
+                <div>
+                  <p className="font-medium text-foreground mb-1">Email</p>
+                  <a href="mailto:knoxkiminou1@gmail.com" className="hover:text-foreground transition-colors">
+                    knoxkiminou1@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground mb-1">Phone</p>
+                  <a href="tel:777-9311" className="hover:text-foreground transition-colors">
+                    777-9311
+                  </a>
+                </div>
                 <div>
                   <p className="font-medium text-foreground mb-1">Instagram</p>
                   <a href="https://instagram.com/hofkiminou" target="_blank" rel="noopener noreferrer external" className="hover:text-foreground transition-colors">
@@ -122,70 +85,12 @@ export default function Contact() {
             </div>
 
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-serif font-bold mb-6 text-foreground">Send a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      data-testid="input-name"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      data-testid="input-email"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    data-testid="input-subject"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    data-testid="textarea-message"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full md:w-auto"
-                  data-testid="button-submit"
-                >
-                  {isSubmitting ? "Sending..." : "Send message"}
-                </Button>
-              </form>
+              <ContactForm
+                title="Send a Message"
+                description=""
+                defaultInquiryType="other"
+                successMessage="Thank you for reaching out. I will get back to you soon."
+              />
             </div>
           </div>
         </div>

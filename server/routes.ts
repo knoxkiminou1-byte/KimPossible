@@ -215,6 +215,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       });
 
+      // Format inquiry type for display
+      const inquiryTypeMap: Record<string, string> = {
+        speaking: "Speaking / Appearance",
+        press: "Press / Media",
+        book: "Book / Author",
+        basketball: "Basketball / Athlete",
+        other: "Other"
+      };
+      const inquiryTypeDisplay = inquiryTypeMap[validatedData.inquiryType] || validatedData.inquiryType;
+
       // Build additional fields section if present
       let additionalFields = '';
       if (validatedData.organization) {
@@ -231,10 +241,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const mailOptions = {
         from: process.env.GMAIL_USER || 'knoxkiminou1@gmail.com',
         to: 'knoxkiminou1@gmail.com',
-        subject: `Contact Form: ${validatedData.subject}`,
+        subject: `[${inquiryTypeDisplay}] ${validatedData.subject}`,
         replyTo: validatedData.email,
         html: `
           <h2>New Contact Form Submission</h2>
+          <p><strong>Inquiry Type:</strong> ${inquiryTypeDisplay}</p>
           <p><strong>From:</strong> ${validatedData.name}</p>
           <p><strong>Email:</strong> ${validatedData.email}</p>
           <p><strong>Subject:</strong> ${validatedData.subject}</p>

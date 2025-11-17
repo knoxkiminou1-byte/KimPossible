@@ -74,7 +74,7 @@ export default function About() {
         </script>
       </Helmet>
 
-      <Header theme="maison" onThemeChange={() => {}} />
+      <Header />
 
       <main className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

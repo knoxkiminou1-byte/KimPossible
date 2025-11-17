@@ -3,10 +3,8 @@ import { motion } from "framer-motion";
 import { ExternalLink, Trophy, TrendingUp, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useTheme } from "@/hooks/useTheme";
 
 export default function Sports() {
-  const { theme, changeTheme } = useTheme();
 
   return (
     <>
@@ -27,7 +25,7 @@ export default function Sports() {
         <meta name="twitter:image" content="https://kiminouknox.com/og/sports.jpg" />
       </Helmet>
 
-      <Header theme={theme} onThemeChange={changeTheme} />
+      <Header />
 
       <section className="min-h-screen bg-background text-foreground py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

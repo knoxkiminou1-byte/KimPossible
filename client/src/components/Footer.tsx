@@ -1,24 +1,16 @@
+import { Link } from "wouter";
+
 export default function Footer() {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const portfolioItems = [
-    { name: "Athlete", href: "#athlete" },
-    { name: "Author", href: "#author" },
-    { name: "Entrepreneur", href: "#entrepreneur" },
-    { name: "Designer", href: "#designer" }
+    { name: "Athlete", href: "/basketball" },
+    { name: "Author", href: "/books" }
   ];
 
   const resources = [
-    { name: "Poetry Books", href: "#author" },
-    { name: "Speaking Engagements", href: "#contact" },
-    { name: "Athletic Achievements", href: "#athlete" },
-    { name: "Youth Mentorship", href: "#contact" },
-    { name: "Fashion Brand", href: "https://thett.shop" }
+    { name: "Poetry Books", href: "/books" },
+    { name: "Speaking Engagements", href: "/speaking" },
+    { name: "Athletic Achievements", href: "/basketball" }
   ];
 
   const connect = [
@@ -29,13 +21,11 @@ export default function Footer() {
     { name: "Amazon Author Page", href: "https://www.amazon.com/stores/author/B0DGM5Z5Q8", external: true },
     { name: "Business IG", href: "https://instagram.com/theteeshirteenss", external: true },
     { name: "The Tee Shirt Teens", href: "https://thett.shop", external: true },
-    { name: "Contact", href: "#contact", external: false }
+    { name: "Contact", href: "/contact", external: false }
   ];
 
   const legal = [
-    { name: "Press Kit", href: "/press-kit" },
     { name: "Speaking", href: "/speaking" },
-    { name: "Book Excerpts", href: "/works" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -59,13 +49,13 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-80">
               {portfolioItems.map((item) => (
                 <li key={item.name}>
-                  <button 
-                    onClick={() => scrollToSection(item.href)}
+                  <Link 
+                    href={item.href}
                     className="hover:opacity-100 transition-opacity"
                     data-testid={`footer-portfolio-${item.name.toLowerCase()}`}
                   >
                     {item.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,13 +67,13 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-80">
               {resources.map((item) => (
                 <li key={item.name}>
-                  <a 
+                  <Link 
                     href={item.href} 
                     className="hover:opacity-100 transition-opacity"
-                    data-testid={`footer-resource-${item.name.toLowerCase()}`}
+                    data-testid={`footer-resource-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -95,15 +85,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-80">
               {connect.map((item) => (
                 <li key={item.name}>
-                  {item.href.startsWith('#') ? (
-                    <button 
-                      onClick={() => scrollToSection(item.href)}
-                      className="hover:opacity-100 transition-opacity"
-                      data-testid={`footer-connect-${item.name.toLowerCase().replace(/[@\s]/g, '-')}`}
-                    >
-                      {item.name}
-                    </button>
-                  ) : (
+                  {item.external ? (
                     <a
                       href={item.href}
                       target="_blank"
@@ -113,6 +95,14 @@ export default function Footer() {
                     >
                       {item.name}
                     </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="hover:opacity-100 transition-opacity"
+                      data-testid={`footer-connect-${item.name.toLowerCase().replace(/[@\s]/g, '-')}`}
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </li>
               ))}
@@ -125,13 +115,13 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-80">
               {legal.map((item) => (
                 <li key={item.name}>
-                  <a 
+                  <Link 
                     href={item.href} 
                     className="hover:opacity-100 transition-opacity"
                     data-testid={`footer-legal-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

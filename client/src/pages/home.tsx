@@ -12,10 +12,7 @@ import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
-import { useTheme } from "@/hooks/useTheme";
-
 export default function Home() {
-  const { theme, changeTheme } = useTheme();
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -35,12 +32,12 @@ export default function Home() {
       <Helmet>
         <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
         <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Six published works, NCAA registered athlete, and youth advocate." />
-        <link rel="canonical" href="https://kiminouknox.com/home" />
+        <link rel="canonical" href="https://kiminouknox.com/" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
         <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
-        <meta property="og:url" content="https://kiminouknox.com/home" />
+        <meta property="og:url" content="https://kiminouknox.com/" />
         <meta property="og:image" content="https://kiminouknox.com/og/home.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
@@ -61,7 +58,7 @@ export default function Home() {
         className="z-0"
       />
       <div className="relative z-10">
-        <Header theme={theme} onThemeChange={changeTheme} />
+        <Header />
         <Hero />
         <WhoIsKiminou />
         <PoemOfTheDay />
