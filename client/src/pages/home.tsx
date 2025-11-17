@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import FeaturedBookPromo from "@/components/FeaturedBookPromo";
-import MilesHallFeature from "@/components/MilesHallFeature";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
 import PhotoGallery from "@/components/PhotoGallery";
 import Testimonials from "@/components/Testimonials";
@@ -65,7 +64,6 @@ export default function Home() {
         <FeaturedBookPromo />
         <BookPreview />
         <PhotoGallery />
-        <MilesHallFeature />
         <PressStrip />
         <Testimonials />
         <Footer />
