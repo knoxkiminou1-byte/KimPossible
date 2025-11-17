@@ -27,72 +27,22 @@ export default function Contact() {
       <Header />
 
       <main className="min-h-screen bg-background pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="contact-heading">
               Contact
             </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">
+            <p className="text-lg text-muted-foreground">
               Reach out for speaking engagements, media inquiries, or collaboration opportunities. Select your inquiry type below and we'll get back to you as soon as possible.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
-            <div className="lg:col-span-1">
-              <h2 className="text-2xl font-serif font-bold mb-6 text-foreground">Connect</h2>
-              <div className="space-y-4 text-muted-foreground">
-                <div>
-                  <p className="font-medium text-foreground mb-1">Email</p>
-                  <a href="mailto:knoxkiminou1@gmail.com" className="hover:text-foreground transition-colors">
-                    knoxkiminou1@gmail.com
-                  </a>
-                </div>
-                <div>
-                  <p className="font-medium text-foreground mb-1">Phone</p>
-                  <a href="tel:777-9311" className="hover:text-foreground transition-colors">
-                    777-9311
-                  </a>
-                </div>
-                <div>
-                  <p className="font-medium text-foreground mb-1">Instagram</p>
-                  <a href="https://instagram.com/hofkiminou" target="_blank" rel="noopener noreferrer external" className="hover:text-foreground transition-colors">
-                    @hofkiminou
-                  </a>
-                </div>
-                <div>
-                  <p className="font-medium text-foreground mb-1">X / Twitter</p>
-                  <a href="https://x.com/KnoxKiminou" target="_blank" rel="noopener noreferrer external" className="hover:text-foreground transition-colors">
-                    @KnoxKiminou
-                  </a>
-                  <br />
-                  <a href="https://x.com/KiminouKnox" target="_blank" rel="noopener noreferrer external" className="hover:text-foreground transition-colors">
-                    @KiminouKnox
-                  </a>
-                </div>
-                <div>
-                  <p className="font-medium text-foreground mb-1">YouTube</p>
-                  <a href="https://www.youtube.com/@KiminouKnoxVevo" target="_blank" rel="noopener noreferrer external" className="hover:text-foreground transition-colors">
-                    @KiminouKnoxVevo
-                  </a>
-                </div>
-                <div>
-                  <p className="font-medium text-foreground mb-1">Amazon</p>
-                  <a href="https://www.amazon.com/stores/author/B0DGM5Z5Q8" target="_blank" rel="noopener noreferrer external" className="hover:text-foreground transition-colors">
-                    Author Page
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-2">
-              <ContactForm
-                title="Send a Message"
-                description=""
-                defaultInquiryType="other"
-                successMessage="Thank you for reaching out. I will get back to you soon."
-              />
-            </div>
-          </div>
+          <ContactForm
+            title="Send a Message"
+            description=""
+            defaultInquiryType="other"
+            successMessage="Thank you for reaching out. I will get back to you soon."
+          />
         </div>
       </main>
 
