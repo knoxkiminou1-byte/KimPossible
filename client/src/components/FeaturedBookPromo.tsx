@@ -109,7 +109,7 @@ export default function FeaturedBookPromo() {
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
-                  href="https://play.google.com/store/books/details/Kiminou_Knox_Adventures_of_Kiminou_and_Chua?id=KhVrEQAAQBAJ"
+                  href="https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-xl"
