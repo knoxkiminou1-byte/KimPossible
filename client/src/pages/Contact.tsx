@@ -26,13 +26,23 @@ export default function Contact() {
 
       <Header />
 
-      <main className="min-h-screen bg-background pt-32 pb-20">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+      <main 
+        className="min-h-screen bg-black pt-32 pb-20 relative"
+        style={{
+          backgroundImage: 'url(/aafc-logo.png)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="mb-12">
-            <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="contact-heading">
+            <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-white" data-testid="contact-heading">
               Contact
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-gray-300">
               Reach out for speaking engagements, media inquiries, or collaboration opportunities. Select your inquiry type below and we'll get back to you as soon as possible.
             </p>
           </div>
