@@ -9,6 +9,7 @@ import BookPreview from "@/components/BookPreview";
 import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
+import StoryTimeline from "@/components/StoryTimeline";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
 export default function Home() {
@@ -37,12 +38,12 @@ export default function Home() {
         <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
         <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
         <meta property="og:url" content="https://kiminouknox.com/" />
-        <meta property="og:image" content="https://kiminouknox.com/og/home.jpg" />
+        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
         <meta name="twitter:description" content="19 year old athlete, published author, entrepreneur, and creative" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/home.jpg" />
+        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
         
         <script type="application/ld+json">
           {JSON.stringify(personSchema)}
@@ -60,6 +61,7 @@ export default function Home() {
         <Header />
         <Hero />
         <WhoIsKiminou />
+        <StoryTimeline />
         <PoemOfTheDay />
         <FeaturedBookPromo />
         <BookPreview />
