@@ -9,7 +9,6 @@ import BookPreview from "@/components/BookPreview";
 import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
-import IdentitySections from "@/components/IdentitySections";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
 export default function Home() {
@@ -61,7 +60,6 @@ export default function Home() {
         <Header />
         <Hero />
         <WhoIsKiminou />
-        <IdentitySections />
         <PoemOfTheDay />
         <FeaturedBookPromo />
         <BookPreview />
