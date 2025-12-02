@@ -55,6 +55,9 @@ export default function Header() {
             <Link href="/speaking" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-speaking">
               SPEAKING
             </Link>
+            <Link href="/author" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-author">
+              AUTHOR
+            </Link>
             <Link href="/contact" className="text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" data-testid="nav-contact">
               CONTACT
             </Link>
@@ -89,6 +92,9 @@ export default function Header() {
             </Link>
             <Link href="/speaking" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-speaking-mobile">
               SPEAKING
+            </Link>
+            <Link href="/author" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-author-mobile">
+              AUTHOR
             </Link>
             <Link href="/contact" className="block text-sm uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)} data-testid="nav-contact-mobile">
               CONTACT

@@ -17,6 +17,7 @@ import Books from "@/pages/Books";
 import BookDetail from "@/pages/BookDetail";
 import Press from "@/pages/Press";
 import Sports from "@/pages/Sports";
+import Author from "@/pages/Author";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 
@@ -44,6 +45,7 @@ function Router() {
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/books" component={Books} />
       <Route path="/books/:id" component={BookDetail} />
+      <Route path="/author" component={Author} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/admin/blog" component={BlogAdmin} />
