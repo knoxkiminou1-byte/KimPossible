@@ -27,7 +27,7 @@ export default function Contact() {
       <Header />
 
       <main 
-        className="min-h-screen bg-black pt-32 pb-20 relative"
+        className="min-h-screen bg-black pt-40 pb-20 relative"
         style={{
           backgroundImage: 'url(/aafc-logo.png)',
           backgroundPosition: 'center',

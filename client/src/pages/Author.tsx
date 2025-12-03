@@ -67,9 +67,9 @@ export default function Author() {
       <div className="min-h-screen bg-black text-white">
         <Header />
 
-        <main className="pt-20">
+        <main className="pt-28">
           {/* Tab Navigation */}
-          <div className="sticky top-20 z-40 bg-black/90 backdrop-blur-md border-b border-white/10">
+          <div className="sticky top-28 z-40 bg-black/90 backdrop-blur-md border-b border-white/10">
             <div className="max-w-6xl mx-auto px-6">
               <nav className="flex items-center gap-8 overflow-x-auto py-4 scrollbar-hide">
                 <a href="#about" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
@@ -89,7 +89,7 @@ export default function Author() {
           </div>
 
           {/* Hero Section */}
-          <section id="about" className="max-w-6xl mx-auto px-6 py-16 lg:py-24 scroll-mt-32">
+          <section id="about" className="max-w-6xl mx-auto px-6 py-16 lg:py-24 scroll-mt-40">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               {/* Photo */}
               <motion.div 
@@ -180,7 +180,7 @@ export default function Author() {
           </section>
 
           {/* Books Section */}
-          <section id="books" className="border-t border-white/10 bg-gray-950 scroll-mt-32">
+          <section id="books" className="border-t border-white/10 bg-gray-950 scroll-mt-40">
             <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -242,7 +242,7 @@ export default function Author() {
           </section>
 
           {/* Beyond the Page */}
-          <section id="beyond" className="border-t border-white/10 bg-black scroll-mt-32">
+          <section id="beyond" className="border-t border-white/10 bg-black scroll-mt-40">
             <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -292,7 +292,7 @@ export default function Author() {
           </section>
 
           {/* Contact Strip */}
-          <section id="contact" className="bg-gradient-to-r from-amber-400 to-amber-500 scroll-mt-32">
+          <section id="contact" className="bg-gradient-to-r from-amber-400 to-amber-500 scroll-mt-40">
             <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
                 <h2 className="font-serif text-2xl md:text-3xl text-black">

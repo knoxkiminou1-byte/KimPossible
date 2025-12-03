@@ -33,12 +33,12 @@ const identity = [
   {
     id: "brand",
     icon: Briefcase,
-    label: "Entrepreneur",
-    title: "Brand Builder",
-    description: "Co founder of The Tee Shirt Teens, creating youth driven apparel that amplifies authentic voices and lived stories.",
-    link: "https://thett.shop",
-    cta: "Visit Brand",
-    external: true
+    label: "Director",
+    title: "AAFC Leader",
+    description: "Director of Artists and Athletes For Change, uniting creatives and athletes to make meaningful community impact.",
+    link: "/contact",
+    cta: "Connect",
+    external: false
   }
 ];
 

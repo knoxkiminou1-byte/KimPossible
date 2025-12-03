@@ -27,7 +27,7 @@ export default function Sports() {
 
       <Header />
 
-      <section className="min-h-screen bg-background text-foreground py-20">
+      <section className="min-h-screen bg-background text-foreground pt-36 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Page Header */}
           <motion.div

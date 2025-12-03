@@ -68,7 +68,7 @@ export default function BooksPage() {
 
       <Header />
 
-      <section className="min-h-screen bg-background text-foreground py-20">
+      <section className="min-h-screen bg-background text-foreground pt-36 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <h1 className="font-serif text-5xl font-bold tracking-tight">Published Works</h1>
