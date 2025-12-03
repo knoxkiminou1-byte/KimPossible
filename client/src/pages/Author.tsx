@@ -39,8 +39,8 @@ const beyondCards = [
     icon: Mic
   },
   {
-    title: "Founder",
-    description: "Building The Tee Shirt Teens and Artists and Athletes For Change as platforms for youth storytelling and leadership.",
+    title: "Director",
+    description: "Director of Artists and Athletes For Change, uniting creatives and athletes to make meaningful community impact.",
     link: "/contact",
     linkText: "Connect with Kiminou",
     icon: Users
@@ -136,7 +136,7 @@ export default function Author() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-2">
-                  {["Author", "Poet", "Athlete", "Founder"].map((tag) => (
+                  {["Author", "Poet", "Athlete", "Director"].map((tag) => (
                     <span 
                       key={tag}
                       className="px-4 py-1.5 rounded-full bg-white/10 text-xs uppercase tracking-wide text-gray-300"
@@ -169,7 +169,7 @@ export default function Author() {
                     By nineteen he had released several poetry collections including <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, and <em className="text-amber-300/90">Boys Raised In Silence</em>, plus a children's storybook written with his younger brother. His work walks through faith, family, mental health, and desire, following Black boys who are trying to understand God, forgive their fathers, love their friends, and keep breathing in neighborhoods that do not always love them back. The poems move from classrooms to courts to kitchen tables and bedroom prayers, speaking in the plain voice of a young man who refuses to lie about what hurts and what heals.
                   </p>
                   <p>
-                    Away from the page, Kiminou is a committed student athlete and youth builder. He competes as a varsity level basketball player, trains with the same intensity he brings to the notebook, and studies film and footwork with professional ambition. He is the founder of The Tee Shirt Teens and Artists and Athletes For Change, platforms that use story, apparel, and mentorship to help young people turn their talent into testimony and their testimony into work that can feed them.
+                    Away from the page, Kiminou is a committed student athlete and youth builder. He competes as a varsity level basketball player, trains with the same intensity he brings to the notebook, and studies film and footwork with professional ambition. He is the Director of Artists and Athletes For Change, a platform that uses story, apparel, and mentorship to help young people turn their talent into testimony and their testimony into work that can feed them.
                   </p>
                   <p>
                     On stage and on the court he carries the same mission as in his books: to prove that Black boys are not problems to control but lives to protect, futures to fund, and voices that deserve to stand at the center of the room.
