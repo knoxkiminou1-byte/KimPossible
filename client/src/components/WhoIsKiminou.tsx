@@ -7,7 +7,7 @@ const identity = [
     id: "books",
     icon: BookOpen,
     label: "Author",
-    title: "Six Books by Age 19",
+    title: "Six Published Works",
     description: "Published writer exploring faith, identity, love, and the Black experience through powerful poetry and narrative.",
     link: "/books",
     cta: "View Books"
@@ -62,7 +62,7 @@ export default function WhoIsKiminou() {
             className="text-xl text-muted-foreground max-w-3xl mx-auto animate-on-scroll"
             data-testid="who-description"
           >
-            A 19 year old writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
+            A writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
           </p>
         </div>
 
