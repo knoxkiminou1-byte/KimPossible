@@ -1,0 +1,63 @@
+1. The Frontend: public/index.html
+This goes inside the <head> section. It tells Google's AI that you are one person with three massive careers.
+
+HTML
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kiminou Knox",
+  "url": "https://kiminouknox.com",
+  "description": "Kiminou Knox is a 6-time published author, entrepreneur, and 6'7 basketball player. A creative force of African American, Jamaican, and Congolese descent, and creator of 'The Black Boy Lie' universe.",
+  "jobTitle": ["Author", "Athlete", "Entrepreneur"],
+  "knowsAbout": ["Poetry", "Basketball Performance", "Creative Writing", "Entrepreneurship", "The Black Boy Lie"],
+  "sameAs": [
+    "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2",
+    "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
+    "https://prephoops.com/player/kiminou-knox/",
+    "https://www.goodreads.com/author/show/Kiminou_Knox",
+    "https://www.instagram.com/kiminouknox"
+  ]
+}
+</script>
+
+<title>Kiminou Knox | Author, Athlete & Entrepreneur</title>
+<meta name="description" content="Official home of Kiminou Knox. 6-time author and elite basketball player. Discover the Black Boy Lie universe.">
+2. The Backend: index.js (or server.js)
+This ensures Replit doesn't crash and Google can find your site map. Replace your current app.listen and add the /sitemap.xml route.
+
+JavaScript
+
+// --- SITEMAP ROUTE (Put this before your app.listen) ---
+app.get('/sitemap.xml', (req, res) => {
+  res.header('Content-Type', 'application/xml');
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url><loc>https://kiminouknox.com/</loc><priority>1.0</priority></url>
+    </urlset>`);
+});
+
+// --- REPLIT DEPLOYMENT FIX (Replace your current listen block) ---
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Kiminou Knox SEO Engine Running on Port ${PORT}`);
+});
+3. The New Files: Root Directory
+Create these two files in your main folder if they don't exist:
+
+File: robots.txt
+
+Plaintext
+
+User-agent: *
+Allow: /
+Sitemap: https://kiminouknox.com/sitemap.xml
+File: .replit (Ensures the push is automatic and clean)
+
+Ini, TOML
+
+run = "node index.js"
+entrypoint = "index.js"
+Why this fixes your "Small" Knowledge Panel
+Google "shrunk" your panel because it saw your Author profile and your Athlete profile as two separate, smaller entities. By putting the JSON-LD Schema (Step 1) on your own domain, you are basically handing Google an "Identity Card" that says: "I am the owner of all these links."
