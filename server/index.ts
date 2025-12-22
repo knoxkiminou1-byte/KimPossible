@@ -1,8 +1,18 @@
 import express, { type Request, Response, NextFunction } from "express";
+import helmet from "helmet";
+import compression from "compression";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Security and performance middleware
+app.use(helmet({
+  contentSecurityPolicy: false, // Disable CSP for development compatibility
+  crossOriginEmbedderPolicy: false
+}));
+app.use(compression()); // Makes site load faster by compressing responses
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

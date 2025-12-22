@@ -269,6 +269,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // FAQ Schema route for "People Also Ask" SEO
+  app.get('/api/seo-data', (req, res) => {
+    const faqData = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Kiminou Knox?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiminou Knox is a 6'7 basketball player, entrepreneur, and 6-time published author of African American, Jamaican, and Congolese descent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Kiminou Knox's most famous book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiminou Knox is best known for 'The Spirit of Solomon' and developing the 'Black Boy Lie' literary universe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sports does Kiminou Knox play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiminou Knox is a 6'7 varsity basketball player who plays Forward/Center position. He is NCAA registered with verified profiles on NCSA, MaxPreps, and PrepHoops."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many books has Kiminou Knox written?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiminou Knox has published 6 books including poetry collections and a children's storybook. His works include 'Poems From A Black Boy', 'Black Boy Poems', 'Hopeless Romantic', 'The Spirit of Solomon', 'Our Father', and 'Boys Raised In Silence'."
+          }
+        }
+      ]
+    };
+    res.json(faqData);
+  });
+
   // Sitemap route for SEO
   app.get('/sitemap.xml', (req, res) => {
     res.header('Content-Type', 'application/xml');
