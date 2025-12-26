@@ -72,8 +72,8 @@ export default function Author() {
           <div className="sticky top-28 z-40 bg-black/90 backdrop-blur-md border-b border-white/10">
             <div className="max-w-6xl mx-auto px-6">
               <nav className="flex items-center gap-8 overflow-x-auto py-4 scrollbar-hide">
-                <a href="#about" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
-                  About
+                <a href="#bio" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
+                  Bio
                 </a>
                 <a href="#books" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
                   Books
@@ -89,29 +89,63 @@ export default function Author() {
           </div>
 
           {/* Hero Section */}
-          <section id="about" className="max-w-6xl mx-auto px-6 py-16 lg:py-24 scroll-mt-40">
-            <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <section id="bio" className="max-w-6xl mx-auto px-6 py-16 lg:py-24 scroll-mt-40 relative overflow-hidden">
+            {/* Animated background gradient */}
+            <motion.div 
+              className="absolute inset-0 opacity-30"
+              style={{
+                background: "radial-gradient(ellipse at 30% 20%, rgba(251,191,36,0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(251,191,36,0.1) 0%, transparent 50%)"
+              }}
+              animate={{
+                opacity: [0.2, 0.35, 0.2],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            <div className="grid gap-12 lg:grid-cols-2 items-center relative z-10">
               {/* Photo */}
               <motion.div 
                 className="relative w-full max-w-md mx-auto lg:order-1"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, x: -50, rotate: -2 }}
+                animate={{ opacity: 1, x: 0, rotate: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                whileHover={{ scale: 1.02, rotate: 1 }}
               >
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-2 ring-amber-300/40 shadow-xl shadow-amber-900/30">
-                  <img
+                <motion.div 
+                  className="absolute -inset-4 bg-gradient-to-r from-amber-400/20 via-amber-300/10 to-amber-400/20 rounded-3xl blur-xl"
+                  animate={{
+                    opacity: [0.5, 0.8, 0.5],
+                    scale: [1, 1.02, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-2 ring-amber-300/50 shadow-2xl shadow-amber-900/40 relative">
+                  <motion.img
                     src="/author-kiminou.jpg"
                     alt="Kiminou Knox - Author, Athlete, Entrepreneur from East Palo Alto, creator of The Black Boy Lie universe"
                     title="Kiminou Knox - Author, Athlete & Entrepreneur"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover"
+                    initial={{ scale: 1.1, filter: "grayscale(100%)" }}
+                    animate={{ scale: 1, filter: "grayscale(0%)" }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    whileHover={{ scale: 1.05 }}
                     loading="eager"
                   />
                 </div>
                 <motion.div 
-                  className="absolute -bottom-4 -right-4 bg-amber-300 text-black text-xs font-semibold uppercase tracking-wide px-4 py-2 rounded-full shadow-lg"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
+                  className="absolute -bottom-4 -right-4 bg-gradient-to-r from-amber-300 to-amber-400 text-black text-xs font-bold uppercase tracking-wide px-5 py-2.5 rounded-full shadow-lg shadow-amber-500/30"
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
+                  whileHover={{ scale: 1.1 }}
                 >
                   Poet · Author · Athlete
                 </motion.div>
@@ -122,31 +156,89 @@ export default function Author() {
                 className="space-y-6 lg:order-2"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <p className="text-xs font-semibold tracking-[0.3em] uppercase text-amber-300">
+                <motion.p 
+                  className="text-xs font-semibold tracking-[0.3em] uppercase text-amber-300"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
                   Author Profile
-                </p>
-                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight">
+                </motion.p>
+                <motion.h1 
+                  className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                >
                   Kiminou Knox
-                </h1>
-                <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                </motion.h1>
+                <motion.p 
+                  className="text-lg md:text-xl text-gray-200 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                >
                   Poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
-                </p>
-                <p className="text-gray-400">
+                </motion.p>
+                <motion.p 
+                  className="text-gray-400"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.9 }}
+                >
                   Creator of The Black Boy Lie universe. Author of six poetry collections and a children's storybook.
-                </p>
+                </motion.p>
 
-                <div className="flex flex-wrap gap-3 pt-2">
-                  {["Author", "Poet", "Athlete", "Director"].map((tag) => (
-                    <span 
+                <motion.div 
+                  className="flex flex-wrap gap-3 pt-2"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 }}
+                >
+                  {["Author", "Poet", "Athlete", "Director"].map((tag, index) => (
+                    <motion.span 
                       key={tag}
-                      className="px-4 py-1.5 rounded-full bg-white/10 text-xs uppercase tracking-wide text-gray-300"
+                      className="px-4 py-1.5 rounded-full bg-white/10 text-xs uppercase tracking-wide text-gray-300 border border-white/5 hover:border-amber-300/30 hover:bg-amber-300/10 transition-all cursor-default"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 1 + index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
                     >
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
-                </div>
+                </motion.div>
+
+                <motion.div 
+                  className="flex flex-wrap gap-5 pt-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.3 }}
+                >
+                  {[
+                    { name: "Goodreads", url: "https://www.goodreads.com/author/show/Kiminou_Knox" },
+                    { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
+                    { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+                    { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
+                    { name: "Instagram", url: "https://www.instagram.com/kiminouknox" }
+                  ].map((link, index) => (
+                    <motion.a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-all hover:underline underline-offset-4"
+                      whileHover={{ scale: 1.05, x: 2 }}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.4 + index * 0.1 }}
+                    >
+                      {link.name}
+                    </motion.a>
+                  ))}
+                </motion.div>
               </motion.div>
             </div>
           </section>
