@@ -101,8 +101,10 @@ export default function Author() {
                 <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-2 ring-amber-300/40 shadow-xl shadow-amber-900/30">
                   <img
                     src="/author-kiminou.jpg"
-                    alt="Author Kiminou Knox smiling in a clean studio portrait"
+                    alt="Kiminou Knox - Author, Athlete, Entrepreneur from East Palo Alto, creator of The Black Boy Lie universe"
+                    title="Kiminou Knox - Author, Athlete & Entrepreneur"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    loading="eager"
                   />
                 </div>
                 <motion.div 
@@ -163,7 +165,7 @@ export default function Author() {
                 </h2>
                 <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                   <p>
-                    Kiminou Knox is a poet, novelist, and creative organizer from East Palo Alto now based in Oakland California. He came up between church benches, school gyms, and crowded apartments where everybody was carrying more than they could say out loud. Those rooms and those silences are where his voice began.
+                    Kiminou Knox is a poet, novelist, and creative organizer from East Palo Alto now based in Oakland California. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, he came up between church benches, school gyms, and crowded apartments where everybody was carrying more than they could say out loud. Those rooms and those silences are where his voice began.
                   </p>
                   <p>
                     He has released several poetry collections including <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, and <em className="text-amber-300/90">Boys Raised In Silence</em>, plus a children's storybook written with his younger brother. His work walks through faith, family, mental health, and desire, following Black boys who are trying to understand God, forgive their fathers, love their friends, and keep breathing in neighborhoods that do not always love them back. The poems move from classrooms to courts to kitchen tables and bedroom prayers, speaking in the plain voice of a young man who refuses to lie about what hurts and what heals.
