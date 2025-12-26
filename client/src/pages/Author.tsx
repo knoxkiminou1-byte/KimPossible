@@ -222,7 +222,9 @@ export default function Author() {
                     { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
                     { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
                     { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
-                    { name: "Instagram", url: "https://www.instagram.com/kiminouknox" }
+                    { name: "Instagram", url: "https://www.instagram.com/kiminouknox" },
+                    { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminouknox" },
+                    { name: "Spotify", url: "https://open.spotify.com/user/kiminouknox" }
                   ].map((link, index) => (
                     <motion.a
                       key={link.name}
