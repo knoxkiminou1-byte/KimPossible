@@ -131,7 +131,7 @@ export default function Author() {
                   Kiminou Knox
                 </h1>
                 <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                  Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, his work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
+                  Poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
                 </p>
                 <p className="text-gray-400">
                   Creator of The Black Boy Lie universe. Author of six poetry collections and a children's storybook.
@@ -147,8 +147,38 @@ export default function Author() {
                     </span>
                   ))}
                 </div>
+              </motion.div>
+            </div>
+          </section>
 
-                <div className="flex flex-wrap gap-4 pt-4">
+          {/* About the Author */}
+          <section className="border-t border-white/10 bg-gradient-to-b from-black to-gray-950">
+            <div className="max-w-4xl mx-auto px-6 py-16 md:py-20">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="font-serif text-3xl md:text-4xl mb-8 text-white">
+                  Bio
+                </h2>
+                <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                  <p>
+                    Kiminou Knox is a poet, novelist, and creative organizer from East Palo Alto now based in Oakland California. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, he came up between church benches, school gyms, and crowded apartments where everybody was carrying more than they could say out loud. Those rooms and those silences are where his voice began.
+                  </p>
+                  <p>
+                    He has released several poetry collections including <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, and <em className="text-amber-300/90">Boys Raised In Silence</em>, plus a children's storybook written with his younger brother. His work walks through faith, family, mental health, and desire, following Black boys who are trying to understand God, forgive their fathers, love their friends, and keep breathing in neighborhoods that do not always love them back. The poems move from classrooms to courts to kitchen tables and bedroom prayers, speaking in the plain voice of a young man who refuses to lie about what hurts and what heals.
+                  </p>
+                  <p>
+                    Away from the page, Kiminou is a committed student athlete and youth builder. He competes as a varsity level basketball player, trains with the same intensity he brings to the notebook, and studies film and footwork with professional ambition. He is the Director of Artists and Athletes For Change, a platform that uses story, apparel, and mentorship to help young people turn their talent into testimony and their testimony into work that can feed them.
+                  </p>
+                  <p>
+                    On stage and on the court he carries the same mission as in his books: to prove that Black boys are not problems to control but lives to protect, futures to fund, and voices that deserve to stand at the center of the room.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-4 pt-8">
                   <a href="https://www.goodreads.com/author/show/Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
                     Goodreads
                   </a>
@@ -164,36 +194,6 @@ export default function Author() {
                   <a href="https://www.instagram.com/kiminouknox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
                     Instagram
                   </a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* About the Author */}
-          <section className="border-t border-white/10 bg-gradient-to-b from-black to-gray-950">
-            <div className="max-w-4xl mx-auto px-6 py-16 md:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <h2 className="font-serif text-3xl md:text-4xl mb-8 text-white">
-                  About the Author
-                </h2>
-                <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-                  <p>
-                    Kiminou Knox is a poet, novelist, and creative organizer from East Palo Alto now based in Oakland California. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, he came up between church benches, school gyms, and crowded apartments where everybody was carrying more than they could say out loud. Those rooms and those silences are where his voice began.
-                  </p>
-                  <p>
-                    He has released several poetry collections including <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, and <em className="text-amber-300/90">Boys Raised In Silence</em>, plus a children's storybook written with his younger brother. His work walks through faith, family, mental health, and desire, following Black boys who are trying to understand God, forgive their fathers, love their friends, and keep breathing in neighborhoods that do not always love them back. The poems move from classrooms to courts to kitchen tables and bedroom prayers, speaking in the plain voice of a young man who refuses to lie about what hurts and what heals.
-                  </p>
-                  <p>
-                    Away from the page, Kiminou is a committed student athlete and youth builder. He competes as a varsity level basketball player, trains with the same intensity he brings to the notebook, and studies film and footwork with professional ambition. He is the Director of Artists and Athletes For Change, a platform that uses story, apparel, and mentorship to help young people turn their talent into testimony and their testimony into work that can feed them.
-                  </p>
-                  <p>
-                    On stage and on the court he carries the same mission as in his books: to prove that Black boys are not problems to control but lives to protect, futures to fund, and voices that deserve to stand at the center of the room.
-                  </p>
                 </div>
               </motion.div>
             </div>
