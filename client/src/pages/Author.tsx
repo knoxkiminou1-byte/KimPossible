@@ -223,8 +223,8 @@ export default function Author() {
                     { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
                     { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
                     { name: "Instagram", url: "https://www.instagram.com/kiminouknox" },
-                    { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminouknox" },
-                    { name: "Spotify", url: "https://open.spotify.com/user/kiminouknox" }
+                    { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
+                    { name: "Spotify", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" }
                   ].map((link, index) => (
                     <motion.a
                       key={link.name}
