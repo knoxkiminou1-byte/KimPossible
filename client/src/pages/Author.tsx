@@ -131,10 +131,10 @@ export default function Author() {
                   Kiminou Knox
                 </h1>
                 <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                  Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
+                  Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, his work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
                 </p>
                 <p className="text-gray-400">
-                  Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction.
+                  Creator of The Black Boy Lie universe. Author of six poetry collections and a children's storybook.
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-2">
@@ -146,6 +146,24 @@ export default function Author() {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                <div className="flex flex-wrap gap-4 pt-4">
+                  <a href="https://www.goodreads.com/author/show/Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                    Goodreads
+                  </a>
+                  <a href="https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                    MaxPreps
+                  </a>
+                  <a href="https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                    NCSA
+                  </a>
+                  <a href="https://prephoops.com/player/kiminou-knox/" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                    Prep Hoops
+                  </a>
+                  <a href="https://www.instagram.com/kiminouknox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                    Instagram
+                  </a>
                 </div>
               </motion.div>
             </div>
