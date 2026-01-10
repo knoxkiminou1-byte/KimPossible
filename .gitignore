@@ -3,3 +3,9 @@ dist
 .env
 .DS_Store
 *.log
+.local/
+replit.md
+server/index.ts.bak.*
+server/index.ts.save
+*.bak
+*.save
