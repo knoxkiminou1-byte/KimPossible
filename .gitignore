@@ -9,3 +9,6 @@ server/index.ts.bak.*
 server/index.ts.save
 *.bak
 *.save
+node_modules/
+dist/
+.replit
