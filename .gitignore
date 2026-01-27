@@ -10,3 +10,5 @@ server/index.ts.bak.*
 *.log
 *.bak
 *.save
+.env.local
+.vercel
