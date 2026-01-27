@@ -12,3 +12,6 @@ server/index.ts.bak.*
 *.save
 .env.local
 .vercel
+
+.env.local
+.vercel/
