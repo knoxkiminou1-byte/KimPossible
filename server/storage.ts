@@ -49,6 +49,12 @@ export class MemStorage implements IStorage {
     this.posts = new Map();
   }
 
+  private removeUndefinedFields<T extends Record<string, unknown>>(obj: T): Partial<T> {
+    return Object.fromEntries(
+      Object.entries(obj).filter(([, value]) => value !== undefined),
+    ) as Partial<T>;
+  }
+
   // User methods
   async getUser(id: string): Promise<User | undefined> {
     return this.users.get(id);
@@ -80,7 +86,9 @@ export class MemStorage implements IStorage {
     const id = randomUUID();
     const now = new Date();
     const newCategory: BlogCategory = { 
-      ...category, 
+      name: category.name,
+      slug: category.slug,
+      description: category.description ?? null,
       id, 
       createdAt: now, 
       updatedAt: now 
@@ -92,10 +100,12 @@ export class MemStorage implements IStorage {
   async updateCategory(id: string, category: Partial<InsertBlogCategory>): Promise<BlogCategory | undefined> {
     const existing = this.categories.get(id);
     if (!existing) return undefined;
+
+    const sanitizedCategory = this.removeUndefinedFields(category);
     
     const updated: BlogCategory = { 
       ...existing, 
-      ...category, 
+      ...sanitizedCategory,
       updatedAt: new Date() 
     };
     this.categories.set(id, updated);
@@ -137,7 +147,16 @@ export class MemStorage implements IStorage {
     const id = randomUUID();
     const now = new Date();
     const newPost: BlogPost = { 
-      ...post, 
+      title: post.title,
+      slug: post.slug,
+      content: post.content,
+      excerpt: post.excerpt ?? null,
+      categoryId: post.categoryId ?? null,
+      isPublished: post.isPublished ?? false,
+      publishedAt: post.publishedAt ?? null,
+      featuredImage: post.featuredImage ?? null,
+      readTime: post.readTime ?? null,
+      tags: post.tags ?? null,
       id, 
       createdAt: now, 
       updatedAt: now 
@@ -149,10 +168,12 @@ export class MemStorage implements IStorage {
   async updatePost(id: string, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined> {
     const existing = this.posts.get(id);
     if (!existing) return undefined;
+
+    const sanitizedPost = this.removeUndefinedFields(post);
     
     const updated: BlogPost = { 
       ...existing, 
-      ...post, 
+      ...sanitizedPost,
       updatedAt: new Date() 
     };
     this.posts.set(id, updated);
