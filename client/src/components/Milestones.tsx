@@ -5,7 +5,7 @@ const milestones = [
   {
     icon: BookText,
     title: "Published Author",
-    description: "Six published works on faith, love, and mental survival, all written by age 19"
+    description: "Seven published works on faith, love, and mental survival, all written by age 19"
   },
   {
     icon: Trophy,

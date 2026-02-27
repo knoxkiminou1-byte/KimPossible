@@ -91,7 +91,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                My work includes 6 published books and recognition through 5 major awards. Academically, I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                My work includes 7 published books and recognition through 5 major awards. Academically, I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
               </p>
 
               <p data-testid="about-family">

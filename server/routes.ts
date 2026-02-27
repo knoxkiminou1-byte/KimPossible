@@ -240,7 +240,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Email content
       const mailOptions = {
         from: process.env.GMAIL_USER || 'knoxkiminou1@gmail.com',
-        to: 'knoxkiminou1@gmail.com',
+        to: 'knoximinou1@gmail.com',
         subject: `[${inquiryTypeDisplay}] ${validatedData.subject}`,
         replyTo: validatedData.email,
         html: `
@@ -280,7 +280,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           "name": "Who is Kiminou Knox?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiminou Knox is a 6'7 basketball player, entrepreneur, and 6-time published author of African American, Jamaican, and Congolese descent."
+            "text": "Kiminou Knox is a 6'7 basketball player, entrepreneur, and 7-time published author of African American, Jamaican, and Congolese descent."
           }
         },
         {
@@ -304,7 +304,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           "name": "How many books has Kiminou Knox written?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiminou Knox has published 6 books including poetry collections and a children's storybook. His works include 'Poems From A Black Boy', 'Black Boy Poems', 'Hopeless Romantic', 'The Spirit of Solomon', 'Our Father', and 'Boys Raised In Silence'."
+            "text": "Kiminou Knox has published 7 books including poetry collections and a children's storybook. His works include 'Poems From A Black Boy', 'Black Boy Poems', 'Hopeless Romantic', 'The Spirit of Solomon', 'Our Father', 'Boys Raised In Silence', and 'The Adventures of Kiminou the Great and Chua the Wise'."
           }
         }
       ]

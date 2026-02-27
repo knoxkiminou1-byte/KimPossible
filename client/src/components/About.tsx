@@ -24,7 +24,7 @@ export default function About() {
             Kiminou Knox is a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, he creates work that helps people feel deeply and act with purpose.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-2">
-            Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. His accomplishments include 6 published works and recognition through 5 major awards. Academically, he scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+            Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. His accomplishments include 7 published works and recognition through 5 major awards. Academically, he scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-3">
             His family serves as his compass. He is the son of Rashida Knox, a distinguished Bay Area marketer and presidential singer whose dedication to excellence shapes his approach to every endeavor. His grandmother, Dr. Faye McNair Knox, devoted her life to serving the One East Palo Alto community as its executive director, teaching him that service is a promise you renew each day.

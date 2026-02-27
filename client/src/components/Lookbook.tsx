@@ -10,9 +10,9 @@ const lookbookImages = [
   },
   {
     src: "/photos/brown-suit-author.jpg",
-    alt: "Published author with six works",
+    alt: "Published author with seven works",
     title: "Published Author",
-    description: "Six published works by age 19, exploring love, faith, and identity"
+    description: "Seven published works by age 19, exploring love, faith, and identity"
   },
   {
     src: "/photos/entrepreneur-style.jpg",

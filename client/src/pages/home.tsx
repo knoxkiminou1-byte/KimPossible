@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
-        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Six published works, NCAA registered athlete, and youth advocate." />
+        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Seven published works, NCAA registered athlete, and youth advocate." />
         <link rel="canonical" href="https://kiminouknox.com/" />
         
         <meta property="og:type" content="website" />

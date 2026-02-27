@@ -7,7 +7,7 @@ const identity = [
     id: "books",
     icon: BookOpen,
     label: "Author",
-    title: "Six Published Works",
+    title: "Seven Published Works",
     description: "Published writer exploring faith, identity, love, and the Black experience through powerful poetry and narrative.",
     link: "/books",
     cta: "View Books"

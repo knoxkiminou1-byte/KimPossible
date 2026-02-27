@@ -71,7 +71,7 @@ export default function LatestReleases() {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground mt-4 max-w-2xl mx-auto"
           >
-            Explore six published works exploring faith, identity, love, and the human experience
+            Explore seven published works exploring faith, identity, love, and the human experience
           </motion.p>
         </div>
 

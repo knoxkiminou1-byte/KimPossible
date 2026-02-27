@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     name: "Ms. Rodriguez",
     role: "English Department Head", 
     organization: "Ygnacio Valley High School",
-    content: "Reading Kiminou's poetry is like witnessing raw talent transform into refined artistry. Six published works by 19? That's not just impressive, it's unprecedented for someone his age.",
+    content: "Reading Kiminou's poetry is like witnessing raw talent transform into refined artistry. Seven published works by 19? That's not just impressive, it's unprecedented for someone his age.",
     avatar: teacherImage,
     rating: 5,
     category: "literary"

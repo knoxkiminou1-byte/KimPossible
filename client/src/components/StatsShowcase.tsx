@@ -14,7 +14,7 @@ interface Stat {
 const stats: Stat[] = [
   {
     label: "Published Books",
-    value: 6,
+    value: 7,
     icon: <Book className="w-6 h-6" />,
     color: "text-purple-400",
     description: "Poetry and Stories"

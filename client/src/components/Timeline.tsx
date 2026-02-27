@@ -89,7 +89,7 @@ const timelineEvents: TimelineEvent[] = [
     year: "2024",
     title: "Hopeless Romantic and Kiminou the Great",
     description: "Released Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise, showcasing emotional depth and creative storytelling",
-    achievement: "Six Books Published",
+    achievement: "Seven Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
     image: "/photos/author-reading-book.jpg"

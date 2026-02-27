@@ -134,8 +134,8 @@
 @layer components {
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .animate-on-scroll.visible {
@@ -257,7 +257,7 @@
 
 /* Luxury Card Effects */
 .luxury-card {
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
 }
@@ -269,8 +269,8 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .luxury-card:hover::before {
@@ -278,33 +278,33 @@
 }
 
 .luxury-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
 
 /* Enhanced Button Styles */
 .luxury-button {
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.luxury-button::before {
+.luxury-button::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.08);
   border-radius: 50%;
-  transition: all 0.5s ease;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translate(-50%, -50%);
 }
 
-.luxury-button:hover::before {
-  width: 300px;
-  height: 300px;
+.luxury-button:hover::after {
+  width: 400px;
+  height: 400px;
 }
 
 /* Timeline Animations */

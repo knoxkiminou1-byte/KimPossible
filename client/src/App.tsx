@@ -20,6 +20,7 @@ import Sports from "@/pages/Sports";
 import Author from "@/pages/Author";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
+import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
 
 function Router() {
   return (
@@ -58,6 +59,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <WelcomeVideoOverlay />
         <LuxuryCursor />
         <div className="grain"></div>
         <Toaster />

@@ -188,7 +188,7 @@ export default function Author() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
                 >
-                  Creator of The Black Boy Lie universe. Author of six poetry collections and a children's storybook.
+                  Creator of The Black Boy Lie universe. Author of seven poetry collections and a children's storybook.
                 </motion.p>
 
                 <motion.div 
