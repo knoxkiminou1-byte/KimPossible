@@ -94,7 +94,7 @@ export default function ContactForm({
     } catch (error) {
       toast({
         title: "Submission failed",
-        description: "Please try again or contact us directly at knoximinou1@gmail.com",
+        description: "Please try again or contact us directly at knoxkiminou1@gmail.com",
         variant: "destructive",
       });
     } finally {

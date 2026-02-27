@@ -240,7 +240,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Email content
       const mailOptions = {
         from: process.env.GMAIL_USER || 'knoxkiminou1@gmail.com',
-        to: 'knoximinou1@gmail.com',
+        to: 'knoxkiminou1@gmail.com',
         subject: `[${inquiryTypeDisplay}] ${validatedData.subject}`,
         replyTo: validatedData.email,
         html: `
