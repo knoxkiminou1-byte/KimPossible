@@ -6,36 +6,34 @@
   <title>Kiminou Knox — Enter</title>
   <style>
     :root {
-      /* Tweak these to move/resize the clickable hand hotspot (percentages of the image). */
-      --hotspot-left: 58%;  /* x position from left */
-      --hotspot-top: 42%;   /* y position from top */
-      --hotspot-width: 20%; /* width of hotspot */
-      --hotspot-height: 28%;/* height of hotspot */
-
+      --hotspot-left: 71%;
+      --hotspot-top: 60%;
+      --hotspot-width: 12%;
+      --hotspot-height: 16%;
       --bg: #0d0d0f;
       --fg: #fff;
-      --accent: #ffd400; /* crown yellow */
+      --accent: #ffd400;
     }
 
-    html, body { 
-      height: 100%; 
-      margin: 0; 
-      background: var(--bg); 
-      color: var(--fg); 
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
-    
-    .page { 
-      height: 100%; 
-      display: grid; 
-      place-items: center; 
-      overflow: hidden; 
+
+    .page {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
     }
 
     .splash {
       position: relative;
       width: min(1200px, 92vw);
-      aspect-ratio: 16 / 9; /* keep landscape */
+      aspect-ratio: 16 / 9;
       border-radius: 18px;
       box-shadow: 0 20px 60px rgba(0,0,0,.45);
       overflow: hidden;
@@ -65,22 +63,22 @@
       z-index: 2;
       pointer-events: none;
     }
-    
-    @keyframes rise { 
-      from { 
-        opacity: 0; 
-        transform: translateY(16px) scale(.985); 
-      } 
-      to { 
-        opacity: 1; 
-        transform: translateY(0) scale(1); 
-      } 
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .art {
-      position: absolute; 
+      position: absolute;
       inset: 0;
-      background-image: url("/kiminou-hero-feb-27-2026.png");
+      background-image: url("/click-to-enter-orb-feb-27-2026.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -88,7 +86,7 @@
       transform-origin: center;
       will-change: transform;
       animation: heroFloat 30s ease-in-out infinite alternate;
-      user-select: none; 
+      user-select: none;
       -webkit-user-drag: none;
       z-index: 0;
     }
@@ -108,7 +106,7 @@
       position: absolute;
       inset: -8%;
       background:
-        radial-gradient(34% 28% at 22% 22%, rgba(255, 232, 173, 0.18), transparent 70%),
+        radial-gradient(34% 28% at 70% 58%, rgba(255, 232, 173, 0.18), transparent 22%),
         radial-gradient(28% 26% at 74% 26%, rgba(160, 204, 255, 0.12), transparent 72%),
         radial-gradient(30% 28% at 50% 72%, rgba(255, 255, 255, 0.08), transparent 74%);
       mix-blend-mode: screen;
@@ -125,36 +123,39 @@
       100% { opacity: 0.5; transform: scale(1.08) translate3d(-1%, -2%, 0); }
     }
 
-    /* Optional animated caption */
     .caption {
-      position: absolute; 
-      left: 2rem; 
-      bottom: 1.25rem;
-      font-weight: 700; 
-      letter-spacing: .02em;
+      position: absolute;
+      left: var(--hotspot-left);
+      top: calc(var(--hotspot-top) + 11%);
+      transform: translateX(-50%);
+      font-weight: 700;
+      font-size: .7rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
       text-shadow: 0 2px 12px rgba(0,0,0,.55);
-      display: flex; 
-      align-items: center; 
+      display: flex;
+      align-items: center;
       gap: .6rem;
       z-index: 3;
+      pointer-events: none;
+      white-space: nowrap;
     }
-    
+
     .caption .pulse {
-      width: .85rem; 
-      height: .85rem; 
-      border-radius: 999px; 
+      width: .85rem;
+      height: .85rem;
+      border-radius: 999px;
       background: var(--accent);
       box-shadow: 0 0 0 0 rgba(255,212,0,.7);
       animation: pulse 1.3s infinite;
     }
-    
-    @keyframes pulse { 
-      to { 
-        box-shadow: 0 0 0 16px rgba(255,212,0,0); 
-      } 
+
+    @keyframes pulse {
+      to {
+        box-shadow: 0 0 0 16px rgba(255,212,0,0);
+      }
     }
 
-    /* Hotspot that sits over the hand */
     .hotspot {
       position: absolute;
       left: var(--hotspot-left);
@@ -165,29 +166,29 @@
       cursor: pointer;
       border-radius: 50%;
       background: rgba(255,212,0,.12);
-      border: 2px solid rgba(255,212,0,.3);
+      border: 2px solid rgba(255,212,0,.42);
       backdrop-filter: blur(2px);
       transition: all .25s ease;
       animation: glow 2s ease-in-out infinite alternate;
       z-index: 3;
+      padding: 0;
     }
-    
+
     .hotspot:hover {
-      background: rgba(255,212,0,.2);
-      border-color: rgba(255,212,0,.6);
+      background: rgba(255,212,0,.18);
+      border-color: rgba(255,212,0,.75);
       transform: translate(-50%, -50%) scale(1.1);
     }
-    
+
     @keyframes glow {
-      0% { 
-        box-shadow: 0 0 20px rgba(255,212,0,.3); 
+      0% {
+        box-shadow: 0 0 20px rgba(255,212,0,.3);
       }
-      100% { 
-        box-shadow: 0 0 40px rgba(255,212,0,.6), 0 0 60px rgba(255,212,0,.3); 
+      100% {
+        box-shadow: 0 0 40px rgba(255,212,0,.6), 0 0 60px rgba(255,212,0,.3);
       }
     }
 
-    /* Click ripple effect */
     .ripple {
       position: absolute;
       border-radius: 50%;
@@ -196,7 +197,7 @@
       animation: ripple .6s linear;
       pointer-events: none;
     }
-    
+
     @keyframes ripple {
       to {
         transform: scale(4);
@@ -204,16 +205,15 @@
       }
     }
 
-    /* Accessibility fallback */
     .enter-btn {
       position: absolute;
       right: 2rem;
       bottom: 1.25rem;
-      padding: .75rem 1.5rem;
+      padding: .6rem 1rem;
       background: var(--accent);
       color: var(--bg);
       border: none;
-      border-radius: 8px;
+      border-radius: 999px;
       font-weight: 600;
       cursor: pointer;
       transition: all .2s ease;
@@ -221,21 +221,60 @@
       display: inline-block;
       z-index: 3;
     }
-    
+
     .enter-btn:hover {
       background: #ffdf33;
       transform: translateY(-2px);
     }
 
-    /* Fade out animation */
     .fade-out {
       animation: fadeOut .5s ease-in-out forwards;
     }
-    
+
     @keyframes fadeOut {
       to {
         opacity: 0;
         transform: scale(0.95);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --hotspot-left: 71%;
+        --hotspot-top: 61%;
+        --hotspot-width: 18%;
+        --hotspot-height: 18%;
+      }
+
+      .caption {
+        top: calc(var(--hotspot-top) + 13%);
+        font-size: .62rem;
+      }
+
+      .enter-btn {
+        right: 1rem;
+        bottom: 1rem;
+        padding: .45rem .85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --hotspot-left: 70%;
+        --hotspot-top: 62%;
+        --hotspot-width: 22%;
+        --hotspot-height: 20%;
+      }
+
+      .caption {
+        top: calc(var(--hotspot-top) + 14%);
+        letter-spacing: .2em;
+      }
+
+      .enter-btn {
+        right: .85rem;
+        bottom: .85rem;
+        padding: .4rem .72rem;
       }
     }
 
@@ -253,73 +292,63 @@
     <div class="splash" id="splash">
       <div class="art" aria-hidden="true"></div>
       <div class="splash-glow"></div>
-      
-      <!-- Clickable hotspot over the hand -->
-      <div class="hotspot" id="hotspot"></div>
-      
-      <!-- Animated caption -->
+
+      <button class="hotspot" id="hotspot" type="button" aria-label="Click the orb to enter">
+        <span class="sr-only">Click to Enter</span>
+      </button>
+
       <div class="caption">
         <div class="pulse"></div>
-        <span>Click the hand to enter</span>
+        <span>Click the orb to enter</span>
       </div>
-      
-      <!-- Accessibility fallback -->
+
       <a href="/home" class="enter-btn" id="enterBtn">ENTER</a>
     </div>
   </div>
 
   <script>
-    const DESTINATION = '/home'; // Where to go after clicking
-    
+    const DESTINATION = '/home';
+
     const splash = document.getElementById('splash');
     const hotspot = document.getElementById('hotspot');
     const enterBtn = document.getElementById('enterBtn');
-    
+
     function createRipple(event) {
-      const splash = event.currentTarget;
-      const rect = splash.getBoundingClientRect();
+      const rippleHost = event.currentTarget;
+      const rect = rippleHost.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
-      
+
       const ripple = document.createElement('div');
       ripple.classList.add('ripple');
-      ripple.style.left = x + 'px';
-      ripple.style.top = y + 'px';
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
       ripple.style.width = '20px';
       ripple.style.height = '20px';
-      
-      splash.appendChild(ripple);
-      
+
+      rippleHost.appendChild(ripple);
+
       setTimeout(() => {
         ripple.remove();
       }, 600);
     }
-    
+
     function enterSite() {
+      window.sessionStorage.setItem('kk-play-intro', '1');
       splash.classList.add('fade-out');
       setTimeout(() => {
         window.location.href = DESTINATION;
       }, 500);
     }
-    
-    // Main interaction
-    hotspot.addEventListener('click', (e) => {
-      createRipple(e);
+
+    hotspot.addEventListener('click', (event) => {
+      createRipple(event);
       setTimeout(enterSite, 300);
     });
-    
-    // Fallback button
-    enterBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+
+    enterBtn.addEventListener('click', (event) => {
+      event.preventDefault();
       enterSite();
-    });
-    
-    // Keyboard accessibility
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        enterSite();
-      }
     });
   </script>
 </body>
