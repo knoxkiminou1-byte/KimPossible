@@ -139,10 +139,10 @@ export default function Splash() {
         .art {
           position: absolute;
           inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
+          background-image: url("/kiminou-hero-feb-27-2026.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
           filter: saturate(1.15) contrast(1.05);
           transform-origin: center;
           will-change: transform;
@@ -306,11 +306,7 @@ export default function Splash() {
       
       <div className="splash-page">
         <div className="splash" id="splash">
-          <img 
-            src="/kiminou-hero-feb-27-2026.png" 
-            alt="Kiminou Knox - Click to Enter" 
-            className="art"
-          />
+          <div className="art" aria-hidden="true" />
           <div className="splash-glow" />
           
           <div className="hotspot" id="hotspot"></div>
