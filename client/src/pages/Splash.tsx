@@ -169,17 +169,13 @@ export default function Splash() {
 
         .hotspot {
           position: absolute;
-          left: var(--hotspot-left);
-          top: var(--hotspot-top);
-          width: var(--hotspot-width);
-          height: var(--hotspot-height);
-          transform: translate(-50%, -50%);
+          inset: 0;
           cursor: pointer;
-          border-radius: 50%;
+          border-radius: 0;
           background: transparent;
-          border: 2px solid transparent;
-          transition: box-shadow .2s ease, transform .2s ease;
-          z-index: 3;
+          border: 0;
+          transition: box-shadow .2s ease;
+          z-index: 5;
           padding: 0;
         }
 
@@ -270,8 +266,8 @@ export default function Splash() {
           <div className="art" aria-hidden="true" />
           <div className="splash-glow" />
 
-          <button className="hotspot" id="hotspot" type="button" aria-label="Click the orb to enter">
-            <span className="sr-only">Click to Enter</span>
+          <button className="hotspot" id="hotspot" type="button" aria-label="Click anywhere to enter">
+            <span className="sr-only">Click anywhere to enter</span>
           </button>
           <div className="orb-label">Click the Orb</div>
         </div>
