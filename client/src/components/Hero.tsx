@@ -67,7 +67,6 @@ export default function Hero() {
         />
         <div className="hero-gradient" />
         <div className="hero-vignette" />
-        <div className="hero-soft-glow" />
       </div>
 
       {!shouldReduceMotion && (
@@ -96,16 +95,6 @@ export default function Hero() {
           ))}
         </div>
       )}
-
-      <motion.div
-        className="absolute inset-0 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1.2 }}
-      >
-        <div className="absolute left-[12%] top-[14%] h-72 w-72 rounded-full bg-amber-200/10 blur-3xl" />
-        <div className="absolute bottom-[14%] right-[10%] h-80 w-80 rounded-full bg-slate-100/8 blur-3xl" />
-      </motion.div>
 
       <motion.div
         className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white lg:px-8"
