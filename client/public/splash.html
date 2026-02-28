@@ -6,10 +6,10 @@
   <title>Kiminou Knox — Enter</title>
   <style>
     :root {
-      --hotspot-left: 71%;
-      --hotspot-top: 60%;
-      --hotspot-width: 12%;
-      --hotspot-height: 16%;
+      --hotspot-left: 48%;
+      --hotspot-top: 68%;
+      --hotspot-width: 18%;
+      --hotspot-height: 22%;
       --bg: #0d0d0f;
       --fg: #fff;
       --accent: #ffd400;
@@ -165,28 +165,16 @@
       transform: translate(-50%, -50%);
       cursor: pointer;
       border-radius: 50%;
-      background: rgba(255,212,0,.12);
-      border: 2px solid rgba(255,212,0,.42);
-      backdrop-filter: blur(2px);
-      transition: all .25s ease;
-      animation: glow 2s ease-in-out infinite alternate;
+      background: transparent;
+      border: 2px solid transparent;
+      transition: box-shadow .2s ease, transform .2s ease;
       z-index: 3;
       padding: 0;
     }
 
-    .hotspot:hover {
-      background: rgba(255,212,0,.18);
-      border-color: rgba(255,212,0,.75);
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-
-    @keyframes glow {
-      0% {
-        box-shadow: 0 0 20px rgba(255,212,0,.3);
-      }
-      100% {
-        box-shadow: 0 0 40px rgba(255,212,0,.6), 0 0 60px rgba(255,212,0,.3);
-      }
+    .hotspot:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255,212,0,.65), 0 0 18px rgba(255,212,0,.45);
     }
 
     .ripple {
@@ -240,10 +228,10 @@
 
     @media (max-width: 768px) {
       :root {
-        --hotspot-left: 71%;
-        --hotspot-top: 61%;
-        --hotspot-width: 18%;
-        --hotspot-height: 18%;
+        --hotspot-left: 45%;
+        --hotspot-top: 65%;
+        --hotspot-width: 20%;
+        --hotspot-height: 24%;
       }
 
       .caption {
@@ -260,10 +248,10 @@
 
     @media (max-width: 480px) {
       :root {
-        --hotspot-left: 70%;
-        --hotspot-top: 62%;
+        --hotspot-left: 44%;
+        --hotspot-top: 64%;
         --hotspot-width: 22%;
-        --hotspot-height: 20%;
+        --hotspot-height: 26%;
       }
 
       .caption {
