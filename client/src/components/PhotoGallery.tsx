@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import backgroundImage from "@assets/Gemini_Generated_Image_x6vcgzx6vcgzx6vc_1762031697968.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 interface GalleryImage {
   src: string;
@@ -73,11 +81,42 @@ export default function PhotoGallery() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [lightboxImage, setLightboxImage] = useState<GalleryImage | null>(null);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = useState(0);
   const galleryRef = useScrollAnimation();
 
   const filteredImages = selectedCategory === "all" 
     ? galleryImages 
     : galleryImages.filter(img => img.category === selectedCategory);
+
+  useEffect(() => {
+    if (!carouselApi) {
+      return;
+    }
+
+    const updateSlide = () => {
+      setCurrentSlide(carouselApi.selectedScrollSnap());
+    };
+
+    updateSlide();
+    carouselApi.on("select", updateSlide);
+    carouselApi.on("reInit", updateSlide);
+
+    return () => {
+      carouselApi.off("select", updateSlide);
+      carouselApi.off("reInit", updateSlide);
+    };
+  }, [carouselApi]);
+
+  useEffect(() => {
+    if (!carouselApi) {
+      return;
+    }
+
+    carouselApi.reInit();
+    carouselApi.scrollTo(0, true);
+    setCurrentSlide(0);
+  }, [carouselApi, selectedCategory]);
 
   const openLightbox = (image: GalleryImage, index: number) => {
     setLightboxImage(image);
@@ -147,46 +186,70 @@ export default function PhotoGallery() {
             ))}
           </div>
 
-          {/* Image Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Image Carousel */}
+          <Carousel
+            setApi={setCarouselApi}
+            opts={{ align: "start", loop: filteredImages.length > 3 }}
+            className="mx-auto max-w-6xl px-12 md:px-16"
+          >
+            <CarouselContent className="-ml-0 md:-ml-4">
+              {filteredImages.map((image, index) => (
+                <CarouselItem
+                  key={`${image.title}-${index}`}
+                  className="pl-0 md:pl-4 md:basis-1/2 xl:basis-1/3"
+                >
+                  <div 
+                    className="luxury-card group relative overflow-hidden rounded-lg cursor-pointer"
+                    onClick={() => openLightbox(image, index)}
+                    data-testid={`gallery-image-${index}`}
+                  >
+                    <div className="aspect-w-4 aspect-h-3 relative">
+                      <img 
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                        <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                      
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-black/70 text-white text-xs uppercase tracking-wide rounded-full">
+                          {image.category}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6 bg-card">
+                      <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                        {image.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {image.description}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 border-border bg-card/90 hover:bg-card" />
+            <CarouselNext className="right-0 border-border bg-card/90 hover:bg-card" />
+          </Carousel>
+
+          <div className="mt-8 flex justify-center gap-3" data-testid="gallery-carousel-dots">
             {filteredImages.map((image, index) => (
-              <div 
-                key={`${image.title}-${index}`}
-                className="luxury-card group relative overflow-hidden rounded-lg cursor-pointer"
-                onClick={() => openLightbox(image, index)}
-                data-testid={`gallery-image-${index}`}
-              >
-                <div className="aspect-w-4 aspect-h-3 relative">
-                  <img 
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                    <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-black/70 text-white text-xs uppercase tracking-wide rounded-full">
-                      {image.category}
-                    </span>
-                  </div>
-                </div>
-                
-                {/* Image Info */}
-                <div className="p-6 bg-card">
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
-                    {image.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {image.description}
-                  </p>
-                </div>
-              </div>
+              <button
+                key={`${image.title}-dot-${index}`}
+                type="button"
+                onClick={() => carouselApi?.scrollTo(index)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? "w-8 bg-primary" : "w-2.5 bg-white/30 hover:bg-white/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+                data-testid={`gallery-dot-${index}`}
+              />
             ))}
           </div>
         </div>
