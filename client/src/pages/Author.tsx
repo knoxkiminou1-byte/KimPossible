@@ -257,19 +257,108 @@ export default function Author() {
                 <h2 className="font-serif text-3xl md:text-4xl mb-8 text-white">
                   Bio
                 </h2>
-                <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-                  <p>
-                    Kiminou Knox is a poet, novelist, and creative organizer from East Palo Alto now based in Oakland California. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, he came up between church benches, school gyms, and crowded apartments where everybody was carrying more than they could say out loud. Those rooms and those silences are where his voice began.
-                  </p>
-                  <p>
-                    He has released several poetry collections including <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, and <em className="text-amber-300/90">Boys Raised In Silence</em>, plus a children's storybook written with his younger brother. His work walks through faith, family, mental health, and desire, following Black boys who are trying to understand God, forgive their fathers, love their friends, and keep breathing in neighborhoods that do not always love them back. The poems move from classrooms to courts to kitchen tables and bedroom prayers, speaking in the plain voice of a young man who refuses to lie about what hurts and what heals.
-                  </p>
-                  <p>
-                    Away from the page, Kiminou is a committed student athlete and youth builder. He competes as a varsity level basketball player, trains with the same intensity he brings to the notebook, and studies film and footwork with professional ambition. He is the Director of Artists and Athletes For Change, a platform that uses story, apparel, and mentorship to help young people turn their talent into testimony and their testimony into work that can feed them.
-                  </p>
-                  <p>
-                    On stage and on the court he carries the same mission as in his books: to prove that Black boys are not problems to control but lives to protect, futures to fund, and voices that deserve to stand at the center of the room.
-                  </p>
+                <div className="space-y-8 text-gray-300 text-lg leading-relaxed">
+                  <div className="space-y-4">
+                    <p>
+                      Kiminou Knox is a poet, novelist, speaker, athlete, and creative executive from East Palo Alto, now based in Oakland, California. At nineteen, he has already become a seven-time published author and a cultural voice committed to the serious formation of young Black men and the institutions that should invest in them.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Early Life and Lineage</h3>
+                    <p>
+                      Born and raised in East Palo Alto, Knox grew up between church pews, school gyms, and homes where strength was expected long before softness was allowed. He is the son of Rashida Knox, the grandson of Faye McNair Knox, and the great-grandson of Sarah Lee Williams and Elisha Bonepart McNair, a lineage that functions in his work as both inheritance and obligation.
+                    </p>
+                    <p>
+                      From an early age, he watched faith, resilience, and generational memory collide in real time, and those collisions became the emotional architecture of his voice. The elders who raised him gave him stories, standards, and a sense of spiritual gravity; his writing answers to all three with a conviction that feels lived-in rather than performed.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
+                    <p>
+                      By nineteen, Knox has authored and published seven books that together form a literary universe centered on the interior lives of Black boys and young Black men. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children&apos;s storybook written with his younger brother move fluidly across poetry, psychological fiction, and prophetic reflection.
+                    </p>
+                    <p>
+                      His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, longing, and spiritual confusion, all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume; he insists on the full weight of the Black experience grief, resistance, tenderness, and joy and trusts his readers to meet him at that depth.
+                    </p>
+                    <p>
+                      Across his body of work, Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings whose emotions are allowed to be expansive and exact. In a culture that often demands performance, Knox writes toward the parts of life that usually remain unspoken, naming depression, anger, shame, and hope with equal clarity.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Voice, Form, and Craft</h3>
+                    <p>
+                      Knox&apos;s writing is marked by emotional precision, spiritual seriousness, and an ear tuned to both scripture and street corners. His poems and prose move between confession and critique, prayer and observation, often within the same page, without confusing truth-telling for theater.
+                    </p>
+                    <p>
+                      Formally, he allows each project to choose its own container: some works arrive as tight, concentrated poems; others unfold as narrative, interior monologue, or meditative reflection. What binds them is an unwavering commitment to say what is real, even when that reality is costly, uncomfortable, or unresolved.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Faith, Masculinity, and Mental Health</h3>
+                    <p>
+                      Raised within the Black church, Knox carries Christianity not as branding but as a lived framework for wrestling with doubt, desire, discipline, and grace. His work faces spiritual confusion head-on, asking hard questions about God, suffering, manhood, and responsibility without rushing to easy answers.
+                    </p>
+                    <p>
+                      Masculinity, in his pages, is something to be interrogated and rebuilt, not merely inherited. He writes about boys taught to be durable before they are allowed to be gentle, and about men who must learn, sometimes late, how to name what hurts and what heals.
+                    </p>
+                    <p>
+                      Mental health is not a side topic in his work; it is central. Knox makes space for therapy, breakdown, loneliness, and recovery, insisting that serious literature for Black boys must also be serious about their psychological and spiritual well-being.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">KimYaps: The Podcast</h3>
+                    <p>
+                      Knox extends his literary sensibility into audio with his podcast, KimYaps, a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
+                    </p>
+                    <p>
+                      On KimYaps, Knox&apos;s voice is both conversational and commanding capable of spiritual reflection, cultural commentary, and personal testimony without turning any of them into performance. He approaches each subject as a man committed to saying what is necessary, even when it disrupts comfort, complicates public narratives, or exposes his own vulnerabilities.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Athletics and Discipline</h3>
+                    <p>
+                      A multi-sport athlete, Knox brings long-view intention and disciplined rigor to his physical training that mirrors his commitment to the page. For him, athletics is not simply competition; it is a practice of stewardship over body, mind, and focus.
+                    </p>
+                    <p>
+                      The same internal standards that govern his literary craft consistency, resilience, and a refusal to cut corners shape how he moves through weight rooms, fields, and courts. This integration of discipline across arenas allows him to model a form of Black boyhood and manhood where intellect, spirit, and physical strength are not at odds but in conversation.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Leadership, Institutions, and Youth Development</h3>
+                    <p>
+                      As the founder of The TeeShirtTeens and Director of Artists and Athletes For Change (AAFC), Knox does more than create art; he builds structure around young talent. The TeeShirtTeens and AAFC function as serious developmental platforms for youth, helping them convert expression into opportunity and raw vision into documented, transferable work.
+                    </p>
+                    <p>
+                      Under his leadership, these initiatives refuse to treat young creators and athletes as content or spectacle. Instead, they invest in them as whole people, offering pathways, mentorship, and accountability that translate creativity and discipline into something durable and real.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Philosophy and Operating Standard</h3>
+                    <p>
+                      Every arena Knox enters literature, media, leadership, athletics receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass and timelines clear.
+                    </p>
+                    <p>
+                      His philosophy is simple but demanding: truth retains power, presence transforms lives, and Black boys deserve serious literature, serious investment, and the full architecture of legacy. That legacy, in his vision, is not postponed until later life; it is written early, built deliberately, and designed to last.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="font-serif text-2xl text-white">Generational Voice and Legacy</h3>
+                    <p>
+                      Kiminou Knox represents a generation of young Black men who refuse to separate depth from youth or seriousness from early ambition. His work stands at the intersection of art, faith, discipline, and legacy, offering a model of authorship and leadership that is both grounded in elders and unafraid to confront the present.
+                    </p>
+                    <p>
+                      Whether on the page, behind a microphone, on the court, or inside a room full of young creators, Knox moves with the same conviction: to make his life and work mean something beyond the moment, and to ensure that the boys coming after him inherit not just stories, but structures.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-8">
