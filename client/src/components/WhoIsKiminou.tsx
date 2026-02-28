@@ -69,7 +69,7 @@ export default function WhoIsKiminou() {
         <div className="mb-16 flex justify-center">
           <div className="relative w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/kiminou-splash-art.png"
+              src="/kiminou-hero.png"
               alt="Kiminou Knox portrait"
               className="w-full h-[320px] md:h-[420px] object-cover"
               loading="lazy"

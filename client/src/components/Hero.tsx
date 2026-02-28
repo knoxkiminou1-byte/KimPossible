@@ -1,121 +1,158 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+
+const ambientParticles = [
+  { left: "8%", top: "22%", size: 6, delay: 0.2, duration: 13 },
+  { left: "18%", top: "70%", size: 4, delay: 0.8, duration: 11 },
+  { left: "29%", top: "40%", size: 5, delay: 1.4, duration: 14 },
+  { left: "42%", top: "18%", size: 4, delay: 2.1, duration: 12 },
+  { left: "56%", top: "62%", size: 5, delay: 0.5, duration: 15 },
+  { left: "68%", top: "32%", size: 6, delay: 2.7, duration: 10 },
+  { left: "78%", top: "76%", size: 4, delay: 1.9, duration: 12 },
+  { left: "88%", top: "24%", size: 5, delay: 3.1, duration: 14 },
+];
+
+const letterVariants = {
+  hidden: { opacity: 0, y: 32, rotateX: -90 },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: {
+      duration: 0.75,
+      delay: 0.45 + index * 0.045,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
 
 export default function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const scrollToWork = () => {
-    window.location.href = '/books';
+    window.location.href = "/books";
   };
 
   const scrollToContact = () => {
-    window.location.href = '/contact';
+    window.location.href = "/contact";
   };
 
-  useEffect(() => {}, []);
+  const scrollToNext = () => {
+    document.getElementById("who-is-kiminou")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const nameFirst = "KIMINOU";
   const nameLast = "KNOX";
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
-      {/* Cinematic Image Background */}
+    <section
+      id="hero"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      data-testid="hero-section"
+    >
       <div className="hero-media absolute inset-0" aria-hidden="true">
         <img
-          src="/kiminou-hero.png"
+          src="/kiminou-hero-feb-27-2026.png"
           alt=""
           className="hero-image"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="hero-gradient" />
         <div className="hero-vignette" />
+        <div className="hero-soft-glow" />
       </div>
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: Math.random() * 3 + 1,
-              height: Math.random() * 3 + 1,
-              background: `radial-gradient(circle, rgba(255,215,0,${Math.random() * 0.5 + 0.2}), transparent)`,
-            }}
-            initial={{
-              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-              y: typeof window !== 'undefined' ? window.innerHeight + 10 : 800
-            }}
-            animate={{
-              y: -10,
-              opacity: [0, 1, 0.6, 0]
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 8,
-              ease: "linear"
-            }}
-          />
-        ))}
-      </div>
+      {!shouldReduceMotion && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          {ambientParticles.map((particle, index) => (
+            <motion.div
+              key={`${particle.left}-${particle.top}`}
+              className="absolute rounded-full"
+              style={{
+                left: particle.left,
+                top: particle.top,
+                width: particle.size,
+                height: particle.size,
+                background: "radial-gradient(circle, rgba(255,215,140,0.55), transparent 70%)",
+              }}
+              initial={{ opacity: 0.15, y: 0 }}
+              animate={{ opacity: [0.15, 0.5, 0.2], y: [0, -14, -4] }}
+              transition={{
+                duration: particle.duration,
+                delay: particle.delay + index * 0.1,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       <motion.div
         className="absolute inset-0 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 2 }}
+        transition={{ delay: 0.3, duration: 1.2 }}
       >
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute left-[12%] top-[14%] h-72 w-72 rounded-full bg-amber-200/10 blur-3xl" />
+        <div className="absolute bottom-[14%] right-[10%] h-80 w-80 rounded-full bg-slate-100/8 blur-3xl" />
       </motion.div>
 
-      <motion.div 
-        className="relative z-10 text-center text-white px-6 lg:px-8 max-w-4xl mx-auto"
-        style={{ y: contentY, opacity: contentOpacity }}
+      <motion.div
+        className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white lg:px-8"
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
       >
         {isVisible && (
           <>
             <motion.div
-              initial={{ opacity: 0, y: -30, scale: 0.9 }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: -20, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="mb-8"
             >
-              <motion.div
-                className="inline-flex items-center gap-4"
-                initial={{ width: 0 }}
-                animate={{ width: "auto" }}
-                transition={{ duration: 1.2, delay: 0.3 }}
-              >
+              <div className="inline-flex items-center gap-4">
                 <motion.div
                   className="h-px bg-gradient-to-r from-transparent to-amber-300/60"
-                  initial={{ width: 0 }}
+                  initial={shouldReduceMotion ? false : { width: 0 }}
                   animate={{ width: 60 }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                  transition={{ duration: 0.8, delay: 0.35 }}
                 />
-                <span className="text-sm md:text-base uppercase tracking-[0.4em] text-amber-200/90 font-light">
+                <span className="text-sm font-light uppercase tracking-[0.4em] text-amber-100/90 md:text-base">
                   Athlete • Author • Entrepreneur
                 </span>
                 <motion.div
                   className="h-px bg-gradient-to-l from-transparent to-amber-300/60"
-                  initial={{ width: 0 }}
+                  initial={shouldReduceMotion ? false : { width: 0 }}
                   animate={{ width: 60 }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                  transition={{ duration: 0.8, delay: 0.35 }}
                 />
-              </motion.div>
+              </div>
             </motion.div>
 
-            <motion.h1 
-              className="font-serif text-6xl md:text-8xl lg:text-9xl font-light mb-8"
+            <motion.h1
+              className="mb-8 font-serif text-6xl font-light md:text-8xl lg:text-9xl"
               style={{ perspective: 800 }}
               data-testid="hero-title"
             >
-              <span className="block overflow-hidden mb-2">
-                {nameFirst.split("").map((letter, i) => (
+              <span className="mb-2 block overflow-hidden">
+                {nameFirst.split("").map((letter, index) => (
                   <motion.span
-                    key={`first-${i}`}
+                    key={`first-${index}`}
                     className="inline-block"
-                    custom={i}
+                    custom={index}
                     variants={letterVariants}
-                    initial="hidden"
+                    initial={shouldReduceMotion ? false : "hidden"}
                     animate="visible"
                   >
                     {letter}
@@ -123,15 +160,15 @@ export default function Hero() {
                 ))}
               </span>
               <span className="block overflow-hidden">
-                {nameLast.split("").map((letter, i) => (
+                {nameLast.split("").map((letter, index) => (
                   <motion.span
-                    key={`last-${i}`}
-                    className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-200"
-                    custom={i + nameFirst.length}
+                    key={`last-${index}`}
+                    className="inline-block bg-gradient-to-r from-amber-100 via-yellow-300 to-amber-100 bg-clip-text text-transparent"
+                    custom={index + nameFirst.length}
                     variants={letterVariants}
-                    initial="hidden"
+                    initial={shouldReduceMotion ? false : "hidden"}
                     animate="visible"
-                    style={{ backgroundSize: '200% 200%' }}
+                    style={{ backgroundSize: "200% 200%" }}
                   >
                     {letter}
                   </motion.span>
@@ -140,48 +177,49 @@ export default function Hero() {
             </motion.h1>
 
             <motion.div
-              className="w-24 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent mx-auto mb-8"
-              initial={{ scaleX: 0, opacity: 0 }}
+              className="mx-auto mb-8 h-px w-24 bg-gradient-to-r from-transparent via-amber-300 to-transparent"
+              initial={shouldReduceMotion ? false : { scaleX: 0, opacity: 0 }}
               animate={{ scaleX: 1, opacity: 1 }}
-              transition={{ duration: 1.2, delay: 1.4 }}
+              transition={{ duration: 0.8, delay: 1.05 }}
             />
 
-            <motion.p 
-              className="text-lg md:text-xl font-light mb-10 leading-relaxed max-w-3xl mx-auto text-white/90"
-              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            <motion.p
+              className="mx-auto mb-10 max-w-3xl text-lg font-light leading-relaxed text-white/90 md:text-xl"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 24, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1, delay: 1.2 }}
+              transition={{ duration: 0.75, delay: 0.9 }}
               data-testid="hero-intro"
             >
               I am a Bay Area writer and basketball athlete building a legacy through books, sport, and youth leadership.
             </motion.p>
 
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-6 justify-center"
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
+              className="flex flex-col justify-center gap-6 sm:flex-row"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
+              transition={{ duration: 0.7, delay: 1.1 }}
             >
-              <motion.button 
+              <motion.button
                 onClick={scrollToWork}
-                className="group relative luxury-button px-10 py-4 bg-white text-black font-medium uppercase tracking-[0.15em] overflow-hidden"
-                whileHover={{ scale: 1.05, boxShadow: "0 25px 50px rgba(255,255,255,0.25)" }}
-                whileTap={{ scale: 0.97 }}
+                className="group relative overflow-hidden px-10 py-4 font-medium uppercase tracking-[0.15em] text-black"
+                whileHover={shouldReduceMotion ? undefined : { scale: 1.04, boxShadow: "0 25px 50px rgba(255,255,255,0.25)" }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                 data-testid="button-read-work"
               >
+                <span className="absolute inset-0 bg-white" />
                 <motion.span
                   className="absolute inset-0 bg-gradient-to-r from-amber-200 to-amber-400"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: 0 }}
-                  transition={{ duration: 0.4 }}
+                  initial={shouldReduceMotion ? false : { x: "-100%" }}
+                  whileHover={shouldReduceMotion ? undefined : { x: 0 }}
+                  transition={{ duration: 0.35 }}
                 />
                 <span className="relative z-10">Read the Work</span>
               </motion.button>
-              <motion.button 
+              <motion.button
                 onClick={scrollToContact}
-                className="luxury-button px-10 py-4 border-2 border-white/60 text-white font-medium uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm"
-                whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,1)", boxShadow: "0 25px 50px rgba(255,255,255,0.15)" }}
-                whileTap={{ scale: 0.97 }}
+                className="border-2 border-white/60 px-10 py-4 font-medium uppercase tracking-[0.15em] text-white transition-all duration-500 hover:bg-white hover:text-black"
+                whileHover={shouldReduceMotion ? undefined : { scale: 1.04, borderColor: "rgba(255,255,255,1)", boxShadow: "0 25px 50px rgba(255,255,255,0.15)" }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                 data-testid="button-work-with-me"
               >
                 Work With Me
@@ -191,26 +229,28 @@ export default function Hero() {
         )}
       </motion.div>
 
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
-        initial={{ opacity: 0 }}
+      <motion.button
+        type="button"
+        className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 cursor-pointer text-white/60 transition-colors duration-300 hover:text-white"
+        initial={shouldReduceMotion ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
+        transition={{ delay: 1.4 }}
         onClick={scrollToNext}
+        aria-label="Scroll to the next section"
       >
         <motion.div
-          animate={{ y: [0, 12, 0] }}
+          animate={shouldReduceMotion ? undefined : { y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <ChevronDown className="w-8 h-8 text-white/50 hover:text-white transition-colors duration-300" />
+          <ChevronDown className="h-8 w-8" />
         </motion.div>
-      </motion.div>
+      </motion.button>
 
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"
+        className="absolute bottom-0 left-0 right-0 z-10 h-32 bg-gradient-to-t from-background to-transparent"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
       />
     </section>
   );

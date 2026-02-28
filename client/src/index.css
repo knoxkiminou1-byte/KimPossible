@@ -215,8 +215,15 @@
 }
 
 @keyframes heroKenburns {
-  0% { transform: scale(1) translate3d(0, 0, 0); }
-  100% { transform: scale(1.08) translate3d(-2%, -1%, 0); }
+  0% { transform: scale(1.02) translate3d(0, 0.5%, 0); }
+  50% { transform: scale(1.05) translate3d(-0.5%, -1.25%, 0); }
+  100% { transform: scale(1.08) translate3d(-1.5%, -3%, 0); }
+}
+
+@keyframes heroGlowPulse {
+  0% { opacity: 0.4; transform: scale(1) translate3d(0, 0, 0); }
+  50% { opacity: 0.7; transform: scale(1.05) translate3d(0, -1%, 0); }
+  100% { opacity: 0.5; transform: scale(1.08) translate3d(-1%, -2%, 0); }
 }
 
 .animate-marquee {
@@ -253,9 +260,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(120% 70% at 15% 10%, rgba(255, 220, 120, 0.18), transparent 60%),
-    radial-gradient(120% 80% at 80% 0%, rgba(120, 170, 255, 0.14), transparent 62%),
-    linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85));
+    radial-gradient(120% 70% at 15% 10%, rgba(255, 220, 120, 0.14), transparent 58%),
+    radial-gradient(120% 80% at 82% 8%, rgba(120, 170, 255, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(3, 5, 10, 0.28), rgba(3, 5, 10, 0.62) 58%, rgba(3, 5, 10, 0.88));
   pointer-events: none;
 }
 
@@ -264,6 +271,20 @@
   inset: 0;
   background: radial-gradient(120% 120% at 50% 30%, transparent 55%, rgba(0, 0, 0, 0.7) 100%);
   pointer-events: none;
+}
+
+.hero-soft-glow {
+  position: absolute;
+  inset: -8%;
+  background:
+    radial-gradient(36% 30% at 24% 22%, rgba(255, 227, 160, 0.18), transparent 70%),
+    radial-gradient(28% 26% at 76% 28%, rgba(154, 197, 255, 0.14), transparent 72%),
+    radial-gradient(30% 28% at 52% 72%, rgba(255, 255, 255, 0.08), transparent 74%);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: heroGlowPulse 22s ease-in-out infinite alternate;
 }
 
 /* Luxury Logo Animations */
