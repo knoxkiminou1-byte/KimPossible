@@ -193,28 +193,6 @@
       }
     }
 
-    .enter-btn {
-      position: absolute;
-      right: 2rem;
-      bottom: 1.25rem;
-      padding: .6rem 1rem;
-      background: var(--accent);
-      color: var(--bg);
-      border: none;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all .2s ease;
-      text-decoration: none;
-      display: inline-block;
-      z-index: 3;
-    }
-
-    .enter-btn:hover {
-      background: #ffdf33;
-      transform: translateY(-2px);
-    }
-
     .fade-out {
       animation: fadeOut .5s ease-in-out forwards;
     }
@@ -239,11 +217,6 @@
         font-size: .62rem;
       }
 
-      .enter-btn {
-        right: 1rem;
-        bottom: 1rem;
-        padding: .45rem .85rem;
-      }
     }
 
     @media (max-width: 480px) {
@@ -257,12 +230,6 @@
       .caption {
         top: calc(var(--hotspot-top) + 14%);
         letter-spacing: .2em;
-      }
-
-      .enter-btn {
-        right: .85rem;
-        bottom: .85rem;
-        padding: .4rem .72rem;
       }
     }
 
@@ -290,7 +257,6 @@
         <span>Click the orb to enter</span>
       </div>
 
-      <a href="/home" class="enter-btn" id="enterBtn">ENTER</a>
     </div>
   </div>
 
@@ -299,7 +265,6 @@
 
     const splash = document.getElementById('splash');
     const hotspot = document.getElementById('hotspot');
-    const enterBtn = document.getElementById('enterBtn');
 
     function createRipple(event) {
       const rippleHost = event.currentTarget;
@@ -334,10 +299,6 @@
       setTimeout(enterSite, 300);
     });
 
-    enterBtn.addEventListener('click', (event) => {
-      event.preventDefault();
-      enterSite();
-    });
   </script>
 </body>
 </html>

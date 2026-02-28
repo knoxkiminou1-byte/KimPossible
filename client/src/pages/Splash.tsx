@@ -4,7 +4,6 @@ export default function Splash() {
   useEffect(() => {
     const splash = document.getElementById("splash");
     const hotspot = document.getElementById("hotspot");
-    const enterBtn = document.getElementById("enterBtn");
 
     function createRipple(event: MouseEvent) {
       const rippleHost = event.currentTarget as HTMLElement;
@@ -47,17 +46,10 @@ export default function Splash() {
       setTimeout(enterSite, 300);
     };
 
-    const handleEnterButtonClick = (event: Event) => {
-      event.preventDefault();
-      enterSite();
-    };
-
     hotspot?.addEventListener("click", handleHotspotClick);
-    enterBtn?.addEventListener("click", handleEnterButtonClick);
 
     return () => {
       hotspot?.removeEventListener("click", handleHotspotClick);
-      enterBtn?.removeEventListener("click", handleEnterButtonClick);
     };
   }, []);
 
@@ -203,32 +195,6 @@ export default function Splash() {
           }
         }
 
-        .enter-btn {
-          position: absolute;
-          right: 1.5rem;
-          bottom: 1.5rem;
-          padding: .6rem 1rem;
-          background: var(--accent);
-          color: var(--bg);
-          border: none;
-          border-radius: 999px;
-          font-weight: 700;
-          cursor: pointer;
-          transition: all .2s ease;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 0.9rem;
-          letter-spacing: 0.05em;
-          box-shadow: 0 4px 15px rgba(255,212,0,.4);
-          z-index: 10;
-        }
-
-        .enter-btn:hover {
-          background: #ffdf33;
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255,212,0,.6);
-        }
-
         .orb-label {
           position: absolute;
           left: var(--hotspot-left);
@@ -264,13 +230,6 @@ export default function Splash() {
             --hotspot-height: 24%;
           }
 
-          .enter-btn {
-            right: 1rem;
-            bottom: 1rem;
-            padding: .45rem .85rem;
-            font-size: 0.8rem;
-          }
-
           .hotspot {
             border-width: 1px;
           }
@@ -287,13 +246,6 @@ export default function Splash() {
             --hotspot-top: 64%;
             --hotspot-width: 22%;
             --hotspot-height: 26%;
-          }
-
-          .enter-btn {
-            right: 0.85rem;
-            bottom: 0.85rem;
-            padding: .4rem .72rem;
-            font-size: 0.75rem;
           }
 
           .orb-label {
@@ -322,8 +274,6 @@ export default function Splash() {
             <span className="sr-only">Click to Enter</span>
           </button>
           <div className="orb-label">Click the Orb</div>
-
-          <button className="enter-btn" id="enterBtn">ENTER</button>
         </div>
       </div>
     </>
