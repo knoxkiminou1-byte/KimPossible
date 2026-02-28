@@ -56,12 +56,12 @@ export default function WelcomeVideoOverlay() {
                   aria-hidden="true"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/38 to-black/72" aria-hidden="true" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_71%_60%,rgba(255,212,0,0.18),transparent_12%),radial-gradient(circle_at_18%_18%,rgba(251,191,36,0.08),transparent_28%)]" aria-hidden="true" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_42%_60%,rgba(255,212,0,0.18),transparent_12%),radial-gradient(circle_at_18%_18%,rgba(251,191,36,0.08),transparent_28%)]" aria-hidden="true" />
 
                 <motion.button
                   type="button"
                   onClick={startIntro}
-                  className="absolute left-[71%] top-[60%] z-10 h-[14vh] min-h-[88px] w-[14vh] min-w-[88px] -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full border border-amber-200/50 bg-amber-200/10 shadow-[0_0_28px_rgba(255,212,0,0.35)] backdrop-blur-[2px] transition hover:bg-amber-200/16 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-100/90 md:h-[12vw] md:min-h-[110px] md:w-[12vw] md:min-w-[110px]"
+                  className="absolute left-[42%] top-[60%] z-10 h-[16vh] min-h-[104px] w-[16vh] min-w-[104px] -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full border border-amber-200/50 bg-amber-200/10 shadow-[0_0_34px_rgba(255,212,0,0.38)] backdrop-blur-[2px] transition hover:bg-amber-200/16 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-100/90 md:h-[14vw] md:min-h-[128px] md:w-[14vw] md:min-w-[128px]"
                   initial={{ opacity: 0, scale: 0.88 }}
                   animate={{ opacity: 1, scale: [1, 1.035, 1] }}
                   transition={{
@@ -74,7 +74,7 @@ export default function WelcomeVideoOverlay() {
                 </motion.button>
 
                 <motion.div
-                  className="pointer-events-none absolute left-[71%] top-[60%] h-[18vh] min-h-[112px] w-[18vh] min-w-[112px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-200/20"
+                  className="pointer-events-none absolute left-[42%] top-[60%] h-[22vh] min-h-[132px] w-[22vh] min-w-[132px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-200/20"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: [0.18, 0.34, 0.18], scale: [0.94, 1.06, 0.94] }}
                   transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
