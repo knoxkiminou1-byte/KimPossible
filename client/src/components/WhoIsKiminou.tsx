@@ -66,6 +66,19 @@ export default function WhoIsKiminou() {
           </p>
         </div>
 
+        <div className="mb-16 flex justify-center">
+          <div className="relative w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
+            <img
+              src="/kiminou-splash-art.png"
+              alt="Kiminou Knox portrait"
+              className="w-full h-[320px] md:h-[420px] object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {identity.map((item) => {
             const cardRef = useScrollAnimation();

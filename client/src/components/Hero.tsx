@@ -1,31 +1,6 @@
-import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 80, rotateX: -90 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    rotateX: 0,
-    transition: {
-      duration: 0.8,
-      delay: 0.6 + i * 0.06,
-      ease: [0.215, 0.61, 0.355, 1],
-    },
-  }),
-};
+import { useEffect } from "react";
 
 export default function Hero() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const { scrollY } = useScroll();
-  const bgY = useTransform(scrollY, [0, 800], [0, 200]);
-  const bgScale = useTransform(scrollY, [0, 800], [1, 1.15]);
-  const overlayOpacity = useTransform(scrollY, [0, 600], [0.3, 0.85]);
-  const contentY = useTransform(scrollY, [0, 600], [0, -80]);
-  const contentOpacity = useTransform(scrollY, [0, 400], [1, 0]);
-
   const scrollToWork = () => {
     window.location.href = '/books';
   };
@@ -34,53 +9,25 @@ export default function Hero() {
     window.location.href = '/contact';
   };
 
-  const scrollToNext = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    });
-  };
-
-  useEffect(() => {
-    setIsVisible(true);
-    const img = new Image();
-    img.src = '/kiminou-splash-art.png';
-    img.onload = () => setImageLoaded(true);
-    img.onerror = () => setImageLoaded(true);
-  }, []);
+  useEffect(() => {}, []);
 
   const nameFirst = "KIMINOU";
   const nameLast = "KNOX";
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
-      {!imageLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
-          <motion.div 
-            className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          />
-        </div>
-      )}
-
-      <motion.div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: "url('/kiminou-splash-art.png')", y: bgY, scale: bgScale }}
-        initial={{ opacity: 0, scale: 1.2 }}
-        animate={{ 
-          opacity: imageLoaded ? 1 : 0,
-          scale: imageLoaded ? 1 : 1.2
-        }}
-        transition={{ duration: 2, ease: [0.25, 0.46, 0.45, 0.94] }}
-        data-testid="hero-background"
-      />
-
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" 
-        style={{ opacity: overlayOpacity }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+      {/* Cinematic Image Background */}
+      <div className="hero-media absolute inset-0" aria-hidden="true">
+        <img
+          src="/kiminou-hero.png"
+          alt=""
+          className="hero-image"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="hero-gradient" />
+        <div className="hero-vignette" />
+      </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (

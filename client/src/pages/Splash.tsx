@@ -102,6 +102,28 @@ export default function Splash() {
           background: #111;
           animation: rise .7s cubic-bezier(.2,.9,.2,1) both;
         }
+
+        .splash::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(120% 80% at 20% 20%, rgba(255, 214, 94, 0.18), transparent 55%),
+            radial-gradient(100% 70% at 80% 0%, rgba(90, 185, 255, 0.12), transparent 60%),
+            linear-gradient(180deg, rgba(8, 10, 14, 0.15), rgba(8, 10, 14, 0.45) 55%, rgba(8, 10, 14, 0.75));
+          z-index: 1;
+          pointer-events: none;
+          animation: glowShift 16s ease-in-out infinite alternate;
+        }
+
+        .splash::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(120% 120% at 50% 30%, transparent 55%, rgba(0, 0, 0, 0.65) 100%);
+          z-index: 2;
+          pointer-events: none;
+        }
         
         @keyframes rise { 
           from { 
@@ -122,8 +144,22 @@ export default function Splash() {
           object-fit: cover;
           object-position: center;
           filter: saturate(1.15) contrast(1.05);
+          transform-origin: center;
+          will-change: transform;
+          animation: kenburns 28s ease-in-out infinite alternate;
           user-select: none;
           -webkit-user-drag: none;
+          z-index: 0;
+        }
+
+        @keyframes kenburns {
+          0% { transform: scale(1) translate3d(0, 0, 0); }
+          100% { transform: scale(1.08) translate3d(-2%, -1%, 0); }
+        }
+
+        @keyframes glowShift {
+          0% { opacity: 0.7; transform: translate3d(0, 0, 0); }
+          100% { opacity: 1; transform: translate3d(0, -1.5%, 0); }
         }
 
 
@@ -141,6 +177,7 @@ export default function Splash() {
           backdrop-filter: blur(2px);
           transition: all .25s ease;
           animation: glow 2s ease-in-out infinite alternate;
+          z-index: 3;
         }
         
         .hotspot:hover {
@@ -235,12 +272,19 @@ export default function Splash() {
             transform: scale(0.95);
           }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .art,
+          .splash::before {
+            animation: none;
+          }
+        }
       `}} />
       
       <div className="splash-page">
         <div className="splash" id="splash">
           <img 
-            src="/kiminou-hand-interactive.png" 
+            src="/kiminou-hero.png" 
             alt="Kiminou Knox - Click to Enter" 
             className="art"
           />
