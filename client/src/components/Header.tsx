@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/books", label: "Books" },
-  { href: "/basketball", label: "Basketball" },
-  { href: "/speaking", label: "Speaking" },
   { href: "/author", label: "Bio" },
   { href: "/contact", label: "Contact" }
 ];

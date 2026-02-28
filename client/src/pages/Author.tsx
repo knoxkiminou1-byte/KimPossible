@@ -27,15 +27,15 @@ const beyondCards = [
   {
     title: "Athlete",
     description: "Varsity level forward and student of film and footwork, building a game that matches the ambition on the page.",
-    link: "/basketball",
-    linkText: "View athletic profile",
+    link: "/contact",
+    linkText: "Ask about athletics",
     icon: Trophy
   },
   {
     title: "Speaker",
     description: "Talks on discipline, Black boy voice, and creative work that lasts, crafted for schools, youth groups, and faith spaces.",
-    link: "/speaking",
-    linkText: "Learn about speaking",
+    link: "/contact",
+    linkText: "Book an inquiry",
     icon: Mic
   },
   {
