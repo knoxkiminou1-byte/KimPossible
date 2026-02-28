@@ -18,8 +18,8 @@ const identity = [
     label: "Athlete",
     title: "6'7\" Multi Sport Leader",
     description: "Varsity basketball captain and multi sport athlete combining physical excellence with leadership on and off the court.",
-    link: "/author",
-    cta: "View Bio"
+    link: "/sports",
+    cta: "View Athletics"
   },
   {
     id: "speaker",
@@ -27,8 +27,8 @@ const identity = [
     label: "Speaker",
     title: "Youth Voice Advocate",
     description: "Award winning speaker addressing craft, discipline, and community impact through authentic storytelling and service.",
-    link: "/contact",
-    cta: "Contact"
+    link: "/speaking",
+    cta: "Book Speaking"
   },
   {
     id: "brand",
