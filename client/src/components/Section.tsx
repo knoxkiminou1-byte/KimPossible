@@ -25,9 +25,21 @@ export default function Section({
   imageLeft,
   background
 }: SectionProps) {
-  const sectionRef = useScrollAnimation();
-  const contentRef = useScrollAnimation();
-  const imageRef = useScrollAnimation();
+  const sectionRef = useScrollAnimation<HTMLElement>({ distance: 30, threshold: 0.12, direction: "up" });
+  const contentRef = useScrollAnimation({
+    delay: 140,
+    distance: 44,
+    threshold: 0.08,
+    direction: imageLeft ? "left" : "right",
+    scaleFrom: 0.975,
+  });
+  const imageRef = useScrollAnimation({
+    delay: 50,
+    distance: 38,
+    threshold: 0.08,
+    direction: imageLeft ? "right" : "left",
+    scaleFrom: 0.98,
+  });
 
   const handlePrimaryClick = () => {
     switch (primaryButton) {
@@ -68,7 +80,7 @@ export default function Section({
   };
 
   return (
-    <section id={id} className={`py-32 ${background}`} data-testid={`section-${id}`}>
+    <section id={id} ref={sectionRef} className={`py-32 ${background} animate-on-scroll`} data-testid={`section-${id}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className={`${imageLeft ? 'order-2 lg:order-1' : ''} animate-on-scroll`} ref={imageRef}>
