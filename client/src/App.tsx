@@ -3,7 +3,13 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import Splash from "@/pages/Splash";
 import Home from "@/pages/home";
 import About from "@/pages/About";
@@ -23,6 +29,24 @@ import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
 
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 150,
+    damping: 28,
+    restDelta: 0.0005,
+  });
+  const opacity = useTransform(scrollYProgress, [0, 0.015, 0.03], [0, 0.65, 1]);
+
+  return (
+    <motion.div
+      className="scroll-progress"
+      style={{ scaleX, opacity }}
+      aria-hidden="true"
+    />
+  );
+}
+
 function Router() {
   const [location] = useLocation();
 
@@ -31,11 +55,18 @@ function Router() {
       <motion.div
         key={location}
         className="page-transition-shell"
-        initial={{ opacity: 0, y: 24, filter: "blur(10px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        exit={{ opacity: 0, y: -16, filter: "blur(8px)" }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        initial={{ opacity: 0, y: 28, scale: 0.995, filter: "blur(12px)" }}
+        animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+        exit={{ opacity: 0, y: -20, scale: 0.995, filter: "blur(10px)" }}
+        transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
       >
+        <motion.div
+          className="route-transition-veil"
+          initial={{ opacity: 0.24, scaleX: 1 }}
+          animate={{ opacity: 0, scaleX: 1.04 }}
+          exit={{ opacity: 0.18, scaleX: 1.01 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        />
         <Switch location={location}>
           <Route path="/" component={Home} />
           <Route path="/splash" component={Splash} />
@@ -76,6 +107,7 @@ function App() {
         <WelcomeVideoOverlay />
         <LuxuryCursor />
         <div className="grain"></div>
+        <ScrollProgress />
         <Toaster />
         <Router />
       </TooltipProvider>

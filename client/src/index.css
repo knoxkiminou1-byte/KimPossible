@@ -134,12 +134,12 @@
 @layer components {
   .animate-on-scroll {
     opacity: 0;
-    transform: translate3d(0, var(--reveal-distance, 36px), 0) scale(0.985);
-    filter: blur(6px);
+    transform: translate3d(var(--reveal-x, 0px), var(--reveal-y, 36px), 0) scale(var(--reveal-scale, 0.985));
+    filter: blur(8px);
     transition:
-      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
-      filter 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     transition-delay: var(--reveal-delay, 0ms);
     will-change: opacity, transform, filter;
   }
@@ -207,9 +207,33 @@
 }
 
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform-origin: 0% 50%;
+  z-index: 80;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(245, 158, 11, 0.95) 45%, rgba(236, 72, 153, 0.92) 100%);
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.28);
+  pointer-events: none;
+}
+
 .page-transition-shell {
   min-height: 100vh;
   isolation: isolate;
+}
+
+.route-transition-veil {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(35% 24% at 18% 16%, rgba(255, 255, 255, 0.18), transparent 72%),
+    radial-gradient(32% 24% at 82% 12%, rgba(251, 191, 36, 0.18), transparent 74%);
 }
 
 .page-transition-shell::before {
@@ -222,7 +246,7 @@
     radial-gradient(58% 46% at 15% 18%, rgba(120, 119, 198, 0.11), transparent 62%),
     radial-gradient(48% 42% at 86% 8%, rgba(255, 183, 77, 0.1), transparent 64%);
   opacity: 0.8;
-  animation: ambientShift 16s ease-in-out infinite alternate;
+  animation: ambientShift 14s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }
 
 @keyframes marquee {
@@ -394,8 +418,13 @@
   .poem-of-day-glow,
   .section-backdrop-image,
   .section-backdrop-glow,
-  .page-transition-shell::before {
+  .page-transition-shell::before,
+  .route-transition-veil {
     animation: none;
+  }
+
+  .scroll-progress {
+    display: none;
   }
 
   .animate-on-scroll {
@@ -439,9 +468,11 @@
 
 /* Luxury Card Effects */
 .luxury-card {
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.65s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .luxury-card::before {
@@ -460,15 +491,16 @@
 }
 
 .luxury-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  transform: perspective(1200px) translateY(-12px) rotateX(1.2deg) rotateY(-1.2deg) scale(1.01);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(251, 191, 36, 0.2);
 }
 
 /* Enhanced Button Styles */
 .luxury-button {
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  isolation: isolate;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease;
 }
 
 .luxury-button::after {
@@ -485,8 +517,13 @@
 }
 
 .luxury-button:hover::after {
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
+}
+
+.luxury-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
 }
 
 /* Timeline Animations */

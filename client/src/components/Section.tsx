@@ -25,9 +25,21 @@ export default function Section({
   imageLeft,
   background
 }: SectionProps) {
-  const sectionRef = useScrollAnimation<HTMLElement>({ distance: 28, threshold: 0.12 });
-  const contentRef = useScrollAnimation({ delay: 120, distance: 34, threshold: 0.1 });
-  const imageRef = useScrollAnimation({ delay: 40, distance: 28, threshold: 0.1 });
+  const sectionRef = useScrollAnimation<HTMLElement>({ distance: 30, threshold: 0.12, direction: "up" });
+  const contentRef = useScrollAnimation({
+    delay: 140,
+    distance: 44,
+    threshold: 0.08,
+    direction: imageLeft ? "left" : "right",
+    scaleFrom: 0.975,
+  });
+  const imageRef = useScrollAnimation({
+    delay: 50,
+    distance: 38,
+    threshold: 0.08,
+    direction: imageLeft ? "right" : "left",
+    scaleFrom: 0.98,
+  });
 
   const handlePrimaryClick = () => {
     switch (primaryButton) {
