@@ -179,6 +179,41 @@
     flex-shrink: 0;
   }
 
+
+  .page-transition-shell {
+    min-height: 100dvh;
+  }
+
+  .page-transition-shell section,
+  .page-transition-shell article,
+  .page-transition-shell [data-testid^="section-"] {
+    animation: subtleEntrance 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .page-transition-shell .luxury-card,
+  .page-transition-shell .card,
+  .page-transition-shell [class*="shadow"] {
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .page-transition-shell .luxury-card:hover,
+  .page-transition-shell .card:hover,
+  .page-transition-shell [class*="shadow"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 40px -26px rgba(15, 23, 42, 0.42);
+  }
+
+  .page-transition-shell button,
+  .page-transition-shell a {
+    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), filter 0.32s ease, opacity 0.32s ease;
+  }
+
+  .page-transition-shell button:hover,
+  .page-transition-shell a:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.06);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .hero-video {
       display: none !important;
@@ -548,4 +583,9 @@
   opacity: .04; 
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: overlay; 
+}
+
+@keyframes subtleEntrance {
+  0% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect } from "wouter";
+import { Switch, Route, Redirect, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -21,46 +21,64 @@ import Author from "@/pages/Author";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
+import PageTransition from "@/components/PageTransition";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { useMemo } from "react";
 
 function Router() {
+  const [location] = useLocation();
+
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/splash" component={Splash} />
-      <Route path="/home">
-        <Redirect to="/" />
-      </Route>
-      <Route path="/about" component={About} />
-      <Route path="/works" component={Works} />
-      <Route path="/speaking" component={Speaking} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/press-kit">
-        <Redirect to="/contact" />
-      </Route>
-      <Route path="/presskit">
-        <Redirect to="/contact" />
-      </Route>
-      <Route path="/press" component={Press} />
-      <Route path="/sports" component={Sports} />
-      <Route path="/basketball" component={Sports} />
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/books" component={Books} />
-      <Route path="/books/:id" component={BookDetail} />
-      <Route path="/author" component={Author} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/admin/blog" component={BlogAdmin} />
-      <Route component={NotFound} />
-    </Switch>
+    <AnimatePresence mode="wait" initial={false}>
+      <PageTransition pathKey={location}>
+        <Switch key={location}>
+          <Route path="/" component={Home} />
+          <Route path="/splash" component={Splash} />
+          <Route path="/home">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/about" component={About} />
+          <Route path="/works" component={Works} />
+          <Route path="/speaking" component={Speaking} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/press-kit">
+            <Redirect to="/contact" />
+          </Route>
+          <Route path="/presskit">
+            <Redirect to="/contact" />
+          </Route>
+          <Route path="/press" component={Press} />
+          <Route path="/sports" component={Sports} />
+          <Route path="/basketball" component={Sports} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/books" component={Books} />
+          <Route path="/books/:id" component={BookDetail} />
+          <Route path="/author" component={Author} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/admin/blog" component={BlogAdmin} />
+          <Route component={NotFound} />
+        </Switch>
+      </PageTransition>
+    </AnimatePresence>
   );
 }
 
 function App() {
+  const { scrollYProgress } = useScroll();
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 120, damping: 24, mass: 0.2 });
+  const progressGradient = useMemo(() => "linear-gradient(90deg, rgba(139,92,246,0.95), rgba(6,182,212,0.95), rgba(236,72,153,0.95))", []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WelcomeVideoOverlay />
         <LuxuryCursor />
+        <motion.div
+          aria-hidden="true"
+          className="fixed left-0 top-0 z-[120] h-[3px] w-full origin-left"
+          style={{ scaleX: smoothProgress, background: progressGradient }}
+        />
         <div className="grain"></div>
         <Toaster />
         <Router />
