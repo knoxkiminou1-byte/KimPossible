@@ -1,4 +1,5 @@
-import { Switch, Route, Redirect } from "wouter";
+import { Switch, Route, Redirect, useLocation } from "wouter";
+import { AnimatePresence, motion } from "framer-motion";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -22,36 +23,73 @@ import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
 
+const pageTransition = {
+  initial: { opacity: 0, y: 24, scale: 0.99, filter: "blur(10px)" },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 0.995,
+    filter: "blur(8px)",
+    transition: {
+      duration: 0.45,
+      ease: [0.4, 0, 1, 1],
+    },
+  },
+};
+
 function Router() {
+  const [location] = useLocation();
+
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/splash" component={Splash} />
-      <Route path="/home">
-        <Redirect to="/" />
-      </Route>
-      <Route path="/about" component={About} />
-      <Route path="/works" component={Works} />
-      <Route path="/speaking" component={Speaking} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/press-kit">
-        <Redirect to="/contact" />
-      </Route>
-      <Route path="/presskit">
-        <Redirect to="/contact" />
-      </Route>
-      <Route path="/press" component={Press} />
-      <Route path="/sports" component={Sports} />
-      <Route path="/basketball" component={Sports} />
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/books" component={Books} />
-      <Route path="/books/:id" component={BookDetail} />
-      <Route path="/author" component={Author} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/admin/blog" component={BlogAdmin} />
-      <Route component={NotFound} />
-    </Switch>
+    <AnimatePresence mode="wait">
+      <motion.main
+        key={location}
+        variants={pageTransition}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="page-transition-shell"
+      >
+        <Switch location={location}>
+          <Route path="/" component={Home} />
+          <Route path="/splash" component={Splash} />
+          <Route path="/home">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/about" component={About} />
+          <Route path="/works" component={Works} />
+          <Route path="/speaking" component={Speaking} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/press-kit">
+            <Redirect to="/contact" />
+          </Route>
+          <Route path="/presskit">
+            <Redirect to="/contact" />
+          </Route>
+          <Route path="/press" component={Press} />
+          <Route path="/sports" component={Sports} />
+          <Route path="/basketball" component={Sports} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/books" component={Books} />
+          <Route path="/books/:id" component={BookDetail} />
+          <Route path="/author" component={Author} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/admin/blog" component={BlogAdmin} />
+          <Route component={NotFound} />
+        </Switch>
+      </motion.main>
+    </AnimatePresence>
   );
 }
 
