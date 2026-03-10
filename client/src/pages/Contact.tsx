@@ -4,55 +4,45 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
-
   return (
     <>
       <Helmet>
         <title>Contact - Kiminou Knox</title>
-        <meta name="description" content="Get in touch with Kiminou Knox for speaking engagements media inquiries or collaboration opportunities." />
+        <meta
+          name="description"
+          content="Contact Kiminou Knox for speaking engagements, media, partnerships, and collaborative opportunities."
+        />
         <link rel="canonical" href="https://kiminouknox.com/contact" />
-        
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Contact - Kiminou Knox" />
-        <meta property="og:description" content="Get in touch for speaking engagements and collaborations" />
-        <meta property="og:url" content="https://kiminouknox.com/contact" />
-        <meta property="og:image" content="https://kiminouknox.com/og/contact.jpg" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact - Kiminou Knox" />
-        <meta name="twitter:description" content="Get in touch" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/contact.jpg" />
       </Helmet>
 
       <Header />
 
-      <main 
-        className="min-h-screen bg-black pt-40 pb-20 relative"
-        style={{
-          backgroundImage: 'url(/aafc-logo.png)',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="mb-12">
-            <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-white" data-testid="contact-heading">
-              Contact
+      <main className="relative min-h-screen overflow-hidden pb-20 pt-40 text-white">
+        <div className="section-backdrop" aria-hidden="true">
+          <img src="/speaking-bg-feb-27-2026.png" alt="" className="section-backdrop-image" loading="lazy" decoding="async" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/62 via-black/82 to-black/92" />
+          <div className="section-backdrop-vignette" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="mb-10 max-w-3xl">
+            <p className="luxury-kicker mb-4">Contact</p>
+            <h1 className="luxury-heading mb-5 font-serif text-5xl font-light md:text-6xl" data-testid="contact-heading">
+              Start The Conversation
             </h1>
-            <p className="text-lg text-gray-300">
-              Reach out for speaking engagements, media inquiries, or collaboration opportunities. Select your inquiry type below and we'll get back to you as soon as possible.
+            <p className="luxury-body text-base md:text-lg">
+              For speaking, media, partnerships, and serious collaboration requests.
             </p>
           </div>
 
-          <ContactForm
-            title="Send a Message"
-            description=""
-            defaultInquiryType="other"
-            successMessage="Thank you for reaching out. I will get back to you soon."
-          />
+          <div className="luxury-surface rounded-3xl p-7 md:p-10">
+            <ContactForm
+              title="Send a Message"
+              description="Share context, goals, and timing."
+              defaultInquiryType="other"
+              successMessage="Thank you for reaching out. I will get back to you soon."
+            />
+          </div>
         </div>
       </main>
 

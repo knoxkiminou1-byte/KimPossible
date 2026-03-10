@@ -1,259 +1,119 @@
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
 import { ExternalLink, Trophy, TrendingUp, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function Sports() {
+const measurables = [
+  { label: "Height", value: "6'7\"", source: "NCSA", icon: TrendingUp },
+  { label: "Weight", value: "235 lbs", source: "NCSA", icon: Target },
+  { label: "Position", value: "Forward / Center", source: "MaxPreps", icon: Trophy },
+];
 
+const profiles = [
+  {
+    title: "NCSA College Recruiting",
+    href: "https://www.ncsasports.org",
+    description: "Complete recruiting profile with measurements and recruitment data.",
+  },
+  {
+    title: "MaxPreps",
+    href: "https://www.maxpreps.com",
+    description: "High school performance and team record context.",
+  },
+  {
+    title: "247Sports",
+    href: "https://247sports.com",
+    description: "Rankings, recruiting coverage, and athlete news references.",
+  },
+];
+
+const highlights = [
+  "Varsity Captain - Ygnacio Valley High School",
+  "Redwood Christian MVP",
+  "Pine Valley MVP",
+  "CaliHoop Top Team Player Selection",
+  "NCAA Eligibility Registered",
+];
+
+export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Sports & Athletics - Kiminou Knox</title>
-        <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats and profiles on NCSA, MaxPreps, and 247Sports." />
+        <title>Athletics - Kiminou Knox</title>
+        <meta
+          name="description"
+          content="Athletics profile, verified measurables, recruiting references, and competitive highlights for Kiminou Knox."
+        />
         <link rel="canonical" href="https://kiminouknox.com/sports" />
-        
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Sports & Athletics - Kiminou Knox" />
-        <meta property="og:description" content="Athletic profile, statistics, and achievements" />
-        <meta property="og:url" content="https://kiminouknox.com/sports" />
-        <meta property="og:image" content="https://kiminouknox.com/og/sports.jpg" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sports & Athletics - Kiminou Knox" />
-        <meta name="twitter:description" content="Athletic profile and statistics" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/sports.jpg" />
       </Helmet>
 
       <Header />
 
-      <section className="relative min-h-screen overflow-hidden pt-36 pb-20 text-white">
+      <main className="relative min-h-screen overflow-hidden pb-20 pt-40 text-white">
         <div className="section-backdrop" aria-hidden="true">
-          <img
-            src="/basketball-bg-feb-27-2026.png"
-            alt=""
-            className="section-backdrop-image"
-            loading="eager"
-            decoding="async"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/52 via-black/68 to-black/84" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(251,191,36,0.14),transparent_36%),radial-gradient(circle_at_78%_16%,rgba(245,158,11,0.08),transparent_28%)]" />
+          <img src="/basketball-bg-feb-27-2026.png" alt="" className="section-backdrop-image" loading="eager" decoding="async" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/58 via-black/80 to-black/92" />
           <div className="section-backdrop-vignette" />
           <div className="section-backdrop-glow" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-20"
-          >
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-amber-200/85">
-              Athletic Profile
-            </p>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-              Sports & Athletics
+        <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8">
+          <section className="mb-14 max-w-3xl">
+            <p className="luxury-kicker mb-4">Athletics</p>
+            <h1 className="luxury-heading mb-6 font-serif text-5xl font-light md:text-6xl" data-testid="sports-heading">
+              Competitive Profile
             </h1>
-            <p className="mx-auto max-w-3xl text-xl text-white/78">
-              Multi-sport athlete with varsity experience and NCAA eligibility
+            <p className="luxury-body text-base md:text-xl">
+              Verified athlete metrics, leadership highlights, and recruiting-facing references.
             </p>
-          </motion.div>
+          </section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8 text-center">
-              Physical Measurables
-            </h2>
+          <section className="mb-12 grid gap-5 md:grid-cols-3">
+            {measurables.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article key={item.label} className="luxury-surface rounded-2xl p-7 text-center">
+                  <Icon className="mx-auto mb-3 h-9 w-9 text-amber-200" />
+                  <p className="mb-2 text-[0.65rem] uppercase tracking-[0.26em] text-amber-100/70">{item.label}</p>
+                  <p className="mb-2 text-3xl font-semibold text-amber-50">{item.value}</p>
+                  <p className="text-xs text-amber-100/65">Source: {item.source}</p>
+                </article>
+              );
+            })}
+          </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 text-center">
-                <TrendingUp className="w-12 h-12 text-amber-200 mx-auto mb-4" />
-                <p className="mb-2 text-sm uppercase tracking-wider text-white/60">Height</p>
-                <p className="text-3xl font-bold mb-2">6 feet 7 inches</p>
-                <p className="text-xs text-white/55">
-                  Source: <a href="https://www.ncsasports.org" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">NCSA</a>
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 text-center">
-                <Target className="w-12 h-12 text-amber-200 mx-auto mb-4" />
-                <p className="mb-2 text-sm uppercase tracking-wider text-white/60">Weight</p>
-                <p className="text-4xl font-bold mb-2">235 lbs</p>
-                <p className="text-xs text-white/55">
-                  Source: <a href="https://www.ncsasports.org" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">NCSA</a>
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 text-center">
-                <Trophy className="w-12 h-12 text-amber-200 mx-auto mb-4" />
-                <p className="mb-2 text-sm uppercase tracking-wider text-white/60">Position</p>
-                <p className="text-2xl font-bold mb-2">Forward/Center</p>
-                <p className="text-xs text-white/55">
-                  Source: <a href="https://www.maxpreps.com" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">MaxPreps</a>
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8 text-center">
-              Verified Profiles
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <section className="mb-12 grid gap-5 md:grid-cols-3">
+            {profiles.map((profile) => (
               <a
-                href="https://www.ncsasports.org"
+                key={profile.title}
+                href={profile.href}
                 target="_blank"
                 rel="noopener noreferrer external"
-                className="group rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 transition-all hover:bg-black/55 hover:shadow-lg"
-                data-testid="link-profile-ncsa"
+                className="luxury-surface group rounded-2xl p-7 transition hover:border-amber-200/28"
+                data-testid={`link-profile-${profile.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-full bg-amber-200/10 flex items-center justify-center">
-                    <Trophy className="w-6 h-6 text-amber-200" />
-                  </div>
-                  <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-amber-200 transition-colors" />
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="text-sm uppercase tracking-[0.2em] text-amber-100/65">Verified Profile</p>
+                  <ExternalLink className="h-4 w-4 text-amber-100/70 transition group-hover:text-amber-50" />
                 </div>
-                <h3 className="font-semibold text-xl mb-2">NCSA College Recruiting</h3>
-                <p className="mb-4 text-white/72">
-                  Complete athletic profile with stats, measurements, and recruiting information
-                </p>
-                <div className="inline-flex items-center gap-2 font-semibold text-amber-200">
-                  View Profile
-                  <ExternalLink className="w-4 h-4" />
-                </div>
+                <h2 className="mb-3 font-serif text-2xl text-amber-50">{profile.title}</h2>
+                <p className="luxury-body text-sm">{profile.description}</p>
               </a>
+            ))}
+          </section>
 
-              <a
-                href="https://www.maxpreps.com"
-                target="_blank"
-                rel="noopener noreferrer external"
-                className="group rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 transition-all hover:bg-black/55 hover:shadow-lg"
-                data-testid="link-profile-maxpreps"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-full bg-amber-200/10 flex items-center justify-center">
-                    <TrendingUp className="w-6 h-6 text-amber-200" />
-                  </div>
-                  <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-amber-200 transition-colors" />
+          <section className="luxury-surface rounded-2xl p-7 md:p-9">
+            <h2 className="mb-5 font-serif text-3xl text-amber-50">Career Highlights</h2>
+            <div className="grid gap-3">
+              {highlights.map((item) => (
+                <div key={item} className="rounded-xl border border-amber-100/12 bg-black/25 px-4 py-3 text-amber-50/88">
+                  {item}
                 </div>
-                <h3 className="font-semibold text-xl mb-2">MaxPreps</h3>
-                <p className="mb-4 text-white/72">
-                  High school basketball statistics and team performance data
-                </p>
-                <div className="inline-flex items-center gap-2 font-semibold text-amber-200">
-                  View Profile
-                  <ExternalLink className="w-4 h-4" />
-                </div>
-              </a>
-
-              <a
-                href="https://247sports.com"
-                target="_blank"
-                rel="noopener noreferrer external"
-                className="group rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 transition-all hover:bg-black/55 hover:shadow-lg"
-                data-testid="link-profile-247sports"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-full bg-amber-200/10 flex items-center justify-center">
-                    <Target className="w-6 h-6 text-amber-200" />
-                  </div>
-                  <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-amber-200 transition-colors" />
-                </div>
-                <h3 className="font-semibold text-xl mb-2">247Sports</h3>
-                <p className="mb-4 text-white/72">
-                  Rankings, news, and recruiting analysis for high school athletes
-                </p>
-                <div className="inline-flex items-center gap-2 font-semibold text-amber-200">
-                  View Profile
-                  <ExternalLink className="w-4 h-4" />
-                </div>
-              </a>
+              ))}
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8 text-center">
-              Career Highlights
-            </h2>
-
-            <div className="max-w-3xl mx-auto space-y-4">
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Varsity Captain - Ygnacio Valley High School</h3>
-                    <p className="text-white/72">
-                      Led team as captain, demonstrating leadership and athletic excellence
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Redwood Christian MVP</h3>
-                    <p className="text-white/72">
-                      Most Valuable Player recognition for outstanding performance
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Pine Valley MVP</h3>
-                    <p className="text-white/72">
-                      Recognized as Most Valuable Player at Pine Valley
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">CaliHoop Top Team Player Selection</h3>
-                    <p className="text-white/72">
-                      Selected for elite team recognition by CaliHoop
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">NCAA Eligibility</h3>
-                    <p className="text-white/72">
-                      Registered with NCAA eligibility for collegiate athletics
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          </section>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </>

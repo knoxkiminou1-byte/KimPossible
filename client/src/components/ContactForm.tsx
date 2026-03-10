@@ -5,22 +5,8 @@ import { contactFormSchema, type ContactForm as ContactFormType } from "@shared/
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormProps {
@@ -36,7 +22,7 @@ interface ContactFormProps {
 export default function ContactForm({
   defaultInquiryType = "other",
   title = "Get in Touch",
-  description = "Fill out the form below and we'll get back to you as soon as possible.",
+  description = "Fill out the form below and we will get back to you as soon as possible.",
   showOrganization = false,
   showSpeakingFields = false,
   successMessage = "Thank you for your message. We will be in touch soon.",
@@ -73,25 +59,24 @@ export default function ContactForm({
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully",
-          description: successMessage,
-        });
-        form.reset({
-          name: "",
-          email: "",
-          inquiryType: data.inquiryType,
-          organization: "",
-          subject: "",
-          message: "",
-          dateWindow: "",
-          talkTheme: "",
-        });
-      } else {
-        throw new Error("Submission failed");
-      }
-    } catch (error) {
+      if (!response.ok) throw new Error("Submission failed");
+
+      toast({
+        title: "Message sent",
+        description: successMessage,
+      });
+
+      form.reset({
+        name: "",
+        email: "",
+        inquiryType: data.inquiryType,
+        organization: "",
+        subject: "",
+        message: "",
+        dateWindow: "",
+        talkTheme: "",
+      });
+    } catch {
       toast({
         title: "Submission failed",
         description: "Please try again or contact us directly at knoxkiminou1@gmail.com",
@@ -105,14 +90,14 @@ export default function ContactForm({
   return (
     <div className={className}>
       {(title || description) && (
-        <div className="mb-8">
+        <div className="mb-8 max-w-2xl">
           {title && (
-            <h2 className="font-serif text-3xl font-bold mb-4" data-testid="contact-form-title">
+            <h2 className="mb-3 font-serif text-3xl font-light text-amber-50" data-testid="contact-form-title">
               {title}
             </h2>
           )}
           {description && (
-            <p className="text-muted-foreground" data-testid="contact-form-description">
+            <p className="text-sm leading-relaxed text-amber-50/72" data-testid="contact-form-description">
               {description}
             </p>
           )}
@@ -120,47 +105,44 @@ export default function ContactForm({
       )}
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          {/* Name */}
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your full name" {...field} data-testid="input-name" />
+                  <Input placeholder="Your full name" {...field} data-testid="input-name" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          {/* Email */}
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="your.email@example.com" {...field} data-testid="input-email" />
+                  <Input type="email" placeholder="your.email@example.com" {...field} data-testid="input-email" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          {/* Inquiry Type */}
           <FormField
             control={form.control}
             name="inquiryType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Inquiry Type</FormLabel>
+                <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Inquiry Type</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger data-testid="select-inquiry-type">
+                    <SelectTrigger data-testid="select-inquiry-type" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50">
                       <SelectValue placeholder="Select inquiry type" />
                     </SelectTrigger>
                   </FormControl>
@@ -177,16 +159,15 @@ export default function ContactForm({
             )}
           />
 
-          {/* Organization (conditional) */}
           {shouldShowOrganization && (
             <FormField
               control={form.control}
               name="organization"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Organization (optional)</FormLabel>
+                  <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Organization (optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your organization or affiliation" {...field} data-testid="input-organization" />
+                    <Input placeholder="Organization or affiliation" {...field} data-testid="input-organization" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -194,7 +175,6 @@ export default function ContactForm({
             />
           )}
 
-          {/* Speaking-specific fields */}
           {shouldShowSpeakingFields && (
             <>
               <FormField
@@ -202,9 +182,9 @@ export default function ContactForm({
                 name="dateWindow"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Preferred Date Window (optional)</FormLabel>
+                    <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Preferred Date Window (optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., March 2025" {...field} data-testid="input-date-window" />
+                      <Input placeholder="e.g., September 2026" {...field} data-testid="input-date-window" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -216,9 +196,9 @@ export default function ContactForm({
                 name="talkTheme"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Talk Theme (optional)</FormLabel>
+                    <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Talk Theme (optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., Youth Leadership, Creative Writing" {...field} data-testid="input-talk-theme" />
+                      <Input placeholder="Theme focus" {...field} data-testid="input-talk-theme" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -227,32 +207,30 @@ export default function ContactForm({
             </>
           )}
 
-          {/* Subject */}
           <FormField
             control={form.control}
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Subject</FormLabel>
+                <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Subject</FormLabel>
                 <FormControl>
-                  <Input placeholder="Brief subject line" {...field} data-testid="input-subject" />
+                  <Input placeholder="Brief subject line" {...field} data-testid="input-subject" className="h-12 rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          {/* Message */}
           <FormField
             control={form.control}
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel className="text-xs uppercase tracking-[0.2em] text-amber-100/70">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Tell us more about your inquiry..."
-                    className="min-h-[150px]"
+                    className="min-h-[170px] rounded-xl border-amber-100/14 bg-black/35 text-amber-50 placeholder:text-amber-100/38"
                     {...field}
                     data-testid="textarea-message"
                   />
@@ -265,7 +243,7 @@ export default function ContactForm({
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full"
+            className="h-12 w-full rounded-full bg-amber-100 text-black hover:bg-amber-50"
             data-testid="button-submit-contact"
           >
             {isSubmitting ? "Sending..." : "Send Message"}

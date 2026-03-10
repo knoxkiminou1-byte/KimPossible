@@ -28,8 +28,8 @@ export default function LuxuryCursor() {
 
   return (
     <>
-      <div ref={ring} className="pointer-events-none fixed left-0 top-0 z-[100] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/30 h-12 w-12 mix-blend-difference hidden md:block" />
-      <div ref={dot} className="pointer-events-none fixed left-0 top-0 z-[100] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white h-1.5 w-1.5 mix-blend-difference hidden md:block" />
+      <div ref={ring} data-luxury-cursor className="pointer-events-none fixed left-0 top-0 z-[100] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/30 h-12 w-12 mix-blend-difference hidden md:block" />
+      <div ref={dot} data-luxury-cursor className="pointer-events-none fixed left-0 top-0 z-[100] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white h-1.5 w-1.5 mix-blend-difference hidden md:block" />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import coachImage from "@assets/stock_images/hispanic_male_basket_bda609d8.jpg";
 import teacherImage from "@assets/stock_images/hispanic_female_teac_ec6c82ff.jpg";
 import entrepreneurImage from "@assets/stock_images/young_asian_female_e_ebdc3282.jpg";
@@ -15,7 +14,6 @@ interface Testimonial {
   content: string;
   avatar: string;
   rating: number;
-  category: "athletic" | "literary" | "business" | "personal";
 }
 
 const testimonials: Testimonial[] = [
@@ -23,202 +21,142 @@ const testimonials: Testimonial[] = [
     name: "Coach Martinez",
     role: "Head Basketball Coach",
     organization: "Cristo Rey De La Salle",
-    content: "Kiminou's leadership on and off the court is extraordinary. At 6 feet 7 inches, he dominates physically, but it's his mental game and team first attitude that sets him apart. A true captain.",
+    content:
+      "Kiminou's leadership on and off the court is extraordinary. At 6 feet 7 inches, he dominates physically, but it's his mental game and team-first attitude that sets him apart.",
     avatar: coachImage,
     rating: 5,
-    category: "athletic"
   },
   {
     name: "Ms. Rodriguez",
-    role: "English Department Head", 
+    role: "English Department Head",
     organization: "Ygnacio Valley High School",
-    content: "Reading Kiminou's poetry is like witnessing raw talent transform into refined artistry. Seven published works by 19? That's not just impressive, it's unprecedented for someone his age.",
+    content:
+      "Reading Kiminou's poetry is watching raw talent become refined artistry. Seven published works at his age is rare and earned.",
     avatar: teacherImage,
     rating: 5,
-    category: "literary"
   },
   {
     name: "Sarah Chen",
     role: "Young Entrepreneur",
     organization: "Bay Area Youth Business Network",
-    content: "The Tee Shirt Teens is not just a brand, it's a movement. Kiminou understands our generation in a way that resonates authentically. His business instincts are incredible.",
+    content:
+      "The Tee Shirt Teens feels like a movement, not just a brand. Kiminou understands youth culture and turns that insight into action.",
     avatar: entrepreneurImage,
     rating: 5,
-    category: "business"
   },
   {
     name: "Marcus Thompson",
-    role: "Teammate & Friend",
+    role: "Teammate",
     organization: "Ygnacio Valley Football",
-    content: "Playing alongside Kiminou changed my perspective. At 235 pounds of pure determination, it's his heart that makes him unstoppable. On and off the field, he elevates everyone.",
+    content:
+      "Playing alongside Kiminou changed my perspective. His presence raises the standard for everyone around him.",
     avatar: teammateImage,
     rating: 5,
-    category: "athletic"
   },
   {
     name: "Dr. Patricia Williams",
     role: "Program Director",
     organization: "Miles Hall Foundation",
-    content: "Kiminou's essay honored his grandmother's legacy while addressing critical community issues. His voice carries wisdom beyond his years and a commitment to meaningful change.",
+    content:
+      "His voice carries wisdom and responsibility. He writes and speaks with purpose.",
     avatar: directorImage,
     rating: 5,
-    category: "personal"
   },
   {
     name: "Jamie Foster",
-    role: "Poetry Reader & Fan",
-    organization: "BookShop.org Community",
-    content: "'Hopeless Romantic' moved me to tears. Kiminou writes with vulnerability and strength that's rare in any writer, let alone someone so young. His words heal.",
+    role: "Reader",
+    organization: "Bookshop Community",
+    content: "Kiminou writes with vulnerability and strength. The work leaves a real emotional imprint.",
     avatar: readerImage,
     rating: 5,
-    category: "literary"
-  }
+  },
 ];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const testimonialsRef = useScrollAnimation();
 
-  // Auto-advance testimonials
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 5600);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToTestimonial = (index: number) => {
-    setCurrentIndex(index);
-    setIsAutoPlaying(false);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "athletic": return "text-red-400";
-      case "literary": return "text-blue-400";
-      case "business": return "text-green-400";
-      case "personal": return "text-purple-400";
-      default: return "text-gray-400";
-    }
-  };
+  const current = testimonials[currentIndex];
 
   return (
-    <section className="py-24 bg-muted/30" data-testid="testimonials-section">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16" ref={testimonialsRef}>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="testimonials-title">
+    <section className="relative overflow-hidden py-24" data-testid="testimonials-section">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#08090d] to-[#06070b]" aria-hidden="true" />
+      <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <p className="luxury-kicker mb-4">Testimonials</p>
+          <h2 className="mb-5 font-serif text-4xl font-light text-amber-50 md:text-5xl" data-testid="testimonials-title">
             What Others Say
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="testimonials-subtitle">
-            Voices from coaches, teachers, teammates, and community members who've witnessed the impact firsthand
+          <p className="mx-auto max-w-2xl text-amber-50/74" data-testid="testimonials-subtitle">
+            Coaches, educators, readers, and community voices.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Main Testimonial Card */}
-          <div className="luxury-card relative bg-card border border-border rounded-2xl p-8 md:p-12 shadow-2xl">
-            {/* Quote Icon */}
-            <div className="absolute top-8 left-8 opacity-10">
-              <Quote className="w-20 h-20" />
-            </div>
-
-            {/* Category Badge */}
-            <div className="flex justify-center mb-8">
-              <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-background/50 border ${getCategoryColor(currentTestimonial.category)}`}>
-                <div className="w-2 h-2 bg-current rounded-full"></div>
-                {currentTestimonial.category.charAt(0).toUpperCase() + currentTestimonial.category.slice(1)}
-              </span>
-            </div>
-
-            {/* Testimonial Content */}
-            <div className="text-center relative z-10">
-              {/* Stars */}
-              <div className="flex justify-center gap-1 mb-6">
-                {[...Array(currentTestimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 italic">
-                "{currentTestimonial.content}"
-              </blockquote>
-
-              {/* Author */}
-              <div className="flex items-center justify-center gap-4">
-                <img 
-                  src={currentTestimonial.avatar}
-                  alt={currentTestimonial.name}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-border"
-                />
-                <div className="text-left">
-                  <div className="font-bold text-lg">{currentTestimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{currentTestimonial.role}</div>
-                  <div className="text-sm text-muted-foreground">{currentTestimonial.organization}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-background/80 hover:bg-background border border-border rounded-full flex items-center justify-center transition-colors shadow-lg"
-              data-testid="testimonials-prev"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-background/80 hover:bg-background border border-border rounded-full flex items-center justify-center transition-colors shadow-lg"
-              data-testid="testimonials-next"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-3 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-primary scale-125' 
-                    : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                }`}
-                data-testid={`testimonial-dot-${index}`}
-              />
+        <div className="luxury-surface relative rounded-3xl p-8 md:p-12">
+          <div className="mb-5 flex justify-center gap-1">
+            {[...Array(current.rating)].map((_, i) => (
+              <Star key={i} className="h-5 w-5 fill-amber-200 text-amber-200" />
             ))}
           </div>
 
-          {/* Auto-play indicator */}
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="testimonials-autoplay-toggle"
-            >
-              {isAutoPlaying ? "Pause auto-advance" : "Resume auto-advance"}
-            </button>
+          <blockquote className="mb-8 text-center font-serif text-2xl leading-relaxed text-amber-50/94 md:text-3xl">
+            "{current.content}"
+          </blockquote>
+
+          <div className="flex items-center justify-center gap-4">
+            <img src={current.avatar} alt={current.name} className="h-14 w-14 rounded-full border border-amber-100/24 object-cover" />
+            <div>
+              <p className="text-sm uppercase tracking-[0.18em] text-amber-100/65">{current.name}</p>
+              <p className="text-sm text-amber-50/72">
+                {current.role} • {current.organization}
+              </p>
+            </div>
           </div>
+
+          <button
+            onClick={() => {
+              setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+              setIsAutoPlaying(false);
+            }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-amber-100/22 bg-black/40 p-2 text-amber-100/75 transition hover:text-amber-50"
+            data-testid="testimonials-prev"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
+          <button
+            onClick={() => {
+              setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+              setIsAutoPlaying(false);
+            }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-amber-100/22 bg-black/40 p-2 text-amber-100/75 transition hover:text-amber-50"
+            data-testid="testimonials-next"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+
+        <div className="mt-6 flex justify-center gap-2">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setCurrentIndex(index);
+                setIsAutoPlaying(false);
+              }}
+              className={`h-2.5 rounded-full transition ${index === currentIndex ? "w-8 bg-amber-200" : "w-2.5 bg-amber-100/25"}`}
+              data-testid={`testimonial-dot-${index}`}
+            />
+          ))}
         </div>
       </div>
     </section>

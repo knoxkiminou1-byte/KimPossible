@@ -6,11 +6,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import {
   AnimatePresence,
   motion,
+  useReducedMotion,
   useScroll,
   useSpring,
   useTransform,
 } from "framer-motion";
-import Splash from "@/pages/Splash";
 import Home from "@/pages/home";
 import About from "@/pages/About";
 import Works from "@/pages/Works";
@@ -49,27 +49,30 @@ function ScrollProgress() {
 
 function Router() {
   const [location] = useLocation();
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={location}
         className="page-transition-shell"
-        initial={{ opacity: 0, y: 28, scale: 0.995, filter: "blur(12px)" }}
-        animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-        exit={{ opacity: 0, y: -20, scale: 0.995, filter: "blur(10px)" }}
-        transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 12, scale: 0.998 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={shouldReduceMotion ? undefined : { opacity: 0, y: -8, scale: 0.998 }}
+        transition={{ duration: shouldReduceMotion ? 0.08 : 0.36, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="route-transition-veil"
-          initial={{ opacity: 0.24, scaleX: 1 }}
-          animate={{ opacity: 0, scaleX: 1.04 }}
-          exit={{ opacity: 0.18, scaleX: 1.01 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          initial={shouldReduceMotion ? false : { opacity: 0.22, scaleX: 1 }}
+          animate={{ opacity: 0, scaleX: 1.015 }}
+          exit={shouldReduceMotion ? undefined : { opacity: 0.15, scaleX: 1.005 }}
+          transition={{ duration: shouldReduceMotion ? 0.08 : 0.32, ease: [0.22, 1, 0.36, 1] }}
         />
         <Switch location={location}>
           <Route path="/" component={Home} />
-          <Route path="/splash" component={Splash} />
+          <Route path="/splash">
+            <Redirect to="/" />
+          </Route>
           <Route path="/home">
             <Redirect to="/" />
           </Route>
@@ -85,7 +88,9 @@ function Router() {
           </Route>
           <Route path="/press" component={Press} />
           <Route path="/sports" component={Sports} />
-          <Route path="/basketball" component={Sports} />
+          <Route path="/basketball">
+            <Redirect to="/sports" />
+          </Route>
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/books" component={Books} />
           <Route path="/books/:id" component={BookDetail} />

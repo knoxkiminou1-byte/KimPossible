@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Book, X, ExternalLink, Heart, ArrowRight, BookOpen } from "lucide-react";
+import { Book, X, ExternalLink, ArrowRight, BookOpen } from "lucide-react";
 import PoemModal from "@/components/PDFModal";
-import backgroundImage from "@assets/Gemini_Generated_Image_qfccptqfccptqfcc_1762031474581.png";
 
 interface Poem {
   title: string;
@@ -32,224 +30,146 @@ interface BookData {
 export default function BookPreview() {
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null);
   const [books, setBooks] = useState<BookData[]>([]);
-  const [poemModal, setPoemModal] = useState<{id: string, poems: Poem[], title: string} | null>(null);
-  const booksRef = useScrollAnimation();
+  const [poemModal, setPoemModal] = useState<{ id: string; poems: Poem[]; title: string } | null>(null);
 
-  // Load books from JSON
   useEffect(() => {
     fetch("/books.json")
-      .then(r => r.json())
+      .then((r) => r.json())
       .then(setBooks)
       .catch(() => setBooks([]));
   }, []);
 
   const openPreview = (book: BookData) => {
     setSelectedBook(book);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closePreview = () => {
     setSelectedBook(null);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
   return (
     <>
-      <section 
-        className="py-24 bg-background relative" 
-        data-testid="book-preview-section"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/75"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16" ref={booksRef}>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="books-title">
+      <section className="relative overflow-hidden py-24" data-testid="book-preview-section">
+        <div className="absolute inset-0" aria-hidden="true">
+          <img src="/published-works-bg-feb-27-2026.png" alt="" className="h-full w-full object-cover object-center" loading="lazy" decoding="async" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/64 via-black/80 to-black/92" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-14 text-center">
+            <p className="luxury-kicker mb-4">Books</p>
+            <h2 className="mb-5 font-serif text-4xl font-light text-amber-50 md:text-5xl" data-testid="books-title">
               Published Works
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="books-subtitle">
-              Poetry collections exploring wisdom, faith, identity, and love with live PDF previews and real purchase links
+            <p className="mx-auto max-w-2xl text-base text-amber-50/76" data-testid="books-subtitle">
+              Poetry and narrative collections exploring faith, identity, love, and voice.
             </p>
-            <div className="mt-6">
-              <Link href="/books">
-                <button className="inline-flex items-center gap-2 text-primary hover:underline transition-all" data-testid="view-all-books">
-                  <span>View All Books</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+            <div className="mt-5">
+              <Link href="/books" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-amber-200" data-testid="view-all-books">
+                <span>View All Books</span>
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {books.map((book, index) => (
-              <div 
+              <article
                 key={book.id}
-                className={`luxury-card group relative cursor-pointer ${book.featured ? 'ring-2 ring-primary/20' : ''}`}
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-amber-100/14 bg-black/38 backdrop-blur-sm transition hover:-translate-y-1 hover:border-amber-100/26"
                 onClick={() => openPreview(book)}
                 data-testid={`book-card-${index}`}
               >
-                {/* Featured Badge */}
-                {book.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                    <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                      <Heart className="w-3 h-3" />
-                      Featured
-                    </div>
-                  </div>
-                )}
-
-                <div className="bg-card border border-border rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-                  {/* Book Cover */}
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <img 
-                      src={book.cover}
-                      alt={`${book.title} book cover`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                        <Book className="w-8 h-8 mx-auto mb-2" />
-                        <div className="text-sm font-medium">Read Preview</div>
-                      </div>
-                    </div>
-
-                    {/* Year Badge */}
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-black/70 text-white px-2 py-1 rounded text-xs font-medium">
-                        {book.year}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Book Info */}
-                  <div className="p-6">
-                    <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
-                      {book.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      {book.subtitle}
-                    </p>
-                    
-                    {/* Themes */}
-                    <div className="flex flex-wrap gap-2">
-                      {book.themes.map((theme) => (
-                        <span 
-                          key={theme}
-                          className="px-2 py-1 bg-muted/50 text-muted-foreground text-xs rounded-full"
-                        >
-                          {theme}
-                        </span>
-                      ))}
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <img src={book.cover} alt={`${book.title} book cover`} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition group-hover:bg-black/45">
+                    <div className="opacity-0 transition group-hover:opacity-100">
+                      <Book className="mx-auto mb-1 h-7 w-7 text-amber-100" />
+                      <p className="text-xs uppercase tracking-[0.2em] text-amber-100">Preview</p>
                     </div>
                   </div>
                 </div>
-              </div>
+
+                <div className="p-5">
+                  <h3 className="mb-2 font-serif text-2xl text-amber-50">{book.title}</h3>
+                  <p className="mb-3 text-sm text-amber-100/66">{book.subtitle}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {book.themes.slice(0, 3).map((theme) => (
+                      <span key={theme} className="rounded-full border border-amber-100/16 px-2 py-1 text-[0.62rem] uppercase tracking-[0.16em] text-amber-100/72">
+                        {theme}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <p className="text-lg text-muted-foreground mb-6">
-              Available in paperback and digital formats
-            </p>
-            <a 
-              href="https://bookshop.org/" 
-              target="_blank" 
+          <div className="mt-12 text-center">
+            <a
+              href="https://bookshop.org/"
+              target="_blank"
               rel="noopener noreferrer"
-              className="luxury-button inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+              className="luxury-button inline-flex items-center gap-2 rounded-full border border-amber-100/22 bg-amber-100/95 px-8 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-black"
               data-testid="books-shop-link"
             >
-              <ExternalLink className="w-5 h-5" />
+              <ExternalLink className="h-4 w-4" />
               Shop All Books
             </a>
           </div>
         </div>
       </section>
 
-      {/* Preview Modal */}
       {selectedBook && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" data-testid="book-modal">
-          <div className="relative max-w-4xl max-h-full bg-card rounded-2xl overflow-hidden">
-            {/* Close Button */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/92 p-4" data-testid="book-modal">
+          <div className="relative max-h-full max-w-4xl overflow-hidden rounded-2xl border border-amber-100/16 bg-[#0a0b10]">
             <button
               onClick={closePreview}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors"
+              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-amber-100 transition hover:bg-black/80"
               data-testid="book-modal-close"
             >
-              <X className="w-6 h-6" />
+              <X className="h-6 w-6" />
             </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 max-h-[90vh] overflow-y-auto">
-              {/* Book Cover */}
-              <div className="relative">
-                <img 
-                  src={selectedBook.cover}
-                  alt={`${selectedBook.title} book cover`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="grid max-h-[90vh] grid-cols-1 overflow-y-auto md:grid-cols-2">
+              <img src={selectedBook.cover} alt={`${selectedBook.title} book cover`} className="h-full w-full object-cover" />
 
-              {/* Book Details */}
-              <div className="p-8 flex flex-col justify-center">
-                <div className="mb-6">
-                  <h2 className="font-serif text-3xl font-bold mb-2">{selectedBook.title}</h2>
-                  <p className="text-lg text-muted-foreground mb-4">{selectedBook.subtitle}</p>
-                  
-                  {/* Themes */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {selectedBook.themes.map((theme) => (
-                      <span 
-                        key={theme}
-                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium"
-                      >
-                        {theme}
-                      </span>
-                    ))}
-                  </div>
+              <div className="p-8">
+                <h2 className="mb-2 font-serif text-4xl text-amber-50">{selectedBook.title}</h2>
+                <p className="mb-4 text-amber-100/70">{selectedBook.subtitle}</p>
+
+                <div className="mb-5 flex flex-wrap gap-2">
+                  {selectedBook.themes.map((theme) => (
+                    <span key={theme} className="rounded-full border border-amber-100/16 px-3 py-1 text-xs uppercase tracking-[0.18em] text-amber-100/70">
+                      {theme}
+                    </span>
+                  ))}
                 </div>
 
-                {/* Description */}
-                <div className="mb-6">
-                  <h3 className="font-bold mb-3">About This Collection</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {selectedBook.description}
-                  </p>
-                </div>
+                <p className="mb-6 text-sm leading-relaxed text-amber-50/78">{selectedBook.description}</p>
+                <p className="mb-8 text-xs uppercase tracking-[0.2em] text-amber-100/60">
+                  Published {selectedBook.year} {selectedBook.isbn ? `• ISBN ${selectedBook.isbn}` : ""}
+                </p>
 
-                {/* Sample Preview */}
-                <div className="mb-8">
-                  <h3 className="font-bold mb-3">Published {selectedBook.year}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {selectedBook.isbn ? `ISBN: ${selectedBook.isbn}` : "Available in digital format"}
-                  </p>
-                </div>
-
-                {/* Actions */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a
                     href={selectedBook.buyLinks.amazon || selectedBook.buyLinks.googleBooks || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="luxury-button flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-amber-100/22 bg-amber-100/95 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-black"
                     data-testid="book-buy-link"
                   >
-                    <ExternalLink className="w-4 h-4" />
-                    Purchase Book
+                    <ExternalLink className="h-4 w-4" />
+                    Purchase
                   </a>
-                  <button 
+                  <button
                     onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-border font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-amber-100/24 bg-black/35 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-50"
                     data-testid="book-sample-poems"
                   >
-                    <BookOpen className="w-4 h-4" />
+                    <BookOpen className="h-4 w-4" />
                     Read Sample
                   </button>
                 </div>
@@ -259,15 +179,7 @@ export default function BookPreview() {
         </div>
       )}
 
-      {/* Poem Modal */}
-      {poemModal && (
-        <PoemModal
-          title={poemModal.title}
-          poems={poemModal.poems}
-          open={!!poemModal}
-          onClose={() => setPoemModal(null)}
-        />
-      )}
+      {poemModal && <PoemModal title={poemModal.title} poems={poemModal.poems} open={!!poemModal} onClose={() => setPoemModal(null)} />}
     </>
   );
 }
