@@ -9,8 +9,8 @@ import {
   useScroll,
   useSpring,
   useTransform,
+  useReducedMotion,
 } from "framer-motion";
-import Splash from "@/pages/Splash";
 import Home from "@/pages/home";
 import About from "@/pages/About";
 import Works from "@/pages/Works";
@@ -30,46 +30,48 @@ import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
 
 function ScrollProgress() {
+  const shouldReduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 150,
     damping: 28,
     restDelta: 0.0005,
   });
-  const opacity = useTransform(scrollYProgress, [0, 0.015, 0.03], [0, 0.65, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.015, 0.03], [0, 0.5, 0.92]);
 
-  return (
-    <motion.div
-      className="scroll-progress"
-      style={{ scaleX, opacity }}
-      aria-hidden="true"
-    />
-  );
+  if (shouldReduceMotion) {
+    return null;
+  }
+
+  return <motion.div className="scroll-progress" style={{ scaleX, opacity }} aria-hidden="true" />;
 }
 
 function Router() {
   const [location] = useLocation();
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={location}
         className="page-transition-shell"
-        initial={{ opacity: 0, y: 28, scale: 0.995, filter: "blur(12px)" }}
+        initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 22, scale: 0.995, filter: "blur(8px)" }}
         animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-        exit={{ opacity: 0, y: -20, scale: 0.995, filter: "blur(10px)" }}
-        transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+        exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -14, scale: 0.997, filter: "blur(8px)" }}
+        transition={{ duration: shouldReduceMotion ? 0.18 : 0.58, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="route-transition-veil"
-          initial={{ opacity: 0.24, scaleX: 1 }}
-          animate={{ opacity: 0, scaleX: 1.04 }}
-          exit={{ opacity: 0.18, scaleX: 1.01 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: shouldReduceMotion ? 0 : 0.16, scaleX: 1 }}
+          animate={{ opacity: 0, scaleX: 1.02 }}
+          exit={{ opacity: shouldReduceMotion ? 0 : 0.1, scaleX: 1.005 }}
+          transition={{ duration: shouldReduceMotion ? 0.18 : 0.52, ease: [0.22, 1, 0.36, 1] }}
         />
         <Switch location={location}>
           <Route path="/" component={Home} />
-          <Route path="/splash" component={Splash} />
+          <Route path="/splash">
+            <Redirect to="/" />
+          </Route>
           <Route path="/home">
             <Redirect to="/" />
           </Route>
