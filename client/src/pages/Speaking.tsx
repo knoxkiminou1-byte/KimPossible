@@ -82,7 +82,7 @@ export default function Speaking() {
 
           <div className="rounded-2xl border border-white/10 bg-black/42 p-8 backdrop-blur-md">
             <ContactForm
-              title="Request a Speaking Engagement"
+              title="Contact"
               description="Tell us about your event audience and what you hope to achieve. I'll get back to you as soon as possible."
               defaultInquiryType="speaking"
               showSpeakingFields={true}
