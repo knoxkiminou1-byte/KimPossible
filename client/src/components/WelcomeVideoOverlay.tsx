@@ -1,26 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-type IntroPhase = "prompt" | "playing" | "done";
+type IntroPhase = "prompt" | "done";
 
 export default function WelcomeVideoOverlay() {
-  const [phase, setPhase] = useState<IntroPhase>(() => {
-    if (typeof window !== "undefined" && window.sessionStorage.getItem("kk-play-intro") === "1") {
-      return "playing";
-    }
+  const [phase, setPhase] = useState<IntroPhase>("prompt");
 
-    return "prompt";
-  });
-
-  useEffect(() => {
-    if (phase === "playing" && typeof window !== "undefined") {
-      window.sessionStorage.removeItem("kk-play-intro");
-    }
-  }, [phase]);
-
-  const startIntro = () => {
-    setPhase("playing");
-  };
+  const startIntro = () => setPhase("done");
 
   return (
     <AnimatePresence>
@@ -32,16 +18,6 @@ export default function WelcomeVideoOverlay() {
           exit={{ opacity: 0, scale: 1.06, filter: "blur(8px)" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          {phase === "playing" && (
-            <video
-              src="/welcome-video.mp4"
-              autoPlay
-              playsInline
-              onEnded={() => setPhase("done")}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          )}
-
           <AnimatePresence>
             {phase === "prompt" && (
               <motion.div
