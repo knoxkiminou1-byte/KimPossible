@@ -4,7 +4,6 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Splash from "@/pages/Splash";
 import Home from "@/pages/home";
 import About from "@/pages/About";
 import Works from "@/pages/Works";
@@ -21,7 +20,6 @@ import Sports from "@/pages/Sports";
 import Author from "@/pages/Author";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
-import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
 
 const pageTransition = {
   initial: { opacity: 0, y: 24, scale: 0.99, filter: "blur(10px)" },
@@ -62,7 +60,6 @@ function Router() {
       >
         <Switch location={location}>
           <Route path="/" component={Home} />
-          <Route path="/splash" component={Splash} />
           <Route path="/home">
             <Redirect to="/" />
           </Route>
@@ -97,7 +94,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WelcomeVideoOverlay />
         <LuxuryCursor />
         <div className="grain"></div>
         <Toaster />
