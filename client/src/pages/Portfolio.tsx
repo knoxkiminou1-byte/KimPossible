@@ -27,13 +27,13 @@ const Section = ({ id, title, icon: Icon, children }: any) => (
 );
 
 const Badge = ({ children }: any) => (
-  <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs md:text-sm">
+  <span className="inline-flex items-center rounded-md border px-3 py-1 text-xs md:text-sm">
     {children}
   </span>
 );
 
 const Card = ({ children, className = "" }: any) => (
-  <div className={`rounded-2xl border p-5 shadow-sm ${className}`}>{children}</div>
+  <div className={`rounded-lg border p-5 shadow-sm ${className}`}>{children}</div>
 );
 
 // --- Main Component ---
@@ -50,7 +50,7 @@ export default function Portfolio() {
       themes:
         "Black identity, generational trauma, supernatural mystery, prophecy",
       note:
-        "Core canonical novel that anchors the Kiminou Knox Author Universe.",
+        "A major fiction project in development.",
     },
   ];
 
@@ -83,9 +83,9 @@ export default function Portfolio() {
 
   const universeNotes = [
     {
-      title: "Shared Universe",
+      title: "Connected Work",
       text:
-        "The books live in a connected mythos. Emmanuel's journey in *The Black Boy Lie* threads across future stories.",
+        "Several projects share characters, themes, and questions that continue across future stories.",
     },
   ];
 
@@ -117,30 +117,27 @@ export default function Portfolio() {
             >
               <Badge>The Black Boy Lie — Coming Soon</Badge>
               <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-[1.1]">
-                Writer & Student‑Athlete
+                Writer & Athlete
               </h1>
               <p className="mt-5 text-zinc-600 max-w-2xl">
-                I'm Kiminou Knox—Class of 2025—building stories and community across
-                literature and sport. My work spans psychological drama, metaphysical
-                thrillers, and lyrical spirituality grounded in Black identity, faith,
-                and becoming.
+                I'm Kiminou Knox, a Bay Area writer and athlete building stories and community across literature and sport. My work is grounded in Black identity, faith, family, and becoming.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href="mailto:kiminouknowledge@gmail.com"
-                  className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow"
+                  className="rounded-md border px-4 py-2 text-sm font-medium hover:shadow"
                 >
                   <span className="inline-flex items-center gap-2"><Mail className="w-4 h-4"/> kiminouknowledge@gmail.com</span>
                 </a>
                 {socials.map((s) => (
-                  <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow">
+                  <a key={s.name} href={s.href} className="rounded-md border px-4 py-2 text-sm font-medium hover:shadow">
                     <span className="inline-flex items-center gap-2"><s.icon className="w-4 h-4"/> {s.name}</span>
                   </a>
                 ))}
               </div>
               <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-600">
-                <Badge>Author Universe Builder</Badge>
-                <Badge>Poetry Collections (4 completed)</Badge>
+                <Badge>Books and poems</Badge>
+                <Badge>Basketball</Badge>
                 <Badge>East Palo Alto, California</Badge>
               </div>
             </motion.div>
@@ -151,7 +148,7 @@ export default function Portfolio() {
               transition={{ duration: 0.6, delay: 0.05 }}
               className="md:col-span-2"
             >
-              <div className="rounded-2xl overflow-hidden border shadow-sm">
+              <div className="rounded-lg overflow-hidden border shadow-sm">
                 <img
                   src="/photos/brown-suit-author.jpg"
                   alt="Kiminou Knox in brown suit"
@@ -171,13 +168,13 @@ export default function Portfolio() {
                 <p className="text-sm font-medium">East Palo Alto, California</p>
               </div>
               <p className="text-zinc-600 text-sm">
-                Student athlete and author weaving faith, community, and creative discipline.
+                Writer and athlete working across faith, community, and creative discipline.
               </p>
             </Card>
             <Card>
               <div className="flex items-center gap-3 mb-2">
                 <CalendarIcon className="w-4 h-4"/>
-                <p className="text-sm font-medium">Class of 2025</p>
+                <p className="text-sm font-medium">Athletics</p>
               </div>
               <p className="text-zinc-600 text-sm">
                 Focused on varsity training and a growing catalog of finished poetry.
@@ -249,18 +246,18 @@ export default function Portfolio() {
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a
                     href="mailto:kiminouknowledge@gmail.com"
-                    className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2"
+                    className="rounded-md border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4"/> kiminouknowledge@gmail.com
                   </a>
                   {socials.map((s) => (
-                    <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2">
+                    <a key={s.name} href={s.href} className="rounded-md border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2">
                       <s.icon className="w-4 h-4"/> {s.name}
                     </a>
                   ))}
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden border shadow-sm">
+              <div className="rounded-lg overflow-hidden border shadow-sm">
                 <img
                   src="/photos/creative-designer.jpg"
                   alt="Creative workspace"

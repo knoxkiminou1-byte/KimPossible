@@ -10,7 +10,7 @@ export default function Sports() {
     <>
       <Helmet>
         <title>Sports & Athletics - Kiminou Knox</title>
-        <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats and profiles on NCSA, MaxPreps, and 247Sports." />
+        <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with profiles on NCSA, MaxPreps, and Prep Hoops." />
         <link rel="canonical" href="https://kiminouknox.com/sports" />
         
         <meta property="og:type" content="website" />
@@ -36,7 +36,7 @@ export default function Sports() {
             loading="eager"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/52 via-black/68 to-black/84" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/80" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(251,191,36,0.14),transparent_36%),radial-gradient(circle_at_78%_16%,rgba(245,158,11,0.08),transparent_28%)]" />
           <div className="section-backdrop-vignette" />
           <div className="section-backdrop-glow" />
@@ -48,13 +48,13 @@ export default function Sports() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-20"
           >
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-amber-200/85">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-amber-200/80">
               Athletic Profile
             </p>
             <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
               Sports & Athletics
             </h1>
-            <p className="mx-auto max-w-3xl text-xl text-white/78">
+            <p className="mx-auto max-w-3xl text-xl text-white/80">
               Multi-sport athlete with varsity experience and NCAA eligibility
             </p>
           </motion.div>
@@ -70,30 +70,30 @@ export default function Sports() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 text-center">
+              <div className="rounded-lg border border-white/10 bg-black/40 backdrop-blur-md p-8 text-center">
                 <TrendingUp className="w-12 h-12 text-amber-200 mx-auto mb-4" />
                 <p className="mb-2 text-sm uppercase tracking-wider text-white/60">Height</p>
                 <p className="text-3xl font-bold mb-2">6 feet 7 inches</p>
-                <p className="text-xs text-white/55">
-                  Source: <a href="https://www.ncsasports.org" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">NCSA</a>
+                <p className="text-xs text-white/60">
+                  Source: <a href="https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">NCSA</a>
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 text-center">
+              <div className="rounded-lg border border-white/10 bg-black/40 backdrop-blur-md p-8 text-center">
                 <Target className="w-12 h-12 text-amber-200 mx-auto mb-4" />
                 <p className="mb-2 text-sm uppercase tracking-wider text-white/60">Weight</p>
                 <p className="text-4xl font-bold mb-2">235 lbs</p>
-                <p className="text-xs text-white/55">
-                  Source: <a href="https://www.ncsasports.org" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">NCSA</a>
+                <p className="text-xs text-white/60">
+                  Source: <a href="https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">NCSA</a>
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 text-center">
+              <div className="rounded-lg border border-white/10 bg-black/40 backdrop-blur-md p-8 text-center">
                 <Trophy className="w-12 h-12 text-amber-200 mx-auto mb-4" />
                 <p className="mb-2 text-sm uppercase tracking-wider text-white/60">Position</p>
                 <p className="text-2xl font-bold mb-2">Forward/Center</p>
-                <p className="text-xs text-white/55">
-                  Source: <a href="https://www.maxpreps.com" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">MaxPreps</a>
+                <p className="text-xs text-white/60">
+                  Source: <a href="https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" target="_blank" rel="noopener noreferrer external" className="text-amber-200 hover:underline">MaxPreps</a>
                 </p>
               </div>
             </div>
@@ -111,10 +111,10 @@ export default function Sports() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <a
-                href="https://www.ncsasports.org"
+                href="https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox"
                 target="_blank"
                 rel="noopener noreferrer external"
-                className="group rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 transition-all hover:bg-black/55 hover:shadow-lg"
+                className="group rounded-lg border border-white/10 bg-black/40 backdrop-blur-md p-8 transition-all hover:bg-black/50 hover:shadow-lg"
                 data-testid="link-profile-ncsa"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -124,7 +124,7 @@ export default function Sports() {
                   <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-amber-200 transition-colors" />
                 </div>
                 <h3 className="font-semibold text-xl mb-2">NCSA College Recruiting</h3>
-                <p className="mb-4 text-white/72">
+                <p className="mb-4 text-white/70">
                   Complete athletic profile with stats, measurements, and recruiting information
                 </p>
                 <div className="inline-flex items-center gap-2 font-semibold text-amber-200">
@@ -134,10 +134,10 @@ export default function Sports() {
               </a>
 
               <a
-                href="https://www.maxpreps.com"
+                href="https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2"
                 target="_blank"
                 rel="noopener noreferrer external"
-                className="group rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 transition-all hover:bg-black/55 hover:shadow-lg"
+                className="group rounded-lg border border-white/10 bg-black/40 backdrop-blur-md p-8 transition-all hover:bg-black/50 hover:shadow-lg"
                 data-testid="link-profile-maxpreps"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -147,7 +147,7 @@ export default function Sports() {
                   <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-amber-200 transition-colors" />
                 </div>
                 <h3 className="font-semibold text-xl mb-2">MaxPreps</h3>
-                <p className="mb-4 text-white/72">
+                <p className="mb-4 text-white/70">
                   High school basketball statistics and team performance data
                 </p>
                 <div className="inline-flex items-center gap-2 font-semibold text-amber-200">
@@ -157,11 +157,11 @@ export default function Sports() {
               </a>
 
               <a
-                href="https://247sports.com"
+                href="https://prephoops.com/player/kiminou-knox/"
                 target="_blank"
                 rel="noopener noreferrer external"
-                className="group rounded-2xl border border-white/10 bg-black/45 backdrop-blur-md p-8 transition-all hover:bg-black/55 hover:shadow-lg"
-                data-testid="link-profile-247sports"
+                className="group rounded-lg border border-white/10 bg-black/40 backdrop-blur-md p-8 transition-all hover:bg-black/50 hover:shadow-lg"
+                data-testid="link-profile-prephoops"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 rounded-full bg-amber-200/10 flex items-center justify-center">
@@ -169,9 +169,9 @@ export default function Sports() {
                   </div>
                   <ExternalLink className="w-5 h-5 text-white/50 group-hover:text-amber-200 transition-colors" />
                 </div>
-                <h3 className="font-semibold text-xl mb-2">247Sports</h3>
-                <p className="mb-4 text-white/72">
-                  Rankings, news, and recruiting analysis for high school athletes
+                <h3 className="font-semibold text-xl mb-2">Prep Hoops</h3>
+                <p className="mb-4 text-white/70">
+                  Player profile and recruiting coverage
                 </p>
                 <div className="inline-flex items-center gap-2 font-semibold text-amber-200">
                   View Profile
@@ -191,60 +191,60 @@ export default function Sports() {
             </h2>
 
             <div className="max-w-3xl mx-auto space-y-4">
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
+              <div className="rounded-lg border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-4">
                   <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Varsity Captain - Ygnacio Valley High School</h3>
-                    <p className="text-white/72">
+                    <p className="text-white/70">
                       Led team as captain, demonstrating leadership and athletic excellence
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
+              <div className="rounded-lg border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-4">
                   <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Redwood Christian MVP</h3>
-                    <p className="text-white/72">
+                    <p className="text-white/70">
                       Most Valuable Player recognition for outstanding performance
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
+              <div className="rounded-lg border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-4">
                   <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Pine Valley MVP</h3>
-                    <p className="text-white/72">
+                    <p className="text-white/70">
                       Recognized as Most Valuable Player at Pine Valley
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
+              <div className="rounded-lg border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-4">
                   <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">CaliHoop Top Team Player Selection</h3>
-                    <p className="text-white/72">
-                      Selected for elite team recognition by CaliHoop
+                    <p className="text-white/70">
+                      Selected for CaliHoop team recognition
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
+              <div className="rounded-lg border border-white/10 bg-black/40 p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-4">
                   <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-amber-200"></div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">NCAA Eligibility</h3>
-                    <p className="text-white/72">
+                    <p className="text-white/70">
                       Registered with NCAA eligibility for collegiate athletics
                     </p>
                   </div>

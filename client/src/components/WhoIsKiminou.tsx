@@ -1,14 +1,25 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { BookOpen, Trophy, Briefcase, Users } from "lucide-react";
+import { BookOpen, Trophy, Briefcase, Users, type LucideIcon } from "lucide-react";
 import { Link } from "wouter";
 
-const identity = [
+type IdentityItem = {
+  id: string;
+  icon: LucideIcon;
+  label: string;
+  title: string;
+  description: string;
+  link: string;
+  cta: string;
+  external?: boolean;
+};
+
+const identity: IdentityItem[] = [
   {
     id: "books",
     icon: BookOpen,
     label: "Author",
-    title: "Seven Published Works",
-    description: "Published writer exploring faith, identity, love, and the Black experience through powerful poetry and narrative.",
+    title: "Books and poems",
+    description: "Published work on faith, family, love, and growing up Black in the Bay Area.",
     link: "/books",
     cta: "View Books"
   },
@@ -16,8 +27,8 @@ const identity = [
     id: "basketball",
     icon: Trophy,
     label: "Athlete",
-    title: "6'7\" Multi Sport Leader",
-    description: "Varsity basketball captain and multi sport athlete combining physical excellence with leadership on and off the court.",
+    title: "Basketball and training",
+    description: "A 6'7\" forward and center who brings the same practice habits from writing into sport.",
     link: "/sports",
     cta: "View Athletics"
   },
@@ -25,8 +36,8 @@ const identity = [
     id: "speaker",
     icon: Users,
     label: "Speaker",
-    title: "Youth Voice Advocate",
-    description: "Award winning speaker addressing craft, discipline, and community impact through authentic storytelling and service.",
+    title: "Schools and groups",
+    description: "Talks on writing, discipline, grief, faith, and finding a voice without performing one.",
     link: "/speaking",
     cta: "Book Speaking"
   },
@@ -34,13 +45,63 @@ const identity = [
     id: "brand",
     icon: Briefcase,
     label: "Director",
-    title: "AAFC Leader",
-    description: "Director of Artists and Athletes For Change, uniting creatives and athletes to make meaningful community impact.",
+    title: "Artists & Athletes for Change",
+    description: "Organizing creative and athletic projects with a practical community focus.",
     link: "/contact",
     cta: "Connect",
     external: false
   }
 ];
+
+function IdentityCard({ item }: { item: IdentityItem }) {
+  const cardRef = useScrollAnimation();
+  const Icon = item.icon;
+
+  return (
+    <div
+      ref={cardRef}
+      className="surface-card group animate-on-scroll"
+      data-testid={`identity-card-${item.id}`}
+    >
+      <div className="h-full rounded-lg border border-amber-200/20 bg-black/60 p-8 backdrop-blur-sm transition-all duration-300 hover:shadow-lg">
+        <div className="mb-6">
+          <Icon className="w-12 h-12 text-amber-200 mb-4" />
+          <span className="text-sm uppercase tracking-[0.18em] text-amber-100/80 font-semibold">
+            {item.label}
+          </span>
+        </div>
+
+        <h3 className="font-serif text-2xl font-semibold mb-4 text-white" data-testid={`identity-title-${item.id}`}>
+          {item.title}
+        </h3>
+
+        <p className="text-white/80 text-sm leading-relaxed mb-6" data-testid={`identity-description-${item.id}`}>
+          {item.description}
+        </p>
+
+        {item.external ? (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-sm font-semibold text-amber-200 hover:underline"
+            data-testid={`identity-link-${item.id}`}
+          >
+            {item.cta} →
+          </a>
+        ) : (
+          <Link
+            href={item.link}
+            className="inline-flex items-center text-sm font-semibold text-amber-200 hover:underline"
+            data-testid={`identity-link-${item.id}`}
+          >
+            {item.cta} →
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function WhoIsKiminou() {
   const titleRef = useScrollAnimation();
@@ -61,7 +122,7 @@ export default function WhoIsKiminou() {
           decoding="async"
         />
         <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/72 to-black/82" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -78,61 +139,14 @@ export default function WhoIsKiminou() {
             className="text-xl font-semibold text-amber-100 max-w-3xl mx-auto animate-on-scroll"
             data-testid="who-description"
           >
-            A writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
+            A Bay Area writer and athlete working across books, basketball, speaking, and community projects.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {identity.map((item) => {
-            const cardRef = useScrollAnimation();
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={item.id}
-                ref={cardRef}
-                className="luxury-card group animate-on-scroll"
-                data-testid={`identity-card-${item.id}`}
-              >
-                <div className="h-full rounded-lg border border-amber-200/20 bg-black/55 p-8 backdrop-blur-sm transition-all duration-500 hover:shadow-xl">
-                  <div className="mb-6">
-                    <Icon className="w-12 h-12 text-amber-200 mb-4" />
-                    <span className="text-sm uppercase tracking-[0.2em] text-amber-100/80 font-semibold">
-                      {item.label}
-                    </span>
-                  </div>
-                  
-                  <h3 className="font-serif text-2xl font-semibold mb-4 text-white" data-testid={`identity-title-${item.id}`}>
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-white/80 text-sm leading-relaxed mb-6" data-testid={`identity-description-${item.id}`}>
-                    {item.description}
-                  </p>
-                  
-                  {item.external ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-semibold text-amber-200 hover:underline"
-                      data-testid={`identity-link-${item.id}`}
-                    >
-                      {item.cta} →
-                    </a>
-                  ) : (
-                    <Link 
-                      href={item.link}
-                      className="inline-flex items-center text-sm font-semibold text-amber-200 hover:underline" 
-                      data-testid={`identity-link-${item.id}`}
-                    >
-                      {item.cta} →
-                    </Link>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+          {identity.map((item) => (
+            <IdentityCard key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </section>

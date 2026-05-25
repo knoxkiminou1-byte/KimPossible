@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  /* Maison Theme (Default - Luxury) */
+  /* Base theme */
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(0, 0%, 4%);
   --card: hsl(0, 0%, 100%);
@@ -140,60 +140,21 @@
 @layer components {
   .animate-on-scroll {
     opacity: 0;
-    transform: translate3d(0, 52px, 0) scale(0.985);
-    filter: blur(8px);
+    transform: translate3d(0, 24px, 0);
     transition:
-      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 1s cubic-bezier(0.22, 1, 0.36, 1),
-      filter 1s cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: transform, opacity, filter;
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
   }
 
   .animate-on-scroll.visible {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
-    filter: blur(0);
+    transform: translate3d(0, 0, 0);
   }
 
   .page-transition-shell {
     min-height: 100vh;
     transform-origin: 50% 24%;
-  }
-
-  .mega-menu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease-out;
-  }
-
-  .mega-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .door-card {
-    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-  }
-
-  .door-card:hover {
-    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
-    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25);
-  }
-
-  .lookbook-container {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .lookbook-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .lookbook-item {
-    scroll-snap-align: start;
-    flex-shrink: 0;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -214,27 +175,6 @@
   .font-sans {
     font-family: var(--font-sans);
   }
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0px); }
-}
-
-@keyframes heroKenburns {
-  0% { transform: scale(1.02) translate3d(0, 0.5%, 0); }
-  50% { transform: scale(1.05) translate3d(-0.5%, -1.25%, 0); }
-  100% { transform: scale(1.08) translate3d(-1.5%, -3%, 0); }
 }
 
 @keyframes poemBackgroundDrift {
@@ -261,18 +201,6 @@
   100% { opacity: 0.22; transform: translate3d(-0.5%, -1.4%, 0); }
 }
 
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
 .hero-media {
   position: absolute;
   inset: 0;
@@ -287,17 +215,15 @@
   object-fit: cover;
   object-position: center;
   transform-origin: center;
-  will-change: transform;
-  animation: heroKenburns 26s ease-in-out infinite alternate;
+  will-change: auto;
+  animation: none;
 }
 
 .hero-gradient {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(120% 70% at 15% 10%, rgba(255, 220, 120, 0.14), transparent 58%),
-    radial-gradient(120% 80% at 82% 8%, rgba(120, 170, 255, 0.12), transparent 60%),
-    linear-gradient(180deg, rgba(3, 5, 10, 0.28), rgba(3, 5, 10, 0.62) 58%, rgba(3, 5, 10, 0.88));
+    linear-gradient(180deg, rgba(3, 5, 10, 0.22), rgba(3, 5, 10, 0.6) 58%, rgba(3, 5, 10, 0.88));
   pointer-events: none;
 }
 
@@ -337,8 +263,7 @@
   position: absolute;
   inset: -6%;
   background:
-    radial-gradient(26% 22% at 18% 20%, rgba(245, 158, 11, 0.14), transparent 72%),
-    radial-gradient(24% 20% at 78% 24%, rgba(251, 191, 36, 0.1), transparent 74%);
+    radial-gradient(26% 22% at 18% 20%, rgba(245, 158, 11, 0.08), transparent 72%);
   pointer-events: none;
   will-change: transform, opacity;
   animation: poemGlowFloat 24s ease-in-out infinite alternate;
@@ -373,8 +298,7 @@
   position: absolute;
   inset: -8%;
   background:
-    radial-gradient(28% 24% at 18% 18%, rgba(251, 191, 36, 0.12), transparent 72%),
-    radial-gradient(24% 20% at 82% 22%, rgba(245, 158, 11, 0.08), transparent 74%);
+    radial-gradient(28% 24% at 18% 18%, rgba(251, 191, 36, 0.07), transparent 72%);
   pointer-events: none;
   will-change: transform, opacity;
   animation: sectionGlowDrift 26s ease-in-out infinite alternate;
@@ -389,180 +313,28 @@
   }
 }
 
-/* Luxury Logo Animations */
-.luxury-logo {
+/* Shared card and button effects */
+.surface-card {
   position: relative;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.luxury-logo:hover {
-  transform: scale(1.05);
+.surface-card::before {
+  content: none;
 }
 
-.animation-delay-0 { transition-delay: 0ms; }
-.animation-delay-75 { transition-delay: 75ms; }
-.animation-delay-150 { transition-delay: 150ms; }
-.animation-delay-225 { transition-delay: 225ms; }
-.animation-delay-300 { transition-delay: 300ms; }
-.animation-delay-375 { transition-delay: 375ms; }
-.animation-delay-450 { transition-delay: 450ms; }
-.animation-delay-525 { transition-delay: 525ms; }
-.animation-delay-600 { transition-delay: 600ms; }
-.animation-delay-675 { transition-delay: 675ms; }
-.animation-delay-750 { transition-delay: 750ms; }
-
-/* Luxury Effects */
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+.surface-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.12);
 }
 
-.shimmer {
-  animation: shimmer 2s infinite;
-}
-
-/* Luxury Card Effects */
-.luxury-card {
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.solid-button {
   position: relative;
   overflow: hidden;
 }
 
-.luxury-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-  transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.luxury-card:hover::before {
-  left: 100%;
-}
-
-.luxury-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-}
-
-/* Enhanced Button Styles */
-.luxury-button {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.luxury-button::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255,255,255,0.08);
-  border-radius: 50%;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: translate(-50%, -50%);
-}
-
-.luxury-button:hover::after {
-  width: 400px;
-  height: 400px;
-}
-
-/* Timeline Animations */
-.timeline-line {
-  animation: timelineGrow 3s ease-out forwards;
-}
-
-@keyframes timelineGrow {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-.timeline-item:hover .luxury-card {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-/* Advanced Visual Effects */
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-  50% { opacity: 1; transform: scale(1) rotate(180deg); }
-}
-
-@keyframes glow {
-  0%, 100% { box-shadow: 0 0 5px rgba(139, 92, 246, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.4); }
-}
-
-@keyframes rainbow {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
-}
-
-.animate-sparkle {
-  animation: sparkle 2s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 3s ease-in-out infinite;
-}
-
-.animate-rainbow {
-  animation: rainbow 8s linear infinite;
-}
-
-/* Enhanced hover effects */
-.hover-lift {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.hover-lift:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-}
-
-/* Parallax background effects */
-.parallax-bg {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Advanced gradient text effects */
-.gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
-  animation: gradientShift 4s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Additional luxury styling from your uploaded files */
+/* Additional shared utilities */
 .scrollbar::-webkit-scrollbar { height: 10px; width: 10px; }
 .scrollbar::-webkit-scrollbar-thumb { background: #ffffff22; border-radius: 10px; }
 .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); }
-.grain { 
-  position: fixed; 
-  inset: -50px; 
-  pointer-events: none; 
-  opacity: .04; 
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  mix-blend-mode: overlay; 
-}

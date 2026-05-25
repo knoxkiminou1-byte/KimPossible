@@ -20,48 +20,48 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  {
-    src: "/photos/athletic-pose.jpg",
-    alt: "Basketball action shot",
-    title: "Court Dominance",
-    category: "athlete",
-    description: "Commanding the basketball court with 6'7\" presence and leadership as team captain"
-  },
+	{
+	  src: "/photos/athletic-pose.jpg",
+	  alt: "Basketball action shot",
+	  title: "Court Work",
+	  category: "athlete",
+	  description: "Varsity basketball work built on size, repetition, and team responsibility"
+	},
   {
     src: "/photos/author-reading-book.jpg",
-    alt: "Poetry writing session",
-    title: "Literary Creation",
-    category: "author",
-    description: "Crafting verses that explore love, faith, identity, and the Black experience"
-  },
+	  alt: "Poetry writing session",
+	  title: "Writing & Books",
+	  category: "author",
+	  description: "Writing poems and stories about love, faith, identity, and family"
+	},
   {
-    src: "/photos/entrepreneur-style.jpg",
-    alt: "The Tee Shirt Teens brand",
-    title: "Fashion Innovation", 
-    category: "entrepreneur",
-    description: "Building The Tee Shirt Teens into a voice for authentic youth expression"
-  },
+	  src: "/photos/entrepreneur-style.jpg",
+	  alt: "The Tee Shirt Teens brand",
+	  title: "Creative Projects",
+	  category: "entrepreneur",
+	  description: "Developing apparel, content, and community ideas with young people in mind"
+	},
   {
-    src: "/photos/creative-designer.jpg",
-    alt: "Creative design work",
-    title: "Visual Storytelling",
-    category: "designer",
-    description: "Developing content and community programs that resonate with young audiences"
-  },
+	  src: "/photos/creative-designer.jpg",
+	  alt: "Creative design work",
+	  title: "Photo & Design",
+	  category: "designer",
+	  description: "Building visual material for books, projects, and community work"
+	},
   {
-    src: "/photos/athletic-pose.jpg",
-    alt: "Athletic excellence",
-    title: "Athletic Excellence",
-    category: "athlete",
-    description: "6'7\" basketball leader bringing dedication and strategy to Ygnacio Valley"
-  },
+	  src: "/photos/athletic-pose.jpg",
+	  alt: "Athletic excellence",
+	  title: "Athletic Development",
+	  category: "athlete",
+	  description: "Training, film, and court reps from the high school basketball journey"
+	},
   {
     src: "/photos/author-portrait.jpg",
-    alt: "Book collection",
-    title: "Published Works",
-    category: "author",
-    description: "Four poetry collections showcasing emotional depth and artistic growth"
-  }
+	  alt: "Book collection",
+	  title: "Published Works",
+	  category: "author",
+	  description: "Books and poems written across several stages of the creative journey"
+	}
 ];
 
 const categories = ["all", "athlete", "author", "entrepreneur", "designer"];
@@ -71,7 +71,7 @@ const getCategoryLabel = (category: string) => {
     all: "All",
     athlete: "Athlete", 
     author: "Author",
-    entrepreneur: "Entrepreneur",
+    entrepreneur: "Projects",
     designer: "Designer"
   };
   return labels[category] || category;
@@ -161,10 +161,10 @@ export default function PhotoGallery() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16" ref={galleryRef}>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="gallery-title">
-              Visual Journey
+              Photos
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="gallery-subtitle">
-              Capturing moments across athletics, literature, business, and creative expression
+              A few moments from books, basketball, and creative projects.
             </p>
           </div>
 
@@ -174,7 +174,7 @@ export default function PhotoGallery() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium uppercase tracking-[0.1em] transition-all duration-300 ${
+	                className={`rounded-md px-6 py-3 font-medium uppercase tracking-[0.1em] transition-colors ${
                   selectedCategory === category
                     ? 'bg-primary text-primary-foreground shadow-lg'
                     : 'bg-card border border-border hover:bg-accent hover:text-accent-foreground'
@@ -199,7 +199,7 @@ export default function PhotoGallery() {
                   className="pl-0 md:pl-4 md:basis-1/2 xl:basis-1/3"
                 >
                   <div 
-                    className="luxury-card group relative overflow-hidden rounded-lg cursor-pointer"
+                    className="surface-card group relative overflow-hidden rounded-lg cursor-pointer"
                     onClick={() => openLightbox(image, index)}
                     data-testid={`gallery-image-${index}`}
                   >

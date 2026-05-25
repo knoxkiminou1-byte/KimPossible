@@ -90,7 +90,7 @@ export default function BookPreview() {
             {books.map((book, index) => (
               <div 
                 key={book.id}
-                className={`luxury-card group relative cursor-pointer ${book.featured ? 'ring-2 ring-primary/20' : ''}`}
+                className={`surface-card group relative cursor-pointer ${book.featured ? 'ring-2 ring-primary/20' : ''}`}
                 onClick={() => openPreview(book)}
                 data-testid={`book-card-${index}`}
               >
@@ -164,7 +164,7 @@ export default function BookPreview() {
               href="https://bookshop.org/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="luxury-button inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+              className="solid-button inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 font-medium uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90"
               data-testid="books-shop-link"
             >
               <ExternalLink className="w-5 h-5" />
@@ -177,7 +177,7 @@ export default function BookPreview() {
       {/* Preview Modal */}
       {selectedBook && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" data-testid="book-modal">
-          <div className="relative max-w-4xl max-h-full bg-card rounded-2xl overflow-hidden">
+	          <div className="relative max-w-4xl max-h-full bg-card rounded-lg overflow-hidden">
             {/* Close Button */}
             <button
               onClick={closePreview}
@@ -238,7 +238,7 @@ export default function BookPreview() {
                     href={selectedBook.buyLinks.amazon || selectedBook.buyLinks.googleBooks || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="luxury-button flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+	                    className="solid-button flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                     data-testid="book-buy-link"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -246,7 +246,7 @@ export default function BookPreview() {
                   </a>
                   <button 
                     onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-border font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
+	                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-border px-6 py-3 font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     data-testid="book-sample-poems"
                   >
                     <BookOpen className="w-4 h-4" />

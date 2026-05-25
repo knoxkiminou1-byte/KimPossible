@@ -4,9 +4,7 @@ import Hero from "@/components/Hero";
 import FeaturedBookPromo from "@/components/FeaturedBookPromo";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
 import PhotoGallery from "@/components/PhotoGallery";
-import Testimonials from "@/components/Testimonials";
 import BookPreview from "@/components/BookPreview";
-import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
 import Footer from "@/components/Footer";
@@ -23,25 +21,25 @@ export default function Home() {
       "https://x.com/KiminouKnox",
       "https://www.instagram.com/hofkiminou"
     ],
-    "jobTitle": "Athlete, Author, Entrepreneur"
+    "jobTitle": "Writer, Athlete, Program Builder"
   };
 
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
-        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Seven published works, NCAA registered athlete, and youth advocate." />
+        <title>Kiminou Knox | Writer, Athlete & Program Builder</title>
+        <meta name="description" content="Official website of Kiminou Knox, a Bay Area writer, athlete, and program builder. Explore books, basketball, speaking, and community work." />
         <link rel="canonical" href="https://kiminouknox.com/" />
         
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
+        <meta property="og:title" content="Kiminou Knox | Writer, Athlete & Program Builder" />
+        <meta property="og:description" content="Books, basketball, speaking, and community work from the Bay Area." />
         <meta property="og:url" content="https://kiminouknox.com/" />
         <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta name="twitter:description" content="19 year old athlete, published author, entrepreneur, and creative" />
+        <meta name="twitter:title" content="Kiminou Knox | Writer, Athlete & Program Builder" />
+        <meta name="twitter:description" content="Bay Area writer, athlete, and program builder." />
         <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
         
         <script type="application/ld+json">
@@ -50,12 +48,6 @@ export default function Home() {
       </Helmet>
 
       <div className="bg-background text-foreground font-sans antialiased relative">
-      <ParticleEffect 
-        density={120} 
-        effects={['sparkle', 'glow', 'star', 'dust']}
-        colors={["#8B5CF6", "#06B6D4", "#10B981", "#F59E0B", "#EF4444", "#EC4899"]}
-        className="z-0"
-      />
       <div className="relative z-10">
         <Header />
         <Hero />
@@ -65,7 +57,6 @@ export default function Home() {
         <BookPreview />
         <PhotoGallery />
         <PressStrip />
-        <Testimonials />
         <Footer />
         <ContactFAB />
       </div>

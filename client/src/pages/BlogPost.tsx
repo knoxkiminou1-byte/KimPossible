@@ -104,7 +104,7 @@ function BlogPostPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
+    <div className="min-h-screen bg-background">
       {/* Header Navigation */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -138,7 +138,7 @@ function BlogPostPage() {
             </div>
           </div>
 
-          <h1 className="text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-serif font-bold mb-6 leading-tight text-foreground">
             {post.title}
           </h1>
 
@@ -211,16 +211,15 @@ function BlogPostPage() {
         <Separator className="mb-12" />
 
         {/* Author Bio */}
-        <div className="bg-card/50 backdrop-blur-sm rounded-lg p-8 mb-12">
+        <div className="bg-card rounded-lg border p-8 mb-12">
           <div className="flex items-start gap-6">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-primary to-purple-500 flex items-center justify-center text-white font-bold text-2xl">
+            <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-2xl">
               KK
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-2">Kiminou Knox</h3>
               <p className="text-muted-foreground mb-4">
-                18-year-old athlete, author, and entrepreneur from the Bay Area. Passionate about 
-                sharing insights on sports, literature, and business through authentic storytelling.
+                Bay Area writer, athlete, and program builder writing about books, basketball, faith, discipline, and the people who shaped him.
               </p>
               <div className="flex gap-2">
                 <Link href="/">

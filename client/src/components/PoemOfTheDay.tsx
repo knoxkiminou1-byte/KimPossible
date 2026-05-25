@@ -23,13 +23,12 @@ export default function PoemOfTheDay() {
   useEffect(() => {
     async function loadPoem() {
       try {
-        console.log('Loading poems from /poems.json...');
         const response = await fetch('/poems.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const poems: Poem[] = await response.json();
-        console.log('Loaded poems:', poems.length);
+        if (poems.length === 0) return;
         
         // Select poem based on day of year for daily rotation
         const now = new Date();
@@ -40,10 +39,8 @@ export default function PoemOfTheDay() {
         
         // Use modulo to cycle through poems
         const poemIndex = dayOfYear % poems.length;
-        console.log('Selected poem index:', poemIndex, 'Title:', poems[poemIndex].title);
         setPoem(poems[poemIndex]);
-      } catch (error) {
-        console.error('Failed to load poems:', error);
+      } catch {
         // Keep the default poem on error
       }
     }
@@ -61,7 +58,7 @@ export default function PoemOfTheDay() {
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/68 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.16),transparent_42%),radial-gradient(circle_at_80%_18%,rgba(251,191,36,0.08),transparent_32%)]" />
         <div className="poem-of-day-vignette" />
         <div className="poem-of-day-glow" />
@@ -70,10 +67,10 @@ export default function PoemOfTheDay() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
         <div ref={containerRef} className="animate-on-scroll">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <BookOpen className="w-5 h-5 text-amber-200" />
-              <span className="text-sm uppercase tracking-[0.2em] text-amber-100/80 font-semibold">
-                Poem of the Day
+              <div className="inline-flex items-center gap-2 mb-4">
+                <BookOpen className="w-5 h-5 text-amber-200" />
+                <span className="text-sm uppercase tracking-[0.2em] text-amber-100/80 font-semibold">
+                Featured Poem
               </span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl font-light mb-8 text-white" data-testid="poem-title">
@@ -81,8 +78,8 @@ export default function PoemOfTheDay() {
             </h2>
           </div>
 
-          <div className="relative">
-            <div className="rounded-2xl border border-white/10 bg-black/35 p-8 shadow-2xl backdrop-blur-[2px] md:p-12">
+            <div className="relative">
+            <div className="rounded-lg border border-white/10 bg-black/40 p-8 shadow-xl backdrop-blur-[2px] md:p-12">
               <div 
                 className="poem-text text-lg md:text-xl leading-relaxed text-white whitespace-pre-line font-serif text-center max-h-96 overflow-y-auto"
                 data-testid="poem-text"
@@ -100,7 +97,7 @@ export default function PoemOfTheDay() {
                 className="inline-flex items-center text-sm font-semibold text-amber-200 hover:underline"
                 data-testid="poem-read-book-link"
               >
-                Read the Book →
+                Explore Books →
               </Link>
             </div>
           </div>

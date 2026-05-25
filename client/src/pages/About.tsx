@@ -13,7 +13,7 @@ export default function About() {
         "alternateName": "Kiminou",
         "url": "https://kiminouknox.com/",
         "image": "https://kiminouknox.com/media/headshot.jpg",
-        "description": "Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact.",
+        "description": "Bay Area writer and athlete working across books, poems, basketball, speaking, and youth-facing projects.",
         "jobTitle": "Writer and athlete",
         "affiliation": [{
           "@type": "Organization",
@@ -55,12 +55,12 @@ export default function About() {
     <>
       <Helmet>
         <title>About - Kiminou Knox</title>
-        <meta name="description" content="Writer and athlete from East Palo Alto, California. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose." />
+        <meta name="description" content="Writer and athlete from East Palo Alto, California. Books, poems, basketball, speaking, and youth-facing projects." />
         <link rel="canonical" href="https://kiminouknox.com/about" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About - Kiminou Knox" />
-        <meta property="og:description" content="Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact" />
+        <meta property="og:description" content="Bay Area writer and athlete working across books, poems, basketball, speaking, and youth-facing projects." />
         <meta property="og:url" content="https://kiminouknox.com/about" />
         <meta property="og:image" content="https://kiminouknox.com/og/about.jpg" />
         
@@ -87,15 +87,15 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, I create work that helps people feel deeply and act with purpose.
+                I am a writer and athlete from East Palo Alto, California. My work moves between books, poems, basketball, speaking, and youth-focused projects.
               </p>
 
               <p data-testid="about-stats">
-                My work includes 7 published books and recognition through 5 major awards. Academically, I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                The work now spans seven published books, athletics, speaking, and community projects. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
               </p>
 
               <p data-testid="about-family">
-                My family serves as my compass. I am the son of Rashida Knox, a distinguished Bay Area marketer and presidential singer whose dedication to excellence shapes my approach to every endeavor. My grandmother, Dr. Faye McNair Knox, devoted her life to serving the One East Palo Alto community as its executive director, teaching me that service is a promise you renew each day.
+                My family is the center of that standard. My mother, Rashida Knox, shaped my sense of discipline and presentation. My grandmother, Dr. Faye McNair Knox, served the One East Palo Alto community as its executive director and taught me that service is something you keep renewing.
               </p>
 
               <p data-testid="about-work">
@@ -103,15 +103,15 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work.
+                My published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am continuing to build those books into a larger body of poems, stories, essays, readings, and media.
               </p>
 
               <p data-testid="about-speaking">
-                As a speaker, I address craft, discipline, voice, and the cost of silence. I collaborate with teams, schools, and community organizations to transform ideas into meaningful action that creates lasting change.
+                As a speaker, I work with teams, schools, and community groups on writing, discipline, grief, faith, and how young people can find a voice without performing one.
               </p>
 
               <p data-testid="about-closing" className="font-medium">
-                Thank you for taking the time to learn about my journey. Together, let us build work that endures.
+                Thank you for taking the time to read. The work is still growing.
               </p>
             </div>
           </div>

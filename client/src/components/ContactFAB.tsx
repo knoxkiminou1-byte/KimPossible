@@ -1,17 +1,20 @@
 import { MessageCircle } from "lucide-react";
 
 export default function ContactFAB() {
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+	  const scrollToContact = () => {
+	    const element = document.querySelector('#contact');
+	    if (element) {
+	      element.scrollIntoView({ behavior: 'smooth' });
+	      return;
+	    }
+
+	    window.location.href = "/contact";
+	  };
 
   return (
     <button 
       onClick={scrollToContact}
-      className="fixed bottom-8 right-8 w-14 h-14 bg-accent text-accent-foreground rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 z-40 animate-float"
+      className="fixed bottom-8 right-8 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg transition-shadow hover:shadow-xl"
       aria-label="Contact"
       data-testid="contact-fab"
     >
