@@ -129,9 +129,9 @@ export default function BooksPage() {
                       View Details <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
-                  {(b.buyLinks.amazon || b.buyLinks.googleBooks) && (
+                  {Object.values(b.buyLinks).some(Boolean) && (
                     <a 
-                      href={b.buyLinks.amazon || b.buyLinks.googleBooks || ""} 
+                      href={Object.values(b.buyLinks).find(Boolean) || ""}
                       target="_blank" 
                       rel="noopener noreferrer external"
                       className="block rounded-md border border-amber-200 px-4 py-2 text-center text-sm text-amber-200 transition-colors hover:bg-amber-200 hover:text-black"

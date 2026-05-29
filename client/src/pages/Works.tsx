@@ -11,7 +11,7 @@ interface Book {
   subtitle: string;
   year: number;
   datePublished: string;
-  isbn: string;
+  isbn?: string | null;
   cover: string;
   description: string;
   buyLinks: Record<string, string | null | undefined>;
@@ -33,7 +33,7 @@ export default function Works() {
     "@id": `https://www.kiminouknox.com/books/${book.id}#book`,
     "name": book.title,
     "url": `https://www.kiminouknox.com/books/${book.id}`,
-    "image": `https://www.kiminouknox.com${book.cover}`,
+    "image": book.cover.startsWith("http") ? book.cover : `https://www.kiminouknox.com${book.cover}`,
     "author": { "@id": "https://www.kiminouknox.com/#person" },
     "workExample": [
       { "@type": "Book", "bookFormat": "https://schema.org/EBook", "url": book.buyLinks.amazon || book.buyLinks.googleBooks || "" },

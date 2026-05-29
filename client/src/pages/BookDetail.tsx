@@ -75,7 +75,7 @@ export default function BookDetail() {
   }
 
   const bookUrl = `https://www.kiminouknox.com/books/${book.id}`;
-  const bookImage = `https://www.kiminouknox.com${book.cover}`;
+  const bookImage = book.cover.startsWith("http") ? book.cover : `https://www.kiminouknox.com${book.cover}`;
   const retailerLinks = Object.entries(book.buyLinks).filter(
     (entry): entry is [string, string] => Boolean(entry[1])
   );
@@ -109,7 +109,7 @@ export default function BookDetail() {
         "sameAs": retailerLinks.map(([, url]) => url),
         "workExample": retailerLinks.map(([key, url]) => ({
           "@type": "Book",
-          "bookFormat": key.includes("google") ? "EBook" : "Paperback",
+          "bookFormat": key.includes("google") ? "https://schema.org/EBook" : "https://schema.org/Paperback",
           "url": url
         }))
       },

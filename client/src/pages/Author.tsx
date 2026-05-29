@@ -52,7 +52,7 @@ export default function Author() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
-        <meta name="description" content="Kiminou Knox is a Bay Area writer, poet, athlete, and program builder working across books, basketball, speaking, and community projects." />
+        <meta name="description" content="Kiminou Knox is a Bay Area author, poet, athlete, speaker, and program builder working across books, basketball, speaking, and community projects." />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
@@ -103,7 +103,7 @@ export default function Author() {
                   <motion.img
                     src="/author-kiminou.jpg"
                     alt="Kiminou Knox - author, athlete, and entrepreneur from East Palo Alto"
-                    title="Kiminou Knox - Writer, Athlete & Program Builder"
+                    title="Kiminou Knox - Author, Athlete & Program Builder"
                     className="w-full h-full object-cover"
                     initial={{ scale: 1.03 }}
                     animate={{ scale: 1 }}
@@ -187,7 +187,7 @@ export default function Author() {
                   transition={{ delay: 1.3 }}
                 >
                   {[
-                    { name: "Goodreads", url: "https://www.goodreads.com/author/show/Kiminou_Knox" },
+                    { name: "Goodreads", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
                     { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
                     { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
                     { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
@@ -229,7 +229,7 @@ export default function Author() {
                 <div className="space-y-8 text-gray-300 text-lg leading-relaxed">
 	                  <div className="space-y-4">
 	                    <p>
-	                      Kiminou Knox is a writer, speaker, athlete, and program builder from East Palo Alto, now based in Oakland, California. His work moves between poetry, fiction, basketball, faith, and community projects for young people.
+	                      Kiminou Knox is an author, poet, speaker, athlete, and program builder from the Oakland and East Palo Alto Bay Area. His work moves between poetry, fiction, basketball, faith, and community projects for young people.
 	                    </p>
 	                  </div>
 
@@ -246,7 +246,7 @@ export default function Author() {
                   <div className="space-y-4">
 	                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
 	                    <p>
-	                      Knox has published six books across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
+	                      Knox has seven featured book titles across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
 	                    </p>
 	                    <p>
 	                      The pages deal with faith, mental health, family fracture, masculinity, love, longing, and spiritual confusion. The goal is not to make pain decorative; it is to name it clearly enough that a reader can recognize something true.
@@ -331,7 +331,7 @@ export default function Author() {
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-8">
-                  <a href="https://www.goodreads.com/author/show/Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                  <a href="https://www.goodreads.com/author/show/55621683.Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
                     Goodreads
                   </a>
                   <a href="https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">

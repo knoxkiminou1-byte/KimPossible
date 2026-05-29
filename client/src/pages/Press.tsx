@@ -39,8 +39,14 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
       {
         name: "Goodreads Author Profile",
         source: "Goodreads",
-        detail: "Reader-facing author profile and book records.",
-        link: "https://www.goodreads.com/author/show/Kiminou_Knox"
+        detail: "Reader-facing author profile and book records, including the numeric public author ID.",
+        link: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox"
+      },
+      {
+        name: "Black Boy Poems on Bookshop.org",
+        source: "Bookshop.org",
+        detail: "Paperback listing for Black Boy Poems with publisher, date, pages, format, and EAN.",
+        link: "https://bookshop.org/p/books/black-boy-poems-kiminou-knox/aaa3d62740820b18?ean=9798267606912"
       },
       {
         name: "Google Play Books Listings",

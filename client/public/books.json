@@ -5,7 +5,7 @@
     "subtitle": "What is Love To A Man Made To Destroy It",
     "year": 2025,
     "isbn": "9798316662975",
-    "datePublished": "2025-01-15",
+    "datePublished": "2025-04-03",
     "cover": "/covers/spirit-solomon.jpg",
     "samplePoems": [
       {
@@ -69,9 +69,8 @@
     "id": "poems-black-boy",
     "title": "Poems from a Black Boy",
     "subtitle": "Identity, Heritage, and Hope",
-    "year": 2024,
-    "isbn": "9798316662975",
-    "datePublished": "2024-09-29",
+    "year": 2025,
+    "datePublished": "2025-09",
     "cover": "/covers/poems-black-boy.jpg",
     "samplePoems": [
       {
@@ -91,12 +90,33 @@
     "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
-      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_From_A_Black_Boy?id=0HuKEQAAQBAJ",
       "goodreads": "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
-      "waterstones": "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
-      "hatchards": "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
-      "booksAMillion": "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975",
       "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Identity, Silence, Trauma, and Redemption",
+    "year": 2025,
+    "isbn": "9798267606912",
+    "datePublished": "2025-09-29",
+    "cover": "/og-image.png",
+    "samplePoems": [
+      {
+        "title": "Identity & Resilience",
+        "content": "This preview is reserved for the published edition. Black Boy Poems is listed publicly as a paperback poetry collection by Kiminou Knox, published September 29, 2025."
+      }
+    ],
+    "themes": ["Black Boyhood", "Healing", "Resilience"],
+    "description": "A poetry collection on identity, silence, trauma, healing, faith, and the fullness of Black boyhood.",
+    "buyLinks": {
+      "bookshop": "https://bookshop.org/p/books/black-boy-poems-kiminou-knox/aaa3d62740820b18?ean=9798267606912",
+      "goodreads": "https://www.goodreads.com/book/show/242205179-black-boy-poems",
+      "booksAMillion": "https://www.booksamillion.com/p/Black-Boy-Poems/Kiminou-Knox/9798267606912",
+      "hatchards": "https://www.hatchards.co.uk/book/black-boy-poems/kiminou-knox/9798267606912",
       "bn": null
     }
   },

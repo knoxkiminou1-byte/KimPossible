@@ -39,7 +39,7 @@ const sameAsLinks = [
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
-  "https://www.goodreads.com/author/show/Kiminou_Knox",
+  "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
   "https://www.instagram.com/kiminouknox",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
@@ -64,9 +64,9 @@ export const proofLinks: ProofLink[] = [
   {
     name: "Goodreads Author Profile",
     source: "Goodreads",
-    url: "https://www.goodreads.com/author/show/Kiminou_Knox",
+    url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
     category: "Books",
-    description: "Reader-facing author profile and book listings.",
+    description: "Reader-facing author profile and book listings, including the public Goodreads author ID.",
   },
   {
     name: "Google Play Books Listings",
@@ -126,7 +126,7 @@ const books: BookSeo[] = [
     subtitle: "What is Love To A Man Made To Destroy It",
     year: 2025,
     isbn: "9798316662975",
-    datePublished: "2025-01-15",
+    datePublished: "2025-04-03",
     cover: "/covers/spirit-solomon.jpg",
     description:
       "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
@@ -163,23 +163,36 @@ const books: BookSeo[] = [
     id: "poems-black-boy",
     title: "Poems from a Black Boy",
     subtitle: "Identity, Heritage, and Hope",
-    year: 2024,
-    isbn: "9798316662975",
-    datePublished: "2024-09-29",
+    year: 2025,
+    datePublished: "2025-09",
     cover: "/covers/poems-black-boy.jpg",
     description:
       "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     buyLinks: {
       amazon: "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
       googleBooks:
-        "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
+        "https://play.google.com/store/books/details/Kiminou_Knox_Poems_From_A_Black_Boy?id=0HuKEQAAQBAJ",
       goodreads: "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
-      waterstones:
-        "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
-      hatchards:
-        "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+    },
+  },
+  {
+    id: "black-boy-poems",
+    title: "Black Boy Poems",
+    subtitle: "Identity, Silence, Trauma, and Redemption",
+    year: 2025,
+    isbn: "9798267606912",
+    datePublished: "2025-09-29",
+    cover: "/og-image.png",
+    description:
+      "A poetry collection on identity, silence, trauma, healing, faith, and the fullness of Black boyhood.",
+    buyLinks: {
+      bookshop:
+        "https://bookshop.org/p/books/black-boy-poems-kiminou-knox/aaa3d62740820b18?ean=9798267606912",
+      goodreads: "https://www.goodreads.com/book/show/242205179-black-boy-poems",
       booksAMillion:
-        "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975",
+        "https://www.booksamillion.com/p/Black-Boy-Poems/Kiminou-Knox/9798267606912",
+      hatchards:
+        "https://www.hatchards.co.uk/book/black-boy-poems/kiminou-knox/9798267606912",
     },
   },
   {
@@ -288,12 +301,12 @@ function personSchema() {
     name: "Kiminou Knox",
     url: `${SITE_URL}/`,
     image: `${SITE_URL}/author-kiminou.jpg`,
-    jobTitle: ["Writer", "Athlete", "Program Builder"],
+    jobTitle: ["Author", "Poet", "Athlete", "Speaker", "Program Builder"],
     description:
-      "Kiminou Knox is a Bay Area writer and athlete working across books, poems, basketball, speaking, and youth-facing projects.",
-    birthPlace: {
+      "Kiminou Knox is a Bay Area author, poet, athlete, speaker, and program builder working across books, poetry, basketball, speaking, and youth-facing projects.",
+    homeLocation: {
       "@type": "Place",
-      name: "East Palo Alto, California",
+      name: "Oakland and East Palo Alto Bay Area",
     },
     nationality: "American",
     knowsAbout: [
@@ -380,7 +393,7 @@ function bookSchema(book: BookSeo) {
       .filter(([, url]) => Boolean(url))
       .map(([key, url]) => ({
         "@type": "Book",
-        bookFormat: key === "googleBooks" ? "EBook" : "Paperback",
+        bookFormat: key === "googleBooks" ? "https://schema.org/EBook" : "https://schema.org/Paperback",
         url,
       })),
   };
@@ -427,15 +440,15 @@ function proofListSchema() {
 function routeMeta(pathname: string) {
   const routeData: Record<string, { title: string; description: string; type?: string }> = {
     "/": {
-      title: "Kiminou Knox | Writer, Athlete & Program Builder",
+      title: "Kiminou Knox | Author, Athlete & Program Builder",
       description:
-        "Official home of Kiminou Knox: Bay Area writer, athlete, and program builder working across books, basketball, speaking, and community projects.",
+        "Official home of Kiminou Knox: Bay Area author, poet, athlete, speaker, and program builder working across books, basketball, speaking, and community projects.",
       type: "ProfilePage",
     },
     "/about": {
-      title: "About Kiminou Knox | Writer, Athlete & Program Builder",
+      title: "About Kiminou Knox | Author, Athlete & Program Builder",
       description:
-        "Learn about Kiminou Knox, a Bay Area writer, basketball player, speaker, and program builder.",
+        "Learn about Kiminou Knox, a Bay Area author, poet, basketball player, speaker, and program builder.",
       type: "ProfilePage",
     },
     "/author": {

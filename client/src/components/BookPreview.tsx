@@ -23,6 +23,9 @@ interface BookData {
   buyLinks: {
     amazon?: string | null;
     googleBooks?: string | null;
+    goodreads?: string | null;
+    booksAMillion?: string | null;
+    hatchards?: string | null;
     bookshop?: string | null;
     bn?: string | null;
   };
@@ -235,7 +238,7 @@ export default function BookPreview() {
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href={selectedBook.buyLinks.amazon || selectedBook.buyLinks.googleBooks || "#"}
+                    href={Object.values(selectedBook.buyLinks).find(Boolean) || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
 	                    className="solid-button flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
