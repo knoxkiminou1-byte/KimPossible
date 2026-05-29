@@ -10,6 +10,9 @@ type BookSeo = {
   cover: string;
   description: string;
   buyLinks: BookLinkMap;
+  format?: string;
+  price?: string;
+  authors?: string[];
 };
 
 type ProofLink = {
@@ -41,6 +44,11 @@ const sameAsLinks = [
   "https://prephoops.com/player/kiminou-knox/",
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
+  "https://medium.com/@knoxkiminou1/about",
+  "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+  "https://about.me/kiminou",
+  "https://stan.store/kiminou",
+  "https://www.wikidata.org/wiki/Q137260299",
   "https://www.instagram.com/kiminouknox",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
@@ -126,7 +134,7 @@ const books: BookSeo[] = [
     subtitle: "What is Love To A Man Made To Destroy It",
     year: 2025,
     isbn: "9798316662975",
-    datePublished: "2025-04-03",
+    datePublished: "2025-07-09",
     cover: "/covers/spirit-solomon.jpg",
     description:
       "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
@@ -144,7 +152,7 @@ const books: BookSeo[] = [
     subtitle: "A Poetic Journey Through Faith, Doubt, and Divine Silence",
     year: 2025,
     isbn: "9798316682850",
-    datePublished: "2025-02-10",
+    datePublished: "2025-03-10",
     cover: "/covers/our-father.jpg",
     description:
       "A candid wrestling with prayer and presence when belief collides with unanswered questions.",
@@ -164,7 +172,7 @@ const books: BookSeo[] = [
     title: "Poems from a Black Boy",
     subtitle: "Identity, Heritage, and Hope",
     year: 2025,
-    datePublished: "2025-09",
+    datePublished: "2025-09-28",
     cover: "/covers/poems-black-boy.jpg",
     description:
       "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
@@ -201,7 +209,7 @@ const books: BookSeo[] = [
     subtitle: "Love, Loss, and Everything Between",
     year: 2025,
     isbn: "9798291608128",
-    datePublished: "2025-03-05",
+    datePublished: "2025-07-09",
     cover: "/covers/hopeless-romantic.jpg",
     description:
       "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
@@ -231,9 +239,9 @@ const books: BookSeo[] = [
     id: "boys-raised-in-silence",
     title: "Boys Raised in Silence",
     subtitle: "Breaking the Quiet, Finding Voice",
-    year: 2024,
+    year: 2025,
     isbn: "9798316735821",
-    datePublished: "2024-06-15",
+    datePublished: "2025-09-28",
     cover: "/covers/boys-raised-silence.jpg",
     description:
       "Poems about silence, pressure, and the work of learning how to speak honestly as a young Black man.",
@@ -251,7 +259,7 @@ const books: BookSeo[] = [
     subtitle: "A Journey of Friendship and Discovery",
     year: 2025,
     isbn: "9798316591204",
-    datePublished: "2025-01-20",
+    datePublished: "2025-09-28",
     cover: "/covers/adventures-chua-kiminou.jpg",
     description:
       "A children's story about two friends learning how courage and wisdom can work together.",
@@ -268,6 +276,10 @@ const basePages = [
   { path: "/about", title: "About", priority: "0.9", changefreq: "monthly" },
   { path: "/author", title: "Author Bio", priority: "0.9", changefreq: "monthly" },
   { path: "/books", title: "Books", priority: "0.9", changefreq: "monthly" },
+  { path: "/essays", title: "Essays", priority: "0.8", changefreq: "weekly" },
+  { path: "/kimyaps", title: "KimYaps", priority: "0.8", changefreq: "weekly" },
+  { path: "/editorial", title: "Editorial", priority: "0.7", changefreq: "monthly" },
+  { path: "/aafc-builders", title: "AAFC Builders", priority: "0.7", changefreq: "monthly" },
   { path: "/sports", title: "Basketball", priority: "0.8", changefreq: "monthly" },
   { path: "/speaking", title: "Speaking", priority: "0.8", changefreq: "monthly" },
   { path: "/press", title: "Verification and Press", priority: "0.8", changefreq: "monthly" },
@@ -312,9 +324,9 @@ function personSchema() {
     name: "Kiminou Knox",
     url: `${SITE_URL}/`,
     image: `${SITE_URL}/author-kiminou.jpg`,
-    jobTitle: ["Author", "Poet", "Athlete", "Speaker", "Program Builder"],
+    jobTitle: ["Writer", "Athlete", "Program Builder", "Author", "Chief Editor", "Podcast Host", "Creator"],
     description:
-      "Kiminou Knox is a Bay Area author, poet, athlete, speaker, and program builder working across books, poetry, basketball, speaking, and youth-facing projects.",
+      "Kiminou Knox is a Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator from the Oakland / East Palo Alto community, building across books, essays, KimYaps, AAFC, web design, athletics, and youth-centered storytelling.",
     homeLocation: {
       "@type": "Place",
       name: "Oakland and East Palo Alto Bay Area",
@@ -328,6 +340,10 @@ function personSchema() {
       "Bay Area Literature",
       "Youth Leadership",
       "Community Programs",
+      "KimYaps",
+      "Medium essays",
+      "AAFC Builders",
+      "Editorial development",
     ],
     sameAs: sameAsLinks,
   };
@@ -362,6 +378,7 @@ function webPageSchema(pathname: string, title: string, description: string, typ
       "@id": PERSON_ID,
     },
     inLanguage: "en-US",
+    ...(type === "ProfilePage" ? { mainEntity: { "@id": PERSON_ID } } : {}),
   };
 }
 
@@ -474,6 +491,30 @@ function routeMeta(pathname: string) {
         "Explore books by Kiminou Knox, including poetry collections, faith-centered writing, and youth stories available through major book retailers.",
       type: "CollectionPage",
     },
+    "/essays": {
+      title: "Essays by Kiminou Knox - Medium Writing, Faith, Black Boy Life & Creative Voice",
+      description:
+        "Read essays, poems, reflections, and public writing by Kiminou Knox, a Bay Area author, athlete, program builder, podcast host, and creator writing on faith, resilience, love, healing, Black boy life, and discipline.",
+      type: "CollectionPage",
+    },
+    "/kimyaps": {
+      title: "KimYaps Podcast - Kiminou Knox on Faith, Culture, Discipline & Identity",
+      description:
+        "Listen to KimYaps, the podcast by Kiminou Knox exploring faith, discipline, identity, culture, relationships, emotional growth, apologetics, and real-life reflection.",
+      type: "CollectionPage",
+    },
+    "/editorial": {
+      title: "Editorial Work by Kiminou Knox - Chief Editor Credits & Client Book Projects",
+      description:
+        "Explore chief-editor and client book projects connected to Kiminou Knox, including editorial development, sequencing, publishing support, and creator collaboration.",
+      type: "CollectionPage",
+    },
+    "/aafc-builders": {
+      title: "AAFC Builders - Web Design & Digital Infrastructure by Kiminou Knox",
+      description:
+        "Kiminou Knox builds websites, landing pages, digital infrastructure, and brand systems through AAFC Builders and related client work.",
+      type: "CollectionPage",
+    },
     "/sports": {
       title: "Basketball | Kiminou Knox",
       description:
@@ -542,6 +583,41 @@ function buildGraph(pathname: string, title: string, description: string, pageTy
 
   if (pathname === "/press") {
     graph.push(proofListSchema());
+  }
+
+  if (pathname === "/kimyaps") {
+    graph.push({
+      "@type": "PodcastSeries",
+      "@id": `${SITE_URL}/kimyaps#podcast`,
+      name: "KimYaps",
+      url: `${SITE_URL}/kimyaps`,
+      description:
+        "KimYaps is Kiminou Knox's podcast and public voice lane, centered on faith, discipline, identity, culture, relationships, emotional growth, apologetics, and real-life reflection.",
+      sameAs: [
+        "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+        "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
+      ],
+      author: { "@id": PERSON_ID },
+    });
+  }
+
+  if (pathname === "/essays") {
+    graph.push({
+      "@type": "ItemList",
+      "@id": `${SITE_URL}/essays#writing-list`,
+      name: "Essays and public writing by Kiminou Knox",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@type": "ProfilePage",
+            name: "Kiminou Knox on Medium",
+            url: "https://medium.com/@knoxkiminou1/about",
+          },
+        },
+      ],
+    });
   }
 
   return graph;

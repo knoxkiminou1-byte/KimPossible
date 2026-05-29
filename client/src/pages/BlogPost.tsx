@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import type { BlogPost, BlogCategory } from "@shared/schema";
 import { ArrowLeft, Calendar, Clock, Share2, Twitter, Facebook, Linkedin } from "lucide-react";
 import { format } from "date-fns";
+import { Helmet } from "react-helmet";
 
 function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -83,6 +84,23 @@ function BlogPostPage() {
 
   const shareUrl = window.location.href;
   const shareText = `${post.title} by Kiminou Knox`;
+  const canonicalUrl = `https://www.kiminouknox.com/blog/${post.slug}`;
+  const description = post.excerpt || `${post.title} by Kiminou Knox`;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${canonicalUrl}#article`,
+    headline: post.title,
+    description,
+    image: post.featuredImage || "https://www.kiminouknox.com/og-image.png",
+    url: canonicalUrl,
+    datePublished: post.publishedAt || post.createdAt,
+    dateModified: post.updatedAt || post.publishedAt || post.createdAt,
+    keywords: post.tags || [],
+    author: { "@id": "https://www.kiminouknox.com/#person" },
+    publisher: { "@id": "https://www.kiminouknox.com/#person" },
+    mainEntityOfPage: canonicalUrl,
+  };
 
   const handleShare = (platform: string) => {
     let url = "";
@@ -105,6 +123,21 @@ function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{post.title} - Kiminou Knox</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${post.title} - Kiminou Knox`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={post.featuredImage || "https://www.kiminouknox.com/og-image.png"} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${post.title} - Kiminou Knox`} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={post.featuredImage || "https://www.kiminouknox.com/og-image.png"} />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+      </Helmet>
       {/* Header Navigation */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -222,11 +255,14 @@ function BlogPostPage() {
                 Bay Area writer, athlete, and program builder writing about books, basketball, faith, discipline, and the people who shaped him.
               </p>
               <div className="flex gap-2">
-                <Link href="/">
+                <Link href="/about">
                   <Button variant="outline" size="sm" data-testid="link-author-profile">
                     View Profile
                   </Button>
                 </Link>
+                <Link href="/essays"><Button variant="outline" size="sm">Essays</Button></Link>
+                <Link href="/kimyaps"><Button variant="outline" size="sm">KimYaps</Button></Link>
+                <Link href="/press"><Button variant="outline" size="sm">Press</Button></Link>
                 <Link href="/blog">
                   <Button variant="outline" size="sm" data-testid="link-more-articles">
                     More Articles

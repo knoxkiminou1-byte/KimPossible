@@ -11,6 +11,8 @@ import {
 import { z } from "zod";
 import nodemailer from "nodemailer";
 import { generateRobotsTxt, generateSitemapXml, getSeoEntityData } from "./seo";
+import { getMediumFeed, getPodcastFeed } from "./externalFeeds";
+import { canonicalDomain, personId } from "@shared/entity/kiminou";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Blog Categories API
@@ -117,6 +119,65 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("Error fetching post:", error);
       res.status(500).json({ error: "Failed to fetch post" });
     }
+  });
+
+  app.get("/api/blog/index", async (_req, res) => {
+    try {
+      const posts = await storage.getPublishedPosts();
+      res.json(posts.map((post) => ({
+        slug: post.slug,
+        title: post.title,
+        description: post.excerpt || post.title,
+        datePublished: post.publishedAt,
+        dateModified: post.updatedAt,
+        tags: post.tags || [],
+        category: post.categoryId,
+        canonicalUrl: `${canonicalDomain}/blog/${post.slug}`,
+      })));
+    } catch (error) {
+      console.error("Error building blog index:", error);
+      res.status(500).json({ error: "Failed to build blog index" });
+    }
+  });
+
+  app.get("/api/external/medium", async (_req, res) => {
+    const data = await getMediumFeed();
+    res.json({ source: "Medium", ...data });
+  });
+
+  app.get("/api/external/podcast", async (_req, res) => {
+    const data = await getPodcastFeed();
+    res.json({ source: "KimYaps", ...data });
+  });
+
+  app.get(["/feed.xml", "/rss.xml"], async (_req, res) => {
+    const posts = await storage.getPublishedPosts();
+    const items = posts.map((post) => {
+      const link = `${canonicalDomain}/blog/${post.slug}`;
+      const pubDate = post.publishedAt ? new Date(post.publishedAt).toUTCString() : new Date(post.createdAt || Date.now()).toUTCString();
+      return `  <item>
+    <title><![CDATA[${post.title}]]></title>
+    <description><![CDATA[${post.excerpt || post.title}]]></description>
+    <link>${link}</link>
+    <guid>${link}</guid>
+    <pubDate>${pubDate}</pubDate>
+    <author>Kiminou Knox</author>
+  </item>`;
+    }).join("\n");
+
+    res.header("Content-Type", "application/rss+xml; charset=utf-8");
+    res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Kiminou Knox</title>
+  <description>Local writing and updates from Kiminou Knox.</description>
+  <link>${canonicalDomain}/blog</link>
+  <language>en-us</language>
+  <managingEditor>${personId}</managingEditor>
+${items}
+</channel>
+</rss>
+`);
   });
 
   app.post("/api/blog/posts", async (req, res) => {

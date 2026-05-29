@@ -3,10 +3,12 @@ import { Link } from "wouter";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/books", label: "Books" },
-  { href: "/basketball", label: "Basketball" },
+  { href: "/essays", label: "Essays" },
+  { href: "/kimyaps", label: "KimYaps" },
+  { href: "/aafc-builders", label: "Builders" },
   { href: "/speaking", label: "Speaking" },
   { href: "/press", label: "Press" },
-  { href: "/author", label: "Bio" },
+  { href: "/about", label: "Bio" },
   { href: "/contact", label: "Contact" }
 ];
 

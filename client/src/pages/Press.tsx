@@ -57,6 +57,46 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
     ]
   },
   {
+    title: "Podcast & Public Voice",
+    items: [
+      {
+        name: "Listen to KimYaps on Apple Podcasts",
+        source: "Apple Podcasts",
+        detail: "Public podcast profile for KimYaps.",
+        link: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308"
+      },
+      {
+        name: "Read Kiminou Knox essays on Medium",
+        source: "Medium",
+        detail: "Medium author profile and public essay archive.",
+        link: "https://medium.com/@knoxkiminou1/about"
+      },
+      {
+        name: "Listen to KimYaps on Spotify",
+        source: "Spotify",
+        detail: "Spotify show profile currently connected in the site repository.",
+        link: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg"
+      }
+    ]
+  },
+  {
+    title: "Program / Builder Work",
+    items: [
+      {
+        name: "View AAFC Builders",
+        source: "KiminouKnox.com",
+        detail: "Web design and digital infrastructure lane.",
+        link: "https://www.kiminouknox.com/aafc-builders"
+      },
+      {
+        name: "View Kiminou Knox portfolio",
+        source: "KiminouKnox.com",
+        detail: "Portfolio and build work overview.",
+        link: "https://www.kiminouknox.com/portfolio"
+      }
+    ]
+  },
+  {
     title: "Basketball",
     items: [
       {
@@ -83,10 +123,28 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
     title: "Profiles",
     items: [
       {
-        name: "LinkedIn",
+        name: "View Kiminou Knox on LinkedIn",
         source: "LinkedIn",
         detail: "Professional profile.",
         link: "https://www.linkedin.com/in/kiminou-knox-50691a394/"
+      },
+      {
+        name: "View Kiminou Knox public profile on About.me",
+        source: "About.me",
+        detail: "Public profile page.",
+        link: "https://about.me/kiminou"
+      },
+      {
+        name: "View Kiminou Knox on Wikidata",
+        source: "Wikidata",
+        detail: "Public entity record.",
+        link: "https://www.wikidata.org/wiki/Q137260299"
+      },
+      {
+        name: "View Kiminou Knox on Stan Store",
+        source: "Stan Store",
+        detail: "Creator storefront.",
+        link: "https://stan.store/kiminou"
       },
       {
         name: "Instagram",
@@ -95,7 +153,7 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
         link: "https://www.instagram.com/kiminouknox"
       },
       {
-        name: "Spotify Show",
+        name: "Listen to KimYaps on Spotify",
         source: "Spotify",
         detail: "Audio profile connected to Kiminou Knox.",
         link: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg"
@@ -173,7 +231,7 @@ export default function Press() {
   return (
     <>
       <Helmet>
-        <title>Verification & Press - Kiminou Knox</title>
+        <title>Press, Recognition & Public References - Kiminou Knox</title>
         <meta name="description" content="Public links, book listings, athletics profiles, and recognition sources that help verify Kiminou Knox online." />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/press" />
@@ -204,7 +262,7 @@ export default function Press() {
               Verification
             </p>
             <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="press-heading">
-              Press & Public Profiles
+              Press, Recognition & Public References
             </h1>
             <p className="text-lg leading-8 text-muted-foreground">
               Public sources for books, basketball, recognition, and profile verification. Media and booking requests can go through the <Link href="/contact" className="underline hover:text-foreground transition-colors">contact form</Link>.
@@ -235,7 +293,7 @@ export default function Press() {
                       className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm"
                       data-testid={`press-link-${index}`}
                     >
-                      View source
+                  Read the Miles Hall Foundation feature
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>

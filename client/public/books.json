@@ -5,7 +5,9 @@
     "subtitle": "What is Love To A Man Made To Destroy It",
     "year": 2025,
     "isbn": "9798316662975",
-    "datePublished": "2025-04-03",
+    "datePublished": "2025-07-09",
+    "format": "Ebook",
+    "price": "$7.99",
     "cover": "/covers/spirit-solomon.jpg",
     "samplePoems": [
       {
@@ -37,7 +39,9 @@
     "subtitle": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
     "year": 2025,
     "isbn": "9798316682850",
-    "datePublished": "2025-02-10",
+    "datePublished": "2025-03-10",
+    "format": "Ebook",
+    "price": "$7.99",
     "cover": "/covers/our-father.jpg",
     "samplePoems": [
       {
@@ -70,7 +74,9 @@
     "title": "Poems from a Black Boy",
     "subtitle": "Identity, Heritage, and Hope",
     "year": 2025,
-    "datePublished": "2025-09",
+    "datePublished": "2025-09-28",
+    "format": "Ebook",
+    "price": "$7.99",
     "cover": "/covers/poems-black-boy.jpg",
     "samplePoems": [
       {
@@ -103,6 +109,7 @@
     "year": 2025,
     "isbn": "9798267606912",
     "datePublished": "2025-09-29",
+    "format": "Paperback",
     "cover": "/og-image.png",
     "samplePoems": [
       {
@@ -126,7 +133,9 @@
     "subtitle": "Love, Loss, and Everything Between",
     "year": 2025,
     "isbn": "9798291608128",
-    "datePublished": "2025-03-05",
+    "datePublished": "2025-07-09",
+    "format": "Ebook",
+    "price": "$7.99",
     "cover": "/covers/hopeless-romantic.jpg",
     "samplePoems": [
       {
@@ -161,6 +170,8 @@
     "subtitle": "A Children's Imagination and Creativity Book",
     "year": 2026,
     "datePublished": "2026-02-18",
+    "format": "Paperback",
+    "price": "$15.99",
     "cover": "/og-image.png",
     "samplePoems": [
       {
@@ -179,9 +190,11 @@
     "id": "boys-raised-in-silence",
     "title": "Boys Raised in Silence",
     "subtitle": "Breaking the Quiet, Finding Voice",
-    "year": 2024,
+    "year": 2025,
     "isbn": "9798316735821",
-    "datePublished": "2024-06-15",
+    "datePublished": "2025-09-28",
+    "format": "Ebook",
+    "price": "$5.99",
     "cover": "/covers/boys-raised-silence.jpg",
     "samplePoems": [
       {
@@ -213,7 +226,10 @@
     "subtitle": "A Journey of Friendship and Discovery",
     "year": 2025,
     "isbn": "9798316591204",
-    "datePublished": "2025-01-20",
+    "datePublished": "2025-09-28",
+    "format": "Ebook",
+    "price": "$7.99",
+    "authors": ["Kiminou Knox", "Matsoua Malonga"],
     "cover": "/covers/adventures-chua-kiminou.jpg",
     "samplePoems": [
       {

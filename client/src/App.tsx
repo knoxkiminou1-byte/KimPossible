@@ -14,6 +14,10 @@ const Portfolio = lazy(() => import("@/pages/Portfolio"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const BlogAdmin = lazy(() => import("@/pages/BlogAdmin"));
+const Essays = lazy(() => import("@/pages/Essays"));
+const KimYaps = lazy(() => import("@/pages/KimYaps"));
+const Editorial = lazy(() => import("@/pages/Editorial"));
+const AafcBuilders = lazy(() => import("@/pages/AafcBuilders"));
 const Books = lazy(() => import("@/pages/Books"));
 const BookDetail = lazy(() => import("@/pages/BookDetail"));
 const Press = lazy(() => import("@/pages/Press"));
@@ -55,6 +59,10 @@ function Router() {
           <Route path="/author" component={Author} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/essays" component={Essays} />
+          <Route path="/kimyaps" component={KimYaps} />
+          <Route path="/editorial" component={Editorial} />
+          <Route path="/aafc-builders" component={AafcBuilders} />
           <Route path="/admin/blog" component={BlogAdmin} />
           <Route component={NotFound} />
         </Switch>

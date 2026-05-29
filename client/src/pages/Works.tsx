@@ -49,8 +49,8 @@ export default function Works() {
   return (
     <>
       <Helmet>
-        <title>Works - Kiminou Knox</title>
-        <meta name="description" content="Books by Kiminou Knox: Poems from a Black Boy, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <title>Works by Kiminou Knox - Books, Essays, KimYaps, Editorial & Digital Projects</title>
+        <meta name="description" content="A creative hub for Kiminou Knox across authored books, essays, KimYaps, editorial credits, in-development literary worlds, and AAFC Builders digital work." />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/works" />
         
@@ -82,8 +82,22 @@ export default function Works() {
               Works
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Poetry collections and stories exploring faith identity love and the Black experience
+              A creative hub across authored books, essays, KimYaps, editorial credits, in-development literary worlds, and AAFC Builders digital work.
             </p>
+          </div>
+
+          <div className="mb-12 grid gap-4 md:grid-cols-4">
+            {[
+              ["/books", "Authored Books"],
+              ["/essays", "Essays"],
+              ["/kimyaps", "KimYaps"],
+              ["/editorial", "Editorial"],
+              ["/aafc-builders", "AAFC Builders"],
+            ].map(([href, label]) => (
+              <a key={href} href={href} className="rounded-lg border border-border bg-card p-4 text-center font-medium hover:border-primary">
+                {label}
+              </a>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
