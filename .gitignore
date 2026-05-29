@@ -9,3 +9,4 @@ vite.config.ts.*
 .npm-cache/
 .github/copilot-instructions.md
 .local/
+.vercel
