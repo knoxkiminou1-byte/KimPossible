@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
-import backgroundImage from "@/assets/backgrounds/photo-gallery.png";
+import backgroundImage from "@/assets/backgrounds/photo-gallery.jpg";
 import {
   Carousel,
   CarouselContent,

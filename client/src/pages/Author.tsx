@@ -53,14 +53,17 @@ export default function Author() {
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
         <meta name="description" content="Kiminou Knox is a Bay Area writer, poet, athlete, and program builder working across books, basketball, speaking, and community projects." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Author of poetry, fiction, and a children's storybook." />
         <meta property="og:url" content="https://www.kiminouknox.com/author" />
         <meta property="og:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
+        <meta name="twitter:description" content="Bay Area writer, poet, athlete, and program builder." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
       </Helmet>
 
@@ -243,7 +246,7 @@ export default function Author() {
                   <div className="space-y-4">
 	                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
 	                    <p>
-	                      Knox has published seven books across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
+	                      Knox has published six books across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
 	                    </p>
 	                    <p>
 	                      The pages deal with faith, mental health, family fracture, masculinity, love, longing, and spiritual confusion. The goal is not to make pain decorative; it is to name it clearly enough that a reader can recognize something true.

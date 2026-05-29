@@ -51,19 +51,21 @@ export default function BooksPage() {
     <>
       <Helmet>
         <title>Published Books - Kiminou Knox</title>
-        <meta name="description" content="Explore all 7 published works by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
+        <meta name="description" content="Explore published books by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/books" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Published Books - Kiminou Knox" />
-        <meta property="og:description" content="Seven published works of poetry and stories" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta property="og:description" content="Published works of poetry and stories" />
         <meta property="og:url" content="https://www.kiminouknox.com/books" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/books.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Published Books - Kiminou Knox" />
-        <meta name="twitter:description" content="Seven published works of poetry and stories" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/books.jpg" />
+        <meta name="twitter:description" content="Published works of poetry and stories" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
       </Helmet>
 
       <Header />
@@ -71,7 +73,7 @@ export default function BooksPage() {
       <section className="relative min-h-screen overflow-hidden pt-36 pb-20 text-white">
       <div className="section-backdrop" aria-hidden="true">
         <img
-          src="/published-works-bg-feb-27-2026.png"
+          src="/published-works-bg-feb-27-2026.jpg"
           alt=""
           className="section-backdrop-image"
           loading="eager"

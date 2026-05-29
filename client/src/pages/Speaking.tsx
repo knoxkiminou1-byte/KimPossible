@@ -10,18 +10,20 @@ export default function Speaking() {
       <Helmet>
         <title>Speaking - Kiminou Knox</title>
         <meta name="description" content="Book Kiminou Knox for talks with schools, teams, and community groups on writing, discipline, faith, grief, and voice." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/speaking" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Speaking - Kiminou Knox" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Talks for schools, teams, and community groups." />
         <meta property="og:url" content="https://www.kiminouknox.com/speaking" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/speaking.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Speaking - Kiminou Knox" />
         <meta name="twitter:description" content="Book speaking engagements" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/speaking.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
       </Helmet>
 
       <Header />
@@ -29,7 +31,7 @@ export default function Speaking() {
       <main className="relative min-h-screen overflow-hidden pt-40 pb-20 text-white">
         <div className="section-backdrop" aria-hidden="true">
           <img
-            src="/speaking-bg-feb-27-2026.png"
+            src="/speaking-bg-feb-27-2026.jpg"
             alt=""
             className="section-backdrop-image"
             loading="eager"

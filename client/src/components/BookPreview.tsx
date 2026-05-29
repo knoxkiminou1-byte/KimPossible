@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Book, X, ExternalLink, Heart, ArrowRight, BookOpen } from "lucide-react";
 import PoemModal from "@/components/PDFModal";
-import backgroundImage from "@/assets/backgrounds/books-preview.png";
+import backgroundImage from "@/assets/backgrounds/books-preview.jpg";
 
 interface Poem {
   title: string;

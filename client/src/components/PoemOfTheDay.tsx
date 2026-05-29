@@ -15,7 +15,7 @@ export default function PoemOfTheDay() {
   const [poem, setPoem] = useState<Poem>({
     title: "Rising",
     text: "Every morning I decide\nTo stand when I could fall\nTo speak when I could hide\nTo answer destiny's call\n\nNot perfect, not without fear\nBut present, here, awake\nEach day another year\nOf choices that I make",
-    sourceBook: "Black Boy Poems",
+    sourceBook: "Poems from a Black Boy",
     rating: "General"
   });
   const containerRef = useScrollAnimation();
@@ -52,7 +52,7 @@ export default function PoemOfTheDay() {
     <section id="poem-of-the-day" className="relative overflow-hidden py-16 md:py-24" data-testid="poem-of-the-day">
       <div className="poem-of-day-media absolute inset-0" aria-hidden="true">
         <img
-          src="/poem-of-the-day-bg-feb-27-2026.png"
+          src="/poem-of-the-day-bg-feb-27-2026.jpg"
           alt=""
           className="poem-of-day-image"
           loading="lazy"

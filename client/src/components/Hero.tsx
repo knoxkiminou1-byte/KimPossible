@@ -24,7 +24,7 @@ export default function Hero() {
     >
       <div className="hero-media absolute inset-0" aria-hidden="true">
         <img
-          src="/kiminou-hero-feb-27-2026.png"
+          src="/kiminou-hero-feb-27-2026.jpg"
           alt=""
           className="hero-image"
           loading="eager"

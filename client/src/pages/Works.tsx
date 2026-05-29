@@ -14,14 +14,14 @@ interface Book {
   isbn: string;
   cover: string;
   description: string;
-  buyLinks: Record<string, string>;
+  buyLinks: Record<string, string | null | undefined>;
 }
 
 export default function Works() {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    fetch('/books-full.json')
+    fetch('/books.json')
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(err => console.error('Failed to load books:', err));
@@ -30,8 +30,10 @@ export default function Works() {
   const bookSchemas = books.map(book => ({
     "@context": "https://schema.org",
     "@type": "Book",
-    "@id": `https://www.kiminouknox.com/works#${book.id}`,
+    "@id": `https://www.kiminouknox.com/books/${book.id}#book`,
     "name": book.title,
+    "url": `https://www.kiminouknox.com/books/${book.id}`,
+    "image": `https://www.kiminouknox.com${book.cover}`,
     "author": { "@id": "https://www.kiminouknox.com/#person" },
     "workExample": [
       { "@type": "Book", "bookFormat": "https://schema.org/EBook", "url": book.buyLinks.amazon || book.buyLinks.googleBooks || "" },
@@ -48,19 +50,21 @@ export default function Works() {
     <>
       <Helmet>
         <title>Works - Kiminou Knox</title>
-        <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <meta name="description" content="Books by Kiminou Knox: Poems from a Black Boy, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Works - Kiminou Knox" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Published works and books by writer Kiminou Knox" />
         <meta property="og:url" content="https://www.kiminouknox.com/works" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/works.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Works - Kiminou Knox" />
         <meta name="twitter:description" content="Published books and poetry collections" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/works.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
         
         {bookSchemas.map((schema, index) => (
           <script key={index} type="application/ld+json">
@@ -113,7 +117,7 @@ export default function Works() {
                     <Button
                       variant="default"
                       className="w-full"
-                      onClick={() => window.open(book.buyLinks.amazon, '_blank')}
+                      onClick={() => window.open(book.buyLinks.amazon ?? undefined, '_blank')}
                       data-testid={`buy-button-${book.id}`}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />

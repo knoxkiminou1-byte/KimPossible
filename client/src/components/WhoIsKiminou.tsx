@@ -115,7 +115,7 @@ export default function WhoIsKiminou() {
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
-          src="/kiminou-hero.png"
+          src="/kiminou-hero.jpg"
           alt=""
           className="h-full w-full object-cover object-center"
           loading="lazy"

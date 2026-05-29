@@ -10,18 +10,20 @@ export default function Contact() {
       <Helmet>
         <title>Contact - Kiminou Knox</title>
         <meta name="description" content="Get in touch with Kiminou Knox for speaking engagements media inquiries or collaboration opportunities." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/contact" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Contact - Kiminou Knox" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Get in touch for speaking engagements and collaborations" />
         <meta property="og:url" content="https://www.kiminouknox.com/contact" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/contact.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact - Kiminou Knox" />
         <meta name="twitter:description" content="Get in touch" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/contact.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
       </Helmet>
 
       <Header />
@@ -29,7 +31,7 @@ export default function Contact() {
       <main 
         className="min-h-screen bg-black pt-40 pb-20 relative"
         style={{
-          backgroundImage: 'url(/aafc-logo.png)',
+          backgroundImage: 'url(/aafc-logo.jpg)',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'contain',

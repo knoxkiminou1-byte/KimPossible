@@ -147,10 +147,12 @@ export default function BookDetail() {
       <Helmet>
         <title>{book.title} - Kiminou Knox</title>
         <meta name="description" content={book.description} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={bookUrl} />
         
         <meta property="og:type" content="book" />
         <meta property="og:title" content={`${book.title} - Kiminou Knox`} />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content={book.description} />
         <meta property="og:url" content={bookUrl} />
         <meta property="og:image" content={bookImage} />

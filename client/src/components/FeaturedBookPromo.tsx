@@ -22,7 +22,7 @@ export default function FeaturedBookPromo() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-lg border border-border bg-muted shadow-lg">
                 <img 
-                  src="/covers/adventures-chua-kiminou.png"
+                  src="/covers/adventures-chua-kiminou.jpg"
                   alt="The Adventures of Kiminou the Great and Chua the Wise book cover"
                   className="w-full h-auto object-cover"
                 />

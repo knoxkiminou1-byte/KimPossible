@@ -169,10 +169,12 @@ export default function Press() {
       <Helmet>
         <title>Verification & Press - Kiminou Knox</title>
         <meta name="description" content="Public links, book listings, athletics profiles, and recognition sources that help verify Kiminou Knox online." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/press" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Verification & Press - Kiminou Knox" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Public proof links, book listings, athletics profiles, and recognition sources for Kiminou Knox." />
         <meta property="og:url" content="https://www.kiminouknox.com/press" />
         <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />

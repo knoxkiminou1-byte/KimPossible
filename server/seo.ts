@@ -30,7 +30,7 @@ type SeoData = {
 };
 
 const SITE_URL = "https://www.kiminouknox.com";
-const LASTMOD = "2026-05-28";
+const LASTMOD = "2026-05-29";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 const PERSON_ID = `${SITE_URL}/#person`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -210,7 +210,7 @@ const books: BookSeo[] = [
     year: 2024,
     isbn: "9798316735821",
     datePublished: "2024-06-15",
-    cover: "/covers/boys-raised-silence.png",
+    cover: "/covers/boys-raised-silence.jpg",
     description:
       "Poems about silence, pressure, and the work of learning how to speak honestly as a young Black man.",
     buyLinks: {
@@ -228,7 +228,7 @@ const books: BookSeo[] = [
     year: 2025,
     isbn: "9798316591204",
     datePublished: "2025-01-20",
-    cover: "/covers/adventures-chua-kiminou.png",
+    cover: "/covers/adventures-chua-kiminou.jpg",
     description:
       "A children's story about two friends learning how courage and wisdom can work together.",
     buyLinks: {

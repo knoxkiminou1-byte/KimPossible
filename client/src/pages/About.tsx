@@ -12,7 +12,7 @@ export default function About() {
         "name": "Kiminou Knox",
         "alternateName": "Kiminou",
         "url": "https://www.kiminouknox.com/",
-        "image": "https://www.kiminouknox.com/media/headshot.jpg",
+        "image": "https://www.kiminouknox.com/author-kiminou.jpg",
         "description": "Bay Area writer and athlete working across books, poems, basketball, speaking, and youth-facing projects.",
         "jobTitle": "Writer and athlete",
         "affiliation": [{
@@ -20,12 +20,14 @@ export default function About() {
           "name": "Artists and Athletes for Change"
         }],
         "sameAs": [
-          "https://instagram.com/hofkiminou",
-          "https://x.com/KiminouKnox",
-          "https://x.com/KnoxKiminou",
-          "https://www.youtube.com/@KiminouKnoxVevo",
+          "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2",
+          "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
+          "https://prephoops.com/player/kiminou-knox/",
+          "https://www.goodreads.com/author/show/Kiminou_Knox",
           "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-          "https://www.kiminouknox.com/"
+          "https://www.instagram.com/kiminouknox",
+          "https://www.linkedin.com/in/kiminou-knox-50691a394/",
+          "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg"
         ]
       },
       {
@@ -45,7 +47,7 @@ export default function About() {
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://www.kiminouknox.com/media/headshot.jpg"
+          "url": "https://www.kiminouknox.com/author-kiminou.jpg"
         }
       }
     ]
@@ -56,18 +58,20 @@ export default function About() {
       <Helmet>
         <title>About - Kiminou Knox</title>
         <meta name="description" content="Writer and athlete from East Palo Alto, California. Books, poems, basketball, speaking, and youth-facing projects." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About - Kiminou Knox" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Bay Area writer and athlete working across books, poems, basketball, speaking, and youth-facing projects." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/about.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About - Kiminou Knox" />
         <meta name="twitter:description" content="Writer and athlete from East Palo Alto, California" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/about.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
         
         <script type="application/ld+json">
           {JSON.stringify(schema)}
@@ -91,7 +95,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                The work now spans seven published books, athletics, speaking, and community projects. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
+                The work now spans six published books, athletics, speaking, and community projects. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
               </p>
 
               <p data-testid="about-family">
@@ -103,7 +107,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am continuing to build those books into a larger body of poems, stories, essays, readings, and media.
+                My published works include Poems from a Black Boy, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am continuing to build those books into a larger body of poems, stories, essays, readings, and media.
               </p>
 
               <p data-testid="about-speaking">

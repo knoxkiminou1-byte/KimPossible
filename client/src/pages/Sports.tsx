@@ -11,18 +11,20 @@ export default function Sports() {
       <Helmet>
         <title>Sports & Athletics - Kiminou Knox</title>
         <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with profiles on NCSA, MaxPreps, and Prep Hoops." />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Sports & Athletics - Kiminou Knox" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Athletic profile, statistics, and achievements" />
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/sports.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sports & Athletics - Kiminou Knox" />
         <meta name="twitter:description" content="Athletic profile and statistics" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/sports.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
       </Helmet>
 
       <Header />
@@ -30,7 +32,7 @@ export default function Sports() {
       <section className="relative min-h-screen overflow-hidden pt-36 pb-20 text-white">
         <div className="section-backdrop" aria-hidden="true">
           <img
-            src="/basketball-bg-feb-27-2026.png"
+            src="/basketball-bg-feb-27-2026.jpg"
             alt=""
             className="section-backdrop-image"
             loading="eager"
