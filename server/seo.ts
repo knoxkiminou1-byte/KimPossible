@@ -715,6 +715,13 @@ ${urls}
 `;
 }
 
+export function getStaticSeoPaths() {
+  return [
+    ...basePages.map((page) => page.path),
+    ...books.map((book) => `/books/${book.id}`),
+  ];
+}
+
 export function generateRobotsTxt() {
   return `User-agent: *
 Allow: /
