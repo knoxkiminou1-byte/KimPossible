@@ -53,15 +53,15 @@ export default function Author() {
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
         <meta name="description" content="Kiminou Knox is a Bay Area writer, poet, athlete, and program builder working across books, basketball, speaking, and community projects." />
-        <link rel="canonical" href="https://kiminouknox.com/author" />
+        <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
         <meta property="og:description" content="Author of poetry, fiction, and a children's storybook." />
-        <meta property="og:url" content="https://kiminouknox.com/author" />
-        <meta property="og:image" content="https://kiminouknox.com/author-kiminou.jpg" />
+        <meta property="og:url" content="https://www.kiminouknox.com/author" />
+        <meta property="og:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:image" content="https://kiminouknox.com/author-kiminou.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">

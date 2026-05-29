@@ -30,9 +30,9 @@ export default function Works() {
   const bookSchemas = books.map(book => ({
     "@context": "https://schema.org",
     "@type": "Book",
-    "@id": `https://kiminouknox.com/works#${book.id}`,
+    "@id": `https://www.kiminouknox.com/works#${book.id}`,
     "name": book.title,
-    "author": { "@id": "https://kiminouknox.com/#person" },
+    "author": { "@id": "https://www.kiminouknox.com/#person" },
     "workExample": [
       { "@type": "Book", "bookFormat": "https://schema.org/EBook", "url": book.buyLinks.amazon || book.buyLinks.googleBooks || "" },
       { "@type": "Book", "bookFormat": "https://schema.org/Paperback", "url": book.buyLinks.amazon || "" }
@@ -49,18 +49,18 @@ export default function Works() {
       <Helmet>
         <title>Works - Kiminou Knox</title>
         <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
-        <link rel="canonical" href="https://kiminouknox.com/works" />
+        <link rel="canonical" href="https://www.kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Works - Kiminou Knox" />
         <meta property="og:description" content="Published works and books by writer Kiminou Knox" />
-        <meta property="og:url" content="https://kiminouknox.com/works" />
-        <meta property="og:image" content="https://kiminouknox.com/og/works.jpg" />
+        <meta property="og:url" content="https://www.kiminouknox.com/works" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og/works.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Works - Kiminou Knox" />
         <meta name="twitter:description" content="Published books and poetry collections" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/works.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og/works.jpg" />
         
         {bookSchemas.map((schema, index) => (
           <script key={index} type="application/ld+json">

@@ -29,7 +29,7 @@ type SeoData = {
   graph: Array<Record<string, unknown>>;
 };
 
-const SITE_URL = "https://kiminouknox.com";
+const SITE_URL = "https://www.kiminouknox.com";
 const LASTMOD = "2026-05-28";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 const PERSON_ID = `${SITE_URL}/#person`;

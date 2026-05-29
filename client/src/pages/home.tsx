@@ -15,7 +15,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kiminou Knox",
-    "url": "https://kiminouknox.com/",
+    "url": "https://www.kiminouknox.com/",
     "sameAs": [
       "https://x.com/KnoxKiminou",
       "https://x.com/KiminouKnox",
@@ -29,18 +29,18 @@ export default function Home() {
       <Helmet>
         <title>Kiminou Knox | Writer, Athlete & Program Builder</title>
         <meta name="description" content="Official website of Kiminou Knox, a Bay Area writer, athlete, and program builder. Explore books, basketball, speaking, and community work." />
-        <link rel="canonical" href="https://kiminouknox.com/" />
+        <link rel="canonical" href="https://www.kiminouknox.com/" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kiminou Knox | Writer, Athlete & Program Builder" />
         <meta property="og:description" content="Books, basketball, speaking, and community work from the Bay Area." />
-        <meta property="og:url" content="https://kiminouknox.com/" />
-        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta property="og:url" content="https://www.kiminouknox.com/" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox | Writer, Athlete & Program Builder" />
         <meta name="twitter:description" content="Bay Area writer, athlete, and program builder." />
-        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <script type="application/ld+json">
           {JSON.stringify(personSchema)}

@@ -74,8 +74,8 @@ export default function BookDetail() {
     );
   }
 
-  const bookUrl = `https://kiminouknox.com/books/${book.id}`;
-  const bookImage = `https://kiminouknox.com${book.cover}`;
+  const bookUrl = `https://www.kiminouknox.com/books/${book.id}`;
+  const bookImage = `https://www.kiminouknox.com${book.cover}`;
   const retailerLinks = Object.entries(book.buyLinks).filter(
     (entry): entry is [string, string] => Boolean(entry[1])
   );
@@ -93,13 +93,13 @@ export default function BookDetail() {
         "url": bookUrl,
         "author": {
           "@type": "Person",
-          "@id": "https://kiminouknox.com/#person",
+          "@id": "https://www.kiminouknox.com/#person",
           "name": "Kiminou Knox",
-          "url": "https://kiminouknox.com/"
+          "url": "https://www.kiminouknox.com/"
         },
         "publisher": {
           "@type": "Person",
-          "@id": "https://kiminouknox.com/#person",
+          "@id": "https://www.kiminouknox.com/#person",
           "name": "Kiminou Knox"
         },
         "datePublished": book.datePublished || `${book.year}-01-01`,
@@ -120,13 +120,13 @@ export default function BookDetail() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://kiminouknox.com/"
+            "item": "https://www.kiminouknox.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Books",
-            "item": "https://kiminouknox.com/books"
+            "item": "https://www.kiminouknox.com/books"
           },
           {
             "@type": "ListItem",

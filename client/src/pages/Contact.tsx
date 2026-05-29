@@ -10,18 +10,18 @@ export default function Contact() {
       <Helmet>
         <title>Contact - Kiminou Knox</title>
         <meta name="description" content="Get in touch with Kiminou Knox for speaking engagements media inquiries or collaboration opportunities." />
-        <link rel="canonical" href="https://kiminouknox.com/contact" />
+        <link rel="canonical" href="https://www.kiminouknox.com/contact" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Contact - Kiminou Knox" />
         <meta property="og:description" content="Get in touch for speaking engagements and collaborations" />
-        <meta property="og:url" content="https://kiminouknox.com/contact" />
-        <meta property="og:image" content="https://kiminouknox.com/og/contact.jpg" />
+        <meta property="og:url" content="https://www.kiminouknox.com/contact" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og/contact.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact - Kiminou Knox" />
         <meta name="twitter:description" content="Get in touch" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/contact.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og/contact.jpg" />
       </Helmet>
 
       <Header />

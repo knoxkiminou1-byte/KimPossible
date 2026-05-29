@@ -11,18 +11,18 @@ export default function Sports() {
       <Helmet>
         <title>Sports & Athletics - Kiminou Knox</title>
         <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with profiles on NCSA, MaxPreps, and Prep Hoops." />
-        <link rel="canonical" href="https://kiminouknox.com/sports" />
+        <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Sports & Athletics - Kiminou Knox" />
         <meta property="og:description" content="Athletic profile, statistics, and achievements" />
-        <meta property="og:url" content="https://kiminouknox.com/sports" />
-        <meta property="og:image" content="https://kiminouknox.com/og/sports.jpg" />
+        <meta property="og:url" content="https://www.kiminouknox.com/sports" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og/sports.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sports & Athletics - Kiminou Knox" />
         <meta name="twitter:description" content="Athletic profile and statistics" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/sports.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og/sports.jpg" />
       </Helmet>
 
       <Header />

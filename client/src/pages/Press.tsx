@@ -114,20 +114,20 @@ export default function Press() {
     "@graph": [
       {
         "@type": "CollectionPage",
-        "@id": "https://kiminouknox.com/press#webpage",
-        "url": "https://kiminouknox.com/press",
+        "@id": "https://www.kiminouknox.com/press#webpage",
+        "url": "https://www.kiminouknox.com/press",
         "name": "Verification & Press - Kiminou Knox",
         "description": "Public links, book listings, athletics profiles, and recognition sources that help verify Kiminou Knox online.",
         "about": {
           "@type": "Person",
-          "@id": "https://kiminouknox.com/#person",
+          "@id": "https://www.kiminouknox.com/#person",
           "name": "Kiminou Knox",
-          "url": "https://kiminouknox.com/"
+          "url": "https://www.kiminouknox.com/"
         }
       },
       {
         "@type": "ItemList",
-        "@id": "https://kiminouknox.com/press#verification-list",
+        "@id": "https://www.kiminouknox.com/press#verification-list",
         "name": "Public verification links for Kiminou Knox",
         "itemListElement": schemaLinks.map((item, index) => ({
           "@type": "ListItem",
@@ -151,13 +151,13 @@ export default function Press() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://kiminouknox.com/"
+            "item": "https://www.kiminouknox.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Verification & Press",
-            "item": "https://kiminouknox.com/press"
+            "item": "https://www.kiminouknox.com/press"
           }
         ]
       }
@@ -169,18 +169,18 @@ export default function Press() {
       <Helmet>
         <title>Verification & Press - Kiminou Knox</title>
         <meta name="description" content="Public links, book listings, athletics profiles, and recognition sources that help verify Kiminou Knox online." />
-        <link rel="canonical" href="https://kiminouknox.com/press" />
+        <link rel="canonical" href="https://www.kiminouknox.com/press" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Verification & Press - Kiminou Knox" />
         <meta property="og:description" content="Public proof links, book listings, athletics profiles, and recognition sources for Kiminou Knox." />
-        <meta property="og:url" content="https://kiminouknox.com/press" />
-        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta property="og:url" content="https://www.kiminouknox.com/press" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Verification & Press - Kiminou Knox" />
         <meta name="twitter:description" content="Public proof links, book listings, athletics profiles, and recognition sources for Kiminou Knox." />
-        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
         
         <script type="application/ld+json">
           {JSON.stringify(pressSchema)}
