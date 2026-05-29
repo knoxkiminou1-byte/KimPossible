@@ -2,15 +2,12 @@ import { motion } from "framer-motion";
 import {
   BookOpen,
   PenLine,
-  Link as LinkIcon,
   Mail,
   MapPin,
   Calendar as CalendarIcon,
-  FileText,
   Layers,
   Instagram,
-  Twitter,
-  Youtube,
+  Linkedin,
 } from "lucide-react";
 
 // --- Small UI helpers ---
@@ -39,18 +36,18 @@ const Card = ({ children, className = "" }: any) => (
 // --- Main Component ---
 export default function Portfolio() {
   const socials = [
-    { name: "Instagram", href: "https://instagram.com/kiminouhof", icon: Instagram },
-    { name: "X / Twitter", href: "https://twitter.com/KnoxKiminou", icon: Twitter },
+    { name: "Instagram", href: "https://instagram.com/kiminouknox", icon: Instagram },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/kiminou-knox-50691a394/", icon: Linkedin },
   ];
 
   const novelsMajor = [
     {
-      title: "The Black Boy Lie",
-      status: "Coming soon",
+      title: "Long-form fiction project",
+      status: "In development",
       themes:
-        "Black identity, generational trauma, supernatural mystery, prophecy",
+        "Black identity, family, faith, memory, and personal transformation",
       note:
-        "A major fiction project in development.",
+        "A developing fiction project connected to the same questions that shape the poems.",
     },
   ];
 
@@ -96,7 +93,7 @@ export default function Portfolio() {
       {/* Header / Nav */}
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/60 border-b">
         <nav className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
-          <a href="/home" className="font-semibold tracking-tight">Kiminou Knox</a>
+          <a href="/" className="font-semibold tracking-tight">Kiminou Knox</a>
           <div className="hidden md:flex items-center gap-5 text-sm">
             <a href="#about" className="hover:underline">About</a>
             <a href="#writing" className="hover:underline">Writing</a>
@@ -115,7 +112,7 @@ export default function Portfolio() {
               transition={{ duration: 0.6 }}
               className="md:col-span-3"
             >
-              <Badge>The Black Boy Lie — Coming Soon</Badge>
+              <Badge>Books, Basketball, Community</Badge>
               <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-[1.1]">
                 Writer & Athlete
               </h1>
@@ -186,7 +183,7 @@ export default function Portfolio() {
                 <p className="text-sm font-medium">Voice & Themes</p>
               </div>
               <p className="text-zinc-600 text-sm">
-                Psychological drama, metaphysical thrillers, magical realism, and poetic spirituality.
+                Poetry, faith, identity, youth voice, and community-minded creative work.
               </p>
             </Card>
           </div>
@@ -196,7 +193,7 @@ export default function Portfolio() {
         <Section id="writing" title="Writing — Books & Poetry" icon={BookOpen}>
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
-              <h3 className="text-lg font-semibold flex items-center gap-2 mb-3"><PenLine className="w-4 h-4"/> Canon / Major Novel</h3>
+              <h3 className="text-lg font-semibold flex items-center gap-2 mb-3"><PenLine className="w-4 h-4"/> Developing Fiction</h3>
               <ul className="space-y-4">
                 {novelsMajor.map((n) => (
                   <li key={n.title} className="">
@@ -209,7 +206,7 @@ export default function Portfolio() {
               </ul>
             </Card>
             <Card>
-              <h3 className="text-lg font-semibold flex items-center gap-2 mb-3"><PenLine className="w-4 h-4"/> Poetry Collections (Completed)</h3>
+              <h3 className="text-lg font-semibold flex items-center gap-2 mb-3"><PenLine className="w-4 h-4"/> Poetry Collections</h3>
               <ul className="space-y-4">
                 {poetryCollections.map((p) => (
                   <li key={p.title}>

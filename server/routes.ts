@@ -10,6 +10,7 @@ import {
 } from "@shared/schema";
 import { z } from "zod";
 import nodemailer from "nodemailer";
+import { generateRobotsTxt, generateSitemapXml, getSeoEntityData } from "./seo";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Blog Categories API
@@ -269,61 +270,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // FAQ Schema route for "People Also Ask" SEO
+  // Public entity data for search engines and verification tools.
   app.get('/api/seo-data', (req, res) => {
-    const faqData = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who is Kiminou Knox?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kiminou Knox is a 6'7 basketball player, entrepreneur, and 7-time published author of African American, Jamaican, and Congolese descent."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Kiminou Knox's most famous book?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kiminou Knox is best known for 'The Spirit of Solomon' and developing the 'Black Boy Lie' literary universe."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What sports does Kiminou Knox play?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kiminou Knox is a 6'7 varsity basketball player who plays Forward/Center position. He is NCAA registered with verified profiles on NCSA, MaxPreps, and PrepHoops."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many books has Kiminou Knox written?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kiminou Knox has published 7 books including poetry collections and a children's storybook. His works include 'Poems From A Black Boy', 'Black Boy Poems', 'Hopeless Romantic', 'The Spirit of Solomon', 'Our Father', 'Boys Raised In Silence', and 'The Adventures of Kiminou the Great and Chua the Wise'."
-          }
-        }
-      ]
-    };
-    res.json(faqData);
+    res.json(getSeoEntityData());
   });
 
   // Sitemap route for SEO
   app.get('/sitemap.xml', (req, res) => {
-    res.header('Content-Type', 'application/xml');
-    res.send(`<?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url><loc>https://kiminouknox.com/</loc><priority>1.0</priority></url>
-        <url><loc>https://kiminouknox.com/books</loc><priority>0.9</priority></url>
-        <url><loc>https://kiminouknox.com/sports</loc><priority>0.9</priority></url>
-        <url><loc>https://kiminouknox.com/speaking</loc><priority>0.8</priority></url>
-        <url><loc>https://kiminouknox.com/author</loc><priority>0.9</priority></url>
-        <url><loc>https://kiminouknox.com/contact</loc><priority>0.7</priority></url>
-      </urlset>`);
+    res.header('Content-Type', 'application/xml; charset=utf-8');
+    res.send(generateSitemapXml());
+  });
+
+  app.get('/robots.txt', (req, res) => {
+    res.header('Content-Type', 'text/plain; charset=utf-8');
+    res.send(generateRobotsTxt());
   });
 
   const httpServer = createServer(app);

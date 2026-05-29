@@ -5,6 +5,7 @@ const navItems = [
   { href: "/books", label: "Books" },
   { href: "/basketball", label: "Basketball" },
   { href: "/speaking", label: "Speaking" },
+  { href: "/press", label: "Press" },
   { href: "/author", label: "Bio" },
   { href: "/contact", label: "Contact" }
 ];
