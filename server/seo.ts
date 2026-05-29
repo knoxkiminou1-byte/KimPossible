@@ -314,6 +314,7 @@ function webSiteSchema() {
     "@type": "WebSite",
     "@id": WEBSITE_ID,
     name: "Kiminou Knox",
+    alternateName: "Kiminou Knox Official",
     url: `${SITE_URL}/`,
     publisher: {
       "@id": PERSON_ID,
@@ -626,6 +627,11 @@ export function injectSeo(html: string, rawUrl: string) {
   );
   output = upsertHeadTag(
     output,
+    /<meta\s+name=["']robots["'][^>]*>/i,
+    `<meta name="robots" content="index, follow, max-image-preview:large">`,
+  );
+  output = upsertHeadTag(
+    output,
     /<link\s+rel=["']canonical["'][^>]*>/i,
     `<link rel="canonical" href="${escapeAttribute(seo.canonical)}">`,
   );
@@ -643,6 +649,11 @@ export function injectSeo(html: string, rawUrl: string) {
     output,
     /<meta\s+property=["']og:title["'][^>]*>/i,
     `<meta property="og:title" content="${escapeAttribute(seo.title)}">`,
+  );
+  output = upsertHeadTag(
+    output,
+    /<meta\s+property=["']og:site_name["'][^>]*>/i,
+    `<meta property="og:site_name" content="Kiminou Knox">`,
   );
   output = upsertHeadTag(
     output,
