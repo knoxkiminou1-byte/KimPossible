@@ -156,6 +156,26 @@
     "featured": true
   },
   {
+    "id": "kiminous-world-of-imagination-the-basics",
+    "title": "Kiminou's World of Imagination: The Basics",
+    "subtitle": "A Children's Imagination and Creativity Book",
+    "year": 2026,
+    "datePublished": "2026-02-18",
+    "cover": "/og-image.png",
+    "samplePoems": [
+      {
+        "title": "Imagination Begins",
+        "content": "This preview is reserved for the published edition. Kiminou's World of Imagination: The Basics is included in Kiminou Knox's owner-confirmed book catalog."
+      }
+    ],
+    "themes": ["Imagination", "Creativity", "Childhood"],
+    "description": "A children's creativity book introducing imagination, world-building, and the basics of seeing possibility through story.",
+    "buyLinks": {
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
     "id": "boys-raised-in-silence",
     "title": "Boys Raised in Silence",
     "subtitle": "Breaking the Quiet, Finding Voice",

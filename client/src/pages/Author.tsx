@@ -246,7 +246,7 @@ export default function Author() {
                   <div className="space-y-4">
 	                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
 	                    <p>
-	                      Knox has seven featured book titles across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
+	                      Knox has eight featured book titles across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Kiminou's World of Imagination: The Basics</em>, <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
 	                    </p>
 	                    <p>
 	                      The pages deal with faith, mental health, family fracture, masculinity, love, longing, and spiritual confusion. The goal is not to make pain decorative; it is to name it clearly enough that a reader can recognize something true.

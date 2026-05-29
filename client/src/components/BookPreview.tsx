@@ -237,16 +237,18 @@ export default function BookPreview() {
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href={Object.values(selectedBook.buyLinks).find(Boolean) || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-	                    className="solid-button flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                    data-testid="book-buy-link"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Purchase Book
-                  </a>
+                  {Object.values(selectedBook.buyLinks).some(Boolean) && (
+                    <a
+                      href={Object.values(selectedBook.buyLinks).find(Boolean) || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="solid-button flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                      data-testid="book-buy-link"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Purchase Book
+                    </a>
+                  )}
                   <button 
                     onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
 	                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-border px-6 py-3 font-medium transition-colors hover:bg-accent hover:text-accent-foreground"

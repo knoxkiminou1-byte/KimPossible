@@ -217,6 +217,17 @@ const books: BookSeo[] = [
     },
   },
   {
+    id: "kiminous-world-of-imagination-the-basics",
+    title: "Kiminou's World of Imagination: The Basics",
+    subtitle: "A Children's Imagination and Creativity Book",
+    year: 2026,
+    datePublished: "2026-02-18",
+    cover: "/og-image.png",
+    description:
+      "A children's creativity book introducing imagination, world-building, and the basics of seeing possibility through story.",
+    buyLinks: {},
+  },
+  {
     id: "boys-raised-in-silence",
     title: "Boys Raised in Silence",
     subtitle: "Breaking the Quiet, Finding Voice",

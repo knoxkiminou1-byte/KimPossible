@@ -95,7 +95,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                The work now spans seven featured book titles, athletics, speaking, and community projects. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
+                The work now spans eight featured book titles, athletics, speaking, and community projects. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
               </p>
 
               <p data-testid="about-family">
@@ -107,7 +107,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My featured book titles include Poems from a Black Boy, Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am continuing to build those books into a larger body of poems, stories, essays, readings, and media.
+                My featured book titles include Kiminou's World of Imagination: The Basics, Poems from a Black Boy, Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am continuing to build those books into a larger body of poems, stories, essays, readings, and media.
               </p>
 
               <p data-testid="about-speaking">
