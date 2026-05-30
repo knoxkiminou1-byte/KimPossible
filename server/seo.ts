@@ -46,6 +46,7 @@ const sameAsLinks = [
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
   "https://medium.com/@knoxkiminou1/about",
   "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+  "https://www.youtube.com/@KiminouKnoxOfficial",
   "https://about.me/kiminou",
   "https://stan.store/kiminou",
   "https://www.wikidata.org/wiki/Q137260299",
@@ -75,6 +76,13 @@ export const proofLinks: ProofLink[] = [
     url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
     category: "Books",
     description: "Reader-facing author profile and book listings, including the public Goodreads author ID.",
+  },
+  {
+    name: "YouTube Channel",
+    source: "YouTube",
+    url: "https://www.youtube.com/@KiminouKnoxOfficial",
+    category: "Podcast & Public Voice",
+    description: "Official YouTube channel for Kiminou Knox.",
   },
   {
     name: "Google Play Books Listings",
@@ -596,6 +604,7 @@ function buildGraph(pathname: string, title: string, description: string, pageTy
       sameAs: [
         "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
         "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
+        "https://www.youtube.com/@KiminouKnoxOfficial",
       ],
       author: { "@id": PERSON_ID },
     });

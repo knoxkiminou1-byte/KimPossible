@@ -27,6 +27,7 @@ export default function About() {
           "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
           "https://medium.com/@knoxkiminou1/about",
           "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+          "https://www.youtube.com/@KiminouKnoxOfficial",
           "https://about.me/kiminou",
           "https://stan.store/kiminou",
           "https://www.wikidata.org/wiki/Q137260299",
@@ -138,6 +139,7 @@ export default function About() {
                   <a className="underline" href="https://medium.com/@knoxkiminou1/about" target="_blank" rel="noopener noreferrer">Medium</a>
                   <a className="underline" href="https://www.goodreads.com/author/show/55621683.Kiminou_Knox" target="_blank" rel="noopener noreferrer">Goodreads</a>
                   <a className="underline" href="https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+                  <a className="underline" href="https://www.youtube.com/@KiminouKnoxOfficial" target="_blank" rel="noopener noreferrer">YouTube</a>
                   <a className="underline" href="https://www.linkedin.com/in/kiminou-knox-50691a394" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   <a className="underline" href="https://about.me/kiminou" target="_blank" rel="noopener noreferrer">About.me</a>
                   <a className="underline" href="https://www.wikidata.org/wiki/Q137260299" target="_blank" rel="noopener noreferrer">Wikidata</a>

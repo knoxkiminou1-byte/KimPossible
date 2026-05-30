@@ -100,6 +100,13 @@ export const kiminouEntity = {
       description: "KimYaps podcast profile on Apple Podcasts.",
     },
     {
+      label: "YouTube",
+      url: "https://www.youtube.com/@KiminouKnoxOfficial",
+      source: "YouTube",
+      category: "social",
+      description: "Official YouTube channel for Kiminou Knox.",
+    },
+    {
       label: "About.me",
       url: "https://about.me/kiminou",
       source: "About.me",
@@ -160,7 +167,7 @@ export const kiminouEntity = {
     apple: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
     spotify: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
     rss: "",
-    youtube: "",
+    youtube: "https://www.youtube.com/@KiminouKnoxOfficial",
   },
   recognitionItems: [
     {

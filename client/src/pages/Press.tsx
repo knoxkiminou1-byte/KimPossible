@@ -66,6 +66,12 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
         link: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308"
       },
       {
+        name: "Watch Kiminou Knox on YouTube",
+        source: "YouTube",
+        detail: "Official YouTube channel for Kiminou Knox.",
+        link: "https://www.youtube.com/@KiminouKnoxOfficial"
+      },
+      {
         name: "Read Kiminou Knox essays on Medium",
         source: "Medium",
         detail: "Medium author profile and public essay archive.",
@@ -145,6 +151,12 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
         source: "Stan Store",
         detail: "Creator storefront.",
         link: "https://stan.store/kiminou"
+      },
+      {
+        name: "Watch Kiminou Knox on YouTube",
+        source: "YouTube",
+        detail: "Official video channel.",
+        link: "https://www.youtube.com/@KiminouKnoxOfficial"
       },
       {
         name: "Instagram",
