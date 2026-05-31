@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Book, X, ExternalLink, Heart, ArrowRight, BookOpen } from "lucide-react";
 import PoemModal from "@/components/PDFModal";
 import backgroundImage from "@/assets/backgrounds/books-preview.jpg";
+import BookCover from "@/components/BookCover";
 
 interface Poem {
   title: string;
@@ -14,7 +15,7 @@ interface BookData {
   id: string;
   title: string;
   subtitle: string;
-  cover: string;
+  cover?: string | null;
   samplePoems: Poem[];
   year: number;
   isbn?: string | null;
@@ -110,10 +111,11 @@ export default function BookPreview() {
                 <div className="bg-card border border-border rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
                   {/* Book Cover */}
                   <div className="relative aspect-[3/4] overflow-hidden">
-                    <img 
+                    <BookCover
                       src={book.cover}
-                      alt={`${book.title} book cover`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      title={book.title}
+                      subtitle={book.subtitle}
+                      className="transition-transform duration-500 group-hover:scale-110"
                     />
                     
                     {/* Overlay */}
@@ -193,10 +195,11 @@ export default function BookPreview() {
             <div className="grid grid-cols-1 md:grid-cols-2 max-h-[90vh] overflow-y-auto">
               {/* Book Cover */}
               <div className="relative">
-                <img 
+                <BookCover
                   src={selectedBook.cover}
-                  alt={`${selectedBook.title} book cover`}
-                  className="w-full h-full object-cover"
+                  title={selectedBook.title}
+                  subtitle={selectedBook.subtitle}
+                  className="h-full min-h-[420px] rounded-none"
                 />
               </div>
 
@@ -249,14 +252,16 @@ export default function BookPreview() {
                       Purchase Book
                     </a>
                   )}
-                  <button 
-                    onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
+                  {selectedBook.samplePoems.length > 0 && (
+                    <button
+                      onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
 	                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-border px-6 py-3 font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                    data-testid="book-sample-poems"
-                  >
-                    <BookOpen className="w-4 h-4" />
-                    Read Sample
-                  </button>
+                      data-testid="book-sample-poems"
+                    >
+                      <BookOpen className="w-4 h-4" />
+                      Read Sample
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

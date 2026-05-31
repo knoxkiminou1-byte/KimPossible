@@ -3,6 +3,10 @@ import { useRoute, Link } from "wouter";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { Helmet } from "react-helmet";
 import PoemModal from "@/components/PDFModal";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ContactFAB from "@/components/ContactFAB";
+import BookCover from "@/components/BookCover";
 
 type Poem = {
   title: string;
@@ -16,7 +20,7 @@ type Book = {
   year: number;
   isbn?: string | null;
   datePublished?: string;
-  cover: string;
+  cover?: string | null;
   samplePoems: Poem[];
   themes: string[];
   description: string;
@@ -75,7 +79,11 @@ export default function BookDetail() {
   }
 
   const bookUrl = `https://www.kiminouknox.com/books/${book.id}`;
-  const bookImage = book.cover.startsWith("http") ? book.cover : `https://www.kiminouknox.com${book.cover}`;
+  const bookImage = book.cover
+    ? book.cover.startsWith("http")
+      ? book.cover
+      : `https://www.kiminouknox.com${book.cover}`
+    : "https://www.kiminouknox.com/og-image.png";
   const retailerLinks = Object.entries(book.buyLinks).filter(
     (entry): entry is [string, string] => Boolean(entry[1])
   );
@@ -167,7 +175,9 @@ export default function BookDetail() {
         </script>
       </Helmet>
 
-      <section className="min-h-screen bg-background text-foreground py-20">
+      <Header />
+
+      <section className="min-h-screen bg-background text-foreground pb-20 pt-36">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link 
             href="/books" 
@@ -180,11 +190,11 @@ export default function BookDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Book Cover */}
             <div className="relative">
-              <img 
-                src={book.cover} 
-                alt={`${book.title} cover`}
-                className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
-                data-testid="img-book-cover"
+              <BookCover
+                src={book.cover}
+                title={book.title}
+                subtitle={book.subtitle}
+                className="mx-auto w-full max-w-md rounded-2xl shadow-2xl"
               />
               {book.featured && (
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold">
@@ -224,16 +234,18 @@ export default function BookDetail() {
               </div>
 
               {/* Sample Poems Button */}
-              <div className="mb-8">
-                <button
-                  onClick={() => setOpen(true)}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-muted hover:bg-accent border border-border rounded-lg transition-colors"
-                  data-testid="button-read-sample-poems"
-                >
-                  <BookOpen className="w-5 h-5" />
-                  Read Sample Poems
-                </button>
-              </div>
+              {book.samplePoems.length > 0 && (
+                <div className="mb-8">
+                  <button
+                    onClick={() => setOpen(true)}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-muted hover:bg-accent border border-border rounded-lg transition-colors"
+                    data-testid="button-read-sample-poems"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    Read Sample Poems
+                  </button>
+                </div>
+              )}
 
               {/* Buy Links */}
               <div>
@@ -269,6 +281,9 @@ export default function BookDetail() {
           onClose={() => setOpen(false)}
         />
       )}
+
+      <Footer />
+      <ContactFAB />
     </>
   );
 }

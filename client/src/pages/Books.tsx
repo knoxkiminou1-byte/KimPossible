@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
+import BookCover from "@/components/BookCover";
 
 type Poem = {
   title: string;
@@ -18,7 +19,7 @@ type Book = {
   year: number; 
   isbn?: string | null;
   datePublished?: string;
-  cover: string; 
+  cover?: string | null;
   samplePoems: Poem[]; 
   themes: string[]; 
   description: string; 
@@ -100,9 +101,12 @@ export default function BooksPage() {
                   </div>
                 </div>
               )}
-              <div className="aspect-[3/4] overflow-hidden">
-                <img src={b.cover} alt={`${b.title} cover`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              </div>
+              <BookCover
+                src={b.cover}
+                title={b.title}
+                subtitle={b.subtitle}
+                className="transition-transform duration-500 group-hover:scale-105"
+              />
               <div className="p-6">
                 <p className="text-xs tracking-wider uppercase text-amber-200/80">{b.year}{b.isbn ? ` • ISBN ${b.isbn}` : ""}</p>
                 <h3 className="mt-1 font-serif text-2xl font-semibold leading-snug">{b.title}</h3>
@@ -114,16 +118,18 @@ export default function BooksPage() {
 
                 <div className="mt-6 space-y-3">
                   <div className="grid grid-cols-2 gap-2">
-                    <button
-                      onClick={() => setOpen({ id: b.id, poems: b.samplePoems, title: b.title })}
-                      className="group inline-flex items-center justify-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm text-white transition-colors hover:bg-white/10"
-                      data-testid={`button-read-sample-${b.id}`}
-                    >
-                      <BookOpen className="w-4 h-4" /> Read Sample
-                    </button>
+                    {b.samplePoems.length > 0 && (
+                      <button
+                        onClick={() => setOpen({ id: b.id, poems: b.samplePoems, title: b.title })}
+                        className="group inline-flex items-center justify-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm text-white transition-colors hover:bg-white/10"
+                        data-testid={`button-read-sample-${b.id}`}
+                      >
+                        <BookOpen className="w-4 h-4" /> Read Sample
+                      </button>
+                    )}
                     <Link 
                       href={`/books/${b.id}`}
-                      className="group inline-flex items-center justify-center gap-2 rounded-md bg-amber-200 px-4 py-2 text-sm text-black transition-colors hover:bg-amber-100"
+                      className={`${b.samplePoems.length > 0 ? "" : "col-span-2"} group inline-flex items-center justify-center gap-2 rounded-md bg-amber-200 px-4 py-2 text-sm text-black transition-colors hover:bg-amber-100`}
                       data-testid={`link-view-details-${b.id}`}
                     >
                       View Details <ArrowRight className="w-4 h-4" />

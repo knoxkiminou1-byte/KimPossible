@@ -18,7 +18,7 @@ export type EntityBook = {
   format: "Ebook" | "Paperback";
   price?: string;
   authors: string[];
-  cover: string;
+  cover?: string | null;
   themes: string[];
   description: string;
   samplePoems: Array<{ title: string; content: string }>;
@@ -233,10 +233,10 @@ export const authoredBooks: EntityBook[] = [
     format: "Paperback",
     price: "$15.99",
     authors: ["Kiminou Knox"],
-    cover: "/og-image.png",
+    cover: null,
     themes: ["Imagination", "Creativity", "Childhood"],
     description: "A children's creativity book introducing imagination, world-building, and the basics of seeing possibility through story.",
-    samplePoems: [{ title: "Imagination Begins", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: {},
   },
   {
@@ -251,7 +251,7 @@ export const authoredBooks: EntityBook[] = [
     cover: "/covers/adventures-chua-kiminou.jpg",
     themes: ["Friendship", "Growth", "Adventure"],
     description: "A children's story about two friends learning how courage and wisdom can work together.",
-    samplePoems: [{ title: "The Beginning", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: { googleBooks: "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ" },
   },
   {
@@ -266,7 +266,7 @@ export const authoredBooks: EntityBook[] = [
     cover: "/covers/poems-black-boy.jpg",
     themes: ["Identity", "Heritage", "Resilience"],
     description: "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
-    samplePoems: [{ title: "Morning Mirrors", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: { googleBooks: "https://play.google.com/store/books/details/Kiminou_Knox_Poems_From_A_Black_Boy?id=0HuKEQAAQBAJ" },
   },
   {
@@ -278,10 +278,10 @@ export const authoredBooks: EntityBook[] = [
     format: "Paperback",
     price: "",
     authors: ["Kiminou Knox"],
-    cover: "/og-image.png",
+    cover: "https://images-us.bookshop.org/ingram/9798267606912.jpg?v=18c67c745ee1446209d7474a2fe9ee04",
     themes: ["Black Boyhood", "Healing", "Resilience"],
     description: "A poetry collection on identity, silence, trauma, healing, faith, and the fullness of Black boyhood.",
-    samplePoems: [{ title: "Identity & Resilience", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: {
       bookshop: "https://bookshop.org/p/books/black-boy-poems-kiminou-knox/aaa3d62740820b18?ean=9798267606912",
       goodreads: "https://www.goodreads.com/book/show/242205179-black-boy-poems",
@@ -301,7 +301,7 @@ export const authoredBooks: EntityBook[] = [
     cover: "/covers/boys-raised-silence.jpg",
     themes: ["Silence", "Masculinity", "Healing"],
     description: "Poems about silence, pressure, and the work of learning how to speak honestly as a young Black man.",
-    samplePoems: [{ title: "The Quiet", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: { googleBooks: "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ" },
   },
   {
@@ -316,7 +316,7 @@ export const authoredBooks: EntityBook[] = [
     cover: "/covers/spirit-solomon.jpg",
     themes: ["Wisdom", "Faith", "Reckoning"],
     description: "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
-    samplePoems: [{ title: "Rise", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: { googleBooks: "https://play.google.com/store/books/details/Kiminou_Knox_The_Spirit_of_Solomon?id=yIRsEQAAQBAJ" },
   },
   {
@@ -331,7 +331,7 @@ export const authoredBooks: EntityBook[] = [
     cover: "/covers/hopeless-romantic.jpg",
     themes: ["Love", "Heartbreak", "Healing"],
     description: "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
-    samplePoems: [{ title: "First Love", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: { googleBooks: "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ" },
     featured: true,
   },
@@ -347,7 +347,7 @@ export const authoredBooks: EntityBook[] = [
     cover: "/covers/our-father.jpg",
     themes: ["Faith", "Silence", "Searching"],
     description: "A candid wrestling with prayer and presence when belief collides with unanswered questions.",
-    samplePoems: [{ title: "Questions in the Dark", content: "Preview reserved for the published edition." }],
+    samplePoems: [],
     buyLinks: { googleBooks: "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ" },
   },
 ];

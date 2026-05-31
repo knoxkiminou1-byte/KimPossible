@@ -110,13 +110,8 @@
     "isbn": "9798267606912",
     "datePublished": "2025-09-29",
     "format": "Paperback",
-    "cover": "/og-image.png",
-    "samplePoems": [
-      {
-        "title": "Identity & Resilience",
-        "content": "This preview is reserved for the published edition. Black Boy Poems is listed publicly as a paperback poetry collection by Kiminou Knox, published September 29, 2025."
-      }
-    ],
+    "cover": "https://images-us.bookshop.org/ingram/9798267606912.jpg?v=18c67c745ee1446209d7474a2fe9ee04",
+    "samplePoems": [],
     "themes": ["Black Boyhood", "Healing", "Resilience"],
     "description": "A poetry collection on identity, silence, trauma, healing, faith, and the fullness of Black boyhood.",
     "buyLinks": {
@@ -172,13 +167,8 @@
     "datePublished": "2026-02-18",
     "format": "Paperback",
     "price": "$15.99",
-    "cover": "/og-image.png",
-    "samplePoems": [
-      {
-        "title": "Imagination Begins",
-        "content": "This preview is reserved for the published edition. Kiminou's World of Imagination: The Basics is included in Kiminou Knox's owner-confirmed book catalog."
-      }
-    ],
+    "cover": null,
+    "samplePoems": [],
     "themes": ["Imagination", "Creativity", "Childhood"],
     "description": "A children's creativity book introducing imagination, world-building, and the basics of seeing possibility through story.",
     "buyLinks": {

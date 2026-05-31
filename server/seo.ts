@@ -7,7 +7,7 @@ type BookSeo = {
   year: number;
   isbn?: string;
   datePublished: string;
-  cover: string;
+  cover?: string | null;
   description: string;
   buyLinks: BookLinkMap;
   format?: string;
@@ -198,7 +198,7 @@ const books: BookSeo[] = [
     year: 2025,
     isbn: "9798267606912",
     datePublished: "2025-09-29",
-    cover: "/og-image.png",
+    cover: "https://images-us.bookshop.org/ingram/9798267606912.jpg?v=18c67c745ee1446209d7474a2fe9ee04",
     description:
       "A poetry collection on identity, silence, trauma, healing, faith, and the fullness of Black boyhood.",
     buyLinks: {
@@ -238,7 +238,7 @@ const books: BookSeo[] = [
     subtitle: "A Children's Imagination and Creativity Book",
     year: 2026,
     datePublished: "2026-02-18",
-    cover: "/og-image.png",
+    cover: null,
     description:
       "A children's creativity book introducing imagination, world-building, and the basics of seeing possibility through story.",
     buyLinks: {},
@@ -405,6 +405,7 @@ function breadcrumbSchema(items: Array<{ name: string; path: string }>) {
 function bookSchema(book: BookSeo) {
   const bookUrl = absoluteUrl(`/books/${book.id}`);
   const retailerUrls = Object.values(book.buyLinks).filter(Boolean) as string[];
+  const image = book.cover ? absoluteAsset(book.cover) : DEFAULT_IMAGE;
 
   return {
     "@type": "Book",
@@ -412,7 +413,7 @@ function bookSchema(book: BookSeo) {
     name: book.title,
     alternateName: book.subtitle,
     description: book.description,
-    image: absoluteAsset(book.cover),
+    image,
     url: bookUrl,
     author: {
       "@id": PERSON_ID,
@@ -651,11 +652,12 @@ export function getSeoData(rawUrl: string): SeoData {
   if (book) {
     const title = `${book.title} | Kiminou Knox`;
     const description = `${book.description} ${book.subtitle}.`;
+    const image = book.cover ? absoluteAsset(book.cover) : DEFAULT_IMAGE;
     return {
       title,
       description,
       canonical: absoluteUrl(`/books/${book.id}`),
-      image: absoluteAsset(book.cover),
+      image,
       ogType: "book",
       graph: [
         personSchema(),
