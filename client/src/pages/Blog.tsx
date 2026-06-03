@@ -56,16 +56,17 @@ function Blog() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl font-serif font-bold mb-6 text-foreground md:text-6xl">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Author's Journal
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Notes on writing, basketball, faith, and the work of growing in public.
+              Thoughts, insights, and stories from an 18-year-old athlete, author, and entrepreneur
+              navigating the intersection of sports, literature, and business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {categories.slice(0, 4).map((category) => (

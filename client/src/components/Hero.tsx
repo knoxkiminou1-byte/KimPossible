@@ -1,126 +1,269 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
+const letterVariants = {
+  hidden: { opacity: 0, y: 80, rotateX: -90 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: {
+      duration: 0.8,
+      delay: 0.6 + i * 0.06,
+      ease: [0.215, 0.61, 0.355, 1],
+    },
+  }),
+};
+
 export default function Hero() {
-  const shouldReduceMotion = useReducedMotion();
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 800], [0, 200]);
+  const bgScale = useTransform(scrollY, [0, 800], [1, 1.15]);
+  const overlayOpacity = useTransform(scrollY, [0, 600], [0.3, 0.85]);
+  const contentY = useTransform(scrollY, [0, 600], [0, -80]);
+  const contentOpacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   const scrollToWork = () => {
-    window.location.href = "/books";
+    window.location.href = '/books';
   };
 
   const scrollToContact = () => {
-    window.location.href = "/contact";
+    window.location.href = '/contact';
   };
 
   const scrollToNext = () => {
-    document.getElementById("who-is-kiminou")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
   };
 
+  useEffect(() => {
+    setIsVisible(true);
+    const img = new Image();
+    img.src = '/kiminou-splash-art.png';
+    img.onload = () => setImageLoaded(true);
+    img.onerror = () => setImageLoaded(true);
+  }, []);
+
+  const nameFirst = "KIMINOU";
+  const nameLast = "KNOX";
+
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
-      data-testid="hero-section"
-    >
-      <div className="hero-media absolute inset-0" aria-hidden="true">
-        <img
-          src="/kiminou-hero-feb-27-2026.jpg"
-          alt=""
-          className="hero-image"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
-        <div className="hero-gradient" />
-        <div className="hero-vignette" />
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
+          <motion.div 
+            className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+        </div>
+      )}
+
+      <motion.div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: "url('/kiminou-splash-art.png')", y: bgY, scale: bgScale }}
+        initial={{ opacity: 0, scale: 1.2 }}
+        animate={{ 
+          opacity: imageLoaded ? 1 : 0,
+          scale: imageLoaded ? 1 : 1.2
+        }}
+        transition={{ duration: 2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        data-testid="hero-background"
+      />
+
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" 
+        style={{ opacity: overlayOpacity }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              width: Math.random() * 3 + 1,
+              height: Math.random() * 3 + 1,
+              background: `radial-gradient(circle, rgba(255,215,0,${Math.random() * 0.5 + 0.2}), transparent)`,
+            }}
+            initial={{
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+              y: typeof window !== 'undefined' ? window.innerHeight + 10 : 800
+            }}
+            animate={{
+              y: -10,
+              opacity: [0, 1, 0.6, 0]
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              delay: Math.random() * 8,
+              ease: "linear"
+            }}
+          />
+        ))}
       </div>
 
       <motion.div
-        className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white lg:px-8"
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute inset-0 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 2 }}
+      >
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      </motion.div>
+
+      <motion.div 
+        className="relative z-10 text-center text-white px-6 lg:px-8 max-w-4xl mx-auto"
+        style={{ y: contentY, opacity: contentOpacity }}
+      >
+        {isVisible && (
+          <>
+            <motion.div
+              initial={{ opacity: 0, y: -30, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="mb-8"
+            >
+              <motion.div
+                className="inline-flex items-center gap-4"
+                initial={{ width: 0 }}
+                animate={{ width: "auto" }}
+                transition={{ duration: 1.2, delay: 0.3 }}
+              >
+                <motion.div
+                  className="h-px bg-gradient-to-r from-transparent to-amber-300/60"
+                  initial={{ width: 0 }}
+                  animate={{ width: 60 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                />
+                <span className="text-sm md:text-base uppercase tracking-[0.4em] text-amber-200/90 font-light">
+                  Athlete • Author • Entrepreneur
+                </span>
+                <motion.div
+                  className="h-px bg-gradient-to-l from-transparent to-amber-300/60"
+                  initial={{ width: 0 }}
+                  animate={{ width: 60 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.h1 
+              className="font-serif text-6xl md:text-8xl lg:text-9xl font-light mb-8"
+              style={{ perspective: 800 }}
+              data-testid="hero-title"
+            >
+              <span className="block overflow-hidden mb-2">
+                {nameFirst.split("").map((letter, i) => (
+                  <motion.span
+                    key={`first-${i}`}
+                    className="inline-block"
+                    custom={i}
+                    variants={letterVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="block overflow-hidden">
+                {nameLast.split("").map((letter, i) => (
+                  <motion.span
+                    key={`last-${i}`}
+                    className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-200"
+                    custom={i + nameFirst.length}
+                    variants={letterVariants}
+                    initial="hidden"
+                    animate="visible"
+                    style={{ backgroundSize: '200% 200%' }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+            </motion.h1>
+
+            <motion.div
+              className="w-24 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent mx-auto mb-8"
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: 1.2, delay: 1.4 }}
+            />
+
+            <motion.p 
+              className="text-lg md:text-xl font-light mb-10 leading-relaxed max-w-3xl mx-auto text-white/90"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1, delay: 1.2 }}
+              data-testid="hero-intro"
+            >
+              I am a Bay Area writer and basketball athlete building a legacy through books, sport, and youth leadership.
+            </motion.p>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-6 justify-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.5 }}
+            >
+              <motion.button 
+                onClick={scrollToWork}
+                className="group relative luxury-button px-10 py-4 bg-white text-black font-medium uppercase tracking-[0.15em] overflow-hidden"
+                whileHover={{ scale: 1.05, boxShadow: "0 25px 50px rgba(255,255,255,0.25)" }}
+                whileTap={{ scale: 0.97 }}
+                data-testid="button-read-work"
+              >
+                <motion.span
+                  className="absolute inset-0 bg-gradient-to-r from-amber-200 to-amber-400"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: 0 }}
+                  transition={{ duration: 0.4 }}
+                />
+                <span className="relative z-10">Read the Work</span>
+              </motion.button>
+              <motion.button 
+                onClick={scrollToContact}
+                className="luxury-button px-10 py-4 border-2 border-white/60 text-white font-medium uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm"
+                whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,1)", boxShadow: "0 25px 50px rgba(255,255,255,0.15)" }}
+                whileTap={{ scale: 0.97 }}
+                data-testid="button-work-with-me"
+              >
+                Work With Me
+              </motion.button>
+            </motion.div>
+          </>
+        )}
+      </motion.div>
+
+      <motion.div 
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        onClick={scrollToNext}
       >
         <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-6"
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-sm font-medium uppercase tracking-[0.24em] text-amber-100/90 md:text-base">
-            Writer • Athlete • Program Builder
-          </span>
-        </motion.div>
-
-        <motion.h1
-          className="mb-6 font-serif text-5xl font-semibold leading-none md:text-7xl lg:text-8xl"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-          data-testid="hero-title"
-        >
-          Kiminou Knox
-        </motion.h1>
-
-        <motion.p
-          className="mx-auto mb-10 max-w-2xl text-lg font-light leading-relaxed text-white/90 md:text-xl"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.28 }}
-          data-testid="hero-intro"
-        >
-          Books, basketball, and youth-centered work from the Bay Area.
-        </motion.p>
-
-        <motion.div
-          className="flex flex-col justify-center gap-4 sm:flex-row"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.36 }}
-        >
-          <motion.button
-            onClick={scrollToWork}
-            className="rounded-md bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-black transition-colors hover:bg-amber-100"
-            whileHover={shouldReduceMotion ? undefined : { y: -2 }}
-            whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
-            data-testid="button-read-work"
-          >
-            Books
-          </motion.button>
-          <motion.button
-            onClick={scrollToContact}
-            className="rounded-md border border-white/60 px-8 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black"
-            whileHover={shouldReduceMotion ? undefined : { y: -2 }}
-            whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
-            data-testid="button-work-with-me"
-          >
-            Contact
-          </motion.button>
+          <ChevronDown className="w-8 h-8 text-white/50 hover:text-white transition-colors duration-300" />
         </motion.div>
       </motion.div>
 
-      <motion.button
-        type="button"
-        className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 cursor-pointer text-white/60 transition-colors duration-300 hover:text-white"
-        initial={shouldReduceMotion ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        onClick={scrollToNext}
-        aria-label="Scroll to the next section"
-      >
-        <motion.div
-          animate={shouldReduceMotion ? undefined : { y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="h-8 w-8" />
-        </motion.div>
-      </motion.button>
-
       <motion.div
-        className="absolute bottom-0 left-0 right-0 z-10 h-32 bg-gradient-to-t from-background to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
+        transition={{ delay: 1, duration: 1 }}
       />
     </section>
   );

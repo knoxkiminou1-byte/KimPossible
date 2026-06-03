@@ -11,17 +11,17 @@ interface Book {
   subtitle: string;
   year: number;
   datePublished: string;
-  isbn?: string | null;
+  isbn: string;
   cover: string;
   description: string;
-  buyLinks: Record<string, string | null | undefined>;
+  buyLinks: Record<string, string>;
 }
 
 export default function Works() {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    fetch('/books.json')
+    fetch('/books-full.json')
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(err => console.error('Failed to load books:', err));
@@ -30,11 +30,9 @@ export default function Works() {
   const bookSchemas = books.map(book => ({
     "@context": "https://schema.org",
     "@type": "Book",
-    "@id": `https://www.kiminouknox.com/books/${book.id}#book`,
+    "@id": `https://kiminouknox.com/works#${book.id}`,
     "name": book.title,
-    "url": `https://www.kiminouknox.com/books/${book.id}`,
-    "image": book.cover.startsWith("http") ? book.cover : `https://www.kiminouknox.com${book.cover}`,
-    "author": { "@id": "https://www.kiminouknox.com/#person" },
+    "author": { "@id": "https://kiminouknox.com/#person" },
     "workExample": [
       { "@type": "Book", "bookFormat": "https://schema.org/EBook", "url": book.buyLinks.amazon || book.buyLinks.googleBooks || "" },
       { "@type": "Book", "bookFormat": "https://schema.org/Paperback", "url": book.buyLinks.amazon || "" }
@@ -49,22 +47,20 @@ export default function Works() {
   return (
     <>
       <Helmet>
-        <title>Works by Kiminou Knox - Books, Essays, KimYaps, Editorial & Digital Projects</title>
-        <meta name="description" content="A creative hub for Kiminou Knox across authored books, essays, KimYaps, editorial credits, in-development literary worlds, and AAFC Builders digital work." />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <link rel="canonical" href="https://www.kiminouknox.com/works" />
+        <title>Works - Kiminou Knox</title>
+        <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <link rel="canonical" href="https://kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Works - Kiminou Knox" />
-        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content="Published works and books by writer Kiminou Knox" />
-        <meta property="og:url" content="https://www.kiminouknox.com/works" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
+        <meta property="og:url" content="https://kiminouknox.com/works" />
+        <meta property="og:image" content="https://kiminouknox.com/og/works.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Works - Kiminou Knox" />
         <meta name="twitter:description" content="Published books and poetry collections" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
+        <meta name="twitter:image" content="https://kiminouknox.com/og/works.jpg" />
         
         {bookSchemas.map((schema, index) => (
           <script key={index} type="application/ld+json">
@@ -82,22 +78,8 @@ export default function Works() {
               Works
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A creative hub across authored books, essays, KimYaps, editorial credits, in-development literary worlds, and AAFC Builders digital work.
+              Poetry collections and stories exploring faith identity love and the Black experience
             </p>
-          </div>
-
-          <div className="mb-12 grid gap-4 md:grid-cols-4">
-            {[
-              ["/books", "Authored Books"],
-              ["/essays", "Essays"],
-              ["/kimyaps", "KimYaps"],
-              ["/editorial", "Editorial"],
-              ["/aafc-builders", "AAFC Builders"],
-            ].map(([href, label]) => (
-              <a key={href} href={href} className="rounded-lg border border-border bg-card p-4 text-center font-medium hover:border-primary">
-                {label}
-              </a>
-            ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -131,7 +113,7 @@ export default function Works() {
                     <Button
                       variant="default"
                       className="w-full"
-                      onClick={() => window.open(book.buyLinks.amazon ?? undefined, '_blank')}
+                      onClick={() => window.open(book.buyLinks.amazon, '_blank')}
                       data-testid={`buy-button-${book.id}`}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />

@@ -40,7 +40,7 @@ const beyondCards = [
   },
   {
     title: "Director",
-    description: "Director of Artists and Athletes For Change, organizing creative and athletic projects with a practical community focus.",
+    description: "Director of Artists and Athletes For Change, uniting creatives and athletes to make meaningful community impact.",
     link: "/contact",
     linkText: "Connect with Kiminou",
     icon: Users
@@ -52,19 +52,16 @@ export default function Author() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
-        <meta name="description" content="Kiminou Knox is a Bay Area author, poet, athlete, speaker, and program builder working across books, basketball, speaking, and community projects." />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <link rel="canonical" href="https://www.kiminouknox.com/author" />
+        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
+        <link rel="canonical" href="https://kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
-        <meta property="og:site_name" content="Kiminou Knox" />
-        <meta property="og:description" content="Author of poetry, fiction, and a children's storybook." />
-        <meta property="og:url" content="https://www.kiminouknox.com/author" />
-        <meta property="og:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
+        <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction." />
+        <meta property="og:url" content="https://kiminouknox.com/author" />
+        <meta property="og:image" content="https://kiminouknox.com/author-kiminou.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:description" content="Bay Area writer, poet, athlete, and program builder." />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
+        <meta name="twitter:image" content="https://kiminouknox.com/author-kiminou.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
@@ -91,41 +88,75 @@ export default function Author() {
             </div>
           </div>
 
+          {/* Hero Section */}
           <section id="bio" className="max-w-6xl mx-auto px-6 py-16 lg:py-24 scroll-mt-40 relative overflow-hidden">
+            {/* Animated background gradient */}
+            <motion.div 
+              className="absolute inset-0 opacity-30"
+              style={{
+                background: "radial-gradient(ellipse at 30% 20%, rgba(251,191,36,0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(251,191,36,0.1) 0%, transparent 50%)"
+              }}
+              animate={{
+                opacity: [0.2, 0.35, 0.2],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
             <div className="grid gap-12 lg:grid-cols-2 items-center relative z-10">
+              {/* Photo */}
               <motion.div 
                 className="relative w-full max-w-md mx-auto lg:order-1"
-                initial={{ opacity: 0, x: -24 }}
+                initial={{ opacity: 0, x: -50, rotate: -2 }}
                 animate={{ opacity: 1, x: 0, rotate: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                whileHover={{ scale: 1.02, rotate: 1 }}
               >
-                <div className="aspect-[4/5] rounded-lg overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40 relative">
+                <motion.div 
+                  className="absolute -inset-4 bg-gradient-to-r from-amber-400/20 via-amber-300/10 to-amber-400/20 rounded-3xl blur-xl"
+                  animate={{
+                    opacity: [0.5, 0.8, 0.5],
+                    scale: [1, 1.02, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-2 ring-amber-300/50 shadow-2xl shadow-amber-900/40 relative">
                   <motion.img
                     src="/author-kiminou.jpg"
-                    alt="Kiminou Knox - author, athlete, and entrepreneur from East Palo Alto"
-                    title="Kiminou Knox - Author, Athlete & Program Builder"
+                    alt="Kiminou Knox - Author, Athlete, Entrepreneur from East Palo Alto, creator of The Black Boy Lie universe"
+                    title="Kiminou Knox - Author, Athlete & Entrepreneur"
                     className="w-full h-full object-cover"
-                    initial={{ scale: 1.03 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    initial={{ scale: 1.1, filter: "grayscale(100%)" }}
+                    animate={{ scale: 1, filter: "grayscale(0%)" }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    whileHover={{ scale: 1.05 }}
                     loading="eager"
                   />
                 </div>
                 <motion.div 
-                  className="absolute -bottom-4 -right-4 rounded-md bg-amber-300 px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-black shadow-lg shadow-black/30"
+                  className="absolute -bottom-4 -right-4 bg-gradient-to-r from-amber-300 to-amber-400 text-black text-xs font-bold uppercase tracking-wide px-5 py-2.5 rounded-full shadow-lg shadow-amber-500/30"
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ delay: 0.45, type: "spring", stiffness: 200 }}
+                  transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
+                  whileHover={{ scale: 1.1 }}
                 >
                   Poet · Author · Athlete
                 </motion.div>
               </motion.div>
 
+              {/* Text */}
               <motion.div 
                 className="space-y-6 lg:order-2"
-                initial={{ opacity: 0, x: 24 }}
+                initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.55, delay: 0.15 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <motion.p 
                   className="text-xs font-semibold tracking-[0.3em] uppercase text-amber-300"
@@ -149,7 +180,7 @@ export default function Author() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
                 >
-                  Writer, poet, athlete, and program builder from East Palo Alto, California.
+                  Poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
                 </motion.p>
                 <motion.p 
                   className="text-gray-400"
@@ -157,7 +188,7 @@ export default function Author() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
                 >
-                  Author of poetry, fiction, and a children's storybook.
+                  Creator of The Black Boy Lie universe. Author of seven poetry collections and a children's storybook.
                 </motion.p>
 
                 <motion.div 
@@ -187,7 +218,7 @@ export default function Author() {
                   transition={{ delay: 1.3 }}
                 >
                   {[
-                    { name: "Goodreads", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
+                    { name: "Goodreads", url: "https://www.goodreads.com/author/show/Kiminou_Knox" },
                     { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
                     { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
                     { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
@@ -227,111 +258,111 @@ export default function Author() {
                   Bio
                 </h2>
                 <div className="space-y-8 text-gray-300 text-lg leading-relaxed">
-	                  <div className="space-y-4">
-	                    <p>
-	                      Kiminou Knox is an author, poet, speaker, athlete, and program builder from the Oakland and East Palo Alto Bay Area. His work moves between poetry, fiction, basketball, faith, and community projects for young people.
-	                    </p>
-	                  </div>
+                  <div className="space-y-4">
+                    <p>
+                      Kiminou Knox is a poet, novelist, speaker, athlete, and creative executive from East Palo Alto, now based in Oakland, California. At nineteen, he has already become a seven-time published author and a cultural voice committed to the serious formation of young Black men and the institutions that should invest in them.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Early Life and Lineage</h3>
-	                    <p>
-	                      Born and raised in East Palo Alto, Knox grew up around church, school gyms, family stories, and community work. He is the son of Rashida Knox and the grandson of Faye McNair Knox, whose service in East Palo Alto remains part of the standard he works from.
-	                    </p>
-	                    <p>
-	                      Those rooms gave him a practical sense of faith, memory, pressure, and responsibility. His writing keeps returning to what families carry, what boys are taught to hide, and what it takes to speak plainly.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Early Life and Lineage</h3>
+                    <p>
+                      Born and raised in East Palo Alto, Knox grew up between church pews, school gyms, and homes where strength was expected long before softness was allowed. He is the son of Rashida Knox, the grandson of Faye McNair Knox, and the great-grandson of Sarah Lee Williams and Elisha Bonepart McNair, a lineage that functions in his work as both inheritance and obligation.
+                    </p>
+                    <p>
+                      From an early age, he watched faith, resilience, and generational memory collide in real time, and those collisions became the emotional architecture of his voice. The elders who raised him gave him stories, standards, and a sense of spiritual gravity; his writing answers to all three with a conviction that feels lived-in rather than performed.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
-	                    <p>
-	                      Knox has eight featured book titles across poetry, fiction, and children's storytelling. His titles <em className="text-amber-300/90">Kiminou's World of Imagination: The Basics</em>, <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children's storybook written with his younger brother move across poems, narrative, prayer, and reflection.
-	                    </p>
-	                    <p>
-	                      The pages deal with faith, mental health, family fracture, masculinity, love, longing, and spiritual confusion. The goal is not to make pain decorative; it is to name it clearly enough that a reader can recognize something true.
-	                    </p>
-	                    <p>
-	                      Across the work, Black boys are treated as whole people with complicated feelings, private questions, and room to change. Knox writes toward the parts of life that are often left unspoken.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
+                    <p>
+                      By nineteen, Knox has authored and published seven books that together form a literary universe centered on the interior lives of Black boys and young Black men. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children&apos;s storybook written with his younger brother move fluidly across poetry, psychological fiction, and prophetic reflection.
+                    </p>
+                    <p>
+                      His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, longing, and spiritual confusion, all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume; he insists on the full weight of the Black experience grief, resistance, tenderness, and joy and trusts his readers to meet him at that depth.
+                    </p>
+                    <p>
+                      Across his body of work, Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings whose emotions are allowed to be expansive and exact. In a culture that often demands performance, Knox writes toward the parts of life that usually remain unspoken, naming depression, anger, shame, and hope with equal clarity.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Voice, Form, and Craft</h3>
-	                    <p>
-	                      Knox's writing moves between confession, prayer, observation, and critique. He is interested in direct language, emotional detail, and work that can be read out loud without losing its meaning.
-	                    </p>
-	                    <p>
-	                      Some projects are tight poems. Others work as narrative, interior monologue, or meditative reflection. What connects them is the attempt to say what is real without dressing it up.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Voice, Form, and Craft</h3>
+                    <p>
+                      Knox&apos;s writing is marked by emotional precision, spiritual seriousness, and an ear tuned to both scripture and street corners. His poems and prose move between confession and critique, prayer and observation, often within the same page, without confusing truth-telling for theater.
+                    </p>
+                    <p>
+                      Formally, he allows each project to choose its own container: some works arrive as tight, concentrated poems; others unfold as narrative, interior monologue, or meditative reflection. What binds them is an unwavering commitment to say what is real, even when that reality is costly, uncomfortable, or unresolved.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Faith, Masculinity, and Mental Health</h3>
-	                    <p>
-	                      Raised around the Black church, Knox writes about Christianity as a lived framework for doubt, desire, discipline, grace, and responsibility. His work asks hard questions without rushing to clean answers.
-	                    </p>
-	                    <p>
-	                      Masculinity, in his pages, is something to examine instead of simply inherit. He writes about boys taught to be durable before they are allowed to be honest.
-	                    </p>
-	                    <p>
-	                      Mental health is central to that work. Knox makes room for loneliness, anger, shame, therapy, breakdown, recovery, and the long process of learning how to name what hurts.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Faith, Masculinity, and Mental Health</h3>
+                    <p>
+                      Raised within the Black church, Knox carries Christianity not as branding but as a lived framework for wrestling with doubt, desire, discipline, and grace. His work faces spiritual confusion head-on, asking hard questions about God, suffering, manhood, and responsibility without rushing to easy answers.
+                    </p>
+                    <p>
+                      Masculinity, in his pages, is something to be interrogated and rebuilt, not merely inherited. He writes about boys taught to be durable before they are allowed to be gentle, and about men who must learn, sometimes late, how to name what hurts and what heals.
+                    </p>
+                    <p>
+                      Mental health is not a side topic in his work; it is central. Knox makes space for therapy, breakdown, loneliness, and recovery, insisting that serious literature for Black boys must also be serious about their psychological and spiritual well-being.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">KimYaps: The Podcast</h3>
-	                    <p>
-	                      Knox extends the same questions into audio with KimYaps. Episodes cover Christianity, love, relationships, identity, emotional growth, and the private truths people often struggle to say out loud.
-	                    </p>
-	                    <p>
-	                      The format is conversational, but the standard is the same as the writing: be clear, stay honest, and do not turn vulnerability into a performance.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">KimYaps: The Podcast</h3>
+                    <p>
+                      Knox extends his literary sensibility into audio with his podcast, KimYaps, a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
+                    </p>
+                    <p>
+                      On KimYaps, Knox&apos;s voice is both conversational and commanding capable of spiritual reflection, cultural commentary, and personal testimony without turning any of them into performance. He approaches each subject as a man committed to saying what is necessary, even when it disrupts comfort, complicates public narratives, or exposes his own vulnerabilities.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Athletics and Discipline</h3>
-	                    <p>
-	                      As a basketball player and multi-sport athlete, Knox brings the same practice habits to training that he brings to writing. Athletics gives him a daily structure for body, mind, and focus.
-	                    </p>
-	                    <p>
-	                      Consistency, film study, weight-room work, and repetition all show up in the creative process too. The court and the page are different spaces, but both demand patience and accountability.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Athletics and Discipline</h3>
+                    <p>
+                      A multi-sport athlete, Knox brings long-view intention and disciplined rigor to his physical training that mirrors his commitment to the page. For him, athletics is not simply competition; it is a practice of stewardship over body, mind, and focus.
+                    </p>
+                    <p>
+                      The same internal standards that govern his literary craft consistency, resilience, and a refusal to cut corners shape how he moves through weight rooms, fields, and courts. This integration of discipline across arenas allows him to model a form of Black boyhood and manhood where intellect, spirit, and physical strength are not at odds but in conversation.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Leadership, Institutions, and Youth Development</h3>
-	                    <p>
-	                      As the founder of The TeeShirtTeens and Director of Artists and Athletes For Change (AAFC), Knox builds projects around young talent, expression, and practical opportunity.
-	                    </p>
-	                    <p>
-	                      The work is meant to give young creators and athletes structure, mentorship, and a record of what they are building, not just a moment of attention.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Leadership, Institutions, and Youth Development</h3>
+                    <p>
+                      As the founder of The TeeShirtTeens and Director of Artists and Athletes For Change (AAFC), Knox does more than create art; he builds structure around young talent. The TeeShirtTeens and AAFC function as serious developmental platforms for youth, helping them convert expression into opportunity and raw vision into documented, transferable work.
+                    </p>
+                    <p>
+                      Under his leadership, these initiatives refuse to treat young creators and athletes as content or spectacle. Instead, they invest in them as whole people, offering pathways, mentorship, and accountability that translate creativity and discipline into something durable and real.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">Operating Standard</h3>
-	                    <p>
-	                      Every arena Knox enters, from literature and media to leadership and athletics, gets the same operating standard: show up prepared, respect the room, and build work that can last beyond a single post or event.
-	                    </p>
-	                    <p>
-	                      His focus is simple: tell the truth, build useful structure, and take young people's inner lives seriously.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Philosophy and Operating Standard</h3>
+                    <p>
+                      Every arena Knox enters literature, media, leadership, athletics receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass and timelines clear.
+                    </p>
+                    <p>
+                      His philosophy is simple but demanding: truth retains power, presence transforms lives, and Black boys deserve serious literature, serious investment, and the full architecture of legacy. That legacy, in his vision, is not postponed until later life; it is written early, built deliberately, and designed to last.
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
-	                    <h3 className="font-serif text-2xl text-white">What Comes Next</h3>
-	                    <p>
-	                      The work is still growing. Knox is continuing to write, train, speak, and build with young creators and athletes who are trying to turn discipline into something visible.
-	                    </p>
-	                    <p>
-	                      Whether on the page, behind a microphone, on the court, or in a room full of students, the goal is the same: make honest work and leave behind something useful.
-	                    </p>
-	                  </div>
+                    <h3 className="font-serif text-2xl text-white">Generational Voice and Legacy</h3>
+                    <p>
+                      Kiminou Knox represents a generation of young Black men who refuse to separate depth from youth or seriousness from early ambition. His work stands at the intersection of art, faith, discipline, and legacy, offering a model of authorship and leadership that is both grounded in elders and unafraid to confront the present.
+                    </p>
+                    <p>
+                      Whether on the page, behind a microphone, on the court, or inside a room full of young creators, Knox moves with the same conviction: to make his life and work mean something beyond the moment, and to ensure that the boys coming after him inherit not just stories, but structures.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-8">
-                  <a href="https://www.goodreads.com/author/show/55621683.Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
+                  <a href="https://www.goodreads.com/author/show/Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
                     Goodreads
                   </a>
                   <a href="https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">

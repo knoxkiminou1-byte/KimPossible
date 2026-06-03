@@ -13,7 +13,6 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import type { BlogPost, BlogCategory, InsertBlogPost, InsertBlogCategory } from "@shared/schema";
 import { Plus, Edit, Trash2, Eye, EyeOff } from "lucide-react";
-import { Helmet } from "react-helmet";
 
 function BlogAdmin() {
   const { toast } = useToast();
@@ -227,11 +226,7 @@ function BlogAdmin() {
   };
 
   return (
-    <>
-      <Helmet>
-        <meta name="robots" content="noindex,nofollow" />
-      </Helmet>
-      <div className="container mx-auto p-6 space-y-6">
+    <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">Blog Administration</h1>
       </div>
@@ -548,8 +543,7 @@ function BlogAdmin() {
           </div>
         </TabsContent>
       </Tabs>
-      </div>
-    </>
+    </div>
   );
 }
 

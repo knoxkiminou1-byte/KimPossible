@@ -14,19 +14,25 @@ export default function PressStrip() {
   ];
 
   return (
-    <section className="border-y border-border bg-muted py-14" data-testid="press-strip">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Selected links and references
-          </p>
+    <section className="py-16 bg-muted border-y border-border overflow-hidden" data-testid="press-strip">
+      <div className="whitespace-nowrap">
+        <div className="inline-block animate-marquee marquee-pause">
+          <div className="inline-flex items-center space-x-16 text-2xl md:text-3xl font-serif text-muted-foreground">
+            {pressOutlets.map((outlet, index) => (
+              <span key={`first-${index}`} data-testid={`press-outlet-${index}`}>
+                {outlet}
+              </span>
+            )).reduce((prev, curr, index) => [prev, <span key={`sep-first-${index}`}>•</span>, curr] as any)}
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-4 text-sm text-foreground/75 md:grid-cols-3 lg:grid-cols-4">
-          {pressOutlets.map((outlet, index) => (
-            <span key={outlet} data-testid={`press-outlet-${index}`}>
-              {outlet}
-            </span>
-          ))}
+        <div className="inline-block animate-marquee marquee-pause">
+          <div className="inline-flex items-center space-x-16 text-2xl md:text-3xl font-serif text-muted-foreground">
+            {pressOutlets.map((outlet, index) => (
+              <span key={`second-${index}`}>
+                {outlet}
+              </span>
+            )).reduce((prev, curr, index) => [prev, <span key={`sep-second-${index}`}>•</span>, curr] as any)}
+          </div>
         </div>
       </div>
     </section>

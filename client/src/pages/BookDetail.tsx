@@ -3,10 +3,6 @@ import { useRoute, Link } from "wouter";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { Helmet } from "react-helmet";
 import PoemModal from "@/components/PDFModal";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ContactFAB from "@/components/ContactFAB";
-import BookCover from "@/components/BookCover";
 
 type Poem = {
   title: string;
@@ -20,7 +16,7 @@ type Book = {
   year: number;
   isbn?: string | null;
   datePublished?: string;
-  cover?: string | null;
+  cover: string;
   samplePoems: Poem[];
   themes: string[];
   description: string;
@@ -78,106 +74,54 @@ export default function BookDetail() {
     );
   }
 
-  const bookUrl = `https://www.kiminouknox.com/books/${book.id}`;
-  const bookImage = book.cover
-    ? book.cover.startsWith("http")
-      ? book.cover
-      : `https://www.kiminouknox.com${book.cover}`
-    : "https://www.kiminouknox.com/og-image.png";
-  const retailerLinks = Object.entries(book.buyLinks).filter(
-    (entry): entry is [string, string] => Boolean(entry[1])
-  );
-
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
+    "@type": "Book",
+    "name": book.title,
+    "author": {
+      "@type": "Person",
+      "name": "Kiminou Knox"
+    },
+    "datePublished": book.datePublished || `${book.year}-01-01`,
+    ...(book.isbn && { "isbn": book.isbn }),
+    "url": `https://kiminouknox.com/books/${book.id}`,
+    "workExample": Object.entries(book.buyLinks)
+      .filter(([_, url]) => url)
+      .map(([key, url]) => ({
         "@type": "Book",
-        "@id": `${bookUrl}#book`,
-        "name": book.title,
-        "alternateName": book.subtitle,
-        "description": book.description,
-        "image": bookImage,
-        "url": bookUrl,
-        "author": {
-          "@type": "Person",
-          "@id": "https://www.kiminouknox.com/#person",
-          "name": "Kiminou Knox",
-          "url": "https://www.kiminouknox.com/"
-        },
-        "publisher": {
-          "@type": "Person",
-          "@id": "https://www.kiminouknox.com/#person",
-          "name": "Kiminou Knox"
-        },
-        "datePublished": book.datePublished || `${book.year}-01-01`,
-        "copyrightYear": book.year,
-        "inLanguage": "en-US",
-        ...(book.isbn && { "isbn": book.isbn }),
-        "sameAs": retailerLinks.map(([, url]) => url),
-        "workExample": retailerLinks.map(([key, url]) => ({
-          "@type": "Book",
-          "bookFormat": key.includes("google") ? "https://schema.org/EBook" : "https://schema.org/Paperback",
-          "url": url
-        }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.kiminouknox.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Books",
-            "item": "https://www.kiminouknox.com/books"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": book.title,
-            "item": bookUrl
-          }
-        ]
-      }
-    ]
+        "bookFormat": key.includes('google') ? "EBook" : "Paperback",
+        "url": url
+      }))
   };
 
-  const availableRetailers = retailerLinks
-    .map(([key, url]) => ({ key, url, name: retailerNames[key] || key }));
+  const availableRetailers = Object.entries(book.buyLinks)
+    .filter(([_, url]) => url)
+    .map(([key, url]) => ({ key, url: url as string, name: retailerNames[key] || key }));
 
   return (
     <>
       <Helmet>
         <title>{book.title} - Kiminou Knox</title>
         <meta name="description" content={book.description} />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <link rel="canonical" href={bookUrl} />
+        <link rel="canonical" href={`https://kiminouknox.com/books/${book.id}`} />
         
         <meta property="og:type" content="book" />
         <meta property="og:title" content={`${book.title} - Kiminou Knox`} />
-        <meta property="og:site_name" content="Kiminou Knox" />
         <meta property="og:description" content={book.description} />
-        <meta property="og:url" content={bookUrl} />
-        <meta property="og:image" content={bookImage} />
+        <meta property="og:url" content={`https://kiminouknox.com/books/${book.id}`} />
+        <meta property="og:image" content={`https://kiminouknox.com${book.cover}`} />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${book.title} - Kiminou Knox`} />
         <meta name="twitter:description" content={book.description} />
-        <meta name="twitter:image" content={bookImage} />
+        <meta name="twitter:image" content={`https://kiminouknox.com${book.cover}`} />
         
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
       </Helmet>
 
-      <Header />
-
-      <section className="min-h-screen bg-background text-foreground pb-20 pt-36">
+      <section className="min-h-screen bg-background text-foreground py-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link 
             href="/books" 
@@ -190,11 +134,11 @@ export default function BookDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Book Cover */}
             <div className="relative">
-              <BookCover
-                src={book.cover}
-                title={book.title}
-                subtitle={book.subtitle}
-                className="mx-auto w-full max-w-md rounded-2xl shadow-2xl"
+              <img 
+                src={book.cover} 
+                alt={`${book.title} cover`}
+                className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+                data-testid="img-book-cover"
               />
               {book.featured && (
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold">
@@ -234,18 +178,16 @@ export default function BookDetail() {
               </div>
 
               {/* Sample Poems Button */}
-              {book.samplePoems.length > 0 && (
-                <div className="mb-8">
-                  <button
-                    onClick={() => setOpen(true)}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-muted hover:bg-accent border border-border rounded-lg transition-colors"
-                    data-testid="button-read-sample-poems"
-                  >
-                    <BookOpen className="w-5 h-5" />
-                    Read Sample Poems
-                  </button>
-                </div>
-              )}
+              <div className="mb-8">
+                <button
+                  onClick={() => setOpen(true)}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-muted hover:bg-accent border border-border rounded-lg transition-colors"
+                  data-testid="button-read-sample-poems"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  Read Sample Poems
+                </button>
+              </div>
 
               {/* Buy Links */}
               <div>
@@ -281,9 +223,6 @@ export default function BookDetail() {
           onClose={() => setOpen(false)}
         />
       )}
-
-      <Footer />
-      <ContactFAB />
     </>
   );
 }

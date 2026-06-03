@@ -4,7 +4,9 @@ import Hero from "@/components/Hero";
 import FeaturedBookPromo from "@/components/FeaturedBookPromo";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
 import PhotoGallery from "@/components/PhotoGallery";
+import Testimonials from "@/components/Testimonials";
 import BookPreview from "@/components/BookPreview";
+import ParticleEffect from "@/components/ParticleEffect";
 import PressStrip from "@/components/PressStrip";
 import PoemOfTheDay from "@/components/PoemOfTheDay";
 import Footer from "@/components/Footer";
@@ -15,40 +17,32 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kiminou Knox",
-    "url": "https://www.kiminouknox.com/",
-    "image": "https://www.kiminouknox.com/author-kiminou.jpg",
+    "url": "https://kiminouknox.com/",
     "sameAs": [
-      "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2",
-      "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
-      "https://prephoops.com/player/kiminou-knox/",
-      "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
-      "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-      "https://www.instagram.com/kiminouknox",
-      "https://www.linkedin.com/in/kiminou-knox-50691a394/",
-      "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg"
+      "https://x.com/KnoxKiminou",
+      "https://x.com/KiminouKnox",
+      "https://www.instagram.com/hofkiminou"
     ],
-    "jobTitle": "Author, Poet, Athlete, Speaker, Program Builder"
+    "jobTitle": "Athlete, Author, Entrepreneur"
   };
 
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox | Author, Athlete & Program Builder</title>
-        <meta name="description" content="Official website of Kiminou Knox, a Bay Area author, poet, athlete, speaker, and program builder. Explore books, basketball, speaking, and community work." />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <link rel="canonical" href="https://www.kiminouknox.com/" />
+        <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
+        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Seven published works, NCAA registered athlete, and youth advocate." />
+        <link rel="canonical" href="https://kiminouknox.com/" />
         
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kiminou Knox | Author, Athlete & Program Builder" />
-        <meta property="og:site_name" content="Kiminou Knox" />
-        <meta property="og:description" content="Books, basketball, speaking, and community work from the Bay Area." />
-        <meta property="og:url" content="https://www.kiminouknox.com/" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
+        <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
+        <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
+        <meta property="og:url" content="https://kiminouknox.com/" />
+        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kiminou Knox | Author, Athlete & Program Builder" />
-        <meta name="twitter:description" content="Bay Area author, poet, athlete, speaker, and program builder." />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
+        <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
+        <meta name="twitter:description" content="19 year old athlete, published author, entrepreneur, and creative" />
+        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
         
         <script type="application/ld+json">
           {JSON.stringify(personSchema)}
@@ -56,6 +50,12 @@ export default function Home() {
       </Helmet>
 
       <div className="bg-background text-foreground font-sans antialiased relative">
+      <ParticleEffect 
+        density={120} 
+        effects={['sparkle', 'glow', 'star', 'dust']}
+        colors={["#8B5CF6", "#06B6D4", "#10B981", "#F59E0B", "#EF4444", "#EC4899"]}
+        className="z-0"
+      />
       <div className="relative z-10">
         <Header />
         <Hero />
@@ -65,6 +65,7 @@ export default function Home() {
         <BookPreview />
         <PhotoGallery />
         <PressStrip />
+        <Testimonials />
         <Footer />
         <ContactFAB />
       </div>

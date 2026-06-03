@@ -7,7 +7,6 @@ import { Separator } from "@/components/ui/separator";
 import type { BlogPost, BlogCategory } from "@shared/schema";
 import { ArrowLeft, Calendar, Clock, Share2, Twitter, Facebook, Linkedin } from "lucide-react";
 import { format } from "date-fns";
-import { Helmet } from "react-helmet";
 
 function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -84,23 +83,6 @@ function BlogPostPage() {
 
   const shareUrl = window.location.href;
   const shareText = `${post.title} by Kiminou Knox`;
-  const canonicalUrl = `https://www.kiminouknox.com/blog/${post.slug}`;
-  const description = post.excerpt || `${post.title} by Kiminou Knox`;
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": `${canonicalUrl}#article`,
-    headline: post.title,
-    description,
-    image: post.featuredImage || "https://www.kiminouknox.com/og-image.png",
-    url: canonicalUrl,
-    datePublished: post.publishedAt || post.createdAt,
-    dateModified: post.updatedAt || post.publishedAt || post.createdAt,
-    keywords: post.tags || [],
-    author: { "@id": "https://www.kiminouknox.com/#person" },
-    publisher: { "@id": "https://www.kiminouknox.com/#person" },
-    mainEntityOfPage: canonicalUrl,
-  };
 
   const handleShare = (platform: string) => {
     let url = "";
@@ -122,22 +104,7 @@ function BlogPostPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{post.title} - Kiminou Knox</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${post.title} - Kiminou Knox`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={post.featuredImage || "https://www.kiminouknox.com/og-image.png"} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${post.title} - Kiminou Knox`} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={post.featuredImage || "https://www.kiminouknox.com/og-image.png"} />
-        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Header Navigation */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="container mx-auto px-4 py-4">
@@ -171,7 +138,7 @@ function BlogPostPage() {
             </div>
           </div>
 
-          <h1 className="text-5xl font-serif font-bold mb-6 leading-tight text-foreground">
+          <h1 className="text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
             {post.title}
           </h1>
 
@@ -244,25 +211,23 @@ function BlogPostPage() {
         <Separator className="mb-12" />
 
         {/* Author Bio */}
-        <div className="bg-card rounded-lg border p-8 mb-12">
+        <div className="bg-card/50 backdrop-blur-sm rounded-lg p-8 mb-12">
           <div className="flex items-start gap-6">
-            <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-2xl">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-primary to-purple-500 flex items-center justify-center text-white font-bold text-2xl">
               KK
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-2">Kiminou Knox</h3>
               <p className="text-muted-foreground mb-4">
-                Bay Area writer, athlete, and program builder writing about books, basketball, faith, discipline, and the people who shaped him.
+                18-year-old athlete, author, and entrepreneur from the Bay Area. Passionate about 
+                sharing insights on sports, literature, and business through authentic storytelling.
               </p>
               <div className="flex gap-2">
-                <Link href="/about">
+                <Link href="/">
                   <Button variant="outline" size="sm" data-testid="link-author-profile">
                     View Profile
                   </Button>
                 </Link>
-                <Link href="/essays"><Button variant="outline" size="sm">Essays</Button></Link>
-                <Link href="/kimyaps"><Button variant="outline" size="sm">KimYaps</Button></Link>
-                <Link href="/press"><Button variant="outline" size="sm">Press</Button></Link>
                 <Link href="/blog">
                   <Button variant="outline" size="sm" data-testid="link-more-articles">
                     More Articles

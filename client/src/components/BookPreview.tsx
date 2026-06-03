@@ -3,8 +3,7 @@ import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Book, X, ExternalLink, Heart, ArrowRight, BookOpen } from "lucide-react";
 import PoemModal from "@/components/PDFModal";
-import backgroundImage from "@/assets/backgrounds/books-preview.jpg";
-import BookCover from "@/components/BookCover";
+import backgroundImage from "@assets/Gemini_Generated_Image_qfccptqfccptqfcc_1762031474581.png";
 
 interface Poem {
   title: string;
@@ -15,7 +14,7 @@ interface BookData {
   id: string;
   title: string;
   subtitle: string;
-  cover?: string | null;
+  cover: string;
   samplePoems: Poem[];
   year: number;
   isbn?: string | null;
@@ -24,9 +23,6 @@ interface BookData {
   buyLinks: {
     amazon?: string | null;
     googleBooks?: string | null;
-    goodreads?: string | null;
-    booksAMillion?: string | null;
-    hatchards?: string | null;
     bookshop?: string | null;
     bn?: string | null;
   };
@@ -94,7 +90,7 @@ export default function BookPreview() {
             {books.map((book, index) => (
               <div 
                 key={book.id}
-                className={`surface-card group relative cursor-pointer ${book.featured ? 'ring-2 ring-primary/20' : ''}`}
+                className={`luxury-card group relative cursor-pointer ${book.featured ? 'ring-2 ring-primary/20' : ''}`}
                 onClick={() => openPreview(book)}
                 data-testid={`book-card-${index}`}
               >
@@ -111,11 +107,10 @@ export default function BookPreview() {
                 <div className="bg-card border border-border rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
                   {/* Book Cover */}
                   <div className="relative aspect-[3/4] overflow-hidden">
-                    <BookCover
+                    <img 
                       src={book.cover}
-                      title={book.title}
-                      subtitle={book.subtitle}
-                      className="transition-transform duration-500 group-hover:scale-110"
+                      alt={`${book.title} book cover`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     
                     {/* Overlay */}
@@ -169,7 +164,7 @@ export default function BookPreview() {
               href="https://bookshop.org/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="solid-button inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 font-medium uppercase tracking-[0.1em] text-primary-foreground transition-colors hover:bg-primary/90"
+              className="luxury-button inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium uppercase tracking-[0.1em] hover:bg-primary/90 transition-all duration-300 hover:scale-105"
               data-testid="books-shop-link"
             >
               <ExternalLink className="w-5 h-5" />
@@ -182,7 +177,7 @@ export default function BookPreview() {
       {/* Preview Modal */}
       {selectedBook && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" data-testid="book-modal">
-	          <div className="relative max-w-4xl max-h-full bg-card rounded-lg overflow-hidden">
+          <div className="relative max-w-4xl max-h-full bg-card rounded-2xl overflow-hidden">
             {/* Close Button */}
             <button
               onClick={closePreview}
@@ -195,11 +190,10 @@ export default function BookPreview() {
             <div className="grid grid-cols-1 md:grid-cols-2 max-h-[90vh] overflow-y-auto">
               {/* Book Cover */}
               <div className="relative">
-                <BookCover
+                <img 
                   src={selectedBook.cover}
-                  title={selectedBook.title}
-                  subtitle={selectedBook.subtitle}
-                  className="h-full min-h-[420px] rounded-none"
+                  alt={`${selectedBook.title} book cover`}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -240,28 +234,24 @@ export default function BookPreview() {
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  {Object.values(selectedBook.buyLinks).some(Boolean) && (
-                    <a
-                      href={Object.values(selectedBook.buyLinks).find(Boolean) || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="solid-button flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                      data-testid="book-buy-link"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Purchase Book
-                    </a>
-                  )}
-                  {selectedBook.samplePoems.length > 0 && (
-                    <button
-                      onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
-	                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-border px-6 py-3 font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                      data-testid="book-sample-poems"
-                    >
-                      <BookOpen className="w-4 h-4" />
-                      Read Sample
-                    </button>
-                  )}
+                  <a 
+                    href={selectedBook.buyLinks.amazon || selectedBook.buyLinks.googleBooks || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="luxury-button flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+                    data-testid="book-buy-link"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Purchase Book
+                  </a>
+                  <button 
+                    onClick={() => setPoemModal({ id: selectedBook.id, poems: selectedBook.samplePoems, title: selectedBook.title })}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-border font-medium rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
+                    data-testid="book-sample-poems"
+                  >
+                    <BookOpen className="w-4 h-4" />
+                    Read Sample
+                  </button>
                 </div>
               </div>
             </div>

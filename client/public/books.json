@@ -5,9 +5,7 @@
     "subtitle": "What is Love To A Man Made To Destroy It",
     "year": 2025,
     "isbn": "9798316662975",
-    "datePublished": "2025-07-09",
-    "format": "Ebook",
-    "price": "$7.99",
+    "datePublished": "2025-01-15",
     "cover": "/covers/spirit-solomon.jpg",
     "samplePoems": [
       {
@@ -39,9 +37,7 @@
     "subtitle": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
     "year": 2025,
     "isbn": "9798316682850",
-    "datePublished": "2025-03-10",
-    "format": "Ebook",
-    "price": "$7.99",
+    "datePublished": "2025-02-10",
     "cover": "/covers/our-father.jpg",
     "samplePoems": [
       {
@@ -73,10 +69,9 @@
     "id": "poems-black-boy",
     "title": "Poems from a Black Boy",
     "subtitle": "Identity, Heritage, and Hope",
-    "year": 2025,
-    "datePublished": "2025-09-28",
-    "format": "Ebook",
-    "price": "$7.99",
+    "year": 2024,
+    "isbn": "9798316662975",
+    "datePublished": "2024-09-29",
     "cover": "/covers/poems-black-boy.jpg",
     "samplePoems": [
       {
@@ -96,29 +91,12 @@
     "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
-      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_From_A_Black_Boy?id=0HuKEQAAQBAJ",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
       "goodreads": "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
+      "waterstones": "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+      "hatchards": "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+      "booksAMillion": "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975",
       "bookshop": null,
-      "bn": null
-    }
-  },
-  {
-    "id": "black-boy-poems",
-    "title": "Black Boy Poems",
-    "subtitle": "Identity, Silence, Trauma, and Redemption",
-    "year": 2025,
-    "isbn": "9798267606912",
-    "datePublished": "2025-09-29",
-    "format": "Paperback",
-    "cover": "https://images-us.bookshop.org/ingram/9798267606912.jpg?v=18c67c745ee1446209d7474a2fe9ee04",
-    "samplePoems": [],
-    "themes": ["Black Boyhood", "Healing", "Resilience"],
-    "description": "A poetry collection on identity, silence, trauma, healing, faith, and the fullness of Black boyhood.",
-    "buyLinks": {
-      "bookshop": "https://bookshop.org/p/books/black-boy-poems-kiminou-knox/aaa3d62740820b18?ean=9798267606912",
-      "goodreads": "https://www.goodreads.com/book/show/242205179-black-boy-poems",
-      "booksAMillion": "https://www.booksamillion.com/p/Black-Boy-Poems/Kiminou-Knox/9798267606912",
-      "hatchards": "https://www.hatchards.co.uk/book/black-boy-poems/kiminou-knox/9798267606912",
       "bn": null
     }
   },
@@ -128,9 +106,7 @@
     "subtitle": "Love, Loss, and Everything Between",
     "year": 2025,
     "isbn": "9798291608128",
-    "datePublished": "2025-07-09",
-    "format": "Ebook",
-    "price": "$7.99",
+    "datePublished": "2025-03-05",
     "cover": "/covers/hopeless-romantic.jpg",
     "samplePoems": [
       {
@@ -160,32 +136,13 @@
     "featured": true
   },
   {
-    "id": "kiminous-world-of-imagination-the-basics",
-    "title": "Kiminou's World of Imagination: The Basics",
-    "subtitle": "A Children's Imagination and Creativity Book",
-    "year": 2026,
-    "datePublished": "2026-02-18",
-    "format": "Paperback",
-    "price": "$15.99",
-    "cover": null,
-    "samplePoems": [],
-    "themes": ["Imagination", "Creativity", "Childhood"],
-    "description": "A children's creativity book introducing imagination, world-building, and the basics of seeing possibility through story.",
-    "buyLinks": {
-      "bookshop": null,
-      "bn": null
-    }
-  },
-  {
     "id": "boys-raised-in-silence",
     "title": "Boys Raised in Silence",
     "subtitle": "Breaking the Quiet, Finding Voice",
-    "year": 2025,
+    "year": 2024,
     "isbn": "9798316735821",
-    "datePublished": "2025-09-28",
-    "format": "Ebook",
-    "price": "$5.99",
-    "cover": "/covers/boys-raised-silence.jpg",
+    "datePublished": "2024-06-15",
+    "cover": "/covers/boys-raised-silence.png",
     "samplePoems": [
       {
         "title": "The Quiet",
@@ -201,7 +158,7 @@
       }
     ],
     "themes": ["Silence", "Masculinity", "Healing"],
-    "description": "Poems about silence, pressure, and the work of learning how to speak honestly as a young Black man.",
+    "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
@@ -216,11 +173,8 @@
     "subtitle": "A Journey of Friendship and Discovery",
     "year": 2025,
     "isbn": "9798316591204",
-    "datePublished": "2025-09-28",
-    "format": "Ebook",
-    "price": "$7.99",
-    "authors": ["Kiminou Knox", "Matsoua Malonga"],
-    "cover": "/covers/adventures-chua-kiminou.jpg",
+    "datePublished": "2025-01-20",
+    "cover": "/covers/adventures-chua-kiminou.png",
     "samplePoems": [
       {
         "title": "The Beginning",
@@ -236,7 +190,7 @@
       }
     ],
     "themes": ["Friendship", "Growth", "Adventure"],
-    "description": "A children's story about two friends learning how courage and wisdom can work together.",
+    "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
