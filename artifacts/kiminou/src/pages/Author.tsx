@@ -120,6 +120,32 @@ function PullQuote({ text, delay = 0 }: { text: string; delay?: number }) {
   );
 }
 
+function TreeNode({ role, name, delay = 0, center = false, featured = false }: {
+  role: string; name: string; delay?: number; center?: boolean; featured?: boolean;
+}) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 16 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className={`${center ? "w-48 md:w-56" : "w-40 md:w-48"} ${featured ? "border-amber-400/60 bg-amber-400/5" : "border-white/12 bg-black"} border px-4 py-3 text-center relative`}
+    >
+      {featured && (
+        <div className="absolute -inset-px border border-amber-400/30 pointer-events-none" />
+      )}
+      <p className={`text-[9px] uppercase tracking-[0.3em] mb-1.5 ${featured ? "text-amber-400" : "text-amber-400/50"}`}>
+        {role}
+      </p>
+      <p className={`font-serif leading-snug ${featured ? "text-base text-amber-100" : "text-sm text-white/80"}`}>
+        {name}
+      </p>
+    </motion.div>
+  );
+}
+
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -262,25 +288,43 @@ export default function Author() {
           <section id="lineage" className="py-20 scroll-mt-16">
             <SectionHeading eyebrow="Roots & Inheritance" title="Early Life and Lineage" />
 
-            {/* Family lineage vertical timeline */}
-            <div className="relative pl-8 border-l border-amber-400/20 space-y-12">
-              {[
-                { name: "Sarah Lee Williams & Elisha Bonepart McNair", role: "Great-Grandparents", desc: "The foundation — faith, resilience, and generational memory that functions in his work as both inheritance and obligation." },
-                { name: "Faye McNair Knox", role: "Grandmother", desc: "Stories, standards, and a sense of spiritual gravity that echo through every page he writes." },
-                { name: "Rashida Knox", role: "Mother", desc: "The immediate lineage — a home where strength was expected long before softness was allowed, and faith collided with reality in real time." },
-                { name: "Kiminou Knox", role: "The Voice", desc: "Born in East Palo Alto. Between church pews, school gyms, and homes where boys learned to survive before they learned to speak." },
-              ].map((entry, i) => (
-                <Reveal key={i} delay={i * 0.1}>
-                  <div className="relative">
-                    <div className="absolute -left-[2.35rem] top-1.5 w-4 h-4 rounded-full border-2 border-amber-400/60 bg-black" />
-                    <div className="absolute -left-[2.1rem] top-1.5 w-3 h-3 rounded-full bg-amber-400/30" />
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-amber-400/50 mb-1">{entry.role}</p>
-                    <h3 className="font-serif text-xl text-white mb-3">{entry.name}</h3>
-                    <p className="text-white/55 leading-relaxed">{entry.desc}</p>
+            {/* Family Tree */}
+            <Reveal>
+              <div className="flex flex-col items-center gap-0 select-none">
+
+                {/* Great-Grandparents row */}
+                <div className="flex items-end gap-0 w-full justify-center">
+                  <TreeNode role="Great-Grandmother" name="Sarah Lee Williams" delay={0} />
+                  {/* horizontal bridge */}
+                  <div className="flex flex-col items-center" style={{ marginBottom: "1.25rem" }}>
+                    <div className="h-px w-12 md:w-20 bg-amber-400/50" />
                   </div>
-                </Reveal>
-              ))}
-            </div>
+                  <TreeNode role="Great-Grandfather" name="Elisha Bonepart McNair" delay={0.1} />
+                </div>
+
+                {/* Line down from bridge center */}
+                <div className="w-px h-10 bg-amber-400/40" />
+                <div className="w-2 h-2 rounded-full bg-amber-400/60" />
+                <div className="w-px h-8 bg-amber-400/40" />
+
+                {/* Grandmother */}
+                <TreeNode role="Grandmother" name="Faye McNair Knox" delay={0.2} center />
+
+                <div className="w-px h-8 bg-amber-400/40" />
+                <div className="w-2 h-2 rounded-full bg-amber-400/60" />
+                <div className="w-px h-8 bg-amber-400/40" />
+
+                {/* Mother */}
+                <TreeNode role="Mother" name="Rashida Knox" delay={0.3} center />
+
+                <div className="w-px h-8 bg-amber-400/40" />
+                <div className="w-2 h-2 rounded-full bg-amber-400/70" />
+                <div className="w-px h-8 bg-amber-400/40" />
+
+                {/* Kiminou — featured */}
+                <TreeNode role="The Voice" name="Kiminou Knox" delay={0.4} center featured />
+              </div>
+            </Reveal>
           </section>
 
           {/* ─── PULL QUOTE 2 ───────────────────────────────── */}
