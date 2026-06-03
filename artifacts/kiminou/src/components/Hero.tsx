@@ -81,6 +81,7 @@ export default function Hero() {
         style={{ opacity: overlayOpacity }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/60 to-transparent z-10 pointer-events-none" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (

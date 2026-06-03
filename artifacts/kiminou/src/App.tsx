@@ -20,7 +20,6 @@ import Sports from "@/pages/Sports";
 import Author from "@/pages/Author";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
-import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
 
 function Router() {
   return (
@@ -60,7 +59,6 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <WelcomeVideoOverlay />
           <LuxuryCursor />
           <div className="grain"></div>
           <Toaster />

@@ -1,122 +1,142 @@
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { BookOpen, Trophy, Briefcase, Users } from "lucide-react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Link } from "wouter";
 
 const identity = [
   {
     id: "books",
-    icon: BookOpen,
+    number: "01",
     label: "Author",
     title: "Seven Published Works",
     description: "Published writer exploring faith, identity, love, and the Black experience through powerful poetry and narrative.",
     link: "/books",
-    cta: "View Books"
+    cta: "View Books",
   },
   {
     id: "basketball",
-    icon: Trophy,
+    number: "02",
     label: "Athlete",
-    title: "6'7\" Multi Sport Leader",
-    description: "Varsity basketball captain and multi sport athlete combining physical excellence with leadership on and off the court.",
-    link: "/sports",
-    cta: "View Athletics"
+    title: "6'7\" Multi-Sport Leader",
+    description: "Varsity basketball captain and multi-sport athlete combining physical excellence with leadership on and off the court.",
+    link: "/basketball",
+    cta: "View Athletics",
   },
   {
     id: "speaker",
-    icon: Users,
+    number: "03",
     label: "Speaker",
     title: "Youth Voice Advocate",
-    description: "Award winning speaker addressing craft, discipline, and community impact through authentic storytelling and service.",
+    description: "Award-winning speaker addressing craft, discipline, and community impact through authentic storytelling and service.",
     link: "/speaking",
-    cta: "Book Speaking"
+    cta: "Book Speaking",
   },
   {
     id: "brand",
-    icon: Briefcase,
+    number: "04",
     label: "Director",
     title: "AAFC Leader",
     description: "Director of Artists and Athletes For Change, uniting creatives and athletes to make meaningful community impact.",
     link: "/contact",
     cta: "Connect",
-    external: false
-  }
+  },
 ];
 
-export default function WhoIsKiminou() {
-  const titleRef = useScrollAnimation();
-  const descRef = useScrollAnimation();
+function Card({ item, index }: { item: (typeof identity)[0]; index: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="who-is-kiminou" className="py-32 bg-background" data-testid="who-is-kiminou-section">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 48 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="group border-t border-white/10 pt-8 pb-10 flex flex-col gap-4 hover:border-amber-400/40 transition-colors duration-500"
+      data-testid={`identity-card-${item.id}`}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <span className="font-serif text-5xl text-white/8 font-light leading-none select-none group-hover:text-amber-400/20 transition-colors duration-500">
+          {item.number}
+        </span>
+        <span className="text-xs uppercase tracking-[0.25em] text-amber-400/70 font-medium mt-1">
+          {item.label}
+        </span>
+      </div>
+
+      <h3
+        className="font-serif text-2xl md:text-3xl font-light text-white group-hover:text-amber-100 transition-colors duration-300"
+        data-testid={`identity-title-${item.id}`}
+      >
+        {item.title}
+      </h3>
+
+      <p
+        className="text-sm text-white/50 leading-relaxed flex-1"
+        data-testid={`identity-description-${item.id}`}
+      >
+        {item.description}
+      </p>
+
+      <Link href={item.link} data-testid={`identity-link-${item.id}`}>
+        <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/80 hover:text-amber-300 transition-colors duration-200 cursor-pointer group/link">
+          {item.cta}
+          <motion.span
+            className="inline-block"
+            initial={{ x: 0 }}
+            whileHover={{ x: 4 }}
+            transition={{ duration: 0.2 }}
+          >
+            →
+          </motion.span>
+        </span>
+      </Link>
+    </motion.div>
+  );
+}
+
+export default function WhoIsKiminou() {
+  const titleRef = useRef(null);
+  const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
+
+  return (
+    <section
+      id="who-is-kiminou"
+      className="py-28 md:py-40 bg-background"
+      data-testid="who-is-kiminou-section"
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24 items-start">
+          <motion.div
             ref={titleRef}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6 animate-on-scroll"
-            data-testid="who-title"
+            initial={{ opacity: 0, x: -32 }}
+            animate={titleInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="lg:sticky lg:top-32"
           >
-            Who is Kiminou Knox
-          </h2>
-          <p
-            ref={descRef}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto animate-on-scroll"
-            data-testid="who-description"
-          >
-            A writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
-          </p>
-        </div>
+            <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-5 font-medium">
+              About
+            </p>
+            <h2
+              className="font-serif text-4xl md:text-5xl xl:text-6xl font-light leading-tight mb-8"
+              data-testid="who-title"
+            >
+              Who is<br />
+              <span className="italic text-amber-200/90">Kiminou Knox</span>
+            </h2>
+            <div className="w-10 h-px bg-amber-400/50 mb-8" />
+            <p
+              className="text-base text-white/55 leading-relaxed max-w-sm"
+              data-testid="who-description"
+            >
+              A writer and athlete from East Palo Alto, California — building a legacy through books, sport, and youth leadership.
+            </p>
+          </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {identity.map((item) => {
-            const cardRef = useScrollAnimation();
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={item.id}
-                ref={cardRef}
-                className="luxury-card group animate-on-scroll"
-                data-testid={`identity-card-${item.id}`}
-              >
-                <div className="bg-card border border-border rounded-lg p-8 h-full hover:shadow-xl transition-all duration-500">
-                  <div className="mb-6">
-                    <Icon className="w-12 h-12 text-primary mb-4" />
-                    <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-medium">
-                      {item.label}
-                    </span>
-                  </div>
-                  
-                  <h3 className="font-serif text-2xl font-semibold mb-4" data-testid={`identity-title-${item.id}`}>
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6" data-testid={`identity-description-${item.id}`}>
-                    {item.description}
-                  </p>
-                  
-                  {item.external ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm font-medium text-primary hover:underline"
-                      data-testid={`identity-link-${item.id}`}
-                    >
-                      {item.cta} →
-                    </a>
-                  ) : (
-                    <Link 
-                      href={item.link}
-                      className="inline-flex items-center text-sm font-medium text-primary hover:underline" 
-                      data-testid={`identity-link-${item.id}`}
-                    >
-                      {item.cta} →
-                    </Link>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
+            {identity.map((item, i) => (
+              <Card key={item.id} item={item} index={i} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
