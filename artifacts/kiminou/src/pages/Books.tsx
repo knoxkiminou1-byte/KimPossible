@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView, AnimatePresence, useSpring } from "framer-motion";
+import FreeChapterCapture from "@/components/FreeChapterCapture";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 import ScrambleText from "@/components/LuxuryFX/ScrambleText";
@@ -238,6 +239,10 @@ export default function BooksPage() {
             </div>
           </div>
         </section>
+
+        {/* ─── FREE CHAPTER CAPTURE ─── */}
+        <FreeChapterCapture />
+
       </main>
 
       {open && (

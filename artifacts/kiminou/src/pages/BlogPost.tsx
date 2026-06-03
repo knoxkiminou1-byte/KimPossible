@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
@@ -103,8 +104,48 @@ function BlogPostPage() {
     window.open(url, "_blank", "width=600,height=400");
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt || post.title,
+    "url": `https://kiminouknox.com/blog/${post.slug}`,
+    "datePublished": post.publishedAt,
+    "dateModified": post.publishedAt,
+    "author": {
+      "@type": "Person",
+      "name": "Kiminou Knox",
+      "@id": "https://kiminouknox.com/#kiminouknox",
+      "url": "https://kiminouknox.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Kiminou Knox",
+      "url": "https://kiminouknox.com",
+      "logo": { "@type": "ImageObject", "url": "https://kiminouknox.com/favicon-512x512.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kiminouknox.com/blog/${post.slug}` }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
+      <Helmet>
+        <title>{post.title} — Kiminou Knox</title>
+        <meta name="description" content={post.excerpt || `${post.title} — An essay by Kiminou Knox.`} />
+        <link rel="canonical" href={`https://kiminouknox.com/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${post.title} — Kiminou Knox`} />
+        <meta property="og:description" content={post.excerpt || post.title} />
+        <meta property="og:url" content={`https://kiminouknox.com/blog/${post.slug}`} />
+        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta property="article:author" content="Kiminou Knox" />
+        {post.publishedAt && <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${post.title} — Kiminou Knox`} />
+        <meta name="twitter:description" content={post.excerpt || post.title} />
+        <meta name="twitter:creator" content="@KnoxKiminou" />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+      </Helmet>
       {/* Header Navigation */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="container mx-auto px-4 py-4">

@@ -151,6 +151,68 @@ export default function Speaking() {
           </div>
         </section>
 
+        {/* ─── VIDEO REEL ─── */}
+        <section className="py-20 border-t border-white/6">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="mb-12">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Watch</p>
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-2">
+                See Kiminou Speak
+              </h2>
+              <div className="w-12 h-px bg-amber-400/40 mt-6" />
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="relative group">
+                <div className="relative w-full aspect-video bg-black border border-white/8 overflow-hidden">
+                  <img
+                    src="/kiminou-splash-art.png"
+                    alt="Kiminou Knox speaking"
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top opacity-40 group-hover:opacity-50 transition-opacity duration-500 scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
+                    <a
+                      href="https://www.youtube.com/@kiminouknox"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center gap-4"
+                    >
+                      <motion.div
+                        className="w-20 h-20 rounded-full border border-amber-400/50 flex items-center justify-center bg-amber-400/10 backdrop-blur-sm hover:bg-amber-400/20 transition-colors duration-300"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <svg className="w-8 h-8 text-amber-300 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </motion.div>
+                      <div className="text-center">
+                        <p className="font-serif text-2xl text-white/90 mb-1">Watch on YouTube</p>
+                        <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60">@kiminouknox</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center justify-between gap-4">
+                  <p className="text-sm text-white/35 leading-relaxed max-w-xl">
+                    Talks, interviews, and poetry readings on the YouTube channel. Full sessions, not highlights.
+                  </p>
+                  <a
+                    href="https://www.youtube.com/@kiminouknox"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/60 hover:text-amber-300 transition-colors"
+                  >
+                    View Channel →
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
         {/* ─── BOOKING FORM ─── */}
         <section className="py-24">
           <div className="max-w-3xl mx-auto px-6 lg:px-10">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import type { BlogPost, BlogCategory } from "@/lib/schema";
@@ -320,8 +321,43 @@ export default function Blog() {
   const featuredPost = posts[0];
   const gridPosts = featuredPost && !searchTerm && selectedCategory === "all" ? filtered.slice(1) : filtered;
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Author's Journal — Kiminou Knox",
+    "description": "Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice.",
+    "url": "https://kiminouknox.com/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Kiminou Knox",
+      "@id": "https://kiminouknox.com/#kiminouknox",
+      "url": "https://kiminouknox.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Kiminou Knox",
+      "url": "https://kiminouknox.com"
+    }
+  };
+
   return (
     <>
+      <Helmet>
+        <title>Author's Journal — Kiminou Knox | Essays & Writing</title>
+        <meta name="description" content="Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice. Essays and reflections from the Bay Area author." />
+        <link rel="canonical" href="https://kiminouknox.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Author's Journal — Kiminou Knox | Essays & Writing" />
+        <meta property="og:description" content="Public writing on faith, discipline, love, healing, Black boy life, and creative voice." />
+        <meta property="og:url" content="https://kiminouknox.com/blog" />
+        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Author's Journal — Kiminou Knox" />
+        <meta name="twitter:description" content="Essays on faith, identity, love, and Black boy life." />
+        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
+        <meta name="twitter:creator" content="@KnoxKiminou" />
+        <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
+      </Helmet>
       <Header />
       <main className="min-h-screen bg-black text-white">
 
