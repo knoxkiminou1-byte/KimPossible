@@ -26,7 +26,7 @@ const books = [
 const beyondCards = [
   {
     title: "Athlete",
-    description: "Varsity level forward and student of film and footwork, building a game that matches the ambition on the page.",
+    description: "Cristo Rey De La Salle forward and student of film and footwork, building a game that matches the ambition on the page.",
     link: "/basketball",
     linkText: "View athletic profile",
     icon: Trophy

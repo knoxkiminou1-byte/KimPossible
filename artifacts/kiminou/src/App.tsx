@@ -23,6 +23,7 @@ import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import WelcomeVideoOverlay from "@/components/WelcomeVideoOverlay";
+import BackToTop from "@/components/LuxuryFX/BackToTop";
 
 function Router() {
   return (
@@ -67,6 +68,7 @@ function App() {
           <ScrollProgress />
           <LuxuryCursor />
           <WelcomeVideoOverlay />
+          <BackToTop />
           <div className="grain"></div>
           <Toaster />
           <Router />

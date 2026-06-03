@@ -8,12 +8,12 @@ import Footer from "@/components/Footer";
 const measurables = [
   { label: "Height", value: "6'7\"", sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
   { label: "Weight", value: "235 lbs", sub: "Elite Athletic Build", icon: Target, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
-  { label: "Position", value: "F / C", sub: "Varsity Captain", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
+  { label: "Position", value: "F / C", sub: "Cristo Rey De La Salle", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
 ];
 
 const highlights = [
   { year: "2025", title: "NCAA Eligibility", desc: "Registered with NCAA eligibility for collegiate athletics" },
-  { year: "2024", title: "Varsity Captain — Ygnacio Valley", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
+  { year: "2024", title: "Varsity Captain — Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
   { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop — one of the premier AAU evaluation platforms" },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance" },
   { year: "2023", title: "Pine Valley MVP", desc: "Recognized as Most Valuable Player at Pine Valley tournament" },

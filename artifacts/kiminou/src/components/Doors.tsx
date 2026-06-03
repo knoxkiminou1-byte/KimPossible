@@ -5,7 +5,7 @@ const doors = [
     id: "athlete",
     title: "ATHLETE",
     subtitle: "Basketball Excellence",
-    description: "6 feet 7 inches, 235 lbs multi sport athlete (Basketball Guard/Forward/Center, Football DE/TE) who served as varsity captain with features in PrepHoops and 247Sports, demonstrating exceptional leadership across multiple positions.",
+    description: "6 feet 7 inches, 235 lbs multi sport athlete (Basketball Guard/Forward/Center, Football DE/TE) who served as Cristo Rey De La Salle captain with features in PrepHoops and 247Sports, demonstrating exceptional leadership across multiple positions.",
     image: "/photos/athletic-pose.jpg",
   },
   {

@@ -9,6 +9,42 @@ interface Poem {
   rating: string;
 }
 
+function TypewriterLine({ text, delay, inView }: { text: string; delay: number; inView: boolean }) {
+  const [displayed, setDisplayed] = useState("");
+  const started = useRef(false);
+
+  useEffect(() => {
+    if (!inView || started.current || text === "") return;
+    started.current = true;
+    const timeout = setTimeout(() => {
+      let i = 0;
+      const interval = setInterval(() => {
+        i++;
+        setDisplayed(text.slice(0, i));
+        if (i >= text.length) clearInterval(interval);
+      }, 28);
+      return () => clearInterval(interval);
+    }, delay);
+    return () => clearTimeout(timeout);
+  }, [inView, text, delay]);
+
+  if (text === "") return <div className="h-4" />;
+
+  return (
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.01, delay: delay / 1000 }}
+      className="font-serif text-lg md:text-2xl font-light leading-snug text-white/75 hover:text-white/95 transition-colors duration-300 cursor-default min-h-[1.6em]"
+    >
+      {displayed}
+      {displayed.length < text.length && inView && (
+        <span className="inline-block w-0.5 h-5 bg-amber-400/70 ml-0.5 align-middle animate-pulse" />
+      )}
+    </motion.p>
+  );
+}
+
 export default function PoemOfTheDay() {
   const [poem, setPoem] = useState<Poem>({
     title: "Rising",
@@ -36,6 +72,14 @@ export default function PoemOfTheDay() {
   }, []);
 
   const lines = poem.text.split("\n");
+
+  // Calculate cumulative delay per line (chars × 28ms + 100ms gap + header delay 600ms)
+  const lineDelays: number[] = [];
+  let acc = 600;
+  lines.forEach(line => {
+    lineDelays.push(acc);
+    acc += line === "" ? 120 : line.length * 28 + 140;
+  });
 
   return (
     <section
@@ -76,23 +120,12 @@ export default function PoemOfTheDay() {
 
         <div className="space-y-1 mb-14">
           {lines.map((line, i) => (
-            <motion.p
+            <TypewriterLine
               key={i}
-              initial={{ opacity: 0, x: -20 }}
-              animate={inView ? { opacity: line === "" ? 0 : 1, x: 0 } : {}}
-              transition={{
-                duration: 0.6,
-                delay: 0.3 + i * 0.07,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-              className={`font-serif text-lg md:text-2xl font-light leading-snug ${
-                line === ""
-                  ? "h-4"
-                  : "text-white/75 hover:text-white/95 transition-colors duration-300 cursor-default"
-              }`}
-            >
-              {line || " "}
-            </motion.p>
+              text={line}
+              delay={lineDelays[i]}
+              inView={inView}
+            />
           ))}
         </div>
 

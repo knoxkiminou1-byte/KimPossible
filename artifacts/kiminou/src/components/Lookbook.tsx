@@ -6,7 +6,7 @@ const lookbookImages = [
     src: "/photos/athletic-pose.jpg",
     alt: "Basketball athlete",
     title: "Basketball Excellence",
-    description: "Varsity basketball captain at 6 feet 7 inches tall"
+    description: "Cristo Rey De La Salle basketball captain at 6 feet 7 inches tall"
   },
   {
     src: "/photos/brown-suit-author.jpg",

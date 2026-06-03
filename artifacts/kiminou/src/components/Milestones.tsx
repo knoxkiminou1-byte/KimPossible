@@ -10,7 +10,7 @@ const milestones = [
   {
     icon: Trophy,
     title: "Multi Sport Athlete",
-    description: "Varsity basketball captain and multi sport leader with NCAA eligibility registration"
+    description: "Cristo Rey De La Salle basketball captain and multi sport leader with NCAA eligibility registration"
   },
   {
     icon: Users,

@@ -17,7 +17,7 @@ const identity = [
     number: "02",
     label: "Athlete",
     title: "6'7\" Multi-Sport Leader",
-    description: "Varsity basketball captain and multi-sport athlete combining physical excellence with leadership on and off the court.",
+    description: "Cristo Rey De La Salle basketball captain and multi-sport athlete combining physical excellence with leadership on and off the court.",
     link: "/basketball",
     cta: "View Athletics",
   },

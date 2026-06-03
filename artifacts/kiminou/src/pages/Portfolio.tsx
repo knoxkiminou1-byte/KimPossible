@@ -16,7 +16,7 @@ const books = [
 
 const pillars = [
   { icon: BookOpen, label: "Author", value: "7 Published Works", sub: "Poetry & Children's Books", link: "/books" },
-  { icon: Trophy, label: "Athlete", value: "6'7\" / 235 lbs", sub: "NCAA Eligible · Varsity Captain", link: "/basketball" },
+  { icon: Trophy, label: "Athlete", value: "6'7\" / 235 lbs", sub: "NCAA Eligible · Cristo Rey De La Salle", link: "/basketball" },
   { icon: Mic, label: "Speaker", value: "Award-Winning", sub: "Youth Summits & Schools", link: "/speaking" },
   { icon: Mail, label: "Director", value: "AAFC", sub: "Artists & Athletes For Change", link: "/contact" },
 ];

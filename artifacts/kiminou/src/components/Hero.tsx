@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import GoldParticles from "@/components/LuxuryFX/GoldParticles";
 
 const letterVariants = {
   hidden: { opacity: 0, y: 60, rotateX: -60 },
@@ -98,6 +99,11 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/70 to-transparent z-10 pointer-events-none" />
+
+      {/* Floating gold dust particles */}
+      <div className="absolute inset-0 z-[5] pointer-events-none">
+        <GoldParticles count={45} className="w-full h-full" />
+      </div>
 
       <motion.div
         className="relative z-10 text-center text-white px-6 lg:px-8 max-w-5xl mx-auto"
