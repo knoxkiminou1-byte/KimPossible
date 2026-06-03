@@ -4,6 +4,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 type Book = {
   id: string; title: string; subtitle: string; year: number;
   cover: string; themes: string[]; description: string;
+  samplePoems: { title: string; content: string }[];
   buyLinks: { amazon?: string | null; googleBooks?: string | null };
 };
 

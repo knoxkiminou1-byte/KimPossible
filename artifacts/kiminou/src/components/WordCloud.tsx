@@ -43,6 +43,7 @@ export default function WordCloud() {
       const t = setTimeout(() => setRevealed(true), 200);
       return () => clearTimeout(t);
     }
+    return undefined;
   }, [inView]);
 
   return (

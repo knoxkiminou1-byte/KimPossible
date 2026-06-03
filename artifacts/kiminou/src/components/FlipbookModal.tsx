@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 type Poem = { title: string; content: string };
@@ -35,7 +35,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
     setPage(idx);
   };
 
-  const pageVariants = {
+  const pageVariants: Variants = {
     enter: (dir: number) => ({
       x: dir > 0 ? 120 : -120,
       rotateY: dir > 0 ? 25 : -25,
@@ -49,7 +49,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
     exit: (dir: number) => ({
@@ -59,7 +59,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
       scale: 0.92,
       transition: {
         duration: 0.35,
-        ease: [0.55, 0.06, 0.68, 0.19],
+        ease: [0.55, 0.06, 0.68, 0.19] as const,
       },
     }),
   };

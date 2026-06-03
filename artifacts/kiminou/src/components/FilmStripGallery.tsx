@@ -37,6 +37,10 @@ export default function FilmStripGallery() {
   const CARD_W = 280;
   const GAP = 12;
   const totalW = IMAGES.length * (CARD_W + GAP);
+  const dragLeft =
+    typeof window === "undefined"
+      ? 0
+      : Math.min(0, -(totalW - window.innerWidth + 40));
 
   return (
     <section
@@ -79,9 +83,9 @@ export default function FilmStripGallery() {
               className="flex items-center gap-3 absolute left-0 top-0 h-full"
               style={{ width: totalW, paddingLeft: 20, paddingRight: 20, cursor: "grab" }}
               drag="x"
-              dragConstraints={{ left: -(totalW - window.innerWidth + 40), right: 0 }}
+              dragConstraints={{ left: dragLeft, right: 0 }}
               dragElastic={0.08}
-              whileDrag={{ cursor: "grabbing" } as React.CSSProperties}
+              whileDrag={{ cursor: "grabbing" }}
             >
               {IMAGES.map((img, i) => (
                 <motion.div

@@ -30,6 +30,7 @@ export default function PoemAssembler() {
       const t = setTimeout(() => setAssembled(true), 300);
       return () => clearTimeout(t);
     }
+    return undefined;
   }, [inView, assembled]);
 
   let wordIndex = 0;

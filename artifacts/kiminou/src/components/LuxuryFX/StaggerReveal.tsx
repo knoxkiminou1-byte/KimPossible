@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 
 interface StaggerRevealProps {
@@ -9,7 +9,7 @@ interface StaggerRevealProps {
   yOffset?: number;
 }
 
-const containerVariants = (stagger: number, delay: number) => ({
+const containerVariants = (stagger: number, delay: number): Variants => ({
   hidden: {},
   visible: {
     transition: {
@@ -19,7 +19,7 @@ const containerVariants = (stagger: number, delay: number) => ({
   },
 });
 
-const itemVariants = (yOffset: number) => ({
+const itemVariants = (yOffset: number): Variants => ({
   hidden: { opacity: 0, y: yOffset, filter: "blur(10px)" },
   visible: {
     opacity: 1,
@@ -27,7 +27,7 @@ const itemVariants = (yOffset: number) => ({
     filter: "blur(0px)",
     transition: {
       duration: 0.75,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
   },
 });

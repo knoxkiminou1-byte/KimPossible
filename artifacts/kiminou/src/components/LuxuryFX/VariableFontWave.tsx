@@ -38,6 +38,7 @@ export default function VariableFontWave({
         return () => clearTimeout(t);
       }
     }
+    return undefined;
   }, [inView, triggerOnView, loop, children, waveSpeed]);
 
   const isAnimating = active || (triggerOnHover && hovered);
