@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
+import SplitNarrative from "@/components/SplitNarrative";
 
 export default function About() {
   const schema = {
@@ -119,6 +120,7 @@ export default function About() {
         </div>
       </main>
 
+      <SplitNarrative />
       <ConstellationTimeline />
       <Footer />
     </>

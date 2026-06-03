@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "wouter";
+import SignatureAnimation from "@/components/SignatureAnimation";
 
 const links = [
   { href: "/books", label: "Books" },
@@ -105,6 +106,16 @@ export default function Footer() {
             </Link>
           </motion.div>
         </div>
+
+        {/* Signature */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="flex justify-center mb-10"
+        >
+          <SignatureAnimation className="w-64 md:w-80" />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

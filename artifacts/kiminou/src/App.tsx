@@ -26,6 +26,7 @@ import ScrollProgressArc from "@/components/ScrollProgressArc";
 import BackToTop from "@/components/LuxuryFX/BackToTop";
 import PageTransition from "@/components/LuxuryFX/PageTransition";
 import CursorSpotlight from "@/components/LuxuryFX/CursorSpotlight";
+import SectionDotNav from "@/components/SectionDotNav";
 
 function Router() {
   return (
@@ -73,6 +74,7 @@ function App() {
           <BackToTop />
           <PageTransition />
           <CursorSpotlight />
+          <SectionDotNav />
           <div className="grain"></div>
           <Toaster />
           <Router />

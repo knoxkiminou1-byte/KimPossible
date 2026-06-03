@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import GoldMarquee from "@/components/LuxuryFX/GoldMarquee";
 import FeaturedBookPromo from "@/components/FeaturedBookPromo";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
-import PhotoGallery from "@/components/PhotoGallery";
+import FilmStripGallery from "@/components/FilmStripGallery";
 import Testimonials from "@/components/Testimonials";
 import BookPreview from "@/components/BookPreview";
 import ParticleEffect from "@/components/ParticleEffect";
@@ -16,6 +16,8 @@ import ContactFAB from "@/components/ContactFAB";
 import QuoteTypewriter from "@/components/QuoteTypewriter";
 import WordCloud from "@/components/WordCloud";
 import PoemAssembler from "@/components/PoemAssembler";
+import GenerativeArtPanel from "@/components/GenerativeArtPanel";
+
 export default function Home() {
 
   const personSchema = {
@@ -63,23 +65,24 @@ export default function Home() {
       />
       <div className="relative z-10">
         <Header />
-        <Hero />
+        <div id="hero"><Hero /></div>
         <GoldMarquee />
-        <WhoIsKiminou />
-        <StatsBanner />
-        <PoemOfTheDay />
-        <PoemAssembler />
-        <FeaturedBookPromo />
-        <QuoteTypewriter />
-        <BookPreview />
-        <WordCloud />
-        <PhotoGallery />
-        <PressStrip />
-        <Testimonials />
+        <div id="who-is-kiminou"><WhoIsKiminou /></div>
+        <div id="section-stats"><StatsBanner /></div>
+        <div id="section-poem"><PoemOfTheDay /></div>
+        <div id="section-poem-assembler"><PoemAssembler /></div>
+        <div id="section-featured"><FeaturedBookPromo /></div>
+        <div id="section-quotes"><QuoteTypewriter /></div>
+        <div id="section-books"><BookPreview /></div>
+        <div id="section-wordcloud"><WordCloud /></div>
+        <div id="section-gallery"><FilmStripGallery /></div>
+        <div id="section-press"><PressStrip /></div>
+        <div id="section-testimonials"><Testimonials /></div>
+        <GenerativeArtPanel />
         <Footer />
         <ContactFAB />
       </div>
-    </div>
+      </div>
     </>
   );
 }

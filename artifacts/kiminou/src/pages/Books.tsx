@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
 import FlipbookModal from "@/components/FlipbookModal";
 import OpenBookOverlay from "@/components/OpenBookOverlay";
+import BookShelf3D from "@/components/BookShelf3D";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -182,9 +183,9 @@ export default function BooksPage() {
           </div>
         </section>
 
-        {/* Grid */}
-        <section className="pb-28 border-t border-white/6">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16">
+        {/* 3D Bookshelf */}
+        <section className="pb-8 border-t border-white/6">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12">
             {books.length === 0 ? (
               <div className="flex items-center justify-center py-32">
                 <motion.div
@@ -194,19 +195,47 @@ export default function BooksPage() {
                 />
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16">
-                {books.map((b, i) => (
-                  <BookCard
-                    key={b.id}
-                    book={b}
-                    index={i}
-                    onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems, title: book.title })}
-                    onFlipbook={(book) => setFlipbook(book)}
-                    onOpenBook={(book) => setOpenBook(book)}
-                  />
-                ))}
-              </div>
+              <>
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="mb-4"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">The Collection</p>
+                  <p className="text-xs text-white/25">Hover a book to preview · Click to open</p>
+                </motion.div>
+                <BookShelf3D books={books} onBookClick={(book) => setOpenBook(book)} />
+              </>
             )}
+          </div>
+        </section>
+
+        {/* Detail Grid */}
+        <section className="pb-28">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
+            >
+              <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">Browse in Detail</p>
+              <div className="w-8 h-px bg-amber-400/30" />
+            </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16">
+              {books.map((b, i) => (
+                <BookCard
+                  key={b.id}
+                  book={b}
+                  index={i}
+                  onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems, title: book.title })}
+                  onFlipbook={(book) => setFlipbook(book)}
+                  onOpenBook={(book) => setOpenBook(book)}
+                />
+              ))}
+            </div>
           </div>
         </section>
       </main>
