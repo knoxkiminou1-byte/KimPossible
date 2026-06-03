@@ -8,7 +8,7 @@ const contactFormSchema = z.object({
   email: z.string().email(),
   inquiryType: z.enum(["speaking", "press", "book", "basketball", "other"]),
   organization: z.string().optional(),
-  subject: z.string().min(1),
+  subject: z.string().optional(),
   message: z.string().min(10),
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
@@ -48,7 +48,7 @@ router.post("/contact", async (req, res) => {
         await transporter.sendMail({
           from: process.env.GMAIL_USER || "knoxkiminou1@gmail.com",
           to: "knoxkiminou1@gmail.com",
-          subject: `[${inquiryTypeDisplay}] ${data.subject}`,
+          subject: `[${inquiryTypeDisplay}] ${data.subject || data.inquiryType}`,
           replyTo: data.email,
           html: `
             <h2>New Contact Form Submission</h2>

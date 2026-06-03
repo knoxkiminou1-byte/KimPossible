@@ -34,7 +34,8 @@ const posts: BlogPost[] = [];
 function requireAdmin(req: Request, res: Response, next: NextFunction) {
   const adminSecret = process.env.ADMIN_SECRET;
   if (!adminSecret) {
-    return next();
+    console.warn("[blog] ADMIN_SECRET not set — write access is disabled");
+    return res.status(503).json({ error: "Admin access not configured. Set ADMIN_SECRET env var." });
   }
   const key = req.headers["x-admin-key"];
   if (key !== adminSecret) {
