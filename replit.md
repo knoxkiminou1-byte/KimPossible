@@ -1,46 +1,36 @@
-# Kiminou Knox
+# [Project name]
 
-A luxury personal website for Kiminou Knox — author, basketball player, speaker, and entrepreneur.
+_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/kiminou run dev` — run the frontend (Vite, uses PORT env)
-- `pnpm --filter @workspace/api-server run dev` — run the API server (uses PORT env)
+- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
+- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
+- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
+- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- Frontend: React 19 + Vite + Tailwind CSS v3 + wouter routing
-- API: Express 5 + in-memory storage (MemStorage)
-- Styling: Cormorant Garamond + Inter fonts, luxury dark theme
+- API: Express 5
+- DB: PostgreSQL + Drizzle ORM
+- Validation: Zod (`zod/v4`), `drizzle-zod`
+- API codegen: Orval (from OpenAPI spec)
+- Build: esbuild (CJS bundle)
 
 ## Where things live
 
-- `artifacts/kiminou/src/` — React frontend (pages, components, hooks)
-- `artifacts/kiminou/src/lib/schema.ts` — shared frontend types (BlogPost, BlogCategory, ContactForm)
-- `artifacts/api-server/src/storage.ts` — in-memory blog/user storage
-- `artifacts/api-server/src/routes/blog.ts` — blog categories + posts API
-- `artifacts/api-server/src/routes/contact.ts` — contact form + SEO data API
-- `attached_assets/` — images and media assets used by the frontend
-- `artifacts/kiminou/tailwind.config.ts` — Tailwind v3 config with luxury theme tokens
+_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
 
 ## Architecture decisions
 
-- Frontend uses Tailwind v3 (not v4) via postcss — the project was imported with Tailwind v3 patterns.
-- Blog data is stored in-memory (MemStorage) — no database needed for current functionality.
-- CSS theme variables follow the original luxury design: Maison (default), Noir, Editorial, Street themes via `data-theme` attribute.
-- `@shared/schema` types from the original Vercel project are now inlined in `src/lib/schema.ts` on the frontend.
-- Contact form sends email via nodemailer + Gmail SMTP when `GMAIL_APP_PASSWORD` env var is set.
+_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
 
 ## Product
 
-- Home page with hero artwork, poem of the day, featured book promos, testimonials
-- Books page with all 7 published books + PDF modals
-- Sports/Basketball page with athlete profile
-- Speaking, Press, Author, Portfolio, Blog, and Contact pages
-- Blog CMS at `/admin/blog` for managing posts and categories
+_Describe the high-level user-facing capabilities of this app once they exist._
 
 ## User preferences
 
@@ -48,10 +38,7 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-- Do NOT run `pnpm dev` at workspace root — apps run via workflows with PORT/BASE_PATH env vars.
-- Tailwind is v3 in this project (not v4). The `@tailwind` directives in index.css and postcss.config.js are correct.
-- The `GMAIL_APP_PASSWORD` secret is needed for the contact form to actually send emails.
-- `attached_assets/` lives at the workspace root and is aliased as `@assets` in the Vite config.
+_Populate as you build — sharp edges, "always run X before Y" rules._
 
 ## Pointers
 
