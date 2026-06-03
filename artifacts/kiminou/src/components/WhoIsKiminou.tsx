@@ -51,27 +51,27 @@ function Card({ item, index }: { item: (typeof identity)[0]; index: number }) {
       initial={{ opacity: 0, y: 48 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="group border-t border-white/10 pt-8 pb-10 flex flex-col gap-4 hover:border-amber-400/40 transition-colors duration-500"
+      className="group border-t border-foreground/10 pt-8 pb-10 flex flex-col gap-4 hover:border-amber-400/40 transition-colors duration-500"
       data-testid={`identity-card-${item.id}`}
     >
       <div className="flex items-start justify-between gap-4">
-        <span className="font-serif text-5xl text-white/8 font-light leading-none select-none group-hover:text-amber-400/20 transition-colors duration-500">
+        <span className="font-serif text-5xl text-foreground/10 font-light leading-none select-none group-hover:text-amber-400/30 transition-colors duration-500">
           {item.number}
         </span>
-        <span className="text-xs uppercase tracking-[0.25em] text-amber-400/70 font-medium mt-1">
+        <span className="text-xs uppercase tracking-[0.25em] text-amber-500 font-medium mt-1">
           {item.label}
         </span>
       </div>
 
       <h3
-        className="font-serif text-2xl md:text-3xl font-light text-white group-hover:text-amber-100 transition-colors duration-300"
+        className="font-serif text-2xl md:text-3xl font-light text-foreground group-hover:text-amber-600 transition-colors duration-300"
         data-testid={`identity-title-${item.id}`}
       >
         {item.title}
       </h3>
 
       <p
-        className="text-sm text-white/50 leading-relaxed flex-1"
+        className="text-sm text-foreground/60 leading-relaxed flex-1"
         data-testid={`identity-description-${item.id}`}
       >
         {item.description}
