@@ -30,4 +30,3 @@ externalPort = 3000
 [userenv]
 
 [userenv.shared]
-ADMIN_SECRET = "kiminou-admin-2025"
