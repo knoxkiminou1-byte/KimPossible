@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import type { BlogPost, BlogCategory } from "@/lib/schema";
 import { useState, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { Search, Calendar, Clock, ArrowRight } from "lucide-react";
+import { Search, Calendar, Clock, ArrowRight, ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,6 +11,173 @@ import Footer from "@/components/Footer";
 function readingTime(text: string) {
   const words = (text || "").split(/\s+/).length;
   return Math.max(1, Math.ceil(words / 200));
+}
+
+interface MediumPost {
+  title: string;
+  pubDate: string;
+  link: string;
+  thumbnail: string;
+  description: string;
+  categories: string[];
+  author: string;
+}
+
+function useMediumPosts() {
+  return useQuery<MediumPost[]>({
+    queryKey: ["medium-feed"],
+    queryFn: async () => {
+      const rssUrl = encodeURIComponent("https://medium.com/feed/@kiminouknox");
+      const res = await fetch(
+        `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}&count=12`
+      );
+      if (!res.ok) throw new Error("Failed to fetch Medium posts");
+      const data = await res.json();
+      if (data.status !== "ok") throw new Error("Medium RSS error");
+      return data.items as MediumPost[];
+    },
+    staleTime: 1000 * 60 * 30,
+    retry: 1,
+  });
+}
+
+function stripHtml(html: string) {
+  return html.replace(/<[^>]*>/g, "").replace(/&[a-z]+;/gi, " ").trim();
+}
+
+function mediumReadingTime(html: string) {
+  const text = stripHtml(html);
+  const words = text.split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+function MediumPostCard({ post, index }: { post: MediumPost; index: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const mins = mediumReadingTime(post.description);
+  const excerpt = stripHtml(post.description).slice(0, 140) + "…";
+  const tag = post.categories?.[0];
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 32 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: (index % 3) * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
+      <a href={post.link} target="_blank" rel="noopener noreferrer" className="block group">
+        <div className="border border-white/8 bg-white/[0.015] flex flex-col gap-0 hover:border-amber-400/25 hover:bg-white/[0.04] transition-all duration-400 overflow-hidden h-full">
+
+          {post.thumbnail && (
+            <div className="relative overflow-hidden h-44 bg-black/40">
+              <img
+                src={post.thumbnail}
+                alt={post.title}
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 border border-white/10 px-2 py-1 rounded-sm">
+                <svg viewBox="0 0 24 24" className="w-3 h-3 fill-white/60"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                <span className="text-[10px] text-white/50 uppercase tracking-widest">Medium</span>
+              </div>
+            </div>
+          )}
+
+          <div className="p-7 flex flex-col gap-4 flex-1">
+            <div className="flex items-center justify-between">
+              {tag && (
+                <span className="text-xs uppercase tracking-[0.2em] text-amber-400/60 font-medium truncate max-w-[70%]">{tag}</span>
+              )}
+              <span className="flex items-center gap-1.5 text-xs text-white/20 uppercase tracking-[0.15em] ml-auto">
+                <Clock className="w-3 h-3" />
+                {mins} min
+              </span>
+            </div>
+
+            <h3 className="font-serif text-xl md:text-2xl font-light text-white/85 leading-snug group-hover:text-amber-100 transition-colors duration-300 line-clamp-2">
+              {post.title}
+            </h3>
+
+            <p className="text-sm text-white/35 leading-relaxed line-clamp-2 flex-1">{excerpt}</p>
+
+            <div className="flex items-center justify-between pt-3 border-t border-white/6 mt-auto">
+              <span className="flex items-center gap-1.5 text-xs text-white/20 uppercase tracking-[0.15em]">
+                <Calendar className="w-3 h-3" />
+                {post.pubDate ? format(new Date(post.pubDate), "MMM d, yyyy") : ""}
+              </span>
+              <motion.span
+                className="text-xs uppercase tracking-[0.18em] text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300 flex items-center gap-1.5"
+                whileHover={{ x: 3 }}
+              >
+                Read on Medium <ExternalLink className="w-3 h-3" />
+              </motion.span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </motion.div>
+  );
+}
+
+function MediumSection() {
+  const { data: posts, isLoading, isError } = useMediumPosts();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+
+  if (isError) return null;
+
+  return (
+    <section className="py-20 border-t border-white/6" ref={ref}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <div className="flex items-end justify-between flex-wrap gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium flex items-center gap-2">
+                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-amber-400/60"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                From Medium
+              </p>
+              <h2 className="font-serif text-3xl md:text-5xl font-light leading-tight">
+                Essays & Reflections
+              </h2>
+              <div className="w-8 h-px bg-amber-400/50 mt-4" />
+            </div>
+            <a
+              href="https://medium.com/@kiminouknox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 border border-amber-400/30 text-amber-300/70 text-xs uppercase tracking-[0.25em] hover:bg-amber-400 hover:text-black hover:border-amber-400 transition-all duration-300"
+            >
+              Follow on Medium <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </motion.div>
+
+        {isLoading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="border border-white/8 bg-white/[0.015] h-80 animate-pulse" />
+            ))}
+          </div>
+        ) : posts && posts.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {posts.map((post, i) => (
+              <MediumPostCard key={post.link} post={post} index={i} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <p className="font-serif text-xl text-white/25">No essays found</p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
 }
 
 function FeaturedPost({ post, categories }: { post: BlogPost; categories: BlogCategory[] }) {
@@ -22,13 +189,11 @@ function FeaturedPost({ post, categories }: { post: BlogPost; categories: BlogCa
 
   return (
     <section ref={ref} className="relative min-h-[70vh] flex items-end overflow-hidden border-b border-white/6">
-      {/* Parallax dark background with grain */}
       <motion.div className="absolute inset-0 bg-gradient-to-br from-amber-950/30 via-black to-black"
         style={{ y: bgY }} />
       <div className="absolute inset-0 bg-[url('/og-image.png')] bg-cover bg-center opacity-5" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
 
-      {/* Giant background text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <span className="font-serif text-[18vw] font-light text-white/[0.025] leading-none select-none whitespace-nowrap">
           JOURNAL
@@ -93,7 +258,6 @@ function PostCard({ post, categories, index }: { post: BlogPost; categories: Blo
         <div className="group border border-white/8 bg-white/[0.015] flex flex-col gap-0 hover:border-amber-400/25 hover:bg-white/[0.04] transition-all duration-400 cursor-pointer overflow-hidden"
           data-testid={`post-card-${post.slug}`}>
 
-          {/* Reading progress visual */}
           <div className="h-0.5 bg-white/5">
             <motion.div className="h-full bg-gradient-to-r from-amber-400/50 to-amber-300/20"
               initial={{ width: "0%" }}
@@ -223,23 +387,15 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* ─── POSTS GRID ─── */}
-        <section className="py-16 pb-28">
+        {/* ─── SITE POSTS GRID ─── */}
+        <section className="py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             {isLoading ? (
               <div className="flex items-center justify-center py-32">
                 <motion.div className="w-10 h-10 border-2 border-amber-400/20 border-t-amber-400/60 rounded-full"
                   animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
               </div>
-            ) : gridPosts.length === 0 && !featuredPost ? (
-              <div className="text-center py-32">
-                <p className="font-serif text-2xl font-light text-white/30 mb-6">No articles found</p>
-                <button onClick={() => { setSearchTerm(""); setSelectedCategory("all"); }}
-                  className="text-xs uppercase tracking-[0.2em] text-amber-400/60 hover:text-amber-400 transition-colors">
-                  Clear filters →
-                </button>
-              </div>
-            ) : gridPosts.length === 0 ? null : (
+            ) : gridPosts.length === 0 && !featuredPost ? null : gridPosts.length === 0 ? null : (
               <>
                 {featuredPost && !searchTerm && selectedCategory === "all" && (
                   <div className="mb-8">
@@ -253,18 +409,12 @@ export default function Blog() {
                 </div>
               </>
             )}
-
-            {/* Medium link */}
-            <motion.div className="mt-16 border-t border-white/6 pt-10 text-center"
-              initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/20 mb-4">Also Available On</p>
-              <a href="https://medium.com/@kiminouknox" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-amber-300 transition-colors duration-300 uppercase tracking-[0.25em] text-xs">
-                Read essays on Medium →
-              </a>
-            </motion.div>
           </div>
         </section>
+
+        {/* ─── MEDIUM SECTION ─── */}
+        <MediumSection />
+
       </main>
       <Footer />
     </>
