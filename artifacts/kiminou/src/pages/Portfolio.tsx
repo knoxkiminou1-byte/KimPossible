@@ -1,284 +1,198 @@
-import { motion } from "framer-motion";
-import {
-  BookOpen,
-  PenLine,
-  Link as LinkIcon,
-  Mail,
-  MapPin,
-  Calendar as CalendarIcon,
-  FileText,
-  Layers,
-  Instagram,
-  Twitter,
-  Youtube,
-} from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Instagram, Twitter, ExternalLink, BookOpen, Trophy, Mic, Mail } from "lucide-react";
+import { Link } from "wouter";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-// --- Small UI helpers ---
-const Section = ({ id, title, icon: Icon, children }: any) => (
-  <section id={id} className="scroll-mt-24 py-16">
-    <div className="max-w-5xl mx-auto px-6">
-      <div className="flex items-center gap-3 mb-6">
-        {Icon && <Icon className="w-6 h-6" aria-hidden />}
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
-      </div>
+const books = [
+  { title: "The Spirit of Solomon", year: 2024, status: "Published", genre: "Poetry" },
+  { title: "Poems From A Black Boy", year: 2023, status: "Published", genre: "Poetry" },
+  { title: "Hopeless Romantic", year: 2023, status: "Published", genre: "Poetry" },
+  { title: "Boys Raised In Silence", year: 2024, status: "Published", genre: "Poetry" },
+  { title: "The Adventures of Kiminou the Great and Chua the Wise", year: 2025, status: "Published", genre: "Children's" },
+  { title: "The Black Boy Lie", year: 2025, status: "Coming Soon", genre: "Novel" },
+];
+
+const pillars = [
+  { icon: BookOpen, label: "Author", value: "7 Published Works", sub: "Poetry & Children's Books", link: "/books" },
+  { icon: Trophy, label: "Athlete", value: "6'7\" / 235 lbs", sub: "NCAA Eligible · Varsity Captain", link: "/basketball" },
+  { icon: Mic, label: "Speaker", value: "Award-Winning", sub: "Youth Summits & Schools", link: "/speaking" },
+  { icon: Mail, label: "Director", value: "AAFC", sub: "Artists & Athletes For Change", link: "/contact" },
+];
+
+const socials = [
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/hofkiminou", handle: "@hofkiminou" },
+  { icon: Twitter, label: "Twitter / X", href: "https://x.com/KnoxKiminou", handle: "@KnoxKiminou" },
+];
+
+function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className={className}
+    >
       {children}
-    </div>
-  </section>
-);
+    </motion.div>
+  );
+}
 
-const Badge = ({ children }: any) => (
-  <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs md:text-sm">
-    {children}
-  </span>
-);
-
-const Card = ({ children, className = "" }: any) => (
-  <div className={`rounded-2xl border p-5 shadow-sm ${className}`}>{children}</div>
-);
-
-// --- Main Component ---
 export default function Portfolio() {
-  const socials = [
-    { name: "Instagram", href: "https://instagram.com/kiminouhof", icon: Instagram },
-    { name: "X / Twitter", href: "https://twitter.com/KnoxKiminou", icon: Twitter },
-  ];
-
-  const novelsMajor = [
-    {
-      title: "The Black Boy Lie",
-      status: "Coming soon",
-      themes:
-        "Black identity, generational trauma, supernatural mystery, prophecy",
-      note:
-        "Core canonical novel that anchors the Kiminou Knox Author Universe.",
-    },
-  ];
-
-  const poetryCollections = [
-    {
-      title: "The Spirit of Solomon",
-      status: "published/complete",
-      blurb:
-        "A themed poetic journey of rise, ruin, and wisdom through a modern-day Solomon figure.",
-    },
-    {
-      title: "Our Father?",
-      status: "published/complete",
-      blurb:
-        "Raw, intimate dialogue with God—wrestling with silence, suffering, and doubt.",
-    },
-    {
-      title: "Poems by a Black Boy",
-      status: "complete",
-      blurb:
-        "Early voice pieces charting identity, tenderness, and becoming.",
-    },
-    {
-      title: "Hopeless Romantic",
-      status: "complete",
-      blurb:
-        "Love, longing, and the soft edges of heartbreak.",
-    },
-  ];
-
-  const universeNotes = [
-    {
-      title: "Shared Universe",
-      text:
-        "The books live in a connected mythos. Emmanuel's journey in *The Black Boy Lie* threads across future stories.",
-    },
-  ];
-
-  const now = new Date();
+  const heroRef = useRef(null);
+  const heroInView = useInView(heroRef, { once: true });
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-100 via-white to-white text-zinc-900">
-      {/* Header / Nav */}
-      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/60 border-b">
-        <nav className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
-          <a href="/home" className="font-semibold tracking-tight">Kiminou Knox</a>
-          <div className="hidden md:flex items-center gap-5 text-sm">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#writing" className="hover:underline">Writing</a>
-            <a href="#contact" className="hover:underline">Contact</a>
+    <>
+      <Header />
+      <main className="min-h-screen bg-black text-white">
+        {/* Hero */}
+        <section className="relative pt-40 pb-28 overflow-hidden" ref={heroRef}>
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-amber-500/4 rounded-full blur-[160px]" />
           </div>
-        </nav>
-      </header>
-
-      {/* Hero */}
-      <main id="top" className="relative">
-        <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
-          <div className="grid md:grid-cols-5 gap-10 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="md:col-span-3"
-            >
-              <Badge>The Black Boy Lie — Coming Soon</Badge>
-              <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-[1.1]">
-                Writer & Student‑Athlete
-              </h1>
-              <p className="mt-5 text-zinc-600 max-w-2xl">
-                I'm Kiminou Knox—Class of 2025—building stories and community across
-                literature and sport. My work spans psychological drama, metaphysical
-                thrillers, and lyrical spirituality grounded in Black identity, faith,
-                and becoming.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="mailto:kiminouknowledge@gmail.com"
-                  className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow"
-                >
-                  <span className="inline-flex items-center gap-2"><Mail className="w-4 h-4"/> kiminouknowledge@gmail.com</span>
-                </a>
-                {socials.map((s) => (
-                  <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow">
-                    <span className="inline-flex items-center gap-2"><s.icon className="w-4 h-4"/> {s.name}</span>
-                  </a>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-600">
-                <Badge>Author Universe Builder</Badge>
-                <Badge>Poetry Collections (4 completed)</Badge>
-                <Badge>East Palo Alto, California</Badge>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="md:col-span-2"
-            >
-              <div className="rounded-2xl overflow-hidden border shadow-sm">
-                <img
-                  src="/photos/brown-suit-author.jpg"
-                  alt="Kiminou Knox in brown suit"
-                  className="w-full aspect-[4/5] object-cover"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* About */}
-        <Section id="about" title="About" icon={Layers}>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card>
-              <div className="flex items-center gap-3 mb-2">
-                <MapPin className="w-4 h-4"/>
-                <p className="text-sm font-medium">East Palo Alto, California</p>
-              </div>
-              <p className="text-zinc-600 text-sm">
-                Student athlete and author weaving faith, community, and creative discipline.
-              </p>
-            </Card>
-            <Card>
-              <div className="flex items-center gap-3 mb-2">
-                <CalendarIcon className="w-4 h-4"/>
-                <p className="text-sm font-medium">Class of 2025</p>
-              </div>
-              <p className="text-zinc-600 text-sm">
-                Focused on varsity training and a growing catalog of finished poetry.
-              </p>
-            </Card>
-            <Card>
-              <div className="flex items-center gap-3 mb-2">
-                <PenLine className="w-4 h-4"/>
-                <p className="text-sm font-medium">Voice & Themes</p>
-              </div>
-              <p className="text-zinc-600 text-sm">
-                Psychological drama, metaphysical thrillers, magical realism, and poetic spirituality.
-              </p>
-            </Card>
-          </div>
-        </Section>
-
-        {/* Writing */}
-        <Section id="writing" title="Writing — Books & Poetry" icon={BookOpen}>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card>
-              <h3 className="text-lg font-semibold flex items-center gap-2 mb-3"><PenLine className="w-4 h-4"/> Canon / Major Novel</h3>
-              <ul className="space-y-4">
-                {novelsMajor.map((n) => (
-                  <li key={n.title} className="">
-                    <div className="font-medium">{n.title}</div>
-                    <div className="text-xs text-zinc-500">{n.status}</div>
-                    <p className="text-sm text-zinc-700 mt-1">{n.themes}</p>
-                    <p className="text-xs text-zinc-500 mt-1">{n.note}</p>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-            <Card>
-              <h3 className="text-lg font-semibold flex items-center gap-2 mb-3"><PenLine className="w-4 h-4"/> Poetry Collections (Completed)</h3>
-              <ul className="space-y-4">
-                {poetryCollections.map((p) => (
-                  <li key={p.title}>
-                    <div className="font-medium">{p.title} <span className="text-xs text-zinc-500 font-normal">— {p.status}</span></div>
-                    <p className="text-sm text-zinc-700 mt-1">{p.blurb}</p>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          </div>
-
-          <Card className="mt-6">
-            <h3 className="text-lg font-semibold mb-2">Universe Note</h3>
-            <div className="grid md:grid-cols-1 gap-4">
-              {universeNotes.map((u) => (
-                <div key={u.title}>
-                  <div className="font-medium">{u.title}</div>
-                  <p className="text-sm text-zinc-700 mt-1">{u.text}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-        </Section>
-
-        {/* Contact */}
-        <Section id="contact" title="Contact" icon={Mail}>
-          <Card>
-            <div className="grid md:grid-cols-2 gap-6 items-center">
-              <div>
-                <h3 className="text-lg font-semibold">Work with me</h3>
-                <p className="text-sm text-zinc-700 mt-1">
-                  For speaking, appearances, or creative collabs, use the email link below.
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={heroInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8 }}
+              >
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Portfolio</p>
+                <h1 className="font-serif text-6xl md:text-7xl font-light leading-tight mb-6">
+                  Kiminou<br />
+                  <span className="italic text-amber-200/90">Knox</span>
+                </h1>
+                <div className="w-12 h-px bg-amber-400/50 mb-8" />
+                <p className="text-base text-white/55 leading-relaxed max-w-md mb-8">
+                  Poet, novelist, athlete, and builder from East Palo Alto, California. My work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
                 </p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <a
-                    href="mailto:kiminouknowledge@gmail.com"
-                    className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-4 h-4"/> kiminouknowledge@gmail.com
-                  </a>
-                  {socials.map((s) => (
-                    <a key={s.name} href={s.href} className="rounded-2xl border px-4 py-2 text-sm font-medium hover:shadow inline-flex items-center gap-2">
-                      <s.icon className="w-4 h-4"/> {s.name}
-                    </a>
-                  ))}
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="px-3 py-1 border border-amber-400/25 text-xs uppercase tracking-[0.2em] text-amber-400/70">Bay Area</span>
+                  <span className="px-3 py-1 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Class of 2025</span>
+                  <span className="px-3 py-1 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">NCAA Eligible</span>
                 </div>
-              </div>
-              <div className="rounded-2xl overflow-hidden border shadow-sm">
-                <img
-                  src="/photos/creative-designer.jpg"
-                  alt="Creative workspace"
-                  className="w-full aspect-video object-cover"
-                />
-              </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 32 }}
+                animate={heroInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.15 }}
+                className="space-y-4"
+              >
+                {socials.map(s => {
+                  const Icon = s.icon;
+                  return (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between border border-white/8 p-5 hover:border-amber-400/30 hover:bg-white/[0.03] transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-4">
+                        <Icon className="w-5 h-5 text-white/30 group-hover:text-amber-400/70 transition-colors duration-300" />
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-0.5">{s.label}</p>
+                          <p className="text-sm text-white/70 group-hover:text-amber-200 transition-colors duration-300">{s.handle}</p>
+                        </div>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-white/15 group-hover:text-amber-400/50 transition-colors duration-300" />
+                    </a>
+                  );
+                })}
+              </motion.div>
             </div>
-          </Card>
-        </Section>
-      </main>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="border-t py-8 text-center text-sm text-zinc-500">
-        <div className="max-w-5xl mx-auto px-6">
-          <p>© {now.getFullYear()} Kiminou Knox. All rights reserved.</p>
-          <p className="mt-1">Last updated {now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}.</p>
-        </div>
-      </footer>
-    </div>
+        {/* Pillars */}
+        <section className="py-20 border-y border-white/6">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="mb-14">
+              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Roles</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">What I Do</h2>
+            </Reveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {pillars.map((p, i) => {
+                const Icon = p.icon;
+                return (
+                  <Reveal key={p.label} delay={i * 0.09}>
+                    <Link href={p.link}>
+                      <div className="group border border-white/8 bg-white/[0.025] p-7 hover:border-amber-400/25 hover:bg-white/[0.05] transition-all duration-400 cursor-pointer">
+                        <Icon className="w-6 h-6 text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300 mb-5" />
+                        <p className="text-xs uppercase tracking-[0.25em] text-white/30 mb-2">{p.label}</p>
+                        <p className="font-serif text-xl font-light text-white mb-1 group-hover:text-amber-100 transition-colors duration-300">{p.value}</p>
+                        <p className="text-xs text-white/35">{p.sub}</p>
+                      </div>
+                    </Link>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Published Works */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="mb-14">
+              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Bibliography</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Published Works</h2>
+            </Reveal>
+            <div className="space-y-0">
+              {books.map((b, i) => (
+                <Reveal key={b.title} delay={i * 0.07}>
+                  <div className="group border-t border-white/8 py-6 grid grid-cols-1 md:grid-cols-[1fr_auto_auto_auto] gap-3 md:gap-8 items-center hover:border-amber-400/20 transition-colors duration-400">
+                    <span className="font-serif text-lg font-light text-white/80 group-hover:text-amber-100 transition-colors duration-300">{b.title}</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-white/25">{b.genre}</span>
+                    <span className="font-serif text-sm text-amber-400/50 italic">{b.year}</span>
+                    <span className={`text-xs uppercase tracking-[0.15em] px-2.5 py-1 border ${
+                      b.status === "Published"
+                        ? "border-amber-400/25 text-amber-400/70"
+                        : "border-white/10 text-white/30"
+                    }`}>{b.status}</span>
+                  </div>
+                </Reveal>
+              ))}
+              <div className="border-t border-white/6" />
+            </div>
+            <Reveal delay={0.3} className="mt-10">
+              <Link href="/books">
+                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/60 hover:text-amber-400 transition-colors duration-300 cursor-pointer">
+                  View All Books with Covers &amp; Buy Links →
+                </span>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="py-20 border-t border-white/6">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="text-center">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-6 font-medium">Connect</p>
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-8">
+                Let's Build<br />
+                <span className="italic text-amber-200/90">Something Together</span>
+              </h2>
+              <Link href="/contact">
+                <motion.span
+                  className="inline-flex items-center gap-3 px-10 py-4 border border-amber-400/40 text-amber-400/80 text-xs uppercase tracking-[0.2em] hover:bg-amber-400 hover:text-black hover:border-amber-400 transition-all duration-400 cursor-pointer"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Get in Touch
+                </motion.span>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
