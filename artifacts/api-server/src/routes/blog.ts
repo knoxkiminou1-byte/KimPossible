@@ -1,4 +1,4 @@
-import { Router, type IRouter } from "express";
+import { Router, type IRouter, type Request, type Response, type NextFunction } from "express";
 import { randomUUID } from "crypto";
 
 const router: IRouter = Router();
@@ -31,11 +31,23 @@ interface BlogPost {
 const categories: BlogCategory[] = [];
 const posts: BlogPost[] = [];
 
+function requireAdmin(req: Request, res: Response, next: NextFunction) {
+  const adminSecret = process.env.ADMIN_SECRET;
+  if (!adminSecret) {
+    return next();
+  }
+  const key = req.headers["x-admin-key"];
+  if (key !== adminSecret) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  return next();
+}
+
 router.get("/blog/categories", (_req, res) => {
   res.json(categories);
 });
 
-router.post("/blog/categories", (req, res) => {
+router.post("/blog/categories", requireAdmin, (req, res) => {
   const now = new Date();
   const cat: BlogCategory = {
     id: randomUUID(),
@@ -49,14 +61,14 @@ router.post("/blog/categories", (req, res) => {
   res.status(201).json(cat);
 });
 
-router.put("/blog/categories/:id", (req, res) => {
+router.put("/blog/categories/:id", requireAdmin, (req, res) => {
   const idx = categories.findIndex((c) => c.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Category not found" });
   categories[idx] = { ...categories[idx], ...req.body, updatedAt: new Date() };
   res.json(categories[idx]);
 });
 
-router.delete("/blog/categories/:id", (req, res) => {
+router.delete("/blog/categories/:id", requireAdmin, (req, res) => {
   const idx = categories.findIndex((c) => c.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Category not found" });
   categories.splice(idx, 1);
@@ -82,7 +94,7 @@ router.get("/blog/posts/:identifier", (req, res) => {
   res.json(post);
 });
 
-router.post("/blog/posts", (req, res) => {
+router.post("/blog/posts", requireAdmin, (req, res) => {
   const now = new Date();
   const post: BlogPost = {
     id: randomUUID(),
@@ -103,14 +115,14 @@ router.post("/blog/posts", (req, res) => {
   res.status(201).json(post);
 });
 
-router.put("/blog/posts/:id", (req, res) => {
+router.put("/blog/posts/:id", requireAdmin, (req, res) => {
   const idx = posts.findIndex((p) => p.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Post not found" });
   posts[idx] = { ...posts[idx], ...req.body, updatedAt: new Date() };
   res.json(posts[idx]);
 });
 
-router.patch("/blog/posts/:id/publish", (req, res) => {
+router.patch("/blog/posts/:id/publish", requireAdmin, (req, res) => {
   const idx = posts.findIndex((p) => p.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Post not found" });
   posts[idx].isPublished = true;
@@ -119,7 +131,7 @@ router.patch("/blog/posts/:id/publish", (req, res) => {
   res.json(posts[idx]);
 });
 
-router.patch("/blog/posts/:id/unpublish", (req, res) => {
+router.patch("/blog/posts/:id/unpublish", requireAdmin, (req, res) => {
   const idx = posts.findIndex((p) => p.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Post not found" });
   posts[idx].isPublished = false;
@@ -127,7 +139,7 @@ router.patch("/blog/posts/:id/unpublish", (req, res) => {
   res.json(posts[idx]);
 });
 
-router.delete("/blog/posts/:id", (req, res) => {
+router.delete("/blog/posts/:id", requireAdmin, (req, res) => {
   const idx = posts.findIndex((p) => p.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Post not found" });
   posts.splice(idx, 1);

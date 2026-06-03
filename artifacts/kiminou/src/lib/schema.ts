@@ -41,7 +41,7 @@ export const contactFormSchema = z.object({
     required_error: "Please select an inquiry type",
   }),
   organization: z.string().optional(),
-  subject: z.string().min(1, "Subject is required"),
+  subject: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
