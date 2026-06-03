@@ -66,7 +66,7 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com/kiminouhof" 
+                  href="https://www.instagram.com/hofkiminou" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
@@ -76,11 +76,11 @@ export default function Contact() {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://twitter.com/KnoxKiminou" 
+                  href="https://x.com/KnoxKiminou" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
-                  aria-label="Twitter"
+                  aria-label="Twitter / X"
                   data-testid="social-link-twitter"
                 >
                   <Twitter className="w-5 h-5" />
