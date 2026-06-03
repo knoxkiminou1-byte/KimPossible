@@ -1,53 +1,146 @@
+import { useRef, useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
+import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
-import { Book, Trophy, Mic, Users, ArrowRight } from "lucide-react";
+import { Trophy, Mic, Users, ExternalLink, ChevronDown, Play } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const books = [
-  {
-    title: "Poems From A Black Boy",
-    description: "Early poems that trace the inner life of a young Black boy in the Bay learning how to pray, love, and tell the truth.",
-    link: "/books"
-  },
-  {
-    title: "Hopeless Romantic",
-    description: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender.",
-    link: "/books"
-  },
-  {
-    title: "Boys Raised In Silence",
-    description: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn how to speak.",
-    link: "/books"
-  }
+const CHAPTERS = [
+  { id: "portrait", label: "Profile" },
+  { id: "lineage", label: "Lineage" },
+  { id: "literary", label: "Literary Work" },
+  { id: "faith", label: "Faith & Mind" },
+  { id: "athletics", label: "Athletics" },
+  { id: "leadership", label: "Leadership" },
+  { id: "universe", label: "The Universe" },
+  { id: "connect", label: "Connect" },
 ];
 
-const beyondCards = [
-  {
-    title: "Athlete",
-    description: "Cristo Rey De La Salle forward and student of film and footwork, building a game that matches the ambition on the page.",
-    link: "/basketball",
-    linkText: "View athletic profile",
-    icon: Trophy
-  },
-  {
-    title: "Speaker",
-    description: "Talks on discipline, Black boy voice, and creative work that lasts, crafted for schools, youth groups, and faith spaces.",
-    link: "/speaking",
-    linkText: "Learn about speaking",
-    icon: Mic
-  },
-  {
-    title: "Director",
-    description: "Director of Artists and Athletes For Change, uniting creatives and athletes to make meaningful community impact.",
-    link: "/contact",
-    linkText: "Connect with Kiminou",
-    icon: Users
-  }
+const CREDENTIALS = [
+  { label: "7×", sub: "Published Author" },
+  { label: "19", sub: "Years Old" },
+  { label: "NCAA", sub: "Eligible Athlete" },
+  { label: "AAFC", sub: "Director" },
+  { label: "6'7\"", sub: "On The Court" },
+  { label: "EPA", sub: "East Palo Alto" },
 ];
+
+const SOCIAL_LINKS = [
+  { name: "Goodreads", url: "https://www.goodreads.com/author/show/Kiminou_Knox" },
+  { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
+  { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+  { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
+  { name: "Instagram", url: "https://www.instagram.com/kiminouknox" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
+  { name: "Spotify", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" },
+];
+
+const BOOKS = [
+  { title: "Poems From A Black Boy", desc: "Early poems tracing the inner life of a young Black boy learning how to pray, love, and tell the truth." },
+  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision." },
+  { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender." },
+  { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention." },
+  { title: "Our Father", desc: "A meditation on fatherhood, faith, and the God who watches boys become men in cities that weren't built for them." },
+  { title: "Boys Raised In Silence", desc: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn to speak." },
+  { title: "Children's Storybook", desc: "Written with his younger brother — a story of imagination, family, and the stories we pass down." },
+];
+
+const PULL_QUOTES = [
+  "Truth retains power, presence transforms lives, and Black boys deserve serious literature.",
+  "His pages are filled with faith, mental health, generational trauma, and joy — all rendered with clinical honesty.",
+  "Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings.",
+];
+
+function useActiveChapter() {
+  const [active, setActive] = useState("portrait");
+  useEffect(() => {
+    const ids = CHAPTERS.map(c => c.id);
+    const observers: IntersectionObserver[] = [];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(id); },
+        { rootMargin: "-35% 0px -55% 0px" }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach(o => o.disconnect());
+  }, []);
+  return active;
+}
+
+function StatBar({ label, value, pct, index }: { label: string; value: string; pct: number; index: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <div ref={ref}>
+      <div className="flex justify-between text-xs mb-2">
+        <span className="uppercase tracking-[0.2em] text-white/40">{label}</span>
+        <span className="text-amber-300/80 font-medium">{value}</span>
+      </div>
+      <div className="h-px bg-white/8">
+        <motion.div
+          className="h-full bg-gradient-to-r from-amber-400/60 to-amber-300/30"
+          initial={{ width: "0%" }}
+          animate={inView ? { width: `${pct}%` } : {}}
+          transition={{ duration: 1.2, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
+        />
+      </div>
+    </div>
+  );
+}
+
+function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div ref={ref} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.85, delay, ease: [0.25, 0.46, 0.45, 0.94] }} className={className}>
+      {children}
+    </motion.div>
+  );
+}
+
+function PullQuote({ text, delay = 0 }: { text: string; delay?: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  return (
+    <motion.div ref={ref} initial={{ opacity: 0, scale: 0.96 }} animate={inView ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 1, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="relative py-16 md:py-24 border-y border-amber-400/15 my-16 overflow-hidden">
+      <span className="absolute -top-8 left-0 font-serif text-[10rem] leading-none text-amber-400/8 select-none pointer-events-none">"</span>
+      <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white/85 leading-relaxed italic max-w-4xl relative z-10">
+        {text}
+      </p>
+      <div className="w-16 h-px bg-amber-400/50 mt-8" />
+    </motion.div>
+  );
+}
+
+function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div ref={ref} initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }} className="mb-12">
+      <p className="text-xs uppercase tracking-[0.45em] text-amber-400/60 mb-4 font-medium">{eyebrow}</p>
+      <h2 className="font-serif text-4xl md:text-5xl font-light text-white leading-tight">{title}</h2>
+      <div className="w-12 h-px bg-amber-400/50 mt-6" />
+    </motion.div>
+  );
+}
 
 export default function Author() {
+  const active = useActiveChapter();
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollY } = useScroll();
+  const heroBgY = useTransform(scrollY, [0, 700], [0, 140]);
+  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const [hoveredBook, setHoveredBook] = useState<number | null>(null);
+
   return (
     <>
       <Helmet>
@@ -57,467 +150,524 @@ export default function Author() {
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
         <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction." />
-        <meta property="og:url" content="https://kiminouknox.com/author" />
         <meta property="og:image" content="https://kiminouknox.com/author-kiminou.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:image" content="https://kiminouknox.com/author-kiminou.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
         <Header />
 
-        <main className="pt-28">
-          {/* Tab Navigation */}
-          <div className="sticky top-28 z-40 bg-black/90 backdrop-blur-md border-b border-white/10">
-            <div className="max-w-6xl mx-auto px-6">
-              <nav className="flex items-center gap-8 overflow-x-auto py-4 scrollbar-hide">
-                <a href="#bio" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
-                  Bio
-                </a>
-                <a href="#books" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
-                  Books
-                </a>
-                <a href="#beyond" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
-                  Beyond the Page
-                </a>
-                <a href="#contact" className="text-sm uppercase tracking-[0.15em] text-gray-400 hover:text-amber-300 transition-colors whitespace-nowrap">
-                  Work Together
-                </a>
-              </nav>
-            </div>
-          </div>
+        {/* ─── CINEMATIC HERO ─────────────────────────────── */}
+        <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">
+          {/* Parallax photo */}
+          <motion.div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/author-kiminou.jpg')", y: heroBgY, scale: 1.08 }}
+          />
+          {/* Gradient overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/20" />
 
-          {/* Hero Section */}
-          <section id="bio" className="max-w-6xl mx-auto px-6 py-16 lg:py-24 scroll-mt-40 relative overflow-hidden">
-            {/* Animated background gradient */}
-            <motion.div 
-              className="absolute inset-0 opacity-30"
-              style={{
-                background: "radial-gradient(ellipse at 30% 20%, rgba(251,191,36,0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(251,191,36,0.1) 0%, transparent 50%)"
-              }}
-              animate={{
-                opacity: [0.2, 0.35, 0.2],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            
-            <div className="grid gap-12 lg:grid-cols-2 items-center relative z-10">
+          {/* Floating credential chips */}
+          <motion.div className="absolute top-40 right-8 md:right-16 flex flex-col gap-3 z-20"
+            initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}>
+            {CREDENTIALS.map((c, i) => (
+              <motion.div key={c.label}
+                className="bg-black/60 backdrop-blur-md border border-amber-400/25 px-4 py-2 text-right"
+                initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.4 + i * 0.1, duration: 0.5 }}
+                whileHover={{ borderColor: "rgba(251,191,36,0.6)", x: -4 }}>
+                <div className="font-serif text-xl text-amber-300 font-light leading-none">{c.label}</div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-white/40 mt-0.5">{c.sub}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Hero content */}
+          <motion.div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 pb-20 md:pb-32 w-full"
+            style={{ opacity: heroOpacity }}>
+            <motion.p className="text-xs uppercase tracking-[0.55em] text-amber-400/70 mb-6"
+              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}>
+              Author Profile
+            </motion.p>
+            <motion.h1
+              className="font-serif font-light leading-none mb-6"
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
+              <span className="block text-6xl md:text-8xl lg:text-[9rem] text-white"
+                style={{ textShadow: "0 4px 40px rgba(0,0,0,0.9)" }}>
+                {"Kiminou".split("").map((l, i) => (
+                  <motion.span key={i} className="inline-block"
+                    initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 + i * 0.06, ease: [0.215, 0.61, 0.355, 1] }}>
+                    {l}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="block text-6xl md:text-8xl lg:text-[9rem] text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300"
+                style={{ filter: "drop-shadow(0 4px 24px rgba(251,191,36,0.4))" }}>
+                {"Knox".split("").map((l, i) => (
+                  <motion.span key={i} className="inline-block"
+                    initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.05 + i * 0.07, ease: [0.215, 0.61, 0.355, 1] }}>
+                    {l}
+                  </motion.span>
+                ))}
+              </span>
+            </motion.h1>
+
+            <motion.div className="w-20 h-px bg-gradient-to-r from-amber-400 to-transparent mb-8"
+              initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
+              transition={{ duration: 1.2, delay: 1.6 }} style={{ transformOrigin: "left" }} />
+
+            <motion.p
+              className="font-serif text-xl md:text-2xl text-white/70 font-light max-w-2xl leading-relaxed"
+              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 1.7 }}>
+              Poet, novelist, athlete, and builder from East Palo Alto. Creator of The Black Boy Lie universe.
+            </motion.p>
+
+            <motion.div className="flex flex-wrap gap-3 mt-8"
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              transition={{ delay: 2 }}>
+              {["Author", "Poet", "Athlete", "Director", "Podcaster"].map((tag, i) => (
+                <motion.span key={tag}
+                  className="px-4 py-1.5 border border-white/15 text-xs uppercase tracking-[0.2em] text-white/50 hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300 cursor-default"
+                  initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2.1 + i * 0.08 }}>
+                  {tag}
+                </motion.span>
+              ))}
+            </motion.div>
+          </motion.div>
+
+          {/* Scroll cue */}
+          <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }}>
+            <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+              <ChevronDown className="w-6 h-6 text-white/30" />
+            </motion.div>
+          </motion.div>
+        </section>
+
+        {/* ─── STICKY CHAPTER NAV ─────────────────────────── */}
+        <div className="sticky top-0 z-40 bg-black/95 backdrop-blur-xl border-b border-white/6">
+          <div className="max-w-6xl mx-auto px-6">
+            <nav className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
+              {CHAPTERS.map(ch => (
+                <a key={ch.id} href={`#${ch.id}`}
+                  className={`relative px-4 py-4 text-[10px] uppercase tracking-[0.3em] whitespace-nowrap transition-colors duration-300 flex-shrink-0 ${
+                    active === ch.id ? "text-amber-300" : "text-white/35 hover:text-white/70"
+                  }`}>
+                  {ch.label}
+                  {active === ch.id && (
+                    <motion.div layoutId="chapter-indicator"
+                      className="absolute bottom-0 left-0 right-0 h-px bg-amber-400"
+                      transition={{ type: "spring", stiffness: 400, damping: 35 }} />
+                  )}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        <main className="max-w-5xl mx-auto px-6 lg:px-10">
+
+          {/* ─── PORTRAIT + INTRO ───────────────────────────── */}
+          <section id="portrait" className="py-24 md:py-32 scroll-mt-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Photo */}
-              <motion.div 
-                className="relative w-full max-w-md mx-auto lg:order-1"
-                initial={{ opacity: 0, x: -50, rotate: -2 }}
-                animate={{ opacity: 1, x: 0, rotate: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                whileHover={{ scale: 1.02, rotate: 1 }}
-              >
-                <motion.div 
-                  className="absolute -inset-4 bg-gradient-to-r from-amber-400/20 via-amber-300/10 to-amber-400/20 rounded-3xl blur-xl"
-                  animate={{
-                    opacity: [0.5, 0.8, 0.5],
-                    scale: [1, 1.02, 1],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-2 ring-amber-300/50 shadow-2xl shadow-amber-900/40 relative">
-                  <motion.img
-                    src="/author-kiminou.jpg"
-                    alt="Kiminou Knox - Author, Athlete, Entrepreneur from East Palo Alto, creator of The Black Boy Lie universe"
-                    title="Kiminou Knox - Author, Athlete & Entrepreneur"
-                    className="w-full h-full object-cover"
-                    initial={{ scale: 1.1, filter: "grayscale(100%)" }}
-                    animate={{ scale: 1, filter: "grayscale(0%)" }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    whileHover={{ scale: 1.05 }}
-                    loading="eager"
-                  />
+              <Reveal className="relative">
+                <motion.div
+                  className="absolute -inset-3 bg-gradient-to-br from-amber-400/20 to-transparent rounded-none blur-2xl pointer-events-none"
+                  animate={{ opacity: [0.4, 0.75, 0.4] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} />
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  <img src="/author-kiminou.jpg" alt="Kiminou Knox"
+                    className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700"
+                    style={{ filter: "contrast(1.05) brightness(0.95)" }} />
+                  {/* Amber corner accents */}
+                  <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-amber-400/60" />
+                  <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-amber-400/60" />
+                  <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-amber-400/60" />
+                  <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-amber-400/60" />
                 </div>
-                <motion.div 
-                  className="absolute -bottom-4 -right-4 bg-gradient-to-r from-amber-300 to-amber-400 text-black text-xs font-bold uppercase tracking-wide px-5 py-2.5 rounded-full shadow-lg shadow-amber-500/30"
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
-                  whileHover={{ scale: 1.1 }}
-                >
+                {/* Floating tag */}
+                <motion.div
+                  className="absolute -bottom-5 -right-5 bg-amber-400 text-black px-5 py-3 text-xs font-bold uppercase tracking-[0.2em]"
+                  initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
+                  whileHover={{ scale: 1.06 }}>
                   Poet · Author · Athlete
                 </motion.div>
-              </motion.div>
+              </Reveal>
 
-              {/* Text */}
-              <motion.div 
-                className="space-y-6 lg:order-2"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                <motion.p 
-                  className="text-xs font-semibold tracking-[0.3em] uppercase text-amber-300"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  Author Profile
-                </motion.p>
-                <motion.h1 
-                  className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                >
-                  Kiminou Knox
-                </motion.h1>
-                <motion.p 
-                  className="text-lg md:text-xl text-gray-200 leading-relaxed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  Poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
-                </motion.p>
-                <motion.p 
-                  className="text-gray-400"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.9 }}
-                >
-                  Creator of The Black Boy Lie universe. Author of seven poetry collections and a children's storybook.
-                </motion.p>
-
-                <motion.div 
-                  className="flex flex-wrap gap-3 pt-2"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1 }}
-                >
-                  {["Author", "Poet", "Athlete", "Director"].map((tag, index) => (
-                    <motion.span 
-                      key={tag}
-                      className="px-4 py-1.5 rounded-full bg-white/10 text-xs uppercase tracking-wide text-gray-300 border border-white/5 hover:border-amber-300/30 hover:bg-amber-300/10 transition-all cursor-default"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1 + index * 0.1 }}
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      {tag}
-                    </motion.span>
-                  ))}
-                </motion.div>
-
-                <motion.div 
-                  className="flex flex-wrap gap-5 pt-4"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.3 }}
-                >
-                  {[
-                    { name: "Goodreads", url: "https://www.goodreads.com/author/show/Kiminou_Knox" },
-                    { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
-                    { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
-                    { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
-                    { name: "Instagram", url: "https://www.instagram.com/kiminouknox" },
-                    { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
-                    { name: "Spotify", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" }
-                  ].map((link, index) => (
-                    <motion.a
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-all hover:underline underline-offset-4"
-                      whileHover={{ scale: 1.05, x: 2 }}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1.4 + index * 0.1 }}
-                    >
-                      {link.name}
-                    </motion.a>
-                  ))}
-                </motion.div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* About the Author */}
-          <section className="border-t border-white/10 bg-gradient-to-b from-black to-gray-950">
-            <div className="max-w-4xl mx-auto px-6 py-16 md:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <h2 className="font-serif text-3xl md:text-4xl mb-8 text-white">
-                  Bio
-                </h2>
-                <div className="space-y-8 text-gray-300 text-lg leading-relaxed">
-                  <div className="space-y-4">
-                    <p>
-                      Kiminou Knox is a poet, novelist, speaker, athlete, and creative executive from East Palo Alto, now based in Oakland, California. At nineteen, he has already become a seven-time published author and a cultural voice committed to the serious formation of young Black men and the institutions that should invest in them.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Early Life and Lineage</h3>
-                    <p>
-                      Born and raised in East Palo Alto, Knox grew up between church pews, school gyms, and homes where strength was expected long before softness was allowed. He is the son of Rashida Knox, the grandson of Faye McNair Knox, and the great-grandson of Sarah Lee Williams and Elisha Bonepart McNair, a lineage that functions in his work as both inheritance and obligation.
-                    </p>
-                    <p>
-                      From an early age, he watched faith, resilience, and generational memory collide in real time, and those collisions became the emotional architecture of his voice. The elders who raised him gave him stories, standards, and a sense of spiritual gravity; his writing answers to all three with a conviction that feels lived-in rather than performed.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Literary Work and Themes</h3>
-                    <p>
-                      By nineteen, Knox has authored and published seven books that together form a literary universe centered on the interior lives of Black boys and young Black men. His titles <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, <em className="text-amber-300/90">Boys Raised In Silence</em>, and a children&apos;s storybook written with his younger brother move fluidly across poetry, psychological fiction, and prophetic reflection.
-                    </p>
-                    <p>
-                      His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, longing, and spiritual confusion, all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume; he insists on the full weight of the Black experience grief, resistance, tenderness, and joy and trusts his readers to meet him at that depth.
-                    </p>
-                    <p>
-                      Across his body of work, Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings whose emotions are allowed to be expansive and exact. In a culture that often demands performance, Knox writes toward the parts of life that usually remain unspoken, naming depression, anger, shame, and hope with equal clarity.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Voice, Form, and Craft</h3>
-                    <p>
-                      Knox&apos;s writing is marked by emotional precision, spiritual seriousness, and an ear tuned to both scripture and street corners. His poems and prose move between confession and critique, prayer and observation, often within the same page, without confusing truth-telling for theater.
-                    </p>
-                    <p>
-                      Formally, he allows each project to choose its own container: some works arrive as tight, concentrated poems; others unfold as narrative, interior monologue, or meditative reflection. What binds them is an unwavering commitment to say what is real, even when that reality is costly, uncomfortable, or unresolved.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Faith, Masculinity, and Mental Health</h3>
-                    <p>
-                      Raised within the Black church, Knox carries Christianity not as branding but as a lived framework for wrestling with doubt, desire, discipline, and grace. His work faces spiritual confusion head-on, asking hard questions about God, suffering, manhood, and responsibility without rushing to easy answers.
-                    </p>
-                    <p>
-                      Masculinity, in his pages, is something to be interrogated and rebuilt, not merely inherited. He writes about boys taught to be durable before they are allowed to be gentle, and about men who must learn, sometimes late, how to name what hurts and what heals.
-                    </p>
-                    <p>
-                      Mental health is not a side topic in his work; it is central. Knox makes space for therapy, breakdown, loneliness, and recovery, insisting that serious literature for Black boys must also be serious about their psychological and spiritual well-being.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">KimYaps: The Podcast</h3>
-                    <p>
-                      Knox extends his literary sensibility into audio with his podcast, KimYaps, a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
-                    </p>
-                    <p>
-                      On KimYaps, Knox&apos;s voice is both conversational and commanding capable of spiritual reflection, cultural commentary, and personal testimony without turning any of them into performance. He approaches each subject as a man committed to saying what is necessary, even when it disrupts comfort, complicates public narratives, or exposes his own vulnerabilities.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Athletics and Discipline</h3>
-                    <p>
-                      A multi-sport athlete, Knox brings long-view intention and disciplined rigor to his physical training that mirrors his commitment to the page. For him, athletics is not simply competition; it is a practice of stewardship over body, mind, and focus.
-                    </p>
-                    <p>
-                      The same internal standards that govern his literary craft consistency, resilience, and a refusal to cut corners shape how he moves through weight rooms, fields, and courts. This integration of discipline across arenas allows him to model a form of Black boyhood and manhood where intellect, spirit, and physical strength are not at odds but in conversation.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Leadership, Institutions, and Youth Development</h3>
-                    <p>
-                      As the founder of The TeeShirtTeens and Director of Artists and Athletes For Change (AAFC), Knox does more than create art; he builds structure around young talent. The TeeShirtTeens and AAFC function as serious developmental platforms for youth, helping them convert expression into opportunity and raw vision into documented, transferable work.
-                    </p>
-                    <p>
-                      Under his leadership, these initiatives refuse to treat young creators and athletes as content or spectacle. Instead, they invest in them as whole people, offering pathways, mentorship, and accountability that translate creativity and discipline into something durable and real.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Philosophy and Operating Standard</h3>
-                    <p>
-                      Every arena Knox enters literature, media, leadership, athletics receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass and timelines clear.
-                    </p>
-                    <p>
-                      His philosophy is simple but demanding: truth retains power, presence transforms lives, and Black boys deserve serious literature, serious investment, and the full architecture of legacy. That legacy, in his vision, is not postponed until later life; it is written early, built deliberately, and designed to last.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h3 className="font-serif text-2xl text-white">Generational Voice and Legacy</h3>
-                    <p>
-                      Kiminou Knox represents a generation of young Black men who refuse to separate depth from youth or seriousness from early ambition. His work stands at the intersection of art, faith, discipline, and legacy, offering a model of authorship and leadership that is both grounded in elders and unafraid to confront the present.
-                    </p>
-                    <p>
-                      Whether on the page, behind a microphone, on the court, or inside a room full of young creators, Knox moves with the same conviction: to make his life and work mean something beyond the moment, and to ensure that the boys coming after him inherit not just stories, but structures.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-4 pt-8">
-                  <a href="https://www.goodreads.com/author/show/Kiminou_Knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
-                    Goodreads
-                  </a>
-                  <a href="https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
-                    MaxPreps
-                  </a>
-                  <a href="https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
-                    NCSA
-                  </a>
-                  <a href="https://prephoops.com/player/kiminou-knox/" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
-                    Prep Hoops
-                  </a>
-                  <a href="https://www.instagram.com/kiminouknox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
-                    Instagram
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* Books Section */}
-          <section id="books" className="border-t border-white/10 bg-gray-950 scroll-mt-40">
-            <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
-              >
-                <div>
-                  <h2 className="font-serif text-3xl md:text-4xl text-white">
-                    Books by Kiminou Knox
-                  </h2>
-                  <p className="text-gray-400 mt-3">
-                    A growing body of work across poetry, fiction, and children's storytelling.
+              {/* Intro text */}
+              <div className="space-y-8 lg:pt-8">
+                <Reveal>
+                  <p className="text-xs uppercase tracking-[0.45em] text-amber-400/60 mb-6">East Palo Alto, California</p>
+                  <p className="font-serif text-2xl md:text-3xl font-light text-white/90 leading-relaxed">
+                    Poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
                   </p>
-                </div>
-                <Link href="/books">
-                  <motion.span
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-300 text-black text-sm font-semibold cursor-pointer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    View all books
-                    <ArrowRight className="w-4 h-4" />
-                  </motion.span>
-                </Link>
-              </motion.div>
+                </Reveal>
+                <Reveal delay={0.1}>
+                  <p className="text-white/50 text-lg leading-relaxed">
+                    Creator of The Black Boy Lie universe. Author of seven poetry collections and a children's storybook. At nineteen, already a cultural voice committed to the serious formation of young Black men.
+                  </p>
+                </Reveal>
 
-              <div className="grid gap-6 md:grid-cols-3">
-                {books.map((book, index) => (
-                  <motion.article
-                    key={book.title}
-                    className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 flex flex-col group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -5, borderColor: "rgba(251,191,36,0.3)" }}
-                  >
-                    <div className="aspect-[3/4] bg-gradient-to-br from-amber-900/30 to-purple-900/30 flex items-center justify-center">
-                      <Book className="w-16 h-16 text-amber-300/50 group-hover:text-amber-300 transition-colors" />
+                {/* Credential grid */}
+                <Reveal delay={0.2}>
+                  <div className="grid grid-cols-3 gap-px bg-white/8 border border-white/8 mt-10">
+                    {CREDENTIALS.map((c, i) => (
+                      <div key={i} className="bg-black px-4 py-5 text-center hover:bg-white/4 transition-colors duration-300">
+                        <div className="font-serif text-2xl text-amber-300 leading-none">{c.label}</div>
+                        <div className="text-[9px] uppercase tracking-[0.25em] text-white/35 mt-1.5">{c.sub}</div>
+                      </div>
+                    ))}
+                  </div>
+                </Reveal>
+
+                {/* Social links */}
+                <Reveal delay={0.3}>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    {SOCIAL_LINKS.map(l => (
+                      <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
+                        className="text-xs uppercase tracking-[0.2em] text-white/35 hover:text-amber-300 transition-colors duration-300 flex items-center gap-1.5 group">
+                        {l.name}
+                        <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </a>
+                    ))}
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── PULL QUOTE 1 ───────────────────────────────── */}
+          <PullQuote text={PULL_QUOTES[0]} />
+
+          {/* ─── LINEAGE ────────────────────────────────────── */}
+          <section id="lineage" className="py-20 scroll-mt-16">
+            <SectionHeading eyebrow="Roots & Inheritance" title="Early Life and Lineage" />
+
+            {/* Family lineage vertical timeline */}
+            <div className="relative pl-8 border-l border-amber-400/20 space-y-12">
+              {[
+                { name: "Sarah Lee Williams & Elisha Bonepart McNair", role: "Great-Grandparents", desc: "The foundation — faith, resilience, and generational memory that functions in his work as both inheritance and obligation." },
+                { name: "Faye McNair Knox", role: "Grandmother", desc: "Stories, standards, and a sense of spiritual gravity that echo through every page he writes." },
+                { name: "Rashida Knox", role: "Mother", desc: "The immediate lineage — a home where strength was expected long before softness was allowed, and faith collided with reality in real time." },
+                { name: "Kiminou Knox", role: "The Voice", desc: "Born in East Palo Alto. Between church pews, school gyms, and homes where boys learned to survive before they learned to speak." },
+              ].map((entry, i) => (
+                <Reveal key={i} delay={i * 0.1}>
+                  <div className="relative">
+                    <div className="absolute -left-[2.35rem] top-1.5 w-4 h-4 rounded-full border-2 border-amber-400/60 bg-black" />
+                    <div className="absolute -left-[2.1rem] top-1.5 w-3 h-3 rounded-full bg-amber-400/30" />
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-amber-400/50 mb-1">{entry.role}</p>
+                    <h3 className="font-serif text-xl text-white mb-3">{entry.name}</h3>
+                    <p className="text-white/55 leading-relaxed">{entry.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          {/* ─── PULL QUOTE 2 ───────────────────────────────── */}
+          <PullQuote text={PULL_QUOTES[1]} delay={0.1} />
+
+          {/* ─── LITERARY WORK ──────────────────────────────── */}
+          <section id="literary" className="py-20 scroll-mt-16">
+            <SectionHeading eyebrow="Seven Published Works" title="Literary Work & Themes" />
+            <div className="grid md:grid-cols-2 gap-10">
+              <Reveal>
+                <p className="text-white/60 text-lg leading-relaxed">
+                  By nineteen, Knox has authored seven books that form a literary universe centered on the interior lives of Black boys and young Black men. His work moves fluidly across poetry, psychological fiction, and prophetic reflection.
+                </p>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <p className="text-white/60 text-lg leading-relaxed">
+                  His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, and longing — all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume.
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={0.2}>
+              <p className="text-white/60 text-lg leading-relaxed mt-8 max-w-3xl">
+                Across his body of work, Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings whose emotions are allowed to be expansive and exact. In a culture that often demands performance, Knox writes toward the parts of life that usually remain unspoken.
+              </p>
+            </Reveal>
+
+            <div className="mt-16 space-y-4">
+              <Reveal>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/50 mb-8">Voice, Form & Craft</p>
+              </Reveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { title: "Emotional Precision", desc: "Every line accounts for its weight. Nothing performed, everything lived." },
+                  { title: "Spiritual Seriousness", desc: "Faith not as branding — as a lived framework for wrestling with doubt and grace." },
+                  { title: "Formal Freedom", desc: "Each project chooses its own container: tight poems, interior monologue, prophetic reflection." },
+                ].map((item, i) => (
+                  <Reveal key={i} delay={i * 0.1}>
+                    <div className="border border-white/8 p-6 hover:border-amber-400/25 transition-colors duration-500 group">
+                      <div className="w-8 h-px bg-amber-400/40 mb-5 group-hover:w-12 transition-all duration-500" />
+                      <h4 className="font-serif text-lg text-white mb-3">{item.title}</h4>
+                      <p className="text-white/45 text-sm leading-relaxed">{item.desc}</p>
                     </div>
-                    <div className="p-6 space-y-3 flex-1 flex flex-col">
-                      <h3 className="font-semibold text-lg text-white group-hover:text-amber-300 transition-colors">
-                        {book.title}
-                      </h3>
-                      <p className="text-sm text-gray-400 flex-1 leading-relaxed">
-                        {book.description}
-                      </p>
-                      <Link href={book.link}>
-                        <span className="text-sm text-amber-300 hover:text-amber-200 transition-colors cursor-pointer">
-                          Read more
-                        </span>
-                      </Link>
-                    </div>
-                  </motion.article>
+                  </Reveal>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* Beyond the Page */}
-          <section id="beyond" className="border-t border-white/10 bg-black scroll-mt-40">
-            <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="max-w-3xl mb-12"
-              >
-                <h2 className="font-serif text-3xl md:text-4xl text-white">
-                  Beyond the Page
-                </h2>
-                <p className="text-gray-400 mt-4 text-lg leading-relaxed">
-                  Alongside writing, Kiminou leads The Tee Shirt Teens and Artists and Athletes For Change, works with youth as a speaker, and continues his development as a serious basketball player. The same discipline that lives on the court and in the weight room shapes the language in his notebooks.
-                </p>
-              </motion.div>
+          {/* ─── PULL QUOTE 3 ───────────────────────────────── */}
+          <PullQuote text={PULL_QUOTES[2]} delay={0.1} />
 
-              <div className="grid gap-6 md:grid-cols-3">
-                {beyondCards.map((card, index) => {
-                  const Icon = card.icon;
-                  return (
-                    <motion.div
-                      key={card.title}
-                      className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col group hover:border-amber-300/30 transition-all"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ y: -5 }}
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-amber-300/10 flex items-center justify-center mb-4 group-hover:bg-amber-300/20 transition-colors">
-                        <Icon className="w-6 h-6 text-amber-300" />
-                      </div>
-                      <h3 className="font-semibold text-xl text-white mb-3">{card.title}</h3>
-                      <p className="text-sm text-gray-400 flex-1 leading-relaxed">
-                        {card.description}
-                      </p>
-                      <Link href={card.link}>
-                        <span className="mt-4 text-sm text-amber-300 hover:text-amber-200 transition-colors cursor-pointer inline-flex items-center gap-2">
-                          {card.linkText}
-                          <ArrowRight className="w-4 h-4" />
-                        </span>
-                      </Link>
-                    </motion.div>
-                  );
-                })}
+          {/* ─── FAITH & MENTAL HEALTH ──────────────────────── */}
+          <section id="faith" className="py-20 scroll-mt-16">
+            <SectionHeading eyebrow="Interior Life" title="Faith, Masculinity & Mental Health" />
+            <div className="grid lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "✦",
+                  title: "Faith",
+                  desc: "Raised within the Black church, Knox carries Christianity as a lived framework for wrestling with doubt, desire, discipline, and grace. His work faces spiritual confusion head-on, asking hard questions without rushing to easy answers.",
+                },
+                {
+                  icon: "◈",
+                  title: "Masculinity",
+                  desc: "Masculinity, in his pages, is something to be interrogated and rebuilt — not merely inherited. He writes about boys taught to be durable before they are allowed to be gentle, and about men who must learn how to name what hurts.",
+                },
+                {
+                  icon: "◇",
+                  title: "Mental Health",
+                  desc: "Mental health is not a side topic in his work; it is central. Knox makes space for therapy, breakdown, loneliness, and recovery — insisting that serious literature for Black boys must also be serious about their psychological well-being.",
+                },
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 0.15}>
+                  <div className="relative p-8 bg-gradient-to-b from-white/[0.03] to-transparent border border-white/8 hover:border-amber-400/20 transition-all duration-500 group h-full">
+                    <span className="text-amber-400/40 text-3xl font-serif mb-6 block group-hover:text-amber-400/70 transition-colors duration-500">
+                      {item.icon}
+                    </span>
+                    <h3 className="font-serif text-2xl text-white mb-4">{item.title}</h3>
+                    <p className="text-white/50 leading-relaxed text-[15px]">{item.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* KimYaps Podcast */}
+            <Reveal delay={0.2} className="mt-16">
+              <div className="border border-white/8 p-8 md:p-12 hover:border-amber-400/20 transition-colors duration-500">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center">
+                      <Play className="w-6 h-6 text-amber-400 ml-1" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3">Podcast</p>
+                    <h3 className="font-serif text-3xl text-white mb-4">KimYaps</h3>
+                    <p className="text-white/55 leading-relaxed max-w-2xl">
+                      Knox extends his literary sensibility into audio — a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
+                    </p>
+                    <a href="https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348"
+                      target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-6 text-xs uppercase tracking-[0.25em] text-amber-300 hover:text-amber-200 transition-colors group">
+                      Listen on Spotify
+                      <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </div>
+                </div>
               </div>
+            </Reveal>
+          </section>
+
+          {/* ─── ATHLETICS ──────────────────────────────────── */}
+          <section id="athletics" className="py-20 scroll-mt-16">
+            <SectionHeading eyebrow="Cristo Rey De La Salle" title="Athletics & Discipline" />
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <Reveal>
+                <p className="text-white/60 text-lg leading-relaxed mb-6">
+                  A multi-sport athlete, Knox brings long-view intention and disciplined rigor to his physical training that mirrors his commitment to the page. For him, athletics is not simply competition; it is a practice of stewardship over body, mind, and focus.
+                </p>
+                <p className="text-white/60 text-lg leading-relaxed">
+                  The same internal standards that govern his literary craft — consistency, resilience, and a refusal to cut corners — shape how he moves through weight rooms, fields, and courts.
+                </p>
+                <Link href="/basketball">
+                  <motion.span className="inline-flex items-center gap-2 mt-8 text-xs uppercase tracking-[0.3em] text-amber-300 hover:text-amber-200 transition-colors cursor-pointer group"
+                    whileHover={{ x: 4 }}>
+                    View Athletic Profile
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </motion.span>
+                </Link>
+              </Reveal>
+
+              <Reveal delay={0.15}>
+                <div className="space-y-3">
+                  {[
+                    { label: "Height", value: "6'7\"", pct: 92 },
+                    { label: "Weight", value: "235 lbs", pct: 78 },
+                    { label: "Position", value: "F / C", pct: 85 },
+                    { label: "Sports", value: "Basketball · Football", pct: 100 },
+                    { label: "Eligibility", value: "NCAA Registered", pct: 100 },
+                  ].map((stat, i) => (
+                    <StatBar key={i} label={stat.label} value={stat.value} pct={stat.pct} index={i} />
+                  ))}
+                </div>
+              </Reveal>
             </div>
           </section>
 
-          {/* Contact Strip */}
-          <section id="contact" className="bg-gradient-to-r from-amber-400 to-amber-500 scroll-mt-40">
-            <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div>
-                <h2 className="font-serif text-2xl md:text-3xl text-black">
-                  Work with Kiminou
-                </h2>
-                <p className="text-black/70 mt-2">
-                  For readings, interviews, classroom visits, and creative collaborations, reach out below.
+          {/* ─── LEADERSHIP ─────────────────────────────────── */}
+          <section id="leadership" className="py-20 scroll-mt-16">
+            <SectionHeading eyebrow="Institutions & Impact" title="Leadership & Youth Development" />
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {[
+                {
+                  org: "The TeeShirtTeens",
+                  role: "Founder",
+                  desc: "A serious developmental platform for youth, helping them convert expression into opportunity and raw vision into documented, transferable work.",
+                },
+                {
+                  org: "Artists and Athletes For Change",
+                  role: "Director (AAFC)",
+                  desc: "Uniting creatives and athletes to make meaningful community impact — refusing to treat young creators as content or spectacle.",
+                },
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 0.15}>
+                  <div className="group p-8 border border-white/8 hover:border-amber-400/25 transition-all duration-500 relative overflow-hidden">
+                    <motion.div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/50 mb-3 relative z-10">{item.role}</p>
+                    <h3 className="font-serif text-2xl text-white mb-4 relative z-10">{item.org}</h3>
+                    <p className="text-white/50 leading-relaxed relative z-10">{item.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delay={0.2}>
+              <div className="border-l-2 border-amber-400/30 pl-8 py-2">
+                <p className="font-serif text-xl text-white/75 leading-relaxed italic">
+                  "Under his leadership, these initiatives refuse to treat young creators and athletes as content or spectacle. Instead, they invest in them as whole people — offering pathways, mentorship, and accountability that translate creativity and discipline into something durable and real."
                 </p>
               </div>
-              <Link href="/contact">
-                <motion.span
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-black text-amber-300 text-sm font-semibold cursor-pointer shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Contact Kiminou
-                  <ArrowRight className="w-4 h-4" />
-                </motion.span>
-              </Link>
-            </div>
+            </Reveal>
           </section>
         </main>
+
+        {/* ─── THE UNIVERSE (full bleed) ──────────────────── */}
+        <section id="universe" className="py-24 border-t border-white/6 scroll-mt-16 overflow-hidden">
+          <div className="max-w-5xl mx-auto px-6 lg:px-10 mb-12">
+            <SectionHeading eyebrow="Seven Published Works" title="The Black Boy Lie Universe" />
+          </div>
+          <div className="relative">
+            {/* Horizontal scroll container */}
+            <div className="flex gap-5 px-6 md:px-10 overflow-x-auto pb-6 scrollbar-hide" style={{ scrollSnapType: "x mandatory" }}>
+              {BOOKS.map((book, i) => (
+                <Reveal key={i} delay={i * 0.06}>
+                  <motion.div
+                    className="flex-shrink-0 w-64 border border-white/8 p-6 hover:border-amber-400/30 transition-all duration-500 group cursor-default"
+                    style={{ scrollSnapAlign: "start" }}
+                    onHoverStart={() => setHoveredBook(i)}
+                    onHoverEnd={() => setHoveredBook(null)}
+                    whileHover={{ y: -4 }}>
+                    {/* Book cover placeholder */}
+                    <div className="aspect-[2/3] mb-6 bg-gradient-to-b from-amber-400/8 to-amber-900/5 border border-amber-400/10 flex items-end p-4 relative overflow-hidden group-hover:border-amber-400/25 transition-colors duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 via-transparent to-black/50" />
+                      <div className="absolute top-3 left-3 w-4 h-px bg-amber-400/40" />
+                      <div className="absolute top-3 right-3 w-4 h-px bg-amber-400/40" />
+                      <span className="font-serif text-amber-400/30 text-[40px] leading-none relative z-10">{i + 1}</span>
+                    </div>
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/50 mb-2">Vol. {String(i + 1).padStart(2, "0")}</p>
+                    <h4 className="font-serif text-base text-white leading-snug mb-3 group-hover:text-amber-100 transition-colors duration-300">{book.title}</h4>
+                    <p className="text-white/35 text-xs leading-relaxed">{book.desc}</p>
+                  </motion.div>
+                </Reveal>
+              ))}
+              {/* View all CTA card */}
+              <Reveal delay={0.5}>
+                <Link href="/books">
+                  <div className="flex-shrink-0 w-48 border border-amber-400/20 p-6 flex flex-col items-center justify-center gap-4 hover:border-amber-400/50 hover:bg-amber-400/5 transition-all duration-500 cursor-pointer h-full min-h-[340px]">
+                    <div className="w-10 h-10 rounded-full border border-amber-400/30 flex items-center justify-center">
+                      <span className="text-amber-400 text-lg">→</span>
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/60 text-center">View All Books</span>
+                  </div>
+                </Link>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── PHILOSOPHY ─────────────────────────────────── */}
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
+          <section className="py-20 border-t border-white/6">
+            <SectionHeading eyebrow="Operating Standard" title="Philosophy & Legacy" />
+            <div className="grid md:grid-cols-2 gap-16">
+              <Reveal>
+                <p className="text-white/60 text-lg leading-relaxed">
+                  Every arena Knox enters — literature, media, leadership, athletics — receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass.
+                </p>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <div className="space-y-6">
+                  {[
+                    "Truth retains power.",
+                    "Presence transforms lives.",
+                    "Black boys deserve serious literature and serious investment.",
+                    "Legacy is not postponed — it is written early, built deliberately, designed to last.",
+                  ].map((line, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-400/50 mt-2 flex-shrink-0" />
+                      <p className="text-white/65 leading-relaxed">{line}</p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* ─── CONNECT ────────────────────────────────────── */}
+          <section id="connect" className="py-20 border-t border-white/6 scroll-mt-16">
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. NCAA registered. Multi-sport.", link: "/basketball", cta: "Athletic Profile" },
+                { icon: Mic, title: "Speaker", desc: "Talks on discipline, Black boy voice, and creative work that lasts.", link: "/speaking", cta: "Speaking Info" },
+                { icon: Users, title: "Director", desc: "Director of Artists & Athletes For Change. Youth development.", link: "/contact", cta: "Connect" },
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 0.12}>
+                  <Link href={item.link}>
+                    <motion.div className="group p-8 border border-white/8 hover:border-amber-400/25 transition-all duration-500 cursor-pointer relative overflow-hidden h-full"
+                      whileHover={{ y: -2 }}>
+                      <motion.div className="absolute inset-0 bg-gradient-to-b from-amber-400/6 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <item.icon className="w-5 h-5 text-amber-400/50 mb-6 group-hover:text-amber-400 transition-colors duration-300 relative z-10" />
+                      <h3 className="font-serif text-xl text-white mb-3 relative z-10">{item.title}</h3>
+                      <p className="text-white/40 text-sm leading-relaxed mb-6 relative z-10">{item.desc}</p>
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/50 group-hover:text-amber-300 transition-colors duration-300 relative z-10">
+                        {item.cta} →
+                      </span>
+                    </motion.div>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* All links */}
+            <Reveal delay={0.2} className="mt-16">
+              <p className="text-xs uppercase tracking-[0.4em] text-white/20 mb-6">Find Kiminou Online</p>
+              <div className="flex flex-wrap gap-6">
+                {SOCIAL_LINKS.map(l => (
+                  <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
+                    className="text-xs uppercase tracking-[0.2em] text-white/30 hover:text-amber-300 transition-colors duration-300 flex items-center gap-1.5 group">
+                    {l.name}
+                    <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                ))}
+              </div>
+            </Reveal>
+          </section>
+        </div>
 
         <Footer />
       </div>
