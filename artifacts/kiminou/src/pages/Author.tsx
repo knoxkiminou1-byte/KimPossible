@@ -5,6 +5,8 @@ import { Link } from "wouter";
 import { Trophy, Mic, Users, ExternalLink, ChevronDown, Play } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
+import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 
 const CHAPTERS = [
   { id: "portrait", label: "Profile" },
@@ -169,7 +171,7 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
     <motion.div ref={ref} initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }} className="mb-12">
       <p className="text-xs uppercase tracking-[0.45em] text-amber-400/60 mb-4 font-medium">{eyebrow}</p>
-      <h2 className="font-serif text-4xl md:text-5xl font-light text-white leading-tight">{title}</h2>
+      <GlitchHeading as="h2" className="font-serif text-4xl md:text-5xl font-light text-white leading-tight">{title}</GlitchHeading>
       <div className="w-12 h-px bg-amber-400/50 mt-6" />
     </motion.div>
   );

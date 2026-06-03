@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import GoldMarquee from "@/components/LuxuryFX/GoldMarquee";
 import FeaturedBookPromo from "@/components/FeaturedBookPromo";
 import WhoIsKiminou from "@/components/WhoIsKiminou";
 import PhotoGallery from "@/components/PhotoGallery";
@@ -60,6 +61,7 @@ export default function Home() {
       <div className="relative z-10">
         <Header />
         <Hero />
+        <GoldMarquee />
         <WhoIsKiminou />
         <StatsBanner />
         <PoemOfTheDay />

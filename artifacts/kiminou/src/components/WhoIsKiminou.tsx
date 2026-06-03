@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "wouter";
+import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
+import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 
 const identity = [
   {
@@ -116,13 +118,15 @@ export default function WhoIsKiminou() {
             <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-5 font-medium">
               About
             </p>
-            <h2
-              className="font-serif text-4xl md:text-5xl xl:text-6xl font-light leading-tight mb-8"
-              data-testid="who-title"
-            >
-              Who is<br />
-              <span className="italic text-amber-200/90">Kiminou Knox</span>
-            </h2>
+            <GoldUnmask delay={0.1} className="inline-block mb-8">
+              <h2
+                className="font-serif text-4xl md:text-5xl xl:text-6xl font-light leading-tight"
+                data-testid="who-title"
+              >
+                Who is<br />
+                <GlitchHeading as="span" className="italic text-amber-200/90">Kiminou Knox</GlitchHeading>
+              </h2>
+            </GoldUnmask>
             <div className="w-10 h-px bg-amber-400/50 mb-8" />
             <p
               className="text-base text-white/55 leading-relaxed max-w-sm"

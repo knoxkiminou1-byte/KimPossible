@@ -4,15 +4,17 @@ import { ChevronDown } from "lucide-react";
 import GoldParticles from "@/components/LuxuryFX/GoldParticles";
 
 const letterVariants: Variants = {
-  hidden: { opacity: 0, y: 60, rotateX: -60 },
+  hidden: { opacity: 0, y: 90, rotateX: -90, scale: 0.85 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     rotateX: 0,
+    scale: 1,
     transition: {
-      duration: 0.9,
-      delay: 0.5 + i * 0.055,
-      ease: [0.215, 0.61, 0.355, 1] as const,
+      type: "spring" as const,
+      stiffness: 95 - i * 2.5,
+      damping: 11 + i * 0.4,
+      delay: 0.4 + i * 0.058,
     },
   }),
 };

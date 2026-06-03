@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView, AnimatePresence, useSpring } from "framer-motion";
+import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
+import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 import { ExternalLink, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
@@ -17,8 +19,17 @@ type Book = {
 };
 
 function BookCard({ book, index, onSample, onFlipbook }: { book: Book; index: number; onSample: (b: Book) => void; onFlipbook: (b: Book) => void }) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const springX = useSpring(0, { stiffness: 280, damping: 28 });
+  const springY = useSpring(0, { stiffness: 280, damping: 28 });
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    const r = ref.current?.getBoundingClientRect();
+    if (!r) return;
+    springX.set(((e.clientY - (r.top + r.height / 2)) / (r.height / 2)) * 6);
+    springY.set(((e.clientX - (r.left + r.width / 2)) / (r.width / 2)) * -6);
+  };
 
   return (
     <motion.article
@@ -26,7 +37,10 @@ function BookCard({ book, index, onSample, onFlipbook }: { book: Book; index: nu
       key={book.id}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
+      onMouseMove={onMouseMove}
+      onMouseLeave={() => { springX.set(0); springY.set(0); }}
       transition={{ duration: 0.7, delay: (index % 4) * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      style={{ transformPerspective: 900, transformStyle: "preserve-3d", rotateX: springX, rotateY: springY }}
       className="group flex flex-col"
       data-testid={`book-card-${book.id}`}
     >
@@ -151,10 +165,12 @@ export default function BooksPage() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">7 Published Works</p>
-              <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6">
-                Published<br />
-                <span className="italic text-amber-200/90">Works</span>
-              </h1>
+              <GoldUnmask delay={0.1} className="inline-block mb-6">
+                <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
+                  Published<br />
+                  <GlitchHeading as="span" className="italic text-amber-200/90">Works</GlitchHeading>
+                </h1>
+              </GoldUnmask>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
               <p className="text-base text-white/45 max-w-xl leading-relaxed">
                 Real covers, real links, sample poems from each collection: faith, identity, love, and the Black experience.

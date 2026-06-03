@@ -23,6 +23,8 @@ import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/LuxuryFX/BackToTop";
+import PageTransition from "@/components/LuxuryFX/PageTransition";
+import CursorSpotlight from "@/components/LuxuryFX/CursorSpotlight";
 
 function Router() {
   return (
@@ -67,6 +69,8 @@ function App() {
           <ScrollProgress />
           <LuxuryCursor />
           <BackToTop />
+          <PageTransition />
+          <CursorSpotlight />
           <div className="grain"></div>
           <Toaster />
           <Router />

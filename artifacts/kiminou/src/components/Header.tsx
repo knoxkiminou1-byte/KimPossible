@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useSpring, useTransform } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -11,6 +11,50 @@ const navItems = [
   { href: "/press", label: "Press" },
   { href: "/contact", label: "Contact" },
 ];
+
+function MagneticNavLink({ href, label, active, index }: { href: string; label: string; active: boolean; index: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const rawX = useSpring(0, { stiffness: 380, damping: 28 });
+  const rawY = useSpring(0, { stiffness: 380, damping: 28 });
+
+  const onMove = (e: React.MouseEvent) => {
+    const r = ref.current?.getBoundingClientRect();
+    if (!r) return;
+    const x = ((e.clientX - (r.left + r.width / 2)) / (r.width / 2)) * 7;
+    const y = ((e.clientY - (r.top + r.height / 2)) / (r.height / 2)) * 4;
+    rawX.set(x);
+    rawY.set(y);
+  };
+
+  const onLeave = () => { rawX.set(0); rawY.set(0); };
+
+  return (
+    <Link href={href} data-testid={`nav-${label.toLowerCase()}`}>
+      <motion.span
+        ref={ref}
+        className={`relative text-xs uppercase tracking-[0.18em] font-medium cursor-pointer transition-colors duration-300 inline-block ${
+          active ? "text-amber-300" : "text-white/60 hover:text-white"
+        }`}
+        style={{ x: rawX, y: rawY }}
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 + index * 0.07, duration: 0.4 }}
+        onMouseMove={onMove}
+        onMouseLeave={onLeave}
+      >
+        {label}
+        <motion.span
+          className="absolute -bottom-0.5 left-0 h-px bg-amber-300 origin-left"
+          initial={{ scaleX: active ? 1 : 0 }}
+          animate={{ scaleX: active ? 1 : 0 }}
+          whileHover={{ scaleX: 1 }}
+          transition={{ duration: 0.25 }}
+          style={{ width: "100%" }}
+        />
+      </motion.span>
+    </Link>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,17 +67,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location]);
+  useEffect(() => { setMenuOpen(false); }, [location]);
 
   return (
     <>
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-black/95 backdrop-blur-xl border-b border-amber-500/10"
-            : "bg-transparent"
+          scrolled ? "bg-black/95 backdrop-blur-xl border-b border-amber-500/10" : "bg-transparent"
         }`}
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -53,31 +93,15 @@ export default function Header() {
             </Link>
 
             <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-              {navItems.map((item, i) => {
-                const active = location === item.href;
-                return (
-                  <Link key={item.href} href={item.href} data-testid={`nav-${item.label.toLowerCase()}`}>
-                    <motion.span
-                      className={`relative text-xs uppercase tracking-[0.18em] font-medium cursor-pointer transition-colors duration-300 ${
-                        active ? "text-amber-300" : "text-white/60 hover:text-white"
-                      }`}
-                      initial={{ opacity: 0, y: -8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 + i * 0.07, duration: 0.4 }}
-                    >
-                      {item.label}
-                      <motion.span
-                        className="absolute -bottom-0.5 left-0 h-px bg-amber-300 origin-left"
-                        initial={{ scaleX: active ? 1 : 0 }}
-                        animate={{ scaleX: active ? 1 : 0 }}
-                        whileHover={{ scaleX: 1 }}
-                        transition={{ duration: 0.25 }}
-                        style={{ width: "100%" }}
-                      />
-                    </motion.span>
-                  </Link>
-                );
-              })}
+              {navItems.map((item, i) => (
+                <MagneticNavLink
+                  key={item.href}
+                  href={item.href}
+                  label={item.label}
+                  active={location === item.href}
+                  index={i}
+                />
+              ))}
             </nav>
 
             <button
