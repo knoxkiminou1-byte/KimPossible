@@ -95,6 +95,28 @@
   --ring: hsl(142, 71%, 45%);
 }
 
+[data-theme="paper"] {
+  --background: hsl(38, 40%, 95%);
+  --foreground: hsl(25, 25%, 12%);
+  --card: hsl(38, 35%, 98%);
+  --card-foreground: hsl(25, 25%, 12%);
+  --popover: hsl(38, 35%, 98%);
+  --popover-foreground: hsl(25, 25%, 12%);
+  --primary: hsl(25, 35%, 22%);
+  --primary-foreground: hsl(38, 40%, 95%);
+  --secondary: hsl(38, 30%, 88%);
+  --secondary-foreground: hsl(25, 25%, 12%);
+  --muted: hsl(38, 25%, 88%);
+  --muted-foreground: hsl(25, 15%, 42%);
+  --accent: hsl(38, 60%, 55%);
+  --accent-foreground: hsl(25, 25%, 12%);
+  --destructive: hsl(0, 84%, 50%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(35, 20%, 78%);
+  --input: hsl(35, 20%, 82%);
+  --ring: hsl(25, 35%, 40%);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { Trophy, Mic, Users, ExternalLink, ChevronDown, Play } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TypewriterConfessional from "@/components/LuxuryFX/TypewriterConfessional";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 
@@ -393,6 +394,9 @@ export default function Author() {
 
           {/* ─── PULL QUOTE 3 ───────────────────────────────── */}
           <PullQuote quote={PULL_QUOTES[2]} delay={0.1} />
+
+          {/* ─── TYPEWRITER CONFESSIONAL ─────────────────────── */}
+          <TypewriterConfessional />
 
           {/* ─── FAITH & MENTAL HEALTH ──────────────────────── */}
           <section id="faith" className="py-20 scroll-mt-16">

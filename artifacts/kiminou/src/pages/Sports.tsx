@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ExternalLink, Trophy, TrendingUp, Target, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AmbientAudio from "@/components/AmbientAudio";
 
 const measurables = [
   { label: "Height", value: "6'7\"", sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
@@ -176,6 +177,7 @@ export default function Sports() {
       </main>
 
       <Footer />
+      <AmbientAudio theme="sports" />
     </>
   );
 }

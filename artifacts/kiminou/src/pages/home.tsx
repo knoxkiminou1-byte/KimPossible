@@ -17,6 +17,8 @@ import QuoteTypewriter from "@/components/QuoteTypewriter";
 import WordCloud from "@/components/WordCloud";
 import PoemAssembler from "@/components/PoemAssembler";
 import GenerativeArtPanel from "@/components/GenerativeArtPanel";
+import ChapterScroll from "@/components/ChapterScroll";
+import AmbientAudio from "@/components/AmbientAudio";
 
 export default function Home() {
 
@@ -67,6 +69,7 @@ export default function Home() {
         <Header />
         <div id="hero"><Hero /></div>
         <GoldMarquee />
+        <ChapterScroll />
         <div id="who-is-kiminou"><WhoIsKiminou /></div>
         <div id="section-stats"><StatsBanner /></div>
         <div id="section-poem"><PoemOfTheDay /></div>
@@ -81,6 +84,7 @@ export default function Home() {
         <GenerativeArtPanel />
         <Footer />
         <ContactFAB />
+        <AmbientAudio theme="noir" />
       </div>
       </div>
     </>

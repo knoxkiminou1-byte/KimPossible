@@ -3,6 +3,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AmbientAudio from "@/components/AmbientAudio";
 import ContactForm from "@/components/ContactForm";
 
 const AUDIENCES = ["All", "Schools", "Teams", "Youth", "Community", "Faith"];
@@ -243,6 +244,7 @@ export default function Speaking() {
       </main>
 
       <Footer />
+      <AmbientAudio theme="cathedral" />
     </>
   );
 }
