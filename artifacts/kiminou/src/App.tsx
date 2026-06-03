@@ -22,6 +22,7 @@ import Author from "@/pages/Author";
 import NotFound from "@/pages/not-found";
 import LuxuryCursor from "@/components/LuxuryFX/Cursor";
 import ScrollProgress from "@/components/ScrollProgress";
+import ScrollProgressArc from "@/components/ScrollProgressArc";
 import BackToTop from "@/components/LuxuryFX/BackToTop";
 import PageTransition from "@/components/LuxuryFX/PageTransition";
 import CursorSpotlight from "@/components/LuxuryFX/CursorSpotlight";
@@ -67,6 +68,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <ScrollProgress />
+          <ScrollProgressArc />
           <LuxuryCursor />
           <BackToTop />
           <PageTransition />

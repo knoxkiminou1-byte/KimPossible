@@ -2,6 +2,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import GoldParticles from "@/components/LuxuryFX/GoldParticles";
+import MagneticElement from "@/components/LuxuryFX/MagneticElement";
 
 const ROLE_WORDS = [
   { word: "ATHLETE", from: { x: -340, y: 0, rotate: -8, filter: "blur(18px)" }, delay: 0.0 },
@@ -240,30 +241,34 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.5 }}
             >
-              <motion.a
-                href="/books"
-                className="group relative luxury-button px-12 py-4 bg-white text-black font-semibold uppercase tracking-[0.18em] text-sm overflow-hidden"
-                whileHover={{ scale: 1.04, boxShadow: "0 20px 60px rgba(255,255,255,0.22)" }}
-                whileTap={{ scale: 0.97 }}
-                data-testid="button-read-work"
-              >
-                <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-amber-300 to-amber-500"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: 0 }}
-                  transition={{ duration: 0.35 }}
-                />
-                <span className="relative z-10">Read the Work</span>
-              </motion.a>
-              <motion.a
-                href="/contact"
-                className="luxury-button px-12 py-4 border border-white/50 text-white font-semibold uppercase tracking-[0.18em] text-sm hover:bg-white hover:text-black transition-all duration-400 backdrop-blur-sm"
-                whileHover={{ scale: 1.04, borderColor: "rgba(255,255,255,1)", boxShadow: "0 20px 50px rgba(255,255,255,0.12)" }}
-                whileTap={{ scale: 0.97 }}
-                data-testid="button-work-with-me"
-              >
-                Work With Me
-              </motion.a>
+              <MagneticElement strength={0.3} radius={100}>
+                <motion.a
+                  href="/books"
+                  className="group relative luxury-button px-12 py-4 bg-white text-black font-semibold uppercase tracking-[0.18em] text-sm overflow-hidden"
+                  whileHover={{ scale: 1.04, boxShadow: "0 20px 60px rgba(255,255,255,0.22)" }}
+                  whileTap={{ scale: 0.97 }}
+                  data-testid="button-read-work"
+                >
+                  <motion.span
+                    className="absolute inset-0 bg-gradient-to-r from-amber-300 to-amber-500"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: 0 }}
+                    transition={{ duration: 0.35 }}
+                  />
+                  <span className="relative z-10">Read the Work</span>
+                </motion.a>
+              </MagneticElement>
+              <MagneticElement strength={0.3} radius={100}>
+                <motion.a
+                  href="/contact"
+                  className="luxury-button px-12 py-4 border border-white/50 text-white font-semibold uppercase tracking-[0.18em] text-sm hover:bg-white hover:text-black transition-all duration-400 backdrop-blur-sm"
+                  whileHover={{ scale: 1.04, borderColor: "rgba(255,255,255,1)", boxShadow: "0 20px 50px rgba(255,255,255,0.12)" }}
+                  whileTap={{ scale: 0.97 }}
+                  data-testid="button-work-with-me"
+                >
+                  Work With Me
+                </motion.a>
+              </MagneticElement>
             </motion.div>
           </>
         )}

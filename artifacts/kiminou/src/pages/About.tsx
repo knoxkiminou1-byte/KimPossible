@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ConstellationTimeline from "@/components/ConstellationTimeline";
 
 export default function About() {
   const schema = {
@@ -118,6 +119,7 @@ export default function About() {
         </div>
       </main>
 
+      <ConstellationTimeline />
       <Footer />
     </>
   );

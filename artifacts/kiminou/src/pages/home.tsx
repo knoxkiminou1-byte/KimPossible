@@ -13,6 +13,9 @@ import PoemOfTheDay from "@/components/PoemOfTheDay";
 import StatsBanner from "@/components/StatsBanner";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
+import QuoteTypewriter from "@/components/QuoteTypewriter";
+import WordCloud from "@/components/WordCloud";
+import PoemAssembler from "@/components/PoemAssembler";
 export default function Home() {
 
   const personSchema = {
@@ -65,8 +68,11 @@ export default function Home() {
         <WhoIsKiminou />
         <StatsBanner />
         <PoemOfTheDay />
+        <PoemAssembler />
         <FeaturedBookPromo />
+        <QuoteTypewriter />
         <BookPreview />
+        <WordCloud />
         <PhotoGallery />
         <PressStrip />
         <Testimonials />

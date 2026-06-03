@@ -3,6 +3,8 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "wouter";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
+import MagneticElement from "@/components/LuxuryFX/MagneticElement";
+import VariableFontWave from "@/components/LuxuryFX/VariableFontWave";
 
 const identity = [
   {
@@ -48,6 +50,7 @@ function Card({ item, index }: { item: (typeof identity)[0]; index: number }) {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
+    <MagneticElement strength={0.22} radius={140}>
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 48 }}
@@ -93,6 +96,7 @@ function Card({ item, index }: { item: (typeof identity)[0]; index: number }) {
         </span>
       </Link>
     </motion.div>
+    </MagneticElement>
   );
 }
 
@@ -123,7 +127,17 @@ export default function WhoIsKiminou() {
                 className="font-serif text-4xl md:text-5xl xl:text-6xl font-light leading-tight"
                 data-testid="who-title"
               >
-                Who is<br />
+                <VariableFontWave
+                  as="span"
+                  className="block font-serif font-light"
+                  triggerOnView
+                  triggerOnHover
+                  minWeight={300}
+                  maxWeight={700}
+                >
+                  Who is
+                </VariableFontWave>
+                <br />
                 <GlitchHeading as="span" className="italic text-amber-200/90">Kiminou Knox</GlitchHeading>
               </h2>
             </GoldUnmask>
