@@ -157,7 +157,7 @@ export default function BooksPage() {
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
               <p className="text-base text-white/45 max-w-xl leading-relaxed">
-                Real covers, real links, sample poems from each collection — faith, identity, love, and the Black experience.
+                Real covers, real links, sample poems from each collection: faith, identity, love, and the Black experience.
               </p>
             </motion.div>
           </div>

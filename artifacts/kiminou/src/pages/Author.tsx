@@ -43,13 +43,24 @@ const BOOKS = [
   { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention." },
   { title: "Our Father", desc: "A meditation on fatherhood, faith, and the God who watches boys become men in cities that weren't built for them." },
   { title: "Boys Raised In Silence", desc: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn to speak." },
-  { title: "Children's Storybook", desc: "Written with his younger brother — a story of imagination, family, and the stories we pass down." },
+  { title: "Children's Storybook", desc: "Written with his younger brother, a story of imagination, family, and the stories we pass down." },
 ];
 
-const PULL_QUOTES = [
-  "Truth retains power, presence transforms lives, and Black boys deserve serious literature.",
-  "His pages are filled with faith, mental health, generational trauma, and joy — all rendered with clinical honesty.",
-  "Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings.",
+const PULL_QUOTES: { text: string; author: string; source?: string }[] = [
+  {
+    text: "Every crown weighs heavy on a head that knows the price of being loved for what you own.",
+    author: "Kiminou Knox",
+    source: "The Spirit of Solomon",
+  },
+  {
+    text: "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
+    author: "James Baldwin",
+  },
+  {
+    text: "Wear your skin like the crown it is. Speak your truth like the prophecy it is. Love yourself like the revolution it is.",
+    author: "Kiminou Knox",
+    source: "Poems from a Black Boy",
+  },
 ];
 
 function useActiveChapter() {
@@ -104,7 +115,7 @@ function Reveal({ children, delay = 0, className = "" }: { children: React.React
   );
 }
 
-function PullQuote({ text, delay = 0 }: { text: string; delay?: number }) {
+function PullQuote({ quote, delay = 0 }: { quote: { text: string; author: string; source?: string }; delay?: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
@@ -113,9 +124,14 @@ function PullQuote({ text, delay = 0 }: { text: string; delay?: number }) {
       className="relative py-16 md:py-24 border-y border-amber-400/15 my-16 overflow-hidden">
       <span className="absolute -top-8 left-0 font-serif text-[10rem] leading-none text-amber-400/8 select-none pointer-events-none">"</span>
       <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white/85 leading-relaxed italic max-w-4xl relative z-10">
-        {text}
+        {quote.text}
       </p>
-      <div className="w-16 h-px bg-amber-400/50 mt-8" />
+      <div className="mt-8 flex items-center gap-4">
+        <div className="w-8 h-px bg-amber-400/50" />
+        <p className="text-xs uppercase tracking-[0.25em] text-amber-400/70">
+          {quote.author}{quote.source && <span className="text-white/30 normal-case not-italic tracking-normal font-sans ml-2">· {quote.source}</span>}
+        </p>
+      </div>
     </motion.div>
   );
 }
@@ -282,7 +298,7 @@ export default function Author() {
         <main className="max-w-5xl mx-auto px-6 lg:px-10">
 
           {/* ─── PULL QUOTE 1 ───────────────────────────────── */}
-          <PullQuote text={PULL_QUOTES[0]} />
+          <PullQuote quote={PULL_QUOTES[0]} />
 
           {/* ─── LINEAGE ────────────────────────────────────── */}
           <section id="lineage" className="py-20 scroll-mt-16">
@@ -328,7 +344,7 @@ export default function Author() {
           </section>
 
           {/* ─── PULL QUOTE 2 ───────────────────────────────── */}
-          <PullQuote text={PULL_QUOTES[1]} delay={0.1} />
+          <PullQuote quote={PULL_QUOTES[1]} delay={0.1} />
 
           {/* ─── LITERARY WORK ──────────────────────────────── */}
           <section id="literary" className="py-20 scroll-mt-16">
@@ -341,7 +357,7 @@ export default function Author() {
               </Reveal>
               <Reveal delay={0.15}>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, and longing — all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume.
+                  His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, and longing, all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume.
                 </p>
               </Reveal>
             </div>
@@ -358,7 +374,7 @@ export default function Author() {
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   { title: "Emotional Precision", desc: "Every line accounts for its weight. Nothing performed, everything lived." },
-                  { title: "Spiritual Seriousness", desc: "Faith not as branding — as a lived framework for wrestling with doubt and grace." },
+                  { title: "Spiritual Seriousness", desc: "Faith as a lived framework for wrestling with doubt and grace." },
                   { title: "Formal Freedom", desc: "Each project chooses its own container: tight poems, interior monologue, prophetic reflection." },
                 ].map((item, i) => (
                   <Reveal key={i} delay={i * 0.1}>
@@ -374,7 +390,7 @@ export default function Author() {
           </section>
 
           {/* ─── PULL QUOTE 3 ───────────────────────────────── */}
-          <PullQuote text={PULL_QUOTES[2]} delay={0.1} />
+          <PullQuote quote={PULL_QUOTES[2]} delay={0.1} />
 
           {/* ─── FAITH & MENTAL HEALTH ──────────────────────── */}
           <section id="faith" className="py-20 scroll-mt-16">
@@ -389,12 +405,12 @@ export default function Author() {
                 {
                   icon: "◈",
                   title: "Masculinity",
-                  desc: "Masculinity, in his pages, is something to be interrogated and rebuilt — not merely inherited. He writes about boys taught to be durable before they are allowed to be gentle, and about men who must learn how to name what hurts.",
+                  desc: "Masculinity, in his pages, is something to be interrogated and rebuilt, not merely inherited. He writes about boys taught to be durable before they are allowed to be gentle, and about men who must learn how to name what hurts.",
                 },
                 {
                   icon: "◇",
                   title: "Mental Health",
-                  desc: "Mental health is not a side topic in his work; it is central. Knox makes space for therapy, breakdown, loneliness, and recovery — insisting that serious literature for Black boys must also be serious about their psychological well-being.",
+                  desc: "Mental health is not a side topic in his work; it is central. Knox makes space for therapy, breakdown, loneliness, and recovery, insisting that serious literature for Black boys must also be serious about their psychological well-being.",
                 },
               ].map((item, i) => (
                 <Reveal key={i} delay={i * 0.15}>
@@ -422,7 +438,7 @@ export default function Author() {
                     <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3">Podcast</p>
                     <h3 className="font-serif text-3xl text-white mb-4">KimYaps</h3>
                     <p className="text-white/55 leading-relaxed max-w-2xl">
-                      Knox extends his literary sensibility into audio — a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
+                      Knox extends his literary sensibility into audio, a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
                     </p>
                     <a href="https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348"
                       target="_blank" rel="noopener noreferrer"
@@ -445,7 +461,7 @@ export default function Author() {
                   A multi-sport athlete, Knox brings long-view intention and disciplined rigor to his physical training that mirrors his commitment to the page. For him, athletics is not simply competition; it is a practice of stewardship over body, mind, and focus.
                 </p>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  The same internal standards that govern his literary craft — consistency, resilience, and a refusal to cut corners — shape how he moves through weight rooms, fields, and courts.
+                  The same internal standards that govern his literary craft: consistency, resilience, and a refusal to cut corners, shape how he moves through weight rooms, fields, and courts.
                 </p>
                 <Link href="/basketball">
                   <motion.span className="inline-flex items-center gap-2 mt-8 text-xs uppercase tracking-[0.3em] text-amber-300 hover:text-amber-200 transition-colors cursor-pointer group"
@@ -485,7 +501,7 @@ export default function Author() {
                 {
                   org: "Artists and Athletes For Change",
                   role: "Director (AAFC)",
-                  desc: "Uniting creatives and athletes to make meaningful community impact — refusing to treat young creators as content or spectacle.",
+                  desc: "Uniting creatives and athletes to make meaningful community impact, refusing to treat young creators as content or spectacle.",
                 },
               ].map((item, i) => (
                 <Reveal key={i} delay={i * 0.15}>
@@ -502,7 +518,7 @@ export default function Author() {
             <Reveal delay={0.2}>
               <div className="border-l-2 border-amber-400/30 pl-8 py-2">
                 <p className="font-serif text-xl text-white/75 leading-relaxed italic">
-                  "Under his leadership, these initiatives refuse to treat young creators and athletes as content or spectacle. Instead, they invest in them as whole people — offering pathways, mentorship, and accountability that translate creativity and discipline into something durable and real."
+                  "Under his leadership, these initiatives refuse to treat young creators and athletes as content or spectacle. Instead, they invest in them as whole people, offering pathways, mentorship, and accountability that translate creativity and discipline into something durable and real."
                 </p>
               </div>
             </Reveal>
@@ -560,7 +576,7 @@ export default function Author() {
             <div className="grid md:grid-cols-2 gap-16">
               <Reveal>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  Every arena Knox enters — literature, media, leadership, athletics — receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass.
+                  Every arena Knox enters: literature, media, leadership, athletics. Each receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
@@ -569,7 +585,7 @@ export default function Author() {
                     "Truth retains power.",
                     "Presence transforms lives.",
                     "Black boys deserve serious literature and serious investment.",
-                    "Legacy is not postponed — it is written early, built deliberately, designed to last.",
+                    "Legacy is not postponed. It is written early, built deliberately, designed to last.",
                   ].map((line, i) => (
                     <div key={i} className="flex items-start gap-4">
                       <div className="w-1.5 h-1.5 rounded-full bg-amber-400/50 mt-2 flex-shrink-0" />

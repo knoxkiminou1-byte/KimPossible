@@ -254,7 +254,7 @@ export default function ContactForm({
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder={compact ? "Tell me about the event — audience, date, and what you want people to walk away with." : "Tell us more about your inquiry..."}
+                    placeholder={compact ? "Tell me about the event: audience, date, and what you want people to walk away with." : "Tell us more about your inquiry..."}
                     className={compact ? "min-h-[110px]" : "min-h-[150px]"}
                     {...field}
                     data-testid="textarea-message"

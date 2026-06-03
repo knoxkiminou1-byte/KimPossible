@@ -13,8 +13,8 @@ const measurables = [
 
 const highlights = [
   { year: "2025", title: "NCAA Eligibility", desc: "Registered with NCAA eligibility for collegiate athletics" },
-  { year: "2024", title: "Varsity Captain — Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
-  { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop — one of the premier AAU evaluation platforms" },
+  { year: "2024", title: "Varsity Captain at Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
+  { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop, one of the premier AAU evaluation platforms" },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance" },
   { year: "2023", title: "Pine Valley MVP", desc: "Recognized as Most Valuable Player at Pine Valley tournament" },
   { year: "2022", title: "Multi-Sport Athlete", desc: "Competing in basketball and football, demonstrating elite versatility and conditioning" },

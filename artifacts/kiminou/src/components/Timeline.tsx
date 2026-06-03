@@ -203,7 +203,7 @@ export default function Timeline() {
             The Journey
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="timeline-subtitle">
-            From Bay Area kid to multi-faceted renaissance man — a timeline of growth, achievement, and artistic expression that defines a generation
+            From Bay Area kid to multi-faceted renaissance man, a timeline of growth, achievement, and artistic expression that defines a generation
           </p>
         </div>
 
@@ -373,7 +373,7 @@ export default function Timeline() {
                   The Story Continues...
                 </h3>
                 <p className="text-lg text-muted-foreground">
-                  Class of 2025 & Beyond — The Next Chapter Awaits
+                  Class of 2025 & Beyond. The Next Chapter Awaits
                 </p>
               </div>
             </div>

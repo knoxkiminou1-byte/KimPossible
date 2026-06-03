@@ -128,7 +128,7 @@ export default function WhoIsKiminou() {
               className="text-base text-white/55 leading-relaxed max-w-sm"
               data-testid="who-description"
             >
-              A writer and athlete from East Palo Alto, California — building a legacy through books, sport, and youth leadership.
+              A writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
             </p>
           </motion.div>
 
