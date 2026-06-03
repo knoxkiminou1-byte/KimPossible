@@ -3,6 +3,49 @@ import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import GoldParticles from "@/components/LuxuryFX/GoldParticles";
 
+const ROLE_WORDS = [
+  { word: "ATHLETE", from: { x: -340, y: 0, rotate: -8, filter: "blur(18px)" }, delay: 0.0 },
+  { word: "AUTHOR", from: { x: 0, y: -180, rotate: 6, filter: "blur(18px)" }, delay: 0.18 },
+  { word: "ENTREPRENEUR", from: { x: 340, y: 0, rotate: -5, filter: "blur(18px)" }, delay: 0.34 },
+];
+
+function KineticRoles() {
+  return (
+    <div className="flex items-center justify-center gap-3 md:gap-5 flex-wrap">
+      {ROLE_WORDS.map(({ word, from, delay }, idx) => (
+        <div key={word} className="flex items-center gap-3 md:gap-5">
+          <motion.span
+            className="text-[10px] md:text-xs uppercase tracking-[0.38em] text-amber-200/85 font-semibold will-change-transform"
+            initial={{ ...from, opacity: 0, scale: 1.35 }}
+            animate={{ x: 0, y: 0, rotate: 0, filter: "blur(0px)", opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 320,
+              damping: 13,
+              delay: 0.3 + delay,
+              opacity: { duration: 0.18, delay: 0.3 + delay },
+              filter: { duration: 0.28, delay: 0.3 + delay },
+              scale: { type: "spring", stiffness: 280, damping: 11, delay: 0.3 + delay },
+            }}
+          >
+            {word}
+          </motion.span>
+          {idx < ROLE_WORDS.length - 1 && (
+            <motion.span
+              className="text-amber-400/40 text-[10px] select-none"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.85 + delay, duration: 0.4, ease: "backOut" }}
+            >
+              ·
+            </motion.span>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const letterVariants: Variants = {
   hidden: { opacity: 0, y: 90, rotateX: -90, scale: 0.85 },
   visible: (i: number) => ({
@@ -120,28 +163,12 @@ export default function Hero() {
         {isVisible && (
           <>
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0.15 }}
               className="mb-10"
             >
-              <div className="inline-flex items-center gap-5">
-                <motion.div
-                  className="h-px bg-gradient-to-r from-transparent to-amber-400/70"
-                  initial={{ width: 0 }}
-                  animate={{ width: 56 }}
-                  transition={{ duration: 1.2, delay: 0.4 }}
-                />
-                <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-amber-200/80 font-light">
-                  Athlete · Author · Entrepreneur
-                </span>
-                <motion.div
-                  className="h-px bg-gradient-to-l from-transparent to-amber-400/70"
-                  initial={{ width: 0 }}
-                  animate={{ width: 56 }}
-                  transition={{ duration: 1.2, delay: 0.4 }}
-                />
-              </div>
+              <KineticRoles />
             </motion.div>
 
             <motion.h1

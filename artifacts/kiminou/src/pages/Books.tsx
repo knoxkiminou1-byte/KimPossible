@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useInView, AnimatePresence, useSpring } from "framer-motion";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
+import ScrambleText from "@/components/LuxuryFX/ScrambleText";
 import { ExternalLink, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
@@ -9,6 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
 import FlipbookModal from "@/components/FlipbookModal";
+import OpenBookOverlay from "@/components/OpenBookOverlay";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -18,7 +20,7 @@ type Book = {
   buyLinks: { amazon?: string | null; googleBooks?: string | null; bookshop?: string | null; bn?: string | null };
 };
 
-function BookCard({ book, index, onSample, onFlipbook }: { book: Book; index: number; onSample: (b: Book) => void; onFlipbook: (b: Book) => void }) {
+function BookCard({ book, index, onSample, onFlipbook, onOpenBook }: { book: Book; index: number; onSample: (b: Book) => void; onFlipbook: (b: Book) => void; onOpenBook: (b: Book) => void }) {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const springX = useSpring(0, { stiffness: 280, damping: 28 });
@@ -44,8 +46,8 @@ function BookCard({ book, index, onSample, onFlipbook }: { book: Book; index: nu
       className="group flex flex-col"
       data-testid={`book-card-${book.id}`}
     >
-      {/* 3D Book Cover — click to open flipbook */}
-      <div className="relative mb-5 cursor-pointer" style={{ perspective: "1000px" }} onClick={() => onFlipbook(book)}>
+      {/* 3D Book Cover — click to open first-page overlay */}
+      <div className="relative mb-5 cursor-pointer" style={{ perspective: "1000px" }} onClick={() => onOpenBook(book)}>
         <motion.div
           className="relative aspect-[3/4] overflow-hidden bg-black"
           initial={{ rotateY: -8 }}
@@ -136,6 +138,7 @@ export default function BooksPage() {
   const [books, setBooks] = useState<Book[]>([]);
   const [open, setOpen] = useState<{ id: string; poems: Poem[]; title: string } | null>(null);
   const [flipbook, setFlipbook] = useState<Book | null>(null);
+  const [openBook, setOpenBook] = useState<Book | null>(null);
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
 
@@ -167,7 +170,7 @@ export default function BooksPage() {
               <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">7 Published Works</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
                 <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
-                  Published<br />
+                  <ScrambleText text="Published" className="block" delay={0.3} />
                   <GlitchHeading as="span" className="italic text-amber-200/90">Works</GlitchHeading>
                 </h1>
               </GoldUnmask>
@@ -199,6 +202,7 @@ export default function BooksPage() {
                     index={i}
                     onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems, title: book.title })}
                     onFlipbook={(book) => setFlipbook(book)}
+                    onOpenBook={(book) => setOpenBook(book)}
                   />
                 ))}
               </div>
@@ -214,6 +218,12 @@ export default function BooksPage() {
       <AnimatePresence>
         {flipbook && (
           <FlipbookModal book={flipbook} onClose={() => setFlipbook(null)} />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {openBook && (
+          <OpenBookOverlay book={openBook} onClose={() => setOpenBook(null)} />
         )}
       </AnimatePresence>
 
