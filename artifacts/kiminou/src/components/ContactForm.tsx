@@ -31,6 +31,7 @@ interface ContactFormProps {
   showSpeakingFields?: boolean;
   successMessage?: string;
   className?: string;
+  compact?: boolean;
 }
 
 export default function ContactForm({
@@ -41,6 +42,7 @@ export default function ContactForm({
   showSpeakingFields = false,
   successMessage = "Thank you for your message. We will be in touch soon.",
   className = "",
+  compact = false,
 }: ContactFormProps) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -151,34 +153,36 @@ export default function ContactForm({
             )}
           />
 
-          {/* Inquiry Type */}
-          <FormField
-            control={form.control}
-            name="inquiryType"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Inquiry Type</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger data-testid="select-inquiry-type">
-                      <SelectValue placeholder="Select inquiry type" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="speaking">Speaking / Appearance</SelectItem>
-                    <SelectItem value="press">Press / Media</SelectItem>
-                    <SelectItem value="book">Book / Author</SelectItem>
-                    <SelectItem value="basketball">Basketball / Athlete</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {/* Inquiry Type — hidden in compact mode */}
+          {!compact && (
+            <FormField
+              control={form.control}
+              name="inquiryType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Inquiry Type</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger data-testid="select-inquiry-type">
+                        <SelectValue placeholder="Select inquiry type" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="speaking">Speaking / Appearance</SelectItem>
+                      <SelectItem value="press">Press / Media</SelectItem>
+                      <SelectItem value="book">Book / Author</SelectItem>
+                      <SelectItem value="basketball">Basketball / Athlete</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
 
-          {/* Organization (conditional) */}
-          {shouldShowOrganization && (
+          {/* Organization, Date Window, Talk Theme, Subject — hidden in compact mode */}
+          {!compact && shouldShowOrganization && (
             <FormField
               control={form.control}
               name="organization"
@@ -194,8 +198,7 @@ export default function ContactForm({
             />
           )}
 
-          {/* Speaking-specific fields */}
-          {shouldShowSpeakingFields && (
+          {!compact && shouldShowSpeakingFields && (
             <>
               <FormField
                 control={form.control}
@@ -210,7 +213,6 @@ export default function ContactForm({
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
                 name="talkTheme"
@@ -227,20 +229,21 @@ export default function ContactForm({
             </>
           )}
 
-          {/* Subject */}
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Subject</FormLabel>
-                <FormControl>
-                  <Input placeholder="Brief subject line" {...field} data-testid="input-subject" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {!compact && (
+            <FormField
+              control={form.control}
+              name="subject"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Subject</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Brief subject line" {...field} data-testid="input-subject" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
 
           {/* Message */}
           <FormField
@@ -251,8 +254,8 @@ export default function ContactForm({
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell us more about your inquiry..."
-                    className="min-h-[150px]"
+                    placeholder={compact ? "Tell me about the event — audience, date, and what you want people to walk away with." : "Tell us more about your inquiry..."}
+                    className={compact ? "min-h-[110px]" : "min-h-[150px]"}
                     {...field}
                     data-testid="textarea-message"
                   />

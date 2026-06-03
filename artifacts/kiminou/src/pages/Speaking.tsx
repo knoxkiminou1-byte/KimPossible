@@ -171,7 +171,7 @@ export default function Speaking() {
                   title=""
                   description=""
                   defaultInquiryType="speaking"
-                  showSpeakingFields={true}
+                  compact={true}
                   successMessage="Thank you. I'll be in touch soon to discuss your event."
                 />
               </div>
