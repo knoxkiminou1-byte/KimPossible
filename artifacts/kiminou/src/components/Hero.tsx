@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef, useCallback } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import GoldParticles from "@/components/LuxuryFX/GoldParticles";
 
-const letterVariants = {
+const letterVariants: Variants = {
   hidden: { opacity: 0, y: 60, rotateX: -60 },
   visible: (i: number) => ({
     opacity: 1,
@@ -12,7 +12,7 @@ const letterVariants = {
     transition: {
       duration: 0.9,
       delay: 0.5 + i * 0.055,
-      ease: [0.215, 0.61, 0.355, 1],
+      ease: [0.215, 0.61, 0.355, 1] as const,
     },
   }),
 };
