@@ -1,153 +1,286 @@
 import { Helmet } from "react-helmet";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useRef, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+
+const AUDIENCES = ["All", "Schools", "Teams", "Youth", "Community", "Faith"];
 
 const talks = [
   {
     num: "01",
     title: "Discipline and Faith in Daily Practice",
-    desc: "How to build sustainable creative habits that honor both your craft and your wellbeing. Drawing from athletics and writing, this talk explores the intersection of discipline, structure, and spiritual grounding to create work that lasts.",
-    tags: ["Craft", "Faith", "Athletes"],
+    full: "A practical talk on building habits that can hold up under real pressure. It connects athletics, writing, structure, and spiritual grounding without turning discipline into performance.",
+    desc: "How to build sustainable creative habits that honor both your craft and your wellbeing. Draws from athletics, writing, and spiritual grounding.",
+    tags: ["Schools", "Teams", "Faith"],
+    audiences: ["Schools", "Teams", "Faith"],
+    quote: "Show up. Do the work. Leave every space better than you found it.",
   },
   {
     num: "02",
     title: "Black Boy Voice and the Cost of Silence",
-    desc: "A conversation about finding your authentic voice when the world expects you to stay quiet. This talk addresses identity, authenticity, and the courage required to tell your truth — especially when that truth challenges dominant narratives.",
-    tags: ["Identity", "Youth", "Schools"],
+    full: "A conversation about identity, pressure, tenderness, and the language many young men are never given. The focus is honesty, not slogans.",
+    desc: "Finding your authentic voice when the world expects quiet. Identity, authenticity, and the courage to tell truth — especially when it challenges dominant narratives.",
+    tags: ["Youth", "Schools", "Community"],
+    audiences: ["Youth", "Schools", "Community"],
+    quote: "The most dangerous thing you can do is stay silent when you have something real to say.",
   },
   {
     num: "03",
     title: "Building Creative Work That Lasts",
-    desc: "Practical strategies for young creators to develop their craft, build an audience, and create meaningful work that stands the test of time. Covers creative process, publishing, and maintaining integrity in a fast-paced digital world.",
-    tags: ["Entrepreneurship", "Creative", "Young People"],
+    full: "A grounded session for young creators on developing a practice, finishing projects, sharing work, and keeping integrity in a fast-moving digital world.",
+    desc: "Practical strategies for developing craft, building an audience, and creating meaningful work. Covers creative process, publishing, and digital integrity.",
+    tags: ["Youth", "Community", "Schools"],
+    audiences: ["Youth", "Community", "Schools"],
+    quote: "Prepare seriously, stay close to the people I serve, and finish what I start.",
   },
 ];
 
-function RevealSection({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
+    <motion.div ref={ref} initial={{ opacity: 0, y: 28 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={className}
-    >
+      transition={{ duration: 0.75, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className={className}>
       {children}
     </motion.div>
   );
 }
 
 export default function Speaking() {
-  const heroRef = useRef(null);
-  const heroInView = useInView(heroRef, { once: true });
+  const [audience, setAudience] = useState("All");
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 700], [0, 150]);
+  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
+
+  const filtered = audience === "All" ? talks : talks.filter(t => t.audiences.includes(audience));
 
   return (
     <>
       <Helmet>
         <title>Speaking - Kiminou Knox</title>
-        <meta name="description" content="Book Kiminou Knox for speaking engagements on craft, discipline, voice, and the cost of silence." />
+        <meta name="description" content="Kiminou Knox speaks with schools, teams, and community groups on writing, discipline, faith, grief, and how young people can find a voice without performing one." />
         <link rel="canonical" href="https://kiminouknox.com/speaking" />
       </Helmet>
       <Header />
 
       <main className="min-h-screen bg-black text-white">
-        {/* Hero */}
-        <section className="relative pt-40 pb-24 overflow-hidden" ref={heroRef}>
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/3 rounded-full blur-[140px]" />
+
+        {/* ─── CINEMATIC HERO ─── */}
+        <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">
+          <motion.div
+            className="absolute inset-0 bg-cover bg-center bg-[center_20%]"
+            style={{ backgroundImage: "url('/kiminou-splash-art.png')", y: bgY, scale: 1.08 }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
+          {/* Giant background word */}
+          <div className="absolute inset-0 flex items-center justify-end pointer-events-none overflow-hidden">
+            <span className="font-serif text-[22vw] font-light text-white/[0.03] leading-none select-none pr-8">
+              SPEAKING
+            </span>
           </div>
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
-            >
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Speaking</p>
-              <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6" data-testid="speaking-heading">
-                Voices that<br />
-                <span className="italic text-amber-200/90">Move People</span>
-              </h1>
-              <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-lg text-white/50 max-w-xl leading-relaxed">
-                I speak on craft, discipline, voice, and the cost of silence. I work with teams, schools, and community groups to turn ideas into action.
-              </p>
-            </motion.div>
-          </div>
+
+          <motion.div
+            className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-24 md:pb-36 w-full"
+            style={{ opacity: heroOpacity }}>
+            <motion.p className="text-xs uppercase tracking-[0.55em] text-amber-400/70 mb-6"
+              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}>
+              Speaking
+            </motion.p>
+            <motion.h1
+              className="font-serif font-light leading-none mb-8"
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}>
+              <span className="block text-6xl md:text-8xl lg:text-[9rem] text-white"
+                style={{ textShadow: "0 4px 40px rgba(0,0,0,0.9)" }}>
+                Voices that
+              </span>
+              <span className="block text-6xl md:text-8xl lg:text-[9rem] text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 italic">
+                Move People
+              </span>
+            </motion.h1>
+            <motion.div className="w-20 h-px bg-amber-400/60 mb-8"
+              initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
+              transition={{ duration: 1.2, delay: 0.9 }} style={{ transformOrigin: "left" }} />
+            <motion.p
+              className="font-serif text-xl md:text-2xl text-white/65 font-light max-w-2xl leading-relaxed"
+              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 1 }}>
+              I speak with schools, teams, and community groups on writing, discipline, faith, grief, and how young people can find a voice without performing one.
+            </motion.p>
+          </motion.div>
         </section>
 
-        {/* Pull Quote */}
-        <section className="py-16 border-y border-white/6">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <RevealSection>
-              <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white/80 italic max-w-3xl leading-snug">
+        {/* ─── PULL QUOTE ─── */}
+        <section className="py-20 md:py-28 border-y border-white/6 relative overflow-hidden">
+          <span className="absolute -top-6 left-0 font-serif text-[12rem] leading-none text-amber-400/[0.04] select-none pointer-events-none">"</span>
+          <div className="max-w-5xl mx-auto px-6 lg:px-10 relative z-10">
+            <Reveal>
+              <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white/85 italic leading-relaxed">
                 "The most dangerous thing you can do is stay silent when you have something real to say."
               </blockquote>
-              <p className="text-xs uppercase tracking-[0.3em] text-amber-400/50 mt-6">— Kiminou Knox</p>
-            </RevealSection>
+              <div className="flex items-center gap-4 mt-8">
+                <div className="w-8 h-px bg-amber-400/40" />
+                <p className="text-xs uppercase tracking-[0.35em] text-amber-400/50">Kiminou Knox</p>
+              </div>
+            </Reveal>
           </div>
         </section>
 
-        {/* Talks */}
-        <section className="py-24">
+        {/* ─── AUDIENCE FILTER ─── */}
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <RevealSection className="mb-16">
-              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Talk Topics</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">What I Speak On</h2>
-            </RevealSection>
+            <Reveal className="mb-12">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Talk Topics</p>
+              <div className="flex flex-col md:flex-row md:items-end gap-6">
+                <h2 className="font-serif text-4xl md:text-5xl font-light text-white">What I Speak On</h2>
+                <div className="flex flex-wrap gap-2 md:ml-auto">
+                  {AUDIENCES.map(a => (
+                    <button key={a} onClick={() => setAudience(a)}
+                      className={`px-4 py-2 text-xs uppercase tracking-[0.18em] border transition-all duration-300 ${
+                        audience === a
+                          ? "border-amber-400/60 bg-amber-400/10 text-amber-300"
+                          : "border-white/10 text-white/35 hover:border-white/25 hover:text-white/60"
+                      }`}>
+                      {a}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="w-12 h-px bg-amber-400/40 mt-6" />
+            </Reveal>
+
             <div className="space-y-0">
-              {talks.map((t, i) => (
-                <RevealSection key={t.num} delay={i * 0.1}>
-                  <div className="group border-t border-white/8 py-10 grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 hover:border-amber-400/20 transition-colors duration-400">
-                    <span className="font-serif text-3xl text-white/8 font-light group-hover:text-amber-400/15 transition-colors duration-400 hidden md:block">{t.num}</span>
-                    <div>
-                      <h3 className="font-serif text-2xl md:text-3xl font-light text-white mb-4 group-hover:text-amber-100 transition-colors duration-300">
-                        {t.title}
-                      </h3>
-                      <p className="text-base text-white/50 leading-relaxed mb-5 max-w-2xl">{t.desc}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {t.tags.map(tag => (
-                          <span key={tag} className="px-3 py-1 border border-white/10 text-xs uppercase tracking-[0.15em] text-white/35 rounded-full">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+              {filtered.map((t, i) => (
+                <TalkCard key={t.num} talk={t} index={i} />
+              ))}
+              {filtered.length === 0 && (
+                <div className="py-20 text-center">
+                  <p className="font-serif text-xl text-white/30">No talks match this audience type.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── WHO I SPEAK TO ─── */}
+        <section className="py-20 border-y border-white/6">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="mb-14">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Audiences</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Who I Work With</h2>
+              <div className="w-12 h-px bg-amber-400/40 mt-6" />
+            </Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/6">
+              {[
+                { label: "Schools", desc: "K–12 and university classrooms, assemblies, and leadership programs" },
+                { label: "Teams", desc: "Athletic programs looking to develop mental discipline and voice alongside physical skill" },
+                { label: "Youth Orgs", desc: "Community groups, youth summits, and mission-driven nonprofits investing in young people" },
+                { label: "Faith Spaces", desc: "Churches and spiritual communities navigating identity, discipline, and the creative life" },
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 0.1}>
+                  <div className="bg-black p-8 hover:bg-white/[0.03] transition-colors duration-400 group h-full">
+                    <div className="w-6 h-px bg-amber-400/30 mb-5 group-hover:w-10 transition-all duration-400" />
+                    <h3 className="font-serif text-xl text-white mb-3">{item.label}</h3>
+                    <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
                   </div>
-                </RevealSection>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Booking Form */}
-        <section className="py-24 border-t border-white/6">
+        {/* ─── BOOKING FORM ─── */}
+        <section className="py-24">
           <div className="max-w-3xl mx-auto px-6 lg:px-10">
-            <RevealSection className="mb-12">
-              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Book Now</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-4">Request a Speaking Engagement</h2>
+            <Reveal className="mb-12">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Book Now</p>
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-4">
+                Request an<br />
+                <span className="italic text-amber-200/90">Engagement</span>
+              </h2>
+              <div className="w-12 h-px bg-amber-400/40 mt-6 mb-6" />
               <p className="text-white/45 leading-relaxed">
-                Tell us about your event, audience, and what you hope to achieve. I'll get back to you as soon as possible.
+                Share the event, audience, and what you want the room to leave with. I'll get back to you personally.
               </p>
-            </RevealSection>
-            <RevealSection delay={0.1} className="border border-white/8 bg-white/[0.025] p-8 md:p-10">
-              <ContactForm
-                title=""
-                description=""
-                defaultInquiryType="speaking"
-                showSpeakingFields={true}
-                successMessage="Thank you for your interest. We will be in touch soon to discuss your speaking engagement."
-              />
-            </RevealSection>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="border border-white/8 bg-white/[0.02] p-8 md:p-12">
+                <ContactForm
+                  title=""
+                  description=""
+                  defaultInquiryType="speaking"
+                  showSpeakingFields={true}
+                  successMessage="Thank you. I'll be in touch soon to discuss your event."
+                />
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>
 
       <Footer />
     </>
+  );
+}
+
+function TalkCard({ talk, index }: { talk: typeof talks[0]; index: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="group border-t border-white/8 hover:border-amber-400/20 transition-colors duration-400">
+      <button
+        className="w-full text-left py-10 grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 items-start"
+        onClick={() => setExpanded(e => !e)}>
+        <span className="font-serif text-4xl text-white/6 font-light group-hover:text-amber-400/12 transition-colors duration-400 hidden md:block">
+          {talk.num}
+        </span>
+        <div>
+          <h3 className="font-serif text-2xl md:text-3xl font-light text-white mb-3 group-hover:text-amber-100 transition-colors duration-300">
+            {talk.title}
+          </h3>
+          <p className="text-white/45 leading-relaxed max-w-2xl">{talk.desc}</p>
+          <motion.div
+            initial={false}
+            animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }}
+            transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="overflow-hidden">
+            <div className="pt-6 space-y-4">
+              <p className="text-white/60 leading-relaxed">{talk.full}</p>
+              <div className="border-l-2 border-amber-400/30 pl-4">
+                <p className="font-serif text-lg italic text-amber-300/70">"{talk.quote}"</p>
+              </div>
+            </div>
+          </motion.div>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {talk.tags.map(tag => (
+              <span key={tag} className="px-3 py-1 border border-white/8 text-xs uppercase tracking-[0.15em] text-white/30 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="flex-shrink-0 hidden md:flex items-center justify-center w-10 h-10 border border-white/10 group-hover:border-amber-400/30 transition-colors duration-300 mt-1">
+          <motion.span className="text-amber-400/50 text-lg leading-none"
+            animate={{ rotate: expanded ? 45 : 0 }} transition={{ duration: 0.3 }}>
+            +
+          </motion.span>
+        </div>
+      </button>
+    </motion.div>
   );
 }
