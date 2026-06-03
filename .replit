@@ -26,3 +26,8 @@ externalPort = 80
 [[ports]]
 localPort = 25499
 externalPort = 3000
+
+[userenv]
+
+[userenv.shared]
+ADMIN_SECRET = "kiminou-admin-2025"

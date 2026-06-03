@@ -1,8 +1,20 @@
-import { Router } from "express";
+import { Router, Request, Response, NextFunction } from "express";
 import { z } from "zod";
 import { storage } from "../storage";
 
 const router = Router();
+
+function requireAdminKey(req: Request, res: Response, next: NextFunction) {
+  const secret = process.env.ADMIN_SECRET;
+  if (!secret) {
+    return res.status(503).json({ error: "Admin secret not configured" });
+  }
+  const provided = req.headers["x-admin-key"];
+  if (!provided || provided !== secret) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  next();
+}
 
 const insertBlogCategorySchema = z.object({
   name: z.string().min(1),
@@ -33,7 +45,7 @@ router.get("/blog/categories", async (req, res) => {
   }
 });
 
-router.post("/blog/categories", async (req, res) => {
+router.post("/blog/categories", requireAdminKey, async (req, res) => {
   try {
     const data = insertBlogCategorySchema.parse(req.body);
     const category = await storage.createCategory(data);
@@ -46,7 +58,7 @@ router.post("/blog/categories", async (req, res) => {
   }
 });
 
-router.put("/blog/categories/:id", async (req, res) => {
+router.put("/blog/categories/:id", requireAdminKey, async (req, res) => {
   try {
     const data = insertBlogCategorySchema.partial().parse(req.body);
     const category = await storage.updateCategory(req.params.id, data);
@@ -60,7 +72,7 @@ router.put("/blog/categories/:id", async (req, res) => {
   }
 });
 
-router.delete("/blog/categories/:id", async (req, res) => {
+router.delete("/blog/categories/:id", requireAdminKey, async (req, res) => {
   try {
     const deleted = await storage.deleteCategory(req.params.id);
     if (!deleted) return res.status(404).json({ error: "Category not found" });
@@ -101,7 +113,7 @@ router.get("/blog/posts/:identifier", async (req, res) => {
   }
 });
 
-router.post("/blog/posts", async (req, res) => {
+router.post("/blog/posts", requireAdminKey, async (req, res) => {
   try {
     const data = insertBlogPostSchema.parse(req.body);
     const post = await storage.createPost(data);
@@ -114,7 +126,7 @@ router.post("/blog/posts", async (req, res) => {
   }
 });
 
-router.put("/blog/posts/:id", async (req, res) => {
+router.put("/blog/posts/:id", requireAdminKey, async (req, res) => {
   try {
     const data = insertBlogPostSchema.partial().parse(req.body);
     const post = await storage.updatePost(req.params.id, data);
@@ -128,7 +140,7 @@ router.put("/blog/posts/:id", async (req, res) => {
   }
 });
 
-router.delete("/blog/posts/:id", async (req, res) => {
+router.delete("/blog/posts/:id", requireAdminKey, async (req, res) => {
   try {
     const deleted = await storage.deletePost(req.params.id);
     if (!deleted) return res.status(404).json({ error: "Post not found" });
@@ -138,7 +150,7 @@ router.delete("/blog/posts/:id", async (req, res) => {
   }
 });
 
-router.patch("/blog/posts/:id/publish", async (req, res) => {
+router.patch("/blog/posts/:id/publish", requireAdminKey, async (req, res) => {
   try {
     const post = await storage.publishPost(req.params.id);
     if (!post) return res.status(404).json({ error: "Post not found" });
@@ -148,7 +160,7 @@ router.patch("/blog/posts/:id/publish", async (req, res) => {
   }
 });
 
-router.patch("/blog/posts/:id/unpublish", async (req, res) => {
+router.patch("/blog/posts/:id/unpublish", requireAdminKey, async (req, res) => {
   try {
     const post = await storage.unpublishPost(req.params.id);
     if (!post) return res.status(404).json({ error: "Post not found" });

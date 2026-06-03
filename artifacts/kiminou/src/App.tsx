@@ -13,6 +13,7 @@ import Portfolio from "@/pages/Portfolio";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import BlogAdmin from "@/pages/BlogAdmin";
+import AdminGate from "@/components/AdminGate";
 import Books from "@/pages/Books";
 import BookDetail from "@/pages/BookDetail";
 import Press from "@/pages/Press";
@@ -49,7 +50,9 @@ function Router() {
       <Route path="/author" component={Author} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/admin/blog" component={BlogAdmin} />
+      <Route path="/admin/blog">
+        <AdminGate><BlogAdmin /></AdminGate>
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );
