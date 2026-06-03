@@ -11,8 +11,7 @@ const talks = [
   {
     num: "01",
     title: "Discipline and Faith in Daily Practice",
-    full: "A practical talk on building habits that can hold up under real pressure. It connects athletics, writing, structure, and spiritual grounding without turning discipline into performance.",
-    desc: "How to build sustainable creative habits that honor both your craft and your wellbeing. Draws from athletics, writing, and spiritual grounding.",
+    full: "A practical talk on building habits that hold up under real pressure. It connects athletics, writing, structure, and spiritual grounding without turning discipline into performance.",
     tags: ["Schools", "Teams", "Faith"],
     audiences: ["Schools", "Teams", "Faith"],
     quote: "Show up. Do the work. Leave every space better than you found it.",
@@ -21,7 +20,6 @@ const talks = [
     num: "02",
     title: "Black Boy Voice and the Cost of Silence",
     full: "A conversation about identity, pressure, tenderness, and the language many young men are never given. The focus is honesty, not slogans.",
-    desc: "Finding your authentic voice when the world expects quiet. Identity, authenticity, and the courage to tell truth — especially when it challenges dominant narratives.",
     tags: ["Youth", "Schools", "Community"],
     audiences: ["Youth", "Schools", "Community"],
     quote: "The most dangerous thing you can do is stay silent when you have something real to say.",
@@ -29,11 +27,10 @@ const talks = [
   {
     num: "03",
     title: "Building Creative Work That Lasts",
-    full: "A grounded session for young creators on developing a practice, finishing projects, sharing work, and keeping integrity in a fast-moving digital world.",
-    desc: "Practical strategies for developing craft, building an audience, and creating meaningful work. Covers creative process, publishing, and digital integrity.",
+    full: "A grounded session for young creators on developing a practice, finishing projects, sharing work, and keeping integrity in a fast moving digital world.",
     tags: ["Youth", "Community", "Schools"],
     audiences: ["Youth", "Community", "Schools"],
-    quote: "Prepare seriously, stay close to the people I serve, and finish what I start.",
+    quote: "Prepare seriously. Stay close to the people you serve. Finish what you start.",
   },
 ];
 
@@ -118,22 +115,6 @@ export default function Speaking() {
           </motion.div>
         </section>
 
-        {/* ─── PULL QUOTE ─── */}
-        <section className="py-20 md:py-28 border-y border-white/6 relative overflow-hidden">
-          <span className="absolute -top-6 left-0 font-serif text-[12rem] leading-none text-amber-400/[0.04] select-none pointer-events-none">"</span>
-          <div className="max-w-5xl mx-auto px-6 lg:px-10 relative z-10">
-            <Reveal>
-              <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white/85 italic leading-relaxed">
-                "The most dangerous thing you can do is stay silent when you have something real to say."
-              </blockquote>
-              <div className="flex items-center gap-4 mt-8">
-                <div className="w-8 h-px bg-amber-400/40" />
-                <p className="text-xs uppercase tracking-[0.35em] text-amber-400/50">Kiminou Knox</p>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
         {/* ─── AUDIENCE FILTER ─── */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -166,33 +147,6 @@ export default function Speaking() {
                   <p className="font-serif text-xl text-white/30">No talks match this audience type.</p>
                 </div>
               )}
-            </div>
-          </div>
-        </section>
-
-        {/* ─── WHO I SPEAK TO ─── */}
-        <section className="py-20 border-y border-white/6">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <Reveal className="mb-14">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Audiences</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Who I Work With</h2>
-              <div className="w-12 h-px bg-amber-400/40 mt-6" />
-            </Reveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/6">
-              {[
-                { label: "Schools", desc: "K–12 and university classrooms, assemblies, and leadership programs" },
-                { label: "Teams", desc: "Athletic programs looking to develop mental discipline and voice alongside physical skill" },
-                { label: "Youth Orgs", desc: "Community groups, youth summits, and mission-driven nonprofits investing in young people" },
-                { label: "Faith Spaces", desc: "Churches and spiritual communities navigating identity, discipline, and the creative life" },
-              ].map((item, i) => (
-                <Reveal key={i} delay={i * 0.1}>
-                  <div className="bg-black p-8 hover:bg-white/[0.03] transition-colors duration-400 group h-full">
-                    <div className="w-6 h-px bg-amber-400/30 mb-5 group-hover:w-10 transition-all duration-400" />
-                    <h3 className="font-serif text-xl text-white mb-3">{item.label}</h3>
-                    <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </Reveal>
-              ))}
             </div>
           </div>
         </section>
@@ -253,7 +207,7 @@ function TalkCard({ talk, index }: { talk: typeof talks[0]; index: number }) {
           <h3 className="font-serif text-2xl md:text-3xl font-light text-white mb-3 group-hover:text-amber-100 transition-colors duration-300">
             {talk.title}
           </h3>
-          <p className="text-white/45 leading-relaxed max-w-2xl">{talk.desc}</p>
+          <p className="text-white/45 leading-relaxed max-w-2xl">{talk.full}</p>
           <motion.div
             initial={false}
             animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }}

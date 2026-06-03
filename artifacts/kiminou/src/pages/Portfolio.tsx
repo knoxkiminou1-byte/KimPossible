@@ -11,9 +11,9 @@ const caseStudies = [
   {
     category: "Author",
     title: "The Black Boy Lie Universe",
-    sub: "8-title authored book catalog",
-    desc: "A literary universe centered on the interior lives of Black boys and young Black men. Poetry, psychological fiction, children's storybooks, and prophetic reflection — all built before age 19.",
-    detail: "Titles include Poems From A Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, Kiminou's World of Imagination: The Basics, and The Adventures of Kiminou the Great and Chua the Wise.",
+    sub: "8 title authored book catalog",
+    desc: "A literary universe centered on the interior lives of Black boys and young Black men. Poetry, psychological fiction, children's storybooks, and prophetic reflection. All built before age 19.",
+    detail: "Titles: Poems From A Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, Kiminou's World of Imagination: The Basics, and The Adventures of Kiminou the Great and Chua the Wise.",
     tags: ["Poetry", "Fiction", "Children's"],
     metric: "8",
     metricLabel: "Published Works",
@@ -26,7 +26,7 @@ const caseStudies = [
     title: "Cristo Rey De La Salle",
     sub: "NCAA Eligible · 6'7\" · 235 lbs",
     desc: "Multi-sport athlete bringing the same operating standard to the court and field that governs every other arena: consistency, resilience, refusal to cut corners.",
-    detail: "Forward/Center. NCAA eligibility registered. Verified profiles on MaxPreps, NCSA Sports, and Prep Hoops. Basketball and football. Cristo Rey De La Salle captain.",
+    detail: "Forward / Center. NCAA eligibility registered. Verified profiles on MaxPreps, NCSA Sports, and Prep Hoops. Basketball and football. Cristo Rey De La Salle captain.",
     tags: ["Basketball", "Football", "NCAA"],
     metric: "6'7\"",
     metricLabel: "Forward / Center",
@@ -39,7 +39,7 @@ const caseStudies = [
     title: "Public Speaking & Youth Work",
     sub: "Schools · Teams · Youth Summits",
     desc: "Talks on discipline, Black boy voice, and building creative work that lasts. Speaks with schools, teams, and community groups about telling the truth without performing it.",
-    detail: "Talk topics: Discipline and Faith in Daily Practice; Black Boy Voice and the Cost of Silence; Building Creative Work That Lasts. Miles Hall Foundation Youth Summit — Top Essay Finalist recognition.",
+    detail: "Talk topics: Discipline and Faith in Daily Practice; Black Boy Voice and the Cost of Silence; Building Creative Work That Lasts. Miles Hall Foundation Youth Summit Top Essay Finalist recognition.",
     tags: ["Schools", "Teams", "Youth", "Faith"],
     metric: "2×",
     metricLabel: "Miles Hall Finalist",
@@ -51,7 +51,7 @@ const caseStudies = [
     category: "Builder",
     title: "AAFC & TeeShirtTeens",
     sub: "Artists and Athletes For Change",
-    desc: "Director of AAFC and founder of The TeeShirtTeens — serious developmental platforms that help young creators and athletes convert expression into opportunity.",
+    desc: "Director of AAFC and founder of The TeeShirtTeens. Serious developmental platforms that help young creators and athletes convert expression into opportunity.",
     detail: "AAFC refuses to treat young creators and athletes as content or spectacle. TeeShirtTeens and AAFC provide pathways, mentorship, and accountability that translate creativity into something durable.",
     tags: ["AAFC", "TeeShirtTeens", "Youth Dev"],
     metric: "2",
@@ -64,7 +64,7 @@ const caseStudies = [
     category: "Builder",
     title: "AAFC Builders",
     sub: "Web design & digital infrastructure",
-    desc: "Websites, landing pages, digital infrastructure, and brand systems — the technical lane of Artists and Athletes For Change.",
+    desc: "Websites, landing pages, digital infrastructure, and brand systems. The technical lane of Artists and Athletes For Change.",
     detail: "AAFC Builders provides web design and digital infrastructure for creators and community organizations. Building sites that match the seriousness of the work they represent.",
     tags: ["Web Design", "Infrastructure", "Branding"],
     metric: "AAFC",
@@ -77,8 +77,8 @@ const caseStudies = [
     category: "Editorial",
     title: "Chief Editorial Work",
     sub: "Rhythm & Roux · Voicing The Lens",
-    desc: "Chief-editor credits on client book projects. Editorial work that holds the same standards as the published literary catalog — substance, precision, and integrity.",
-    detail: "Chief editor for Rhythm & Roux and Voicing The Lens — client book projects that required structural editing, voice development, and publication-ready manuscript preparation.",
+    desc: "Chief editor credits on client book projects. Editorial work that holds the same standards as the published literary catalog: substance, precision, and integrity.",
+    detail: "Chief editor for Rhythm & Roux and Voicing The Lens. Both projects required structural editing, voice development, and publication-ready manuscript preparation.",
     tags: ["Editing", "Publishing", "Manuscripts"],
     metric: "2",
     metricLabel: "Editorial Credits",
@@ -103,9 +103,6 @@ const QUICK_FACTS = [
   { label: "From", value: "Oakland / East Palo Alto community" },
   { label: "Roles", value: "Writer, Athlete, Program Builder, Author, Chief Editor, Podcast Host, Creator" },
   { label: "Known For", value: "Books, KimYaps, Medium essays, AAFC, AAFC Builders, web design, athletics" },
-  { label: "Authored Catalog", value: "Eight featured authored books" },
-  { label: "Editorial Credits", value: "Rhythm & Roux and Voicing The Lens" },
-  { label: "Recognition", value: "Miles Hall Foundation / Breaking Barriers essay recognition" },
 ];
 
 const socials = [
@@ -228,7 +225,7 @@ export default function Portfolio() {
                 </h1>
                 <div className="w-12 h-px bg-amber-400/50 mb-8" />
                 <p className="text-lg text-white/55 leading-relaxed max-w-md mb-8">
-                  Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator from the Oakland / East Palo Alto community — building across books, essays, KimYaps, AAFC, web design, athletics, and youth-centered storytelling.
+                  Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator from the Oakland / East Palo Alto community. Building across books, essays, KimYaps, AAFC, web design, athletics, and youth centered storytelling.
                 </p>
                 <div className="flex items-center gap-3 flex-wrap">
                   <span className="px-3 py-1.5 border border-amber-400/25 text-xs uppercase tracking-[0.2em] text-amber-400/70">Bay Area</span>
@@ -307,37 +304,6 @@ export default function Portfolio() {
                 ))}
               </AnimatePresence>
             </motion.div>
-          </div>
-        </section>
-
-        {/* ─── BIBLIOGRAPHY ─── */}
-        <section className="py-20 border-t border-white/6">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <Reveal className="mb-12">
-              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Bibliography</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Published Works</h2>
-              <div className="w-12 h-px bg-amber-400/40 mt-5" />
-            </Reveal>
-            <div className="space-y-0">
-              {books.map((b, i) => (
-                <Reveal key={b.title} delay={i * 0.06}>
-                  <div className="group border-t border-white/8 py-5 grid grid-cols-1 md:grid-cols-[1fr_auto_auto_auto] gap-3 md:gap-8 items-center hover:border-amber-400/20 transition-colors duration-400">
-                    <span className="font-serif text-lg font-light text-white/80 group-hover:text-amber-100 transition-colors duration-300">{b.title}</span>
-                    <span className="text-xs uppercase tracking-[0.2em] text-white/20">{b.genre}</span>
-                    {b.isbn && <span className="text-xs text-white/15 font-mono">ISBN {b.isbn}</span>}
-                    <span className="font-serif text-sm text-amber-400/50 italic">{b.year}</span>
-                  </div>
-                </Reveal>
-              ))}
-              <div className="border-t border-white/6" />
-            </div>
-            <Reveal delay={0.3} className="mt-8">
-              <Link href="/books">
-                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/60 hover:text-amber-400 transition-colors cursor-pointer">
-                  View Books with Covers & Buy Links →
-                </span>
-              </Link>
-            </Reveal>
           </div>
         </section>
 

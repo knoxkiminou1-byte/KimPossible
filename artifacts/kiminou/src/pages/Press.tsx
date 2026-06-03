@@ -10,7 +10,7 @@ const recognition = [
   {
     date: "May 5, 2025",
     source: "Miles Hall Foundation",
-    headline: "Essay Recognition — Youth Advocacy & Mental Health",
+    headline: "Essay Recognition: Youth Advocacy & Mental Health",
     detail: "Essay recognition announcement tied to youth advocacy and mental health. Top essay finalist selected from the Youth Summit cohort.",
     link: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
     featured: true,
@@ -18,7 +18,7 @@ const recognition = [
   {
     date: "February 2025",
     source: "Miles Hall Foundation Youth Summit",
-    headline: "Top Essay Finalist — Breaking Barriers",
+    headline: "Top Essay Finalist: Breaking Barriers",
     detail: "Top essay finalist recognition for mental health advocacy, addressing community issues through personal narrative and lived experience.",
     link: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
     featured: false,
@@ -39,24 +39,24 @@ const verificationGroups = [
     label: "Basketball",
     items: [
       { name: "MaxPreps Basketball Profile", desc: "Athlete profile and basketball stats", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
-      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile — Height 6'7\", Weight 235 lbs, Forward/Center, NCAA eligible", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile. Height 6'7\", Weight 235 lbs, Forward/Center, NCAA eligible.", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
       { name: "Prep Hoops Profile", desc: "Basketball profile and player listing", url: "https://prephoops.com/player/kiminou-knox/" },
     ],
   },
   {
     label: "Podcast & Public Voice",
     items: [
-      { name: "KimYaps on Apple Podcasts", desc: "Public podcast profile for KimYaps — faith, discipline, identity, culture, relationships", url: "https://podcasts.apple.com/us/podcast/kimyaps/id1742801718" },
+      { name: "KimYaps on Apple Podcasts", desc: "Public podcast profile for KimYaps. Topics: faith, discipline, identity, culture, relationships.", url: "https://podcasts.apple.com/us/podcast/kimyaps/id1742801718" },
       { name: "Watch Kiminou Knox on YouTube", desc: "Official YouTube channel for Kiminou Knox", url: "https://www.youtube.com/@kiminouknox" },
-      { name: "Read Kiminou Knox essays on Medium", desc: "Medium author profile and public essay archive — faith, resilience, love, healing, Black boy life", url: "https://medium.com/@kiminouknox" },
+      { name: "Read Kiminou Knox essays on Medium", desc: "Medium author profile and public essay archive. Topics: faith, resilience, love, healing, Black boy life.", url: "https://medium.com/@kiminouknox" },
       { name: "KimYaps on Spotify", desc: "Spotify show profile", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" },
     ],
   },
   {
     label: "Program / Builder Work",
     items: [
-      { name: "View AAFC Builders", desc: "kiminouknox.com — Web design and digital infrastructure lane", url: "https://kiminouknox.com" },
-      { name: "View Kiminou Knox Portfolio", desc: "#kiminouknox.com — Portfolio and build work overview", url: "/portfolio" },
+      { name: "View AAFC Builders", desc: "kiminouknox.com. Web design and digital infrastructure lane.", url: "https://kiminouknox.com" },
+      { name: "View Kiminou Knox Portfolio", desc: "kiminouknox.com. Portfolio and build work overview.", url: "/portfolio" },
     ],
   },
   {
@@ -66,7 +66,7 @@ const verificationGroups = [
       { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
       { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
-      { name: "Instagram", desc: "Public social profile — @hofkiminou", url: "https://www.instagram.com/hofkiminou" },
+      { name: "Instagram", desc: "Public social profile. @hofkiminou.", url: "https://www.instagram.com/hofkiminou" },
     ],
   },
 ];
@@ -197,19 +197,6 @@ export default function Press() {
                 </Reveal>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ─── PULL QUOTE ─── */}
-        <section className="py-20 border-b border-white/6">
-          <div className="max-w-4xl mx-auto px-6 lg:px-10">
-            <Reveal>
-              <span className="font-serif text-[8rem] leading-none text-amber-400/[0.06] block -mb-8">"</span>
-              <p className="font-serif text-2xl md:text-3xl font-light text-white/80 italic leading-relaxed">
-                Public sources for books, basketball, recognition, and profile verification — the record of a life being built seriously.
-              </p>
-              <div className="w-12 h-px bg-amber-400/30 mt-8" />
-            </Reveal>
           </div>
         </section>
 

@@ -25,7 +25,7 @@ const INQUIRY_TYPES = [
   { label: "Book Collaboration", desc: "Projects, endorsements, partnerships" },
   { label: "AAFC Builders", desc: "Web design, digital infrastructure, brand systems" },
   { label: "Youth Programs", desc: "TeeShirtTeens, AAFC mentorship, community" },
-  { label: "Other", desc: "Anything else — reach out" },
+  { label: "Other", desc: "Anything else. Reach out." },
 ];
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
@@ -81,7 +81,7 @@ export default function Contact() {
                 <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/60 mb-4">AAFC Mission</p>
                 <div className="w-8 h-px bg-amber-400/40 mb-5" />
                 <p className="font-serif text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-sm italic">
-                  "Artists and Athletes For Change — uniting creatives and athletes to make meaningful community impact."
+                  "Artists and Athletes For Change. Uniting creatives and athletes to make meaningful community impact."
                 </p>
                 <p className="text-xs text-white/30 mt-4 uppercase tracking-[0.2em]">Kiminou Knox, Director</p>
               </motion.div>
