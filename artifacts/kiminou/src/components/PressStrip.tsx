@@ -1,39 +1,71 @@
-export default function PressStrip() {
-  const pressOutlets = [
-    "Miles Hall Foundation",
-    "National Honor Society", 
-    "Breaking Barriers Youth Summit",
-    "NCSA Sports",
-    "MaxPreps",
-    "BookShop.org",
-    "The Tee Shirt Teens",
-    "2020 U.S. Census Campaign",
-    "East Palo Alto Community",
-    "Cristo Rey De La Salle",
-    "Ygnacio Valley High School"
-  ];
+const row1 = [
+  "Miles Hall Foundation",
+  "National Honor Society",
+  "Breaking Barriers Youth Summit",
+  "NCSA Sports",
+  "MaxPreps",
+  "BookShop.org",
+  "The Tee Shirt Teens",
+];
+
+const row2 = [
+  "2020 U.S. Census Campaign",
+  "East Palo Alto Community",
+  "Cristo Rey De La Salle",
+  "Ygnacio Valley High School",
+  "AAFC Director",
+  "7 Published Books",
+  "Class of 2025",
+];
+
+function MarqueeRow({ items, reverse = false, speed = 40 }: { items: string[]; reverse?: boolean; speed?: number }) {
+  const doubled = [...items, ...items, ...items];
+  const duration = items.length * speed;
 
   return (
-    <section className="py-16 bg-muted border-y border-border overflow-hidden" data-testid="press-strip">
-      <div className="whitespace-nowrap">
-        <div className="inline-block animate-marquee marquee-pause">
-          <div className="inline-flex items-center space-x-16 text-2xl md:text-3xl font-serif text-muted-foreground">
-            {pressOutlets.map((outlet, index) => (
-              <span key={`first-${index}`} data-testid={`press-outlet-${index}`}>
-                {outlet}
-              </span>
-            )).reduce((prev, curr, index) => [prev, <span key={`sep-first-${index}`}>•</span>, curr] as any)}
-          </div>
-        </div>
-        <div className="inline-block animate-marquee marquee-pause">
-          <div className="inline-flex items-center space-x-16 text-2xl md:text-3xl font-serif text-muted-foreground">
-            {pressOutlets.map((outlet, index) => (
-              <span key={`second-${index}`}>
-                {outlet}
-              </span>
-            )).reduce((prev, curr, index) => [prev, <span key={`sep-second-${index}`}>•</span>, curr] as any)}
-          </div>
-        </div>
+    <div className="relative overflow-hidden w-full">
+      <div
+        className="flex whitespace-nowrap"
+        style={{
+          animation: `marquee-${reverse ? "reverse" : "forward"} ${duration}s linear infinite`,
+        }}
+      >
+        {doubled.map((item, i) => (
+          <span key={i} className="inline-flex items-center gap-6 mx-8 shrink-0">
+            <span
+              className={`font-serif text-lg md:text-xl tracking-wide ${
+                reverse ? "text-white/25" : "text-white/40"
+              } hover:text-amber-300/70 transition-colors duration-300`}
+            >
+              {item}
+            </span>
+            <span className="text-amber-500/30 text-xs">✦</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function PressStrip() {
+  return (
+    <section
+      className="py-10 border-y border-white/5 overflow-hidden bg-background"
+      data-testid="press-strip"
+    >
+      <style>{`
+        @keyframes marquee-forward {
+          from { transform: translateX(0); }
+          to { transform: translateX(-33.333%); }
+        }
+        @keyframes marquee-reverse {
+          from { transform: translateX(-33.333%); }
+          to { transform: translateX(0); }
+        }
+      `}</style>
+      <div className="space-y-4">
+        <MarqueeRow items={row1} speed={45} />
+        <MarqueeRow items={row2} reverse speed={50} />
       </div>
     </section>
   );
