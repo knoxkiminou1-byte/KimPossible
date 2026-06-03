@@ -1,11 +1,12 @@
 import { useEffect, useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ExternalLink, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
+import FlipbookModal from "@/components/FlipbookModal";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -15,7 +16,7 @@ type Book = {
   buyLinks: { amazon?: string | null; googleBooks?: string | null; bookshop?: string | null; bn?: string | null };
 };
 
-function BookCard({ book, index, onSample }: { book: Book; index: number; onSample: (b: Book) => void }) {
+function BookCard({ book, index, onSample, onFlipbook }: { book: Book; index: number; onSample: (b: Book) => void; onFlipbook: (b: Book) => void }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -29,8 +30,8 @@ function BookCard({ book, index, onSample }: { book: Book; index: number; onSamp
       className="group flex flex-col"
       data-testid={`book-card-${book.id}`}
     >
-      {/* 3D Book Cover */}
-      <div className="relative mb-5" style={{ perspective: "1000px" }}>
+      {/* 3D Book Cover — click to open flipbook */}
+      <div className="relative mb-5 cursor-pointer" style={{ perspective: "1000px" }} onClick={() => onFlipbook(book)}>
         <motion.div
           className="relative aspect-[3/4] overflow-hidden bg-black"
           initial={{ rotateY: -8 }}
@@ -44,6 +45,12 @@ function BookCard({ book, index, onSample }: { book: Book; index: number; onSamp
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          {/* Preview hint overlay */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="px-3 py-1.5 bg-black/70 border border-amber-400/40 text-amber-400 text-[10px] uppercase tracking-[0.25em] font-medium backdrop-blur-sm">
+              Preview
+            </span>
+          </div>
           <div
             className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 pointer-events-none"
           />
@@ -114,6 +121,7 @@ function BookCard({ book, index, onSample }: { book: Book; index: number; onSamp
 export default function BooksPage() {
   const [books, setBooks] = useState<Book[]>([]);
   const [open, setOpen] = useState<{ id: string; poems: Poem[]; title: string } | null>(null);
+  const [flipbook, setFlipbook] = useState<Book | null>(null);
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
 
@@ -169,7 +177,13 @@ export default function BooksPage() {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16">
                 {books.map((b, i) => (
-                  <BookCard key={b.id} book={b} index={i} onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems, title: book.title })} />
+                  <BookCard
+                    key={b.id}
+                    book={b}
+                    index={i}
+                    onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems, title: book.title })}
+                    onFlipbook={(book) => setFlipbook(book)}
+                  />
                 ))}
               </div>
             )}
@@ -180,6 +194,12 @@ export default function BooksPage() {
       {open && (
         <PoemModal title={open.title} poems={open.poems} open={!!open} onClose={() => setOpen(null)} />
       )}
+
+      <AnimatePresence>
+        {flipbook && (
+          <FlipbookModal book={flipbook} onClose={() => setFlipbook(null)} />
+        )}
+      </AnimatePresence>
 
       <Footer />
     </>
