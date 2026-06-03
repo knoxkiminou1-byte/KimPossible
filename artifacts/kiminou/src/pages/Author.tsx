@@ -252,26 +252,6 @@ export default function Author() {
           </motion.div>
         </section>
 
-        {/* ─── STICKY CHAPTER NAV ─────────────────────────── */}
-        <div className="sticky top-0 z-40 bg-black/95 backdrop-blur-xl border-b border-white/6">
-          <div className="max-w-6xl mx-auto px-6">
-            <nav className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
-              {CHAPTERS.map(ch => (
-                <a key={ch.id} href={`#${ch.id}`}
-                  className={`relative px-4 py-4 text-[10px] uppercase tracking-[0.3em] whitespace-nowrap transition-colors duration-300 flex-shrink-0 ${
-                    active === ch.id ? "text-amber-300" : "text-white/35 hover:text-white/70"
-                  }`}>
-                  {ch.label}
-                  {active === ch.id && (
-                    <motion.div layoutId="chapter-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-px bg-amber-400"
-                      transition={{ type: "spring", stiffness: 400, damping: 35 }} />
-                  )}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
 
         <main className="max-w-5xl mx-auto px-6 lg:px-10">
 
