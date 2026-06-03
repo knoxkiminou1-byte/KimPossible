@@ -63,144 +63,201 @@ const letterVariants: Variants = {
   }),
 };
 
+const DRIP_STREAMS = [
+  { x: 145, y: 23, length: 120, width: 5, delay: 0.2, duration: 8.8, hue: "#FCD34D" },
+  { x: 318, y: 18, length: 82, width: 3.5, delay: 1.8, duration: 9.5, hue: "#F59E0B" },
+  { x: 534, y: 28, length: 142, width: 6, delay: 0.8, duration: 10.8, hue: "#FFE7A3" },
+  { x: 724, y: 19, length: 156, width: 7, delay: 2.6, duration: 11.6, hue: "#FCD34D" },
+  { x: 912, y: 30, length: 98, width: 4.5, delay: 1.2, duration: 9.8, hue: "#FBBF24" },
+  { x: 1106, y: 22, length: 132, width: 5.5, delay: 3.2, duration: 12.4, hue: "#FFE7A3" },
+  { x: 1296, y: 26, length: 86, width: 3.8, delay: 2.1, duration: 10.2, hue: "#F59E0B" },
+];
+
 function GoldDrips() {
   return (
     <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none overflow-hidden">
       <svg
-        viewBox="0 0 1440 120"
+        viewBox="0 0 1440 180"
         preserveAspectRatio="none"
         className="w-full"
-        style={{ height: "120px", display: "block" }}
+        style={{ height: "clamp(140px, 18vw, 190px)", display: "block" }}
       >
         <defs>
-          <linearGradient id="goldDripGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#D97706" stopOpacity="0.9" />
-            <stop offset="60%" stopColor="#F59E0B" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#FCD34D" stopOpacity="0" />
+          <linearGradient id="moltenGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#FFF7C2" stopOpacity="0.95" />
+            <stop offset="22%" stopColor="#FCD34D" stopOpacity="0.98" />
+            <stop offset="58%" stopColor="#D97706" stopOpacity="0.72" />
+            <stop offset="100%" stopColor="#5B2300" stopOpacity="0" />
           </linearGradient>
-          <linearGradient id="goldDripGrad2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.1" />
+          <linearGradient id="moltenTrail" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#FFF7C2" stopOpacity="0.95" />
+            <stop offset="35%" stopColor="#FBBF24" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#B45309" stopOpacity="0.05" />
           </linearGradient>
-          <filter id="dripGlow">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+          <linearGradient id="liquidShine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0" />
+            <stop offset="42%" stopColor="#FFFFFF" stopOpacity="0" />
+            <stop offset="50%" stopColor="#FFFBEA" stopOpacity="0.9" />
+            <stop offset="58%" stopColor="#FFFFFF" stopOpacity="0" />
+            <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+          </linearGradient>
+          <radialGradient id="dropBead" cx="45%" cy="28%" r="65%">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+            <stop offset="30%" stopColor="#FDE68A" stopOpacity="0.95" />
+            <stop offset="70%" stopColor="#D97706" stopOpacity="0.92" />
+            <stop offset="100%" stopColor="#78350F" stopOpacity="0.55" />
+          </radialGradient>
+          <filter id="moltenGlow" x="-10%" y="-25%" width="120%" height="160%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="1 0 0 0 0.9  0 0.62 0 0 0.28  0 0 0.2 0 0  0 0 0 0.78 0"
+              result="goldGlow"
+            />
+            <feMerge>
+              <feMergeNode in="goldGlow" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
           </filter>
+          <clipPath id="moltenClip">
+            <path d="M0,18 C110,6 190,38 316,22 C470,3 575,45 720,24 C868,2 982,42 1118,25 C1250,8 1344,38 1440,21 L1440,0 L0,0 Z" />
+          </clipPath>
         </defs>
 
-        {/* Base wave — the "liquid gold" edge */}
+        {/* Breathing molten-gold edge */}
         <motion.path
-          d="M0,30 C120,10 200,50 360,20 C520,-10 600,45 720,25 C840,5 950,55 1080,30 C1200,10 1320,50 1440,30 L1440,0 L0,0 Z"
-          fill="url(#goldDripGrad)"
+          filter="url(#moltenGlow)"
+          fill="url(#moltenGold)"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.8, delay: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          animate={{
+            opacity: 1,
+            y: [0, 5, 1, 7, 0],
+            d: [
+              "M0,18 C110,6 190,38 316,22 C470,3 575,45 720,24 C868,2 982,42 1118,25 C1250,8 1344,38 1440,21 L1440,0 L0,0 Z",
+              "M0,24 C118,10 205,44 326,19 C476,8 596,35 724,31 C858,12 982,48 1122,20 C1252,3 1340,43 1440,28 L1440,0 L0,0 Z",
+              "M0,17 C132,1 218,35 334,26 C480,14 592,52 720,21 C856,0 1000,35 1126,31 C1268,14 1350,36 1440,18 L1440,0 L0,0 Z",
+              "M0,22 C100,14 188,45 314,18 C462,0 582,42 718,29 C850,15 972,50 1116,22 C1238,7 1344,45 1440,23 L1440,0 L0,0 Z",
+              "M0,18 C110,6 190,38 316,22 C470,3 575,45 720,24 C868,2 982,42 1118,25 C1250,8 1344,38 1440,21 L1440,0 L0,0 Z",
+            ],
+          }}
+          transition={{
+            opacity: { duration: 1.4, delay: 1.2 },
+            y: { duration: 11, repeat: Infinity, ease: "easeInOut" },
+            d: { duration: 13.5, repeat: Infinity, ease: "easeInOut" },
+          }}
         />
 
-        {/* Drip 1 */}
-        <motion.g filter="url(#dripGlow)">
-          <motion.path
-            d="M180,25 Q178,60 180,85 Q181,100 180,85"
-            stroke="url(#goldDripGrad2)"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.9 }}
-            transition={{ duration: 0.9, delay: 2.2, ease: "easeIn" }}
-          />
-          <motion.ellipse
-            cx="180" cy="88" rx="4" ry="5"
-            fill="#FBBF24"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.9, scale: 1 }}
-            transition={{ duration: 0.3, delay: 3.1 }}
-          />
-        </motion.g>
+        {/* Specular glass sweep, clipped inside the liquid edge */}
+        <motion.rect
+          x="-720"
+          y="-8"
+          width="520"
+          height="88"
+          fill="url(#liquidShine)"
+          clipPath="url(#moltenClip)"
+          initial={{ opacity: 0 }}
+          animate={{ x: [-720, 1580], opacity: [0, 0.75, 0] }}
+          transition={{ duration: 7.5, delay: 2.1, repeat: Infinity, repeatDelay: 3.2, ease: "easeInOut" }}
+        />
 
-        {/* Drip 2 */}
-        <motion.g filter="url(#dripGlow)">
-          <motion.path
-            d="M420,18 Q419,55 421,78 Q422,92 420,78"
-            stroke="url(#goldDripGrad2)"
-            strokeWidth="2.5"
-            fill="none"
-            strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.85 }}
-            transition={{ duration: 0.8, delay: 2.5, ease: "easeIn" }}
-          />
-          <motion.ellipse
-            cx="421" cy="81" rx="3.5" ry="4"
-            fill="#F59E0B"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.85, scale: 1 }}
-            transition={{ duration: 0.3, delay: 3.3 }}
-          />
-        </motion.g>
+        {/* Wet lip highlight */}
+        <motion.path
+          d="M0,21 C110,8 190,40 316,24 C470,5 575,47 720,26 C868,4 982,44 1118,27 C1250,10 1344,40 1440,23"
+          stroke="rgba(255,250,220,0.78)"
+          strokeWidth="1.8"
+          fill="none"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 1], opacity: [0, 0.95, 0.5] }}
+          transition={{ duration: 5.8, delay: 1.65, repeat: Infinity, repeatDelay: 4.5, ease: "easeInOut" }}
+        />
 
-        {/* Drip 3 — longest */}
-        <motion.g filter="url(#dripGlow)">
-          <motion.path
-            d="M720,22 Q718,70 720,105 Q721,118 720,105"
-            stroke="url(#goldDripGrad2)"
-            strokeWidth="4"
-            fill="none"
-            strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 1.1, delay: 2.0, ease: "easeIn" }}
-          />
-          <motion.ellipse
-            cx="720" cy="108" rx="5" ry="6"
-            fill="#FCD34D"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 3.1 }}
-          />
-        </motion.g>
+        {DRIP_STREAMS.map((drip, index) => {
+          const mid = drip.y + drip.length * 0.55;
+          const end = drip.y + drip.length;
+          const sway = index % 2 === 0 ? 8 : -8;
+          const path = `M${drip.x},${drip.y} C${drip.x + sway},${mid * 0.72} ${drip.x - sway * 0.55},${mid} ${drip.x},${end}`;
 
-        {/* Drip 4 */}
-        <motion.g filter="url(#dripGlow)">
-          <motion.path
-            d="M950,28 Q949,62 951,84 Q952,95 950,84"
-            stroke="url(#goldDripGrad2)"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.8 }}
-            transition={{ duration: 0.85, delay: 2.7, ease: "easeIn" }}
-          />
-          <motion.ellipse
-            cx="951" cy="87" rx="4" ry="4.5"
-            fill="#F59E0B"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.8, scale: 1 }}
-            transition={{ duration: 0.3, delay: 3.55 }}
-          />
-        </motion.g>
-
-        {/* Drip 5 */}
-        <motion.g filter="url(#dripGlow)">
-          <motion.path
-            d="M1260,32 Q1259,58 1261,74 Q1262,83 1260,74"
-            stroke="url(#goldDripGrad2)"
-            strokeWidth="2.5"
-            fill="none"
-            strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.75 }}
-            transition={{ duration: 0.75, delay: 2.9, ease: "easeIn" }}
-          />
-          <motion.ellipse
-            cx="1261" cy="77" rx="3" ry="3.5"
-            fill="#FBBF24"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.75, scale: 1 }}
-            transition={{ duration: 0.3, delay: 3.65 }}
-          />
-        </motion.g>
+          return (
+            <motion.g key={drip.x} filter="url(#moltenGlow)">
+              <motion.path
+                d={path}
+                stroke="url(#moltenTrail)"
+                strokeWidth={drip.width}
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{
+                  pathLength: [0, 0.72, 1, 0.82, 0],
+                  opacity: [0, 0.92, 1, 0.72, 0],
+                }}
+                transition={{
+                  duration: drip.duration,
+                  delay: 1.6 + drip.delay,
+                  repeat: Infinity,
+                  repeatDelay: 1.8,
+                  ease: "easeInOut",
+                }}
+              />
+              <motion.path
+                d={path}
+                stroke="rgba(255,255,245,0.72)"
+                strokeWidth={Math.max(1, drip.width * 0.24)}
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: [0, 0.42, 0.58, 0], opacity: [0, 0.9, 0.6, 0] }}
+                transition={{
+                  duration: drip.duration * 0.72,
+                  delay: 2 + drip.delay,
+                  repeat: Infinity,
+                  repeatDelay: 3.1,
+                  ease: "easeInOut",
+                }}
+              />
+              <motion.ellipse
+                cx={drip.x}
+                cy={drip.y}
+                rx={drip.width * 1.45}
+                ry={drip.width * 2.05}
+                fill="url(#dropBead)"
+                initial={{ opacity: 0, scale: 0.2 }}
+                animate={{
+                  y: [0, drip.length * 0.5, drip.length + 16],
+                  x: [0, sway * 0.16, -sway * 0.25],
+                  scale: [0.35, 1, 0.72],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{
+                  duration: drip.duration * 0.78,
+                  delay: 2.2 + drip.delay,
+                  repeat: Infinity,
+                  repeatDelay: 2.25,
+                  ease: "easeIn",
+                }}
+              />
+              <motion.circle
+                cx={drip.x - drip.width * 0.35}
+                cy={drip.y - drip.width * 0.2}
+                r={Math.max(1.1, drip.width * 0.34)}
+                fill="white"
+                initial={{ opacity: 0 }}
+                animate={{
+                  y: [0, drip.length * 0.5, drip.length + 16],
+                  opacity: [0, 0.85, 0],
+                }}
+                transition={{
+                  duration: drip.duration * 0.78,
+                  delay: 2.2 + drip.delay,
+                  repeat: Infinity,
+                  repeatDelay: 2.25,
+                  ease: "easeIn",
+                }}
+              />
+            </motion.g>
+          );
+        })}
       </svg>
     </div>
   );
