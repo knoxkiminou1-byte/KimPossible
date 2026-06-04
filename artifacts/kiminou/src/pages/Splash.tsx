@@ -239,11 +239,14 @@ export default function Splash() {
       
       <div className="splash-page">
         <div className="splash" id="splash">
-          <img 
-            src="/kiminou-knox-basketball-player-interactive.png" 
-            alt="Kiminou Knox - Click to Enter" 
-            className="art"
-          />
+          <picture>
+            <source srcSet="/kiminou-knox-basketball-player-interactive.webp" type="image/webp" />
+            <img 
+              src="/kiminou-knox-basketball-player-interactive.png" 
+              alt="Kiminou Knox — Basketball Athlete, Author, Entrepreneur. Click to Enter." 
+              className="art"
+            />
+          </picture>
           
           <div className="hotspot" id="hotspot"></div>
           

@@ -280,7 +280,7 @@ export default function Hero({ paperMode = false }: HeroProps) {
   const overlayOpacity = useTransform(scrollY, [0, 500], [0.45, 0.92]);
   const contentY = useTransform(scrollY, [0, 500], [0, -70]);
   const contentOpacity = useTransform(scrollY, [0, 360], [1, 0]);
-  const heroImage = paperMode ? "/kiminou-knox-book-universe-portal.png" : "/kiminou-knox-author-athlete-bay-area.png";
+  const heroImage = paperMode ? "/kiminou-knox-book-universe-portal.webp" : "/kiminou-knox-author-athlete-bay-area.webp";
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!sectionRef.current) return;

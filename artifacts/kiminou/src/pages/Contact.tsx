@@ -48,9 +48,20 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact - Kiminou Knox</title>
-        <meta name="description" content="Reach out to Kiminou Knox for speaking engagements, media inquiries, book collaborations, AAFC Builders projects, or youth program partnerships." />
+        <title>Book Kiminou Knox | Speaking, Media & Collaboration — Contact</title>
+        <meta name="description" content="Reach out to Kiminou Knox for speaking engagements, press and media inquiries, book collaborations, AAFC Builders projects, or youth program partnerships. Bay Area author and NCAA athlete." />
         <link rel="canonical" href="https://kiminouknox.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kiminouknox.com/contact" />
+        <meta property="og:title" content="Contact Kiminou Knox | Speaking, Media & Collaboration" />
+        <meta property="og:description" content="Book Kiminou Knox for speaking, media, book collaborations, AAFC Builders, or youth programs. Author of 7 books and NCAA athlete." />
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KiminouKnox" />
+        <meta name="twitter:title" content="Contact Kiminou Knox — Speaking & Media" />
+        <meta name="twitter:description" content="Book Kiminou Knox for speaking, media, and collaboration. Bay Area author of 7 books and NCAA athlete." />
+        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
       </Helmet>
       <Header />
 
@@ -67,7 +78,7 @@ export default function Contact() {
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}>
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/kiminou-knox-official-author-portrait.jpg')" }}
+              style={{ backgroundImage: "url('/kiminou-knox-official-author-portrait.webp')" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30" />

@@ -106,17 +106,20 @@ function BlogPostPage() {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt || post.title,
     "url": `https://kiminouknox.com/blog/${post.slug}`,
     "datePublished": post.publishedAt,
     "dateModified": post.publishedAt,
+    "image": "https://kiminouknox.com/kiminou-knox-social-share.png",
+    "inLanguage": "en-US",
     "author": {
       "@type": "Person",
       "name": "Kiminou Knox",
       "@id": "https://kiminouknox.com/#kiminouknox",
-      "url": "https://kiminouknox.com"
+      "url": "https://kiminouknox.com",
+      "image": "https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg"
     },
     "publisher": {
       "@type": "Person",

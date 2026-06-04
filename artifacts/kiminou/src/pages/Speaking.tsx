@@ -60,9 +60,34 @@ export default function Speaking() {
   return (
     <>
       <Helmet>
-        <title>Speaking - Kiminou Knox</title>
-        <meta name="description" content="Kiminou Knox speaks with schools, teams, and community groups on writing, discipline, faith, grief, and how young people can find a voice without performing one." />
+        <title>Kiminou Knox | Speaker — Schools, Youth & Community Groups</title>
+        <meta name="description" content="Book Kiminou Knox to speak at your school, team, or community event. Topics include discipline, faith, creative voice, Black boy identity, and building authentic work. Bay Area author and NCAA athlete." />
         <link rel="canonical" href="https://kiminouknox.com/speaking" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kiminouknox.com/speaking" />
+        <meta property="og:title" content="Kiminou Knox | Speaker — Schools, Youth & Community" />
+        <meta property="og:description" content="Book Kiminou Knox for schools, youth organizations, athletic teams, and community events. Author of 7 books and NCAA basketball athlete from the Bay Area." />
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:image:alt" content="Kiminou Knox — Author, Athlete, Speaker" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KiminouKnox" />
+        <meta name="twitter:title" content="Kiminou Knox | Speaker — Schools & Community" />
+        <meta name="twitter:description" content="Book Kiminou Knox for schools, youth orgs, and athletic teams. Bay Area author of 7 books and NCAA athlete." />
+        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": "https://kiminouknox.com/#kiminouknox",
+          "name": "Kiminou Knox",
+          "url": "https://kiminouknox.com/speaking",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Motivational Speaker",
+            "description": "Speaks with schools, athletic teams, faith communities, and youth organizations on discipline, creative voice, Black identity, and authentic leadership."
+          },
+          "knowsAbout": ["Youth Leadership", "Creative Writing", "Discipline and Faith", "Black Boy Identity", "Basketball", "Entrepreneurship"]
+        })}</script>
       </Helmet>
       <Header />
 
@@ -72,7 +97,7 @@ export default function Speaking() {
         <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">
           <motion.div
             className="absolute inset-0 bg-cover bg-center bg-[center_20%]"
-            style={{ backgroundImage: "url('/kiminou-knox-author-athlete-bay-area.png')", y: bgY, scale: 1.08 }}
+            style={{ backgroundImage: "url('/kiminou-knox-author-athlete-bay-area.webp')", y: bgY, scale: 1.08 }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
@@ -167,8 +192,8 @@ export default function Speaking() {
               <div className="relative group">
                 <div className="relative w-full aspect-video bg-black border border-white/8 overflow-hidden">
                   <img
-                    src="/kiminou-knox-author-athlete-bay-area.png"
-                    alt="Kiminou Knox speaking"
+                    src="/kiminou-knox-author-athlete-bay-area.webp"
+                    alt="Kiminou Knox speaking at a school or community event"
                     loading="lazy"
                     className="w-full h-full object-cover object-top opacity-40 group-hover:opacity-50 transition-opacity duration-500 scale-105"
                   />
