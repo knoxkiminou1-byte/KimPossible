@@ -72,7 +72,7 @@ export default function Speaking() {
         <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">
           <motion.div
             className="absolute inset-0 bg-cover bg-center bg-[center_20%]"
-            style={{ backgroundImage: "url('/kiminou-splash-art.png')", y: bgY, scale: 1.08 }}
+            style={{ backgroundImage: "url('/kiminou-knox-author-athlete-bay-area.png')", y: bgY, scale: 1.08 }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
@@ -167,7 +167,7 @@ export default function Speaking() {
               <div className="relative group">
                 <div className="relative w-full aspect-video bg-black border border-white/8 overflow-hidden">
                   <img
-                    src="/kiminou-splash-art.png"
+                    src="/kiminou-knox-author-athlete-bay-area.png"
                     alt="Kiminou Knox speaking"
                     loading="lazy"
                     className="w-full h-full object-cover object-top opacity-40 group-hover:opacity-50 transition-opacity duration-500 scale-105"

@@ -67,7 +67,7 @@ export default function Contact() {
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}>
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/author-kiminou.jpg')" }}
+              style={{ backgroundImage: "url('/kiminou-knox-official-author-portrait.jpg')" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30" />

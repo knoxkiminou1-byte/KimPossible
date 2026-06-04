@@ -192,7 +192,7 @@ function FeaturedPost({ post, categories }: { post: BlogPost; categories: BlogCa
     <section ref={ref} className="relative min-h-[70vh] flex items-end overflow-hidden border-b border-white/6">
       <motion.div className="absolute inset-0 bg-gradient-to-br from-amber-950/30 via-black to-black"
         style={{ y: bgY }} />
-      <div className="absolute inset-0 bg-[url('/og-image.png')] bg-cover bg-center opacity-5" />
+      <div className="absolute inset-0 bg-[url('/kiminou-knox-social-share.png')] bg-cover bg-center opacity-5" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
@@ -350,11 +350,11 @@ export default function Blog() {
         <meta property="og:title" content="Author's Journal — Kiminou Knox | Essays & Writing" />
         <meta property="og:description" content="Public writing on faith, discipline, love, healing, Black boy life, and creative voice." />
         <meta property="og:url" content="https://kiminouknox.com/blog" />
-        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Author's Journal — Kiminou Knox" />
         <meta name="twitter:description" content="Essays on faith, identity, love, and Black boy life." />
-        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
+        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
       </Helmet>

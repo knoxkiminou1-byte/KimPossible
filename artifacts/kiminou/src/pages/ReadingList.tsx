@@ -229,12 +229,12 @@ export default function ReadingList() {
         <meta property="og:title" content="Kiminou Knox's Reading List — Books Worth Your Time" />
         <meta property="og:description" content="Curated books on Black identity, faith, athletics, and craft from Kiminou Knox — 7-time published author and NCAA athlete." />
         <meta property="og:url" content="https://kiminouknox.com/reading-list" />
-        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox's Reading List" />
         <meta name="twitter:description" content="Books on Black identity, faith, athletics, and craft." />
-        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
+        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
 
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>

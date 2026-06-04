@@ -195,7 +195,7 @@ export default function Author() {
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
         <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction." />
-        <meta property="og:image" content="https://kiminouknox.com/author-kiminou.jpg" />
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
@@ -207,7 +207,7 @@ export default function Author() {
           {/* Parallax photo */}
           <motion.div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/author-kiminou.jpg')", y: heroBgY, scale: 1.08 }}
+            style={{ backgroundImage: "url('/kiminou-knox-official-author-portrait.jpg')", y: heroBgY, scale: 1.08 }}
           />
           {/* Gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />

@@ -44,7 +44,7 @@ export default function FeaturedBookPromo() {
                   }}
                 />
                 <img
-                  src="/covers/adventures-chua-kiminou.png"
+                  src="/covers/kiminou-knox-adventures-kiminou-great-chua.png"
                   alt="The Adventures of Kiminou the Great and Chua the Wise"
                   className="w-full h-auto rounded-r-sm shadow-[0_32px_80px_rgba(0,0,0,0.7),0_8px_20px_rgba(0,0,0,0.5)]"
                   style={{ backfaceVisibility: "hidden" }}

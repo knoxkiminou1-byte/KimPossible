@@ -41,21 +41,27 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
-        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Seven published works, NCAA registered athlete, and youth advocate." />
+        <title>Kiminou Knox | Author, Athlete & Entrepreneur — Bay Area</title>
+        <meta name="description" content="Kiminou Knox is a 19-year-old Bay Area author of 7 published poetry books, NCAA basketball athlete, and entrepreneur. Creator of the Black Boy Lie universe — Black Boy Poems, The Spirit of Solomon, Our Father?, Hopeless Romantic, and more." />
+        <meta name="keywords" content="Kiminou Knox, Black Boy Poems, Spirit of Solomon, Our Father, Hopeless Romantic, Boys Raised in Silence, Bay Area author, Black poetry, basketball athlete, youth entrepreneur, Black Boy Lie universe, African American author" />
         <link rel="canonical" href="https://kiminouknox.com/" />
-        
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
+
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Kiminou Knox | Author, Athlete & Entrepreneur — Bay Area" />
+        <meta property="og:description" content="19-year-old Bay Area author of 7 published poetry books, NCAA basketball athlete, and entrepreneur. Creator of the Black Boy Lie universe." />
         <meta property="og:url" content="https://kiminouknox.com/" />
-        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
-        
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:image:alt" content="Kiminou Knox — Author, Athlete, Entrepreneur from the Bay Area" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta name="twitter:description" content="19 year old athlete, published author, entrepreneur, and creative" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
-        
+        <meta name="twitter:site" content="@KiminouKnox" />
+        <meta name="twitter:creator" content="@KiminouKnox" />
+        <meta name="twitter:title" content="Kiminou Knox | Author, Athlete & Entrepreneur" />
+        <meta name="twitter:description" content="19-year-old Bay Area author of 7 poetry books, NCAA basketball athlete, entrepreneur. Creator of the Black Boy Lie universe." />
+        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta name="twitter:image:alt" content="Kiminou Knox — Author, Athlete, Entrepreneur" />
+
         <script type="application/ld+json">
           {JSON.stringify(personSchema)}
         </script>

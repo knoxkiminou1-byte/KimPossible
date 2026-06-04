@@ -137,7 +137,7 @@ function BlogPostPage() {
         <meta property="og:title" content={`${post.title} — Kiminou Knox`} />
         <meta property="og:description" content={post.excerpt || post.title} />
         <meta property="og:url" content={`https://kiminouknox.com/blog/${post.slug}`} />
-        <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
+        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
         <meta property="article:author" content="Kiminou Knox" />
         {post.publishedAt && <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />}
         <meta name="twitter:card" content="summary_large_image" />

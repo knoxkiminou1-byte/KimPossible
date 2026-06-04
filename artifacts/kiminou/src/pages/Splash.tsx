@@ -240,7 +240,7 @@ export default function Splash() {
       <div className="splash-page">
         <div className="splash" id="splash">
           <img 
-            src="/kiminou-hand-interactive.png" 
+            src="/kiminou-knox-basketball-player-interactive.png" 
             alt="Kiminou Knox - Click to Enter" 
             className="art"
           />
