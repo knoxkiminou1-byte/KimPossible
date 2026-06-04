@@ -24,7 +24,7 @@ export default function Works() {
     fetch('/books-full.json')
       .then(res => res.json())
       .then(data => setBooks(data))
-      .catch(err => console.error('Failed to load books:', err));
+      .catch(() => {});
   }, []);
 
   const bookSchemas = books.map(book => ({

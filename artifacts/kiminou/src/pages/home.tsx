@@ -68,7 +68,7 @@ export default function Home() {
         colors={["#F59E0B", "#FDE68A", "#FFFBEB", "#D97706"]}
         className="z-0"
       />
-      <div className="relative z-10">
+      <div id="main-content" className="relative z-10">
         <Header />
         <button
           type="button"

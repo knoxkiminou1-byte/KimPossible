@@ -86,9 +86,7 @@ function downloadChapter(email: string) {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 
-  if (email) {
-    console.log("[FreeChapter] Email captured:", email);
-  }
+  void email;
 }
 
 export default function FreeChapterCapture() {

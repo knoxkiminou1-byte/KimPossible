@@ -127,9 +127,10 @@ function GoldDrips() {
 
         {/* Breathing molten-gold edge */}
         <motion.path
+          d="M0,18 C110,6 190,38 316,22 C470,3 575,45 720,24 C868,2 982,42 1118,25 C1250,8 1344,38 1440,21 L1440,0 L0,0 Z"
           filter="url(#moltenGlow)"
           fill="url(#moltenGold)"
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ d: "M0,18 C110,6 190,38 316,22 C470,3 575,45 720,24 C868,2 982,42 1118,25 C1250,8 1344,38 1440,21 L1440,0 L0,0 Z", opacity: 0, y: -20 }}
           animate={{
             opacity: 1,
             y: [0, 5, 1, 7, 0],
@@ -269,7 +270,7 @@ interface HeroProps {
 
 export default function Hero({ paperMode = false }: HeroProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const sectionRef = useRef<HTMLElement>(null);
 
