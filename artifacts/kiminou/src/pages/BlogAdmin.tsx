@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
@@ -227,6 +228,10 @@ function BlogAdmin() {
 
   return (
     <div className="container mx-auto p-6 space-y-6">
+      <Helmet>
+        <title>Blog Admin — Kiminou Knox</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">Blog Administration</h1>
       </div>
