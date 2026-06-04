@@ -263,7 +263,11 @@ function GoldDrips() {
   );
 }
 
-export default function Hero() {
+interface HeroProps {
+  paperMode?: boolean;
+}
+
+export default function Hero({ paperMode = false }: HeroProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
@@ -275,6 +279,7 @@ export default function Hero() {
   const overlayOpacity = useTransform(scrollY, [0, 500], [0.45, 0.92]);
   const contentY = useTransform(scrollY, [0, 500], [0, -70]);
   const contentOpacity = useTransform(scrollY, [0, 360], [1, 0]);
+  const heroImage = paperMode ? "/paper-realm-hero.png" : "/kiminou-splash-art.png";
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!sectionRef.current) return;
@@ -287,14 +292,14 @@ export default function Hero() {
   useEffect(() => {
     setIsVisible(true);
     const img = new Image();
-    img.src = "/kiminou-splash-art.png";
+    img.src = heroImage;
     img.onload = () => setImageLoaded(true);
     img.onerror = () => setImageLoaded(true);
 
     const el = sectionRef.current;
     el?.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => el?.removeEventListener("mousemove", handleMouseMove);
-  }, [handleMouseMove]);
+  }, [handleMouseMove, heroImage]);
 
   const nameFirst = "KIMINOU";
   const nameLast = "KNOX";
@@ -321,7 +326,7 @@ export default function Hero() {
       <motion.div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
         style={{
-          backgroundImage: "url('/kiminou-splash-art.png')",
+          backgroundImage: `url('${heroImage}')`,
           y: bgY,
           scale: bgScale,
           x: bgOffsetX,
@@ -342,6 +347,16 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/70 to-transparent z-10 pointer-events-none" />
+      {paperMode && (
+        <>
+          <div className="absolute inset-0 z-[4] opacity-35 pointer-events-none bg-[radial-gradient(circle_at_50%_78%,transparent_0_18%,rgba(255,255,255,0.12)_18.3%,transparent_18.7%),radial-gradient(circle_at_50%_78%,transparent_0_32%,rgba(251,191,36,0.12)_32.3%,transparent_32.7%)]" />
+          <motion.div
+            className="absolute inset-x-0 bottom-[8%] z-[4] h-px bg-gradient-to-r from-transparent via-amber-200/50 to-transparent pointer-events-none"
+            animate={{ scaleX: [0.72, 1, 0.72], opacity: [0.25, 0.65, 0.25] }}
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </>
+      )}
 
       {/* Gold vignette edge */}
       <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-amber-950/20 via-transparent to-transparent pointer-events-none z-[8]" />

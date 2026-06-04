@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import GoldMarquee from "@/components/LuxuryFX/GoldMarquee";
@@ -19,8 +20,10 @@ import PoemAssembler from "@/components/PoemAssembler";
 import GenerativeArtPanel from "@/components/GenerativeArtPanel";
 import ChapterScroll from "@/components/ChapterScroll";
 import AmbientAudio from "@/components/AmbientAudio";
+import PaperRealmPortal from "@/components/PaperRealmPortal";
 
 export default function Home() {
+  const [paperMode, setPaperMode] = useState(false);
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -58,7 +61,7 @@ export default function Home() {
         </script>
       </Helmet>
 
-      <div className="bg-background text-foreground font-sans antialiased relative">
+      <div className={`${paperMode ? "paper-realm-shell" : ""} bg-background text-foreground font-sans antialiased relative`}>
       <ParticleEffect 
         density={60} 
         effects={['sparkle', 'dust', 'star']}
@@ -67,21 +70,41 @@ export default function Home() {
       />
       <div className="relative z-10">
         <Header />
-        <div id="hero"><Hero /></div>
-        <GoldMarquee />
-        <ChapterScroll />
-        <div id="who-is-kiminou"><WhoIsKiminou /></div>
-        <div id="section-stats"><StatsBanner /></div>
-        <div id="section-poem"><PoemOfTheDay /></div>
-        <div id="section-poem-assembler"><PoemAssembler /></div>
-        <div id="section-featured"><FeaturedBookPromo /></div>
-        <div id="section-quotes"><QuoteTypewriter /></div>
-        <div id="section-books"><BookPreview /></div>
-        <div id="section-wordcloud"><WordCloud /></div>
-        <div id="section-gallery"><FilmStripGallery /></div>
-        <div id="section-press"><PressStrip /></div>
-        <div id="section-testimonials"><Testimonials /></div>
-        <GenerativeArtPanel />
+        <button
+          type="button"
+          aria-pressed={paperMode}
+          aria-label={paperMode ? "Return to regular site" : "Open 3D paper site"}
+          onClick={() => setPaperMode((current) => !current)}
+          className="fixed right-4 bottom-4 z-[120] h-12 w-12 border border-amber-300/50 bg-black/75 text-amber-200 backdrop-blur-md shadow-[0_0_35px_rgba(245,158,11,0.25)] hover:bg-amber-300 hover:text-black transition-colors"
+        >
+          3D
+        </button>
+        {paperMode ? (
+          <>
+            <PaperRealmPortal />
+            <div id="section-books"><BookPreview /></div>
+            <div id="section-gallery"><FilmStripGallery /></div>
+            <GenerativeArtPanel />
+          </>
+        ) : (
+          <>
+            <div id="hero"><Hero /></div>
+            <GoldMarquee />
+            <ChapterScroll />
+            <div id="who-is-kiminou"><WhoIsKiminou /></div>
+            <div id="section-stats"><StatsBanner /></div>
+            <div id="section-poem"><PoemOfTheDay /></div>
+            <div id="section-poem-assembler"><PoemAssembler /></div>
+            <div id="section-featured"><FeaturedBookPromo /></div>
+            <div id="section-quotes"><QuoteTypewriter /></div>
+            <div id="section-books"><BookPreview /></div>
+            <div id="section-wordcloud"><WordCloud /></div>
+            <div id="section-gallery"><FilmStripGallery /></div>
+            <div id="section-press"><PressStrip /></div>
+            <div id="section-testimonials"><Testimonials /></div>
+            <GenerativeArtPanel />
+          </>
+        )}
         <Footer />
         <ContactFAB />
         <AmbientAudio theme="noir" />
