@@ -1,220 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kiminouknox.com/</loc>
-    <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/kiminou-knox-author-athlete-bay-area.png</image:loc>
-      <image:title>Kiminou Knox — Author, Athlete, Entrepreneur from the Bay Area</image:title>
-      <image:caption>Official portrait of Kiminou Knox, 19-year-old Bay Area author and NCAA basketball athlete</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://kiminouknox.com/kiminou-knox-social-share.png</image:loc>
-      <image:title>Kiminou Knox Social Share Image</image:title>
-    </image:image>
   </url>
-
-  <!-- Author -->
   <url>
-    <loc>https://kiminouknox.com/author</loc>
-    <lastmod>2025-06-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://kiminouknox.com/home</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox — Official Author Portrait</image:title>
-      <image:caption>Kiminou Knox, published author and Bay Area basketball athlete</image:caption>
-    </image:image>
   </url>
-
-  <!-- About -->
   <url>
     <loc>https://kiminouknox.com/about</loc>
-    <lastmod>2025-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Books index -->
-  <url>
-    <loc>https://kiminouknox.com/books</loc>
-    <lastmod>2025-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg</image:loc>
-      <image:title>The Spirit of Solomon by Kiminou Knox</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg</image:loc>
-      <image:title>Poems from a Black Boy by Kiminou Knox</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg</image:loc>
-      <image:title>Hopeless Romantic by Kiminou Knox</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
-      <image:title>Our Father? by Kiminou Knox</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png</image:loc>
-      <image:title>Boys Raised in Silence by Kiminou Knox</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png</image:loc>
-      <image:title>The Adventures of Kiminou the Great and Chua the Wise by Kiminou Knox</image:title>
-    </image:image>
-  </url>
-
-  <!-- Individual Book Pages -->
-  <url>
-    <loc>https://kiminouknox.com/books/spirit-solomon</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg</image:loc>
-      <image:title>The Spirit of Solomon — Poetry by Kiminou Knox</image:title>
-      <image:caption>Book cover of The Spirit of Solomon by Kiminou Knox, published January 2025</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://kiminouknox.com/books/poems-black-boy</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg</image:loc>
-      <image:title>Poems from a Black Boy — Poetry by Kiminou Knox</image:title>
-      <image:caption>Book cover of Poems from a Black Boy by Kiminou Knox, ISBN 9798316662975</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://kiminouknox.com/books/our-father</loc>
-    <lastmod>2024-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
-      <image:title>Our Father? — Poetry by Kiminou Knox</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://kiminouknox.com/books/hopeless-romantic</loc>
-    <lastmod>2025-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg</image:loc>
-      <image:title>Hopeless Romantic — Poetry by Kiminou Knox</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://kiminouknox.com/books/boys-raised-in-silence</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png</image:loc>
-      <image:title>Boys Raised in Silence — Poetry by Kiminou Knox</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://kiminouknox.com/books/adventures-kiminou-chua</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png</image:loc>
-      <image:title>The Adventures of Kiminou the Great and Chua the Wise — by Kiminou Knox</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://kiminouknox.com/books/black-boy-poems</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Works -->
   <url>
     <loc>https://kiminouknox.com/works</loc>
-    <lastmod>2025-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Sports / Athletics -->
   <url>
-    <loc>https://kiminouknox.com/sports</loc>
-    <lastmod>2025-06-04</lastmod>
+    <loc>https://kiminouknox.com/author</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/books</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/speaking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
-  <!-- Portfolio -->
   <url>
-    <loc>https://kiminouknox.com/portfolio</loc>
-    <lastmod>2025-06-04</lastmod>
+    <loc>https://kiminouknox.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Blog -->
+  <url>
+    <loc>https://kiminouknox.com/press</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/sports</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/portfolio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
   <url>
     <loc>https://kiminouknox.com/blog</loc>
-    <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-
-  <!-- Speaking -->
-  <url>
-    <loc>https://kiminouknox.com/speaking</loc>
-    <lastmod>2025-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://kiminouknox.com/kiminou-knox-author-athlete-bay-area.png</image:loc>
-      <image:title>Kiminou Knox — Speaker, Author, Athlete</image:title>
-    </image:image>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://kiminouknox.com/contact</loc>
-    <lastmod>2025-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- Press -->
-  <url>
-    <loc>https://kiminouknox.com/press</loc>
-    <lastmod>2025-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Reading List -->
   <url>
     <loc>https://kiminouknox.com/reading-list</loc>
-    <lastmod>2025-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-
+  <url>
+    <loc>https://kiminouknox.com/books/spirit-solomon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/books/our-father</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/books/poems-black-boy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/books/hopeless-romantic</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/blog/what-i-mean-when-i-write-about-faith</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/blog/on-love-that-doesnt-perform</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiminouknox.com/blog/the-lie-i-was-told-about-discipline</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 interface Book {
   id: string;
@@ -24,7 +25,7 @@ export default function Works() {
     fetch('/books-full.json')
       .then(res => res.json())
       .then(data => setBooks(data))
-      .catch(() => {});
+      .catch(err => console.error('Failed to load books:', err));
   }, []);
 
   const bookSchemas = books.map(book => ({
@@ -47,23 +48,29 @@ export default function Works() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox Books | 7 Published Poetry Collections — Black Boy Lie Universe</title>
-        <meta name="description" content="All 7 published books by Kiminou Knox: Black Boy Poems, Our Father?, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, The Adventures of Kiminou the Great and Chua the Wise. Bay Area author of poetry and children's literature." />
+        <title>Works - Kiminou Knox</title>
+        <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/works" />
-
+        
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kiminou Knox Books | 7 Published Poetry Collections" />
-        <meta property="og:description" content="All 7 published books by Kiminou Knox — poetry, children's literature, and the Black Boy Lie universe. Available on Amazon and Google Play Books." />
+        <meta property="og:title" content="Works - Kiminou Knox" />
+        <meta property="og:description" content="Published works and books by writer Kiminou Knox" />
         <meta property="og:url" content="https://kiminouknox.com/works" />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
-        <meta property="og:image:alt" content="Books by Kiminou Knox — Poetry and Children's Literature" />
-        <meta property="og:site_name" content="Kiminou Knox" />
-
+        <meta property="og:image" content="https://kiminouknox.com/og/works.jpg" />
+        
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@KiminouKnox" />
-        <meta name="twitter:title" content="Kiminou Knox | 7 Published Poetry Collections" />
-        <meta name="twitter:description" content="All 7 books by Kiminou Knox — Black Boy Poems, Spirit of Solomon, Hopeless Romantic, and more. Available on Amazon." />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta name="twitter:title" content="Works - Kiminou Knox" />
+        <meta name="twitter:description" content="Published books and poetry collections" />
+        <meta name="twitter:image" content="https://kiminouknox.com/og/works.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Works", url: `${SITE_URL}/works` },
+            ]),
+          )}
+        </script>
         
         {bookSchemas.map((schema, index) => (
           <script key={index} type="application/ld+json">

@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 type Poem = {
   title: string;
@@ -163,12 +164,18 @@ export default function BookDetail() {
   const availableRetailers = Object.entries(book.buyLinks)
     .filter(([_, url]) => url)
     .map(([key, url]) => ({ key, url: url as string, name: retailerNames[key] || key, icon: retailerIcons[key] || "→" }));
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: SITE_URL },
+    { name: "Books", url: `${SITE_URL}/books` },
+    { name: book.title, url: `${SITE_URL}/books/${book.id}` },
+  ]);
 
   return (
     <>
       <Helmet>
         <title>{book.title} — Kiminou Knox | Poetry Collection</title>
         <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. Available at Amazon, Waterstones, Google Play Books, and more.`} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://kiminouknox.com/books/${book.id}`} />
 
         <meta property="og:type" content="book" />
@@ -190,6 +197,7 @@ export default function BookDetail() {
         <meta name="twitter:creator" content="@KnoxKiminou" />
 
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>
       </Helmet>
 
       <Header />

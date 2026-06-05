@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 export default function Splash() {
@@ -74,6 +75,10 @@ export default function Splash() {
 
   return (
     <>
+      <Helmet>
+        <title>Kiminou Knox | Entry</title>
+        <meta name="robots" content="noindex,nofollow" />
+      </Helmet>
       <style dangerouslySetInnerHTML={{__html: `
         :root {
           --hotspot-left: 18%;

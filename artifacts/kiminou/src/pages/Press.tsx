@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const recognition = [
   {
@@ -105,21 +106,19 @@ export default function Press() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox | Press, Recognition & Media Coverage</title>
-        <meta name="description" content="Press coverage, recognition, and media references for Kiminou Knox — Bay Area author of 7 books and NCAA basketball athlete. Available for interviews, features, and speaking engagements." />
+        <title>Press & Recognition - Kiminou Knox</title>
+        <meta name="description" content="Press, recognition, and public verification references for writer and athlete Kiminou Knox. Media and booking requests via contact form." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/press" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kiminouknox.com/press" />
-        <meta property="og:title" content="Kiminou Knox | Press & Media Coverage" />
-        <meta property="og:description" content="Press coverage and media references for Bay Area author and NCAA athlete Kiminou Knox. Available for interviews, features, and speaking." />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
-        <meta property="og:site_name" content="Kiminou Knox" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@KiminouKnox" />
-        <meta name="twitter:title" content="Kiminou Knox | Press & Media" />
-        <meta name="twitter:description" content="Press coverage for Bay Area author and NCAA athlete Kiminou Knox. Available for interviews and speaking." />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
         <script type="application/ld+json">{JSON.stringify(creativeWorkSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Press", url: `${SITE_URL}/press` },
+            ]),
+          )}
+        </script>
       </Helmet>
       <Header />
 

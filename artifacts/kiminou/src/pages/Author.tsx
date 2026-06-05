@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import TypewriterConfessional from "@/components/LuxuryFX/TypewriterConfessional";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const CHAPTERS = [
   { id: "portrait", label: "Profile" },
@@ -189,39 +190,23 @@ export default function Author() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox | Bay Area Poet & Author — 7 Published Books</title>
-        <meta name="description" content="Kiminou Knox is a 19-year-old poet and author from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city. Creator of the Black Boy Lie universe — 7 published works." />
+        <title>Kiminou Knox | Author Profile</title>
+        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://kiminouknox.com/author" />
-        <meta property="og:title" content="Kiminou Knox | Bay Area Poet & Author — 7 Published Books" />
-        <meta property="og:description" content="Creator of the Black Boy Lie universe. Author of Black Boy Poems, The Spirit of Solomon, Hopeless Romantic, and 4 more poetry collections." />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg" />
-        <meta property="og:image:alt" content="Kiminou Knox — Official Author Portrait" />
-        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta property="og:title" content="Kiminou Knox | Author Profile" />
+        <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction." />
+        <meta property="og:image" content="https://kiminouknox.com/author-kiminou.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@KiminouKnox" />
-        <meta name="twitter:creator" content="@KiminouKnox" />
-        <meta name="twitter:title" content="Kiminou Knox | Bay Area Poet & Author" />
-        <meta name="twitter:description" content="19-year-old poet and author from East Palo Alto. Creator of the Black Boy Lie universe — 7 published works." />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ProfilePage",
-          "dateModified": "2025-06-04",
-          "mainEntity": {
-            "@id": "https://kiminouknox.com/#kiminouknox",
-            "@type": "Person",
-            "name": "Kiminou Knox",
-            "description": "19-year-old Bay Area poet, author, NCAA basketball athlete, and entrepreneur. Creator of the Black Boy Lie literary universe with 7 published works.",
-            "image": "https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg",
-            "url": "https://kiminouknox.com/author",
-            "sameAs": [
-              "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-              "https://www.goodreads.com/author/show/Kiminou_Knox"
-            ]
-          }
-        })}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Author", url: `${SITE_URL}/author` },
+            ]),
+          )}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
@@ -232,7 +217,7 @@ export default function Author() {
           {/* Parallax photo */}
           <motion.div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/kiminou-knox-official-author-portrait.webp')", y: heroBgY, scale: 1.08 }}
+            style={{ backgroundImage: "url('/author-kiminou.jpg')", y: heroBgY, scale: 1.08 }}
           />
           {/* Gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />

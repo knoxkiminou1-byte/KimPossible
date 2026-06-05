@@ -5,6 +5,7 @@ import { ExternalLink, Trophy, TrendingUp, Target, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const measurables = [
   { label: "Height", value: "6'7\"", sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
@@ -52,7 +53,16 @@ export default function Sports() {
       <Helmet>
         <title>Sports & Athletics - Kiminou Knox</title>
         <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats on NCSA, MaxPreps, and 247Sports." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/sports" />
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Sports", url: `${SITE_URL}/sports` },
+            ]),
+          )}
+        </script>
       </Helmet>
       <Header />
 

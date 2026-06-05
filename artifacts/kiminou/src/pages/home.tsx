@@ -21,49 +21,83 @@ import GenerativeArtPanel from "@/components/GenerativeArtPanel";
 import ChapterScroll from "@/components/ChapterScroll";
 import AmbientAudio from "@/components/AmbientAudio";
 import PaperRealmPortal from "@/components/PaperRealmPortal";
+import SeoFaqSection from "@/components/SeoFaqSection";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  personSchema,
+  SITE_DESCRIPTION,
+  SITE_IMAGE,
+  SITE_URL,
+  websiteSchema,
+} from "@/lib/seo";
 
 export default function Home() {
   const [paperMode, setPaperMode] = useState(false);
-
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kiminou Knox",
-    "url": "https://kiminouknox.com/",
-    "sameAs": [
-      "https://x.com/KnoxKiminou",
-      "https://x.com/KiminouKnox",
-      "https://www.instagram.com/hofkiminou"
-    ],
-    "jobTitle": "Athlete, Author, Entrepreneur"
-  };
+  const homeFaq = [
+    {
+      question: "What does Kiminou Knox do?",
+      answer:
+        "Kiminou Knox is an athlete, author, speaker, and creative builder. The site brings together books, essays, speaking, athletics, and media in one place.",
+    },
+    {
+      question: "How many books has Kiminou Knox published?",
+      answer:
+        "The site currently highlights seven published works across poetry, faith, identity, and love. Each book page includes covers, samples, and purchase links where available.",
+    },
+    {
+      question: "What does he speak about?",
+      answer:
+        "Speaking topics include discipline, faith, identity, creativity, writing, Black boy life, and helping young people find a voice without performing one.",
+    },
+    {
+      question: "How do you contact Kiminou Knox for a booking?",
+      answer:
+        "Use the contact form on the site for speaking, press, book, basketball, or other inquiries. The form routes requests through the same site you are viewing now.",
+    },
+    {
+      question: "Where should I start on the site?",
+      answer:
+        "Start with the books, author, speaking, and press pages if you want the clearest search signals and the most direct view of the brand.",
+    },
+  ];
 
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox | Author, Athlete & Entrepreneur — Bay Area</title>
-        <meta name="description" content="Kiminou Knox is a 19-year-old Bay Area author of 7 published poetry books, NCAA basketball athlete, and entrepreneur. Creator of the Black Boy Lie universe — Black Boy Poems, The Spirit of Solomon, Our Father?, Hopeless Romantic, and more." />
-        <meta name="keywords" content="Kiminou Knox, Black Boy Poems, Spirit of Solomon, Our Father, Hopeless Romantic, Boys Raised in Silence, Bay Area author, Black poetry, basketball athlete, youth entrepreneur, Black Boy Lie universe, African American author" />
-        <link rel="canonical" href="https://kiminouknox.com/" />
-
-        <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Kiminou Knox | Author, Athlete & Entrepreneur — Bay Area" />
-        <meta property="og:description" content="19-year-old Bay Area author of 7 published poetry books, NCAA basketball athlete, and entrepreneur. Creator of the Black Boy Lie universe." />
-        <meta property="og:url" content="https://kiminouknox.com/" />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
-        <meta property="og:image:alt" content="Kiminou Knox — Author, Athlete, Entrepreneur from the Bay Area" />
-        <meta property="og:site_name" content="Kiminou Knox" />
-
+        <title>Kiminou Knox | Athlete, Author, Speaker</title>
+        <meta name="description" content={SITE_DESCRIPTION} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <link rel="canonical" href={SITE_URL} />
+        <link rel="preload" as="image" href="/kiminou-splash-art.png" />
+        <meta name="theme-color" content="#090705" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Kiminou Knox | Athlete, Author, Speaker" />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:image" content={SITE_IMAGE} />
+        
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@KiminouKnox" />
-        <meta name="twitter:creator" content="@KiminouKnox" />
-        <meta name="twitter:title" content="Kiminou Knox | Author, Athlete & Entrepreneur" />
-        <meta name="twitter:description" content="19-year-old Bay Area author of 7 poetry books, NCAA basketball athlete, entrepreneur. Creator of the Black Boy Lie universe." />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
-        <meta name="twitter:image:alt" content="Kiminou Knox — Author, Athlete, Entrepreneur" />
-
+        <meta name="twitter:title" content="Kiminou Knox | Athlete, Author, Speaker" />
+        <meta name="twitter:description" content={SITE_DESCRIPTION} />
+        <meta name="twitter:image" content={SITE_IMAGE} />
+        
         <script type="application/ld+json">
-          {JSON.stringify(personSchema)}
+          {JSON.stringify(personSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+            ]),
+          )}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema(homeFaq))}
         </script>
       </Helmet>
 
@@ -74,7 +108,7 @@ export default function Home() {
         colors={["#F59E0B", "#FDE68A", "#FFFBEB", "#D97706"]}
         className="z-0"
       />
-      <div id="main-content" className="relative z-10">
+      <div className="relative z-10">
         <Header />
         <button
           type="button"
@@ -108,6 +142,11 @@ export default function Home() {
             <div id="section-gallery"><FilmStripGallery /></div>
             <div id="section-press"><PressStrip /></div>
             <div id="section-testimonials"><Testimonials /></div>
+            <SeoFaqSection
+              title="A few common questions"
+              intro="These are the search-intent questions people usually ask before they land on the books, speaking, or press pages."
+              items={homeFaq}
+            />
             <GenerativeArtPanel />
           </>
         )}

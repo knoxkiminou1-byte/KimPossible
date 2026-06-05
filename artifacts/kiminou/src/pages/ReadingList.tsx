@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const schema = {
   "@context": "https://schema.org",
@@ -223,6 +224,7 @@ export default function ReadingList() {
       <Helmet>
         <title>Reading List — Kiminou Knox | Books Worth Your Time</title>
         <meta name="description" content="Books curated by Kiminou Knox — author and athlete. Essential reads on Black identity, faith, athletics, creativity, and wisdom that shaped his writing." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/reading-list" />
 
         <meta property="og:type" content="website" />
@@ -237,6 +239,14 @@ export default function ReadingList() {
         <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
 
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Reading List", url: `${SITE_URL}/reading-list` },
+            ]),
+          )}
+        </script>
       </Helmet>
 
       <Header />

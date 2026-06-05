@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import type { BlogPost, BlogCategory } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, Share2, Twitter, Facebook, Linkedin } from "lucide-react";
 import { format } from "date-fns";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -129,12 +130,18 @@ function BlogPostPage() {
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kiminouknox.com/blog/${post.slug}` }
   };
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: SITE_URL },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+    { name: post.title, url: `${SITE_URL}/blog/${post.slug}` },
+  ]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       <Helmet>
         <title>{post.title} — Kiminou Knox</title>
         <meta name="description" content={post.excerpt || `${post.title} — An essay by Kiminou Knox.`} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://kiminouknox.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${post.title} — Kiminou Knox`} />
@@ -148,6 +155,7 @@ function BlogPostPage() {
         <meta name="twitter:description" content={post.excerpt || post.title} />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>
       </Helmet>
       {/* Header Navigation */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">

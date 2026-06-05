@@ -13,6 +13,7 @@ import PoemModal from "@/components/PDFModal";
 import FlipbookModal from "@/components/FlipbookModal";
 import OpenBookOverlay from "@/components/OpenBookOverlay";
 import BookShelf3D from "@/components/BookShelf3D";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -153,7 +154,16 @@ export default function BooksPage() {
       <Helmet>
         <title>Published Books - Kiminou Knox</title>
         <meta name="description" content="Explore all 7 published works by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/books" />
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Books", url: `${SITE_URL}/books` },
+            ]),
+          )}
+        </script>
       </Helmet>
       <Header />
 

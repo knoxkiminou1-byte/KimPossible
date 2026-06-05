@@ -8,6 +8,7 @@ import { Search, Calendar, Clock, ArrowRight, ExternalLink } from "lucide-react"
 import { format } from "date-fns";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 function readingTime(text: string) {
   const words = (text || "").split(/\s+/).length;
@@ -345,6 +346,7 @@ export default function Blog() {
       <Helmet>
         <title>Author's Journal — Kiminou Knox | Essays & Writing</title>
         <meta name="description" content="Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice. Essays and reflections from the Bay Area author." />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Author's Journal — Kiminou Knox | Essays & Writing" />
@@ -357,6 +359,14 @@ export default function Blog() {
         <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Blog", url: `${SITE_URL}/blog` },
+            ]),
+          )}
+        </script>
       </Helmet>
       <Header />
       <main className="min-h-screen bg-black text-white">
