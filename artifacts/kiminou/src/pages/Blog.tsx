@@ -8,7 +8,14 @@ import { Search, Calendar, Clock, ArrowRight, ExternalLink } from "lucide-react"
 import { format } from "date-fns";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import {
+  breadcrumbSchema,
+  SITE_FEED,
+  SITE_GOODREADS_PROFILE,
+  SITE_MEDIUM_PROFILE,
+  SITE_URL,
+} from "@/lib/seo";
+import { blogCategories, publishedBlogPosts } from "@/content/blogContent";
 
 function readingTime(text: string) {
   const words = (text || "").split(/\s+/).length;
@@ -19,8 +26,9 @@ interface MediumPost {
   title: string;
   pubDate: string;
   link: string;
-  thumbnail: string;
-  description: string;
+  thumbnail?: string;
+  description?: string;
+  excerpt?: string;
   categories: string[];
   author: string;
 }
@@ -29,14 +37,25 @@ function useMediumPosts() {
   return useQuery<MediumPost[]>({
     queryKey: ["medium-feed"],
     queryFn: async () => {
-      const rssUrl = encodeURIComponent("https://medium.com/feed/@kiminouknox");
+      const local = await fetch("/medium-posts.json", { cache: "no-cache" });
+      if (local.ok) {
+        const data = await local.json();
+        if (Array.isArray(data.items) && data.items.length > 0) {
+          return data.items as MediumPost[];
+        }
+      }
+
+      const rssUrl = encodeURIComponent("https://medium.com/feed/@knoxkiminou1");
       const res = await fetch(
         `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}&count=12`
       );
       if (!res.ok) throw new Error("Failed to fetch Medium posts");
       const data = await res.json();
       if (data.status !== "ok") throw new Error("Medium RSS error");
-      return data.items as MediumPost[];
+      return (data.items as MediumPost[]).map((item) => ({
+        ...item,
+        excerpt: stripHtml(item.description || "").slice(0, 180),
+      }));
     },
     staleTime: 1000 * 60 * 30,
     retry: 1,
@@ -56,8 +75,9 @@ function mediumReadingTime(html: string) {
 function MediumPostCard({ post, index }: { post: MediumPost; index: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
-  const mins = mediumReadingTime(post.description);
-  const excerpt = stripHtml(post.description).slice(0, 140) + "…";
+  const sourceText = post.description || post.excerpt || "";
+  const mins = mediumReadingTime(sourceText);
+  const excerpt = post.excerpt || `${stripHtml(sourceText).slice(0, 140)}...`;
   const tag = post.categories?.[0];
 
   return (
@@ -150,7 +170,7 @@ function MediumSection() {
               <div className="w-8 h-px bg-amber-400/50 mt-4" />
             </div>
             <a
-              href="https://medium.com/@kiminouknox"
+              href="https://medium.com/@knoxkiminou1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-2.5 border border-amber-400/30 text-amber-300/70 text-xs uppercase tracking-[0.25em] hover:bg-amber-400 hover:text-black hover:border-amber-400 transition-all duration-300"
@@ -177,6 +197,65 @@ function MediumSection() {
             <p className="font-serif text-xl text-white/25">No essays found</p>
           </div>
         )}
+      </div>
+    </section>
+  );
+}
+
+function ExternalWritingSection() {
+  const links = [
+    {
+      label: "Medium",
+      title: "Essays and poems",
+      href: SITE_MEDIUM_PROFILE,
+      text: "Current public writing by Kiminou Knox, including faith, love, discipline, and identity essays.",
+    },
+    {
+      label: "Goodreads",
+      title: "Author blog",
+      href: `${SITE_GOODREADS_PROFILE}/blog`,
+      text: "Reader-facing posts, book updates, author tags, and Goodreads author activity.",
+    },
+    {
+      label: "Podcast",
+      title: "KimYaps",
+      href: "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+      text: "Audio reflections from Kiminou Knox on faith, identity, pressure, and real life.",
+    },
+    {
+      label: "Amazon",
+      title: "Author page",
+      href: "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
+      text: "Book listings and author profile for Kiminou Knox titles available through Amazon.",
+    },
+  ];
+
+  return (
+    <section className="py-16 border-t border-white/6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="mb-8">
+          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3">Across the Web</p>
+          <h2 className="font-serif text-3xl md:text-5xl font-light leading-tight">Where the writing lives</h2>
+          <div className="w-8 h-px bg-amber-400/50 mt-4" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border border-white/8 bg-white/[0.015] p-6 hover:border-amber-400/25 hover:bg-white/[0.04] transition-all duration-300"
+            >
+              <div className="flex items-center justify-between gap-4 mb-5">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-amber-400/60">{link.label}</span>
+                <ExternalLink className="w-4 h-4 text-white/25 group-hover:text-amber-300 transition-colors" />
+              </div>
+              <h3 className="font-serif text-2xl text-white/85 mb-3">{link.title}</h3>
+              <p className="text-sm text-white/40 leading-relaxed">{link.text}</p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -304,11 +383,15 @@ function PostCard({ post, categories, index }: { post: BlogPost; categories: Blo
 }
 
 export default function Blog() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(() => {
+    if (typeof window === "undefined") return "";
+    return new URLSearchParams(window.location.search).get("search") || "";
+  });
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const { data: posts = [], isLoading } = useQuery<BlogPost[]>({ queryKey: ["/api/blog/posts?published=true"] });
-  const { data: categories = [] } = useQuery<BlogCategory[]>({ queryKey: ["/api/blog/categories"] });
+  const posts = publishedBlogPosts;
+  const categories = blogCategories;
+  const isLoading = false;
 
   const filtered = posts.filter(p => {
     const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -331,14 +414,22 @@ export default function Blog() {
     "author": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "@id": "https://kiminouknox.com/#kiminouknox",
+      "@id": "https://kiminouknox.com/#person",
       "url": "https://kiminouknox.com"
     },
     "publisher": {
       "@type": "Person",
       "name": "Kiminou Knox",
       "url": "https://kiminouknox.com"
-    }
+    },
+    "sameAs": [SITE_MEDIUM_PROFILE, SITE_GOODREADS_PROFILE, "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308"],
+    "blogPost": posts.slice(0, 6).map((post) => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "url": `${SITE_URL}/blog/${post.slug}`,
+      "datePublished": post.publishedAt?.toISOString(),
+      "author": { "@id": `${SITE_URL}/#person` },
+    }))
   };
 
   return (
@@ -348,6 +439,8 @@ export default function Blog() {
         <meta name="description" content="Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice. Essays and reflections from the Bay Area author." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://kiminouknox.com/blog" />
+        <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href={SITE_FEED} />
+        <link rel="alternate" type="application/atom+xml" title="Kiminou Knox Journal Atom" href={`${SITE_URL}/feed.xml`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Author's Journal — Kiminou Knox | Essays & Writing" />
         <meta property="og:description" content="Public writing on faith, discipline, love, healing, Black boy life, and creative voice." />
@@ -459,6 +552,7 @@ export default function Blog() {
         </section>
 
         {/* ─── MEDIUM SECTION ─── */}
+        <ExternalWritingSection />
         <MediumSection />
 
       </main>

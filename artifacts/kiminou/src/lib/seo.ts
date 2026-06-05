@@ -4,17 +4,25 @@ export const SITE_DESCRIPTION =
   "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
 export const SITE_IMAGE = "https://kiminouknox.com/og-image.png";
 export const SITE_TWITTER = "@KnoxKiminou";
+export const SITE_FEED = "https://kiminouknox.com/rss.xml";
+export const SITE_MEDIUM_PROFILE = "https://medium.com/@knoxkiminou1";
+export const SITE_GOODREADS_PROFILE =
+  "https://www.goodreads.com/author/show/55621683.Kiminou_Knox";
 
 export const SITE_SAME_AS = [
+  SITE_MEDIUM_PROFILE,
+  SITE_GOODREADS_PROFILE,
   "https://x.com/KnoxKiminou",
   "https://x.com/KiminouKnox",
   "https://www.instagram.com/hofkiminou",
   "https://www.youtube.com/@KiminouKnoxVevo",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-  "https://www.goodreads.com/author/show/Kiminou_Knox",
+  "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+  "https://about.me/kiminou",
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
+  "https://prephoops.com/player/kiminou-knox/",
 ];
 
 export type BreadcrumbItem = {
@@ -39,9 +47,21 @@ export function personSchema() {
     name: SITE_NAME,
     alternateName: "Kiminou",
     url: SITE_URL,
-    image: "https://kiminouknox.com/author-kiminou.jpg",
+    image: "https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg",
     jobTitle: ["Athlete", "Author", "Speaker", "Entrepreneur"],
     description: SITE_DESCRIPTION,
+    birthPlace: {
+      "@type": "Place",
+      name: "Hayward, California",
+    },
+    homeLocation: {
+      "@type": "Place",
+      name: "Oakland, California",
+    },
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Ygnacio Valley High School",
+    },
     knowsAbout: [
       "Poetry",
       "Basketball",
@@ -51,6 +71,8 @@ export function personSchema() {
       "Black boy life",
       "Youth leadership",
       "Publishing",
+      "Black boyhood",
+      "Bay Area literature",
     ],
     sameAs: SITE_SAME_AS,
   };
@@ -66,6 +88,11 @@ export function websiteSchema() {
     description: SITE_DESCRIPTION,
     inLanguage: "en",
     publisher: { "@id": `${SITE_URL}/#person` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/blog?search={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 

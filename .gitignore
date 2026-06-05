@@ -48,3 +48,8 @@ Thumbs.db
 .local/
 .vercel
 .env*
+.replit
+.replitignore
+replit.md
+.migration-backup/
+**/.replit-artifact/

@@ -1,49 +1,30 @@
 import { Helmet } from "react-helmet";
-import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import type { BlogPost, BlogCategory } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, Share2, Twitter, Facebook, Linkedin } from "lucide-react";
 import { format } from "date-fns";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import {
+  blogCategories,
+  findPublishedBlogPost,
+  relatedPublishedBlogPosts,
+} from "@/content/blogContent";
 
 function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
+  const post = findPublishedBlogPost(slug);
+  const categories = blogCategories;
 
-  // Fetch the specific post
-  const { data: post, isLoading: postLoading, error } = useQuery<BlogPost>({
-    queryKey: ["/api/blog/posts", slug],
-    enabled: !!slug,
-  });
-
-  // Fetch categories for reference
-  const { data: categories = [] } = useQuery<BlogCategory[]>({
-    queryKey: ["/api/blog/categories"],
-  });
-
-  // Fetch related posts (published posts from same category)
-  const { data: relatedPosts = [] } = useQuery<BlogPost[]>({
-    queryKey: [`/api/blog/posts?published=true&category=${post?.categoryId}`],
-    enabled: !!post?.categoryId,
-  });
-
-  if (postLoading) {
+  if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-lg">Loading article...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !post) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
+        <Helmet>
+          <title>Article Not Found - Kiminou Knox</title>
+          <meta name="robots" content="noindex,nofollow" />
+        </Helmet>
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
           <p className="text-muted-foreground mb-6">
@@ -60,28 +41,10 @@ function BlogPostPage() {
     );
   }
 
-  // Don't show unpublished posts in public view
-  if (!post.isPublished) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Article Not Available</h1>
-          <p className="text-muted-foreground mb-6">
-            This article is not currently published.
-          </p>
-          <Link href="/blog">
-            <Button data-testid="button-back-to-blog">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
   const category = categories.find(c => c.id === post.categoryId);
-  const otherRelatedPosts = relatedPosts.filter(p => p.id !== post.id).slice(0, 3);
+  const otherRelatedPosts = relatedPublishedBlogPosts(post);
+  const publishedAtIso = post.publishedAt?.toISOString();
+  const updatedAtIso = post.updatedAt?.toISOString() || publishedAtIso;
 
   const shareUrl = window.location.href;
   const shareText = `${post.title} by Kiminou Knox`;
@@ -111,14 +74,15 @@ function BlogPostPage() {
     "headline": post.title,
     "description": post.excerpt || post.title,
     "url": `https://kiminouknox.com/blog/${post.slug}`,
-    "datePublished": post.publishedAt,
-    "dateModified": post.publishedAt,
+    "datePublished": publishedAtIso,
+    "dateModified": updatedAtIso,
     "image": "https://kiminouknox.com/kiminou-knox-social-share.png",
     "inLanguage": "en-US",
+    "keywords": post.tags || [],
     "author": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "@id": "https://kiminouknox.com/#kiminouknox",
+      "@id": "https://kiminouknox.com/#person",
       "url": "https://kiminouknox.com",
       "image": "https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg"
     },
@@ -143,16 +107,23 @@ function BlogPostPage() {
         <meta name="description" content={post.excerpt || `${post.title} — An essay by Kiminou Knox.`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://kiminouknox.com/blog/${post.slug}`} />
+        <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href="https://kiminouknox.com/rss.xml" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${post.title} — Kiminou Knox`} />
         <meta property="og:description" content={post.excerpt || post.title} />
         <meta property="og:url" content={`https://kiminouknox.com/blog/${post.slug}`} />
         <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:image:alt" content={`${post.title} by Kiminou Knox`} />
         <meta property="article:author" content="Kiminou Knox" />
-        {post.publishedAt && <meta property="article:published_time" content={new Date(post.publishedAt).toISOString()} />}
+        {publishedAtIso && <meta property="article:published_time" content={publishedAtIso} />}
+        {updatedAtIso && <meta property="article:modified_time" content={updatedAtIso} />}
+        {post.tags?.map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${post.title} — Kiminou Knox`} />
         <meta name="twitter:description" content={post.excerpt || post.title} />
+        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>
@@ -181,7 +152,7 @@ function BlogPostPage() {
             <div className="flex items-center text-sm text-muted-foreground gap-4">
               <span className="flex items-center">
                 <Calendar className="w-4 h-4 mr-1" />
-                {post.publishedAt && format(new Date(post.publishedAt), "MMMM d, yyyy")}
+                {post.publishedAt && format(post.publishedAt, "MMMM d, yyyy")}
               </span>
               <span className="flex items-center">
                 <Clock className="w-4 h-4 mr-1" />
@@ -311,7 +282,7 @@ function BlogPostPage() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-muted-foreground">
-                        {relatedPost.publishedAt && format(new Date(relatedPost.publishedAt), "MMM d")}
+                        {relatedPost.publishedAt && format(relatedPost.publishedAt, "MMM d")}
                       </span>
                       <Link href={`/blog/${relatedPost.slug}`}>
                         <Button variant="ghost" size="sm" data-testid={`link-related-post-${relatedPost.slug}`}>

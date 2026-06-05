@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kiminou Knox Journal</title>
+  <id>https://kiminouknox.com/blog</id>
+  <link href="https://kiminouknox.com/blog" />
+  <link href="https://kiminouknox.com/feed.xml" rel="self" type="application/atom+xml" />
+  <updated>2026-06-05T17:20:02.827Z</updated>
+  <author><name>Kiminou Knox</name></author>
+  <entry>
+    <title>The Lie I Was Told About Discipline</title>
+    <id>https://kiminouknox.com/blog/the-lie-i-was-told-about-discipline</id>
+    <link href="https://kiminouknox.com/blog/the-lie-i-was-told-about-discipline" />
+    <updated>2025-03-22T00:00:00.000Z</updated>
+    <published>2025-03-22T00:00:00.000Z</published>
+    <summary>Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet.</summary>
+  </entry>
+  <entry>
+    <title>On Love That Does Not Perform</title>
+    <id>https://kiminouknox.com/blog/on-love-that-doesnt-perform</id>
+    <link href="https://kiminouknox.com/blog/on-love-that-doesnt-perform" />
+    <updated>2025-02-14T00:00:00.000Z</updated>
+    <published>2025-02-14T00:00:00.000Z</published>
+    <summary>I keep writing about love because I keep trying to understand it as practice, not performance.</summary>
+  </entry>
+  <entry>
+    <title>Seven Books Before Twenty: Why I Could Not Stop</title>
+    <id>https://kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop</id>
+    <link href="https://kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop" />
+    <updated>2025-01-14T00:00:00.000Z</updated>
+    <published>2025-01-14T00:00:00.000Z</published>
+    <summary>I am nineteen. I have seven published books. The real answer is that I could not stop.</summary>
+  </entry>
+  <entry>
+    <title>What I Mean When I Write About Faith</title>
+    <id>https://kiminouknox.com/blog/what-i-mean-when-i-write-about-faith</id>
+    <link href="https://kiminouknox.com/blog/what-i-mean-when-i-write-about-faith" />
+    <updated>2024-12-01T00:00:00.000Z</updated>
+    <published>2024-12-01T00:00:00.000Z</published>
+    <summary>Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved.</summary>
+  </entry>
+  <entry>
+    <title>The Court and the Page Are the Same Discipline</title>
+    <id>https://kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline</id>
+    <link href="https://kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline" />
+    <updated>2024-11-05T00:00:00.000Z</updated>
+    <published>2024-11-05T00:00:00.000Z</published>
+    <summary>People ask how I balance basketball and writing. I do not. They have never been separate.</summary>
+  </entry>
+  <entry>
+    <title>What Black Boys Are Not Allowed to Feel</title>
+    <id>https://kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel</id>
+    <link href="https://kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel" />
+    <updated>2024-10-01T00:00:00.000Z</updated>
+    <published>2024-10-01T00:00:00.000Z</published>
+    <summary>There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it.</summary>
+  </entry>
+</feed>
