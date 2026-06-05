@@ -41,6 +41,35 @@ const externalProfiles = [
   "https://prephoops.com/player/kiminou-knox/",
 ];
 
+const discoveredMediumPosts = [
+  {
+    title: "It\u2019s Always the Same Writing in a Different Font",
+    link: "https://medium.com/@knoxkiminou1/i-look-at-history-and-see-the-pattern-in-the-ink-i-watch-the-way-they-manufacture-how-the-people-bf880a960919",
+    guid: "https://medium.com/p/bf880a960919",
+    pubDate: "Sun, 11 Jan 2026 00:00:00 GMT",
+    updatedAt: "2026-01-11T00:00:00.000Z",
+    author: SITE_NAME,
+    categories: ["history", "poetry", "poems-on-medium", "kiminou-knox"],
+    thumbnail: SITE_IMAGE,
+    excerpt:
+      "A political and spiritual poem tracing systems of control through history, media, religion, algorithms, housing, and private prisons.",
+    source: "public-search",
+  },
+  {
+    title: "Why I Yearn for Love",
+    link: "https://medium.com/@knoxkiminou1/why-i-yearn-for-love-efaf7c2129fa",
+    guid: "https://medium.com/p/efaf7c2129fa",
+    pubDate: "Fri, 09 Jan 2026 00:00:00 GMT",
+    updatedAt: "2026-01-09T00:00:00.000Z",
+    author: SITE_NAME,
+    categories: ["love", "poetry", "poetry-on-medium", "kiminou-knox"],
+    thumbnail: SITE_IMAGE,
+    excerpt:
+      "A poem about longing for love, fearing real intimacy, and wanting something honest enough to change a life.",
+    source: "public-search",
+  },
+];
+
 function absoluteUrl(route) {
   return new URL(route, SITE_URL).toString();
 }
@@ -123,6 +152,17 @@ function parseMediumFeed(xml) {
     .filter((item) => item.title && item.link);
 }
 
+function mergeMediumPosts(items) {
+  const byLink = new Map();
+  for (const item of [...items, ...discoveredMediumPosts]) {
+    byLink.set(item.link, item);
+  }
+
+  return [...byLink.values()].sort(
+    (a, b) => new Date(b.pubDate || b.updatedAt || 0).getTime() - new Date(a.pubDate || a.updatedAt || 0).getTime(),
+  );
+}
+
 function readMediumCache() {
   if (!fs.existsSync(mediumCachePath)) {
     return [];
@@ -140,7 +180,7 @@ async function fetchMediumPosts() {
   if (process.env.MEDIUM_RSS_PATH && fs.existsSync(process.env.MEDIUM_RSS_PATH)) {
     const xml = fs.readFileSync(process.env.MEDIUM_RSS_PATH, "utf8");
     const items = parseMediumFeed(xml);
-    if (items.length > 0) return items;
+    if (items.length > 0) return mergeMediumPosts(items);
   }
 
   try {
@@ -160,12 +200,12 @@ async function fetchMediumPosts() {
       throw new Error("Medium RSS returned no items");
     }
 
-    return items;
+    return mergeMediumPosts(items);
   } catch (error) {
     const cached = readMediumCache();
-    if (cached.length > 0) return cached;
+    if (cached.length > 0) return mergeMediumPosts(cached);
     console.warn(`[seo] Medium RSS unavailable: ${error.message}`);
-    return [];
+    return mergeMediumPosts([]);
   }
 }
 
