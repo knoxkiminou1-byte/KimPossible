@@ -30,6 +30,32 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return undefined;
+
+          const packagePath = id.split("node_modules/").pop() ?? id;
+
+          if (packagePath.startsWith("framer-motion/")) return "motion";
+          if (packagePath.startsWith("lucide-react/")) return "icons";
+          if (packagePath.startsWith("@radix-ui/")) return "radix-ui";
+          if (packagePath.startsWith("@tanstack/")) return "query";
+          if (packagePath.startsWith("date-fns/")) return "date";
+          if (packagePath.startsWith("recharts/")) return "charts";
+
+          if (
+            packagePath.startsWith("react/") ||
+            packagePath.startsWith("react-dom/") ||
+            packagePath.startsWith("scheduler/")
+          ) {
+            return "react-core";
+          }
+
+          return "vendor";
+        },
+      },
+    },
   },
   server: {
     port,

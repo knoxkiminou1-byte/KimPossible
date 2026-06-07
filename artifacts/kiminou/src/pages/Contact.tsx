@@ -8,7 +8,7 @@ import ContactForm from "@/components/ContactForm";
 import { ExternalLink } from "lucide-react";
 
 const channels = [
-  { label: "Instagram", href: "https://www.instagram.com/hofkiminou", handle: "@hofkiminou", desc: "DMs open for inquiries" },
+  { label: "Instagram", href: "https://www.instagram.com/kiminouknox", handle: "@kiminouknox", desc: "DMs open for inquiries" },
   { label: "Twitter / X", href: "https://x.com/KnoxKiminou", handle: "@KnoxKiminou", desc: "Public conversation" },
   { label: "Email", href: "mailto:knoxkiminou1@gmail.com", handle: "knoxkiminou1@gmail.com", desc: "Best for formal requests" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kiminou-knox-50691a394/", handle: "Kiminou Knox", desc: "Professional connections" },

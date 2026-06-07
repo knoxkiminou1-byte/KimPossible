@@ -23,8 +23,8 @@ const highlights = [
 ];
 
 const profiles = [
-  { name: "NCSA Sports", desc: "Complete athletic profile with stats, measurements, and recruiting information", href: "https://www.ncsasports.org", testId: "link-profile-ncsa" },
-  { name: "MaxPreps", desc: "High school basketball statistics and team performance data", href: "https://www.maxpreps.com", testId: "link-profile-maxpreps" },
+  { name: "NCSA Sports", desc: "Complete athletic profile with stats, measurements, and recruiting information", href: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox", testId: "link-profile-ncsa" },
+  { name: "MaxPreps", desc: "Public career profile and high school basketball record", href: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc", testId: "link-profile-maxpreps" },
   { name: "247Sports", desc: "Rankings, news, and recruiting analysis for high school athletes", href: "https://247sports.com", testId: "link-profile-247sports" },
 ];
 

@@ -66,7 +66,7 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://www.instagram.com/hofkiminou" 
+                  href="https://www.instagram.com/kiminouknox" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 

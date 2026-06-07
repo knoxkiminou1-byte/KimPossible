@@ -31,7 +31,7 @@ const verificationGroups = [
     label: "Books",
     items: [
       { name: "Amazon Author Store", desc: "Author storefront and retail listings", url: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
-      { name: "Goodreads Author Profile", desc: "Reader-facing author profile and book records, including numeric public author ID", url: "https://www.goodreads.com/author/show/Kiminou_Knox" },
+      { name: "Goodreads Author Profile", desc: "Reader-facing author profile and book records, including numeric public author ID", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
       { name: "Black Boy Poems on Bookshop.org", desc: "Paperback listing with publisher, date, pages, format, and EAN", url: "https://bookshop.org" },
       { name: "Google Play Books Listings", desc: "Search results for Kiminou Knox books on Google", url: "https://play.google.com" },
     ],
@@ -39,8 +39,8 @@ const verificationGroups = [
   {
     label: "Basketball",
     items: [
-      { name: "MaxPreps Basketball Profile", desc: "Athlete profile and basketball stats", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
-      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile. Height 6'7\", Weight 235 lbs, Forward/Center, NCAA eligible.", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+      { name: "MaxPreps Basketball Profile", desc: "Public career profile and high school basketball record", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc" },
+      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, school, and NCAA eligibility signal", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
       { name: "Prep Hoops Profile", desc: "Basketball profile and player listing", url: "https://prephoops.com/player/kiminou-knox/" },
     ],
   },
@@ -49,7 +49,7 @@ const verificationGroups = [
     items: [
       { name: "KimYaps on Apple Podcasts", desc: "Public podcast profile for KimYaps. Topics: faith, discipline, identity, culture, relationships.", url: "https://podcasts.apple.com/us/podcast/kimyaps/id1742801718" },
       { name: "Watch Kiminou Knox on YouTube", desc: "Official YouTube channel for Kiminou Knox", url: "https://www.youtube.com/@kiminouknox" },
-      { name: "Read Kiminou Knox essays on Medium", desc: "Medium author profile and public essay archive. Topics: faith, resilience, love, healing, Black boy life.", url: "https://medium.com/@kiminouknox" },
+      { name: "Read Kiminou Knox essays on Medium", desc: "Medium author profile and public essay archive. Topics: faith, resilience, love, healing, Black boy life.", url: "https://medium.com/@knoxkiminou1" },
       { name: "KimYaps on Spotify", desc: "Spotify show profile", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" },
     ],
   },
@@ -67,7 +67,7 @@ const verificationGroups = [
       { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
       { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
-      { name: "Instagram", desc: "Public social profile. @hofkiminou.", url: "https://www.instagram.com/hofkiminou" },
+      { name: "Instagram", desc: "Public social profile. @kiminouknox.", url: "https://www.instagram.com/kiminouknox" },
     ],
   },
 ];
@@ -325,7 +325,7 @@ ATHLETIC PROFILE
 Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
 School: Cristo Rey De La Salle (formerly Ygnacio Valley)
 Status: NCAA Registered & Eligible
-MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox
+MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
 NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox
 
 SPEAKING TOPICS
@@ -345,12 +345,12 @@ RECOGNITION
 MEDIA & DIGITAL PRESENCE
 ─────────────────────────
 Website: https://www.kiminouknox.com
-Instagram: @hofkiminou
+Instagram: @kiminouknox
 Twitter/X: @KnoxKiminou
 YouTube: https://www.youtube.com/@kiminouknox
-Medium: https://medium.com/@kiminouknox
+Medium: https://medium.com/@knoxkiminou1
 Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1742801718
-Goodreads: https://www.goodreads.com/author/show/Kiminou_Knox
+Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
 Amazon Author Store: https://www.amazon.com/stores/author/B0DGM5Z5Q8
 LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/
 

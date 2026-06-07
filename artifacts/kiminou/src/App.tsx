@@ -4,27 +4,27 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import LuxuryCursor from "@/components/LuxuryFX/Cursor";
-import LiteraryTrail from "@/components/LuxuryFX/LiteraryTrail";
-import ScrollProgress from "@/components/ScrollProgress";
-import ScrollProgressArc from "@/components/ScrollProgressArc";
-import BackToTop from "@/components/LuxuryFX/BackToTop";
-import PageTransition from "@/components/LuxuryFX/PageTransition";
-import CursorSpotlight from "@/components/LuxuryFX/CursorSpotlight";
-import SectionDotNav from "@/components/SectionDotNav";
-import AdminGate from "@/components/AdminGate";
-import FirstEditionOverlay from "@/components/FirstEditionOverlay";
-import { motion, AnimatePresence } from "framer-motion";
+import { useIdleReady } from "@/hooks/useIdleReady";
 
-import Splash from "@/pages/Splash";
-import Home from "@/pages/home";
-import About from "@/pages/About";
-import Works from "@/pages/Works";
-import Contact from "@/pages/Contact";
-import Portfolio from "@/pages/Portfolio";
-import BlogAdmin from "@/pages/BlogAdmin";
-import NotFound from "@/pages/not-found";
+const LuxuryCursor = lazy(() => import("@/components/LuxuryFX/Cursor"));
+const LiteraryTrail = lazy(() => import("@/components/LuxuryFX/LiteraryTrail"));
+const ScrollProgress = lazy(() => import("@/components/ScrollProgress"));
+const ScrollProgressArc = lazy(() => import("@/components/ScrollProgressArc"));
+const BackToTop = lazy(() => import("@/components/LuxuryFX/BackToTop"));
+const PageTransition = lazy(() => import("@/components/LuxuryFX/PageTransition"));
+const CursorSpotlight = lazy(() => import("@/components/LuxuryFX/CursorSpotlight"));
+const SectionDotNav = lazy(() => import("@/components/SectionDotNav"));
+const AdminGate = lazy(() => import("@/components/AdminGate"));
+const FirstEditionOverlay = lazy(() => import("@/components/FirstEditionOverlay"));
 
+const Splash = lazy(() => import("@/pages/Splash"));
+const Home = lazy(() => import("@/pages/home"));
+const About = lazy(() => import("@/pages/About"));
+const Works = lazy(() => import("@/pages/Works"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const Portfolio = lazy(() => import("@/pages/Portfolio"));
+const BlogAdmin = lazy(() => import("@/pages/BlogAdmin"));
+const NotFound = lazy(() => import("@/pages/not-found"));
 const Speaking = lazy(() => import("@/pages/Speaking"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
@@ -48,15 +48,10 @@ const POEM_FRAGMENTS = [
 
 function PageFallback() {
   const [fragmentIdx, setFragmentIdx] = useState(() => Math.floor(Math.random() * POEM_FRAGMENTS.length));
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setFragmentIdx(i => (i + 1) % POEM_FRAGMENTS.length);
-        setVisible(true);
-      }, 500);
+      setFragmentIdx(i => (i + 1) % POEM_FRAGMENTS.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -64,32 +59,35 @@ function PageFallback() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">
       <div className="text-center max-w-md px-8">
-        <motion.div
-          className="w-px h-16 bg-amber-400/20 mx-auto mb-8"
-          animate={{ opacity: [0.2, 0.6, 0.2], scaleY: [0.8, 1, 0.8] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={fragmentIdx}
-            initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
-            animate={{ opacity: visible ? 1 : 0, y: 0, filter: "blur(0px)" }}
-            exit={{ opacity: 0, y: -10, filter: "blur(6px)" }}
-            transition={{ duration: 0.5 }}
-            className="font-serif italic text-white/30 text-sm leading-relaxed"
-          >
-            "{POEM_FRAGMENTS[fragmentIdx]}"
-          </motion.p>
-        </AnimatePresence>
-        <motion.p
-          className="text-[9px] uppercase tracking-[0.4em] text-amber-400/20 mt-6"
-          animate={{ opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
+        <div className="w-px h-16 bg-amber-400/20 mx-auto mb-8 animate-pulse" />
+        <p className="font-serif italic text-white/30 text-sm leading-relaxed">
+          "{POEM_FRAGMENTS[fragmentIdx]}"
+        </p>
+        <p className="text-[9px] uppercase tracking-[0.4em] text-amber-400/20 mt-6 animate-pulse">
           Kiminou Knox
-        </motion.p>
+        </p>
       </div>
     </div>
+  );
+}
+
+function DeferredChrome() {
+  const ready = useIdleReady();
+
+  if (!ready) return null;
+
+  return (
+    <Suspense fallback={null}>
+      <FirstEditionOverlay />
+      <LiteraryTrail />
+      <ScrollProgress />
+      <ScrollProgressArc />
+      <LuxuryCursor />
+      <BackToTop />
+      <PageTransition />
+      <CursorSpotlight />
+      <SectionDotNav />
+    </Suspense>
   );
 }
 
@@ -142,15 +140,7 @@ function App() {
           >
             Skip to content
           </a>
-          <FirstEditionOverlay />
-          <LiteraryTrail />
-          <ScrollProgress />
-          <ScrollProgressArc />
-          <LuxuryCursor />
-          <BackToTop />
-          <PageTransition />
-          <CursorSpotlight />
-          <SectionDotNav />
+          <DeferredChrome />
           <div className="grain"></div>
           <Toaster />
           <Router />

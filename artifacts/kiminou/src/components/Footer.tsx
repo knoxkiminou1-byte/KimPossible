@@ -14,7 +14,7 @@ const links = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "https://www.instagram.com/hofkiminou" },
+  { label: "Instagram", href: "https://www.instagram.com/kiminouknox" },
   { label: "Twitter / X", href: "https://x.com/KnoxKiminou" },
 ];
 

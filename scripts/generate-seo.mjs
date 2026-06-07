@@ -36,7 +36,7 @@ const externalProfiles = [
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://x.com/KnoxKiminou",
   "https://x.com/KiminouKnox",
-  "https://www.instagram.com/hofkiminou",
+  "https://www.instagram.com/kiminouknox",
   "https://www.youtube.com/@KiminouKnoxVevo",
   "https://about.me/kiminou",
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",

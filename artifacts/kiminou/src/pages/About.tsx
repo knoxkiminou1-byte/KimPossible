@@ -23,7 +23,7 @@ export default function About() {
           "name": "Artists and Athletes for Change"
         }],
         "sameAs": [
-          "https://instagram.com/hofkiminou",
+          "https://www.instagram.com/kiminouknox",
           "https://x.com/KiminouKnox",
           "https://x.com/KnoxKiminou",
           "https://www.youtube.com/@KiminouKnoxVevo",

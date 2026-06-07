@@ -1,27 +1,10 @@
 import { Helmet } from "react-helmet";
-import { useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import GoldMarquee from "@/components/LuxuryFX/GoldMarquee";
-import FeaturedBookPromo from "@/components/FeaturedBookPromo";
-import WhoIsKiminou from "@/components/WhoIsKiminou";
-import FilmStripGallery from "@/components/FilmStripGallery";
-import Testimonials from "@/components/Testimonials";
-import BookPreview from "@/components/BookPreview";
-import ParticleEffect from "@/components/ParticleEffect";
-import PressStrip from "@/components/PressStrip";
-import PoemOfTheDay from "@/components/PoemOfTheDay";
-import StatsBanner from "@/components/StatsBanner";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
-import QuoteTypewriter from "@/components/QuoteTypewriter";
-import WordCloud from "@/components/WordCloud";
-import PoemAssembler from "@/components/PoemAssembler";
-import GenerativeArtPanel from "@/components/GenerativeArtPanel";
-import ChapterScroll from "@/components/ChapterScroll";
-import AmbientAudio from "@/components/AmbientAudio";
-import PaperRealmPortal from "@/components/PaperRealmPortal";
-import SeoFaqSection from "@/components/SeoFaqSection";
+import { useIdleReady } from "@/hooks/useIdleReady";
 import {
   breadcrumbSchema,
   faqSchema,
@@ -32,35 +15,109 @@ import {
   websiteSchema,
 } from "@/lib/seo";
 
+const GoldMarquee = lazy(() => import("@/components/LuxuryFX/GoldMarquee"));
+const FeaturedBookPromo = lazy(() => import("@/components/FeaturedBookPromo"));
+const WhoIsKiminou = lazy(() => import("@/components/WhoIsKiminou"));
+const FilmStripGallery = lazy(() => import("@/components/FilmStripGallery"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const BookPreview = lazy(() => import("@/components/BookPreview"));
+const ParticleEffect = lazy(() => import("@/components/ParticleEffect"));
+const PressStrip = lazy(() => import("@/components/PressStrip"));
+const PoemOfTheDay = lazy(() => import("@/components/PoemOfTheDay"));
+const StatsBanner = lazy(() => import("@/components/StatsBanner"));
+const QuoteTypewriter = lazy(() => import("@/components/QuoteTypewriter"));
+const WordCloud = lazy(() => import("@/components/WordCloud"));
+const PoemAssembler = lazy(() => import("@/components/PoemAssembler"));
+const GenerativeArtPanel = lazy(() => import("@/components/GenerativeArtPanel"));
+const ChapterScroll = lazy(() => import("@/components/ChapterScroll"));
+const AmbientAudio = lazy(() => import("@/components/AmbientAudio"));
+const PaperRealmPortal = lazy(() => import("@/components/PaperRealmPortal"));
+const SeoFaqSection = lazy(() => import("@/components/SeoFaqSection"));
+
+const PARTICLE_EFFECTS: ("sparkle" | "dust" | "star")[] = ["sparkle", "dust", "star"];
+const PARTICLE_COLORS = ["#F59E0B", "#FDE68A", "#FFFBEB", "#D97706"];
+
+const homeFaq = [
+  {
+    question: "What does Kiminou Knox do?",
+    answer:
+      "Kiminou Knox is an athlete, author, speaker, and creative builder. The site brings together books, essays, speaking, athletics, and media in one place.",
+  },
+  {
+    question: "How many books has Kiminou Knox published?",
+    answer:
+      "The site currently highlights seven published works across poetry, faith, identity, and love. Each book page includes covers, samples, and purchase links where available.",
+  },
+  {
+    question: "What does he speak about?",
+    answer:
+      "Speaking topics include discipline, faith, identity, creativity, writing, Black boy life, and helping young people find a voice without performing one.",
+  },
+  {
+    question: "How do you contact Kiminou Knox for a booking?",
+    answer:
+      "Use the contact form on the site for speaking, press, book, basketball, or other inquiries. The form routes requests through the same site you are viewing now.",
+  },
+  {
+    question: "Where should I start on the site?",
+    answer:
+      "Start with the books, author, speaking, and press pages if you want the clearest search signals and the most direct view of the brand.",
+  },
+];
+
+function IdleMount({ children, timeout = 1200 }: { children: ReactNode; timeout?: number }) {
+  const ready = useIdleReady(timeout);
+
+  return ready ? <Suspense fallback={null}>{children}</Suspense> : null;
+}
+
+function DeferredSection({
+  id,
+  children,
+  minHeight,
+  rootMargin = "1200px 0px",
+}: {
+  id?: string;
+  children: ReactNode;
+  minHeight: number;
+  rootMargin?: string;
+}) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    if (shouldRender) return;
+    const node = ref.current;
+    if (!node) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setShouldRender(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldRender(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin, threshold: 0.01 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [rootMargin, shouldRender]);
+
+  return (
+    <div ref={ref} id={id} style={!shouldRender ? { minHeight } : undefined}>
+      {shouldRender ? <Suspense fallback={null}>{children}</Suspense> : null}
+    </div>
+  );
+}
+
 export default function Home() {
   const [paperMode, setPaperMode] = useState(false);
-  const homeFaq = [
-    {
-      question: "What does Kiminou Knox do?",
-      answer:
-        "Kiminou Knox is an athlete, author, speaker, and creative builder. The site brings together books, essays, speaking, athletics, and media in one place.",
-    },
-    {
-      question: "How many books has Kiminou Knox published?",
-      answer:
-        "The site currently highlights seven published works across poetry, faith, identity, and love. Each book page includes covers, samples, and purchase links where available.",
-    },
-    {
-      question: "What does he speak about?",
-      answer:
-        "Speaking topics include discipline, faith, identity, creativity, writing, Black boy life, and helping young people find a voice without performing one.",
-    },
-    {
-      question: "How do you contact Kiminou Knox for a booking?",
-      answer:
-        "Use the contact form on the site for speaking, press, book, basketball, or other inquiries. The form routes requests through the same site you are viewing now.",
-    },
-    {
-      question: "Where should I start on the site?",
-      answer:
-        "Start with the books, author, speaking, and press pages if you want the clearest search signals and the most direct view of the brand.",
-    },
-  ];
 
   return (
     <>
@@ -69,7 +126,7 @@ export default function Home() {
         <meta name="description" content={SITE_DESCRIPTION} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={SITE_URL} />
-        <link rel="preload" as="image" href="/kiminou-splash-art.png" />
+        <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
         <meta name="theme-color" content="#090705" />
         
         <meta property="og:type" content="website" />
@@ -102,12 +159,14 @@ export default function Home() {
       </Helmet>
 
       <div className={`${paperMode ? "paper-realm-shell" : ""} bg-background text-foreground font-sans antialiased relative`}>
-      <ParticleEffect 
-        density={60} 
-        effects={['sparkle', 'dust', 'star']}
-        colors={["#F59E0B", "#FDE68A", "#FFFBEB", "#D97706"]}
-        className="z-0"
-      />
+      <IdleMount>
+        <ParticleEffect
+          density={60}
+          effects={PARTICLE_EFFECTS}
+          colors={PARTICLE_COLORS}
+          className="z-0"
+        />
+      </IdleMount>
       <div className="relative z-10">
         <Header />
         <button
@@ -120,39 +179,71 @@ export default function Home() {
           3D
         </button>
         {paperMode ? (
-          <>
+          <Suspense fallback={<div className="min-h-screen bg-black" />}>
             <PaperRealmPortal />
             <div id="section-books"><BookPreview /></div>
             <div id="section-gallery"><FilmStripGallery /></div>
             <GenerativeArtPanel />
-          </>
+          </Suspense>
         ) : (
           <>
-            <div id="hero"><Hero /></div>
-            <GoldMarquee />
-            <ChapterScroll />
-            <div id="who-is-kiminou"><WhoIsKiminou /></div>
-            <div id="section-stats"><StatsBanner /></div>
-            <div id="section-poem"><PoemOfTheDay /></div>
-            <div id="section-poem-assembler"><PoemAssembler /></div>
-            <div id="section-featured"><FeaturedBookPromo /></div>
-            <div id="section-quotes"><QuoteTypewriter /></div>
-            <div id="section-books"><BookPreview /></div>
-            <div id="section-wordcloud"><WordCloud /></div>
-            <div id="section-gallery"><FilmStripGallery /></div>
-            <div id="section-press"><PressStrip /></div>
-            <div id="section-testimonials"><Testimonials /></div>
-            <SeoFaqSection
-              title="A few common questions"
-              intro="These are the search-intent questions people usually ask before they land on the books, speaking, or press pages."
-              items={homeFaq}
-            />
-            <GenerativeArtPanel />
+            <Hero />
+            <Suspense fallback={null}>
+              <GoldMarquee />
+            </Suspense>
+            <DeferredSection minHeight={720}>
+              <ChapterScroll />
+            </DeferredSection>
+            <DeferredSection id="who-is-kiminou" minHeight={760}>
+              <WhoIsKiminou />
+            </DeferredSection>
+            <DeferredSection id="section-stats" minHeight={280}>
+              <StatsBanner />
+            </DeferredSection>
+            <DeferredSection id="section-poem" minHeight={620}>
+              <PoemOfTheDay />
+            </DeferredSection>
+            <DeferredSection id="section-poem-assembler" minHeight={640}>
+              <PoemAssembler />
+            </DeferredSection>
+            <DeferredSection id="section-featured" minHeight={760}>
+              <FeaturedBookPromo />
+            </DeferredSection>
+            <DeferredSection id="section-quotes" minHeight={460}>
+              <QuoteTypewriter />
+            </DeferredSection>
+            <DeferredSection id="section-books" minHeight={960}>
+              <BookPreview />
+            </DeferredSection>
+            <DeferredSection id="section-wordcloud" minHeight={560}>
+              <WordCloud />
+            </DeferredSection>
+            <DeferredSection id="section-gallery" minHeight={860}>
+              <FilmStripGallery />
+            </DeferredSection>
+            <DeferredSection id="section-press" minHeight={360}>
+              <PressStrip />
+            </DeferredSection>
+            <DeferredSection id="section-testimonials" minHeight={760}>
+              <Testimonials />
+            </DeferredSection>
+            <DeferredSection minHeight={620}>
+              <SeoFaqSection
+                title="A few common questions"
+                intro="These are the search-intent questions people usually ask before they land on the books, speaking, or press pages."
+                items={homeFaq}
+              />
+            </DeferredSection>
+            <DeferredSection minHeight={720}>
+              <GenerativeArtPanel />
+            </DeferredSection>
           </>
         )}
         <Footer />
         <ContactFAB />
-        <AmbientAudio theme="noir" />
+        <IdleMount timeout={1800}>
+          <AmbientAudio theme="noir" />
+        </IdleMount>
       </div>
       </div>
     </>

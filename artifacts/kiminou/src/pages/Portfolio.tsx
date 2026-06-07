@@ -107,7 +107,7 @@ const QUICK_FACTS = [
 ];
 
 const socials = [
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/hofkiminou", handle: "@hofkiminou" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/kiminouknox", handle: "@kiminouknox" },
   { icon: Twitter, label: "Twitter / X", href: "https://x.com/KnoxKiminou", handle: "@KnoxKiminou" },
 ];
 
