@@ -73,26 +73,26 @@ function BlogPostPage() {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt || post.title,
-    "url": `https://kiminouknox.com/blog/${post.slug}`,
+    "url": `https://www.kiminouknox.com/blog/${post.slug}`,
     "datePublished": publishedAtIso,
     "dateModified": updatedAtIso,
-    "image": "https://kiminouknox.com/kiminou-knox-social-share.png",
+    "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
     "inLanguage": "en-US",
     "keywords": post.tags || [],
     "author": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "@id": "https://kiminouknox.com/#person",
-      "url": "https://kiminouknox.com",
-      "image": "https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg"
+      "@id": "https://www.kiminouknox.com/#person",
+      "url": "https://www.kiminouknox.com",
+      "image": "https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg"
     },
     "publisher": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "url": "https://kiminouknox.com",
-      "logo": { "@type": "ImageObject", "url": "https://kiminouknox.com/favicon-512x512.png" }
+      "url": "https://www.kiminouknox.com",
+      "logo": { "@type": "ImageObject", "url": "https://www.kiminouknox.com/favicon-512x512.png" }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kiminouknox.com/blog/${post.slug}` }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.kiminouknox.com/blog/${post.slug}` }
   };
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: SITE_URL },
@@ -106,13 +106,13 @@ function BlogPostPage() {
         <title>{post.title} — Kiminou Knox</title>
         <meta name="description" content={post.excerpt || `${post.title} — An essay by Kiminou Knox.`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href={`https://kiminouknox.com/blog/${post.slug}`} />
-        <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href="https://kiminouknox.com/rss.xml" />
+        <link rel="canonical" href={`https://www.kiminouknox.com/blog/${post.slug}`} />
+        <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href="https://www.kiminouknox.com/rss.xml" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${post.title} — Kiminou Knox`} />
         <meta property="og:description" content={post.excerpt || post.title} />
-        <meta property="og:url" content={`https://kiminouknox.com/blog/${post.slug}`} />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:url" content={`https://www.kiminouknox.com/blog/${post.slug}`} />
+        <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta property="og:image:alt" content={`${post.title} by Kiminou Knox`} />
         <meta property="article:author" content="Kiminou Knox" />
         {publishedAtIso && <meta property="article:published_time" content={publishedAtIso} />}
@@ -123,7 +123,7 @@ function BlogPostPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${post.title} — Kiminou Knox`} />
         <meta name="twitter:description" content={post.excerpt || post.title} />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>

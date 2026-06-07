@@ -1,10 +1,10 @@
 export const SITE_NAME = "Kiminou Knox";
-export const SITE_URL = "https://kiminouknox.com";
+export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION =
   "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
-export const SITE_IMAGE = "https://kiminouknox.com/og-image.png";
+export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
 export const SITE_TWITTER = "@KnoxKiminou";
-export const SITE_FEED = "https://kiminouknox.com/rss.xml";
+export const SITE_FEED = "https://www.kiminouknox.com/rss.xml";
 export const SITE_MEDIUM_PROFILE = "https://medium.com/@knoxkiminou1";
 export const SITE_GOODREADS_PROFILE =
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox";
@@ -47,7 +47,7 @@ export function personSchema() {
     name: SITE_NAME,
     alternateName: "Kiminou",
     url: SITE_URL,
-    image: "https://kiminouknox.com/kiminou-knox-official-author-portrait.jpg",
+    image: "https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg",
     jobTitle: ["Athlete", "Author", "Speaker", "Entrepreneur"],
     description: SITE_DESCRIPTION,
     birthPlace: {

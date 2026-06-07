@@ -82,7 +82,7 @@ export default function Speaking() {
         <title>Speaking - Kiminou Knox</title>
         <meta name="description" content="Kiminou Knox speaks with schools, teams, and community groups on writing, discipline, faith, grief, and how young people can find a voice without performing one." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/speaking" />
+        <link rel="canonical" href="https://www.kiminouknox.com/speaking" />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([

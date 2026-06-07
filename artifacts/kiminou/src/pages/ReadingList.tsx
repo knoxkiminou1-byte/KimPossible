@@ -12,11 +12,11 @@ const schema = {
   "@type": "ItemList",
   "name": "Kiminou Knox's Reading List",
   "description": "Books curated by Kiminou Knox — author, athlete, and entrepreneur. Essential reads on Black identity, faith, creativity, and mindset.",
-  "url": "https://kiminouknox.com/reading-list",
+  "url": "https://www.kiminouknox.com/reading-list",
   "author": {
     "@type": "Person",
     "name": "Kiminou Knox",
-    "url": "https://kiminouknox.com"
+    "url": "https://www.kiminouknox.com"
   }
 };
 
@@ -225,18 +225,18 @@ export default function ReadingList() {
         <title>Reading List — Kiminou Knox | Books Worth Your Time</title>
         <meta name="description" content="Books curated by Kiminou Knox — author and athlete. Essential reads on Black identity, faith, athletics, creativity, and wisdom that shaped his writing." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/reading-list" />
+        <link rel="canonical" href="https://www.kiminouknox.com/reading-list" />
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kiminou Knox's Reading List — Books Worth Your Time" />
         <meta property="og:description" content="Curated books on Black identity, faith, athletics, and craft from Kiminou Knox — 7-time published author and NCAA athlete." />
-        <meta property="og:url" content="https://kiminouknox.com/reading-list" />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:url" content="https://www.kiminouknox.com/reading-list" />
+        <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kiminou Knox's Reading List" />
         <meta name="twitter:description" content="Books on Black identity, faith, athletics, and craft." />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
 
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">

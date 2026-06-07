@@ -67,7 +67,7 @@ on things that couldn't love me back.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Get the full collection at:
-https://kiminouknox.com/books/spirit-solomon
+https://www.kiminouknox.com/books/spirit-solomon
 
 Instagram: @hofkiminou
 Medium: medium.com/@kiminouknox

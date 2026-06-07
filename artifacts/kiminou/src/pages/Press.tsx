@@ -56,7 +56,7 @@ const verificationGroups = [
   {
     label: "Program / Builder Work",
     items: [
-      { name: "View AAFC Builders", desc: "kiminouknox.com. Web design and digital infrastructure lane.", url: "https://kiminouknox.com" },
+      { name: "View AAFC Builders", desc: "kiminouknox.com. Web design and digital infrastructure lane.", url: "https://www.kiminouknox.com" },
       { name: "View Kiminou Knox Portfolio", desc: "kiminouknox.com. Portfolio and build work overview.", url: "/portfolio" },
     ],
   },
@@ -109,7 +109,7 @@ export default function Press() {
         <title>Press & Recognition - Kiminou Knox</title>
         <meta name="description" content="Press, recognition, and public verification references for writer and athlete Kiminou Knox. Media and booking requests via contact form." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/press" />
+        <link rel="canonical" href="https://www.kiminouknox.com/press" />
         <script type="application/ld+json">{JSON.stringify(creativeWorkSchema)}</script>
         <script type="application/ld+json">
           {JSON.stringify(
@@ -344,7 +344,7 @@ RECOGNITION
 
 MEDIA & DIGITAL PRESENCE
 ─────────────────────────
-Website: https://kiminouknox.com
+Website: https://www.kiminouknox.com
 Instagram: @hofkiminou
 Twitter/X: @KnoxKiminou
 YouTube: https://www.youtube.com/@kiminouknox
@@ -357,8 +357,8 @@ LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/
 MEDIA CONTACT
 ─────────────
 Email: knoxkiminou1@gmail.com
-Booking & Speaking Inquiries: https://kiminouknox.com/contact
-Official Site: https://kiminouknox.com
+Booking & Speaking Inquiries: https://www.kiminouknox.com/contact
+Official Site: https://www.kiminouknox.com
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 © 2025 Kiminou Knox. All rights reserved.

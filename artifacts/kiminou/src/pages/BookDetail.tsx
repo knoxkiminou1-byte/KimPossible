@@ -134,13 +134,13 @@ export default function BookDetail() {
     "author": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "url": "https://kiminouknox.com",
-      "@id": "https://kiminouknox.com/#kiminouknox"
+      "url": "https://www.kiminouknox.com",
+      "@id": "https://www.kiminouknox.com/#kiminouknox"
     },
     "datePublished": book.datePublished || `${book.year}-01-01`,
     ...(book.isbn && { "isbn": book.isbn }),
-    "url": `https://kiminouknox.com/books/${book.id}`,
-    "image": `https://kiminouknox.com${book.cover}`,
+    "url": `https://www.kiminouknox.com/books/${book.id}`,
+    "image": `https://www.kiminouknox.com${book.cover}`,
     "genre": "Poetry",
     "inLanguage": "en",
     "bookFormat": "Paperback",
@@ -176,24 +176,24 @@ export default function BookDetail() {
         <title>{book.title} — Kiminou Knox | Poetry Collection</title>
         <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. Available at Amazon, Waterstones, Google Play Books, and more.`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href={`https://kiminouknox.com/books/${book.id}`} />
+        <link rel="canonical" href={`https://www.kiminouknox.com/books/${book.id}`} />
 
         <meta property="og:type" content="book" />
         <meta property="og:title" content={`${book.title} — Kiminou Knox`} />
         <meta property="og:description" content={book.description} />
-        <meta property="og:url" content={`https://kiminouknox.com/books/${book.id}`} />
-        <meta property="og:image" content={`https://kiminouknox.com${book.cover}`} />
+        <meta property="og:url" content={`https://www.kiminouknox.com/books/${book.id}`} />
+        <meta property="og:image" content={`https://www.kiminouknox.com${book.cover}`} />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="900" />
         {book.isbn && <meta property="books:isbn" content={book.isbn} />}
-        <meta property="books:author" content="https://kiminouknox.com/author" />
+        <meta property="books:author" content="https://www.kiminouknox.com/author" />
         <meta property="books:rating:value" content="5" />
         <meta property="books:rating:scale" content="5" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${book.title} — Kiminou Knox`} />
         <meta name="twitter:description" content={book.description} />
-        <meta name="twitter:image" content={`https://kiminouknox.com${book.cover}`} />
+        <meta name="twitter:image" content={`https://www.kiminouknox.com${book.cover}`} />
         <meta name="twitter:creator" content="@KnoxKiminou" />
 
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.kiminouknox.com/</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/og-image.png</image:loc>
+      <image:title>Kiminou Knox official website image</image:title>
+      <image:caption>Kiminou Knox author, athlete, and speaker official website preview.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg</image:loc>
+      <image:title>Kiminou Knox official author portrait</image:title>
+      <image:caption>Official portrait of Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/author</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg</image:loc>
+      <image:title>Kiminou Knox author portrait</image:title>
+      <image:caption>Kiminou Knox author profile portrait.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/sports</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-basketball-player-interactive.png</image:loc>
+      <image:title>Kiminou Knox basketball player</image:title>
+      <image:caption>Kiminou Knox athletic profile image.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/portfolio</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/athletic-pose.jpg</image:loc>
+      <image:title>Kiminou Knox athlete portrait</image:title>
+      <image:caption>Kiminou Knox athlete portrait from the official portfolio.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/author-reading-book.jpg</image:loc>
+      <image:title>Kiminou Knox author reading</image:title>
+      <image:caption>Kiminou Knox author and literary image.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/youth-leader-portrait.jpg</image:loc>
+      <image:title>Kiminou Knox youth leader portrait</image:title>
+      <image:caption>Kiminou Knox youth leadership portrait.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/spirit-solomon</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg</image:loc>
+      <image:title>The Spirit of Solomon by Kiminou Knox</image:title>
+      <image:caption>The Spirit of Solomon book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/our-father</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
+      <image:title>Our Father? by Kiminou Knox</image:title>
+      <image:caption>Our Father? book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/poems-black-boy</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg</image:loc>
+      <image:title>Poems from a Black Boy by Kiminou Knox</image:title>
+      <image:caption>Poems from a Black Boy book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/hopeless-romantic</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg</image:loc>
+      <image:title>Hopeless Romantic by Kiminou Knox</image:title>
+      <image:caption>Hopeless Romantic book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/boys-raised-in-silence</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png</image:loc>
+      <image:title>Boys Raised in Silence by Kiminou Knox</image:title>
+      <image:caption>Boys Raised in Silence book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/adventures-kiminou-chua</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png</image:loc>
+      <image:title>The Adventures of Kiminou the Great and Chua the Wise by Kiminou Knox</image:title>
+      <image:caption>The Adventures of Kiminou the Great and Chua the Wise book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+</urlset>

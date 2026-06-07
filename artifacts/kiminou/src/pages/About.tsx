@@ -11,11 +11,11 @@ export default function About() {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://kiminouknox.com/#person",
+        "@id": "https://www.kiminouknox.com/#person",
         "name": "Kiminou Knox",
         "alternateName": "Kiminou",
-        "url": "https://kiminouknox.com/",
-        "image": "https://kiminouknox.com/media/headshot.jpg",
+        "url": "https://www.kiminouknox.com/",
+        "image": "https://www.kiminouknox.com/media/headshot.jpg",
         "description": "Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact.",
         "jobTitle": "Writer and athlete",
         "affiliation": [{
@@ -28,27 +28,27 @@ export default function About() {
           "https://x.com/KnoxKiminou",
           "https://www.youtube.com/@KiminouKnoxVevo",
           "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-          "https://kiminouknox.com/"
+          "https://www.kiminouknox.com/"
         ]
       },
       {
         "@type": "WebSite",
-        "@id": "https://kiminouknox.com/#website",
-        "url": "https://kiminouknox.com/",
+        "@id": "https://www.kiminouknox.com/#website",
+        "url": "https://www.kiminouknox.com/",
         "name": "Kiminou Knox",
-        "publisher": { "@id": "https://kiminouknox.com/#person" },
+        "publisher": { "@id": "https://www.kiminouknox.com/#person" },
         "inLanguage": "en"
       },
       {
         "@type": "WebPage",
-        "@id": "https://kiminouknox.com/about#webpage",
-        "url": "https://kiminouknox.com/about",
+        "@id": "https://www.kiminouknox.com/about#webpage",
+        "url": "https://www.kiminouknox.com/about",
         "name": "About",
-        "isPartOf": { "@id": "https://kiminouknox.com/#website" },
-        "about": { "@id": "https://kiminouknox.com/#person" },
+        "isPartOf": { "@id": "https://www.kiminouknox.com/#website" },
+        "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://kiminouknox.com/media/headshot.jpg"
+          "url": "https://www.kiminouknox.com/media/headshot.jpg"
         }
       }
     ]
@@ -60,18 +60,18 @@ export default function About() {
         <title>About - Kiminou Knox</title>
         <meta name="description" content="Writer and athlete from East Palo Alto, California. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/about" />
+        <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About - Kiminou Knox" />
         <meta property="og:description" content="Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact" />
-        <meta property="og:url" content="https://kiminouknox.com/about" />
-        <meta property="og:image" content="https://kiminouknox.com/og/about.jpg" />
+        <meta property="og:url" content="https://www.kiminouknox.com/about" />
+        <meta property="og:image" content="https://www.kiminouknox.com/og/about.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About - Kiminou Knox" />
         <meta name="twitter:description" content="Writer and athlete from East Palo Alto, California" />
-        <meta name="twitter:image" content="https://kiminouknox.com/og/about.jpg" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og/about.jpg" />
         
         <script type="application/ld+json">
           {JSON.stringify(schema)}

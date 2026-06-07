@@ -410,17 +410,17 @@ export default function Blog() {
     "@type": "Blog",
     "name": "Author's Journal — Kiminou Knox",
     "description": "Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice.",
-    "url": "https://kiminouknox.com/blog",
+    "url": "https://www.kiminouknox.com/blog",
     "author": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "@id": "https://kiminouknox.com/#person",
-      "url": "https://kiminouknox.com"
+      "@id": "https://www.kiminouknox.com/#person",
+      "url": "https://www.kiminouknox.com"
     },
     "publisher": {
       "@type": "Person",
       "name": "Kiminou Knox",
-      "url": "https://kiminouknox.com"
+      "url": "https://www.kiminouknox.com"
     },
     "sameAs": [SITE_MEDIUM_PROFILE, SITE_GOODREADS_PROFILE, "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308"],
     "blogPost": posts.slice(0, 6).map((post) => ({
@@ -438,18 +438,18 @@ export default function Blog() {
         <title>Author's Journal — Kiminou Knox | Essays & Writing</title>
         <meta name="description" content="Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice. Essays and reflections from the Bay Area author." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/blog" />
+        <link rel="canonical" href="https://www.kiminouknox.com/blog" />
         <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href={SITE_FEED} />
         <link rel="alternate" type="application/atom+xml" title="Kiminou Knox Journal Atom" href={`${SITE_URL}/feed.xml`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Author's Journal — Kiminou Knox | Essays & Writing" />
         <meta property="og:description" content="Public writing on faith, discipline, love, healing, Black boy life, and creative voice." />
-        <meta property="og:url" content="https://kiminouknox.com/blog" />
-        <meta property="og:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta property="og:url" content="https://www.kiminouknox.com/blog" />
+        <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Author's Journal — Kiminou Knox" />
         <meta name="twitter:description" content="Essays on faith, identity, love, and Black boy life." />
-        <meta name="twitter:image" content="https://kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
         <script type="application/ld+json">

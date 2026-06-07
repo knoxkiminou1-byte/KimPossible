@@ -155,7 +155,7 @@ export default function BooksPage() {
         <title>Published Books - Kiminou Knox</title>
         <meta name="description" content="Explore all 7 published works by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/books" />
+        <link rel="canonical" href="https://www.kiminouknox.com/books" />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([

@@ -193,11 +193,11 @@ export default function Author() {
         <title>Kiminou Knox | Author Profile</title>
         <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/author" />
+        <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
         <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction." />
-        <meta property="og:image" content="https://kiminouknox.com/author-kiminou.jpg" />
+        <meta property="og:image" content="https://www.kiminouknox.com/author-kiminou.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
           {JSON.stringify(

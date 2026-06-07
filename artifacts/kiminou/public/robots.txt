@@ -22,4 +22,5 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
-Sitemap: https://kiminouknox.com/sitemap.xml
+Sitemap: https://www.kiminouknox.com/sitemap.xml
+Sitemap: https://www.kiminouknox.com/image-sitemap.xml

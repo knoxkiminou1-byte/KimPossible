@@ -3,6 +3,35 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm run build",
   "outputDirectory": "artifacts/kiminou/dist/public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/basketball",
+      "destination": "/sports",
+      "permanent": true
+    },
+    {
+      "source": "/press-kit",
+      "destination": "/press",
+      "permanent": true
+    },
+    {
+      "source": "/presskit",
+      "destination": "/press",
+      "permanent": true
+    },
+    {
+      "source": "/photos",
+      "destination": "/image-sitemap.xml",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!api/.*).*)",

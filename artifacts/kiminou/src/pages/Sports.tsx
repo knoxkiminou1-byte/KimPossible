@@ -54,7 +54,7 @@ export default function Sports() {
         <title>Sports & Athletics - Kiminou Knox</title>
         <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats on NCSA, MaxPreps, and 247Sports." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/sports" />
+        <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([

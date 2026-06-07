@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://kiminouknox.com";
+const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION =
   "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
@@ -15,10 +15,13 @@ const booksPath = path.join(publicRoot, "books.json");
 const blogDataPath = path.join(siteRoot, "src", "content", "blogData.json");
 
 const sitemapPath = path.join(publicRoot, "sitemap.xml");
+const imageSitemapPath = path.join(publicRoot, "image-sitemap.xml");
 const rssPath = path.join(publicRoot, "rss.xml");
 const atomPath = path.join(publicRoot, "feed.xml");
 const mediumCachePath = path.join(publicRoot, "medium-posts.json");
 const entityProfilePath = path.join(publicRoot, "kiminou-knox-search-profile.json");
+const routeManifestPath = path.join(publicRoot, "seo-routes.json");
+const robotsPath = path.join(publicRoot, "robots.txt");
 
 const now = new Date();
 const today = now.toISOString().slice(0, 10);
@@ -106,6 +109,17 @@ function excerpt(value, length = 220) {
   return text.length > length ? `${text.slice(0, length - 3).trim()}...` : text;
 }
 
+function compactText(value, length = 360) {
+  const text = stripHtml(Array.isArray(value) ? value.join(" ") : value);
+  return text.length > length ? `${text.slice(0, length - 3).trim()}...` : text;
+}
+
+function dateOnly(value, fallback = today) {
+  if (!value) return fallback;
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? fallback : parsed.toISOString().slice(0, 10);
+}
+
 function tagValue(xml, tagName) {
   const match = xml.match(new RegExp(`<${tagName}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tagName}>`, "i"));
   if (!match) return "";
@@ -186,7 +200,7 @@ async function fetchMediumPosts() {
   try {
     const response = await fetch(MEDIUM_FEED_URL, {
       headers: {
-        "user-agent": "KiminouKnoxSEOGenerator/1.0 (+https://kiminouknox.com)",
+        "user-agent": "KiminouKnoxSEOGenerator/1.0 (+https://www.kiminouknox.com)",
       },
     });
 
@@ -246,6 +260,365 @@ for (const post of publishedPosts) {
   });
 }
 
+const baseRouteMeta = [
+  {
+    loc: "/",
+    title: "Kiminou Knox | Athlete, Author, Speaker",
+    description:
+      "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info.",
+    image: "/og-image.png",
+    keywords: ["Kiminou Knox", "author", "athlete", "speaker", "Bay Area", "poetry"],
+    sections: [
+      {
+        heading: "Kiminou Knox",
+        text: SITE_DESCRIPTION,
+      },
+      {
+        heading: "Featured Work",
+        text: "Books, essays, basketball, speaking, and press information from the official Kiminou Knox website.",
+      },
+    ],
+    schemaType: "WebPage",
+  },
+  {
+    loc: "/about",
+    title: "About - Kiminou Knox",
+    description:
+      "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
+    image: "/kiminou-knox-official-author-portrait.jpg",
+    keywords: ["Kiminou Knox biography", "Kiminou Knox about", "Bay Area author", "athlete author"],
+    sections: [
+      {
+        heading: "About Kiminou Knox",
+        text: "Kiminou Knox is an author, athlete, speaker, and creative voice from the Bay Area.",
+      },
+    ],
+    schemaType: "AboutPage",
+  },
+  {
+    loc: "/works",
+    title: "Works - Kiminou Knox",
+    description:
+      "Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox books", "Kiminou Knox works", "poetry books", "Black boy poems"],
+    sections: [
+      {
+        heading: "Works",
+        text: books.map((book) => `${book.title}: ${book.description}`).join(" "),
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/author",
+    title: "Kiminou Knox | Author Profile",
+    description:
+      "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
+    image: "/kiminou-knox-official-author-portrait.jpg",
+    keywords: ["Kiminou Knox author", "author profile", "young author", "Bay Area writer"],
+    sections: [
+      {
+        heading: "Author Profile",
+        text: "Kiminou Knox writes across poetry, faith, Black boyhood, discipline, emotional honesty, and the cost of finding a voice.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
+    loc: "/books",
+    title: "Published Books - Kiminou Knox",
+    description:
+      "Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy.",
+    image: "/kiminou-knox-book-universe-portal.png",
+    keywords: ["Kiminou Knox books", "published books", "poetry collections", "The Spirit of Solomon"],
+    sections: [
+      {
+        heading: "Published Books",
+        text: books.map((book) => `${book.title}, ${book.subtitle}. ${book.description}`).join(" "),
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/speaking",
+    title: "Speaking - Kiminou Knox",
+    description:
+      "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work.",
+    image: "/kiminou-knox-author-athlete-bay-area.png",
+    keywords: ["Kiminou Knox speaker", "youth speaker", "athlete speaker", "author speaker"],
+    sections: [
+      {
+        heading: "Speaking",
+        text: "Kiminou Knox speaks on discipline, faith, youth voice, Black boyhood, creative work, and the bridge between athletics and writing.",
+      },
+    ],
+    schemaType: "WebPage",
+  },
+  {
+    loc: "/contact",
+    title: "Contact - Kiminou Knox",
+    description:
+      "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["contact Kiminou Knox", "book Kiminou Knox", "Kiminou Knox speaking"],
+    sections: [
+      {
+        heading: "Contact",
+        text: "Use the official contact page for speaking, press, books, basketball, school, and collaboration inquiries.",
+      },
+    ],
+    schemaType: "ContactPage",
+  },
+  {
+    loc: "/press",
+    title: "Press & Recognition - Kiminou Knox",
+    description:
+      "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
+    image: "/opengraph.jpg",
+    keywords: ["Kiminou Knox press", "Kiminou Knox media", "Kiminou Knox recognition"],
+    sections: [
+      {
+        heading: "Press & Recognition",
+        text: "Official press context, recognition, biography, books, athletics, and media information for Kiminou Knox.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
+    loc: "/sports",
+    title: "Sports & Athletics - Kiminou Knox",
+    description:
+      "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
+    image: "/kiminou-knox-basketball-player-interactive.png",
+    keywords: ["Kiminou Knox basketball", "Kiminou Knox athlete", "Bay Area basketball player"],
+    sections: [
+      {
+        heading: "Sports & Athletics",
+        text: "Kiminou Knox is a Bay Area basketball player and multi-sport athlete with public athletic profiles and recruiting context.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
+    loc: "/portfolio",
+    title: "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
+    description:
+      "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox portfolio", "author athlete entrepreneur", "creative portfolio"],
+    sections: [
+      {
+        heading: "Portfolio",
+        text: "A portfolio spanning books, athletics, speaking, youth leadership, editorial work, and creative direction.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
+    loc: "/blog",
+    title: "Author's Journal - Kiminou Knox | Essays & Writing",
+    description:
+      "Essays and poems by Kiminou Knox on faith, identity, love, discipline, writing, basketball, and Black boy life.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox blog", "Kiminou Knox essays", "Kiminou Knox Medium", "author blog"],
+    sections: [
+      {
+        heading: "Author's Journal",
+        text: publishedPosts.map((post) => `${post.title}: ${post.excerpt}`).join(" "),
+      },
+    ],
+    schemaType: "Blog",
+  },
+  {
+    loc: "/reading-list",
+    title: "Reading List - Kiminou Knox | Books Worth Your Time",
+    description:
+      "Kiminou Knox's reading list across faith, discipline, basketball, Black literature, writing craft, and creative growth.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox reading list", "books worth reading", "author reading list"],
+    sections: [
+      {
+        heading: "Reading List",
+        text: "Books and influences connected to faith, discipline, basketball, Black literature, writing craft, and creative growth.",
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+];
+
+const bookRouteMeta = books.map((book) => ({
+  loc: `/books/${book.id}`,
+  title: `${book.title} - Kiminou Knox | Poetry Collection`,
+  description: compactText(`${book.title} by Kiminou Knox. ${book.subtitle}. ${book.description}`, 300),
+  image: book.cover || "/kiminou-knox-social-share.png",
+  keywords: [book.title, "Kiminou Knox book", ...(book.themes || []), "poetry collection"],
+  sections: [
+    {
+      heading: book.title,
+      text: `${book.subtitle}. ${book.description} Published ${book.year}. ISBN ${book.isbn || "available through retailers"}.`,
+    },
+    {
+      heading: "Themes",
+      text: (book.themes || []).join(", "),
+    },
+    ...(book.samplePoems?.length
+      ? [
+          {
+            heading: "Sample",
+            text: `${book.samplePoems[0].title}: ${compactText(book.samplePoems[0].content, 500)}`,
+          },
+        ]
+      : []),
+  ],
+  schemaType: "WebPage",
+  schema: {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "@id": `${absoluteUrl(`/books/${book.id}`)}#book`,
+    name: book.title,
+    alternateName: book.subtitle,
+    url: absoluteUrl(`/books/${book.id}`),
+    image: absoluteUrl(book.cover || "/kiminou-knox-social-share.png"),
+    author: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@type": "Person", name: SITE_NAME },
+    datePublished: book.datePublished,
+    isbn: book.isbn,
+    description: book.description,
+    genre: "Poetry",
+    inLanguage: "en-US",
+    sameAs: Object.values(book.buyLinks || {}).filter(Boolean),
+  },
+}));
+
+const blogRouteMeta = publishedPosts.map((post) => ({
+  loc: `/blog/${post.slug}`,
+  title: `${post.title} - Kiminou Knox`,
+  description: post.excerpt || compactText(post.content, 250),
+  image: post.featuredImage || "/kiminou-knox-social-share.png",
+  keywords: [post.title, "Kiminou Knox essay", ...(post.tags || [])],
+  sections: [
+    {
+      heading: post.title,
+      text: post.excerpt || compactText(post.content, 360),
+    },
+    {
+      heading: "Essay",
+      text: compactText(post.content, 1800),
+    },
+  ],
+  schemaType: "WebPage",
+  schema: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${absoluteUrl(`/blog/${post.slug}`)}#blogposting`,
+    headline: post.title,
+    description: post.excerpt || compactText(post.content, 250),
+    url: absoluteUrl(`/blog/${post.slug}`),
+    image: absoluteUrl(post.featuredImage || "/kiminou-knox-social-share.png"),
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    inLanguage: "en-US",
+    keywords: post.tags || [],
+    author: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@id": `${SITE_URL}/#person` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(`/blog/${post.slug}`) },
+  },
+}));
+
+const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMeta].map((route) => {
+  const matchedSitemap = routes.find((entry) => entry.loc === route.loc);
+  const webpageSchema = {
+    "@context": "https://schema.org",
+    "@type": route.schemaType || "WebPage",
+    "@id": `${absoluteUrl(route.loc)}#webpage`,
+    url: absoluteUrl(route.loc),
+    name: route.title,
+    description: route.description,
+    image: absoluteUrl(route.image || "/og-image.png"),
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#person` },
+    inLanguage: "en-US",
+    dateModified: matchedSitemap?.lastmod || today,
+  };
+
+  return {
+    ...route,
+    url: absoluteUrl(route.loc),
+    lastmod: matchedSitemap?.lastmod || today,
+    image: absoluteUrl(route.image || "/og-image.png"),
+    schemas: [webpageSchema, ...(route.schema ? [route.schema] : [])],
+  };
+});
+
+const imageEntries = [
+  {
+    loc: "/",
+    images: [
+      {
+        loc: "/og-image.png",
+        title: "Kiminou Knox official website image",
+        caption: "Kiminou Knox author, athlete, and speaker official website preview.",
+      },
+      {
+        loc: "/kiminou-knox-official-author-portrait.jpg",
+        title: "Kiminou Knox official author portrait",
+        caption: "Official portrait of Kiminou Knox.",
+      },
+    ],
+  },
+  {
+    loc: "/author",
+    images: [
+      {
+        loc: "/kiminou-knox-official-author-portrait.jpg",
+        title: "Kiminou Knox author portrait",
+        caption: "Kiminou Knox author profile portrait.",
+      },
+    ],
+  },
+  {
+    loc: "/sports",
+    images: [
+      {
+        loc: "/kiminou-knox-basketball-player-interactive.png",
+        title: "Kiminou Knox basketball player",
+        caption: "Kiminou Knox athletic profile image.",
+      },
+    ],
+  },
+  {
+    loc: "/portfolio",
+    images: [
+      {
+        loc: "/photos/athletic-pose.jpg",
+        title: "Kiminou Knox athlete portrait",
+        caption: "Kiminou Knox athlete portrait from the official portfolio.",
+      },
+      {
+        loc: "/photos/author-reading-book.jpg",
+        title: "Kiminou Knox author reading",
+        caption: "Kiminou Knox author and literary image.",
+      },
+      {
+        loc: "/photos/youth-leader-portrait.jpg",
+        title: "Kiminou Knox youth leader portrait",
+        caption: "Kiminou Knox youth leadership portrait.",
+      },
+    ],
+  },
+  ...books.map((book) => ({
+    loc: `/books/${book.id}`,
+    images: [
+      {
+        loc: book.cover,
+        title: `${book.title} by Kiminou Knox`,
+        caption: `${book.title} book cover by Kiminou Knox.`,
+      },
+    ].filter((image) => image.loc),
+  })),
+];
+
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes
@@ -259,6 +632,56 @@ ${routes
   )
   .join("\n")}
 </urlset>
+`;
+
+const imageSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${imageEntries
+  .filter((entry) => entry.images.length > 0)
+  .map(
+    (entry) => `  <url>
+    <loc>${xmlEscape(absoluteUrl(entry.loc))}</loc>
+${entry.images
+  .map(
+    (image) => `    <image:image>
+      <image:loc>${xmlEscape(absoluteUrl(image.loc))}</image:loc>
+      <image:title>${xmlEscape(image.title)}</image:title>
+      <image:caption>${xmlEscape(image.caption)}</image:caption>
+    </image:image>`,
+  )
+  .join("\n")}
+  </url>`,
+  )
+  .join("\n")}
+</urlset>
+`;
+
+const robotsTxt = `User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /splash
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+Sitemap: ${SITE_URL}/image-sitemap.xml
 `;
 
 const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -346,7 +769,28 @@ const entityProfile = {
 };
 
 fs.writeFileSync(sitemapPath, sitemapXml, "utf8");
+fs.writeFileSync(imageSitemapPath, imageSitemapXml, "utf8");
 fs.writeFileSync(rssPath, rssXml, "utf8");
 fs.writeFileSync(atomPath, atomXml, "utf8");
 fs.writeFileSync(mediumCachePath, `${JSON.stringify(mediumJson, null, 2)}\n`, "utf8");
 fs.writeFileSync(entityProfilePath, `${JSON.stringify(entityProfile, null, 2)}\n`, "utf8");
+fs.writeFileSync(
+  routeManifestPath,
+  `${JSON.stringify(
+    {
+      generatedAt: now.toISOString(),
+      site: {
+        name: SITE_NAME,
+        url: SITE_URL,
+        description: SITE_DESCRIPTION,
+        image: SITE_IMAGE,
+        sameAs: externalProfiles,
+      },
+      routes: routeManifestRoutes,
+    },
+    null,
+    2,
+  )}\n`,
+  "utf8",
+);
+fs.writeFileSync(robotsPath, robotsTxt, "utf8");

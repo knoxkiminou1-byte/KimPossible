@@ -52,7 +52,7 @@ export default function Contact() {
         <title>Contact - Kiminou Knox</title>
         <meta name="description" content="Reach out to Kiminou Knox for speaking engagements, media inquiries, book collaborations, AAFC Builders projects, or youth program partnerships." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://kiminouknox.com/contact" />
+        <link rel="canonical" href="https://www.kiminouknox.com/contact" />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([
