@@ -752,7 +752,7 @@
   inset: -14% -10%;
   background:
     radial-gradient(circle at 50% 48%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.88) 47%, rgba(0, 0, 0, 0.98) 72%),
-    url("/paper-realm-hero.png") center / cover no-repeat;
+    url("/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg") center / cover no-repeat;
   opacity: 0.94;
   filter: saturate(1.08) contrast(1.08);
   transform-origin: 50% 52%;

@@ -1,14 +1,14 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-06-07T19:57:09.847Z",
+  "dateModified": "2026-06-07T21:50:08.400Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
     "name": "Kiminou Knox",
     "alternateName": "Kiminou",
     "url": "https://www.kiminouknox.com",
-    "image": "https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg",
+    "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
     "description": "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.",
     "birthPlace": "Hayward, California",
     "homeLocation": "Oakland, California",

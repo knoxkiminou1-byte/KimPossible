@@ -3,6 +3,8 @@ export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION =
   "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
 export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
+export const SITE_PERSON_IMAGE =
+  "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
 export const SITE_TWITTER = "@KnoxKiminou";
 export const SITE_FEED = "https://www.kiminouknox.com/rss.xml";
 export const SITE_MEDIUM_PROFILE = "https://medium.com/@knoxkiminou1";
@@ -47,7 +49,7 @@ export function personSchema() {
     name: SITE_NAME,
     alternateName: "Kiminou",
     url: SITE_URL,
-    image: "https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg",
+    image: SITE_PERSON_IMAGE,
     jobTitle: ["Athlete", "Author", "Speaker", "Entrepreneur"],
     description: SITE_DESCRIPTION,
     birthPlace: {

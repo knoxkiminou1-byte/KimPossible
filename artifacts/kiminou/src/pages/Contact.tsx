@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { ExternalLink } from "lucide-react";
+import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 
 const channels = [
   { label: "Instagram", href: "https://www.instagram.com/kiminouknox", handle: "@kiminouknox", desc: "DMs open for inquiries" },
@@ -77,7 +78,7 @@ export default function Contact() {
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}>
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/author-kiminou.jpg')" }}
+              style={{ backgroundImage: `url('${KIMINOU_IMAGES.officialHeadshot.src}')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30" />

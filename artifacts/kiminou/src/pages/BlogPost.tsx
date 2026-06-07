@@ -84,7 +84,7 @@ function BlogPostPage() {
       "name": "Kiminou Knox",
       "@id": "https://www.kiminouknox.com/#person",
       "url": "https://www.kiminouknox.com",
-      "image": "https://www.kiminouknox.com/kiminou-knox-official-author-portrait.jpg"
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg"
     },
     "publisher": {
       "@type": "Person",

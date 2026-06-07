@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
+import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const recognition = [
@@ -86,6 +87,12 @@ const creativeWorkSchema = {
   url: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
 };
 
+const pressImages = [
+  KIMINOU_IMAGES.officialHeadshot,
+  KIMINOU_IMAGES.footballMediaDay,
+  KIMINOU_IMAGES.chessStrategy,
+];
+
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -110,7 +117,26 @@ export default function Press() {
         <meta name="description" content="Press, recognition, and public verification references for writer and athlete Kiminou Knox. Media and booking requests via contact form." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/press" />
+        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
+        <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">{JSON.stringify(creativeWorkSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "@id": `${SITE_URL}/press#press-images`,
+            name: "Kiminou Knox press images",
+            about: { "@id": `${SITE_URL}/#person` },
+            image: pressImages.map((image) => ({
+              "@type": "ImageObject",
+              url: `${SITE_URL}${image.src}`,
+              name: image.title,
+              caption: image.caption,
+              width: image.width,
+              height: image.height,
+            })),
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([
@@ -146,6 +172,39 @@ export default function Press() {
                 </Link>.
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ─── PRESS IMAGES ─── */}
+        <section className="py-16 border-y border-white/6 bg-white/[0.015]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="mb-10">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Media Images</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Author, Athlete, Strategist</h2>
+              <div className="w-12 h-px bg-amber-400/40 mt-6" />
+            </Reveal>
+            <div className="grid gap-5 md:grid-cols-3">
+              {pressImages.map((image, index) => (
+                <Reveal key={image.src} delay={index * 0.08}>
+                  <figure className="group relative min-h-[360px] overflow-hidden border border-white/8 bg-white/[0.025]">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      width={image.width}
+                      height={image.height}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+                    <figcaption className="absolute bottom-0 left-0 right-0 p-5">
+                      <p className="mb-2 text-[9px] uppercase tracking-[0.28em] text-amber-300/70">{image.category}</p>
+                      <h3 className="font-serif text-xl font-light text-white">{image.title.replace("Kiminou Knox ", "")}</h3>
+                    </figcaption>
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 

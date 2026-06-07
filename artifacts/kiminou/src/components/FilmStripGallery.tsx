@@ -1,16 +1,9 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { KIMINOU_ARCHIVE_IMAGES } from "@/lib/kiminouMedia";
 
-const IMAGES = [
-  { src: "/photos/athletic-pose.jpg", title: "Court Dominance", category: "Athlete" },
-  { src: "/photos/author-reading-book.jpg", title: "Literary Creation", category: "Author" },
-  { src: "/photos/entrepreneur-style.jpg", title: "Brand Vision", category: "Entrepreneur" },
-  { src: "/photos/creative-designer.jpg", title: "Visual Storytelling", category: "Director" },
-  { src: "/photos/author-portrait.jpg", title: "The Poet", category: "Author" },
-  { src: "/photos/athletic-pose.jpg", title: "Athletic Excellence", category: "Athlete" },
-  { src: "/photos/youth-leader-portrait.jpg", title: "Youth Leader", category: "Community" },
-];
+const IMAGES = KIMINOU_ARCHIVE_IMAGES;
 
 const PERFORATION_COUNT = 9;
 
@@ -100,9 +93,13 @@ export default function FilmStripGallery() {
                 >
                   <img
                     src={img.src}
-                    alt={img.title}
+                    alt={img.alt}
                     className="w-full h-full object-cover pointer-events-none"
                     draggable={false}
+                    loading="lazy"
+                    decoding="async"
+                    width={img.width}
+                    height={img.height}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -161,7 +158,7 @@ export default function FilmStripGallery() {
             <motion.img
               key={lightbox}
               src={IMAGES[lightbox].src}
-              alt={IMAGES[lightbox].title}
+              alt={IMAGES[lightbox].alt}
               className="max-w-[80vw] max-h-[80vh] object-contain"
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}

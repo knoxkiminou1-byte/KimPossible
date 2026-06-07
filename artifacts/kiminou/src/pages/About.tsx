@@ -3,9 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
 import SplitNarrative from "@/components/SplitNarrative";
+import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export default function About() {
+  const officialHeadshotUrl = `${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`;
+  const outdoorPortraitUrl = `${SITE_URL}${KIMINOU_IMAGES.outdoorPortrait.src}`;
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -15,7 +19,7 @@ export default function About() {
         "name": "Kiminou Knox",
         "alternateName": "Kiminou",
         "url": "https://www.kiminouknox.com/",
-        "image": "https://www.kiminouknox.com/media/headshot.jpg",
+        "image": officialHeadshotUrl,
         "description": "Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact.",
         "jobTitle": "Writer and athlete",
         "affiliation": [{
@@ -48,7 +52,11 @@ export default function About() {
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://www.kiminouknox.com/media/headshot.jpg"
+          "url": outdoorPortraitUrl,
+          "name": KIMINOU_IMAGES.outdoorPortrait.title,
+          "caption": KIMINOU_IMAGES.outdoorPortrait.caption,
+          "width": KIMINOU_IMAGES.outdoorPortrait.width,
+          "height": KIMINOU_IMAGES.outdoorPortrait.height
         }
       }
     ]
@@ -66,12 +74,12 @@ export default function About() {
         <meta property="og:title" content="About - Kiminou Knox" />
         <meta property="og:description" content="Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact" />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
-        <meta property="og:image" content="https://www.kiminouknox.com/og/about.jpg" />
+        <meta property="og:image" content={outdoorPortraitUrl} />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About - Kiminou Knox" />
         <meta name="twitter:description" content="Writer and athlete from East Palo Alto, California" />
-        <meta name="twitter:image" content="https://www.kiminouknox.com/og/about.jpg" />
+        <meta name="twitter:image" content={outdoorPortraitUrl} />
         
         <script type="application/ld+json">
           {JSON.stringify(schema)}
@@ -95,6 +103,29 @@ export default function About() {
               About
             </h1>
           </div>
+
+          <figure className="mb-12 grid gap-6 overflow-hidden border border-border bg-card md:grid-cols-[0.95fr_1.05fr]">
+            <div className="relative min-h-[420px] bg-muted">
+              <img
+                src={KIMINOU_IMAGES.outdoorPortrait.src}
+                alt={KIMINOU_IMAGES.outdoorPortrait.alt}
+                width={KIMINOU_IMAGES.outdoorPortrait.width}
+                height={KIMINOU_IMAGES.outdoorPortrait.height}
+                loading="eager"
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+            <figcaption className="flex flex-col justify-center p-6 md:p-8">
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-muted-foreground">East Palo Alto Voice</p>
+              <h2 className="mb-4 font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Writer, athlete, and builder in one frame.
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                The same discipline behind the books shows up on the court, in youth work, and in the public voice Kiminou Knox is building from the Bay Area outward.
+              </p>
+            </figcaption>
+          </figure>
 
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">

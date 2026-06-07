@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { Calendar, Trophy, Book, Star, Heart, Users, ArrowRight, ArrowDown, Sparkles, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -20,7 +21,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Foundation Years",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
-    image: "/photos/athletic-pose.jpg"
+    image: KIMINOU_IMAGES.outdoorPortrait.src
   },
   {
     year: "2019",
@@ -29,7 +30,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Multi Sport Excellence",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: "/photos/athletic-pose.jpg"
+    image: KIMINOU_IMAGES.basketballHuddle.src
   },
   {
     year: "2020",
@@ -38,7 +39,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Literary Debut",
     category: "literary", 
     icon: <Book className="w-5 h-5" />,
-    image: "/photos/author-reading-book.jpg"
+    image: KIMINOU_IMAGES.officialHeadshot.src
   },
   {
     year: "2021",
@@ -47,7 +48,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Team Captain",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: "/photos/athletic-pose.jpg"
+    image: KIMINOU_IMAGES.basketballWarmupSmile.src
   },
   {
     year: "2022",
@@ -56,7 +57,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Four Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
-    image: "/photos/author-reading-book.jpg"
+    image: KIMINOU_IMAGES.chessStrategy.src
   },
   {
     year: "2023", 
@@ -65,7 +66,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Entrepreneur Debut",
     category: "business",
     icon: <Users className="w-5 h-5" />,
-    image: "/photos/entrepreneur-style.jpg"
+    image: KIMINOU_IMAGES.outdoorPortrait.src
   },
   {
     year: "2024",
@@ -74,7 +75,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Community Recognition",
     category: "personal",
     icon: <Heart className="w-5 h-5" />,
-    image: "/photos/youth-leader-portrait.jpg"
+    image: KIMINOU_IMAGES.officialHeadshot.src
   },
   {
     year: "2024",
@@ -83,7 +84,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Program Builder",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: "/photos/athletic-pose.jpg"
+    image: KIMINOU_IMAGES.footballLockerRoom.src
   },
   {
     year: "2024",
@@ -92,7 +93,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Seven Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
-    image: "/photos/author-reading-book.jpg"
+    image: KIMINOU_IMAGES.chessStrategy.src
   },
   {
     year: "2025",
@@ -101,7 +102,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Renaissance Man",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
-    image: "/photos/creative-designer.jpg"
+    image: KIMINOU_IMAGES.footballMediaDay.src
   }
 ];
 

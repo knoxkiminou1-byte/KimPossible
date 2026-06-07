@@ -6,6 +6,49 @@ const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION =
   "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
+const KIMINOU_PHOTOS = {
+  officialHeadshot: {
+    loc: "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+    title: "Kiminou Knox official author headshot",
+    caption: "Official headshot of Kiminou Knox for author, press, and speaker profiles.",
+  },
+  outdoorPortrait: {
+    loc: "/photos/kiminou-knox-08-outdoor-candid.jpg",
+    title: "Kiminou Knox outdoor portrait",
+    caption: "Kiminou Knox outdoor portrait for biography and author profile pages.",
+  },
+  basketballHuddle: {
+    loc: "/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
+    title: "Kiminou Knox basketball huddle",
+    caption: "Kiminou Knox with teammates during a basketball game huddle.",
+  },
+  basketballJumpShot: {
+    loc: "/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+    title: "Kiminou Knox basketball jump shot",
+    caption: "Kiminou Knox taking a jump shot during basketball warmups.",
+  },
+  basketballWarmupSmile: {
+    loc: "/photos/kiminou-knox/kiminou-knox-basketball-warmup-smile.jpg",
+    title: "Kiminou Knox basketball warmup",
+    caption: "Kiminou Knox smiling during basketball warmups.",
+  },
+  chessStrategy: {
+    loc: "/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg",
+    title: "Kiminou Knox chess strategy",
+    caption: "Kiminou Knox studying chess as a visual signal of strategy, focus, and discipline.",
+  },
+  footballMediaDay: {
+    loc: "/photos/kiminou-knox/kiminou-knox-football-media-day.jpg",
+    title: "Kiminou Knox football media day",
+    caption: "Kiminou Knox in football uniform during a field media moment.",
+  },
+  footballLockerRoom: {
+    loc: "/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg",
+    title: "Kiminou Knox Ygnacio football locker room",
+    caption: "Kiminou Knox seated in a Ygnacio football uniform in the locker room.",
+  },
+};
+const KIMINOU_PERSON_IMAGE = `${SITE_URL}${KIMINOU_PHOTOS.officialHeadshot.loc}`;
 const MEDIUM_FEED_URL = "https://medium.com/feed/@knoxkiminou1";
 
 const repoRoot = process.cwd();
@@ -266,7 +309,7 @@ const baseRouteMeta = [
     title: "Kiminou Knox | Athlete, Author, Speaker",
     description:
       "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info.",
-    image: "/og-image.png",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
     keywords: ["Kiminou Knox", "author", "athlete", "speaker", "Bay Area", "poetry"],
     sections: [
       {
@@ -285,7 +328,7 @@ const baseRouteMeta = [
     title: "About - Kiminou Knox",
     description:
       "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
-    image: "/kiminou-knox-official-author-portrait.jpg",
+    image: KIMINOU_PHOTOS.outdoorPortrait.loc,
     keywords: ["Kiminou Knox biography", "Kiminou Knox about", "Bay Area author", "athlete author"],
     sections: [
       {
@@ -315,7 +358,7 @@ const baseRouteMeta = [
     title: "Kiminou Knox | Author Profile",
     description:
       "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
-    image: "/kiminou-knox-official-author-portrait.jpg",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
     keywords: ["Kiminou Knox author", "author profile", "young author", "Bay Area writer"],
     sections: [
       {
@@ -345,7 +388,7 @@ const baseRouteMeta = [
     title: "Speaking - Kiminou Knox",
     description:
       "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work.",
-    image: "/kiminou-knox-author-athlete-bay-area.png",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
     keywords: ["Kiminou Knox speaker", "youth speaker", "athlete speaker", "author speaker"],
     sections: [
       {
@@ -360,7 +403,7 @@ const baseRouteMeta = [
     title: "Contact - Kiminou Knox",
     description:
       "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
-    image: "/kiminou-knox-social-share.png",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
     keywords: ["contact Kiminou Knox", "book Kiminou Knox", "Kiminou Knox speaking"],
     sections: [
       {
@@ -375,7 +418,7 @@ const baseRouteMeta = [
     title: "Press & Recognition - Kiminou Knox",
     description:
       "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
-    image: "/opengraph.jpg",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
     keywords: ["Kiminou Knox press", "Kiminou Knox media", "Kiminou Knox recognition"],
     sections: [
       {
@@ -390,7 +433,7 @@ const baseRouteMeta = [
     title: "Sports & Athletics - Kiminou Knox",
     description:
       "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
-    image: "/kiminou-knox-basketball-player-interactive.png",
+    image: KIMINOU_PHOTOS.basketballJumpShot.loc,
     keywords: ["Kiminou Knox basketball", "Kiminou Knox athlete", "Bay Area basketball player"],
     sections: [
       {
@@ -405,7 +448,7 @@ const baseRouteMeta = [
     title: "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
     description:
       "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
-    image: "/kiminou-knox-social-share.png",
+    image: KIMINOU_PHOTOS.outdoorPortrait.loc,
     keywords: ["Kiminou Knox portfolio", "author athlete entrepreneur", "creative portfolio"],
     sections: [
       {
@@ -561,9 +604,21 @@ const imageEntries = [
         caption: "Kiminou Knox author, athlete, and speaker official website preview.",
       },
       {
-        loc: "/kiminou-knox-official-author-portrait.jpg",
-        title: "Kiminou Knox official author portrait",
-        caption: "Official portrait of Kiminou Knox.",
+        ...KIMINOU_PHOTOS.officialHeadshot,
+      },
+      {
+        ...KIMINOU_PHOTOS.outdoorPortrait,
+      },
+    ],
+  },
+  {
+    loc: "/about",
+    images: [
+      {
+        ...KIMINOU_PHOTOS.outdoorPortrait,
+      },
+      {
+        ...KIMINOU_PHOTOS.officialHeadshot,
       },
     ],
   },
@@ -571,9 +626,27 @@ const imageEntries = [
     loc: "/author",
     images: [
       {
-        loc: "/kiminou-knox-official-author-portrait.jpg",
-        title: "Kiminou Knox author portrait",
-        caption: "Kiminou Knox author profile portrait.",
+        ...KIMINOU_PHOTOS.officialHeadshot,
+      },
+      {
+        ...KIMINOU_PHOTOS.outdoorPortrait,
+      },
+      {
+        ...KIMINOU_PHOTOS.chessStrategy,
+      },
+    ],
+  },
+  {
+    loc: "/press",
+    images: [
+      {
+        ...KIMINOU_PHOTOS.officialHeadshot,
+      },
+      {
+        ...KIMINOU_PHOTOS.footballMediaDay,
+      },
+      {
+        ...KIMINOU_PHOTOS.chessStrategy,
       },
     ],
   },
@@ -581,9 +654,19 @@ const imageEntries = [
     loc: "/sports",
     images: [
       {
-        loc: "/kiminou-knox-basketball-player-interactive.png",
-        title: "Kiminou Knox basketball player",
-        caption: "Kiminou Knox athletic profile image.",
+        ...KIMINOU_PHOTOS.basketballJumpShot,
+      },
+      {
+        ...KIMINOU_PHOTOS.basketballWarmupSmile,
+      },
+      {
+        ...KIMINOU_PHOTOS.basketballHuddle,
+      },
+      {
+        ...KIMINOU_PHOTOS.footballLockerRoom,
+      },
+      {
+        ...KIMINOU_PHOTOS.footballMediaDay,
       },
     ],
   },
@@ -591,19 +674,16 @@ const imageEntries = [
     loc: "/portfolio",
     images: [
       {
-        loc: "/photos/athletic-pose.jpg",
-        title: "Kiminou Knox athlete portrait",
-        caption: "Kiminou Knox athlete portrait from the official portfolio.",
+        ...KIMINOU_PHOTOS.outdoorPortrait,
       },
       {
-        loc: "/photos/author-reading-book.jpg",
-        title: "Kiminou Knox author reading",
-        caption: "Kiminou Knox author and literary image.",
+        ...KIMINOU_PHOTOS.officialHeadshot,
       },
       {
-        loc: "/photos/youth-leader-portrait.jpg",
-        title: "Kiminou Knox youth leader portrait",
-        caption: "Kiminou Knox youth leadership portrait.",
+        ...KIMINOU_PHOTOS.basketballJumpShot,
+      },
+      {
+        ...KIMINOU_PHOTOS.chessStrategy,
       },
     ],
   },
@@ -750,7 +830,7 @@ const entityProfile = {
     name: SITE_NAME,
     alternateName: "Kiminou",
     url: SITE_URL,
-    image: `${SITE_URL}/kiminou-knox-official-author-portrait.jpg`,
+    image: KIMINOU_PERSON_IMAGE,
     description: SITE_DESCRIPTION,
     birthPlace: "Hayward, California",
     homeLocation: "Oakland, California",
@@ -784,6 +864,7 @@ fs.writeFileSync(
         url: SITE_URL,
         description: SITE_DESCRIPTION,
         image: SITE_IMAGE,
+        personImage: KIMINOU_PERSON_IMAGE,
         sameAs: externalProfiles,
       },
       routes: routeManifestRoutes,

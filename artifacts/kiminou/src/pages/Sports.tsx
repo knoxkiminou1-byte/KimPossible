@@ -5,6 +5,7 @@ import { ExternalLink, Trophy, TrendingUp, Target, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
+import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const measurables = [
@@ -55,6 +56,8 @@ export default function Sports() {
         <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats on NCSA, MaxPreps, and 247Sports." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
+        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
+        <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([
@@ -62,6 +65,23 @@ export default function Sports() {
               { name: "Sports", url: `${SITE_URL}/sports` },
             ]),
           )}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "@id": `${SITE_URL}/sports#image-gallery`,
+            name: "Kiminou Knox sports photos",
+            about: { "@id": `${SITE_URL}/#person` },
+            image: KIMINOU_SPORTS_IMAGES.map((image) => ({
+              "@type": "ImageObject",
+              url: `${SITE_URL}${image.src}`,
+              name: image.title,
+              caption: image.caption,
+              width: image.width,
+              height: image.height,
+            })),
+          })}
         </script>
       </Helmet>
       <Header />
@@ -89,6 +109,44 @@ export default function Sports() {
                 Multi-sport athlete with varsity experience, NCAA eligibility, and verified profiles on every major recruiting platform.
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Visual Athletics */}
+        <section className="py-20 border-y border-white/6 bg-white/[0.015]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <RevealCard className="mb-12">
+              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Visual Record</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Basketball, Football, Discipline</h2>
+            </RevealCard>
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+              {KIMINOU_SPORTS_IMAGES.map((image, i) => (
+                <RevealCard
+                  key={image.src}
+                  delay={i * 0.06}
+                  className={`${i === 0 ? "md:col-span-5 md:row-span-2" : i === 4 ? "md:col-span-7" : "md:col-span-4"}`}
+                >
+                  <figure className="group relative overflow-hidden border border-white/8 bg-white/[0.025] h-full min-h-[280px]">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      width={image.width}
+                      height={image.height}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/12 to-transparent" />
+                    <figcaption className="absolute bottom-0 left-0 right-0 p-5">
+                      <p className="text-[9px] uppercase tracking-[0.28em] text-amber-300/70 mb-2">{image.category}</p>
+                      <h3 className="font-serif text-xl text-white font-light">{image.title.replace("Kiminou Knox ", "")}</h3>
+                      <p className="text-sm text-white/45 leading-relaxed mt-2 max-w-md">{image.caption}</p>
+                    </figcaption>
+                  </figure>
+                </RevealCard>
+              ))}
+            </div>
           </div>
         </section>
 
