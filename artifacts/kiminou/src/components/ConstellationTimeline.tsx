@@ -5,14 +5,14 @@ const MILESTONES = [
   {
     year: "2006",
     title: "Born in the Bay Area",
-    detail: "Early signs of athletic and creative talent emerge in Oakland, East Palo Alto.",
+    detail: "Oakland and East Palo Alto. That is where it started.",
     category: "personal",
     x: 12, y: 20,
   },
   {
     year: "2019",
     title: "Athletic Emergence",
-    detail: "Reaches 6'7\" and begins excelling on the basketball court across multiple sports.",
+    detail: "Grew to 6'7". Basketball became the second language.",
     category: "athletic",
     x: 28, y: 55,
   },
@@ -40,21 +40,21 @@ const MILESTONES = [
   {
     year: "2023",
     title: "The Tee Shirt Teens",
-    detail: "Founds his own fashion brand rooted in youth culture and authentic expression.",
+    detail: "Starts Tee Shirt Teens, a fashion brand built around youth culture and real creative work.",
     category: "business",
     x: 75, y: 25,
   },
   {
     year: "2024",
     title: "Miles Hall Foundation Honor",
-    detail: "Wins essay contest recognizing community leadership and his grandmother's legacy.",
+    detail: "Top Essay Finalist at the Miles Hall Foundation Youth Summit. Essay: Building Black Brotherhood.",
     category: "personal",
     x: 18, y: 82,
   },
   {
     year: "2024",
-    title: "Seven Books Published",
-    detail: "Hopeless Romantic and Kiminou the Great complete a 7-book literary universe.",
+    title: "Eight Books Published",
+    detail: "Hopeless Romantic and Adventures of Kiminou complete eight books. The universe keeps growing.",
     category: "literary",
     x: 85, y: 65,
   },
@@ -194,7 +194,7 @@ export default function ConstellationTimeline() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-4 font-medium">
-            Journey of Excellence
+            The Record So Far
           </p>
           <h2 className="font-serif text-4xl md:text-6xl font-light text-white mb-4">
             The Constellation

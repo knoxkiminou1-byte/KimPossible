@@ -402,11 +402,11 @@ export default function Author() {
 
           {/* ─── LITERARY WORK ──────────────────────────────── */}
           <section id="literary" className="py-20 scroll-mt-16">
-            <SectionHeading eyebrow="Seven Published Works" title="Literary Work & Themes" />
+            <SectionHeading eyebrow="Eight Published Works" title="Literary Work & Themes" />
             <div className="grid md:grid-cols-2 gap-10">
               <Reveal>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  By nineteen, Knox has authored seven books that form a literary universe centered on the interior lives of Black boys and young Black men. His work moves fluidly across poetry, psychological fiction, and prophetic reflection.
+                  By nineteen, Knox has eight books that form a literary universe centered on the interior lives of Black boys and young Black men. His work moves fluidly across poetry, psychological fiction, and prophetic reflection.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
@@ -585,7 +585,7 @@ export default function Author() {
         {/* ─── THE UNIVERSE (full bleed) ──────────────────── */}
         <section id="universe" className="py-24 border-t border-white/6 scroll-mt-16 overflow-hidden">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 mb-12">
-            <SectionHeading eyebrow="Seven Published Works" title="The Black Boy Lie Universe" />
+            <SectionHeading eyebrow="Eight Published Works" title="The Black Boy Lie Universe" />
           </div>
           <div className="relative">
             {/* Horizontal scroll container */}

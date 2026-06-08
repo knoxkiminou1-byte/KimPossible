@@ -48,7 +48,7 @@ export default function FilmStripGallery() {
           transition={{ duration: 0.7 }}
         >
           <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-3 font-medium">
-            Visual Journey
+            In the Frame
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-white">
             The Archive

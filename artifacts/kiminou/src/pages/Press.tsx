@@ -360,7 +360,7 @@ Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee W
 
 SHORT BIO (50 words)
 ─────────────────────
-Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. Seven published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
+Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. Eight published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
 
 PUBLISHED WORKS
 ───────────────

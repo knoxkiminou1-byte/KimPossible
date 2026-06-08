@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const LINES = [
   "I didn't start writing to be published.",
   "I started writing because nothing else told the truth.",
-  "Nineteen years old. Seven books. One question I keep asking:",
+  "Nineteen years old. Eight books. One question I keep asking:",
   "What does it cost to be honest in a world that rewards performance?",
   "My mother raised me to speak what I know.",
   "My lineage taught me that silence is its own inheritance.",
