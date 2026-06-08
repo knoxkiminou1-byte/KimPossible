@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
 import SplitNarrative from "@/components/SplitNarrative";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
-import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { breadcrumbSchema, personSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
 
 const Radiograph = lazy(() => import("@/components/LuxuryFX/Radiograph"));
 const TypewriterArchaeology = lazy(() => import("@/components/LuxuryFX/TypewriterArchaeology"));
@@ -14,40 +14,14 @@ export default function About() {
   const officialHeadshotUrl = `${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`;
   const outdoorPortraitUrl = `${SITE_URL}${KIMINOU_IMAGES.outdoorPortrait.src}`;
 
+  // Shared Person schema from seo.ts — keeps About and the rest of the site in sync
+  const baseSchema = personSchema();
+
+  // Extend the shared schema with the About-page WebPage node
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://www.kiminouknox.com/#person",
-        "name": "Kiminou Knox",
-        "alternateName": "Kiminou",
-        "url": "https://www.kiminouknox.com/",
-        "image": {
-          "@type": "ImageObject",
-          "url": officialHeadshotUrl,
-          "caption": "Kiminou Knox — official author headshot 2026"
-        },
-        "description": "Eight-time published poet, NCAA-registered basketball athlete, speaker, and podcast host from the Bay Area. Creator of the Black Boy Lie universe.",
-        "jobTitle": ["Author", "Athlete", "Speaker", "Podcast Host"],
-        "birthPlace": { "@type": "Place", "name": "Hayward, California" },
-        "homeLocation": { "@type": "Place", "name": "Bay Area, California" },
-        "alumniOf": [
-          { "@type": "EducationalOrganization", "name": "Ygnacio Valley High School" },
-          { "@type": "EducationalOrganization", "name": "Cristo Rey De La Salle" }
-        ],
-        "award": "Miles Hall Foundation Youth Summit Top Essay Finalist (2025)",
-        "sameAs": [
-          "https://www.instagram.com/kiminouknox",
-          "https://x.com/KnoxKiminou",
-          "https://www.youtube.com/@KiminouKnoxOfficial",
-          "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-          "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
-          "https://www.linkedin.com/in/kiminou-knox-50691a394/",
-          "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
-          "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308"
-        ]
-      },
+      ...baseSchema["@graph"],
       {
         "@type": "WebPage",
         "@id": "https://www.kiminouknox.com/about#webpage",
@@ -71,7 +45,7 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Kiminou Knox — Author, Athlete & Speaker | Bay Area</title>
+        <title>About Kiminou Knox — Author, Athlete &amp; Speaker | Bay Area</title>
         <meta name="description" content="Kiminou Knox is an eight-time published poet, NCAA-registered basketball athlete, speaker, and podcast host from the Bay Area. Creator of the Black Boy Lie universe." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
@@ -79,7 +53,7 @@ export default function About() {
         <meta property="og:type" content="profile" />
         <meta property="og:profile:first_name" content="Kiminou" />
         <meta property="og:profile:last_name" content="Knox" />
-        <meta property="og:title" content="About Kiminou Knox — Author, Athlete & Speaker" />
+        <meta property="og:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
         <meta property="og:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
         <meta property="og:image" content={outdoorPortraitUrl} />
@@ -87,7 +61,7 @@ export default function About() {
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
-        <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete & Speaker" />
+        <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
         <meta name="twitter:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta name="twitter:image" content={outdoorPortraitUrl} />
         
@@ -127,7 +101,7 @@ export default function About() {
               />
             </div>
             <div className="flex flex-col justify-center p-6 md:p-8">
-              <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-muted-foreground">East Palo Alto Voice</p>
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-muted-foreground">Bay Area Voice</p>
               <h2 className="mb-4 font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl">
                 Writer, athlete, and builder in one frame.
               </h2>
@@ -140,7 +114,7 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth work, I try to say the things that usually go unsaid.
+                I am a 19 year old writer and athlete from the Bay Area, California, telling stories that carry faith, grit, and love. I have attended multiple schools across the Bay — Redwood Christian, Ygnacio Valley, and Cristo Rey De La Salle — and each one shaped a different part of who I am. Through books, poems, and youth work, I try to say the things that usually go unsaid.
               </p>
 
               <p data-testid="about-stats">
