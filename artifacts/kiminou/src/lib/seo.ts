@@ -75,15 +75,15 @@ export function personSchema() {
         alumniOf: [
           {
             "@type": "EducationalOrganization",
-            name: "Redwood Christian School",
-          },
-          {
-            "@type": "EducationalOrganization",
             name: "Ygnacio Valley High School",
           },
           {
             "@type": "EducationalOrganization",
             name: "Cristo Rey De La Salle",
+          },
+          {
+            "@type": "EducationalOrganization",
+            name: "Bishop O'Dowd High School",
           },
         ],
         knowsAbout: [
