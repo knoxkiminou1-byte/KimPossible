@@ -164,7 +164,7 @@ export default function SplitNarrative() {
               transition={{ delay: 0.9, duration: 0.6 }}
             >
               {[
-                ["7 Books", "published since 2020"],
+                ["8 Books", "published since 2020"],
                 ["Faith · Love · Identity", "recurring themes"],
                 ["Miles Hall Award", "community recognition"],
                 ["The Tee Shirt Teens", "founder & director"],

@@ -14,7 +14,7 @@ const row2 = [
   "Cristo Rey De La Salle",
   "Ygnacio Valley High School",
   "AAFC Director",
-  "7 Published Books",
+  "8 Published Books",
   "Class of 2025",
 ];
 

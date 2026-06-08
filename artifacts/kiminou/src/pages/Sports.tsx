@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
 import { ExternalLink, Trophy, TrendingUp, Target, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
+
+const LockerRoom = lazy(() => import("@/components/LuxuryFX/LockerRoom"));
 import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
@@ -164,12 +166,7 @@ export default function Sports() {
                       decoding="async"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/12 to-transparent" />
-                    <figcaption className="absolute bottom-0 left-0 right-0 p-5">
-                      <p className="text-[9px] uppercase tracking-[0.28em] text-amber-300/70 mb-2">{image.category}</p>
-                      <h3 className="font-serif text-xl text-white font-light">{image.title.replace("Kiminou Knox ", "")}</h3>
-                      <p className="text-sm text-white/45 leading-relaxed mt-2 max-w-md">{image.caption}</p>
-                    </figcaption>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                   </figure>
                 </RevealCard>
               ))}
@@ -204,6 +201,11 @@ export default function Sports() {
             </div>
           </div>
         </section>
+
+        {/* Locker Room 3D */}
+        <Suspense fallback={null}>
+          <LockerRoom />
+        </Suspense>
 
         {/* Career Timeline */}
         <section className="py-24">

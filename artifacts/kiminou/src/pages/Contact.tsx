@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import MessageBottle from "@/components/LuxuryFX/MessageBottle";
 import { ExternalLink } from "lucide-react";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 
@@ -205,14 +206,16 @@ export default function Contact() {
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="border border-white/8 bg-white/[0.02] p-8 md:p-12">
-                <ContactForm
-                  title=""
-                  description=""
-                  defaultInquiryType="other"
-                  successMessage="Thank you for reaching out. I'll get back to you personally within 3–5 days."
-                />
-              </div>
+              <MessageBottle>
+                <div className="border border-white/8 bg-white/[0.02] p-8 md:p-12">
+                  <ContactForm
+                    title=""
+                    description=""
+                    defaultInquiryType="other"
+                    successMessage="Thank you for reaching out. I'll get back to you personally within 3–5 days."
+                  />
+                </div>
+              </MessageBottle>
             </Reveal>
           </div>
         </section>
