@@ -20,6 +20,9 @@ const socials = [
   { label: "YouTube", href: "https://www.youtube.com/@KiminouKnoxOfficial" },
   { label: "KimYaps Podcast", href: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
+    { label: "Goodreads", href: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
+  { label: "Amazon", href: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
+  { label: "Medium", href: "https://medium.com/@knoxkiminou1" },
 ];
 
 export default function Footer() {
