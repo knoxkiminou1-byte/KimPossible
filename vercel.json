@@ -1,0 +1,42 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "devCommand": "pnpm --filter @workspace/kiminou run dev",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "artifacts/kiminou/dist/public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/press-kit",
+      "destination": "/press",
+      "permanent": true
+    },
+    {
+      "source": "/presskit",
+      "destination": "/press",
+      "permanent": true
+    },
+    {
+      "source": "/photos",
+      "destination": "/image-sitemap.xml",
+      "permanent": false
+    },
+    {
+      "source": "/kimyaps",
+      "destination": "/podcast",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/.*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
