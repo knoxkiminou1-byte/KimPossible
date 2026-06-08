@@ -152,10 +152,19 @@ export default function BooksPage() {
   return (
     <>
       <Helmet>
-        <title>Published Books - Kiminou Knox</title>
-        <meta name="description" content="Explore all 7 published works by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
+        <title>Books by Kiminou Knox — Poetry Collections & Published Works</title>
+        <meta name="description" content="Explore all 8 published works by Kiminou Knox including poetry collections on faith, identity, love, Black boyhood, and finding voice. Available on Amazon and Google Books." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/books" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Books by Kiminou Knox — Poetry Collections & Published Works" />
+        <meta property="og:description" content="8 published poetry collections on faith, identity, love, and Black boyhood. Available on Amazon, Google Books, and more." />
+        <meta property="og:url" content="https://www.kiminouknox.com/books" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="Books by Kiminou Knox — Poetry Collections & Published Works" />
+        <meta name="twitter:description" content="8 published poetry collections on faith, identity, love, and Black boyhood." />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([
@@ -163,6 +172,25 @@ export default function BooksPage() {
               { name: "Books", url: `${SITE_URL}/books` },
             ]),
           )}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Books by Kiminou Knox",
+            "description": "All published books and poetry collections by Kiminou Knox",
+            "url": "https://www.kiminouknox.com/books",
+            "numberOfItems": 8,
+            "author": { "@id": "https://www.kiminouknox.com/#person" },
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "The Spirit of Solomon", "url": "https://www.kiminouknox.com/books/spirit-solomon" },
+              { "@type": "ListItem", "position": 2, "name": "Our Father?", "url": "https://www.kiminouknox.com/books/our-father" },
+              { "@type": "ListItem", "position": 3, "name": "Poems from a Black Boy", "url": "https://www.kiminouknox.com/books/poems-black-boy" },
+              { "@type": "ListItem", "position": 4, "name": "Hopeless Romantic", "url": "https://www.kiminouknox.com/books/hopeless-romantic" },
+              { "@type": "ListItem", "position": 5, "name": "Boys Raised in Silence", "url": "https://www.kiminouknox.com/books/boys-raised-in-silence" },
+              { "@type": "ListItem", "position": 6, "name": "The Adventures of Kiminou the Great and Chua the Wise", "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua" }
+            ]
+          })}
         </script>
       </Helmet>
       <Header />
@@ -179,7 +207,7 @@ export default function BooksPage() {
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">7 Published Works</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">8 Published Works</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
                 <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
                   <ScrambleText text="Published" className="block" delay={0.3} />
@@ -190,6 +218,10 @@ export default function BooksPage() {
               <p className="text-base text-white/45 max-w-xl leading-relaxed">
                 Real covers, real links, sample poems from each collection: faith, identity, love, and the Black experience.
               </p>
+              <div className="mt-8 inline-flex items-center gap-3 border border-amber-400/20 bg-amber-400/4 px-5 py-3 text-sm text-white/50">
+                <span className="text-amber-400 font-semibold">145</span>
+                <span>Google Play ratings on <span className="text-white/70 italic">Hopeless Romantic</span> — Kiminou's most-read collection</span>
+              </div>
             </motion.div>
           </div>
         </section>

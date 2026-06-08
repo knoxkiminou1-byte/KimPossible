@@ -19,35 +19,37 @@ export default function About() {
         "name": "Kiminou Knox",
         "alternateName": "Kiminou",
         "url": "https://www.kiminouknox.com/",
-        "image": officialHeadshotUrl,
-        "description": "Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact.",
-        "jobTitle": "Writer and athlete",
-        "affiliation": [{
-          "@type": "Organization",
-          "name": "Artists and Athletes for Change"
-        }],
+        "image": {
+          "@type": "ImageObject",
+          "url": officialHeadshotUrl,
+          "caption": "Kiminou Knox — official author headshot 2026"
+        },
+        "description": "Eight-time published poet, NCAA-registered basketball athlete, speaker, and podcast host from the Bay Area. Creator of the Black Boy Lie universe.",
+        "jobTitle": ["Author", "Athlete", "Speaker", "Podcast Host"],
+        "birthPlace": { "@type": "Place", "name": "Hayward, California" },
+        "homeLocation": { "@type": "Place", "name": "Bay Area, California" },
+        "alumniOf": [
+          { "@type": "EducationalOrganization", "name": "Ygnacio Valley High School" },
+          { "@type": "EducationalOrganization", "name": "Cristo Rey De La Salle" }
+        ],
+        "award": "Miles Hall Foundation Youth Summit Top Essay Finalist (2025)",
         "sameAs": [
           "https://www.instagram.com/kiminouknox",
-          "https://x.com/KiminouKnox",
           "https://x.com/KnoxKiminou",
-          "https://www.youtube.com/@KiminouKnoxVevo",
+          "https://www.youtube.com/@KiminouKnoxOfficial",
           "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-          "https://www.kiminouknox.com/"
+          "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
+          "https://www.linkedin.com/in/kiminou-knox-50691a394/",
+          "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
+          "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308"
         ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.kiminouknox.com/#website",
-        "url": "https://www.kiminouknox.com/",
-        "name": "Kiminou Knox",
-        "publisher": { "@id": "https://www.kiminouknox.com/#person" },
-        "inLanguage": "en"
       },
       {
         "@type": "WebPage",
         "@id": "https://www.kiminouknox.com/about#webpage",
         "url": "https://www.kiminouknox.com/about",
-        "name": "About",
+        "name": "About Kiminou Knox — Author, Athlete, Speaker",
+        "description": "Learn about Kiminou Knox — eight-time published Bay Area poet, NCAA-registered basketball athlete, youth speaker, and podcast host.",
         "isPartOf": { "@id": "https://www.kiminouknox.com/#website" },
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
@@ -65,20 +67,24 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About - Kiminou Knox</title>
-        <meta name="description" content="Writer and athlete from East Palo Alto, California. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose." />
+        <title>About Kiminou Knox — Author, Athlete & Speaker | Bay Area</title>
+        <meta name="description" content="Kiminou Knox is an eight-time published poet, NCAA-registered basketball athlete, speaker, and podcast host from the Bay Area. Creator of the Black Boy Lie universe." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="About - Kiminou Knox" />
-        <meta property="og:description" content="Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:profile:first_name" content="Kiminou" />
+        <meta property="og:profile:last_name" content="Knox" />
+        <meta property="og:title" content="About Kiminou Knox — Author, Athlete & Speaker" />
+        <meta property="og:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
         <meta property="og:image" content={outdoorPortraitUrl} />
+        <meta property="og:site_name" content="Kiminou Knox" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About - Kiminou Knox" />
-        <meta name="twitter:description" content="Writer and athlete from East Palo Alto, California" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete & Speaker" />
+        <meta name="twitter:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta name="twitter:image" content={outdoorPortraitUrl} />
         
         <script type="application/ld+json">
@@ -134,7 +140,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                My work includes 7 published books and recognition through 5 major awards. Academically, I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                My work includes 8 published books and recognition through multiple awards, including the Miles Hall Foundation Youth Summit Top Essay Finalist (2025). I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
               </p>
 
               <p data-testid="about-family">
@@ -146,7 +152,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work.
+                My published works include Poems from a Black Boy, Our Father?, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, The Adventures of Kiminou the Great and Chua the Wise, and more. I am building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work.
               </p>
 
               <p data-testid="about-speaking">

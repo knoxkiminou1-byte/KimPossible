@@ -39,13 +39,13 @@
     "title": "Poems from a Black Boy",
     "subtitle": "Identity, Heritage, and Hope",
     "year": 2024,
-    "isbn": null,
+    "isbn": "9798316662975",
     "cover": "/books/poems-from-a-black-boy-cover.jpg",
     "pdf": "/books/poems-from-a-black-boy-sample.pdf",
     "themes": ["Identity", "Heritage", "Resilience"],
     "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
-      "amazon": null,
+      "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
       "bookshop": null,
       "bn": null
@@ -68,5 +68,39 @@
       "bn": null
     },
     "featured": true
+  },
+  {
+    "id": "boys-raised-in-silence",
+    "title": "Boys Raised in Silence",
+    "subtitle": "Breaking the Quiet, Finding Voice",
+    "year": 2024,
+    "isbn": "9798316735821",
+    "cover": "/books/boys-raised-in-silence-cover.jpg",
+    "pdf": "/books/boys-raised-in-silence-sample.pdf",
+    "themes": ["Silence", "Masculinity", "Healing"],
+    "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "adventures-kiminou-chua",
+    "title": "The Adventures of Kiminou the Great and Chua the Wise",
+    "subtitle": "A Journey of Friendship and Discovery",
+    "year": 2025,
+    "isbn": "9798316591204",
+    "cover": "/books/adventures-kiminou-chua-cover.jpg",
+    "pdf": "/books/adventures-kiminou-chua-sample.pdf",
+    "themes": ["Friendship", "Growth", "Adventure"],
+    "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
   }
 ]

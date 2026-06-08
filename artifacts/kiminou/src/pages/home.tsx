@@ -9,8 +9,10 @@ import {
   breadcrumbSchema,
   faqSchema,
   personSchema,
+  podcastSchema,
   SITE_DESCRIPTION,
   SITE_IMAGE,
+  SITE_TWITTER,
   SITE_URL,
   websiteSchema,
 } from "@/lib/seo";
@@ -46,7 +48,7 @@ const homeFaq = [
   {
     question: "How many books has Kiminou Knox published?",
     answer:
-      "The site currently highlights seven published works across poetry, faith, identity, and love. Each book page includes covers, samples, and purchase links where available.",
+      "Kiminou Knox has eight published works spanning poetry, faith, identity, and love. Titles include The Spirit of Solomon, Our Father?, Poems from a Black Boy, Hopeless Romantic, Boys Raised in Silence, and The Adventures of Kiminou the Great and Chua the Wise. Each book page includes covers, sample poems, and purchase links.",
   },
   {
     question: "What does he speak about?",
@@ -122,22 +124,27 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox | Athlete, Author, Speaker</title>
-        <meta name="description" content={SITE_DESCRIPTION} />
+        <title>Kiminou Knox | Author, Athlete, Speaker, Podcast Host</title>
+        <meta name="description" content="Official site of Kiminou Knox — eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast. Explore books, essays, and booking info." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={SITE_URL} />
         <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
         <meta name="theme-color" content="#090705" />
         
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kiminou Knox | Athlete, Author, Speaker" />
-        <meta property="og:description" content={SITE_DESCRIPTION} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
+        <meta property="og:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:image" content={SITE_IMAGE} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Kiminou Knox" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kiminou Knox | Athlete, Author, Speaker" />
-        <meta name="twitter:description" content={SITE_DESCRIPTION} />
+        <meta name="twitter:site" content={SITE_TWITTER} />
+        <meta name="twitter:creator" content={SITE_TWITTER} />
+        <meta name="twitter:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
+        <meta name="twitter:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta name="twitter:image" content={SITE_IMAGE} />
         
         <script type="application/ld+json">
@@ -145,6 +152,9 @@ export default function Home() {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(websiteSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(podcastSchema())}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(

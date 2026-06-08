@@ -48,8 +48,8 @@ const verificationGroups = [
   {
     label: "Podcast & Public Voice",
     items: [
-      { name: "KimYaps on Apple Podcasts", desc: "Public podcast profile for KimYaps. Topics: faith, discipline, identity, culture, relationships.", url: "https://podcasts.apple.com/us/podcast/kimyaps/id1742801718" },
-      { name: "Watch Kiminou Knox on YouTube", desc: "Official YouTube channel for Kiminou Knox", url: "https://www.youtube.com/@kiminouknox" },
+      { name: "KimYaps on Apple Podcasts", desc: "Public podcast profile for KimYaps. Topics: faith, discipline, identity, culture, relationships.", url: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" },
+      { name: "YouTube — @KiminouKnoxOfficial", desc: "Official YouTube channel for Kiminou Knox — talks, interviews, and poetry readings.", url: "https://www.youtube.com/@KiminouKnoxOfficial" },
       { name: "Read Kiminou Knox essays on Medium", desc: "Medium author profile and public essay archive. Topics: faith, resilience, love, healing, Black boy life.", url: "https://medium.com/@knoxkiminou1" },
       { name: "KimYaps on Spotify", desc: "Spotify show profile", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" },
     ],
@@ -113,11 +113,20 @@ export default function Press() {
   return (
     <>
       <Helmet>
-        <title>Press & Recognition - Kiminou Knox</title>
-        <meta name="description" content="Press, recognition, and public verification references for writer and athlete Kiminou Knox. Media and booking requests via contact form." />
+        <title>Kiminou Knox — Press, Recognition & Public References</title>
+        <meta name="description" content="Press coverage, awards, and public verification for Kiminou Knox: Miles Hall Foundation Youth Summit Top Essay Finalist (2025), verified profiles on Amazon, Goodreads, MaxPreps, NCSA, Apple Podcasts, and more." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/press" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Kiminou Knox — Press, Recognition & Public References" />
+        <meta property="og:description" content="Miles Hall Foundation Youth Summit Top Essay Finalist (2025). Verified on Amazon, Goodreads, MaxPreps, NCSA, Apple Podcasts, and LinkedIn." />
+        <meta property="og:url" content="https://www.kiminouknox.com/press" />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="Kiminou Knox — Press & Recognition" />
+        <meta name="twitter:description" content="Miles Hall Foundation Youth Summit Top Essay Finalist (2025). Verified across Amazon, Goodreads, MaxPreps, NCSA, and Apple Podcasts." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">{JSON.stringify(creativeWorkSchema)}</script>
         <script type="application/ld+json">
@@ -406,9 +415,9 @@ MEDIA & DIGITAL PRESENCE
 Website: https://www.kiminouknox.com
 Instagram: @kiminouknox
 Twitter/X: @KnoxKiminou
-YouTube: https://www.youtube.com/@kiminouknox
+YouTube: https://www.youtube.com/@KiminouKnoxOfficial
 Medium: https://medium.com/@knoxkiminou1
-Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1742801718
+Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1850364308
 Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
 Amazon Author Store: https://www.amazon.com/stores/author/B0DGM5Z5Q8
 LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/

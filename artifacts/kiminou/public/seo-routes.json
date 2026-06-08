@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T21:55:46.265Z",
+  "generatedAt": "2026-06-08T05:04:25.414Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -48,7 +48,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -65,7 +65,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -88,7 +88,7 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -105,7 +105,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -128,7 +128,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -145,7 +145,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -168,7 +168,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -185,7 +185,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -208,7 +208,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -225,7 +225,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -248,7 +248,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -265,7 +265,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -287,7 +287,7 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -304,7 +304,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -326,7 +326,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -343,7 +343,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -365,7 +365,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -382,7 +382,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -404,7 +404,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -421,7 +421,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -439,12 +439,12 @@
       "sections": [
         {
           "heading": "Author's Journal",
-          "text": "The Lie I Was Told About Discipline: Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet. On Love That Does Not Perform: I keep writing about love because I keep trying to understand it as practice, not performance. Seven Books Before Twenty: Why I Could Not Stop: I am nineteen. I have seven published books. The real answer is that I could not stop. What I Mean When I Write About Faith: Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved. The Court and the Page Are the Same Discipline: People ask how I balance basketball and writing. I do not. They have never been separate. What Black Boys Are Not Allowed to Feel: There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it."
+          "text": "The Lie I Was Told About Discipline: Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet. On Love That Does Not Perform: I keep writing about love because I keep trying to understand it as practice, not performance. Eight Books Before Twenty: Why I Could Not Stop: I am nineteen. I have eight published books. The real answer is that I could not stop. What I Mean When I Write About Faith: Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved. The Court and the Page Are the Same Discipline: People ask how I balance basketball and writing. I do not. They have never been separate. What Black Boys Are Not Allowed to Feel: There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it."
         }
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -461,7 +461,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -483,7 +483,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-06-07",
+      "lastmod": "2026-06-08",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -500,7 +500,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-07"
+          "dateModified": "2026-06-08"
         }
       ]
     },
@@ -1333,12 +1333,12 @@
       ]
     },
     {
-      "loc": "/blog/seven-books-before-twenty-why-i-couldnt-stop",
-      "title": "Seven Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
-      "description": "I am nineteen. I have seven published books. The real answer is that I could not stop.",
+      "loc": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "title": "Eight Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
+      "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
       "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
       "keywords": [
-        "Seven Books Before Twenty: Why I Could Not Stop",
+        "Eight Books Before Twenty: Why I Could Not Stop",
         "Kiminou Knox essay",
         "books",
         "writing life",
@@ -1347,22 +1347,22 @@
       ],
       "sections": [
         {
-          "heading": "Seven Books Before Twenty: Why I Could Not Stop",
-          "text": "I am nineteen. I have seven published books. The real answer is that I could not stop."
+          "heading": "Eight Books Before Twenty: Why I Could Not Stop",
+          "text": "I am nineteen. I have eight published books. The real answer is that I could not stop."
         },
         {
           "heading": "Essay",
-          "text": "I am nineteen. I have seven published books. People ask how. The real answer is that I could not stop. Not as discipline, though that is part of it, but as necessity. The writing was the only place where the interior life had room to be what it actually was. Each book came from a specific season and a specific question I was living inside. Seven books means seven rooms I went through. It is not a ceiling. It is a current count."
+          "text": "I am nineteen. I have eight published books. People ask how. The real answer is that I could not stop. Not as discipline, though that is part of it, but as necessity. The writing was the only place where the interior life had room to be what it actually was. Each book came from a specific season and a specific question I was living inside. Eight books means eight rooms I went through. It is not a ceiling. It is a current count."
         }
       ],
       "schemaType": "WebPage",
       "schema": {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "@id": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop#blogposting",
-        "headline": "Seven Books Before Twenty: Why I Could Not Stop",
-        "description": "I am nineteen. I have seven published books. The real answer is that I could not stop.",
-        "url": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop",
+        "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop#blogposting",
+        "headline": "Eight Books Before Twenty: Why I Could Not Stop",
+        "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
+        "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
         "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
         "datePublished": "2025-01-14T00:00:00.000Z",
         "dateModified": "2025-01-14T00:00:00.000Z",
@@ -1381,19 +1381,19 @@
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop"
+          "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop"
         }
       },
-      "url": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop",
+      "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
       "lastmod": "2025-01-14",
       "schemas": [
         {
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "@id": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop#webpage",
-          "url": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop",
-          "name": "Seven Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
-          "description": "I am nineteen. I have seven published books. The real answer is that I could not stop.",
+          "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop#webpage",
+          "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
+          "name": "Eight Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
+          "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
@@ -1407,10 +1407,10 @@
         {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
-          "@id": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop#blogposting",
-          "headline": "Seven Books Before Twenty: Why I Could Not Stop",
-          "description": "I am nineteen. I have seven published books. The real answer is that I could not stop.",
-          "url": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop",
+          "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop#blogposting",
+          "headline": "Eight Books Before Twenty: Why I Could Not Stop",
+          "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
+          "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
           "datePublished": "2025-01-14T00:00:00.000Z",
           "dateModified": "2025-01-14T00:00:00.000Z",
@@ -1429,7 +1429,7 @@
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://www.kiminouknox.com/blog/seven-books-before-twenty-why-i-couldnt-stop"
+            "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop"
           }
         }
       ]

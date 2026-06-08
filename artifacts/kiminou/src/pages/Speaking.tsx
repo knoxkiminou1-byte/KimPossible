@@ -79,10 +79,34 @@ export default function Speaking() {
   return (
     <>
       <Helmet>
-        <title>Speaking - Kiminou Knox</title>
-        <meta name="description" content="Kiminou Knox speaks with schools, teams, and community groups on writing, discipline, faith, grief, and how young people can find a voice without performing one." />
+        <title>Kiminou Knox — Speaking Engagements for Schools, Teams & Youth Programs</title>
+        <meta name="description" content="Book Kiminou Knox for speaking engagements at schools, youth programs, community groups, and faith organizations. Topics: discipline, identity, Black boy voice, faith, and creative work that lasts." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/speaking" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Book Kiminou Knox to Speak" />
+        <meta property="og:description" content="Speaking engagements for schools, teams, and community groups. Topics include discipline, identity, faith, Black boy voice, and building creative work that lasts." />
+        <meta property="og:url" content="https://www.kiminouknox.com/speaking" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="Book Kiminou Knox to Speak" />
+        <meta name="twitter:description" content="Speaking for schools, youth programs, teams, and faith organizations. Book via kiminouknox.com/speaking." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": `${SITE_URL}/#person`,
+            "name": "Kiminou Knox",
+            "url": `${SITE_URL}/speaking`,
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "Public Speaker",
+              "occupationLocation": { "@type": "Country", "name": "United States" },
+              "description": "Youth speaker on discipline, identity, Black boy voice, faith, and creative work. Engages schools, teams, community groups, and faith organizations."
+            }
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([
@@ -206,7 +230,7 @@ export default function Speaking() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
                     <a
-                      href="https://www.youtube.com/@kiminouknox"
+                      href="https://www.youtube.com/@KiminouKnoxOfficial"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex flex-col items-center gap-4"
@@ -222,7 +246,7 @@ export default function Speaking() {
                       </motion.div>
                       <div className="text-center">
                         <p className="font-serif text-2xl text-white/90 mb-1">Watch on YouTube</p>
-                        <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60">@kiminouknox</p>
+                        <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60">@KiminouKnoxOfficial</p>
                       </div>
                     </a>
                   </div>
@@ -232,7 +256,7 @@ export default function Speaking() {
                     Talks, interviews, and poetry readings on the YouTube channel. Full sessions, not highlights.
                   </p>
                   <a
-                    href="https://www.youtube.com/@kiminouknox"
+                    href="https://www.youtube.com/@KiminouKnoxOfficial"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-shrink-0 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/60 hover:text-amber-300 transition-colors"

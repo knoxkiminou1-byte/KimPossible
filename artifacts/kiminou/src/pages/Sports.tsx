@@ -52,17 +52,44 @@ export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Sports & Athletics - Kiminou Knox</title>
-        <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats on NCSA, MaxPreps, and 247Sports." />
+        <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'7" Forward/Center</title>
+        <meta name="description" content={'Kiminou Knox is a 6\'7" 235lb NCAA-registered basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection. Verified on MaxPreps, NCSA Sports, and Prep Hoops.'} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile" />
+        <meta property="og:description" content={'6\'7" NCAA-registered Forward/Center. Varsity captain. Verified on MaxPreps, NCSA Sports, and Prep Hoops.'} />
+        <meta property="og:url" content="https://www.kiminouknox.com/sports" />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
+        <meta name="twitter:description" content={'6\'7" NCAA-registered Forward/Center. Verified on MaxPreps, NCSA, and Prep Hoops.'} />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": `${SITE_URL}/#person`,
+            "name": "Kiminou Knox",
+            "url": `${SITE_URL}/sports`,
+            "description": "NCAA-registered basketball athlete, 6'7\" Forward/Center at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection, and eight-time published author.",
+            "height": "6 feet 7 inches",
+            "sport": "Basketball",
+            "affiliation": [
+              { "@type": "SportsTeam", "name": "Cristo Rey De La Salle Basketball", "sport": "Basketball" }
+            ],
+            "memberOf": [
+              { "@type": "Organization", "name": "NCAA", "url": "https://www.ncaa.org" }
+            ]
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([
               { name: "Home", url: SITE_URL },
-              { name: "Sports", url: `${SITE_URL}/sports` },
+              { name: "Sports & Athletics", url: `${SITE_URL}/sports` },
             ]),
           )}
         </script>

@@ -10,12 +10,16 @@ const links = [
   { href: "/author", label: "Bio" },
   { href: "/press", label: "Press" },
   { href: "/blog", label: "Blog" },
+  { href: "/podcast", label: "KimYaps Podcast" },
   { href: "/contact", label: "Contact" },
 ];
 
 const socials = [
   { label: "Instagram", href: "https://www.instagram.com/kiminouknox" },
   { label: "Twitter / X", href: "https://x.com/KnoxKiminou" },
+  { label: "YouTube", href: "https://www.youtube.com/@KiminouKnoxOfficial" },
+  { label: "KimYaps Podcast", href: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
 ];
 
 export default function Footer() {
@@ -45,10 +49,10 @@ export default function Footer() {
               className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-6"
               data-testid="footer-subtitle"
             >
-              Athlete · Author · Entrepreneur
+              Author · Athlete · Speaker · Podcast Host
             </p>
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
-              A Bay Area writer and basketball athlete building a legacy through books, sport, and youth leadership.
+              Eight-time published Bay Area poet and NCAA-registered basketball athlete building a legacy through books, sport, youth leadership, and the KimYaps podcast.
             </p>
           </motion.div>
 

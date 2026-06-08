@@ -34,10 +34,11 @@ const Press = lazy(() => import("@/pages/Press"));
 const Sports = lazy(() => import("@/pages/Sports"));
 const Author = lazy(() => import("@/pages/Author"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
+const Podcast = lazy(() => import("@/pages/Podcast"));
 
 const POEM_FRAGMENTS = [
   "They called me wise before I learned what wisdom cost.",
-  "Black boy. Bay Area. Seven books before twenty.",
+  "Black boy. Bay Area. Eight books before twenty.",
   "Faith is the question and the answer in the same breath.",
   "The court and the page demand the same thing — truth.",
   "I write from silence. I play from fire.",
@@ -120,6 +121,10 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />
+        <Route path="/podcast" component={Podcast} />
+        <Route path="/kimyaps">
+          <Redirect to="/podcast" />
+        </Route>
         <Route path="/admin/blog">
           <AdminGate><BlogAdmin /></AdminGate>
         </Route>

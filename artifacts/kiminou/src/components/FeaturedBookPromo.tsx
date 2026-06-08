@@ -44,8 +44,8 @@ export default function FeaturedBookPromo() {
                   }}
                 />
                 <img
-                  src="/covers/kiminou-knox-adventures-kiminou-great-chua.png"
-                  alt="The Adventures of Kiminou the Great and Chua the Wise"
+                  src="/covers/kiminou-knox-hopeless-romantic-poetry.jpg"
+                  alt="Hopeless Romantic by Kiminou Knox"
                   className="w-full h-auto rounded-r-sm shadow-[0_32px_80px_rgba(0,0,0,0.7),0_8px_20px_rgba(0,0,0,0.5)]"
                   style={{ backfaceVisibility: "hidden" }}
                 />
@@ -69,15 +69,13 @@ export default function FeaturedBookPromo() {
           >
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-amber-400/70 mb-5 font-medium">
-                Latest Release · 2025
+                Most-Read · 145 Ratings
               </p>
               <h2
                 className="font-serif text-3xl md:text-4xl xl:text-5xl font-light leading-tight text-white mb-4"
                 data-testid="featured-book-title"
               >
-                The Adventures of<br />
-                <span className="italic text-amber-200/90">Kiminou the Great</span><br />
-                and Chua the Wise
+                <span className="italic text-amber-200/90">Hopeless Romantic</span>
               </h2>
               <div className="w-10 h-px bg-amber-400/50 mb-6" />
             </div>
@@ -86,11 +84,11 @@ export default function FeaturedBookPromo() {
               className="text-base text-white/55 leading-relaxed"
               data-testid="featured-book-description"
             >
-              A whimsical tale of two friends discovering that courage and wisdom work best together. Perfect for young readers exploring the power of friendship, growth, and believing in themselves.
+              An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Kiminou's most-read work — 145 ratings on Google Play Books.
             </p>
 
             <div className="flex flex-wrap gap-2">
-              {["Friendship", "Growth", "Adventure", "Children's"].map((tag) => (
+              {["Love", "Heartbreak", "Healing", "Poetry"].map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 border border-white/10 text-white/50 text-xs uppercase tracking-[0.15em] rounded-full"
@@ -102,7 +100,7 @@ export default function FeaturedBookPromo() {
 
             <div className="flex flex-wrap gap-4 pt-2">
               <motion.a
-                href="https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ"
+                href="https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3 bg-amber-400 text-black font-semibold text-sm uppercase tracking-[0.14em] transition-all duration-300"
@@ -113,14 +111,14 @@ export default function FeaturedBookPromo() {
                 <ExternalLink className="w-4 h-4" />
                 Buy on Google Books
               </motion.a>
-              <Link href="/books/adventures-kiminou-chua">
+              <Link href="/books/hopeless-romantic">
                 <motion.span
                   className="inline-flex items-center gap-2 px-7 py-3 border border-white/20 text-white/70 text-sm uppercase tracking-[0.14em] cursor-pointer hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   data-testid="featured-book-learn-more"
                 >
-                  Learn More →
+                  Read More →
                 </motion.span>
               </Link>
             </div>
