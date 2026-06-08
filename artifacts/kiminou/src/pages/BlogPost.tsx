@@ -242,8 +242,7 @@ function BlogPostPage() {
             <div>
               <h3 className="text-2xl font-bold mb-2">Kiminou Knox</h3>
               <p className="text-muted-foreground mb-4">
-                18-year-old athlete, author, and entrepreneur from the Bay Area. Passionate about 
-                sharing insights on sports, literature, and business through authentic storytelling.
+                19-year-old author, athlete, and builder from the Bay Area. Eight books. NCAA registered. He writes what others leave out.
               </p>
               <div className="flex gap-2">
                 <Link href="/">

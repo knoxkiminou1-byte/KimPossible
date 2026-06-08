@@ -136,7 +136,7 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, I create work that helps people feel deeply and act with purpose.
+                I am a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth work, I try to say the things that usually go unsaid.
               </p>
 
               <p data-testid="about-stats">
@@ -144,7 +144,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-family">
-                My family serves as my compass. I am the son of Rashida Knox, a distinguished Bay Area marketer and presidential singer whose dedication to excellence shapes my approach to every endeavor. My grandmother, Dr. Faye McNair Knox, devoted her life to serving the One East Palo Alto community as its executive director, teaching me that service is a promise you renew each day.
+                My family serves as my compass. I am the son of Rashida Knox, a Bay Area marketer and singer whose standard for what good work looks like I carry into everything I do. My grandmother, Dr. Faye McNair Knox, ran One East Palo Alto as its executive director. She showed me what service actually looks like.
               </p>
 
               <p data-testid="about-work">
@@ -156,11 +156,11 @@ export default function About() {
               </p>
 
               <p data-testid="about-speaking">
-                As a speaker, I address craft, discipline, voice, and the cost of silence. I collaborate with teams, schools, and community organizations to transform ideas into meaningful action that creates lasting change.
+                As a speaker, I talk about craft, discipline, and what it costs to stay honest. I work with schools, teams, and community groups.
               </p>
 
               <p data-testid="about-closing" className="font-medium">
-                Thank you for taking the time to learn about my journey. Together, let us build work that endures.
+                That is where I am right now. If something here connects, reach out.
               </p>
             </div>
           </div>

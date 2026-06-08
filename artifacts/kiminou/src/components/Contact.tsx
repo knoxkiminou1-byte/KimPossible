@@ -62,7 +62,7 @@ export default function Contact() {
 
             <div className="mt-8">
               <h4 className="font-medium mb-4" data-testid="social-links-title">
-                Follow the Journey
+                Follow Along
               </h4>
               <div className="flex space-x-4">
                 <a 
