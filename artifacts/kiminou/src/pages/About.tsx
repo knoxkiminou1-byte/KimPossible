@@ -152,11 +152,11 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My published works include Poems from a Black Boy, Our Father?, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, The Adventures of Kiminou the Great and Chua the Wise, and more. I am building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work.
+                My published works include Poems from a Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, The Adventures of Kiminou the Great and Chua the Wise, and Kiminou's World of Imagination. Eight books. I am building a universe that weaves together poems, stories, essays, visual media, and live performance.
               </p>
 
               <p data-testid="about-speaking">
-                As a speaker, I talk about craft, discipline, and what it costs to stay honest. I work with schools, teams, and community groups.
+                As a speaker, I address craft, discipline, voice, and the cost of silence. I work with teams, schools, and community organizations.
               </p>
 
               <p data-testid="about-closing" className="font-medium">

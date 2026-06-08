@@ -23,7 +23,7 @@ const CHAPTERS = [
 ];
 
 const CREDENTIALS = [
-  { label: "7×", sub: "Published Author" },
+  { label: "8×", sub: "Published Author" },
   { label: "19", sub: "Years Old" },
   { label: "NCAA", sub: "Eligible Athlete" },
   { label: "AAFC", sub: "Director" },
@@ -46,9 +46,10 @@ const BOOKS = [
   { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision." },
   { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender." },
   { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention." },
-  { title: "Our Father", desc: "A meditation on fatherhood, faith, and the God who watches boys become men in cities that weren't built for them." },
+  { title: "Our Father?", desc: "A candid wrestling with prayer and presence — when belief collides with unanswered questions." },
   { title: "Boys Raised In Silence", desc: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn to speak." },
-  { title: "Children's Storybook", desc: "Written with his younger brother, a story of imagination, family, and the stories we pass down." },
+  { title: "The Adventures of Kiminou the Great and Chua the Wise", desc: "Two friends learn that courage and wisdom work best together. Written with his brother." },
+  { title: "Kiminou\'s World of Imagination: The Basics", desc: "A children's book about imagination, play, and the power of believing in what you can build." },
 ];
 
 const PULL_QUOTES: { text: string; author: string; source?: string }[] = [

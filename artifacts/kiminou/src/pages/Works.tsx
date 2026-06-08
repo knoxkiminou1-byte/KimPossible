@@ -49,7 +49,7 @@ export default function Works() {
     <>
       <Helmet>
         <title>Works - Kiminou Knox</title>
-        <meta name="description" content="Books by Kiminou Knox: Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise." />
+        <meta name="description" content="Books by Kiminou Knox: Poems from a Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, The Adventures of Kiminou the Great and Chua the Wise, and Kiminou's World of Imagination." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/works" />
         

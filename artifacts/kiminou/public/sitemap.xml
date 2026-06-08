@@ -73,12 +73,6 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.kiminouknox.com/podcast</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.kiminouknox.com/basketball</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -157,9 +151,15 @@
     <priority>0.82</priority>
   </url>
   <url>
-    <loc>https://www.kiminouknox.com/podcast</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://www.kiminouknox.com/books/black-boy-poems</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/world-of-imagination</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -17,7 +17,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2006",
     title: "Early Life",
-    description: "Born in the Bay Area.",
+    description: "Born in the Bay Area, showing early signs of both athletic and creative talent",
     achievement: "Foundation Years",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
@@ -26,7 +26,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2019",
     title: "Athletic Emergence", 
-    description: "Basketball clicked. Reached 6 feet 7 inches and kept growing on and off the court.",
+    description: "Began excelling on the basketball court, reaching 6 feet 7 inches and showing exceptional athletic ability",
     achievement: "Multi Sport Excellence",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
@@ -35,7 +35,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2020",
     title: "First Poetry Publication",
-    description: "Published The Spirit of Solomon. The first book. Not the last.",
+    description: "Published The Spirit of Solomon, the beginning of a literary journey",
     achievement: "Literary Debut",
     category: "literary", 
     icon: <Book className="w-5 h-5" />,
@@ -44,7 +44,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2021",
     title: "Cristo Rey De La Salle",
-    description: "Team captain. Led on the court while keeping the grades and the work.",
+    description: "Starred in basketball while developing leadership skills and academic excellence",
     achievement: "Team Captain",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
@@ -62,7 +62,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2023", 
     title: "The Tee Shirt Teens",
-    description: "Started Tee Shirt Teens, a fashion brand built around where youth culture actually lives.",
+    description: "Founded fashion brand focused on youth culture and authentic expression",
     achievement: "Entrepreneur Debut",
     category: "business",
     icon: <Users className="w-5 h-5" />,
@@ -71,7 +71,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2024",
     title: "Miles Hall Foundation Honor",
-    description: "Miles Hall Foundation Youth Summit Top Essay Finalist. The essay was about building Black brotherhood.",
+    description: "Won essay contest recognizing community leadership and grandmother's legacy continuation",
     achievement: "Community Recognition",
     category: "personal",
     icon: <Heart className="w-5 h-5" />,
@@ -80,7 +80,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2024",
     title: "Transfer to Ygnacio Valley",
-    description: "Captained the Ygnacio Valley program. Showed up every day and made the team better.",
+    description: "Continued athletic excellence at Ygnacio Valley, bringing leadership and basketball experience",
     achievement: "Program Builder",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
@@ -89,7 +89,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2024",
     title: "Hopeless Romantic and Kiminou the Great",
-    description: "Released Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise. Eight books total.",
+    description: "Released Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise, showcasing emotional depth and creative storytelling",
     achievement: "Eight Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
@@ -204,7 +204,7 @@ export default function Timeline() {
             The Timeline
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="timeline-subtitle">
-            From East Palo Alto to eight books, NCAA ball, and a program building the next wave. Here is where it came from.
+            From East Palo Alto to eight books, NCAA ball, and a program building the next generation. Here is where it came from.
           </p>
         </div>
 

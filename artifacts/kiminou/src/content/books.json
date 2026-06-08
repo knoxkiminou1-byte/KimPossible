@@ -7,7 +7,11 @@
     "isbn": "9798316662975",
     "cover": "/books/spirit-of-solomon-cover.jpg",
     "pdf": "/books/spirit-of-solomon-sample.pdf",
-    "themes": ["Wisdom", "Faith", "Reckoning"],
+    "themes": [
+      "Wisdom",
+      "Faith",
+      "Reckoning"
+    ],
     "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
@@ -25,8 +29,12 @@
     "isbn": "9798316682850",
     "cover": "/books/our-father-cover.jpg",
     "pdf": "/books/our-father-sample.pdf",
-    "themes": ["Faith", "Silence", "Searching"],
-    "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+    "themes": [
+      "Faith",
+      "Silence",
+      "Searching"
+    ],
+    "description": "A candid wrestling with prayer and presence\u2014when belief collides with unanswered questions.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ",
@@ -42,7 +50,11 @@
     "isbn": "9798316662975",
     "cover": "/books/poems-from-a-black-boy-cover.jpg",
     "pdf": "/books/poems-from-a-black-boy-sample.pdf",
-    "themes": ["Identity", "Heritage", "Resilience"],
+    "themes": [
+      "Identity",
+      "Heritage",
+      "Resilience"
+    ],
     "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
@@ -59,7 +71,11 @@
     "isbn": "9798291608128",
     "cover": "/books/hopeless-romantic-cover.jpg",
     "pdf": "/books/hopeless-romantic-sample.pdf",
-    "themes": ["Love", "Heartbreak", "Healing"],
+    "themes": [
+      "Love",
+      "Heartbreak",
+      "Healing"
+    ],
     "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
@@ -77,7 +93,11 @@
     "isbn": "9798316735821",
     "cover": "/books/boys-raised-in-silence-cover.jpg",
     "pdf": "/books/boys-raised-in-silence-sample.pdf",
-    "themes": ["Silence", "Masculinity", "Healing"],
+    "themes": [
+      "Silence",
+      "Masculinity",
+      "Healing"
+    ],
     "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
@@ -94,11 +114,57 @@
     "isbn": "9798316591204",
     "cover": "/books/adventures-kiminou-chua-cover.jpg",
     "pdf": "/books/adventures-kiminou-chua-sample.pdf",
-    "themes": ["Friendship", "Growth", "Adventure"],
+    "themes": [
+      "Friendship",
+      "Growth",
+      "Adventure"
+    ],
     "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Poems from the Weight of Black Boyhood",
+    "year": 2025,
+    "isbn": "9798267606912",
+    "cover": "/books/black-boy-poems-cover.jpg",
+    "pdf": "/books/black-boy-poems-sample.pdf",
+    "themes": [
+      "Identity",
+      "Blackness",
+      "Resilience"
+    ],
+    "description": "An unflinching collection tracing Black boyhood through identity, silence, trauma, and the unbreakable pursuit of joy.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Black-Boy-Poems-Kiminou-Knox/dp/B0FT4CQ9CH",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_In_Silence?id=pHuKEQAAQBAJ",
+      "bookshop": "https://bookshop.org",
+      "bn": null
+    }
+  },
+  {
+    "id": "world-of-imagination",
+    "title": "Kiminou's World of Imagination: The Basics",
+    "subtitle": "The Basics",
+    "year": 2026,
+    "isbn": "",
+    "cover": "/books/world-of-imagination-cover.jpg",
+    "pdf": "/books/world-of-imagination-sample.pdf",
+    "themes": [
+      "Imagination",
+      "Children",
+      "Creativity"
+    ],
+    "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
       "bookshop": null,
       "bn": null
     }
