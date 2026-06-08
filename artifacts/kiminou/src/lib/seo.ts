@@ -66,13 +66,17 @@ export function personSchema() {
           "Kiminou Knox is an eight-time published poet, NCAA-registered basketball athlete, speaker, and podcast host from the Bay Area. Creator of the Black Boy Lie universe.",
         birthPlace: {
           "@type": "Place",
-          name: "Hayward, California",
+          name: "Bay Area, California",
         },
         homeLocation: {
           "@type": "Place",
           name: "Bay Area, California",
         },
         alumniOf: [
+          {
+            "@type": "EducationalOrganization",
+            name: "Redwood Christian School",
+          },
           {
             "@type": "EducationalOrganization",
             name: "Ygnacio Valley High School",
