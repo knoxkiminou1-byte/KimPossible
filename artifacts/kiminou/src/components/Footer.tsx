@@ -23,6 +23,8 @@ const socials = [
     { label: "Goodreads", href: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
   { label: "Amazon", href: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
   { label: "Medium", href: "https://medium.com/@knoxkiminou1" },
+  { label: "Stan Store", href: "https://stan.store/kiminouknox" },
+  { label: "Spotify Podcast", href: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg" },
 ];
 
 export default function Footer() {
