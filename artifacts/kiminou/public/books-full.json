@@ -99,5 +99,21 @@
       "bookshop": null,
       "bn": null
     }
+  },
+  {
+    "id": "world-of-imagination",
+    "title": "Kiminou's World of Imagination: The Basics",
+    "subtitle": "A Colorful Journey Through Imagination and Play",
+    "year": 2025,
+    "isbn": "",
+    "datePublished": "2025-01-01",
+    "cover": "/covers/kiminou-knox-world-of-imagination.png",
+    "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    }
   }
 ]

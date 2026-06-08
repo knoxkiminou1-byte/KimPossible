@@ -42,14 +42,14 @@ const SOCIAL_LINKS = [
 ];
 
 const BOOKS = [
-  { title: "Poems From A Black Boy", desc: "Early poems tracing the inner life of a young Black boy learning how to pray, love, and tell the truth." },
-  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision." },
-  { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender." },
-  { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention." },
-  { title: "Our Father?", desc: "A candid wrestling with prayer and presence — when belief collides with unanswered questions." },
-  { title: "Boys Raised In Silence", desc: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn to speak." },
-  { title: "The Adventures of Kiminou the Great and Chua the Wise", desc: "Two friends learn that courage and wisdom work best together. Written with his brother." },
-  { title: "Kiminou\'s World of Imagination: The Basics", desc: "A children's book about imagination, play, and the power of believing in what you can build." },
+  { title: "Poems From A Black Boy", desc: "Early poems tracing the inner life of a young Black boy learning how to pray, love, and tell the truth.", cover: "/covers/kiminou-knox-poems-from-black-boy.jpg" },
+  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision.", cover: null },
+  { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender.", cover: "/covers/kiminou-knox-hopeless-romantic-poetry.jpg" },
+  { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention.", cover: "/covers/kiminou-knox-spirit-of-solomon-book.jpg" },
+  { title: "Our Father?", desc: "A candid wrestling with prayer and presence — when belief collides with unanswered questions.", cover: "/covers/kiminou-knox-our-father-poetry.jpg" },
+  { title: "Boys Raised In Silence", desc: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn to speak.", cover: "/covers/kiminou-knox-boys-raised-in-silence.png" },
+  { title: "The Adventures of Kiminou the Great and Chua the Wise", desc: "Two friends learn that courage and wisdom work best together. Written with his brother.", cover: "/covers/kiminou-knox-adventures-kiminou-great-chua.png" },
+  { title: "Kiminou\'s World of Imagination: The Basics", desc: "A children's book about imagination, play, and the power of believing in what you can build.", cover: "/covers/kiminou-knox-world-of-imagination.png" },
 ];
 
 const PULL_QUOTES: { text: string; author: string; source?: string }[] = [
@@ -335,10 +335,8 @@ export default function Author() {
               <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
-                    src={KIMINOU_IMAGES.officialHeadshot.src}
-                    alt={KIMINOU_IMAGES.officialHeadshot.alt}
-                    width={KIMINOU_IMAGES.officialHeadshot.width}
-                    height={KIMINOU_IMAGES.officialHeadshot.height}
+                    src="/photos/kiminou-knox-bw-portrait.png"
+                    alt="Kiminou Knox black and white author portrait"
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -599,12 +597,25 @@ export default function Author() {
                     onHoverStart={() => setHoveredBook(i)}
                     onHoverEnd={() => setHoveredBook(null)}
                     whileHover={{ y: -4 }}>
-                    {/* Book cover placeholder */}
-                    <div className="aspect-[2/3] mb-6 bg-gradient-to-b from-amber-400/8 to-amber-900/5 border border-amber-400/10 flex items-end p-4 relative overflow-hidden group-hover:border-amber-400/25 transition-colors duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 via-transparent to-black/50" />
-                      <div className="absolute top-3 left-3 w-4 h-px bg-amber-400/40" />
-                      <div className="absolute top-3 right-3 w-4 h-px bg-amber-400/40" />
-                      <span className="font-serif text-amber-400/30 text-[40px] leading-none relative z-10">{i + 1}</span>
+                    {/* Book cover */}
+                    <div className="aspect-[2/3] mb-6 border border-amber-400/10 relative overflow-hidden group-hover:border-amber-400/25 transition-colors duration-500">
+                      {book.cover ? (
+                        <img
+                          src={book.cover}
+                          alt={book.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <>
+                          <div className="absolute inset-0 bg-gradient-to-b from-amber-400/8 to-amber-900/5" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 via-transparent to-black/50" />
+                          <div className="absolute top-3 left-3 w-4 h-px bg-amber-400/40" />
+                          <div className="absolute top-3 right-3 w-4 h-px bg-amber-400/40" />
+                          <span className="font-serif text-amber-400/30 text-[40px] leading-none absolute bottom-4 left-4 z-10">{i + 1}</span>
+                        </>
+                      )}
                     </div>
                     <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/50 mb-2">Vol. {String(i + 1).padStart(2, "0")}</p>
                     <h4 className="font-serif text-base text-white leading-snug mb-3 group-hover:text-amber-100 transition-colors duration-300">{book.title}</h4>

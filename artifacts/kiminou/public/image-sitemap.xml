@@ -166,4 +166,12 @@
       <image:caption>The Adventures of Kiminou the Great and Chua the Wise book cover by Kiminou Knox.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/world-of-imagination</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png</image:loc>
+      <image:title>Kiminou&apos;s World of Imagination: The Basics by Kiminou Knox</image:title>
+      <image:caption>Kiminou&apos;s World of Imagination: The Basics book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
 </urlset>

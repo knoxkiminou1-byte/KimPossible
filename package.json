@@ -2,7 +2,7 @@
   "name": "workspace",
   "version": "0.0.0",
   "license": "MIT",
-  "packageManager": "pnpm@11.0.9",
+  "packageManager": "pnpm@10.26.1",
   "scripts": {
     "dev": "pnpm --filter @workspace/kiminou run dev",
     "generate:seo": "node scripts/generate-seo.mjs",

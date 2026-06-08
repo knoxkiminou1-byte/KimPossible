@@ -34,7 +34,6 @@ const Press = lazy(() => import("@/pages/Press"));
 const Sports = lazy(() => import("@/pages/Sports"));
 const Author = lazy(() => import("@/pages/Author"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
-const Podcast = lazy(() => import("@/pages/Podcast"));
 
 const POEM_FRAGMENTS = [
   "They called me wise before I learned what wisdom cost.",
@@ -121,9 +120,11 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />
-        <Route path="/podcast" component={Podcast} />
+        <Route path="/podcast">
+          <Redirect to="/speaking" />
+        </Route>
         <Route path="/kimyaps">
-          <Redirect to="/podcast" />
+          <Redirect to="/speaking" />
         </Route>
         <Route path="/admin/blog">
           <AdminGate><BlogAdmin /></AdminGate>

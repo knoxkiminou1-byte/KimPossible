@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T18:16:28.325Z",
+  "generatedAt": "2026-06-08T19:37:05.933Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -123,7 +123,7 @@
       "sections": [
         {
           "heading": "Works",
-          "text": "The Spirit of Solomon: A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?: A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy: Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic: An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence: A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise: A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures."
+          "text": "The Spirit of Solomon: A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?: A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy: Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic: An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence: A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise: A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics: A children's book about imagination, play, and the power of believing in what you can build."
         }
       ],
       "schemaType": "CollectionPage",
@@ -203,7 +203,7 @@
       "sections": [
         {
           "heading": "Published Books",
-          "text": "The Spirit of Solomon, What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?, A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy, Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic, Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence, Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise, A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures."
+          "text": "The Spirit of Solomon, What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?, A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy, Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic, Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence, Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise, A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics, A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build."
         }
       ],
       "schemaType": "CollectionPage",
@@ -1125,6 +1125,96 @@
             "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
             "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ"
           ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/world-of-imagination",
+      "title": "Kiminou's World of Imagination: The Basics - Kiminou Knox | Poetry Collection",
+      "description": "Kiminou's World of Imagination: The Basics by Kiminou Knox. A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+      "keywords": [
+        "Kiminou's World of Imagination: The Basics",
+        "Kiminou Knox book",
+        "Imagination",
+        "Children",
+        "Play",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Kiminou's World of Imagination: The Basics",
+          "text": "A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build. Published 2025. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Imagination, Children, Play"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/world-of-imagination#book",
+        "name": "Kiminou's World of Imagination: The Basics",
+        "alternateName": "A Colorful Journey Through Imagination and Play",
+        "url": "https://www.kiminouknox.com/books/world-of-imagination",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2025-01-01",
+        "isbn": "",
+        "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/world-of-imagination",
+      "lastmod": "2025-01-01",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/world-of-imagination#webpage",
+          "url": "https://www.kiminouknox.com/books/world-of-imagination",
+          "name": "Kiminou's World of Imagination: The Basics - Kiminou Knox | Poetry Collection",
+          "description": "Kiminou's World of Imagination: The Basics by Kiminou Knox. A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-01-01"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/world-of-imagination#book",
+          "name": "Kiminou's World of Imagination: The Basics",
+          "alternateName": "A Colorful Journey Through Imagination and Play",
+          "url": "https://www.kiminouknox.com/books/world-of-imagination",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2025-01-01",
+          "isbn": "",
+          "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
         }
       ]
     },
