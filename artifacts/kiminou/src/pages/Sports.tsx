@@ -14,13 +14,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
 import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
-import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { breadcrumbSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
 
 const LockerRoom3D = lazy(() => import("@/components/LuxuryFX/LockerRoom3D"));
 
-/* ─── Data ─────────────────────────────────────────────────────── */
+/* ─── Data ──────────────────────────────────────────────── */
 const measurables = [
-  { label: "Height", value: "6'7\"", numericEnd: null, sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
+  { label: "Height", value: "6'8\"", numericEnd: null, sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
   { label: "Weight", value: "235", numericEnd: 235, unit: "lbs", sub: "Elite Athletic Build", icon: Target, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
   { label: "Position", value: "F / C", numericEnd: null, sub: "Cristo Rey De La Salle", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
 ];
@@ -37,10 +37,10 @@ const highlights = [
 const profiles = [
   { name: "NCSA Sports", desc: "Complete athletic profile with stats, measurements, and recruiting information", href: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox", testId: "link-profile-ncsa" },
   { name: "MaxPreps", desc: "Public career profile and high school basketball record", href: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc", testId: "link-profile-maxpreps" },
-  { name: "247Sports", desc: "Rankings, news, and recruiting analysis for high school athletes", href: "https://247sports.com", testId: "link-profile-247sports" },
+  { name: "Prep Hoops", desc: "Rankings, news, and recruiting analysis for high school athletes", href: "https://prephoops.com/player/kiminou-knox/", testId: "link-profile-prephoops" },
 ];
 
-/* ─── Particle Mote ─────────────────────────────────────────────── */
+/* ─── Particle Mote ──────────────────────────────────────────── */
 function Mote({ delay }: { delay: number }) {
   const startX = Math.random() * 100;
   const drift = (Math.random() - 0.5) * 120;
@@ -70,7 +70,7 @@ function Particles() {
   );
 }
 
-/* ─── Scanlines ─────────────────────────────────────────────────── */
+/* ─── Scanlines ─────────────────────────────────────────────── */
 function Scanlines() {
   return (
     <div
@@ -84,7 +84,7 @@ function Scanlines() {
   );
 }
 
-/* ─── Glitch Title ──────────────────────────────────────────────── */
+/* ─── Glitch Title ────────────────────────────────────────────── */
 function GlitchTitle({ text }: { text: string }) {
   const [glitching, setGlitching] = useState(false);
   useEffect(() => {
@@ -129,7 +129,7 @@ function CharReveal({ text, className = "", delay = 0 }: { text: string; classNa
   );
 }
 
-/* ─── Counter Number ────────────────────────────────────────────── */
+/* ─── Counter Number ──────────────────────────────────────────── */
 function CounterNum({ end, duration = 2 }: { end: number; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
@@ -143,7 +143,7 @@ function CounterNum({ end, duration = 2 }: { end: number; duration?: number }) {
   return <span ref={ref}>{display}</span>;
 }
 
-/* ─── Reveal Card ───────────────────────────────────────────────── */
+/* ─── Reveal Card ────────────────────────────────────────────── */
 function RevealCard({ children, delay = 0, className = "", direction = "up" }: { children: React.ReactNode; delay?: number; className?: string; direction?: "up" | "left" | "right" | "scale" }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -167,7 +167,7 @@ function RevealCard({ children, delay = 0, className = "", direction = "up" }: {
   );
 }
 
-/* ─── Self-drawing Timeline Line ────────────────────────────────── */
+/* ─── Self-drawing Timeline Line ──────────────────────────────────────── */
 function TimelineLine() {
   const wrapRef = useRef(null);
   const inView = useInView(wrapRef, { once: true, margin: "-80px" });
@@ -183,7 +183,7 @@ function TimelineLine() {
   );
 }
 
-/* ─── Dark overlay section wrapper ─────────────────────────────── */
+/* ─── Dark overlay section wrapper ─────────────────────────────────── */
 function DarkSection({ children, className = "", opacity = 0.65 }: { children: React.ReactNode; className?: string; opacity?: number }) {
   return (
     <section className={`relative ${className}`}>
@@ -193,7 +193,7 @@ function DarkSection({ children, className = "", opacity = 0.65 }: { children: R
   );
 }
 
-/* ─── MAIN PAGE ─────────────────────────────────────────────────── */
+/* ─── MAIN PAGE ────────────────────────────────────────────────────── */
 export default function Sports() {
   const heroRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -204,8 +204,8 @@ export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'7" Forward/Center</title>
-        <meta name="description" content={"Kiminou Knox is a 6'7\" 235lb NCAA-registered basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
+        <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'8" Forward/Center</title>
+        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb NCAA-registered basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile" />
@@ -215,8 +215,10 @@ export default function Sports() {
             "@context": "https://schema.org", "@type": "Person",
             "@id": `${SITE_URL}/#person`, name: "Kiminou Knox",
             url: `${SITE_URL}/sports`, sport: "Basketball",
+            height: { "@type": "QuantitativeValue", value: 80, unitCode: "INH" },
             affiliation: [{ "@type": "SportsTeam", name: "Cristo Rey De La Salle Basketball" }],
             memberOf: [{ "@type": "Organization", name: "NCAA", url: "https://www.ncaa.org" }],
+            sameAs: SITE_SAME_AS,
           })}
         </script>
         <script type="application/ld+json">
@@ -301,7 +303,7 @@ export default function Sports() {
               <motion.div className="flex flex-wrap gap-4 mt-10"
                 initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.3 }}>
-                {["6'7\"", "235 lbs", "F / C", "NCAA Eligible"].map((badge) => (
+                {["6'8\"", "235 lbs", "F / C", "NCAA Eligible"].map((badge) => (
                   <motion.span key={badge}
                     className="px-4 py-1.5 border border-amber-400/35 text-amber-300/80 text-xs uppercase tracking-[0.2em] font-medium"
                     style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}
