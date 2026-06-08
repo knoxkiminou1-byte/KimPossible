@@ -144,4 +144,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
+  <url>
+    <loc>https://www.kiminouknox.com/podcast</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
