@@ -204,7 +204,7 @@ export default function Timeline() {
             The Timeline
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="timeline-subtitle">
-            From East Palo Alto to eight books, NCAA ball, and a program building the next generation. Here is where it came from.
+            Born in Hayward, raised in East Palo Alto — eight books and counting, NCAA ball, and a program building the next generation. Here is where it came from.
           </p>
         </div>
 
