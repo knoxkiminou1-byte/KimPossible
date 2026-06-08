@@ -29,6 +29,7 @@ export const SITE_SAME_AS = [
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
   "https://stan.store/kiminouknox",
+  "https://www.wikidata.org/wiki/Q137260299",
 ];
 
 export type BreadcrumbItem = {

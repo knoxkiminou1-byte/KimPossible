@@ -48,7 +48,7 @@ const homeFaq = [
   {
     question: "How many books has Kiminou Knox published?",
     answer:
-      "Kiminou Knox has eight published works spanning poetry, faith, identity, and love. Titles include The Spirit of Solomon, Our Father?, Poems from a Black Boy, Hopeless Romantic, Boys Raised in Silence, and The Adventures of Kiminou the Great and Chua the Wise. Each book page includes covers, sample poems, and purchase links.",
+      "Kiminou Knox has eight published works spanning poetry, faith, identity, and love. Titles include Poems from a Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, The Adventures of Kiminou the Great and Chua the Wise, and Kiminou's World of Imagination. Each book page includes covers, sample poems, and purchase links.",
   },
   {
     question: "What does he speak about?",
