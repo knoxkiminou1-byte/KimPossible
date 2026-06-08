@@ -20,8 +20,8 @@ const identity = [
     id: "basketball",
     number: "02",
     label: "Athlete",
-    title: "6'7\" Multi-Sport Leader",
-    description: "Cristo Rey De La Salle basketball captain and multi-sport athlete combining physical excellence with leadership on and off the court.",
+    title: "6\u20197\u2033 Multi-Sport Leader",
+    description: "Cristo Rey De La Salle basketball and football athlete — varsity captain combining physical excellence with leadership on and off the field.",
     link: "/basketball",
     cta: "View Athletics",
   },
@@ -30,7 +30,7 @@ const identity = [
     number: "03",
     label: "Speaker",
     title: "Youth Voice Advocate",
-    description: "He speaks from what he has lived. Craft, discipline, faith, and what it actually takes to grow up with something real to say.",
+    description: "Speaking from lived experience — craft, discipline, faith, and what it actually takes to grow up with something real to say.",
     link: "/speaking",
     cta: "Book Speaking",
   },
@@ -146,7 +146,7 @@ export default function WhoIsKiminou() {
               className="text-base text-white/55 leading-relaxed max-w-sm"
               data-testid="who-description"
             >
-              A writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
+              A writer and multi-sport athlete from the Bay Area, California, building a legacy through books, sport, and youth leadership.
             </p>
           </motion.div>
 

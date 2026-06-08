@@ -63,7 +63,7 @@ export function personSchema() {
         },
         jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
         description:
-          "Kiminou Knox is an eight-time published poet, NCAA-registered basketball athlete, speaker, and podcast host from the Bay Area. Creator of the Black Boy Lie universe.",
+          "Kiminou Knox is an eight-time published poet, NCAA-registered basketball and football athlete, speaker, and podcast host from the Bay Area of California. Creator of the Black Boy Lie universe.",
         birthPlace: {
           "@type": "Place",
           name: "Bay Area, California",
@@ -71,6 +71,11 @@ export function personSchema() {
         homeLocation: {
           "@type": "Place",
           name: "Bay Area, California",
+        },
+        height: {
+          "@type": "QuantitativeValue",
+          value: 79,
+          unitCode: "INH",
         },
         alumniOf: [
           {
@@ -89,6 +94,7 @@ export function personSchema() {
         knowsAbout: [
           "Poetry",
           "Basketball",
+          "Football",
           "Creative writing",
           "Public speaking",
           "Faith",

@@ -481,7 +481,7 @@ export default function Hero({ paperMode = false }: HeroProps) {
               style={{ textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}
               data-testid="hero-intro"
             >
-              A Bay Area writer and basketball athlete building a legacy through books, sport, and youth leadership.
+              A Bay Area writer, multi-sport athlete, and youth advocate building a legacy through books, sport, and community.
             </motion.p>
 
             <motion.div
