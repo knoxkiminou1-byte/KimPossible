@@ -17,7 +17,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2006",
     title: "Early Life",
-    description: "Born in the Bay Area, showing early signs of both athletic and creative talent",
+    description: "Born in Hayward, Bay Area — early signs of both athletic and creative talent",
     achievement: "Foundation Years",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
