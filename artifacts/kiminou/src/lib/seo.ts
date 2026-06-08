@@ -74,7 +74,7 @@ export function personSchema() {
         },
         height: {
           "@type": "QuantitativeValue",
-          value: 79,
+          value: 80,
           unitCode: "INH",
         },
         alumniOf: [
