@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
 import SplitNarrative from "@/components/SplitNarrative";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
-import { breadcrumbSchema, personSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
+import { breadcrumbSchema, personSchema, SITE_URL } from "@/lib/seo";
 
 const Radiograph = lazy(() => import("@/components/LuxuryFX/Radiograph"));
 const TypewriterArchaeology = lazy(() => import("@/components/LuxuryFX/TypewriterArchaeology"));
@@ -114,7 +114,7 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from the Bay Area, California, telling stories that carry faith, grit, and love. I have attended multiple schools across the Bay — Redwood Christian, Ygnacio Valley, and Cristo Rey De La Salle — and each one shaped a different part of who I am. Through books, poems, and youth work, I try to say the things that usually go unsaid.
+                I am a 19 year old writer and athlete from the Bay Area, California, telling stories that carry faith, grit, and love. I attended Ygnacio Valley High School, Cristo Rey De La Salle, and Bishop O'Dowd — three schools, three different chapters, all part of the same story. Through books, poems, and youth work, I try to say the things that usually go unsaid.
               </p>
 
               <p data-testid="about-stats">
