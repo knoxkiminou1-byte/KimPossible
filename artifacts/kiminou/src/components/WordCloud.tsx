@@ -153,7 +153,7 @@ export default function WordCloud() {
         >
           <div className="h-px w-10 bg-gradient-to-r from-transparent to-amber-400/25" />
           <p className="text-[10px] uppercase tracking-[0.3em] text-white/20">
-            {WORDS.length} themes across 7 books
+            {WORDS.length} themes across 8 books
           </p>
           <div className="h-px w-10 bg-gradient-to-l from-transparent to-amber-400/25" />
         </motion.div>

@@ -332,7 +332,7 @@ export default function Author() {
           <section id="portrait" className="py-20 scroll-mt-16">
             <SectionHeading eyebrow="Official Portrait" title="Author, Athlete, Builder" />
             <Reveal>
-              <figure className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
+              <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
                     src={KIMINOU_IMAGES.officialHeadshot.src}
@@ -344,14 +344,14 @@ export default function Author() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
-                <figcaption className="flex flex-col justify-center p-4 md:p-8">
+                <div className="flex flex-col justify-center p-4 md:p-8">
                   <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/60 mb-5">Press Image</p>
                   <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-5">The face behind the work.</h2>
                   <p className="text-white/55 leading-relaxed text-lg">
                     The public voice, the court discipline, and the written work all belong to one body of proof: a young Bay Area author building a life in full view.
                   </p>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </Reveal>
           </section>
 

@@ -1,12 +1,15 @@
 import { Helmet } from "react-helmet";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
 import ContactForm from "@/components/ContactForm";
 import SeoFaqSection from "@/components/SeoFaqSection";
+import GreenRoomStage from "@/components/LuxuryFX/GreenRoomStage";
 import { breadcrumbSchema, faqSchema, SITE_URL } from "@/lib/seo";
+
+const ApplausePhysics = lazy(() => import("@/components/LuxuryFX/ApplausePhysics"));
 
 const AUDIENCES = ["All", "Schools", "Teams", "Youth", "Community", "Faith"];
 
@@ -121,6 +124,7 @@ export default function Speaking() {
       </Helmet>
       <Header />
 
+      <GreenRoomStage>
       <main className="min-h-screen bg-black text-white">
 
         {/* ─── CINEMATIC HERO ─── */}
@@ -303,6 +307,11 @@ export default function Speaking() {
           items={speakingFaq}
         />
       </main>
+      </GreenRoomStage>
+
+      <Suspense fallback={null}>
+        <ApplausePhysics />
+      </Suspense>
 
       <Footer />
       <AmbientAudio theme="cathedral" />

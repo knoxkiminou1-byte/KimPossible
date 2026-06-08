@@ -35,6 +35,8 @@ const ChapterScroll = lazy(() => import("@/components/ChapterScroll"));
 const AmbientAudio = lazy(() => import("@/components/AmbientAudio"));
 const PaperRealmPortal = lazy(() => import("@/components/PaperRealmPortal"));
 const SeoFaqSection = lazy(() => import("@/components/SeoFaqSection"));
+const GenerativeScore = lazy(() => import("@/components/LuxuryFX/GenerativeScore"));
+const ImpossibleLoop = lazy(() => import("@/components/LuxuryFX/ImpossibleLoop"));
 
 const PARTICLE_EFFECTS: ("sparkle" | "dust" | "star")[] = ["sparkle", "dust", "star"];
 const PARTICLE_COLORS = ["#F59E0B", "#FDE68A", "#FFFBEB", "#D97706"];
@@ -198,6 +200,9 @@ export default function Home() {
         ) : (
           <>
             <Hero />
+            <IdleMount timeout={1800}>
+              <GenerativeScore />
+            </IdleMount>
             <Suspense fallback={null}>
               <GoldMarquee />
             </Suspense>
@@ -247,6 +252,9 @@ export default function Home() {
             <DeferredSection minHeight={720}>
               <GenerativeArtPanel />
             </DeferredSection>
+            <IdleMount timeout={2000}>
+              <ImpossibleLoop />
+            </IdleMount>
           </>
         )}
         <Footer />

@@ -1,10 +1,14 @@
 import { Helmet } from "react-helmet";
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
 import SplitNarrative from "@/components/SplitNarrative";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+
+const Radiograph = lazy(() => import("@/components/LuxuryFX/Radiograph"));
+const TypewriterArchaeology = lazy(() => import("@/components/LuxuryFX/TypewriterArchaeology"));
 
 export default function About() {
   const officialHeadshotUrl = `${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`;
@@ -110,7 +114,7 @@ export default function About() {
             </h1>
           </div>
 
-          <figure className="mb-12 grid gap-6 overflow-hidden border border-border bg-card md:grid-cols-[0.95fr_1.05fr]">
+          <div className="mb-12 grid gap-6 overflow-hidden border border-border bg-card md:grid-cols-[0.95fr_1.05fr]">
             <div className="relative min-h-[420px] bg-muted">
               <img
                 src={KIMINOU_IMAGES.outdoorPortrait.src}
@@ -122,7 +126,7 @@ export default function About() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
-            <figcaption className="flex flex-col justify-center p-6 md:p-8">
+            <div className="flex flex-col justify-center p-6 md:p-8">
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-muted-foreground">East Palo Alto Voice</p>
               <h2 className="mb-4 font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl">
                 Writer, athlete, and builder in one frame.
@@ -130,8 +134,8 @@ export default function About() {
               <p className="text-lg leading-relaxed text-muted-foreground">
                 The same discipline behind the books shows up on the court, in youth work, and in the public voice Kiminou Knox is building from the Bay Area outward.
               </p>
-            </figcaption>
-          </figure>
+            </div>
+          </div>
 
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
@@ -167,8 +171,17 @@ export default function About() {
         </div>
       </main>
 
+      <Suspense fallback={null}>
+        <Radiograph />
+      </Suspense>
+
       <SplitNarrative />
       <ConstellationTimeline />
+
+      <Suspense fallback={null}>
+        <TypewriterArchaeology />
+      </Suspense>
+
       <Footer />
     </>
   );

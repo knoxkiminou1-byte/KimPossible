@@ -1,5 +1,9 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, lazy, Suspense } from "react";
 import { motion, useInView, AnimatePresence, useSpring } from "framer-motion";
+import CMYKReveal from "@/components/LuxuryFX/CMYKReveal";
+
+const VinylRecord = lazy(() => import("@/components/LuxuryFX/VinylRecord"));
+const AuctionProvenance = lazy(() => import("@/components/LuxuryFX/AuctionProvenance"));
 import FreeChapterCapture from "@/components/FreeChapterCapture";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
@@ -58,11 +62,21 @@ function BookCard({ book, index, onSample, onFlipbook, onOpenBook }: { book: Boo
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
           style={{ transformStyle: "preserve-3d" }}
         >
-          <img
-            src={book.cover}
-            alt={`${book.title} cover`}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+          {index < 3 ? (
+            <CMYKReveal>
+              <img
+                src={book.cover}
+                alt={`${book.title} cover`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </CMYKReveal>
+          ) : (
+            <img
+              src={book.cover}
+              alt={`${book.title} cover`}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           {/* Preview hint overlay */}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -254,6 +268,11 @@ export default function BooksPage() {
           </div>
         </section>
 
+        {/* Auction House Provenance */}
+        <Suspense fallback={null}>
+          <AuctionProvenance />
+        </Suspense>
+
         {/* Detail Grid */}
         <section className="pb-28">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20">
@@ -281,6 +300,11 @@ export default function BooksPage() {
             </div>
           </div>
         </section>
+
+        {/* Books as Vinyl Records */}
+        <Suspense fallback={null}>
+          <VinylRecord />
+        </Suspense>
 
         {/* ─── FREE CHAPTER CAPTURE ─── */}
         <FreeChapterCapture />
