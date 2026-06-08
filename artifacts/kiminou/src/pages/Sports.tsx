@@ -53,19 +53,19 @@ export default function Sports() {
     <>
       <Helmet>
         <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'7" Forward/Center</title>
-        <meta name="description" content="Kiminou Knox is a 6'7\" 235lb NCAA-registered basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection. Verified on MaxPreps, NCSA Sports, and Prep Hoops." />
+        <meta name="description" content={'Kiminou Knox is a 6\'7" 235lb NCAA-registered basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection. Verified on MaxPreps, NCSA Sports, and Prep Hoops.'} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile" />
-        <meta property="og:description" content="6'7\" NCAA-registered Forward/Center. Varsity captain. Verified on MaxPreps, NCSA Sports, and Prep Hoops." />
+        <meta property="og:description" content={'6\'7" NCAA-registered Forward/Center. Varsity captain. Verified on MaxPreps, NCSA Sports, and Prep Hoops.'} />
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
-        <meta name="twitter:description" content="6'7\" NCAA-registered Forward/Center. Verified on MaxPreps, NCSA, and Prep Hoops." />
+        <meta name="twitter:description" content={'6\'7" NCAA-registered Forward/Center. Verified on MaxPreps, NCSA, and Prep Hoops.'} />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({
