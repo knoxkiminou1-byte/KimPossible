@@ -193,7 +193,7 @@ export default function Author() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
-        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
+        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder born in Hayward, raised in East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
@@ -297,7 +297,7 @@ export default function Author() {
               className="font-serif text-xl md:text-2xl text-white/70 font-light max-w-2xl leading-relaxed"
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.7 }}>
-              Poet, novelist, athlete, and builder from East Palo Alto. Creator of The Black Boy Lie universe.
+              Poet, novelist, athlete, and builder born in Hayward, raised in East Palo Alto. Creator of The Black Boy Lie universe.
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-3 mt-8"
