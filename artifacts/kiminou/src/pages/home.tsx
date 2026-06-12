@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";

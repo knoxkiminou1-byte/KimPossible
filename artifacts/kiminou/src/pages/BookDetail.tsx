@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useRoute, Link } from "wouter";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion, useInView } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

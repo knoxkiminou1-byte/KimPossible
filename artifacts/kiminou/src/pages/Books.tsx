@@ -9,7 +9,7 @@ import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 import ScrambleText from "@/components/LuxuryFX/ScrambleText";
 import { ExternalLink } from "lucide-react";
 import { Link } from "wouter";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PoemModal from "@/components/PDFModal";

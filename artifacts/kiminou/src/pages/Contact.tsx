@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -51,10 +51,22 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact - Kiminou Knox</title>
+        <title>Contact Kiminou Knox — Book a Speaker, Media & Collaboration Inquiries</title>
         <meta name="description" content="Reach out to Kiminou Knox for speaking engagements, media inquiries, book collaborations, AAFC Builders projects, or youth program partnerships." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.kiminouknox.com/contact" />
+        <meta property="og:title" content="Contact Kiminou Knox — Speaking, Media & Collaboration" />
+        <meta property="og:description" content="Book Kiminou Knox for speaking engagements, youth programs, media appearances, or book collaborations." />
+        <meta property="og:image" content="https://www.kiminouknox.com/og-image.png" />
+        <meta property="og:site_name" content="Kiminou Knox" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:creator" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="Contact Kiminou Knox" />
+        <meta name="twitter:description" content="Book a speaker, media inquiry, or book collaboration with Kiminou Knox." />
+        <meta name="twitter:image" content="https://www.kiminouknox.com/og-image.png" />
         <script type="application/ld+json">
           {JSON.stringify(
             breadcrumbSchema([

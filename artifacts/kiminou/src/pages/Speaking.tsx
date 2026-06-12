@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState, lazy, Suspense, useCallback } from "react";
 import { ExternalLink, Mic, Radio } from "lucide-react";

@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Trophy, Mic, Users, ExternalLink, ChevronDown, Play } from "lucide-react";
@@ -197,10 +197,16 @@ export default function Author() {
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.kiminouknox.com/author" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
-        <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction." />
+        <meta property="og:description" content="Author of poetry collections, a children's storybook, and a growing universe of psychological and spiritual fiction. Eight-time published, Bay Area born." />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
+        <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KnoxKiminou" />
+        <meta name="twitter:creator" content="@KnoxKiminou" />
+        <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
+        <meta name="twitter:description" content="Eight-time published poet and author. Bay Area born. Creator of the Black Boy Lie universe." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify(
