@@ -15,7 +15,7 @@ const ApplausePhysics = lazy(() => import("@/components/LuxuryFX/ApplausePhysics
 
 const PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 const PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
-const APPLE_EMBED_URL = "https://embed.podcasts.apple.com/us/podcast/kimyaps/id1850364308?itsct=podcast_box_player&itscg=30200&ls=1&theme=dark";
+const SPOTIFY_AUTOPLAY_URL = "https://open.spotify.com/embed/show/4TB8QKI52yaGIFDOCCkrYg?utm_source=generator&theme=0&autoplay=1";
 
 const AUDIENCES = ["All", "Schools", "Teams", "Youth", "Community", "Faith"];
 
@@ -106,10 +106,14 @@ function TalkCard({ talk, index }: { talk: typeof talks[0]; index: number }) {
 /* ─── The Radio Station Section ─────────────────────────────── */
 function RadioStation() {
   const [tuned, setTuned] = useState(false);
+  const [lockCount, setLockCount] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const inView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  const handleLock = useCallback((locked: boolean) => setTuned(locked), []);
+  const handleLock = useCallback((locked: boolean) => {
+    setTuned(locked);
+    if (locked) setLockCount(c => c + 1);
+  }, []);
 
   return (
     <section className="py-28 border-t border-white/6 relative overflow-hidden">
@@ -193,24 +197,23 @@ function RadioStation() {
                     <span className="text-xs uppercase tracking-[0.35em] text-green-400/80 font-medium">On Air · KimYaps FM 97.3</span>
                   </div>
 
-                  {/* Apple Podcasts embed — plays episodes directly */}
-                  <div className="relative overflow-hidden"
-                    style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(251,191,36,0.08)" }}>
+                  {/* Spotify embed — remounts fresh on each dial lock so autoplay fires */}
+                  <div className="relative overflow-hidden rounded-sm"
+                    style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(34,197,94,0.06)" }}>
                     <iframe
-                      key="apple-locked"
-                      src={APPLE_EMBED_URL}
+                      key={`spotify-lock-${lockCount}`}
+                      src={SPOTIFY_AUTOPLAY_URL}
                       width="100%"
-                      height="450"
-                      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                      title="KimYaps Podcast on Apple Podcasts"
-                      style={{ border: "none", display: "block", borderRadius: "4px", overflow: "hidden", background: "transparent" }}
+                      height="352"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      title="KimYaps Podcast on Spotify"
+                      style={{ border: "none", display: "block" }}
                     />
                   </div>
 
                   <p className="text-xs text-white/25 leading-relaxed mt-4">
                     Also on{" "}
-                    <a href={PODCAST_SPOTIFY} target="_blank" rel="noopener noreferrer" className="text-amber-400/60 hover:text-amber-300 transition-colors">Spotify</a>
+                    <a href={PODCAST_APPLE} target="_blank" rel="noopener noreferrer" className="text-amber-400/60 hover:text-amber-300 transition-colors">Apple Podcasts</a>
                     . New episodes monthly.
                   </p>
 
