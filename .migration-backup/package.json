@@ -1,0 +1,23 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.1",
+  "scripts": {
+    "dev": "pnpm --filter @workspace/kiminou run dev",
+    "generate:seo": "node scripts/generate-seo.mjs",
+    "prerender:seo": "node scripts/prerender-seo.mjs",
+    "build": "pnpm run generate:seo && pnpm run typecheck && pnpm --filter @workspace/kiminou run build && pnpm run prerender:seo",
+    "typecheck": "pnpm --filter @workspace/kiminou run typecheck"
+  },
+  "private": true,
+  "dependencies": {
+    "nodemailer": "^8.0.10",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "prettier": "^3.8.3",
+    "typescript": "~5.9.3"
+  }
+}

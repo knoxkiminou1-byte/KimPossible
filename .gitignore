@@ -47,10 +47,3 @@ Thumbs.db
 # Replit
 .cache/
 .local/
-
-# local environment
-.env*
-!.env.example
-!.env.sample
-!.env.template
-.vercel/
