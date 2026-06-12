@@ -103,16 +103,30 @@ function TalkCard({ talk, index }: { talk: typeof talks[0]; index: number }) {
   );
 }
 
+/* ─── Station metadata for non-KimYaps presets ─────────────── */
+const STATION_INFO: Record<string, { label: string; genre: string; desc: string; color: string }> = {
+  "88.5":  { label: "KQED",  genre: "Public Radio · NPR",  color: "#3b82f6",
+    desc: "Bay Area news, arts, and public affairs from the nation's leading public broadcaster." },
+  "93.7":  { label: "Wild",  genre: "Hip-Hop · R&B",       color: "#ec4899",
+    desc: "The Bay's hottest hip-hop, trap, and R&B — keeping it real 24/7." },
+  "102.1": { label: "KBLX",  genre: "R&B · Soul",          color: "#f59e0b",
+    desc: "Classic and contemporary R&B and soul for the grown and sexy." },
+  "107.7": { label: "KSAN",  genre: "Classic Rock",        color: "#ef4444",
+    desc: "The Bone — Bay Area's home of classic rock legends." },
+};
+
 /* ─── The Radio Station Section ─────────────────────────────── */
 function RadioStation() {
   const [tuned, setTuned] = useState(false);
+  const [lockedFreq, setLockedFreq] = useState<string | null>(null);
   const [lockCount, setLockCount] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const inView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  const handleLock = useCallback((locked: boolean) => {
+  const handleLock = useCallback((locked: boolean, freq: string) => {
     setTuned(locked);
-    if (locked) setLockCount(c => c + 1);
+    setLockedFreq(locked ? freq : null);
+    if (locked && freq === "97.3") setLockCount(c => c + 1);
   }, []);
 
   return (
@@ -179,25 +193,20 @@ function RadioStation() {
           {/* Right — Embedded player (revealed when tuned) */}
           <div className="relative">
             <AnimatePresence mode="wait">
-              {tuned ? (
+              {tuned && lockedFreq === "97.3" ? (
+                /* ── KimYaps FM — Spotify embed ── */
                 <motion.div
-                  key="player"
+                  key="kimyaps"
                   initial={{ opacity: 0, scale: 0.95, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.6, ease: [0.215, 0.61, 0.355, 1] }}
                 >
-                  {/* Broadcast header */}
                   <div className="flex items-center gap-3 mb-4">
-                    <motion.div
-                      className="w-2 h-2 rounded-full bg-green-400"
-                      animate={{ opacity: [1, 0.3, 1] }}
-                      transition={{ duration: 1.2, repeat: Infinity }}
-                    />
+                    <motion.div className="w-2 h-2 rounded-full bg-green-400"
+                      animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.2, repeat: Infinity }} />
                     <span className="text-xs uppercase tracking-[0.35em] text-green-400/80 font-medium">On Air · KimYaps FM 97.3</span>
                   </div>
-
-                  {/* Spotify embed — remounts fresh on each dial lock so autoplay fires */}
                   <div className="relative overflow-hidden rounded-sm"
                     style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(34,197,94,0.06)" }}>
                     <iframe
@@ -210,53 +219,102 @@ function RadioStation() {
                       style={{ border: "none", display: "block" }}
                     />
                   </div>
-
                   <p className="text-xs text-white/25 leading-relaxed mt-4">
                     Also on{" "}
                     <a href={PODCAST_APPLE} target="_blank" rel="noopener noreferrer" className="text-amber-400/60 hover:text-amber-300 transition-colors">Apple Podcasts</a>
                     . New episodes monthly.
                   </p>
-
-                  {/* Social correction note */}
                   <div className="mt-5 border border-amber-400/15 bg-amber-400/4 p-4 text-xs text-white/40 leading-relaxed">
                     <span className="text-amber-400/70 font-semibold uppercase tracking-wider text-[10px]">Note — </span>
                     Some older episodes reference <span className="text-white/60">@Kiminou</span> on X. The correct handle is{" "}
                     <a href="https://x.com/KnoxKiminou" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">@KnoxKiminou</a>.
                   </div>
                 </motion.div>
+              ) : tuned && lockedFreq && STATION_INFO[lockedFreq] ? (
+                /* ── Other live station card ── */
+                (() => {
+                  const info = STATION_INFO[lockedFreq]!;
+                  return (
+                    <motion.div
+                      key={`station-${lockedFreq}`}
+                      initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.5, ease: [0.215, 0.61, 0.355, 1] }}
+                    >
+                      {/* On-air indicator */}
+                      <div className="flex items-center gap-3 mb-4">
+                        <motion.div className="w-2 h-2 rounded-full"
+                          style={{ background: info.color }}
+                          animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.2, repeat: Infinity }} />
+                        <span className="text-xs uppercase tracking-[0.35em] font-medium"
+                          style={{ color: info.color + "cc" }}>
+                          Live · {lockedFreq} FM
+                        </span>
+                      </div>
+
+                      {/* Station card */}
+                      <div className="border border-white/8 p-8"
+                        style={{ background: "rgba(255,255,255,0.015)", boxShadow: `0 0 0 1px rgba(255,255,255,0.06), 0 20px 60px rgba(0,0,0,0.5), 0 0 40px ${info.color}10` }}>
+                        <p className="font-serif text-5xl md:text-6xl mb-1" style={{ color: "rgba(255,255,255,0.85)" }}>
+                          {info.label}
+                        </p>
+                        <p className="text-xs uppercase tracking-[0.35em] mb-8" style={{ color: info.color + "99" }}>
+                          {info.genre}
+                        </p>
+
+                        {/* Animated waveform bars */}
+                        <div className="flex items-end justify-center gap-1 mb-8" style={{ height: 48 }}>
+                          {Array.from({ length: 22 }, (_, i) => (
+                            <motion.div key={i} className="w-1.5 rounded-sm"
+                              style={{ background: info.color + "70" }}
+                              animate={{ height: [`${10 + Math.sin(i * 0.8) * 8}px`, `${22 + Math.sin(i * 1.2) * 14}px`] }}
+                              transition={{
+                                duration: 0.35 + (i % 5) * 0.09,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                delay: i * 0.04,
+                              }} />
+                          ))}
+                        </div>
+
+                        <p className="text-sm text-white/35 leading-relaxed max-w-xs mx-auto text-center">
+                          {info.desc}
+                        </p>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-white/15 mt-5 text-center">
+                          Streaming through the receiver
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })()
               ) : (
+                /* ── Untuned placeholder ── */
                 <motion.div
-                  key="locked"
+                  key="untuned"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="h-full min-h-[352px] border border-white/8 flex flex-col items-center justify-center gap-6 text-center p-12"
                   style={{ background: "rgba(255,255,255,0.015)" }}
                 >
-                  {/* Animated signal rings */}
                   <div className="relative w-20 h-20 flex items-center justify-center">
                     {[1, 2, 3].map((i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute rounded-full border border-amber-400/20"
+                      <motion.div key={i} className="absolute rounded-full border border-amber-400/20"
                         animate={{ scale: [1, 2.5], opacity: [0.5, 0] }}
                         transition={{ duration: 2.4, delay: i * 0.7, repeat: Infinity, ease: "easeOut" }}
-                        style={{ width: 40, height: 40 }}
-                      />
+                        style={{ width: 40, height: 40 }} />
                     ))}
                     <Radio className="w-8 h-8 text-amber-400/40" />
                   </div>
                   <div>
                     <p className="font-serif text-xl text-white/30 mb-2">Signal not found</p>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/18">Tune to 97.3 to unlock</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/18">Drag the dial to tune in</p>
                   </div>
-                  {/* Scanning line */}
-                  <motion.div
-                    className="w-32 h-px"
+                  <motion.div className="w-32 h-px"
                     style={{ background: "linear-gradient(90deg,transparent,rgba(245,158,11,0.4),transparent)" }}
                     animate={{ x: [-64, 64, -64] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                  />
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }} />
                 </motion.div>
               )}
             </AnimatePresence>

@@ -4,14 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 /* ─── Constants ────────────────────────────────────────────── */
 const STATION_ANGLE = 215;
 const LOCK_RANGE = 16;
-const STATION_FREQ = "97.3";
 
 const PRESETS = [
-  { freq: "88.5", label: "KQED", angle: 20 },
-  { freq: "93.7", label: "Wild", angle: 95 },
-  { freq: "97.3", label: "KimYaps", angle: STATION_ANGLE, isStation: true },
-  { freq: "102.1", label: "KBLX", angle: 290 },
-  { freq: "107.7", label: "KSAN", angle: 345 },
+  { freq: "88.5",  label: "KQED",    angle: 20,           genre: "Public Radio · NPR", isStation: false,
+    stream: "https://streams.kqed.org/kqedradio" },
+  { freq: "93.7",  label: "Wild",    angle: 95,           genre: "Hip-Hop · R&B",      isStation: false,
+    stream: "https://playerservices.streamtheworld.com/api/livestream-redirect/WILD949FM.mp3" },
+  { freq: "97.3",  label: "KimYaps", angle: STATION_ANGLE, genre: "KimYaps FM",        isStation: true,
+    stream: null as string | null },
+  { freq: "102.1", label: "KBLX",    angle: 290,          genre: "R&B · Soul",         isStation: false,
+    stream: "https://playerservices.streamtheworld.com/api/livestream-redirect/KBLXFM.mp3" },
+  { freq: "107.7", label: "KSAN",    angle: 345,          genre: "Classic Rock",       isStation: false,
+    stream: "https://playerservices.streamtheworld.com/api/livestream-redirect/KSANFM.mp3" },
 ];
 
 function angleDiff(a: number, b: number) {
@@ -310,23 +314,31 @@ function SpeakerGrille({ active }: { active: boolean }) {
 }
 
 /* ─── Main RadioDial Component ─────────────────────────────── */
-export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => void }) {
+export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq: string) => void }) {
   const [angle, setAngle] = useState(60);
   const [dragging, setDragging] = useState(false);
   const [locked, setLocked] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const dialRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<RadioAudio | null>(null);
+  const streamAudioRef = useRef<HTMLAudioElement | null>(null);
   const dragStartRef = useRef<{ mouseAngle: number; dialAngle: number } | null>(null);
   const prevLockedRef = useRef(false);
+  const prevLockedFreqRef = useRef("");
 
-  const diff = angleDiff(angle, STATION_ANGLE);
-  const lockProximity = Math.max(0, 1 - diff / LOCK_RANGE);
-  const isLocked = diff < LOCK_RANGE;
+  /* Lock detection — any preset within LOCK_RANGE */
+  const lockedPreset = useMemo(() =>
+    PRESETS.find(p => angleDiff(angle, p.angle) < LOCK_RANGE) ?? null,
+  [angle]);
+  const isLocked = !!lockedPreset;
+  const nearestDiff = useMemo(() =>
+    Math.min(...PRESETS.map(p => angleDiff(angle, p.angle))),
+  [angle]);
+  const lockProximity = Math.max(0, 1 - nearestDiff / LOCK_RANGE);
 
   /* Display frequency */
   const displayFreq = useMemo(() => {
-    if (isLocked) return STATION_FREQ;
+    if (lockedPreset) return lockedPreset.freq;
     const nearest = PRESETS.reduce((best, f) => {
       const d = angleDiff(angle, f.angle);
       return d < angleDiff(angle, best.angle) ? f : best;
@@ -336,24 +348,48 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => vo
     const base = parseFloat(nearest.freq);
     const shift = (Math.sin(angle * 0.15) * 3.5);
     return (base + shift).toFixed(1);
-  }, [angle, isLocked]);
+  }, [angle, lockedPreset]);
 
-  /* Sync locked state */
+  /* Sync locked state + notify parent with which station */
   useEffect(() => {
-    if (isLocked !== prevLockedRef.current) {
+    const newFreq = lockedPreset?.freq ?? "";
+    if (isLocked !== prevLockedRef.current || newFreq !== prevLockedFreqRef.current) {
       prevLockedRef.current = isLocked;
+      prevLockedFreqRef.current = newFreq;
       setLocked(isLocked);
-      onLock?.(isLocked);
+      onLock?.(isLocked, newFreq);
     }
-  }, [isLocked, onLock]);
+  }, [isLocked, lockedPreset, onLock]);
 
-  /* Update audio proximity */
+  /* Live radio stream — play when locked on a non-KimYaps station */
+  useEffect(() => {
+    if (lockedPreset?.stream) {
+      if (!streamAudioRef.current) streamAudioRef.current = new Audio();
+      const a = streamAudioRef.current;
+      if (a.src !== lockedPreset.stream) {
+        a.pause();
+        a.src = lockedPreset.stream;
+      }
+      a.volume = 0.7;
+      a.play().catch(() => {});
+    } else {
+      if (streamAudioRef.current) {
+        streamAudioRef.current.pause();
+        streamAudioRef.current.src = "";
+      }
+    }
+  }, [lockedPreset]);
+
+  /* Update static noise proximity */
   useEffect(() => {
     audioRef.current?.setProximity(lockProximity, isLocked);
   }, [lockProximity, isLocked]);
 
   /* Cleanup */
-  useEffect(() => () => { audioRef.current?.stop(); }, []);
+  useEffect(() => () => {
+    audioRef.current?.stop();
+    streamAudioRef.current?.pause();
+  }, []);
 
   const getMouseAngle = useCallback((e: PointerEvent | React.PointerEvent, rect: DOMRect) => {
     const cx = rect.left + rect.width / 2;
@@ -402,24 +438,23 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => vo
     };
   }, [dragging, onPointerMove, onPointerUp]);
 
-  const snapToStation = useCallback(() => {
+  const snapToAngle = useCallback((toAngle: number) => {
     startAudio();
-    /* Animate angle to station */
     let start: number | null = null;
     const from = angle;
-    const to = STATION_ANGLE;
-    let diff = ((to - from) % 360 + 360) % 360;
-    if (diff > 180) diff -= 360;
-    const target = from + diff;
+    let delta = ((toAngle - from) % 360 + 360) % 360;
+    if (delta > 180) delta -= 360;
     const step = (ts: number) => {
       if (!start) start = ts;
       const t = Math.min((ts - start) / 700, 1);
       const ease = 1 - Math.pow(1 - t, 3);
-      setAngle(((from + diff * ease) % 360 + 360) % 360);
+      setAngle(((from + delta * ease) % 360 + 360) % 360);
       if (t < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
   }, [angle, startAudio]);
+
+  const snapToStation = useCallback(() => snapToAngle(STATION_ANGLE), [snapToAngle]);
 
   const signalBars = Math.round(lockProximity * 5);
 
@@ -518,7 +553,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => vo
                     <motion.div className="w-1 h-1 rounded-full bg-green-400"
                       animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }} />
                     <span className="text-[9px] uppercase tracking-[0.35em] font-semibold"
-                      style={{ color: "rgba(134,239,172,0.8)" }}>KimYaps FM</span>
+                      style={{ color: "rgba(134,239,172,0.8)" }}>{lockedPreset?.label ?? "KimYaps"} FM</span>
                   </motion.div>
                 ) : (
                   <motion.p key="scan" className="text-[8px] uppercase tracking-[0.3em] text-white/20"
@@ -545,16 +580,26 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => vo
                 </div>
               ))}
             </div>
-            {/* KimYaps marker */}
-            <div className="absolute top-1 bottom-1 flex flex-col items-center pointer-events-none"
-              style={{ left: `${(STATION_ANGLE / 360) * 100}%`, transform: "translateX(-50%)" }}>
-              <div className="w-px flex-1" style={{ background: "rgba(245,158,11,0.6)" }} />
-              <span className="text-[6px] text-amber-400/60 font-mono leading-none mt-0.5">97.3</span>
-            </div>
-            {/* Needle */}
+            {/* Station markers on the FM band */}
+            {PRESETS.map(p => {
+              const pos = (parseFloat(p.freq) - 88) / 20 * 100;
+              const isActive = locked && lockedPreset?.freq === p.freq;
+              return (
+                <div key={p.freq} className="absolute top-1 bottom-1 flex flex-col items-center pointer-events-none"
+                  style={{ left: `${pos}%`, transform: "translateX(-50%)" }}>
+                  <div className="w-px flex-1" style={{
+                    background: isActive ? (p.isStation ? "rgba(134,239,172,0.9)" : "rgba(245,158,11,0.8)") : "rgba(255,255,255,0.25)",
+                  }} />
+                  <span className="text-[6px] font-mono leading-none mt-0.5" style={{
+                    color: isActive ? (p.isStation ? "rgba(134,239,172,0.7)" : "rgba(245,158,11,0.7)") : "rgba(255,255,255,0.18)",
+                  }}>{p.freq}</span>
+                </div>
+              );
+            })}
+            {/* Needle — position based on display frequency */}
             <motion.div className="absolute top-0 bottom-0 w-0.5 pointer-events-none"
               style={{
-                left: `${(angle / 360) * 100}%`,
+                left: `${Math.max(0, Math.min(100, (parseFloat(displayFreq) - 88) / 20 * 100))}%`,
                 background: locked ? "rgba(134,239,172,0.9)" : "rgba(245,158,11,0.8)",
                 boxShadow: locked ? "0 0 6px rgba(134,239,172,0.7)" : "0 0 4px rgba(245,158,11,0.5)",
               }} />
@@ -569,32 +614,38 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => vo
             <div className="flex-1 flex flex-col gap-3">
               {/* Preset buttons */}
               <div className="flex gap-1.5">
-                {PRESETS.map((p) => (
-                  <motion.button
-                    key={p.freq}
-                    onClick={() => {
-                      startAudio();
-                      if (p.isStation) snapToStation();
-                      else setAngle(p.angle);
-                    }}
-                    className="flex-1 py-1.5 rounded text-center relative overflow-hidden"
-                    style={{
-                      background: p.isStation && locked ? "rgba(34,197,94,0.12)" : "rgba(255,255,255,0.04)",
-                      border: `1px solid ${p.isStation ? (locked ? "rgba(34,197,94,0.35)" : "rgba(245,158,11,0.25)") : "rgba(255,255,255,0.07)"}`,
-                    }}
-                    whileTap={{ scale: 0.93 }}
-                  >
-                    <span className="text-[7px] uppercase tracking-[0.2em] block"
-                      style={{ color: p.isStation ? (locked ? "rgba(134,239,172,0.8)" : "rgba(245,158,11,0.6)") : "rgba(255,255,255,0.2)" }}>
-                      {p.isStation ? "★" : p.label}
-                    </span>
-                    {p.isStation && (
-                      <span className="text-[6px] block" style={{ color: locked ? "rgba(134,239,172,0.5)" : "rgba(245,158,11,0.35)" }}>
+                {PRESETS.map((p) => {
+                  const isActive = locked && lockedPreset?.freq === p.freq;
+                  return (
+                    <motion.button
+                      key={p.freq}
+                      onClick={() => snapToAngle(p.angle)}
+                      className="flex-1 py-1.5 rounded text-center relative overflow-hidden"
+                      style={{
+                        background: isActive
+                          ? (p.isStation ? "rgba(34,197,94,0.12)" : "rgba(245,158,11,0.09)")
+                          : "rgba(255,255,255,0.04)",
+                        border: `1px solid ${isActive
+                          ? (p.isStation ? "rgba(34,197,94,0.35)" : "rgba(245,158,11,0.28)")
+                          : "rgba(255,255,255,0.07)"}`,
+                      }}
+                      whileTap={{ scale: 0.93 }}
+                    >
+                      <span className="text-[7px] uppercase tracking-[0.2em] block"
+                        style={{ color: isActive
+                          ? (p.isStation ? "rgba(134,239,172,0.8)" : "rgba(245,158,11,0.7)")
+                          : "rgba(255,255,255,0.2)" }}>
+                        {p.isStation ? "★" : p.label}
+                      </span>
+                      <span className="text-[6px] block"
+                        style={{ color: isActive
+                          ? (p.isStation ? "rgba(134,239,172,0.5)" : "rgba(245,158,11,0.45)")
+                          : "rgba(255,255,255,0.1)" }}>
                         {p.freq}
                       </span>
-                    )}
-                  </motion.button>
-                ))}
+                    </motion.button>
+                  );
+                })}
               </div>
 
               {/* THE BIG DIAL */}
@@ -712,7 +763,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean) => vo
                     }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.96 }}>
-                    {locked ? "✓ KimYaps" : "⇒ Find 97.3"}
+                    {locked ? `✓ ${lockedPreset?.label ?? "Locked"}` : "⇒ Find 97.3"}
                   </motion.button>
 
                   {/* Hint */}
