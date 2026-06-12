@@ -5,12 +5,12 @@ import SignatureAnimation from "@/components/SignatureAnimation";
 
 const links = [
   { href: "/books", label: "Books" },
-  { href: "/basketball", label: "Athletics" },
+  { href: "/sports", label: "Athletics" },
   { href: "/speaking", label: "Speaking" },
   { href: "/author", label: "Bio" },
   { href: "/press", label: "Press" },
   { href: "/blog", label: "Blog" },
-  { href: "/podcast", label: "KimYaps Podcast" },
+  { href: "/speaking", label: "KimYaps Podcast" },
   { href: "/contact", label: "Contact" },
 ];
 

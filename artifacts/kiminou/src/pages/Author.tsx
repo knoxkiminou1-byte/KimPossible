@@ -525,7 +525,7 @@ export default function Author() {
                 <p className="text-white/60 text-lg leading-relaxed">
                   The same internal standards that govern his literary craft: consistency, resilience, and a refusal to cut corners, shape how he moves through weight rooms, fields, and courts.
                 </p>
-                <Link href="/basketball">
+                <Link href="/sports">
                   <motion.span className="inline-flex items-center gap-2 mt-8 text-xs uppercase tracking-[0.3em] text-amber-300 hover:text-amber-200 transition-colors cursor-pointer group"
                     whileHover={{ x: 4 }}>
                     View Athletic Profile
@@ -676,7 +676,7 @@ export default function Author() {
           <section id="connect" className="py-20 border-t border-white/6 scroll-mt-16">
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. NCAA registered. Multi-sport.", link: "/basketball", cta: "Athletic Profile" },
+                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. NCAA registered. Multi-sport.", link: "/sports", cta: "Athletic Profile" },
                 { icon: Mic, title: "Speaker", desc: "Talks on discipline, Black boy voice, and creative work that lasts.", link: "/speaking", cta: "Speaking Info" },
                 { icon: Users, title: "Director", desc: "Director of Artists & Athletes For Change. Youth development.", link: "/contact", cta: "Connect" },
               ].map((item, i) => (

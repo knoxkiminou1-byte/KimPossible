@@ -1,0 +1,82 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "devCommand": "pnpm --filter @workspace/kiminou run dev",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "artifacts/kiminou/dist/public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/press-kit",
+      "destination": "/press",
+      "permanent": true
+    },
+    {
+      "source": "/presskit",
+      "destination": "/press",
+      "permanent": true
+    },
+    {
+      "source": "/photos",
+      "destination": "/image-sitemap.xml",
+      "permanent": false
+    },
+    {
+      "source": "/photos/",
+      "destination": "/image-sitemap.xml",
+      "permanent": false
+    },
+    {
+      "source": "/podcast",
+      "destination": "/speaking",
+      "permanent": true
+    },
+    {
+      "source": "/podcast/",
+      "destination": "/speaking",
+      "permanent": true
+    },
+    {
+      "source": "/kimyaps",
+      "destination": "/speaking",
+      "permanent": true
+    },
+    {
+      "source": "/kimyaps/",
+      "destination": "/speaking",
+      "permanent": true
+    },
+    {
+      "source": "/basketball",
+      "destination": "/sports",
+      "permanent": true
+    },
+    {
+      "source": "/basketball/",
+      "destination": "/sports",
+      "permanent": true
+    },
+    {
+      "source": "/blog/seven-books-before-twenty-why-i-couldnt-stop",
+      "destination": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "permanent": true
+    },
+    {
+      "source": "/blog/seven-books-before-twenty-why-i-couldnt-stop/",
+      "destination": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/.*|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

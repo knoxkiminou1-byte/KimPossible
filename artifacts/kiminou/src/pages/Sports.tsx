@@ -211,14 +211,14 @@ export default function Sports() {
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
         <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile | NCAA Registered" />
-        <meta property="og:description" content="Kiminou Knox is a 6'8\" 235lb NCAA-registered basketball athlete at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection." />
+        <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb NCAA-registered basketball athlete at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
-        <meta name="twitter:description" content="6'8\" NCAA-registered athlete. Varsity captain. CaliHoop top-team selection. Cristo Rey De La Salle." />
+        <meta name="twitter:description" content={"6'8\" NCAA-registered athlete. Varsity captain. CaliHoop top-team selection. Cristo Rey De La Salle."} />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({

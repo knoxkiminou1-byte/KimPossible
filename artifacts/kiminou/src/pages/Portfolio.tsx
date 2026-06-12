@@ -31,7 +31,7 @@ const caseStudies = [
     tags: ["Basketball", "Football", "NCAA"],
     metric: "6'7\"",
     metricLabel: "Forward / Center",
-    link: "/basketball",
+    link: "/sports",
     cta: "Athletic Profile",
     icon: Trophy,
   },

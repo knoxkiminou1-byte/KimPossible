@@ -112,7 +112,9 @@ function Router() {
         </Route>
         <Route path="/press" component={Press} />
         <Route path="/sports" component={Sports} />
-        <Route path="/basketball" component={Sports} />
+        <Route path="/basketball">
+          <Redirect to="/sports" />
+        </Route>
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/books" component={Books} />
         <Route path="/books/:id" component={BookDetail} />

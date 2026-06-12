@@ -22,7 +22,7 @@ const identity = [
     label: "Athlete",
     title: "6\u20197\u2033 Multi-Sport Leader",
     description: "Cristo Rey De La Salle basketball and football athlete — varsity captain combining physical excellence with leadership on and off the field.",
-    link: "/basketball",
+    link: "/sports",
     cta: "View Athletics",
   },
   {

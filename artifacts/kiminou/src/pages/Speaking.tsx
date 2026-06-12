@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { useRef, useState, lazy, Suspense, useCallback } from "react";
-import { ExternalLink, Mic, Radio } from "lucide-react";
+import { useRef, useState, lazy, Suspense, useCallback, useEffect } from "react";
+import { ExternalLink, Headphones, Mic, Pause, Play, Radio } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
@@ -15,7 +15,47 @@ const ApplausePhysics = lazy(() => import("@/components/LuxuryFX/ApplausePhysics
 
 const PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 const PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
-const SPOTIFY_AUTOPLAY_URL = "https://open.spotify.com/embed/show/4TB8QKI52yaGIFDOCCkrYg?utm_source=generator&theme=0&autoplay=1";
+const SPOTIFY_SHOW_EMBED_URL = "https://open.spotify.com/embed/show/4TB8QKI52yaGIFDOCCkrYg?utm_source=generator&theme=0";
+
+const LOCAL_PODCAST_EPISODES = [
+  {
+    title: "Kiminou 09: Kiminou's Studio",
+    label: "Auto-play episode",
+    duration: "35 min",
+    src: "/audio/kimyaps-kiminou-09-studio.m4a",
+  },
+  {
+    title: "Magic Episode 01",
+    label: "Riverside studio cut",
+    duration: "32 min",
+    src: "/audio/kimyaps-magic-episode-01.m4a",
+  },
+];
+
+const POPULAR_SPOTIFY_EPISODES = [
+  {
+    rank: "01",
+    title: "Proverbs 21 Bible Study",
+    duration: "31 min",
+    episodeId: "6xZ8JRKeIFuQtp1HWTf7Zs",
+  },
+  {
+    rank: "02",
+    title: "Why Do You Want to Be Mad at Me?",
+    duration: "21 min",
+    episodeId: "2Y7yeqvUSR16KUV9FQv2IL",
+  },
+  {
+    rank: "03",
+    title: "When Pain Becomes Your Personality",
+    duration: "21 min",
+    episodeId: "0b7VIQBAtZpBZrVR8ZtQD8",
+  },
+];
+
+function spotifyEpisodeEmbed(episodeId: string) {
+  return `https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator&theme=0`;
+}
 
 const AUDIENCES = ["All", "Schools", "Teams", "Youth", "Community", "Faith"];
 
@@ -120,14 +160,39 @@ function RadioStation() {
   const [tuned, setTuned] = useState(false);
   const [lockedFreq, setLockedFreq] = useState<string | null>(null);
   const [lockCount, setLockCount] = useState(0);
+  const [activeLocalEpisode, setActiveLocalEpisode] = useState(LOCAL_PODCAST_EPISODES[0]);
+  const [localPlaying, setLocalPlaying] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const localAudioRef = useRef<HTMLAudioElement>(null);
   const inView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const kimYapsLocked = tuned && lockedFreq === "97.3";
 
   const handleLock = useCallback((locked: boolean, freq: string) => {
     setTuned(locked);
     setLockedFreq(locked ? freq : null);
-    if (locked && freq === "97.3") setLockCount(c => c + 1);
+    if (locked && freq === "97.3") {
+      setActiveLocalEpisode(LOCAL_PODCAST_EPISODES[0]);
+      setLockCount(c => c + 1);
+    } else {
+      localAudioRef.current?.pause();
+    }
   }, []);
+
+  const playLocalEpisode = useCallback((episode: typeof LOCAL_PODCAST_EPISODES[number]) => {
+    setActiveLocalEpisode(episode);
+    window.setTimeout(() => {
+      localAudioRef.current?.play().catch(() => setLocalPlaying(false));
+    }, 0);
+  }, []);
+
+  const pauseLocalForSpotify = useCallback(() => {
+    localAudioRef.current?.pause();
+  }, []);
+
+  useEffect(() => {
+    if (!kimYapsLocked) return;
+    localAudioRef.current?.play().catch(() => setLocalPlaying(false));
+  }, [kimYapsLocked, lockCount, activeLocalEpisode.src]);
 
   return (
     <section className="py-28 border-t border-white/6 relative overflow-hidden">
@@ -194,7 +259,7 @@ function RadioStation() {
           <div className="relative">
             <AnimatePresence mode="wait">
               {tuned && lockedFreq === "97.3" ? (
-                /* ── KimYaps FM — Spotify embed ── */
+                /* ── KimYaps FM — Local audio first, Spotify embeds available ── */
                 <motion.div
                   key="kimyaps"
                   initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -207,16 +272,118 @@ function RadioStation() {
                       animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.2, repeat: Infinity }} />
                     <span className="text-xs uppercase tracking-[0.35em] text-green-400/80 font-medium">On Air · KimYaps FM 97.3</span>
                   </div>
-                  <div className="relative overflow-hidden rounded-sm"
-                    style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(34,197,94,0.06)" }}>
+                  <div
+                    className="relative overflow-hidden border border-white/8 bg-white/[0.025] p-5"
+                    style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.55), 0 0 40px rgba(34,197,94,0.06)" }}
+                  >
+                    <div className="flex items-start justify-between gap-5 mb-4">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/60 mb-2">
+                          Now Playing
+                        </p>
+                        <h3 className="font-serif text-2xl text-white/90 font-light">
+                          {activeLocalEpisode.title}
+                        </h3>
+                        <p className="text-xs uppercase tracking-[0.24em] text-white/25 mt-2">
+                          {activeLocalEpisode.label} · {activeLocalEpisode.duration}
+                        </p>
+                      </div>
+                      <div className="shrink-0 w-11 h-11 border border-green-400/25 bg-green-400/10 flex items-center justify-center">
+                        {localPlaying ? <Pause className="w-4 h-4 text-green-300" /> : <Play className="w-4 h-4 text-green-300" />}
+                      </div>
+                    </div>
+
+                    <audio
+                      key={`${activeLocalEpisode.src}-${lockCount}`}
+                      ref={localAudioRef}
+                      src={activeLocalEpisode.src}
+                      controls
+                      autoPlay
+                      preload="metadata"
+                      className="w-full"
+                      onPlay={() => setLocalPlaying(true)}
+                      onPause={() => setLocalPlaying(false)}
+                      onEnded={() => setLocalPlaying(false)}
+                    />
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
+                      {LOCAL_PODCAST_EPISODES.map((episode) => {
+                        const active = episode.src === activeLocalEpisode.src;
+                        return (
+                          <button
+                            key={episode.src}
+                            type="button"
+                            onClick={() => playLocalEpisode(episode)}
+                            className={`min-h-14 text-left px-4 py-3 border transition-colors duration-300 ${
+                              active
+                                ? "border-amber-400/45 bg-amber-400/10 text-amber-100"
+                                : "border-white/8 bg-black/25 text-white/45 hover:border-white/20 hover:text-white/70"
+                            }`}
+                          >
+                            <span className="block text-[10px] uppercase tracking-[0.22em]">
+                              {episode.duration}
+                            </span>
+                            <span className="block font-serif text-base leading-tight mt-1">
+                              {episode.title}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="mt-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Headphones className="w-4 h-4 text-amber-400/50" />
+                      <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 font-medium">
+                        Popular Episodes First
+                      </p>
+                    </div>
+                    <div className="space-y-4">
+                      {POPULAR_SPOTIFY_EPISODES.map((episode) => (
+                        <div
+                          key={episode.episodeId}
+                          className="border border-white/8 bg-black/35 p-3"
+                          onPointerDown={pauseLocalForSpotify}
+                        >
+                          <div className="flex items-center justify-between gap-4 mb-3 px-1">
+                            <div className="flex items-center gap-3 min-w-0">
+                              <span className="font-serif text-lg text-white/20 w-7 shrink-0">{episode.rank}</span>
+                              <p className="text-sm text-white/65 leading-tight truncate">{episode.title}</p>
+                            </div>
+                            <span className="text-[10px] uppercase tracking-[0.18em] text-white/25 shrink-0">
+                              {episode.duration}
+                            </span>
+                          </div>
+                          <iframe
+                            src={spotifyEpisodeEmbed(episode.episodeId)}
+                            width="100%"
+                            height="152"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                            title={`KimYaps Spotify episode: ${episode.title}`}
+                            style={{ border: "none", display: "block", borderRadius: 2 }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-5 border border-white/8 bg-black/35 p-3" onPointerDown={pauseLocalForSpotify}>
+                    <div className="flex items-center justify-between gap-4 mb-3 px-1">
+                      <p className="text-sm text-white/50">Full KimYaps show</p>
+                      <a href={PODCAST_SPOTIFY} target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.2em] text-amber-400/60 hover:text-amber-300 transition-colors">
+                        Spotify
+                      </a>
+                    </div>
                     <iframe
-                      key={`spotify-lock-${lockCount}`}
-                      src={SPOTIFY_AUTOPLAY_URL}
+                      src={SPOTIFY_SHOW_EMBED_URL}
                       width="100%"
-                      height="352"
+                      height="152"
                       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
                       title="KimYaps Podcast on Spotify"
-                      style={{ border: "none", display: "block" }}
+                      style={{ border: "none", display: "block", borderRadius: 2 }}
                     />
                   </div>
                   <p className="text-xs text-white/25 leading-relaxed mt-4">
@@ -338,7 +505,7 @@ export default function Speaking() {
     <>
       <Helmet>
         <title>Kiminou Knox — Speaking & KimYaps Podcast | Voice, Faith & Purpose</title>
-        <meta name="description" content="Book Kiminou Knox for speaking engagements at schools, youth programs, and community groups — and tune in to KimYaps, his podcast on faith, purpose, and honest conversations. 26+ episodes on Apple Podcasts and Spotify." />
+        <meta name="description" content="Book Kiminou Knox for speaking engagements and tune into KimYaps on the Voice page, with local studio audio and popular Spotify episodes about faith, purpose, pain, and grace." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/speaking" />
         <meta property="og:type" content="website" />
