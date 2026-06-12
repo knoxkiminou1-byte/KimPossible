@@ -9,6 +9,15 @@ export type KiminouImage = {
 };
 
 export const KIMINOU_IMAGES = {
+  bwPortrait: {
+    src: "/photos/kiminou-knox-bw-portrait.png",
+    title: "Kiminou Knox black and white portrait",
+    alt: "Kiminou Knox official black and white author portrait",
+    caption: "Black and white portrait of Kiminou Knox for press and editorial use.",
+    category: "Author" as const,
+    width: 800,
+    height: 1067,
+  },
   officialHeadshot: {
     src: "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
     title: "Kiminou Knox official author headshot",
@@ -38,9 +47,9 @@ export const KIMINOU_IMAGES = {
   },
   basketballJumpShot: {
     src: "/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-    title: "Kiminou Knox basketball jump shot",
+    title: "Kiminou Knox on the court",
     alt: "Kiminou Knox shooting a basketball during warmups in a gym",
-    caption: "Kiminou Knox taking a jump shot during basketball warmups.",
+    caption: "Kiminou Knox during basketball warmups.",
     category: "Athlete",
     width: 742,
     height: 931,

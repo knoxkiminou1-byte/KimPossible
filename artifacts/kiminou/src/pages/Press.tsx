@@ -88,7 +88,7 @@ const creativeWorkSchema = {
 };
 
 const pressImages = [
-  KIMINOU_IMAGES.officialHeadshot,
+  KIMINOU_IMAGES.bwPortrait,
 ];
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {

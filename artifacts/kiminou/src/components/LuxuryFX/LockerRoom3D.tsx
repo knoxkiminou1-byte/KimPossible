@@ -7,105 +7,95 @@ const LOCKER_W = 0.72;
 const LOCKER_H = 2.0;
 const LOCKER_D = 0.55;
 const LOCKER_GAP = 0.04;
-const COLS = 14;
+const COLS = 16;
 const ROWS = 2;
-const ROOM_W = 20;
-const ROOM_H = 4.2;
-const ROOM_D = 12;
+const ROOM_W = 22;
+const ROOM_H = 4.8;
+const ROOM_D = 14;
 
 /* ─── Shared materials ───────────────────────────────────────── */
 function useLockerMats() {
   return useMemo(() => {
     const metalBody = new THREE.MeshStandardMaterial({
-      color: 0x1a1d22,
-      roughness: 0.55,
-      metalness: 0.85,
+      color: 0x16191f,
+      roughness: 0.5,
+      metalness: 0.92,
     });
     const metalDoor = new THREE.MeshStandardMaterial({
-      color: 0x202530,
-      roughness: 0.45,
-      metalness: 0.9,
+      color: 0x1c2030,
+      roughness: 0.38,
+      metalness: 0.95,
     });
     const metalTrim = new THREE.MeshStandardMaterial({
       color: 0xd4a017,
-      roughness: 0.3,
+      roughness: 0.22,
       metalness: 1.0,
       emissive: new THREE.Color(0xd4a017),
-      emissiveIntensity: 0.12,
+      emissiveIntensity: 0.22,
     });
     const floorMat = new THREE.MeshStandardMaterial({
-      color: 0x0d0e0f,
-      roughness: 0.92,
-      metalness: 0.05,
+      color: 0x0b0c0e,
+      roughness: 0.25,
+      metalness: 0.55,
+      envMapIntensity: 1.2,
     });
     const ceilMat = new THREE.MeshStandardMaterial({
-      color: 0x080909,
-      roughness: 0.95,
+      color: 0x060708,
+      roughness: 0.98,
       metalness: 0.0,
     });
     const wallMat = new THREE.MeshStandardMaterial({
-      color: 0x111318,
-      roughness: 0.85,
-      metalness: 0.1,
+      color: 0x0d1018,
+      roughness: 0.82,
+      metalness: 0.18,
     });
     const glowMat = new THREE.MeshStandardMaterial({
       color: 0xfff5d0,
       emissive: new THREE.Color(0xfff5d0),
-      emissiveIntensity: 2.2,
+      emissiveIntensity: 2.8,
       roughness: 1,
       metalness: 0,
     });
     const openBackMat = new THREE.MeshStandardMaterial({
-      color: 0x0a0c0e,
+      color: 0x080a0d,
       roughness: 1,
       metalness: 0,
     });
     const jerseyMat = new THREE.MeshStandardMaterial({
       color: 0xc8993a,
-      roughness: 0.8,
-      metalness: 0.0,
+      roughness: 0.7,
+      metalness: 0.1,
       emissive: new THREE.Color(0xc8993a),
-      emissiveIntensity: 0.06,
+      emissiveIntensity: 0.14,
     });
-    return { metalBody, metalDoor, metalTrim, floorMat, ceilMat, wallMat, glowMat, openBackMat, jerseyMat };
+    const benchWoodMat = new THREE.MeshStandardMaterial({
+      color: 0x261a10,
+      roughness: 0.85,
+      metalness: 0.08,
+    });
+    const benchLegMat = new THREE.MeshStandardMaterial({
+      color: 0x181b22,
+      roughness: 0.45,
+      metalness: 0.88,
+    });
+    const ballMat = new THREE.MeshStandardMaterial({
+      color: 0xc45a1a,
+      roughness: 0.78,
+      metalness: 0.05,
+    });
+    const bannerMat = new THREE.MeshStandardMaterial({
+      color: 0xd4a017,
+      roughness: 0.6,
+      metalness: 0.2,
+      emissive: new THREE.Color(0xd4a017),
+      emissiveIntensity: 0.08,
+      side: THREE.DoubleSide,
+    });
+    return { metalBody, metalDoor, metalTrim, floorMat, ceilMat, wallMat, glowMat, openBackMat, jerseyMat, benchWoodMat, benchLegMat, ballMat, bannerMat };
   }, []);
 }
 
-/* ─── Locker geometry (instanced) ───────────────────────────── */
-function LockerRow({
-  z,
-  y,
-  openIndex,
-  mats,
-}: {
-  z: number;
-  y: number;
-  openIndex?: number;
-  mats: ReturnType<typeof useLockerMats>;
-}) {
-  const { metalBody, metalDoor, metalTrim, openBackMat, jerseyMat } = mats;
-  const step = LOCKER_W + LOCKER_GAP;
-  const startX = -(COLS / 2) * step + step / 2;
-
-  return (
-    <group position={[0, y, z]}>
-      {Array.from({ length: COLS }, (_, i) => {
-        const x = startX + i * step;
-        const isOpen = i === openIndex;
-        return (
-          <LockerUnit
-            key={i}
-            x={x}
-            isOpen={isOpen}
-            mats={mats}
-            featured={isOpen}
-          />
-        );
-      })}
-    </group>
-  );
-}
-
+/* ─── Locker Unit ───────────────────────────────────────────────── */
 function LockerUnit({
   x,
   isOpen,
@@ -117,13 +107,12 @@ function LockerUnit({
   mats: ReturnType<typeof useLockerMats>;
   featured?: boolean;
 }) {
-  const { metalBody, metalDoor, metalTrim, openBackMat, jerseyMat } = mats;
-  const doorRef = useRef<THREE.Mesh>(null);
+  const { metalBody, metalDoor, metalTrim, openBackMat, jerseyMat, ballMat } = mats;
   const glowRef = useRef<THREE.PointLight>(null);
 
   useFrame(({ clock }) => {
     if (glowRef.current && featured) {
-      glowRef.current.intensity = 0.6 + Math.sin(clock.elapsedTime * 1.4) * 0.2;
+      glowRef.current.intensity = 1.1 + Math.sin(clock.elapsedTime * 1.6) * 0.35;
     }
   });
 
@@ -134,100 +123,140 @@ function LockerUnit({
         <boxGeometry args={[LOCKER_W, LOCKER_H, LOCKER_D]} />
       </mesh>
 
-      {/* Ventilation slits (top + bottom decorative strips) */}
+      {/* Ventilation slits */}
       <mesh material={metalTrim} position={[0, LOCKER_H * 0.42, LOCKER_D / 2 + 0.002]}>
-        <boxGeometry args={[LOCKER_W * 0.6, 0.02, 0.004]} />
+        <boxGeometry args={[LOCKER_W * 0.62, 0.022, 0.004]} />
       </mesh>
       <mesh material={metalTrim} position={[0, LOCKER_H * 0.38, LOCKER_D / 2 + 0.002]}>
-        <boxGeometry args={[LOCKER_W * 0.6, 0.02, 0.004]} />
+        <boxGeometry args={[LOCKER_W * 0.62, 0.022, 0.004]} />
+      </mesh>
+      <mesh material={metalTrim} position={[0, LOCKER_H * 0.34, LOCKER_D / 2 + 0.002]}>
+        <boxGeometry args={[LOCKER_W * 0.62, 0.022, 0.004]} />
       </mesh>
       <mesh material={metalTrim} position={[0, -LOCKER_H * 0.42, LOCKER_D / 2 + 0.002]}>
-        <boxGeometry args={[LOCKER_W * 0.6, 0.02, 0.004]} />
+        <boxGeometry args={[LOCKER_W * 0.62, 0.022, 0.004]} />
       </mesh>
 
       {/* Number plate trim */}
       <mesh material={metalTrim} position={[0, LOCKER_H * 0.28, LOCKER_D / 2 + 0.003]}>
-        <boxGeometry args={[LOCKER_W * 0.45, 0.03, 0.004]} />
+        <boxGeometry args={[LOCKER_W * 0.48, 0.035, 0.004]} />
       </mesh>
 
       {/* Locker handle */}
-      <mesh material={metalTrim} position={[LOCKER_W * 0.3, 0, LOCKER_D / 2 + 0.012]}>
-        <boxGeometry args={[0.02, 0.14, 0.02]} />
+      <mesh material={metalTrim} position={[LOCKER_W * 0.3, 0, LOCKER_D / 2 + 0.014]}>
+        <boxGeometry args={[0.022, 0.16, 0.022]} />
       </mesh>
 
-      {/* Inside back panel */}
+      {/* Side edge trim strips */}
+      <mesh material={metalTrim} position={[-LOCKER_W / 2 + 0.01, 0, LOCKER_D / 2 + 0.003]}>
+        <boxGeometry args={[0.012, LOCKER_H, 0.004]} />
+      </mesh>
+      <mesh material={metalTrim} position={[LOCKER_W / 2 - 0.01, 0, LOCKER_D / 2 + 0.003]}>
+        <boxGeometry args={[0.012, LOCKER_H, 0.004]} />
+      </mesh>
+
+      {/* Inside open locker */}
       {isOpen && (
         <>
           <mesh material={openBackMat} position={[0, 0, -LOCKER_D / 2 + 0.01]}>
             <boxGeometry args={[LOCKER_W - 0.06, LOCKER_H - 0.06, 0.02]} />
           </mesh>
-          {/* Jersey hanging */}
-          <mesh material={jerseyMat} position={[0, 0.2, -LOCKER_D / 2 + 0.08]}>
-            <boxGeometry args={[LOCKER_W * 0.55, LOCKER_H * 0.55, 0.025]} />
+          {/* Jersey */}
+          <mesh material={jerseyMat} position={[0, 0.22, -LOCKER_D / 2 + 0.09]}>
+            <boxGeometry args={[LOCKER_W * 0.58, LOCKER_H * 0.58, 0.028]} />
           </mesh>
-          {/* Jersey number accent */}
-          <mesh
-            position={[0, 0.15, -LOCKER_D / 2 + 0.1]}
-          >
-            <boxGeometry args={[0.12, 0.2, 0.005]} />
+          {/* Jersey number */}
+          <mesh position={[0, 0.18, -LOCKER_D / 2 + 0.11]}>
+            <boxGeometry args={[0.14, 0.22, 0.005]} />
             <meshStandardMaterial
               color={0xffffff}
               emissive={new THREE.Color(0xffffff)}
-              emissiveIntensity={0.3}
+              emissiveIntensity={0.5}
             />
           </mesh>
-          {/* Helmet on shelf at bottom */}
-          <mesh position={[0, -LOCKER_H * 0.34, -LOCKER_D / 2 + 0.14]}>
-            <sphereGeometry args={[0.14, 16, 12, 0, Math.PI * 2, 0, Math.PI * 0.6]} />
-            <meshStandardMaterial color={0x1a2a5a} metalness={0.7} roughness={0.3} />
+          {/* Basketball on shelf */}
+          <mesh material={ballMat} position={[0.1, -LOCKER_H * 0.3, -LOCKER_D / 2 + 0.18]}>
+            <sphereGeometry args={[0.12, 20, 16]} />
           </mesh>
           {/* Glow from inside */}
           <pointLight
             ref={glowRef}
-            position={[0, 0, -LOCKER_D / 2 + 0.3]}
-            color={0xd4a017}
-            intensity={0.6}
-            distance={2.5}
+            position={[0, 0.1, -LOCKER_D / 2 + 0.35]}
+            color={0xe8b020}
+            intensity={1.1}
+            distance={3.2}
+          />
+          {/* Secondary blue accent inside */}
+          <pointLight
+            position={[0, -0.5, -LOCKER_D / 2 + 0.2]}
+            color={0x3060ff}
+            intensity={0.3}
+            distance={1.5}
           />
         </>
       )}
 
-      {/* Door (open = rotated away) */}
+      {/* Door */}
       <mesh
-        ref={doorRef}
         material={metalDoor}
-        position={isOpen ? [-LOCKER_W * 0.45, 0, LOCKER_D / 2 + 0.005] : [0, 0, LOCKER_D / 2 + 0.005]}
-        rotation={isOpen ? [0, -Math.PI * 0.55, 0] : [0, 0, 0]}
+        position={isOpen ? [-LOCKER_W * 0.48, 0, LOCKER_D / 2 + 0.005] : [0, 0, LOCKER_D / 2 + 0.005]}
+        rotation={isOpen ? [0, -Math.PI * 0.58, 0] : [0, 0, 0]}
         castShadow
       >
-        <boxGeometry args={[LOCKER_W - 0.04, LOCKER_H - 0.06, 0.025]} />
+        <boxGeometry args={[LOCKER_W - 0.04, LOCKER_H - 0.06, 0.028]} />
       </mesh>
     </group>
   );
 }
 
-/* ─── Ceiling Strip Lights ───────────────────────────────────── */
-function StripLight({ x, z, mats }: { x: number; z: number; mats: ReturnType<typeof useLockerMats> }) {
+/* ─── Locker Row ───────────────────────────────────────────────── */
+function LockerRow({
+  z,
+  y,
+  openIndex,
+  mats,
+}: {
+  z: number;
+  y: number;
+  openIndex?: number;
+  mats: ReturnType<typeof useLockerMats>;
+}) {
+  const step = LOCKER_W + LOCKER_GAP;
+  const startX = -(COLS / 2) * step + step / 2;
+
+  return (
+    <group position={[0, y, z]}>
+      {Array.from({ length: COLS }, (_, i) => {
+        const x = startX + i * step;
+        const isOpen = i === openIndex;
+        return (
+          <LockerUnit key={i} x={x} isOpen={isOpen} mats={mats} featured={isOpen} />
+        );
+      })}
+    </group>
+  );
+}
+
+/* ─── Ceiling Strip Lights ───────────────────────────────────────── */
+function StripLight({ x, z, intensity = 1.8, mats }: { x: number; z: number; intensity?: number; mats: ReturnType<typeof useLockerMats> }) {
   const ref = useRef<THREE.PointLight>(null);
   const { glowMat } = mats;
   useFrame(({ clock }) => {
     if (!ref.current) return;
     const t = clock.elapsedTime;
-    // slight organic flicker
-    const flicker = 1 + Math.sin(t * 47 + x) * 0.015 + Math.sin(t * 13 + z) * 0.01;
-    ref.current.intensity = 1.8 * flicker;
+    const flicker = 1 + Math.sin(t * 47 + x) * 0.018 + Math.sin(t * 13 + z) * 0.012;
+    ref.current.intensity = intensity * flicker;
   });
   return (
     <group position={[x, ROOM_H / 2 - 0.1, z]}>
-      {/* Fixture box */}
       <mesh material={glowMat}>
-        <boxGeometry args={[0.12, 0.05, 2.4]} />
+        <boxGeometry args={[0.12, 0.05, 2.8]} />
       </mesh>
       <pointLight
         ref={ref}
-        color={0xfff5d0}
-        intensity={1.8}
-        distance={7}
+        color={0xfff8e0}
+        intensity={intensity}
+        distance={8}
         castShadow
         shadow-mapSize={[512, 512]}
       />
@@ -235,10 +264,36 @@ function StripLight({ x, z, mats }: { x: number; z: number; mats: ReturnType<typ
   );
 }
 
+/* ─── Championship Banner ─────────────────────────────────────── */
+function ChampionshipBanner({ mats }: { mats: ReturnType<typeof useLockerMats> }) {
+  const { bannerMat } = mats;
+  const bannerRef = useRef<THREE.Group>(null);
+  useFrame(({ clock }) => {
+    if (bannerRef.current) {
+      bannerRef.current.rotation.y = Math.sin(clock.elapsedTime * 0.3) * 0.018;
+    }
+  });
+  return (
+    <group ref={bannerRef} position={[0, ROOM_H / 2 - 0.8, -ROOM_D / 2 + 0.3]}>
+      {/* Main banner */}
+      <mesh material={bannerMat}>
+        <boxGeometry args={[2.4, 1.1, 0.012]} />
+      </mesh>
+      {/* Top rod */}
+      <mesh position={[0, 0.6, 0]}>
+        <boxGeometry args={[2.6, 0.06, 0.06]} />
+        <meshStandardMaterial color={0xd4a017} metalness={1.0} roughness={0.2} emissive={new THREE.Color(0xd4a017)} emissiveIntensity={0.4} />
+      </mesh>
+      {/* Banner glow */}
+      <pointLight position={[0, 0, 0.3]} color={0xd4a017} intensity={0.6} distance={3} />
+    </group>
+  );
+}
+
 /* ─── Floating Dust Particles ─────────────────────────────────── */
 function DustParticles() {
   const meshRef = useRef<THREE.Points>(null);
-  const COUNT = 320;
+  const COUNT = 480;
 
   const { positions, velocities } = useMemo(() => {
     const positions = new Float32Array(COUNT * 3);
@@ -247,9 +302,9 @@ function DustParticles() {
       positions[i * 3 + 0] = (Math.random() - 0.5) * ROOM_W;
       positions[i * 3 + 1] = (Math.random() - 0.5) * ROOM_H;
       positions[i * 3 + 2] = (Math.random() - 0.5) * ROOM_D;
-      velocities[i * 3 + 0] = (Math.random() - 0.5) * 0.0008;
-      velocities[i * 3 + 1] = Math.random() * 0.0006 + 0.0002;
-      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.0006;
+      velocities[i * 3 + 0] = (Math.random() - 0.5) * 0.0009;
+      velocities[i * 3 + 1] = Math.random() * 0.0007 + 0.00015;
+      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.0007;
     }
     return { positions, velocities };
   }, []);
@@ -277,11 +332,11 @@ function DustParticles() {
   return (
     <points ref={meshRef} geometry={geo}>
       <pointsMaterial
-        color={0xd4a017}
-        size={0.022}
+        color={0xe8b830}
+        size={0.028}
         sizeAttenuation
         transparent
-        opacity={0.55}
+        opacity={0.65}
         depthWrite={false}
       />
     </points>
@@ -293,21 +348,21 @@ function CameraRig() {
   const { camera } = useThree();
 
   useEffect(() => {
-    camera.position.set(0, 0.5, ROOM_D / 2 - 0.8);
+    camera.position.set(0, 0.6, ROOM_D / 2 - 0.8);
     camera.lookAt(0, 0.5, -ROOM_D / 2);
   }, [camera]);
 
   useFrame(({ clock, mouse }) => {
     const t = clock.elapsedTime;
-    // Slow cinematic drift
-    const drift = Math.sin(t * 0.12) * 1.8;
-    const verticalDrift = Math.sin(t * 0.07) * 0.15;
-    // Subtle mouse parallax
-    const mx = mouse.x * 0.4;
-    const my = mouse.y * 0.2;
-    camera.position.x += (drift + mx - camera.position.x) * 0.012;
-    camera.position.y += (0.5 + verticalDrift + my - camera.position.y) * 0.012;
-    camera.lookAt(drift * 0.2 + mx * 0.5, 0.5 + my * 0.3, -ROOM_D / 2 + 1);
+    const drift = Math.sin(t * 0.1) * 2.2;
+    const verticalDrift = Math.sin(t * 0.065) * 0.18;
+    const depthDrift = Math.sin(t * 0.08) * 0.6;
+    const mx = mouse.x * 0.5;
+    const my = mouse.y * 0.25;
+    camera.position.x += (drift + mx - camera.position.x) * 0.011;
+    camera.position.y += (0.6 + verticalDrift + my - camera.position.y) * 0.011;
+    camera.position.z += (ROOM_D / 2 - 0.8 + depthDrift - camera.position.z) * 0.008;
+    camera.lookAt(drift * 0.18 + mx * 0.5, 0.5 + my * 0.3, -ROOM_D / 2 + 1);
   });
 
   return null;
@@ -315,34 +370,60 @@ function CameraRig() {
 
 /* ─── Bench ───────────────────────────────────────────────────── */
 function Bench({ mats, z }: { mats: ReturnType<typeof useLockerMats>; z: number }) {
-  const woodMat = useMemo(
-    () =>
-      new THREE.MeshStandardMaterial({
-        color: 0x2a1f15,
-        roughness: 0.88,
-        metalness: 0.05,
-      }),
-    []
-  );
-  const legMat = useMemo(
-    () =>
-      new THREE.MeshStandardMaterial({
-        color: 0x1a1d22,
-        roughness: 0.5,
-        metalness: 0.8,
-      }),
-    []
-  );
+  const { benchWoodMat, benchLegMat, ballMat } = mats;
   return (
     <group position={[0, -ROOM_H / 2 + 0.22, z]}>
       {/* Seat plank */}
-      <mesh material={woodMat} receiveShadow>
-        <boxGeometry args={[ROOM_W * 0.8, 0.07, 0.35]} />
+      <mesh material={benchWoodMat} receiveShadow castShadow>
+        <boxGeometry args={[ROOM_W * 0.82, 0.07, 0.38]} />
       </mesh>
       {/* Legs */}
-      {[-ROOM_W * 0.35, -ROOM_W * 0.12, ROOM_W * 0.12, ROOM_W * 0.35].map((lx, i) => (
-        <mesh key={i} material={legMat} position={[lx, -0.24, 0]}>
-          <boxGeometry args={[0.05, 0.44, 0.05]} />
+      {[-ROOM_W * 0.36, -ROOM_W * 0.12, ROOM_W * 0.12, ROOM_W * 0.36].map((lx, i) => (
+        <mesh key={i} material={benchLegMat} position={[lx, -0.26, 0]} castShadow>
+          <boxGeometry args={[0.055, 0.48, 0.055]} />
+        </mesh>
+      ))}
+      {/* Stray basketball on bench */}
+      <mesh material={ballMat} position={[2.5, 0.16, 0]} castShadow>
+        <sphereGeometry args={[0.145, 22, 18]} />
+      </mesh>
+      {/* Equipment bag hint under bench */}
+      <mesh position={[-3, -0.35, 0]} receiveShadow>
+        <boxGeometry args={[0.9, 0.28, 0.32]} />
+        <meshStandardMaterial color={0x1a1d26} roughness={0.9} metalness={0.05} />
+      </mesh>
+    </group>
+  );
+}
+
+/* ─── Floor Grid Lines ─────────────────────────────────────────── */
+function FloorLines() {
+  const lineMat = useMemo(() => new THREE.MeshStandardMaterial({
+    color: 0xd4a017,
+    emissive: new THREE.Color(0xd4a017),
+    emissiveIntensity: 0.25,
+    roughness: 0.4,
+    metalness: 0.8,
+    transparent: true,
+    opacity: 0.18,
+  }), []);
+
+  return (
+    <group position={[0, -ROOM_H / 2 + 0.002, 0]}>
+      {/* Center line */}
+      <mesh material={lineMat} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[0.04, ROOM_D]} />
+      </mesh>
+      {/* Side accent lines */}
+      {[-3, 3].map((x, i) => (
+        <mesh key={i} material={lineMat} rotation={[-Math.PI / 2, 0, 0]} position={[x, 0, 0]}>
+          <planeGeometry args={[0.025, ROOM_D]} />
+        </mesh>
+      ))}
+      {/* Cross lines */}
+      {[-2, 0, 2].map((z, i) => (
+        <mesh key={i} material={lineMat} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, z]}>
+          <planeGeometry args={[ROOM_W, 0.025]} />
         </mesh>
       ))}
     </group>
@@ -357,37 +438,57 @@ function LockerRoomScene() {
   const halfD = ROOM_D / 2;
   const halfW = ROOM_W / 2;
 
-  const step = LOCKER_W + LOCKER_GAP;
-  const rowWidth = COLS * step;
-
   return (
     <>
-      {/* Fog */}
-      <fog attach="fog" args={[0x07080a, 4, 22]} />
+      {/* Fog — deeper, more dramatic */}
+      <fog attach="fog" args={[0x060709, 5, 26]} />
 
-      {/* Ambient */}
-      <ambientLight color={0x1a1e28} intensity={0.8} />
+      {/* Ambient — cool blue tint */}
+      <ambientLight color={0x131a2a} intensity={1.1} />
 
-      {/* Ceiling strip lights */}
-      <StripLight x={-3} z={0} mats={mats} />
-      <StripLight x={0} z={-2} mats={mats} />
-      <StripLight x={3} z={2} mats={mats} />
+      {/* Ceiling strip lights — more of them */}
+      <StripLight x={-4} z={-2} intensity={2.0} mats={mats} />
+      <StripLight x={-1.5} z={1} intensity={1.7} mats={mats} />
+      <StripLight x={1.5} z={-3} intensity={1.9} mats={mats} />
+      <StripLight x={4} z={2} intensity={2.1} mats={mats} />
 
-      {/* Warm fill from featured locker */}
-      <pointLight color={0xd4a017} intensity={0.9} position={[0, 0, -halfD + 1.2]} distance={5} />
+      {/* Dramatic blue-purple rim from ceiling edges */}
+      <pointLight color={0x1a3aff} intensity={0.45} position={[-halfW + 1, halfH - 0.5, 0]} distance={12} />
+      <pointLight color={0x2050ff} intensity={0.35} position={[halfW - 1, halfH - 0.5, 0]} distance={12} />
+
+      {/* Warm amber pool at open locker */}
+      <pointLight color={0xf0a010} intensity={1.4} position={[0, 0, -halfD + 1.5]} distance={7} />
+
+      {/* Cool blue backlight from camera side */}
+      <pointLight color={0x0a2060} intensity={0.6} position={[0, 1.5, halfD - 1]} distance={9} />
+
+      {/* Spotlight from above on center bench */}
+      <spotLight
+        color={0xfff5d0}
+        intensity={4}
+        position={[0, halfH - 0.2, 1.2]}
+        angle={Math.PI / 7}
+        penumbra={0.6}
+        distance={10}
+        castShadow
+        shadow-mapSize={[1024, 1024]}
+      />
 
       {/* Camera */}
       <CameraRig />
 
-      {/* Floor */}
+      {/* Floor — polished/reflective */}
       <mesh
         material={floorMat}
         rotation={[-Math.PI / 2, 0, 0]}
         position={[0, -halfH, 0]}
         receiveShadow
       >
-        <planeGeometry args={[ROOM_W, ROOM_D, 12, 12]} />
+        <planeGeometry args={[ROOM_W, ROOM_D, 18, 18]} />
       </mesh>
+
+      {/* Floor grid accent lines */}
+      <FloorLines />
 
       {/* Ceiling */}
       <mesh
@@ -417,46 +518,40 @@ function LockerRoomScene() {
         <planeGeometry args={[ROOM_D, ROOM_H]} />
       </mesh>
 
-      {/* Front wall (behind camera) */}
-      <mesh
-        material={wallMat}
-        position={[0, 0, halfD]}
-        receiveShadow
-      >
+      {/* Front wall */}
+      <mesh material={wallMat} position={[0, 0, halfD]} receiveShadow>
         <planeGeometry args={[ROOM_W, ROOM_H]} />
       </mesh>
 
-      {/* Back wall (behind lockers) */}
-      <mesh
-        material={wallMat}
-        rotation={[0, Math.PI, 0]}
-        position={[0, 0, -halfD]}
-        receiveShadow
-      >
+      {/* Back wall */}
+      <mesh material={wallMat} rotation={[0, Math.PI, 0]} position={[0, 0, -halfD]} receiveShadow>
         <planeGeometry args={[ROOM_W, ROOM_H]} />
       </mesh>
 
-      {/* BACK LOCKER WALL — top row */}
+      {/* Championship banner */}
+      <ChampionshipBanner mats={mats} />
+
+      {/* BACK LOCKER WALL */}
       <group position={[0, 0, -halfD + LOCKER_D / 2 + 0.02]}>
-        <LockerRow z={0} y={halfH - LOCKER_H * 0.75} openIndex={Math.floor(COLS / 2)} mats={mats} />
-        <LockerRow z={0} y={halfH - LOCKER_H * 1.72} mats={mats} />
+        <LockerRow z={0} y={halfH - LOCKER_H * 0.72} openIndex={Math.floor(COLS / 2)} mats={mats} />
+        <LockerRow z={0} y={halfH - LOCKER_H * 1.68} mats={mats} />
       </group>
 
-      {/* LEFT LOCKER WALL — rotated 90° */}
+      {/* LEFT LOCKER WALL */}
       <group rotation={[0, Math.PI / 2, 0]} position={[-halfW + LOCKER_D / 2 + 0.02, 0, 0]}>
-        <LockerRow z={0} y={halfH - LOCKER_H * 0.75} mats={mats} />
-        <LockerRow z={0} y={halfH - LOCKER_H * 1.72} mats={mats} />
+        <LockerRow z={0} y={halfH - LOCKER_H * 0.72} mats={mats} />
+        <LockerRow z={0} y={halfH - LOCKER_H * 1.68} mats={mats} />
       </group>
 
-      {/* RIGHT LOCKER WALL — rotated -90° */}
+      {/* RIGHT LOCKER WALL */}
       <group rotation={[0, -Math.PI / 2, 0]} position={[halfW - LOCKER_D / 2 - 0.02, 0, 0]}>
-        <LockerRow z={0} y={halfH - LOCKER_H * 0.75} mats={mats} />
-        <LockerRow z={0} y={halfH - LOCKER_H * 1.72} mats={mats} />
+        <LockerRow z={0} y={halfH - LOCKER_H * 0.72} mats={mats} />
+        <LockerRow z={0} y={halfH - LOCKER_H * 1.68} mats={mats} />
       </group>
 
       {/* Benches */}
-      <Bench mats={mats} z={1.2} />
-      <Bench mats={mats} z={-1.5} />
+      <Bench mats={mats} z={1.4} />
+      <Bench mats={mats} z={-1.8} />
 
       {/* Dust particles */}
       <DustParticles />
@@ -470,9 +565,9 @@ export default function LockerRoom3D() {
     <Canvas
       shadows
       gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
-      camera={{ fov: 62, near: 0.1, far: 40 }}
+      camera={{ fov: 58, near: 0.1, far: 50 }}
       style={{ position: "fixed", inset: 0, zIndex: 0 }}
-      dpr={[1, 1.5]}
+      dpr={[1, 1.8]}
     >
       <LockerRoomScene />
     </Canvas>
