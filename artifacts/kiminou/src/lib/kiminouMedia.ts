@@ -90,6 +90,24 @@ export const KIMINOU_IMAGES = {
     width: 934,
     height: 1164,
   },
+  taunHallEvent: {
+    src: "/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg",
+    title: "Kiminou Knox speaking with Taun Hall at youth summit 2025",
+    alt: "Kiminou Knox holding a microphone and speaking alongside Taun Hall at a youth summit event with green and gold balloon arch",
+    caption: "Kiminou Knox speaking at a youth summit event alongside Taun Hall, 2025.",
+    category: "Speaker" as const,
+    width: 437,
+    height: 778,
+  },
+  casualOutdoorPortrait: {
+    src: "/photos/kiminou-knox/kiminou-knox-author-casual-outdoor-portrait-2025.jpg",
+    title: "Kiminou Knox author casual outdoor portrait 2025",
+    alt: "Kiminou Knox seated outdoors smiling in a black polo shirt and jeans",
+    caption: "Kiminou Knox casual portrait for press and author profiles, 2025.",
+    category: "Author" as const,
+    width: 431,
+    height: 643,
+  },
 } as const satisfies Record<string, KiminouImage>;
 
 export const KIMINOU_ARCHIVE_IMAGES: KiminouImage[] = [

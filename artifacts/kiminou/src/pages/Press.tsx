@@ -89,6 +89,8 @@ const creativeWorkSchema = {
 
 const pressImages = [
   KIMINOU_IMAGES.bwPortrait,
+  KIMINOU_IMAGES.casualOutdoorPortrait,
+  KIMINOU_IMAGES.taunHallEvent,
 ];
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
@@ -190,7 +192,7 @@ export default function Press() {
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Author, Athlete, Strategist</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
-            <div className="grid gap-5 md:grid-cols-1 max-w-md">
+            <div className="grid gap-5 md:grid-cols-3 max-w-5xl">
               {pressImages.map((image, index) => (
                 <Reveal key={image.src} delay={index * 0.08}>
                   <figure className="group relative min-h-[360px] overflow-hidden border border-white/8 bg-white/[0.025]">

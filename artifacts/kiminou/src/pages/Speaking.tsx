@@ -366,31 +366,60 @@ export default function Speaking() {
             </div>
           </section>
 
-          {/* ─── VIDEO REEL ─── */}
+          {/* ─── SPEAKING VISUAL ─── */}
           <section className="py-20 border-t border-white/6">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <Reveal className="mb-12">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Watch</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">In The Room</p>
                 <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-2">See Kiminou Speak</h2>
                 <div className="w-12 h-px bg-amber-400/40 mt-6" />
               </Reveal>
               <Reveal delay={0.1}>
-                <div className="relative group">
-                  <div className="relative w-full aspect-video bg-black border border-white/8 overflow-hidden">
-                    <img src="/kiminou-splash-art.png" alt="Kiminou Knox speaking" loading="lazy"
-                      className="w-full h-full object-cover object-top opacity-40 group-hover:opacity-50 transition-opacity duration-500 scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                      <a href="https://www.youtube.com/@KiminouKnoxOfficial" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-4">
-                        <motion.div className="w-20 h-20 rounded-full border border-amber-400/50 flex items-center justify-center bg-amber-400/10 backdrop-blur-sm hover:bg-amber-400/20 transition-colors duration-300"
-                          whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                          <svg className="w-8 h-8 text-amber-300 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                        </motion.div>
-                        <div className="text-center">
-                          <p className="font-serif text-2xl text-white/90 mb-1">Watch on YouTube</p>
-                          <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60">@KiminouKnoxOfficial</p>
-                        </div>
-                      </a>
+                <div className="grid md:grid-cols-2 gap-6 items-start">
+                  {/* Real photo — Taun Hall youth summit */}
+                  <div className="relative group overflow-hidden border border-white/8">
+                    <img
+                      src="/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg"
+                      alt="Kiminou Knox speaking alongside Taun Hall at a youth summit event in 2025"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+                      style={{ maxHeight: "520px" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/70 mb-1">Live Event · 2025</p>
+                      <p className="font-serif text-lg text-white/90 font-light">Youth Summit — with Taun Hall</p>
+                    </div>
+                  </div>
+
+                  {/* YouTube CTA */}
+                  <div className="flex flex-col gap-6">
+                    <div className="relative group border border-white/8 overflow-hidden bg-black/40">
+                      <img src="/kiminou-splash-art.png" alt="Kiminou Knox on stage" loading="lazy"
+                        className="w-full object-cover object-top opacity-35 group-hover:opacity-45 transition-opacity duration-500"
+                        style={{ maxHeight: "250px" }} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                        <a href="https://www.youtube.com/@KiminouKnoxOfficial" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3">
+                          <motion.div className="w-16 h-16 rounded-full border border-amber-400/50 flex items-center justify-center bg-amber-400/10 backdrop-blur-sm hover:bg-amber-400/20 transition-colors duration-300"
+                            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                            <svg className="w-6 h-6 text-amber-300 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                          </motion.div>
+                          <div className="text-center">
+                            <p className="font-serif text-xl text-white/90 mb-0.5">More on YouTube</p>
+                            <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60">@KiminouKnoxOfficial</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Caption block */}
+                    <div className="border border-white/6 p-6 bg-white/[0.02]">
+                      <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/50 mb-3">Speaking Format</p>
+                      <p className="text-white/50 text-sm leading-relaxed">
+                        Kiminou speaks directly and without performance — on discipline, identity, faith, and the cost of silence. Assemblies, team events, community gatherings.
+                      </p>
                     </div>
                   </div>
                 </div>
