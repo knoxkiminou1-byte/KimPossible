@@ -46,6 +46,7 @@ export default function ContactForm({
 }: ContactFormProps) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fallbackEmail, setFallbackEmail] = useState<string | null>(null);
 
   const form = useForm<ContactFormType>({
     resolver: zodResolver(contactFormSchema),
@@ -77,6 +78,7 @@ export default function ContactForm({
       });
 
       if (response.ok) {
+        setFallbackEmail(null);
         toast({
           title: "Message sent successfully",
           description: successMessage,
@@ -93,6 +95,14 @@ export default function ContactForm({
           website: "",
         });
       } else {
+        let fallback = "knoxkiminou1@gmail.com";
+        try {
+          const errorBody = await response.json();
+          fallback = errorBody.fallbackEmail || fallback;
+        } catch {
+          // Keep the public fallback email if the server returns a non-JSON error.
+        }
+        setFallbackEmail(fallback);
         throw new Error("Submission failed");
       }
     } catch (error) {
@@ -125,6 +135,16 @@ export default function ContactForm({
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          {fallbackEmail && (
+            <div className="rounded-none border border-amber-400/30 bg-amber-400/8 p-4 text-sm leading-6 text-amber-100/85">
+              The form could not send automatically. Email{" "}
+              <a href={`mailto:${fallbackEmail}`} className="font-semibold text-amber-200 underline underline-offset-4">
+                {fallbackEmail}
+              </a>{" "}
+              directly with your message.
+            </div>
+          )}
+
           <FormField
             control={form.control}
             name="website"
