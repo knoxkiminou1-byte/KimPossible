@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SignatureAnimation from "@/components/SignatureAnimation";
 
 const links = [
+  { href: "/start-here", label: "Start Here" },
   { href: "/books", label: "Books" },
   { href: "/basketball", label: "Athletics" },
   { href: "/speaking", label: "Speaking" },
@@ -57,7 +58,7 @@ export default function Footer() {
               Author · Athlete · Speaker · Podcast Host
             </p>
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
-              Eight-time published Bay Area poet and NCAA-registered basketball athlete building a legacy through books, sport, youth leadership, and the KimYaps podcast.
+              Eight-time published Bay Area poet and NCAA-registered multi-sport athlete building a legacy through books, sport, youth leadership, and the KimYaps podcast.
             </p>
           </motion.div>
 

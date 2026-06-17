@@ -126,9 +126,11 @@ function renderBody(route) {
   const heading = route.sections?.[0]?.heading || route.title;
   const links = [
     ["/", "Home"],
+    ["/start-here", "Start Here"],
     ["/books", "Books"],
     ["/author", "Author"],
     ["/sports", "Sports"],
+    ["/podcast", "KimYaps"],
     ["/speaking", "Speaking"],
     ["/blog", "Blog"],
     ["/contact", "Contact"],

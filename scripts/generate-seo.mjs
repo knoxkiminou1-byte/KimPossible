@@ -4,7 +4,7 @@ import path from "node:path";
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
+  "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe.";
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
 const KIMINOU_PHOTOS = {
   officialHeadshot: {
@@ -75,16 +75,17 @@ const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-  "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+  "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+  "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://x.com/KnoxKiminou",
-  "https://x.com/KiminouKnox",
   "https://www.instagram.com/kiminouknox",
-  "https://www.youtube.com/@KiminouKnoxVevo",
+  "https://www.youtube.com/@KiminouKnoxOfficial",
   "https://about.me/kiminou",
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
+  "https://247sports.com/player/kiminou-knox-46130857/",
 ];
 
 const discoveredMediumPosts = [
@@ -272,10 +273,12 @@ const publishedPosts = blogData.posts
 
 const routes = [
   { loc: "/", changefreq: "weekly", priority: "1.0", lastmod: today },
+  { loc: "/start-here", changefreq: "weekly", priority: "0.98", lastmod: today },
   { loc: "/about", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/works", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/author", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/books", changefreq: "weekly", priority: "0.95", lastmod: today },
+  { loc: "/podcast", changefreq: "weekly", priority: "0.86", lastmod: today },
   { loc: "/speaking", changefreq: "monthly", priority: "0.85", lastmod: today },
   { loc: "/contact", changefreq: "monthly", priority: "0.8", lastmod: today },
   { loc: "/press", changefreq: "monthly", priority: "0.8", lastmod: today },
@@ -323,6 +326,25 @@ const baseRouteMeta = [
       },
     ],
     schemaType: "WebPage",
+  },
+  {
+    loc: "/start-here",
+    title: "Start Here | Kiminou Knox",
+    description:
+      "Start here for Kiminou Knox: books, author profile, KimYaps podcast, athletics, speaking, press links, and the cleanest path through the full public brand.",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["Kiminou Knox", "start here", "author athlete speaker", "KimYaps", "Bay Area author"],
+    sections: [
+      {
+        heading: "Start Here",
+        text: "The cleanest introduction to Kiminou Knox: Bay Area poet and author, NCAA-registered multi-sport athlete, KimYaps host, speaker, and program builder.",
+      },
+      {
+        heading: "Public Proof",
+        text: "Eight published works, public athletic profiles, KimYaps podcast, Medium essays, Goodreads, Amazon Author Store, YouTube, and press links.",
+      },
+    ],
+    schemaType: "ProfilePage",
   },
   {
     loc: "/about",
@@ -383,6 +405,21 @@ const baseRouteMeta = [
       },
     ],
     schemaType: "CollectionPage",
+  },
+  {
+    loc: "/podcast",
+    title: "KimYaps - Kiminou Knox Podcast",
+    description:
+      "KimYaps is Kiminou Knox's podcast on faith, pressure, pain, purpose, culture, relationships, and giving yourself and others a little extra grace.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["KimYaps", "Kiminou Knox podcast", "faith podcast", "Bay Area author podcast"],
+    sections: [
+      {
+        heading: "KimYaps",
+        text: "KimYaps is Kiminou Knox's podcast: honest, room-based conversations about faith, pressure, pain, purpose, culture, relationships, and grace.",
+      },
+    ],
+    schemaType: "ProfilePage",
   },
   {
     loc: "/speaking",
@@ -822,15 +859,18 @@ const entityProfile = {
     image: KIMINOU_PERSON_IMAGE,
     description: SITE_DESCRIPTION,
     birthPlace: "Hayward, California",
-    homeLocation: "Oakland, California",
+    homeLocation: "Oakland / East Palo Alto, California",
     knowsAbout: [
       "Poetry",
       "Basketball",
+      "Football",
       "Creative writing",
       "Faith",
       "Black boyhood",
       "Youth leadership",
       "Publishing",
+      "Podcasting",
+      "Mental health advocacy",
     ],
     sameAs: externalProfiles,
   },

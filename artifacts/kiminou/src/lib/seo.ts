@@ -1,7 +1,7 @@
 export const SITE_NAME = "Kiminou Knox";
 export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox — eight-time published author, NCAA-registered athlete, speaker, and podcast host from the Bay Area.";
+  "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe.";
 export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
 export const SITE_PERSON_IMAGE =
   "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
@@ -13,6 +13,7 @@ export const SITE_GOODREADS_PROFILE =
 export const SITE_PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 export const SITE_PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
 export const SITE_YOUTUBE = "https://www.youtube.com/@KiminouKnoxOfficial";
+export const SITE_247SPORTS_PROFILE = "https://247sports.com/player/kiminou-knox-46130857/";
 
 export const SITE_SAME_AS = [
   SITE_MEDIUM_PROFILE,
@@ -28,6 +29,7 @@ export const SITE_SAME_AS = [
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
+  SITE_247SPORTS_PROFILE,
   "https://stan.store/kiminouknox",
   "https://www.wikidata.org/wiki/Q137260299",
 ];
@@ -63,7 +65,12 @@ export function personSchema() {
         },
         jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
         description:
-          "Kiminou Knox is an eight-time published poet, NCAA-registered basketball and football athlete, speaker, and podcast host from the Bay Area of California. Creator of the Black Boy Lie universe.",
+          "Kiminou Knox is an eight-time published poet, NCAA-registered multi-sport athlete, speaker, and podcast host from the Bay Area of California. Creator of the Black Boy Lie universe.",
+        gender: "Male",
+        nationality: {
+          "@type": "Country",
+          name: "United States",
+        },
         birthPlace: {
           "@type": "Place",
           name: "Bay Area, California",
@@ -105,7 +112,7 @@ export function personSchema() {
           "Podcasting",
           "Mental health advocacy",
         ],
-        award: "Miles Hall Foundation Youth Summit Top Essay Finalist (2025)",
+        award: ["Miles Hall Foundation Youth Summit Top Essay Finalist (2025)"],
         sameAs: SITE_SAME_AS,
       },
       {
@@ -129,10 +136,22 @@ export function podcastSchema() {
     description:
       "KimYaps is a podcast by Kiminou Knox — honest conversations about navigating pain, finding purpose, and giving yourself (and others) a little extra grace.",
     url: SITE_PODCAST_APPLE,
-    webFeed: SITE_PODCAST_SPOTIFY,
+    webFeed: SITE_FEED,
     author: { "@id": `${SITE_URL}/#person` },
     inLanguage: "en",
     image: SITE_PERSON_IMAGE,
+    distribution: [
+      {
+        "@type": "EntertainmentBusiness",
+        name: "Apple Podcasts",
+        url: SITE_PODCAST_APPLE,
+      },
+      {
+        "@type": "EntertainmentBusiness",
+        name: "Spotify",
+        url: SITE_PODCAST_SPOTIFY,
+      },
+    ],
   };
 }
 

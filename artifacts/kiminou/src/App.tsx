@@ -19,6 +19,7 @@ const FirstEditionOverlay = lazy(() => import("@/components/FirstEditionOverlay"
 
 const Splash = lazy(() => import("@/pages/Splash"));
 const Home = lazy(() => import("@/pages/home"));
+const StartHere = lazy(() => import("@/pages/StartHere"));
 const About = lazy(() => import("@/pages/About"));
 const Works = lazy(() => import("@/pages/Works"));
 const Contact = lazy(() => import("@/pages/Contact"));
@@ -31,6 +32,7 @@ const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Books = lazy(() => import("@/pages/Books"));
 const BookDetail = lazy(() => import("@/pages/BookDetail"));
 const Press = lazy(() => import("@/pages/Press"));
+const Podcast = lazy(() => import("@/pages/Podcast"));
 const Sports = lazy(() => import("@/pages/Sports"));
 const Author = lazy(() => import("@/pages/Author"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
@@ -96,6 +98,10 @@ function Router() {
     <Suspense fallback={<PageFallback />}>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/start-here" component={StartHere} />
+        <Route path="/start">
+          <Redirect to="/start-here" />
+        </Route>
         <Route path="/splash" component={Splash} />
         <Route path="/home">
           <Redirect to="/" />
@@ -120,11 +126,9 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />
-        <Route path="/podcast">
-          <Redirect to="/speaking" />
-        </Route>
+        <Route path="/podcast" component={Podcast} />
         <Route path="/kimyaps">
-          <Redirect to="/speaking" />
+          <Redirect to="/podcast" />
         </Route>
         <Route path="/admin/blog">
           <AdminGate><BlogAdmin /></AdminGate>

@@ -45,7 +45,7 @@ const homeFaq = [
   {
     question: "What does Kiminou Knox do?",
     answer:
-      "Kiminou Knox is an athlete, author, speaker, and creative builder. The site brings together books, essays, speaking, athletics, and media in one place.",
+      "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. The site brings together books, essays, speaking, athletics, and media in one place.",
   },
   {
     question: "How many books has Kiminou Knox published?",
@@ -63,9 +63,14 @@ const homeFaq = [
       "Use the contact form on the site for speaking, press, book, basketball, or other inquiries. The form routes requests through the same site you are viewing now.",
   },
   {
+    question: "What is the KimYaps podcast?",
+    answer:
+      "KimYaps is a podcast by Kiminou Knox — honest conversations about faith, pressure, pain, purpose, culture, relationships, and giving yourself and others a little extra grace. Episodes are available on Apple Podcasts and Spotify.",
+  },
+  {
     question: "Where should I start on the site?",
     answer:
-      "Start with the books, author, speaking, and press pages if you want the clearest search signals and the most direct view of the brand.",
+      "Start with the Start Here page, then move into the books, author, speaking, athletics, and press pages for the clearest view of the full brand.",
   },
 ];
 
@@ -127,7 +132,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author, Athlete, Speaker, Podcast Host</title>
-        <meta name="description" content="Official site of Kiminou Knox — eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast. Explore books, essays, and booking info." />
+        <meta name="description" content={SITE_DESCRIPTION} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={SITE_URL} />
         <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
@@ -135,7 +140,7 @@ export default function Home() {
         
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
-        <meta property="og:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:image:width" content="1200" />
@@ -146,7 +151,7 @@ export default function Home() {
         <meta name="twitter:site" content={SITE_TWITTER} />
         <meta name="twitter:creator" content={SITE_TWITTER} />
         <meta name="twitter:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
-        <meta name="twitter:description" content="Eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
+        <meta name="twitter:description" content={SITE_DESCRIPTION} />
         <meta name="twitter:image" content={SITE_IMAGE} />
         
         <script type="application/ld+json">

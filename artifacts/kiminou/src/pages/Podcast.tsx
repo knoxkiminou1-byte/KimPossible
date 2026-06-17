@@ -4,10 +4,7 @@ import { useRef } from "react";
 import { ExternalLink, Mic } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { podcastSchema, SITE_URL } from "@/lib/seo";
-
-const PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
-const PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
+import { podcastSchema, SITE_IMAGE, SITE_PODCAST_APPLE, SITE_PODCAST_SPOTIFY, SITE_URL } from "@/lib/seo";
 
 const podcastStructuredData = podcastSchema();
 
@@ -54,7 +51,7 @@ export default function Podcast() {
           property="og:description"
           content="KimYaps is Kiminou Knox's podcast — honest conversations about navigating pain, finding purpose, and giving yourself (and others) a little extra grace."
         />
-        <meta property="og:image" content={`${SITE_URL}/og-kiminou-default.jpg`} />
+        <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
@@ -129,7 +126,7 @@ export default function Podcast() {
             <div className="w-8 h-px bg-amber-400/40 mb-7" />
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
-                href={PODCAST_APPLE}
+                href={SITE_PODCAST_APPLE}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-amber-400 text-black font-semibold text-sm uppercase tracking-[0.14em] transition-all duration-300"
@@ -140,7 +137,7 @@ export default function Podcast() {
                 Apple Podcasts
               </motion.a>
               <motion.a
-                href={PODCAST_SPOTIFY}
+                href={SITE_PODCAST_SPOTIFY}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 border border-white/20 text-white/70 text-sm uppercase tracking-[0.14em] hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300"

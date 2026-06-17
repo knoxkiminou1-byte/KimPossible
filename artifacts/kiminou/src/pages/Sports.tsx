@@ -14,19 +14,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
 import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
-import { breadcrumbSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
+import { breadcrumbSchema, SITE_247SPORTS_PROFILE, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
 
 const LockerRoom3D = lazy(() => import("@/components/LuxuryFX/LockerRoom3D"));
 
 /* ─── Data ──────────────────────────────────────────────── */
 const measurables = [
-  { label: "Height", value: "6'8\"", numericEnd: null, sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
-  { label: "Weight", value: "235", numericEnd: 235, unit: "lbs", sub: "Elite Athletic Build", icon: Target, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
-  { label: "Position", value: "F / C", numericEnd: null, sub: "Cristo Rey De La Salle", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
+  { label: "Height", value: "6'8\"", numericEnd: null, sub: "Verified public recruiting profiles", icon: TrendingUp, source: "NCSA / MaxPreps", sourceUrl: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+  { label: "Weight", value: "240-245", numericEnd: null, unit: "lbs", sub: "Public listings vary by profile", icon: Target, source: "NCSA / MaxPreps", sourceUrl: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/bio/?careerid=3flsq42m4bpcc" },
+  { label: "Position", value: "G / F / C", numericEnd: null, sub: "Multi-position basketball profile", icon: Trophy, source: "NCSA / MaxPreps", sourceUrl: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
 ];
 
 const highlights = [
   { year: "2025", title: "NCAA Eligibility", desc: "Registered with NCAA eligibility for collegiate athletics" },
+  { year: "2025", title: "Ygnacio Valley Senior Season", desc: "Public MaxPreps profile lists varsity basketball and football at Ygnacio Valley High School" },
   { year: "2024", title: "Varsity Captain at Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
   { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop, one of the premier AAU evaluation platforms" },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance" },
@@ -38,6 +39,7 @@ const profiles = [
   { name: "NCSA Sports", desc: "Complete athletic profile with stats, measurements, and recruiting information", href: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox", testId: "link-profile-ncsa" },
   { name: "MaxPreps", desc: "Public career profile and high school basketball record", href: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc", testId: "link-profile-maxpreps" },
   { name: "Prep Hoops", desc: "Rankings, news, and recruiting analysis for high school athletes", href: "https://prephoops.com/player/kiminou-knox/", testId: "link-profile-prephoops" },
+  { name: "247Sports", desc: "Football profile and older recruiting record", href: SITE_247SPORTS_PROFILE, testId: "link-profile-247sports" },
 ];
 
 /* ─── Particle Mote ──────────────────────────────────────────── */
@@ -204,8 +206,8 @@ export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'8" Forward/Center</title>
-        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb NCAA-registered basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
+        <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'8" Multi-Position Athlete</title>
+        <meta name="description" content={"Kiminou Knox is a 6'8\" NCAA-registered multi-position basketball athlete and multi-sport competitor with public profiles on NCSA, MaxPreps, Prep Hoops, and 247Sports."} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile" />
@@ -216,7 +218,10 @@ export default function Sports() {
             "@id": `${SITE_URL}/#person`, name: "Kiminou Knox",
             url: `${SITE_URL}/sports`, sport: "Basketball",
             height: { "@type": "QuantitativeValue", value: 80, unitCode: "INH" },
-            affiliation: [{ "@type": "SportsTeam", name: "Cristo Rey De La Salle Basketball" }],
+            affiliation: [
+              { "@type": "SportsTeam", name: "Ygnacio Valley High School Basketball", sport: "Basketball" },
+              { "@type": "SportsTeam", name: "Cristo Rey De La Salle Basketball", sport: "Basketball" },
+            ],
             memberOf: [{ "@type": "Organization", name: "NCAA", url: "https://www.ncaa.org" }],
             sameAs: SITE_SAME_AS,
           })}
@@ -303,7 +308,7 @@ export default function Sports() {
               <motion.div className="flex flex-wrap gap-4 mt-10"
                 initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.3 }}>
-                {["6'8\"", "235 lbs", "F / C", "NCAA Eligible"].map((badge) => (
+                {["6'8\"", "240-245 lbs", "G / F / C", "NCAA Eligible"].map((badge) => (
                   <motion.span key={badge}
                     className="px-4 py-1.5 border border-amber-400/35 text-amber-300/80 text-xs uppercase tracking-[0.2em] font-medium"
                     style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}

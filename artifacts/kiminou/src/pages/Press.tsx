@@ -57,7 +57,7 @@ const verificationGroups = [
   {
     label: "Program / Builder Work",
     items: [
-      { name: "View AAFC Builders", desc: "kiminouknox.com. Web design and digital infrastructure lane.", url: "https://www.kiminouknox.com" },
+      { name: "View AAFC Builders", desc: "Web design and digital infrastructure lane.", url: "https://www.aafcbuilders.org" },
       { name: "View Kiminou Knox Portfolio", desc: "kiminouknox.com. Portfolio and build work overview.", url: "/portfolio" },
     ],
   },
@@ -384,11 +384,13 @@ PUBLISHED WORKS
 
 ATHLETIC PROFILE
 ────────────────
-Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
-School: Cristo Rey De La Salle (formerly Ygnacio Valley)
+Height: 6'8" | Weight: 240-245 lbs across public listings | Position: Guard / Forward / Center
+School: Ygnacio Valley High School; earlier public records include Cristo Rey De La Salle
 Status: NCAA Registered & Eligible
 MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
 NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox
+Prep Hoops: https://prephoops.com/player/kiminou-knox/
+247Sports: https://247sports.com/player/kiminou-knox-46130857/
 
 SPEAKING TOPICS
 ───────────────
