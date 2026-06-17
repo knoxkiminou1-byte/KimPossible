@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { Instagram, Twitter, ExternalLink, BookOpen, Trophy, Mic, Mail, Globe, FileText, ChevronDown } from "lucide-react";
+import { Twitter, ExternalLink, BookOpen, Trophy, Mic, Mail, Globe, FileText, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -107,7 +107,6 @@ const QUICK_FACTS = [
 ];
 
 const socials = [
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/kiminouknox", handle: "@kiminouknox" },
   { icon: Twitter, label: "Twitter / X", href: "https://x.com/KnoxKiminou", handle: "@KnoxKiminou" },
 ];
 

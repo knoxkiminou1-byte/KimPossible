@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-06-17T05:10:34.233Z",
+  "dateModified": "2026-06-17T19:33:50.525Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
@@ -9,7 +9,7 @@
     "alternateName": "Kiminou",
     "url": "https://www.kiminouknox.com",
     "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-    "description": "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe.",
+    "description": "Kiminou Knox is a Bay Area author, poet, athlete, entrepreneur, actor, musician, founder, and host of KimYaps. Eight published works. Faith, discipline, books, sport, and culture.",
     "birthPlace": "Hayward, California",
     "homeLocation": "Oakland / East Palo Alto, California",
     "knowsAbout": [
@@ -32,7 +32,6 @@
       "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
       "https://www.linkedin.com/in/kiminou-knox-50691a394/",
       "https://x.com/KnoxKiminou",
-      "https://www.instagram.com/kiminouknox",
       "https://www.youtube.com/@KiminouKnoxOfficial",
       "https://about.me/kiminou",
       "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",

@@ -65,7 +65,7 @@ function pageSchemas(route) {
     alternateName: "Kiminou",
     url: manifest.site.url,
     image: manifest.site.personImage || `${manifest.site.url}/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg`,
-    jobTitle: ["Athlete", "Author", "Speaker", "Entrepreneur"],
+    jobTitle: ["Author", "Poet", "Athlete", "Entrepreneur", "Actor", "Musician", "Founder", "Speaker", "Podcast Host"],
     description: manifest.site.description,
     sameAs: manifest.site.sameAs,
   };

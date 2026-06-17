@@ -14,6 +14,7 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
+  website: z.string().optional(),
 });
 
 const inquiryTypeMap: Record<string, string> = {
@@ -39,6 +40,10 @@ router.post("/contact", async (req, res) => {
     const inquiryTypeDisplay = inquiryTypeMap[data.inquiryType] || data.inquiryType;
     const fromAddress = process.env.GMAIL_USER || "knoxkiminou1@gmail.com";
     const toAddress = process.env.CONTACT_TO_EMAIL || "knoxkiminou1@gmail.com";
+
+    if (data.website) {
+      return res.status(200).json({ message: "Message received successfully" });
+    }
 
     if (process.env.GMAIL_APP_PASSWORD) {
       const transporter = nodemailer.createTransport({

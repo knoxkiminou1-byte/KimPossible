@@ -1,7 +1,7 @@
 export const SITE_NAME = "Kiminou Knox";
 export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION =
-  "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe.";
+  "Kiminou Knox is a Bay Area author, poet, athlete, entrepreneur, actor, musician, founder, and host of KimYaps. Eight published works. Faith, discipline, books, sport, and culture.";
 export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
 export const SITE_PERSON_IMAGE =
   "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
@@ -19,7 +19,6 @@ export const SITE_SAME_AS = [
   SITE_MEDIUM_PROFILE,
   SITE_GOODREADS_PROFILE,
   "https://x.com/KnoxKiminou",
-  "https://www.instagram.com/kiminouknox",
   SITE_YOUTUBE,
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
@@ -63,9 +62,9 @@ export function personSchema() {
           url: SITE_PERSON_IMAGE,
           caption: "Kiminou Knox — official author headshot 2026",
         },
-        jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
+        jobTitle: ["Author", "Poet", "Athlete", "Entrepreneur", "Actor", "Musician", "Founder", "Speaker", "Podcast Host"],
         description:
-          "Kiminou Knox is an eight-time published poet, NCAA-registered multi-sport athlete, speaker, and podcast host from the Bay Area of California. Creator of the Black Boy Lie universe.",
+          "Kiminou Knox is an eight-time published author and poet, NCAA-registered multi-sport athlete, entrepreneur, actor, musician, founder, speaker, and podcast host from the Bay Area of California. Creator of the Black Boy Lie universe.",
         gender: "Male",
         nationality: {
           "@type": "Country",
@@ -105,8 +104,12 @@ export function personSchema() {
           "Creative writing",
           "Public speaking",
           "Faith",
+          "Christian writing",
           "Black boyhood",
           "Youth leadership",
+          "Entrepreneurship",
+          "Music",
+          "Acting",
           "Publishing",
           "Bay Area literature",
           "Podcasting",

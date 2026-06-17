@@ -4,7 +4,7 @@ import path from "node:path";
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION =
-  "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe.";
+  "Kiminou Knox is a Bay Area author, poet, athlete, entrepreneur, actor, musician, founder, and host of KimYaps. Eight published works. Faith, discipline, books, sport, and culture.";
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
 const KIMINOU_PHOTOS = {
   officialHeadshot: {
@@ -56,6 +56,7 @@ const siteRoot = path.join(repoRoot, "artifacts", "kiminou");
 const publicRoot = path.join(siteRoot, "public");
 const booksPath = path.join(publicRoot, "books.json");
 const blogDataPath = path.join(siteRoot, "src", "content", "blogData.json");
+const seoLibraryPath = path.join(siteRoot, "src", "content", "seoLibrary.json");
 
 const sitemapPath = path.join(publicRoot, "sitemap.xml");
 const imageSitemapPath = path.join(publicRoot, "image-sitemap.xml");
@@ -70,6 +71,7 @@ const now = new Date();
 const today = now.toISOString().slice(0, 10);
 const books = JSON.parse(fs.readFileSync(booksPath, "utf8"));
 const blogData = JSON.parse(fs.readFileSync(blogDataPath, "utf8"));
+const seoLibrary = JSON.parse(fs.readFileSync(seoLibraryPath, "utf8"));
 
 const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
@@ -79,7 +81,6 @@ const externalProfiles = [
   "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://x.com/KnoxKiminou",
-  "https://www.instagram.com/kiminouknox",
   "https://www.youtube.com/@KiminouKnoxOfficial",
   "https://about.me/kiminou",
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
@@ -288,6 +289,15 @@ const routes = [
   { loc: "/reading-list", changefreq: "monthly", priority: "0.75", lastmod: today },
   { loc: "/basketball", changefreq: "monthly", priority: "0.8", lastmod: today },
 ];
+
+for (const page of seoLibrary.pages) {
+  routes.push({
+    loc: page.loc,
+    changefreq: "monthly",
+    priority: page.loc === "/poetry" || page.loc === "/quotes" ? "0.86" : "0.82",
+    lastmod: today,
+  });
+}
 
 for (const book of books) {
   routes.push({
@@ -572,6 +582,50 @@ const bookRouteMeta = books.map((book) => ({
   },
 }));
 
+const seoLibraryRouteMeta = seoLibrary.pages.map((page) => ({
+  loc: page.loc,
+  title: page.title,
+  description: page.description,
+  image: page.image || "/kiminou-knox-social-share.png",
+  keywords: page.keywords || [],
+  sections: [
+    {
+      heading: page.h1,
+      text: page.intro,
+    },
+    ...(page.sections || []),
+    ...(page.excerpts?.length
+      ? [
+          {
+            heading: "Selected Excerpts",
+            text: page.excerpts.map((excerpt) => `${excerpt.source}: ${excerpt.text}`).join(" "),
+          },
+        ]
+      : []),
+  ],
+  schemaType: page.schemaType || "CollectionPage",
+  schema: {
+    "@context": "https://schema.org",
+    "@type": page.schemaType || "CollectionPage",
+    "@id": `${absoluteUrl(page.loc)}#collection`,
+    name: page.title,
+    description: page.description,
+    url: absoluteUrl(page.loc),
+    image: absoluteUrl(page.image || "/kiminou-knox-social-share.png"),
+    about: { "@id": `${SITE_URL}/#person` },
+    author: { "@id": `${SITE_URL}/#person` },
+    inLanguage: "en-US",
+    hasPart: (page.excerpts || []).map((excerpt) => ({
+      "@type": "CreativeWork",
+      name: excerpt.title,
+      isPartOf: excerpt.source,
+      text: excerpt.text,
+      url: absoluteUrl(excerpt.href),
+      author: { "@id": `${SITE_URL}/#person` },
+    })),
+  },
+}));
+
 const blogRouteMeta = publishedPosts.map((post) => ({
   loc: `/blog/${post.slug}`,
   title: `${post.title} - Kiminou Knox`,
@@ -607,7 +661,7 @@ const blogRouteMeta = publishedPosts.map((post) => ({
   },
 }));
 
-const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMeta].map((route) => {
+const routeManifestRoutes = [...baseRouteMeta, ...seoLibraryRouteMeta, ...bookRouteMeta, ...blogRouteMeta].map((route) => {
   const matchedSitemap = routes.find((entry) => entry.loc === route.loc);
   const webpageSchema = {
     "@context": "https://schema.org",

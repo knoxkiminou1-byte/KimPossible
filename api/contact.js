@@ -10,6 +10,7 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
+  website: z.string().optional(),
 });
 
 const inquiryTypeMap = {
@@ -60,6 +61,10 @@ async function handler(request, response) {
     const inquiryTypeDisplay = inquiryTypeMap[data.inquiryType] || data.inquiryType;
     const fromAddress = process.env.GMAIL_USER || "knoxkiminou1@gmail.com";
     const toAddress = process.env.CONTACT_TO_EMAIL || "knoxkiminou1@gmail.com";
+
+    if (data.website) {
+      return response.status(200).json({ message: "Message received successfully" });
+    }
 
     if (!process.env.GMAIL_APP_PASSWORD) {
       return response.status(503).json({

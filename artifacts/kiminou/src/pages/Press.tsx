@@ -68,7 +68,6 @@ const verificationGroups = [
       { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
       { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
-      { name: "Instagram", desc: "Public social profile. @kiminouknox.", url: "https://www.instagram.com/kiminouknox" },
     ],
   },
 ];
@@ -409,7 +408,6 @@ RECOGNITION
 MEDIA & DIGITAL PRESENCE
 ─────────────────────────
 Website: https://www.kiminouknox.com
-Instagram: @kiminouknox
 Twitter/X: @KnoxKiminou
 YouTube: https://www.youtube.com/@KiminouKnoxOfficial
 Medium: https://medium.com/@knoxkiminou1

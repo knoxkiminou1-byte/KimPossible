@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Twitter } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Contact() {
@@ -36,7 +36,7 @@ export default function Contact() {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto" data-testid="contact-description">
-            Whether you're interested in collaboration, book discussions, or business inquiries, let's start a conversation.
+            Send speaking, book, media, program, or business inquiries through the official contact form.
           </p>
         </div>
 
@@ -66,16 +66,6 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://www.instagram.com/kiminouknox" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
-                  aria-label="Instagram"
-                  data-testid="social-link-instagram-main"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a 
                   href="https://x.com/KnoxKiminou" 
                   target="_blank"
                   rel="noopener noreferrer"
@@ -84,16 +74,6 @@ export default function Contact() {
                   data-testid="social-link-twitter"
                 >
                   <Twitter className="w-5 h-5" />
-                </a>
-                <a 
-                  href="https://instagram.com/theteeshirteenss" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-secondary hover:bg-accent hover:text-accent-foreground rounded-md transition-colors" 
-                  aria-label="The Tee Shirt Teens Instagram"
-                  data-testid="social-link-business-instagram"
-                >
-                  <Instagram className="w-5 h-5" />
                 </a>
                 <a 
                   href="https://thett.shop" 

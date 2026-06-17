@@ -58,6 +58,7 @@ export default function ContactForm({
       message: "",
       dateWindow: "",
       talkTheme: "",
+      website: "",
     },
   });
 
@@ -89,6 +90,7 @@ export default function ContactForm({
           message: "",
           dateWindow: "",
           talkTheme: "",
+          website: "",
         });
       } else {
         throw new Error("Submission failed");
@@ -123,6 +125,19 @@ export default function ContactForm({
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="website"
+            render={({ field }) => (
+              <FormItem className="hidden" aria-hidden="true">
+                <FormLabel>Website</FormLabel>
+                <FormControl>
+                  <Input tabIndex={-1} autoComplete="off" {...field} data-testid="input-website" />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
           {/* Name */}
           <FormField
             control={form.control}

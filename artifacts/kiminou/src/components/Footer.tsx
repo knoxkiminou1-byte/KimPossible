@@ -6,6 +6,8 @@ import SignatureAnimation from "@/components/SignatureAnimation";
 const links = [
   { href: "/start-here", label: "Start Here" },
   { href: "/books", label: "Books" },
+  { href: "/poetry", label: "Poetry" },
+  { href: "/quotes", label: "Quotes" },
   { href: "/basketball", label: "Athletics" },
   { href: "/speaking", label: "Speaking" },
   { href: "/author", label: "Bio" },
@@ -16,7 +18,6 @@ const links = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "https://www.instagram.com/kiminouknox" },
   { label: "Twitter / X", href: "https://x.com/KnoxKiminou" },
   { label: "YouTube", href: "https://www.youtube.com/@KiminouKnoxOfficial" },
   { label: "KimYaps Podcast", href: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" },
@@ -55,10 +56,10 @@ export default function Footer() {
               className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-6"
               data-testid="footer-subtitle"
             >
-              Author · Athlete · Speaker · Podcast Host
+              Author · Poet · Athlete · Founder
             </p>
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
-              Eight-time published Bay Area poet and NCAA-registered multi-sport athlete building a legacy through books, sport, youth leadership, and the KimYaps podcast.
+              Eight-time published Bay Area author, poet, athlete, entrepreneur, actor, musician, and founder building across books, sport, faith, culture, youth leadership, and KimYaps.
             </p>
           </motion.div>
 

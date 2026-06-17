@@ -45,7 +45,7 @@ const homeFaq = [
   {
     question: "What does Kiminou Knox do?",
     answer:
-      "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. The site brings together books, essays, speaking, athletics, and media in one place.",
+      "Kiminou Knox is a Bay Area author, poet, athlete, entrepreneur, actor, musician, founder, speaker, and host of KimYaps. The site brings together books, essays, speaking, athletics, media, and public work in one place.",
   },
   {
     question: "How many books has Kiminou Knox published?",

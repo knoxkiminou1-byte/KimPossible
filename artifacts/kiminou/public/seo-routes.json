@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-17T05:10:34.233Z",
+  "generatedAt": "2026-06-17T19:33:50.525Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
-    "description": "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe.",
+    "description": "Kiminou Knox is a Bay Area author, poet, athlete, entrepreneur, actor, musician, founder, and host of KimYaps. Eight published works. Faith, discipline, books, sport, and culture.",
     "image": "https://www.kiminouknox.com/og-image.png",
     "personImage": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
     "sameAs": [
@@ -14,7 +14,6 @@
       "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
       "https://www.linkedin.com/in/kiminou-knox-50691a394/",
       "https://x.com/KnoxKiminou",
-      "https://www.instagram.com/kiminouknox",
       "https://www.youtube.com/@KiminouKnoxOfficial",
       "https://about.me/kiminou",
       "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
@@ -40,7 +39,7 @@
       "sections": [
         {
           "heading": "Kiminou Knox",
-          "text": "Kiminou Knox is a Bay Area poet, author, NCAA-registered multi-sport athlete, speaker, and host of KimYaps. Eight published works. Creator of the Black Boy Lie universe."
+          "text": "Kiminou Knox is a Bay Area author, poet, athlete, entrepreneur, actor, musician, founder, and host of KimYaps. Eight published works. Faith, discipline, books, sport, and culture."
         },
         {
           "heading": "Featured Work",
@@ -587,6 +586,1044 @@
           },
           "inLanguage": "en-US",
           "dateModified": "2026-06-17"
+        }
+      ]
+    },
+    {
+      "loc": "/poetry",
+      "title": "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+      "description": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox poetry",
+        "Kiminou Knox poet",
+        "poetry books",
+        "Black poet",
+        "faith poetry"
+      ],
+      "sections": [
+        {
+          "heading": "Poetry by Kiminou Knox",
+          "text": "A reader-first archive for the poems, books, and recurring themes in Kiminou Knox's work. Start with the excerpts, then move into the full collections."
+        },
+        {
+          "heading": "Core Themes",
+          "text": "Faith, discipline, healing, love, Black boyhood, knowledge, identity, and purpose run through Kiminou Knox's poetry and public writing."
+        },
+        {
+          "heading": "Where To Go Next",
+          "text": "Use this page as the clean archive, then read the books page, author profile, and individual poetry theme pages for deeper context."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Poems from a Black Boy: You are possibility. You are brilliance. You are the answer to prayers your ancestors whispered in the dark. Our Father?: Maybe silence is an answer. Maybe waiting is worship. Maybe faith was never meant to be comfortable. The Spirit of Solomon: When the last applause fades, when the crowds disperse, when the mirrors show only the man beneath the myth - what remains?"
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/poetry#collection",
+        "name": "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+        "description": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+        "url": "https://www.kiminouknox.com/poetry",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Future Tense",
+            "isPartOf": "Poems from a Black Boy",
+            "text": "You are possibility. You are brilliance. You are the answer to prayers your ancestors whispered in the dark.",
+            "url": "https://www.kiminouknox.com/books/poems-black-boy",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Divine Silence",
+            "isPartOf": "Our Father?",
+            "text": "Maybe silence is an answer. Maybe waiting is worship. Maybe faith was never meant to be comfortable.",
+            "url": "https://www.kiminouknox.com/books/our-father",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "What Remains",
+            "isPartOf": "The Spirit of Solomon",
+            "text": "When the last applause fades, when the crowds disperse, when the mirrors show only the man beneath the myth - what remains?",
+            "url": "https://www.kiminouknox.com/books/spirit-solomon",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/poetry",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry#webpage",
+          "url": "https://www.kiminouknox.com/poetry",
+          "name": "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+          "description": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry#collection",
+          "name": "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+          "description": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+          "url": "https://www.kiminouknox.com/poetry",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "Future Tense",
+              "isPartOf": "Poems from a Black Boy",
+              "text": "You are possibility. You are brilliance. You are the answer to prayers your ancestors whispered in the dark.",
+              "url": "https://www.kiminouknox.com/books/poems-black-boy",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Divine Silence",
+              "isPartOf": "Our Father?",
+              "text": "Maybe silence is an answer. Maybe waiting is worship. Maybe faith was never meant to be comfortable.",
+              "url": "https://www.kiminouknox.com/books/our-father",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "What Remains",
+              "isPartOf": "The Spirit of Solomon",
+              "text": "When the last applause fades, when the crowds disperse, when the mirrors show only the man beneath the myth - what remains?",
+              "url": "https://www.kiminouknox.com/books/spirit-solomon",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/faith",
+      "title": "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+      "description": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+      "keywords": [
+        "Kiminou Knox faith poetry",
+        "Christian poetry",
+        "God and purpose",
+        "Our Father Kiminou Knox"
+      ],
+      "sections": [
+        {
+          "heading": "Faith that still asks questions",
+          "text": "Kiminou Knox writes about God with reverence and honesty. The faith poems hold prayer, doubt, silence, purpose, and the pressure of still believing."
+        },
+        {
+          "heading": "Why This Lane Matters",
+          "text": "The faith work gives readers a direct path into Our Father?, KimYaps, and the spiritual questions that shape Kiminou's public voice."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Our Father?: I am still here, still speaking to the silence, still hoping you're listening. Our Father?: Maybe silence is an answer. Maybe waiting is worship. Maybe faith was never meant to be comfortable."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/poetry/faith#collection",
+        "name": "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+        "description": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+        "url": "https://www.kiminouknox.com/poetry/faith",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Questions in the Dark",
+            "isPartOf": "Our Father?",
+            "text": "I am still here, still speaking to the silence, still hoping you're listening.",
+            "url": "https://www.kiminouknox.com/books/our-father",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Divine Silence",
+            "isPartOf": "Our Father?",
+            "text": "Maybe silence is an answer. Maybe waiting is worship. Maybe faith was never meant to be comfortable.",
+            "url": "https://www.kiminouknox.com/books/our-father",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/poetry/faith",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/faith#webpage",
+          "url": "https://www.kiminouknox.com/poetry/faith",
+          "name": "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+          "description": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/faith#collection",
+          "name": "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+          "description": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+          "url": "https://www.kiminouknox.com/poetry/faith",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "Questions in the Dark",
+              "isPartOf": "Our Father?",
+              "text": "I am still here, still speaking to the silence, still hoping you're listening.",
+              "url": "https://www.kiminouknox.com/books/our-father",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Divine Silence",
+              "isPartOf": "Our Father?",
+              "text": "Maybe silence is an answer. Maybe waiting is worship. Maybe faith was never meant to be comfortable.",
+              "url": "https://www.kiminouknox.com/books/our-father",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/discipline",
+      "title": "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+      "description": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+      "keywords": [
+        "discipline poetry",
+        "Kiminou Knox athlete author",
+        "discipline quotes",
+        "excellence poetry"
+      ],
+      "sections": [
+        {
+          "heading": "Discipline on the page and on the court",
+          "text": "The basketball work and the writing work meet here: repetition, focus, faith, pressure, and the responsibility to keep building when attention is not guaranteed."
+        },
+        {
+          "heading": "The Thread",
+          "text": "Discipline is the bridge between Kiminou's books, sport, speaking, and youth work."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Kiminou Knox Journal: People ask how I balance basketball and writing. I do not. They have never been separate. The Spirit of Solomon: Between right and easy, I chose comfort. Between truth and peace, I chose silence."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/poetry/discipline#collection",
+        "name": "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+        "description": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+        "url": "https://www.kiminouknox.com/poetry/discipline",
+        "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "The Court and the Page",
+            "isPartOf": "Kiminou Knox Journal",
+            "text": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+            "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "The Weight of Choosing",
+            "isPartOf": "The Spirit of Solomon",
+            "text": "Between right and easy, I chose comfort. Between truth and peace, I chose silence.",
+            "url": "https://www.kiminouknox.com/books/spirit-solomon",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/poetry/discipline",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/discipline#webpage",
+          "url": "https://www.kiminouknox.com/poetry/discipline",
+          "name": "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+          "description": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/discipline#collection",
+          "name": "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+          "description": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+          "url": "https://www.kiminouknox.com/poetry/discipline",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "The Court and the Page",
+              "isPartOf": "Kiminou Knox Journal",
+              "text": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+              "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "The Weight of Choosing",
+              "isPartOf": "The Spirit of Solomon",
+              "text": "Between right and easy, I chose comfort. Between truth and peace, I chose silence.",
+              "url": "https://www.kiminouknox.com/books/spirit-solomon",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/healing",
+      "title": "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+      "description": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+      "keywords": [
+        "healing poetry",
+        "Black men healing",
+        "Boys Raised in Silence",
+        "Kiminou Knox healing poetry"
+      ],
+      "sections": [
+        {
+          "heading": "Words for what silence kept",
+          "text": "This page gathers the poems and ideas that speak to boys, men, silence, vulnerability, and the slow work of learning to tell the truth."
+        },
+        {
+          "heading": "Reader Path",
+          "text": "Start with Boys Raised in Silence, then move into the KimYaps episodes and essays that talk through pain, pressure, relationships, and grace."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Boys Raised in Silence: Silence does not heal wounds. It just lets them sit in the dark. Boys Raised in Silence: There comes a moment when the weight becomes too much, when the mask cracks, when the walls crumble."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/poetry/healing#collection",
+        "name": "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+        "description": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+        "url": "https://www.kiminouknox.com/poetry/healing",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "The Quiet",
+            "isPartOf": "Boys Raised in Silence",
+            "text": "Silence does not heal wounds. It just lets them sit in the dark.",
+            "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Breaking Point",
+            "isPartOf": "Boys Raised in Silence",
+            "text": "There comes a moment when the weight becomes too much, when the mask cracks, when the walls crumble.",
+            "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/poetry/healing",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/healing#webpage",
+          "url": "https://www.kiminouknox.com/poetry/healing",
+          "name": "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+          "description": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/healing#collection",
+          "name": "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+          "description": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+          "url": "https://www.kiminouknox.com/poetry/healing",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "The Quiet",
+              "isPartOf": "Boys Raised in Silence",
+              "text": "Silence does not heal wounds. It just lets them sit in the dark.",
+              "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Breaking Point",
+              "isPartOf": "Boys Raised in Silence",
+              "text": "There comes a moment when the weight becomes too much, when the mask cracks, when the walls crumble.",
+              "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/love",
+      "title": "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+      "description": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+      "keywords": [
+        "love poetry",
+        "Hopeless Romantic Kiminou Knox",
+        "healing love poems",
+        "poetry book"
+      ],
+      "sections": [
+        {
+          "heading": "Tender without pretending",
+          "text": "The love poems are direct, young, wounded, hopeful, and specific. They belong to the same public voice as the faith poems: honest before polished."
+        },
+        {
+          "heading": "Book Lane",
+          "text": "Hopeless Romantic is the direct book path for readers who find Kiminou through love poems, heartbreak quotes, and tender lines."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Hopeless Romantic: Love taught me how to open. Loss is teaching me how to close the things that need closing. Hopeless Romantic: I would rather believe too much than believe too little."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/poetry/love#collection",
+        "name": "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+        "description": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+        "url": "https://www.kiminouknox.com/poetry/love",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "After You",
+            "isPartOf": "Hopeless Romantic",
+            "text": "Love taught me how to open. Loss is teaching me how to close the things that need closing.",
+            "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Hope is a Dangerous Thing",
+            "isPartOf": "Hopeless Romantic",
+            "text": "I would rather believe too much than believe too little.",
+            "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/poetry/love",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/love#webpage",
+          "url": "https://www.kiminouknox.com/poetry/love",
+          "name": "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+          "description": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/love#collection",
+          "name": "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+          "description": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+          "url": "https://www.kiminouknox.com/poetry/love",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "After You",
+              "isPartOf": "Hopeless Romantic",
+              "text": "Love taught me how to open. Loss is teaching me how to close the things that need closing.",
+              "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Hope is a Dangerous Thing",
+              "isPartOf": "Hopeless Romantic",
+              "text": "I would rather believe too much than believe too little.",
+              "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/quotes",
+      "title": "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+      "description": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox quotes",
+        "faith quotes",
+        "discipline quotes",
+        "poetry quotes",
+        "purpose quotes"
+      ],
+      "sections": [
+        {
+          "heading": "Lines worth carrying",
+          "text": "Short, public-safe lines from Kiminou Knox's books and essays, organized for readers who want one clean place to start."
+        },
+        {
+          "heading": "Use This Page",
+          "text": "This quote page links every short line back to a book, essay, or deeper theme page so readers can follow the work."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Poems from a Black Boy: The world is waiting for what only you can give it. Our Father?: Maybe waiting is worship. The Court and the Page: The court and the page demand the same thing: truth."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/quotes#collection",
+        "name": "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+        "description": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+        "url": "https://www.kiminouknox.com/quotes",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Purpose",
+            "isPartOf": "Poems from a Black Boy",
+            "text": "The world is waiting for what only you can give it.",
+            "url": "https://www.kiminouknox.com/books/poems-black-boy",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Faith",
+            "isPartOf": "Our Father?",
+            "text": "Maybe waiting is worship.",
+            "url": "https://www.kiminouknox.com/books/our-father",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Discipline",
+            "isPartOf": "The Court and the Page",
+            "text": "The court and the page demand the same thing: truth.",
+            "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/quotes",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes#webpage",
+          "url": "https://www.kiminouknox.com/quotes",
+          "name": "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+          "description": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes#collection",
+          "name": "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+          "description": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+          "url": "https://www.kiminouknox.com/quotes",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "Purpose",
+              "isPartOf": "Poems from a Black Boy",
+              "text": "The world is waiting for what only you can give it.",
+              "url": "https://www.kiminouknox.com/books/poems-black-boy",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Faith",
+              "isPartOf": "Our Father?",
+              "text": "Maybe waiting is worship.",
+              "url": "https://www.kiminouknox.com/books/our-father",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Discipline",
+              "isPartOf": "The Court and the Page",
+              "text": "The court and the page demand the same thing: truth.",
+              "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/quotes/faith-and-purpose",
+      "title": "Faith and Purpose Quotes by Kiminou Knox",
+      "description": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+      "keywords": [
+        "faith and purpose quotes",
+        "God and purpose",
+        "Kiminou Knox faith",
+        "Christian poetry quotes"
+      ],
+      "sections": [
+        {
+          "heading": "Faith and purpose quotes",
+          "text": "A focused set of short lines for readers who enter through faith, God, calling, prayer, purpose, and spiritual conviction."
+        },
+        {
+          "heading": "Reader Path",
+          "text": "These lines point readers toward Our Father?, KimYaps, and the faith-centered essays on the official site."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "Our Father?: The questions are prayers too. Poems from a Black Boy: The world is waiting for what only you can give it."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/quotes/faith-and-purpose#collection",
+        "name": "Faith and Purpose Quotes by Kiminou Knox",
+        "description": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+        "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Prayer",
+            "isPartOf": "Our Father?",
+            "text": "The questions are prayers too.",
+            "url": "https://www.kiminouknox.com/books/our-father",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Purpose",
+            "isPartOf": "Poems from a Black Boy",
+            "text": "The world is waiting for what only you can give it.",
+            "url": "https://www.kiminouknox.com/books/poems-black-boy",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes/faith-and-purpose#webpage",
+          "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
+          "name": "Faith and Purpose Quotes by Kiminou Knox",
+          "description": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes/faith-and-purpose#collection",
+          "name": "Faith and Purpose Quotes by Kiminou Knox",
+          "description": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+          "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "Prayer",
+              "isPartOf": "Our Father?",
+              "text": "The questions are prayers too.",
+              "url": "https://www.kiminouknox.com/books/our-father",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Purpose",
+              "isPartOf": "Poems from a Black Boy",
+              "text": "The world is waiting for what only you can give it.",
+              "url": "https://www.kiminouknox.com/books/poems-black-boy",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/quotes/discipline-and-excellence",
+      "title": "Discipline and Excellence Quotes by Kiminou Knox",
+      "description": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
+      "keywords": [
+        "discipline quotes",
+        "excellence quotes",
+        "Kiminou Knox discipline",
+        "athlete author quotes"
+      ],
+      "sections": [
+        {
+          "heading": "Discipline and excellence quotes",
+          "text": "A focused page for the lines that connect Kiminou's athlete life, writing life, and public work around excellence."
+        },
+        {
+          "heading": "Reader Path",
+          "text": "These quotes are built for readers who find Kiminou through sports, motivation, purpose, writing, and the discipline of becoming."
+        },
+        {
+          "heading": "Selected Excerpts",
+          "text": "The Court and the Page: People ask how I balance basketball and writing. I do not. They have never been separate. The Spirit of Solomon: Between right and easy, I chose comfort. Between truth and peace, I chose silence."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://www.kiminouknox.com/quotes/discipline-and-excellence#collection",
+        "name": "Discipline and Excellence Quotes by Kiminou Knox",
+        "description": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+        "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
+        "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "inLanguage": "en-US",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Practice",
+            "isPartOf": "The Court and the Page",
+            "text": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+            "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Choice",
+            "isPartOf": "The Spirit of Solomon",
+            "text": "Between right and easy, I chose comfort. Between truth and peace, I chose silence.",
+            "url": "https://www.kiminouknox.com/books/spirit-solomon",
+            "author": {
+              "@id": "https://www.kiminouknox.com/#person"
+            }
+          }
+        ]
+      },
+      "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
+      "lastmod": "2026-06-17",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes/discipline-and-excellence#webpage",
+          "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
+          "name": "Discipline and Excellence Quotes by Kiminou Knox",
+          "description": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-17"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes/discipline-and-excellence#collection",
+          "name": "Discipline and Excellence Quotes by Kiminou Knox",
+          "description": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+          "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "hasPart": [
+            {
+              "@type": "CreativeWork",
+              "name": "Practice",
+              "isPartOf": "The Court and the Page",
+              "text": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+              "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "Choice",
+              "isPartOf": "The Spirit of Solomon",
+              "text": "Between right and easy, I chose comfort. Between truth and peace, I chose silence.",
+              "url": "https://www.kiminouknox.com/books/spirit-solomon",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              }
+            }
+          ]
         }
       ]
     },
