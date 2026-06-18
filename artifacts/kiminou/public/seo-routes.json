@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T19:33:50.525Z",
+  "generatedAt": "2026-06-18T02:10:45.689Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -48,7 +48,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -65,7 +65,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -93,7 +93,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/start-here",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -110,7 +110,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -133,7 +133,7 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -150,7 +150,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -173,7 +173,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -190,7 +190,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -213,7 +213,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -230,7 +230,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -253,7 +253,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -270,7 +270,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -293,7 +293,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/podcast",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -310,7 +310,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -333,7 +333,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -350,7 +350,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -372,7 +372,7 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -389,7 +389,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -411,7 +411,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -428,7 +428,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -450,7 +450,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -467,7 +467,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -489,7 +489,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -506,7 +506,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -529,7 +529,7 @@
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -546,7 +546,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -568,7 +568,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -585,7 +585,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         }
       ]
     },
@@ -669,7 +669,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/poetry",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -686,7 +686,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -803,7 +803,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/poetry/faith",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -820,7 +820,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -927,7 +927,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/poetry/discipline",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -944,7 +944,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -1051,7 +1051,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/poetry/healing",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1068,7 +1068,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -1175,7 +1175,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/poetry/love",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1192,7 +1192,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -1310,7 +1310,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/quotes",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1327,7 +1327,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -1444,7 +1444,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1461,7 +1461,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
@@ -1568,7 +1568,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
-      "lastmod": "2026-06-17",
+      "lastmod": "2026-06-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1585,7 +1585,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-06-17"
+          "dateModified": "2026-06-18"
         },
         {
           "@context": "https://schema.org",
