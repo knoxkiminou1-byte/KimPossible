@@ -37,7 +37,7 @@ export default function Splash() {
       if (splash) {
         splash.classList.add('fade-out');
         setTimeout(() => {
-          window.location.href = '/home';
+          window.location.href = '/';
         }, 500);
       }
     }

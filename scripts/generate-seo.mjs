@@ -492,6 +492,21 @@ const baseRouteMeta = [
     schemaType: "ProfilePage",
   },
   {
+    loc: "/basketball",
+    title: "Basketball Athlete Profile - Kiminou Knox",
+    description:
+      "Basketball athlete profile for Kiminou Knox, a 6'8\" NCAA-registered multi-position player with public recruiting and performance links.",
+    image: KIMINOU_PHOTOS.basketballJumpShot.loc,
+    keywords: ["Kiminou Knox basketball", "Kiminou Knox athlete", "NCAA registered basketball player"],
+    sections: [
+      {
+        heading: "Basketball Athlete Profile",
+        text: "Kiminou Knox is a 6'8\" NCAA-registered basketball athlete with public NCSA, MaxPreps, Prep Hoops, and 247Sports profile signals.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
     loc: "/portfolio",
     title: "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
     description:
@@ -744,6 +759,26 @@ const imageEntries = [
   },
   {
     loc: "/sports",
+    images: [
+      {
+        ...KIMINOU_PHOTOS.basketballJumpShot,
+      },
+      {
+        ...KIMINOU_PHOTOS.basketballWarmupSmile,
+      },
+      {
+        ...KIMINOU_PHOTOS.basketballHuddle,
+      },
+      {
+        ...KIMINOU_PHOTOS.footballLockerRoom,
+      },
+      {
+        ...KIMINOU_PHOTOS.footballMediaDay,
+      },
+    ],
+  },
+  {
+    loc: "/basketball",
     images: [
       {
         ...KIMINOU_PHOTOS.basketballJumpShot,

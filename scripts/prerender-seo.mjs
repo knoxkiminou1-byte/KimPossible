@@ -129,7 +129,7 @@ function renderBody(route) {
     ["/start-here", "Start Here"],
     ["/books", "Books"],
     ["/author", "Author"],
-    ["/sports", "Sports"],
+    ["/basketball", "Athletics"],
     ["/podcast", "KimYaps"],
     ["/speaking", "Speaking"],
     ["/blog", "Blog"],

@@ -9,6 +9,7 @@ import {
   animate,
 } from "framer-motion";
 import { useRef, Suspense, useEffect, useState, lazy } from "react";
+import { useLocation } from "wouter";
 import { ExternalLink, Trophy, TrendingUp, Target, Zap, ChevronDown } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -197,6 +198,10 @@ function DarkSection({ children, className = "", opacity = 0.65 }: { children: R
 
 /* ─── MAIN PAGE ────────────────────────────────────────────────────── */
 export default function Sports() {
+  const [location] = useLocation();
+  const canonicalPath = location === "/basketball" ? "/basketball" : "/sports";
+  const pageUrl = `${SITE_URL}${canonicalPath}`;
+  const pageLabel = location === "/basketball" ? "Basketball Athlete Profile" : "Sports & Athletics";
   const heroRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
@@ -209,14 +214,15 @@ export default function Sports() {
         <title>Kiminou Knox — Basketball Athlete Profile | NCAA Registered, 6'8" Multi-Position Athlete</title>
         <meta name="description" content={"Kiminou Knox is a 6'8\" NCAA-registered multi-position basketball athlete and multi-sport competitor with public profiles on NCSA, MaxPreps, Prep Hoops, and 247Sports."} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href="https://www.kiminouknox.com/sports" />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile" />
+        <meta property="og:url" content={pageUrl} />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "Person",
             "@id": `${SITE_URL}/#person`, name: "Kiminou Knox",
-            url: `${SITE_URL}/sports`, sport: "Basketball",
+            url: pageUrl, sport: "Basketball",
             height: { "@type": "QuantitativeValue", value: 80, unitCode: "INH" },
             affiliation: [
               { "@type": "SportsTeam", name: "Ygnacio Valley High School Basketball", sport: "Basketball" },
@@ -227,7 +233,7 @@ export default function Sports() {
           })}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Sports & Athletics", url: `${SITE_URL}/sports` }]))}
+          {JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: pageLabel, url: pageUrl }]))}
         </script>
       </Helmet>
 
