@@ -5,20 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
-
-export type ContactFormRequestInquiryType = typeof ContactFormRequestInquiryType[keyof typeof ContactFormRequestInquiryType];
-
-
-export const ContactFormRequestInquiryType = {
-  speaking: 'speaking',
-  press: 'press',
-  book: 'book',
-  basketball: 'basketball',
-  other: 'other',
-} as const;
+import type { ContactFormRequestInquiryType } from './contactFormRequestInquiryType';
 
 export interface ContactFormRequest {
   name: string;
@@ -35,13 +22,3 @@ export interface ContactFormRequest {
   /** Cloudflare Turnstile response token, when Turnstile is enabled. */
   turnstileToken?: string;
 }
-
-export interface ContactFormResponse {
-  message: string;
-}
-
-export interface ContactFormFallback {
-  error: string;
-  fallbackEmail: string;
-}
-

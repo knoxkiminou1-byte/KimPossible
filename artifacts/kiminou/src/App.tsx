@@ -14,7 +14,6 @@ const BackToTop = lazy(() => import("@/components/LuxuryFX/BackToTop"));
 const PageTransition = lazy(() => import("@/components/LuxuryFX/PageTransition"));
 const CursorSpotlight = lazy(() => import("@/components/LuxuryFX/CursorSpotlight"));
 const SectionDotNav = lazy(() => import("@/components/SectionDotNav"));
-const AdminGate = lazy(() => import("@/components/AdminGate"));
 const FirstEditionOverlay = lazy(() => import("@/components/FirstEditionOverlay"));
 
 const Splash = lazy(() => import("@/pages/Splash"));
@@ -23,7 +22,6 @@ const About = lazy(() => import("@/pages/About"));
 const Works = lazy(() => import("@/pages/Works"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const Portfolio = lazy(() => import("@/pages/Portfolio"));
-const BlogAdmin = lazy(() => import("@/pages/BlogAdmin"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 const Speaking = lazy(() => import("@/pages/Speaking"));
 const Blog = lazy(() => import("@/pages/Blog"));
@@ -127,9 +125,6 @@ function Router() {
         </Route>
         <Route path="/kimyaps">
           <Redirect to="/speaking" />
-        </Route>
-        <Route path="/admin/blog">
-          <AdminGate><BlogAdmin /></AdminGate>
         </Route>
         <Route component={NotFound} />
       </Switch>
