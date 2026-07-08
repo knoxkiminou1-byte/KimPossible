@@ -1,0 +1,1835 @@
+{
+  "generatedAt": "2026-06-12T22:46:53.156Z",
+  "site": {
+    "name": "Kiminou Knox",
+    "url": "https://www.kiminouknox.com",
+    "description": "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.",
+    "image": "https://www.kiminouknox.com/og-image.png",
+    "personImage": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+    "sameAs": [
+      "https://medium.com/@knoxkiminou1",
+      "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
+      "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
+      "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+      "https://www.linkedin.com/in/kiminou-knox-50691a394/",
+      "https://x.com/KnoxKiminou",
+      "https://x.com/KiminouKnox",
+      "https://www.instagram.com/kiminouknox",
+      "https://www.youtube.com/@KiminouKnoxVevo",
+      "https://about.me/kiminou",
+      "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
+      "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
+      "https://prephoops.com/player/kiminou-knox/"
+    ]
+  },
+  "routes": [
+    {
+      "loc": "/",
+      "title": "Kiminou Knox | Athlete, Author, Speaker",
+      "description": "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox",
+        "author",
+        "athlete",
+        "speaker",
+        "Bay Area",
+        "poetry"
+      ],
+      "sections": [
+        {
+          "heading": "Kiminou Knox",
+          "text": "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area."
+        },
+        {
+          "heading": "Featured Work",
+          "text": "Books, essays, basketball, speaking, and press information from the official Kiminou Knox website."
+        }
+      ],
+      "schemaType": "WebPage",
+      "url": "https://www.kiminouknox.com/",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/#webpage",
+          "url": "https://www.kiminouknox.com/",
+          "name": "Kiminou Knox | Athlete, Author, Speaker",
+          "description": "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/about",
+      "title": "About - Kiminou Knox",
+      "description": "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+      "keywords": [
+        "Kiminou Knox biography",
+        "Kiminou Knox about",
+        "Bay Area author",
+        "athlete author"
+      ],
+      "sections": [
+        {
+          "heading": "About Kiminou Knox",
+          "text": "Kiminou Knox is an author, athlete, speaker, and creative voice from the Bay Area."
+        }
+      ],
+      "schemaType": "AboutPage",
+      "url": "https://www.kiminouknox.com/about",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "@id": "https://www.kiminouknox.com/about#webpage",
+          "url": "https://www.kiminouknox.com/about",
+          "name": "About - Kiminou Knox",
+          "description": "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/works",
+      "title": "Works - Kiminou Knox",
+      "description": "Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox books",
+        "Kiminou Knox works",
+        "poetry books",
+        "Black boy poems"
+      ],
+      "sections": [
+        {
+          "heading": "Works",
+          "text": "The Spirit of Solomon: A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?: A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy: Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic: An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence: A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise: A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics: A children's book about imagination, play, and the power of believing in what you can build."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/works",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/works#webpage",
+          "url": "https://www.kiminouknox.com/works",
+          "name": "Works - Kiminou Knox",
+          "description": "Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/author",
+      "title": "Kiminou Knox | Author Profile",
+      "description": "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox author",
+        "author profile",
+        "young author",
+        "Bay Area writer"
+      ],
+      "sections": [
+        {
+          "heading": "Author Profile",
+          "text": "Kiminou Knox writes across poetry, faith, Black boyhood, discipline, emotional honesty, and the cost of finding a voice."
+        }
+      ],
+      "schemaType": "ProfilePage",
+      "url": "https://www.kiminouknox.com/author",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": "https://www.kiminouknox.com/author#webpage",
+          "url": "https://www.kiminouknox.com/author",
+          "name": "Kiminou Knox | Author Profile",
+          "description": "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/books",
+      "title": "Published Books - Kiminou Knox",
+      "description": "Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+      "keywords": [
+        "Kiminou Knox books",
+        "published books",
+        "poetry collections",
+        "The Spirit of Solomon"
+      ],
+      "sections": [
+        {
+          "heading": "Published Books",
+          "text": "The Spirit of Solomon, What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?, A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy, Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic, Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence, Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise, A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics, A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/books",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/books#webpage",
+          "url": "https://www.kiminouknox.com/books",
+          "name": "Published Books - Kiminou Knox",
+          "description": "Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/speaking",
+      "title": "Speaking & KimYaps Podcast - Kiminou Knox",
+      "description": "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work, or tune into KimYaps podcast episodes.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox speaker",
+        "KimYaps podcast",
+        "youth speaker",
+        "athlete speaker",
+        "author speaker"
+      ],
+      "sections": [
+        {
+          "heading": "Speaking & KimYaps",
+          "text": "Kiminou Knox speaks on discipline, faith, youth voice, Black boyhood, creative work, and the bridge between athletics and writing. KimYaps carries that voice into honest podcast conversations about pain, purpose, faith, and grace."
+        }
+      ],
+      "schemaType": "WebPage",
+      "url": "https://www.kiminouknox.com/speaking",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/speaking#webpage",
+          "url": "https://www.kiminouknox.com/speaking",
+          "name": "Speaking & KimYaps Podcast - Kiminou Knox",
+          "description": "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work, or tune into KimYaps podcast episodes.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/contact",
+      "title": "Contact - Kiminou Knox",
+      "description": "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "contact Kiminou Knox",
+        "book Kiminou Knox",
+        "Kiminou Knox speaking"
+      ],
+      "sections": [
+        {
+          "heading": "Contact",
+          "text": "Use the official contact page for speaking, press, books, basketball, school, and collaboration inquiries."
+        }
+      ],
+      "schemaType": "ContactPage",
+      "url": "https://www.kiminouknox.com/contact",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "@id": "https://www.kiminouknox.com/contact#webpage",
+          "url": "https://www.kiminouknox.com/contact",
+          "name": "Contact - Kiminou Knox",
+          "description": "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/press",
+      "title": "Press & Recognition - Kiminou Knox",
+      "description": "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox press",
+        "Kiminou Knox media",
+        "Kiminou Knox recognition"
+      ],
+      "sections": [
+        {
+          "heading": "Press & Recognition",
+          "text": "Official press context, recognition, biography, books, athletics, and media information for Kiminou Knox."
+        }
+      ],
+      "schemaType": "ProfilePage",
+      "url": "https://www.kiminouknox.com/press",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": "https://www.kiminouknox.com/press#webpage",
+          "url": "https://www.kiminouknox.com/press",
+          "name": "Press & Recognition - Kiminou Knox",
+          "description": "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/sports",
+      "title": "Sports & Athletics - Kiminou Knox",
+      "description": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+      "keywords": [
+        "Kiminou Knox basketball",
+        "Kiminou Knox athlete",
+        "Bay Area basketball player"
+      ],
+      "sections": [
+        {
+          "heading": "Sports & Athletics",
+          "text": "Kiminou Knox is a Bay Area basketball player and multi-sport athlete with public athletic profiles and recruiting context."
+        }
+      ],
+      "schemaType": "ProfilePage",
+      "url": "https://www.kiminouknox.com/sports",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": "https://www.kiminouknox.com/sports#webpage",
+          "url": "https://www.kiminouknox.com/sports",
+          "name": "Sports & Athletics - Kiminou Knox",
+          "description": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/portfolio",
+      "title": "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
+      "description": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+      "keywords": [
+        "Kiminou Knox portfolio",
+        "author athlete entrepreneur",
+        "creative portfolio"
+      ],
+      "sections": [
+        {
+          "heading": "Portfolio",
+          "text": "A portfolio spanning books, athletics, speaking, youth leadership, editorial work, and creative direction."
+        }
+      ],
+      "schemaType": "ProfilePage",
+      "url": "https://www.kiminouknox.com/portfolio",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": "https://www.kiminouknox.com/portfolio#webpage",
+          "url": "https://www.kiminouknox.com/portfolio",
+          "name": "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
+          "description": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/blog",
+      "title": "Author's Journal - Kiminou Knox | Essays & Writing",
+      "description": "Essays and poems by Kiminou Knox on faith, identity, love, discipline, writing, basketball, and Black boy life.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox blog",
+        "Kiminou Knox essays",
+        "Kiminou Knox Medium",
+        "author blog"
+      ],
+      "sections": [
+        {
+          "heading": "Author's Journal",
+          "text": "The Lie I Was Told About Discipline: Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet. On Love That Does Not Perform: I keep writing about love because I keep trying to understand it as practice, not performance. Eight Books Before Twenty: Why I Could Not Stop: I am nineteen. I have eight published books. The real answer is that I could not stop. What I Mean When I Write About Faith: Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved. The Court and the Page Are the Same Discipline: People ask how I balance basketball and writing. I do not. They have never been separate. What Black Boys Are Not Allowed to Feel: There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it."
+        }
+      ],
+      "schemaType": "Blog",
+      "url": "https://www.kiminouknox.com/blog",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "@id": "https://www.kiminouknox.com/blog#webpage",
+          "url": "https://www.kiminouknox.com/blog",
+          "name": "Author's Journal - Kiminou Knox | Essays & Writing",
+          "description": "Essays and poems by Kiminou Knox on faith, identity, love, discipline, writing, basketball, and Black boy life.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/reading-list",
+      "title": "Reading List - Kiminou Knox | Books Worth Your Time",
+      "description": "Kiminou Knox's reading list across faith, discipline, basketball, Black literature, writing craft, and creative growth.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox reading list",
+        "books worth reading",
+        "author reading list"
+      ],
+      "sections": [
+        {
+          "heading": "Reading List",
+          "text": "Books and influences connected to faith, discipline, basketball, Black literature, writing craft, and creative growth."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/reading-list",
+      "lastmod": "2026-06-12",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/reading-list#webpage",
+          "url": "https://www.kiminouknox.com/reading-list",
+          "name": "Reading List - Kiminou Knox | Books Worth Your Time",
+          "description": "Kiminou Knox's reading list across faith, discipline, basketball, Black literature, writing craft, and creative growth.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "loc": "/books/spirit-solomon",
+      "title": "The Spirit of Solomon - Kiminou Knox | Poetry Collection",
+      "description": "The Spirit of Solomon by Kiminou Knox. What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+      "keywords": [
+        "The Spirit of Solomon",
+        "Kiminou Knox book",
+        "Wisdom",
+        "Faith",
+        "Reckoning",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "The Spirit of Solomon",
+          "text": "What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Published 2025. ISBN 9798316662975."
+        },
+        {
+          "heading": "Themes",
+          "text": "Wisdom, Faith, Reckoning"
+        },
+        {
+          "heading": "Sample",
+          "text": "Rise: They called me wise before I learned what wisdom cost— before the gold turned cold in hands that held too much. I built kingdoms on foundations of borrowed time, thought I could master what was meant to humble me. But every crown weighs heavy on a head that knows the price of being loved for what you own."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/spirit-solomon#book",
+        "name": "The Spirit of Solomon",
+        "alternateName": "What is Love To A Man Made To Destroy It",
+        "url": "https://www.kiminouknox.com/books/spirit-solomon",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2025-01-15",
+        "isbn": "9798316662975",
+        "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
+          "https://play.google.com/store/books/details/Kiminou_Knox_The_Spirit_of_Solomon?id=yIRsEQAAQBAJ",
+          "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/spirit-solomon",
+      "lastmod": "2025-01-15",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/spirit-solomon#webpage",
+          "url": "https://www.kiminouknox.com/books/spirit-solomon",
+          "name": "The Spirit of Solomon - Kiminou Knox | Poetry Collection",
+          "description": "The Spirit of Solomon by Kiminou Knox. What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-01-15"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/spirit-solomon#book",
+          "name": "The Spirit of Solomon",
+          "alternateName": "What is Love To A Man Made To Destroy It",
+          "url": "https://www.kiminouknox.com/books/spirit-solomon",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2025-01-15",
+          "isbn": "9798316662975",
+          "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
+            "https://play.google.com/store/books/details/Kiminou_Knox_The_Spirit_of_Solomon?id=yIRsEQAAQBAJ",
+            "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/our-father",
+      "title": "Our Father? - Kiminou Knox | Poetry Collection",
+      "description": "Our Father? by Kiminou Knox. A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+      "keywords": [
+        "Our Father?",
+        "Kiminou Knox book",
+        "Faith",
+        "Silence",
+        "Searching",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Our Father?",
+          "text": "A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions. Published 2025. ISBN 9798316682850."
+        },
+        {
+          "heading": "Themes",
+          "text": "Faith, Silence, Searching"
+        },
+        {
+          "heading": "Sample",
+          "text": "Questions in the Dark: Our Father, who art in heaven— or so they tell me. But where were you when the prayers felt like shouting into an empty room? Hallowed be thy name, though I struggle to say it when doubt sits heavy on my tongue like communion bread that won't dissolve. I'm still here, still speaking to the silence, still hoping you're listening from wherever fathers go when their children need them most."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/our-father#book",
+        "name": "Our Father?",
+        "alternateName": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+        "url": "https://www.kiminouknox.com/books/our-father",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2025-02-10",
+        "isbn": "9798316682850",
+        "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
+          "https://www.amazon.co.uk/Our-Father-Poetic-Journey-Silence/dp/B0FH2TPMT4",
+          "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ",
+          "https://www.waterstones.com/book/our-father/kiminou-knox/9798316682850",
+          "https://www.hatchards.co.uk/book/our-father/kiminou-knox/9798316682850"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/our-father",
+      "lastmod": "2025-02-10",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/our-father#webpage",
+          "url": "https://www.kiminouknox.com/books/our-father",
+          "name": "Our Father? - Kiminou Knox | Poetry Collection",
+          "description": "Our Father? by Kiminou Knox. A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-02-10"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/our-father#book",
+          "name": "Our Father?",
+          "alternateName": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+          "url": "https://www.kiminouknox.com/books/our-father",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2025-02-10",
+          "isbn": "9798316682850",
+          "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
+            "https://www.amazon.co.uk/Our-Father-Poetic-Journey-Silence/dp/B0FH2TPMT4",
+            "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ",
+            "https://www.waterstones.com/book/our-father/kiminou-knox/9798316682850",
+            "https://www.hatchards.co.uk/book/our-father/kiminou-knox/9798316682850"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/poems-black-boy",
+      "title": "Poems from a Black Boy - Kiminou Knox | Poetry Collection",
+      "description": "Poems from a Black Boy by Kiminou Knox. Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+      "keywords": [
+        "Poems from a Black Boy",
+        "Kiminou Knox book",
+        "Identity",
+        "Heritage",
+        "Resilience",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Poems from a Black Boy",
+          "text": "Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Published 2024. ISBN 9798316662975."
+        },
+        {
+          "heading": "Themes",
+          "text": "Identity, Heritage, Resilience"
+        },
+        {
+          "heading": "Sample",
+          "text": "Morning Mirrors: I wake up Black every morning, check the mirror to make sure it's still me looking back. Some days I see my father's strength, my mother's grace, my grandmother's wisdom woven into the curve of my smile, the fire in my eyes. Other days I see the weight of expectations, the burden of representation, the beautiful responsibility of carrying ancestors' dreams in every step I take. But every morning, I choose to see not just survival, but the art of becoming who I was meant to be."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/poems-black-boy#book",
+        "name": "Poems from a Black Boy",
+        "alternateName": "Identity, Heritage, and Hope",
+        "url": "https://www.kiminouknox.com/books/poems-black-boy",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2024-09-29",
+        "isbn": "9798316662975",
+        "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
+          "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
+          "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
+          "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+          "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+          "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/poems-black-boy",
+      "lastmod": "2024-09-29",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/poems-black-boy#webpage",
+          "url": "https://www.kiminouknox.com/books/poems-black-boy",
+          "name": "Poems from a Black Boy - Kiminou Knox | Poetry Collection",
+          "description": "Poems from a Black Boy by Kiminou Knox. Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2024-09-29"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/poems-black-boy#book",
+          "name": "Poems from a Black Boy",
+          "alternateName": "Identity, Heritage, and Hope",
+          "url": "https://www.kiminouknox.com/books/poems-black-boy",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2024-09-29",
+          "isbn": "9798316662975",
+          "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
+            "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
+            "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
+            "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+            "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+            "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/hopeless-romantic",
+      "title": "Hopeless Romantic - Kiminou Knox | Poetry Collection",
+      "description": "Hopeless Romantic by Kiminou Knox. Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+      "keywords": [
+        "Hopeless Romantic",
+        "Kiminou Knox book",
+        "Love",
+        "Heartbreak",
+        "Healing",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Hopeless Romantic",
+          "text": "Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Published 2025. ISBN 9798291608128."
+        },
+        {
+          "heading": "Themes",
+          "text": "Love, Heartbreak, Healing"
+        },
+        {
+          "heading": "Sample",
+          "text": "First Love: You were my first lesson in what it means to give someone else the power to make or break your day with just a text message. I wrote your name in the margins of math notebooks, practiced saying 'I love you' in the mirror until it sounded less like a prayer and more like a promise. You taught me that hearts can hold infinite love and infinite pain at the exact same time, that seventeen is old enough to know forever and young enough to believe in it. Thank you for being my first everything, eve..."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/hopeless-romantic#book",
+        "name": "Hopeless Romantic",
+        "alternateName": "Love, Loss, and Everything Between",
+        "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2025-03-05",
+        "isbn": "9798291608128",
+        "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+          "https://www.amazon.co.uk/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+          "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ",
+          "https://www.waterstones.com/book/hopeless-romantic/kiminou-knox/9798291608128",
+          "https://www.hatchards.co.uk/book/hopeless-romantic/kiminou-knox/9798291608128"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+      "lastmod": "2025-03-05",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/hopeless-romantic#webpage",
+          "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+          "name": "Hopeless Romantic - Kiminou Knox | Poetry Collection",
+          "description": "Hopeless Romantic by Kiminou Knox. Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-03-05"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/hopeless-romantic#book",
+          "name": "Hopeless Romantic",
+          "alternateName": "Love, Loss, and Everything Between",
+          "url": "https://www.kiminouknox.com/books/hopeless-romantic",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2025-03-05",
+          "isbn": "9798291608128",
+          "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+            "https://www.amazon.co.uk/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+            "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ",
+            "https://www.waterstones.com/book/hopeless-romantic/kiminou-knox/9798291608128",
+            "https://www.hatchards.co.uk/book/hopeless-romantic/kiminou-knox/9798291608128"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/boys-raised-in-silence",
+      "title": "Boys Raised in Silence - Kiminou Knox | Poetry Collection",
+      "description": "Boys Raised in Silence by Kiminou Knox. Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+      "keywords": [
+        "Boys Raised in Silence",
+        "Kiminou Knox book",
+        "Silence",
+        "Masculinity",
+        "Healing",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Boys Raised in Silence",
+          "text": "Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. Published 2024. ISBN 9798316735821."
+        },
+        {
+          "heading": "Themes",
+          "text": "Silence, Masculinity, Healing"
+        },
+        {
+          "heading": "Sample",
+          "text": "The Quiet: We were taught to swallow pain like bitter medicine, to smile through the ache, to carry burdens that would break men twice our size. Silence was strength, they said. Tears were weakness. Vulnerability was surrender. So we learned to hide behind masks of toughness, buried our emotions in unmarked graves, built walls so high even we forgot what we were protecting. But silence doesn't heal wounds. It just lets them fester in the dark."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/boys-raised-in-silence#book",
+        "name": "Boys Raised in Silence",
+        "alternateName": "Breaking the Quiet, Finding Voice",
+        "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2024-06-15",
+        "isbn": "9798316735821",
+        "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+          "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+          "https://www.waterstones.com/book/boys-raised-in-silence/kiminou-knox/9798316735821"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+      "lastmod": "2024-06-15",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/boys-raised-in-silence#webpage",
+          "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+          "name": "Boys Raised in Silence - Kiminou Knox | Poetry Collection",
+          "description": "Boys Raised in Silence by Kiminou Knox. Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2024-06-15"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/boys-raised-in-silence#book",
+          "name": "Boys Raised in Silence",
+          "alternateName": "Breaking the Quiet, Finding Voice",
+          "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2024-06-15",
+          "isbn": "9798316735821",
+          "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+            "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+            "https://www.waterstones.com/book/boys-raised-in-silence/kiminou-knox/9798316735821"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/adventures-kiminou-chua",
+      "title": "The Adventures of Kiminou the Great and Chua the Wise - Kiminou Knox | Poetry Collection",
+      "description": "The Adventures of Kiminou the Great and Chua the Wise by Kiminou Knox. A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+      "keywords": [
+        "The Adventures of Kiminou the Great and Chua the Wise",
+        "Kiminou Knox book",
+        "Friendship",
+        "Growth",
+        "Adventure",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "The Adventures of Kiminou the Great and Chua the Wise",
+          "text": "A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Published 2025. ISBN 9798316591204."
+        },
+        {
+          "heading": "Themes",
+          "text": "Friendship, Growth, Adventure"
+        },
+        {
+          "heading": "Sample",
+          "text": "The Beginning: In a land where stories bloom like flowers, where wisdom grows on ancient trees, two friends embarked on a journey that would change everything. Kiminou the Great, with courage in his heart and dreams too big for one world, met Chua the Wise, who saw the truth in every shadow, heard the lesson in every silence. Together, they learned that greatness and wisdom are not opposites— they are partners on the path to becoming."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/adventures-kiminou-chua#book",
+        "name": "The Adventures of Kiminou the Great and Chua the Wise",
+        "alternateName": "A Journey of Friendship and Discovery",
+        "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2025-01-20",
+        "isbn": "9798316591204",
+        "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+          "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua",
+      "lastmod": "2025-01-20",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/adventures-kiminou-chua#webpage",
+          "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua",
+          "name": "The Adventures of Kiminou the Great and Chua the Wise - Kiminou Knox | Poetry Collection",
+          "description": "The Adventures of Kiminou the Great and Chua the Wise by Kiminou Knox. A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-01-20"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/adventures-kiminou-chua#book",
+          "name": "The Adventures of Kiminou the Great and Chua the Wise",
+          "alternateName": "A Journey of Friendship and Discovery",
+          "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2025-01-20",
+          "isbn": "9798316591204",
+          "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+            "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/world-of-imagination",
+      "title": "Kiminou's World of Imagination: The Basics - Kiminou Knox | Poetry Collection",
+      "description": "Kiminou's World of Imagination: The Basics by Kiminou Knox. A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build.",
+      "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+      "keywords": [
+        "Kiminou's World of Imagination: The Basics",
+        "Kiminou Knox book",
+        "Imagination",
+        "Children",
+        "Play",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Kiminou's World of Imagination: The Basics",
+          "text": "A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build. Published 2025. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Imagination, Children, Play"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/world-of-imagination#book",
+        "name": "Kiminou's World of Imagination: The Basics",
+        "alternateName": "A Colorful Journey Through Imagination and Play",
+        "url": "https://www.kiminouknox.com/books/world-of-imagination",
+        "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2025-01-01",
+        "isbn": "",
+        "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/world-of-imagination",
+      "lastmod": "2025-01-01",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/world-of-imagination#webpage",
+          "url": "https://www.kiminouknox.com/books/world-of-imagination",
+          "name": "Kiminou's World of Imagination: The Basics - Kiminou Knox | Poetry Collection",
+          "description": "Kiminou's World of Imagination: The Basics by Kiminou Knox. A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build.",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-01-01"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/world-of-imagination#book",
+          "name": "Kiminou's World of Imagination: The Basics",
+          "alternateName": "A Colorful Journey Through Imagination and Play",
+          "url": "https://www.kiminouknox.com/books/world-of-imagination",
+          "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2025-01-01",
+          "isbn": "",
+          "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
+        }
+      ]
+    },
+    {
+      "loc": "/blog/the-lie-i-was-told-about-discipline",
+      "title": "The Lie I Was Told About Discipline - Kiminou Knox",
+      "description": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "The Lie I Was Told About Discipline",
+        "Kiminou Knox essay",
+        "discipline",
+        "mindset",
+        "craft",
+        "athletics"
+      ],
+      "sections": [
+        {
+          "heading": "The Lie I Was Told About Discipline",
+          "text": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet."
+        },
+        {
+          "heading": "Essay",
+          "text": "Discipline is not about wanting to. That is the lie. Motivation is unreliable. It comes and goes with sleep and season and whether the last thing you did worked or not. Discipline is what you do in the absence of motivation. The decision is made once. You show up because you decided to show up, and the showing up is its own justification."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline#blogposting",
+        "headline": "The Lie I Was Told About Discipline",
+        "description": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet.",
+        "url": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "datePublished": "2025-03-22T00:00:00.000Z",
+        "dateModified": "2025-03-22T00:00:00.000Z",
+        "inLanguage": "en-US",
+        "keywords": [
+          "discipline",
+          "mindset",
+          "craft",
+          "athletics"
+        ],
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline"
+        }
+      },
+      "url": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline",
+      "lastmod": "2025-03-22",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline#webpage",
+          "url": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline",
+          "name": "The Lie I Was Told About Discipline - Kiminou Knox",
+          "description": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-03-22"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline#blogposting",
+          "headline": "The Lie I Was Told About Discipline",
+          "description": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet.",
+          "url": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "datePublished": "2025-03-22T00:00:00.000Z",
+          "dateModified": "2025-03-22T00:00:00.000Z",
+          "inLanguage": "en-US",
+          "keywords": [
+            "discipline",
+            "mindset",
+            "craft",
+            "athletics"
+          ],
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.kiminouknox.com/blog/the-lie-i-was-told-about-discipline"
+          }
+        }
+      ]
+    },
+    {
+      "loc": "/blog/on-love-that-doesnt-perform",
+      "title": "On Love That Does Not Perform - Kiminou Knox",
+      "description": "I keep writing about love because I keep trying to understand it as practice, not performance.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "On Love That Does Not Perform",
+        "Kiminou Knox essay",
+        "love",
+        "relationships",
+        "identity",
+        "emotional honesty"
+      ],
+      "sections": [
+        {
+          "heading": "On Love That Does Not Perform",
+          "text": "I keep writing about love because I keep trying to understand it as practice, not performance."
+        },
+        {
+          "heading": "Essay",
+          "text": "I keep writing about love because I keep trying to understand it. Not romantic love specifically, though that is in there. Love as a practice. Love as a discipline. Love without an audience. Love that does not know it is being watched. Genuine love is expensive. It costs presence, honesty, and time in a way that cannot be scheduled. That is the love I am interested in: not the feeling, but the practice."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform#blogposting",
+        "headline": "On Love That Does Not Perform",
+        "description": "I keep writing about love because I keep trying to understand it as practice, not performance.",
+        "url": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "datePublished": "2025-02-14T00:00:00.000Z",
+        "dateModified": "2025-02-14T00:00:00.000Z",
+        "inLanguage": "en-US",
+        "keywords": [
+          "love",
+          "relationships",
+          "identity",
+          "emotional honesty"
+        ],
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform"
+        }
+      },
+      "url": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform",
+      "lastmod": "2025-02-14",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform#webpage",
+          "url": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform",
+          "name": "On Love That Does Not Perform - Kiminou Knox",
+          "description": "I keep writing about love because I keep trying to understand it as practice, not performance.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-02-14"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform#blogposting",
+          "headline": "On Love That Does Not Perform",
+          "description": "I keep writing about love because I keep trying to understand it as practice, not performance.",
+          "url": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "datePublished": "2025-02-14T00:00:00.000Z",
+          "dateModified": "2025-02-14T00:00:00.000Z",
+          "inLanguage": "en-US",
+          "keywords": [
+            "love",
+            "relationships",
+            "identity",
+            "emotional honesty"
+          ],
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.kiminouknox.com/blog/on-love-that-doesnt-perform"
+          }
+        }
+      ]
+    },
+    {
+      "loc": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "title": "Eight Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
+      "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Eight Books Before Twenty: Why I Could Not Stop",
+        "Kiminou Knox essay",
+        "books",
+        "writing life",
+        "creative process",
+        "publishing"
+      ],
+      "sections": [
+        {
+          "heading": "Eight Books Before Twenty: Why I Could Not Stop",
+          "text": "I am nineteen. I have eight published books. The real answer is that I could not stop."
+        },
+        {
+          "heading": "Essay",
+          "text": "I am nineteen. I have eight published books. People ask how. The real answer is that I could not stop. Not as discipline, though that is part of it, but as necessity. The writing was the only place where the interior life had room to be what it actually was. Each book came from a specific season and a specific question I was living inside. Eight books means eight rooms I went through. It is not a ceiling. It is a current count."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop#blogposting",
+        "headline": "Eight Books Before Twenty: Why I Could Not Stop",
+        "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
+        "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "datePublished": "2025-01-14T00:00:00.000Z",
+        "dateModified": "2025-01-14T00:00:00.000Z",
+        "inLanguage": "en-US",
+        "keywords": [
+          "books",
+          "writing life",
+          "creative process",
+          "publishing"
+        ],
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop"
+        }
+      },
+      "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "lastmod": "2025-01-14",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop#webpage",
+          "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
+          "name": "Eight Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
+          "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2025-01-14"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop#blogposting",
+          "headline": "Eight Books Before Twenty: Why I Could Not Stop",
+          "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
+          "url": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "datePublished": "2025-01-14T00:00:00.000Z",
+          "dateModified": "2025-01-14T00:00:00.000Z",
+          "inLanguage": "en-US",
+          "keywords": [
+            "books",
+            "writing life",
+            "creative process",
+            "publishing"
+          ],
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.kiminouknox.com/blog/eight-books-before-twenty-why-i-couldnt-stop"
+          }
+        }
+      ]
+    },
+    {
+      "loc": "/blog/what-i-mean-when-i-write-about-faith",
+      "title": "What I Mean When I Write About Faith - Kiminou Knox",
+      "description": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "What I Mean When I Write About Faith",
+        "Kiminou Knox essay",
+        "faith",
+        "spirituality",
+        "Our Father",
+        "Spirit of Solomon"
+      ],
+      "sections": [
+        {
+          "heading": "What I Mean When I Write About Faith",
+          "text": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved."
+        },
+        {
+          "heading": "Essay",
+          "text": "I did not title a book Our Father? with a question mark to be provocative. I did it because the question was real. Faith in my work is not decoration. It is the wound. It is the thing I keep returning to because it has not resolved, because it keeps demanding something of me that I do not always have to give. Where I have landed, at least for now: faith is not a feeling. It is a discipline. It is the daily choice to orient yourself toward something you cannot see but believe has coherence."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith#blogposting",
+        "headline": "What I Mean When I Write About Faith",
+        "description": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved.",
+        "url": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "datePublished": "2024-12-01T00:00:00.000Z",
+        "dateModified": "2024-12-01T00:00:00.000Z",
+        "inLanguage": "en-US",
+        "keywords": [
+          "faith",
+          "spirituality",
+          "Our Father",
+          "Spirit of Solomon"
+        ],
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith"
+        }
+      },
+      "url": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith",
+      "lastmod": "2024-12-01",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith#webpage",
+          "url": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith",
+          "name": "What I Mean When I Write About Faith - Kiminou Knox",
+          "description": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2024-12-01"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith#blogposting",
+          "headline": "What I Mean When I Write About Faith",
+          "description": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved.",
+          "url": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "datePublished": "2024-12-01T00:00:00.000Z",
+          "dateModified": "2024-12-01T00:00:00.000Z",
+          "inLanguage": "en-US",
+          "keywords": [
+            "faith",
+            "spirituality",
+            "Our Father",
+            "Spirit of Solomon"
+          ],
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.kiminouknox.com/blog/what-i-mean-when-i-write-about-faith"
+          }
+        }
+      ]
+    },
+    {
+      "loc": "/blog/the-court-and-the-page-are-the-same-discipline",
+      "title": "The Court and the Page Are the Same Discipline - Kiminou Knox",
+      "description": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "The Court and the Page Are the Same Discipline",
+        "Kiminou Knox essay",
+        "basketball",
+        "writing",
+        "discipline",
+        "craft"
+      ],
+      "sections": [
+        {
+          "heading": "The Court and the Page Are the Same Discipline",
+          "text": "People ask how I balance basketball and writing. I do not. They have never been separate."
+        },
+        {
+          "heading": "Essay",
+          "text": "People ask how I balance basketball and writing. I do not. They have never been separate. The same thing that makes you show up to film study when you would rather not makes you sit down with a blank page when nothing is there yet. The discipline is not different. The failure looks different. The patience required is the same. Basketball taught me to show up when I am empty. Writing required the exact same thing. The practice continues whether the day feels good or not."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline#blogposting",
+        "headline": "The Court and the Page Are the Same Discipline",
+        "description": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+        "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "datePublished": "2024-11-05T00:00:00.000Z",
+        "dateModified": "2024-11-05T00:00:00.000Z",
+        "inLanguage": "en-US",
+        "keywords": [
+          "basketball",
+          "writing",
+          "discipline",
+          "craft"
+        ],
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline"
+        }
+      },
+      "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+      "lastmod": "2024-11-05",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline#webpage",
+          "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+          "name": "The Court and the Page Are the Same Discipline - Kiminou Knox",
+          "description": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2024-11-05"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline#blogposting",
+          "headline": "The Court and the Page Are the Same Discipline",
+          "description": "People ask how I balance basketball and writing. I do not. They have never been separate.",
+          "url": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "datePublished": "2024-11-05T00:00:00.000Z",
+          "dateModified": "2024-11-05T00:00:00.000Z",
+          "inLanguage": "en-US",
+          "keywords": [
+            "basketball",
+            "writing",
+            "discipline",
+            "craft"
+          ],
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.kiminouknox.com/blog/the-court-and-the-page-are-the-same-discipline"
+          }
+        }
+      ]
+    },
+    {
+      "loc": "/blog/what-black-boys-are-not-allowed-to-feel",
+      "title": "What Black Boys Are Not Allowed to Feel - Kiminou Knox",
+      "description": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "What Black Boys Are Not Allowed to Feel",
+        "Kiminou Knox essay",
+        "identity",
+        "Black boy",
+        "grief",
+        "writing"
+      ],
+      "sections": [
+        {
+          "heading": "What Black Boys Are Not Allowed to Feel",
+          "text": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it."
+        },
+        {
+          "heading": "Essay",
+          "text": "There is a performance tax placed on Black boys before they ever learn to speak. Before we know what grief is, we know what grief looks like when it is suppressed. I started writing at thirteen because the feeling would not fit anywhere else. It went onto the page, because the page asked nothing of me except honesty. My books are written in the language I was not supposed to learn. They are not performances of strength. They are accounts of what strength actually requires. Your feelings are not weakness. Your grief is real, and it is allowed to be put somewhere it will not destroy you."
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel#blogposting",
+        "headline": "What Black Boys Are Not Allowed to Feel",
+        "description": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it.",
+        "url": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel",
+        "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+        "datePublished": "2024-10-01T00:00:00.000Z",
+        "dateModified": "2024-10-01T00:00:00.000Z",
+        "inLanguage": "en-US",
+        "keywords": [
+          "identity",
+          "Black boy",
+          "grief",
+          "writing"
+        ],
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel"
+        }
+      },
+      "url": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel",
+      "lastmod": "2024-10-01",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel#webpage",
+          "url": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel",
+          "name": "What Black Boys Are Not Allowed to Feel - Kiminou Knox",
+          "description": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2024-10-01"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel#blogposting",
+          "headline": "What Black Boys Are Not Allowed to Feel",
+          "description": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it.",
+          "url": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "datePublished": "2024-10-01T00:00:00.000Z",
+          "dateModified": "2024-10-01T00:00:00.000Z",
+          "inLanguage": "en-US",
+          "keywords": [
+            "identity",
+            "Black boy",
+            "grief",
+            "writing"
+          ],
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.kiminouknox.com/blog/what-black-boys-are-not-allowed-to-feel"
+          }
+        }
+      ]
+    }
+  ]
+}

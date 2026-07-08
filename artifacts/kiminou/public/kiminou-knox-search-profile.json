@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateModified": "2026-06-12T22:46:53.156Z",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://www.kiminouknox.com/#person",
+    "name": "Kiminou Knox",
+    "alternateName": "Kiminou",
+    "url": "https://www.kiminouknox.com",
+    "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+    "description": "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.",
+    "birthPlace": "Hayward, California",
+    "homeLocation": "Oakland, California",
+    "knowsAbout": [
+      "Poetry",
+      "Basketball",
+      "Creative writing",
+      "Faith",
+      "Black boyhood",
+      "Youth leadership",
+      "Publishing"
+    ],
+    "sameAs": [
+      "https://medium.com/@knoxkiminou1",
+      "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
+      "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
+      "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+      "https://www.linkedin.com/in/kiminou-knox-50691a394/",
+      "https://x.com/KnoxKiminou",
+      "https://x.com/KiminouKnox",
+      "https://www.instagram.com/kiminouknox",
+      "https://www.youtube.com/@KiminouKnoxVevo",
+      "https://about.me/kiminou",
+      "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
+      "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
+      "https://prephoops.com/player/kiminou-knox/"
+    ]
+  },
+  "officialFeeds": [
+    "https://www.kiminouknox.com/rss.xml",
+    "https://www.kiminouknox.com/feed.xml",
+    "https://medium.com/feed/@knoxkiminou1"
+  ]
+}

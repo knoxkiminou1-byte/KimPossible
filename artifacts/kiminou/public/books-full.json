@@ -1,0 +1,119 @@
+[
+  {
+    "id": "spirit-solomon",
+    "title": "The Spirit of Solomon",
+    "subtitle": "What is Love To A Man Made To Destroy It",
+    "year": 2025,
+    "isbn": "9798316662975",
+    "datePublished": "2025-01-15",
+    "cover": "/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+    "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Spirit_of_Solomon?id=yIRsEQAAQBAJ",
+      "bookshop": "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60",
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "our-father",
+    "title": "Our Father?",
+    "subtitle": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+    "year": 2025,
+    "isbn": "9798316682850",
+    "datePublished": "2025-02-10",
+    "cover": "/covers/kiminou-knox-our-father-poetry.jpg",
+    "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
+      "amazonUK": "https://www.amazon.co.uk/Our-Father-Poetic-Journey-Silence/dp/B0FH2TPMT4",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "poems-black-boy",
+    "title": "Poems from a Black Boy",
+    "subtitle": "Identity, Heritage, and Hope",
+    "year": 2024,
+    "isbn": "9798316662975",
+    "datePublished": "2024-09-29",
+    "cover": "/covers/kiminou-knox-poems-from-black-boy.jpg",
+    "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
+      "goodreads": "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "hopeless-romantic",
+    "title": "Hopeless Romantic",
+    "subtitle": "Love, Loss, and Everything Between",
+    "year": 2025,
+    "isbn": "9798291608128",
+    "datePublished": "2025-03-05",
+    "cover": "/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+    "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+      "amazonUK": "https://www.amazon.co.uk/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "boys-raised-in-silence",
+    "title": "Boys Raised in Silence",
+    "subtitle": "Breaking the Quiet, Finding Voice",
+    "year": 2024,
+    "isbn": "9798316735821",
+    "datePublished": "2024-06-15",
+    "cover": "/covers/kiminou-knox-boys-raised-in-silence.png",
+    "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "adventures-kiminou-chua",
+    "title": "The Adventures of Kiminou the Great and Chua the Wise",
+    "subtitle": "A Journey of Friendship and Discovery",
+    "year": 2025,
+    "isbn": "9798316591204",
+    "datePublished": "2025-01-20",
+    "cover": "/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+    "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "world-of-imagination",
+    "title": "Kiminou's World of Imagination: The Basics",
+    "subtitle": "A Colorful Journey Through Imagination and Play",
+    "year": 2025,
+    "isbn": "",
+    "datePublished": "2025-01-01",
+    "cover": "/covers/kiminou-knox-world-of-imagination.png",
+    "description": "A children's book about imagination, play, and the power of believing in what you can build.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    }
+  }
+]
