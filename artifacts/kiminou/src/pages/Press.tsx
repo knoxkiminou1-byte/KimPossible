@@ -37,8 +37,8 @@ const verificationGroups = [
     items: [
       { name: "Amazon Author Store", desc: "Author storefront and retail listings", url: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
       { name: "Goodreads Author Profile", desc: "Reader-facing author profile and book records, including numeric public author ID", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
-      { name: "Black Boy Poems on Bookshop.org", desc: "Paperback listing with publisher, date, pages, format, and EAN", url: "https://bookshop.org" },
-      { name: "Google Play Books Listings", desc: "Search results for Kiminou Knox books on Google", url: "https://play.google.com" },
+      { name: "The Spirit of Solomon on Bookshop.org", desc: "Paperback listing with publisher, date, pages, and format", url: "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60" },
+      { name: "Google Play Books Search", desc: "Search results for Kiminou Knox books on Google Play", url: "https://play.google.com/store/search?q=Kiminou+Knox&c=books" },
     ],
   },
   {
@@ -69,8 +69,8 @@ const verificationGroups = [
     label: "Profiles",
     items: [
       { name: "LinkedIn", desc: "Professional profile", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
-      { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
-      { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
+      { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminou" },
+      { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org/wiki/Q137260299" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
       { name: "Instagram", desc: "Public social profile. @kiminouknox.", url: "https://www.instagram.com/kiminouknox" },
     ],
@@ -80,7 +80,7 @@ const verificationGroups = [
 const TICKER_ITEMS = [
   "Miles Hall Foundation", "Amazon Author Store", "Goodreads", "MaxPreps", "NCSA Sports",
   "Prep Hoops", "Apple Podcasts", "Spotify", "YouTube", "Medium", "LinkedIn",
-  "Bookshop.org", "Google Play Books", "About.me", "Wikidata", "Stan Store",
+  "Bookshop.org", "Google Play Books", "About.me", "Stan Store",
 ];
 
 const creativeWorkSchema = {
