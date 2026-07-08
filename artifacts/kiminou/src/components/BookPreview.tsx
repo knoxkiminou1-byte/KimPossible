@@ -181,6 +181,7 @@ export default function BookPreview() {
             {/* Close Button */}
             <button
               onClick={closePreview}
+              aria-label="Close"
               className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors"
               data-testid="book-modal-close"
             >

@@ -524,7 +524,7 @@ export default function Speaking() {
       <Header />
 
       <GreenRoomStage>
-        <main className="min-h-screen bg-black text-white">
+        <main id="main-content" className="min-h-screen bg-black text-white">
 
           {/* ─── HERO ─── */}
           <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">

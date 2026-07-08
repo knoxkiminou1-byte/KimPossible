@@ -349,12 +349,14 @@ export default function VinylRecord() {
               {/* Poem nav + play/stop row */}
               <div className="flex items-center gap-3">
                 <motion.button onClick={handlePrev}
+                  aria-label="Previous poem"
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-amber-400/30 hover:text-amber-300 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <ChevronLeft className="w-4 h-4" />
                 </motion.button>
 
                 <motion.button onClick={handlePlay}
+                  aria-label={playing ? "Pause" : "Play"}
                   className="w-16 h-16 rounded-full flex items-center justify-center relative"
                   style={{
                     background: playing ? "rgba(245,158,11,0.15)" : "rgba(245,158,11,0.12)",
@@ -373,12 +375,14 @@ export default function VinylRecord() {
                 </motion.button>
 
                 <motion.button onClick={handleNext}
+                  aria-label="Next poem"
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-amber-400/30 hover:text-amber-300 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <ChevronRight className="w-4 h-4" />
                 </motion.button>
 
                 <motion.button onClick={handleStop}
+                  aria-label="Stop"
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-red-400/30 hover:text-red-400 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <Square className="w-3.5 h-3.5" />

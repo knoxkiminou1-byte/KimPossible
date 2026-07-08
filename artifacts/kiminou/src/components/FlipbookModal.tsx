@@ -93,6 +93,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
           </div>
           <button
             onClick={onClose}
+            aria-label="Close"
             className="w-9 h-9 flex items-center justify-center border border-white/15 text-white/50 hover:text-white hover:border-white/40 transition-all rounded-full"
           >
             <X className="w-4 h-4" />
@@ -149,6 +150,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
           <button
             onClick={() => goTo(page - 1)}
             disabled={page === 0}
+            aria-label="Previous page"
             className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/50 hover:border-amber-400/50 hover:text-amber-400 transition-all disabled:opacity-20 disabled:cursor-not-allowed rounded-full"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -159,6 +161,8 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
               <button
                 key={i}
                 onClick={() => goTo(i)}
+                aria-label={`Go to page ${i + 1}`}
+                aria-current={i === page ? "true" : undefined}
                 className={`transition-all duration-300 rounded-full ${
                   i === page
                     ? "w-6 h-1.5 bg-amber-400"
@@ -171,6 +175,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
           <button
             onClick={() => goTo(page + 1)}
             disabled={page === totalPages - 1}
+            aria-label="Next page"
             className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/50 hover:border-amber-400/50 hover:text-amber-400 transition-all disabled:opacity-20 disabled:cursor-not-allowed rounded-full"
           >
             <ChevronRight className="w-4 h-4" />

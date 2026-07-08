@@ -145,12 +145,14 @@ export default function FilmStripGallery() {
           >
             <button
               onClick={() => setLightbox(null)}
+              aria-label="Close"
               className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
             >
               <X className="w-7 h-7" />
             </button>
             <button
               onClick={() => setLightbox((p) => (p! > 0 ? p! - 1 : IMAGES.length - 1))}
+              aria-label="Previous image"
               className="absolute left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-amber-400 transition-colors"
             >
               <ChevronLeft className="w-10 h-10" />
@@ -167,6 +169,7 @@ export default function FilmStripGallery() {
             />
             <button
               onClick={() => setLightbox((p) => (p! < IMAGES.length - 1 ? p! + 1 : 0))}
+              aria-label="Next image"
               className="absolute right-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-amber-400 transition-colors"
             >
               <ChevronRight className="w-10 h-10" />

@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
 import { useIdleReady } from "@/hooks/useIdleReady";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 import {
   breadcrumbSchema,
   faqSchema,
@@ -122,6 +123,7 @@ function DeferredSection({
 
 export default function Home() {
   const [paperMode, setPaperMode] = useState(false);
+  const reduceEffects = useShouldReduceEffects();
 
   return (
     <>
@@ -171,14 +173,16 @@ export default function Home() {
       </Helmet>
 
       <div className={`${paperMode ? "paper-realm-shell" : ""} bg-background text-foreground font-sans antialiased relative`}>
-      <IdleMount>
-        <ParticleEffect
-          density={60}
-          effects={PARTICLE_EFFECTS}
-          colors={PARTICLE_COLORS}
-          className="z-0"
-        />
-      </IdleMount>
+      {!reduceEffects && (
+        <IdleMount>
+          <ParticleEffect
+            density={60}
+            effects={PARTICLE_EFFECTS}
+            colors={PARTICLE_COLORS}
+            className="z-0"
+          />
+        </IdleMount>
+      )}
       <div className="relative z-10">
         <Header />
         <button
@@ -190,6 +194,7 @@ export default function Home() {
         >
           3D
         </button>
+        <main id="main-content">
         {paperMode ? (
           <Suspense fallback={<div className="min-h-screen bg-black" />}>
             <PaperRealmPortal />
@@ -257,6 +262,7 @@ export default function Home() {
             </IdleMount>
           </>
         )}
+        </main>
         <Footer />
         <ContactFAB />
         <IdleMount timeout={1800}>

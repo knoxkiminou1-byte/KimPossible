@@ -16,6 +16,7 @@ import PoemModal from "@/components/PDFModal";
 import OpenBookOverlay from "@/components/OpenBookOverlay";
 import BookShelf3D from "@/components/BookShelf3D";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -50,7 +51,15 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
       style={{ transformPerspective: 900, transformStyle: "preserve-3d", rotateX: springX, rotateY: springY }}
       className="group flex flex-col"
     >
-      <div className="relative mb-5 cursor-pointer" style={{ perspective: "1000px" }} onClick={() => onOpenBook(book)}>
+      <div
+        className="relative mb-5 cursor-pointer"
+        style={{ perspective: "1000px" }}
+        onClick={() => onOpenBook(book)}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenBook(book); } }}
+        role="button"
+        tabIndex={0}
+        aria-label={`Preview ${book.title}`}
+      >
         <motion.div
           className="relative aspect-[3/4] overflow-hidden bg-black"
           initial={{ rotateY: -8 }}
@@ -130,6 +139,7 @@ export default function BooksPage() {
   const [openBook, setOpenBook] = useState<Book | null>(null);
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
+  const reduceEffects = useShouldReduceEffects();
 
   useEffect(() => {
     fetch("/books.json").then(r => r.json()).then(setBooks).catch(() => setBooks([]));
@@ -173,7 +183,7 @@ export default function BooksPage() {
       </Helmet>
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
         {/* ── HERO ── */}
         <section className="relative pt-40 pb-20 overflow-hidden" ref={heroRef}>
           <div className="absolute inset-0 pointer-events-none">
@@ -201,24 +211,26 @@ export default function BooksPage() {
         </section>
 
         {/* ── 3D BOOKSHELF ── */}
-        <section className="pb-8 border-t border-white/6">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12">
-            {books.length === 0 ? (
-              <div className="flex items-center justify-center py-32">
-                <motion.div className="w-10 h-10 border-2 border-amber-400/20 border-t-amber-400/60 rounded-full"
-                  animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
-              </div>
-            ) : (
-              <>
-                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-4">
-                  <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">The Collection</p>
-                  <p className="text-xs text-white/25">Hover a book to preview · Click to open</p>
-                </motion.div>
-                <BookShelf3D books={books} onBookClick={(book) => setOpenBook(book)} />
-              </>
-            )}
-          </div>
-        </section>
+        {!reduceEffects && (
+          <section className="pb-8 border-t border-white/6">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12">
+              {books.length === 0 ? (
+                <div className="flex items-center justify-center py-32">
+                  <motion.div className="w-10 h-10 border-2 border-amber-400/20 border-t-amber-400/60 rounded-full"
+                    animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
+                </div>
+              ) : (
+                <>
+                  <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-4">
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">The Collection</p>
+                    <p className="text-xs text-white/25">Hover a book to preview · Click to open</p>
+                  </motion.div>
+                  <BookShelf3D books={books} onBookClick={(book) => setOpenBook(book)} />
+                </>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* ── RECORD PLAYER + POEM READER ── */}
         <Suspense fallback={null}>

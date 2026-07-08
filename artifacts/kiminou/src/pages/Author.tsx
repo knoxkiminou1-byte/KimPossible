@@ -330,7 +330,7 @@ export default function Author() {
         </section>
 
 
-        <main className="max-w-5xl mx-auto px-6 lg:px-10">
+        <main id="main-content" className="max-w-5xl mx-auto px-6 lg:px-10">
 
           {/* ─── PULL QUOTE 1 ───────────────────────────────── */}
           <PullQuote quote={PULL_QUOTES[0]} />

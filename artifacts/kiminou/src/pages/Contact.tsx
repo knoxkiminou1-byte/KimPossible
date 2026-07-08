@@ -78,7 +78,7 @@ export default function Contact() {
       </Helmet>
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── SPLIT-SCREEN HERO ─── */}
         <section ref={heroRef} className="min-h-screen grid lg:grid-cols-2">

@@ -15,6 +15,7 @@ import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
 import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 const LockerRoom3D = lazy(() => import("@/components/LuxuryFX/LockerRoom3D"));
 
@@ -200,6 +201,7 @@ export default function Sports() {
   const { scrollYProgress } = useScroll({ target: containerRef });
   const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.06], [1, 0]);
   const heroInView = useInView(heroRef, { once: true });
+  const reduceEffects = useShouldReduceEffects();
 
   return (
     <>
@@ -237,22 +239,28 @@ export default function Sports() {
       </Helmet>
 
       {/* ── 3D locker room canvas (fixed, behind everything) ── */}
-      <Suspense fallback={
+      {reduceEffects ? (
         <div className="fixed inset-0 bg-[#080a0c]" style={{ zIndex: 0 }}>
           <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px),repeating-linear-gradient(0deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px)]" />
         </div>
-      }>
-        <LockerRoom3D />
-      </Suspense>
+      ) : (
+        <Suspense fallback={
+          <div className="fixed inset-0 bg-[#080a0c]" style={{ zIndex: 0 }}>
+            <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px),repeating-linear-gradient(0deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px)]" />
+          </div>
+        }>
+          <LockerRoom3D />
+        </Suspense>
+      )}
 
       {/* ── Ambient overlays ── */}
       <Scanlines />
-      <Particles />
+      {!reduceEffects && <Particles />}
 
       <Header />
 
       <div ref={containerRef} className="relative" style={{ zIndex: 2 }}>
-        <main className="min-h-screen text-white">
+        <main id="main-content" className="min-h-screen text-white">
 
           {/* ══════════════════════════════════════
               HERO — full viewport, glass overlay

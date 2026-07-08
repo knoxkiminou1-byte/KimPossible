@@ -159,6 +159,7 @@ export default function FreeChapterCapture() {
                 <motion.button
                   type="submit"
                   disabled={loading}
+                  aria-label={loading ? "Sending" : "Download"}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   className="flex items-center justify-center gap-2 px-7 py-3.5 bg-amber-400 text-black text-xs uppercase tracking-[0.2em] font-semibold hover:bg-amber-300 transition-colors duration-300 disabled:opacity-60 flex-shrink-0"

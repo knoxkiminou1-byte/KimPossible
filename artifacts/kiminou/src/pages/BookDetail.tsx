@@ -202,7 +202,7 @@ export default function BookDetail() {
 
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── BACK NAV ─── */}
         <div className="pt-28 pb-0">

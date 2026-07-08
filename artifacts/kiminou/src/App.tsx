@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useIdleReady } from "@/hooks/useIdleReady";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 const LuxuryCursor = lazy(() => import("@/components/LuxuryFX/Cursor"));
 const LiteraryTrail = lazy(() => import("@/components/LuxuryFX/LiteraryTrail"));
@@ -71,6 +72,7 @@ function PageFallback() {
 
 function DeferredChrome() {
   const ready = useIdleReady();
+  const reduceEffects = useShouldReduceEffects();
 
   if (!ready) return null;
 
@@ -80,10 +82,10 @@ function DeferredChrome() {
       <LiteraryTrail />
       <ScrollProgress />
       <ScrollProgressArc />
-      <LuxuryCursor />
+      {!reduceEffects && <LuxuryCursor />}
       <BackToTop />
       <PageTransition />
-      <CursorSpotlight />
+      {!reduceEffects && <CursorSpotlight />}
       <SectionDotNav />
     </Suspense>
   );

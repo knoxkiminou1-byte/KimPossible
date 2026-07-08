@@ -161,7 +161,7 @@ export default function Press() {
       </Helmet>
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── HERO ─── */}
         <section className="relative pt-40 pb-24 overflow-hidden" ref={heroRef}>

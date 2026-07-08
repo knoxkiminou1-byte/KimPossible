@@ -132,6 +132,8 @@ export default function QuoteTypewriter() {
                 setQuoteIdx(i);
                 setPhase("typing");
               }}
+              aria-label={`Show quote ${i + 1}`}
+              aria-current={i === quoteIdx ? "true" : undefined}
               className={`transition-all duration-400 rounded-full ${
                 i === quoteIdx
                   ? "w-6 h-1.5 bg-amber-400"
