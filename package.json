@@ -5,10 +5,13 @@
   "packageManager": "pnpm@10.26.1",
   "scripts": {
     "dev": "pnpm --filter @workspace/kiminou run dev",
-    "generate:seo": "node scripts/generate-seo.mjs",
+    "generate:books": "node scripts/generate-books.mjs",
+    "generate:seo": "pnpm run generate:books && node scripts/generate-seo.mjs",
     "prerender:seo": "node scripts/prerender-seo.mjs",
+    "check:assets": "node scripts/check-assets.mjs",
     "build": "pnpm run generate:seo && pnpm run typecheck && pnpm --filter @workspace/kiminou run build && pnpm run prerender:seo",
-    "typecheck": "pnpm --filter @workspace/kiminou run typecheck"
+    "typecheck": "pnpm --filter @workspace/kiminou run typecheck",
+    "validate": "pnpm run check:assets && pnpm run typecheck && pnpm run build"
   },
   "private": true,
   "dependencies": {

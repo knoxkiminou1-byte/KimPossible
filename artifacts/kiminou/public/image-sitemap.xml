@@ -167,6 +167,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.kiminouknox.com/books/black-boy-poems</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg</image:loc>
+      <image:title>Black Boy Poems by Kiminou Knox</image:title>
+      <image:caption>Black Boy Poems book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.kiminouknox.com/books/world-of-imagination</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png</image:loc>

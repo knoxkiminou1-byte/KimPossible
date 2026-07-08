@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import booksData from "@/content/books.json";
+
+type PressBook = { id: string; title: string; subtitle: string; year: number; isbn?: string | null; buyLinks: Record<string, string | null | undefined> };
+const books = booksData as PressBook[];
 
 const recognition = [
   {
@@ -332,7 +336,7 @@ export default function Press() {
                   <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.2em] text-white/30">
                     <span>Bio (Short & Long)</span>
                     <span>·</span>
-                    <span>8 Published Works</span>
+                    <span>{books.length} Published Works</span>
                     <span>·</span>
                     <span>Athletic Measurables</span>
                     <span>·</span>
@@ -360,29 +364,13 @@ Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator
 
 PUBLISHED WORKS
 ───────────────
-1. The Spirit of Solomon (2025) — ISBN 9798316662975
-   What is Love To A Man Made To Destroy It
-   Amazon: https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK
-
-2. Our Father? (2025) — ISBN 9798316682850
-   A Poetic Journey Through Faith, Doubt, and Divine Silence
-   Amazon: https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4
-
-3. Poems from a Black Boy (2024) — ISBN 9798316662975
-   Identity, Heritage, and Hope
-   Amazon: https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2
-
-4. Hopeless Romantic (2025) — ISBN 9798291608128
-   Love, Loss, and Everything Between
-   Amazon: https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N
-
-5. Boys Raised in Silence (2024) — ISBN 9798316735821
-   Breaking the Quiet, Finding Voice
-   Amazon: https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM
-
-6. The Adventures of Kiminou the Great and Chua the Wise (2025)
-   ISBN 9798316591204
-   Amazon: https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5
+${books
+  .map((b, i) => {
+    const link = b.buyLinks.amazon || b.buyLinks.googleBooks || b.buyLinks.bookshop || "";
+    return `${i + 1}. ${b.title} (${b.year})${b.isbn ? ` — ISBN ${b.isbn}` : ""}
+   ${b.subtitle}${link ? `\n   Amazon: ${link}` : ""}`;
+  })
+  .join("\n\n")}
 
 ATHLETIC PROFILE
 ────────────────

@@ -1,0 +1,32 @@
+<svg width="600" height="800" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Black Boy Poems — Kiminou Knox</title>
+  <desc id="desc">Placeholder cover artwork pending final photography.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0b09"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.10"/>
+      <stop offset="55%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <rect width="600" height="800" fill="url(#glow)"/>
+  <rect x="1" y="1" width="598" height="798" fill="none" stroke="#fbbf24" stroke-opacity="0.18"/>
+  <line x1="48" y1="48" x2="80" y2="48" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="48" y1="48" x2="48" y2="80" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="552" y1="48" x2="520" y2="48" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="552" y1="48" x2="552" y2="80" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="48" y1="752" x2="80" y2="752" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="48" y1="752" x2="48" y2="720" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="552" y1="752" x2="520" y2="752" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <line x1="552" y1="752" x2="552" y2="720" stroke="#fbbf24" stroke-opacity="0.45"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" letter-spacing="6" fill="#fbbf24" fill-opacity="0.55">POEMS</text>
+  <text x="300" y="420" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="400" fill="#f6f0df">Black Boy</text>
+  <text x="300" y="482" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="400" font-style="italic" fill="#fbbf24" fill-opacity="0.9">Poems</text>
+  <line x1="270" y1="520" x2="330" y2="520" stroke="#fbbf24" stroke-opacity="0.5"/>
+  <text x="300" y="560" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-style="italic" fill="#f6f0df" fill-opacity="0.55">Poems from the Weight of Black Boyhood</text>
+  <text x="300" y="716" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" letter-spacing="4" fill="#f6f0df" fill-opacity="0.4">KIMINOU KNOX</text>
+</svg>

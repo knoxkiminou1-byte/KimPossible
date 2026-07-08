@@ -43,7 +43,7 @@ const SOCIAL_LINKS = [
 
 const BOOKS = [
   { title: "Poems From A Black Boy", desc: "Early poems tracing the inner life of a young Black boy learning how to pray, love, and tell the truth.", cover: "/covers/kiminou-knox-poems-from-black-boy.jpg" },
-  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision.", cover: null },
+  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision.", cover: "/covers/kiminou-knox-black-boy-poems.svg" },
   { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender.", cover: "/covers/kiminou-knox-hopeless-romantic-poetry.jpg" },
   { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention.", cover: "/covers/kiminou-knox-spirit-of-solomon-book.jpg" },
   { title: "Our Father?", desc: "A candid wrestling with prayer and presence — when belief collides with unanswered questions.", cover: "/covers/kiminou-knox-our-father-poetry.jpg" },

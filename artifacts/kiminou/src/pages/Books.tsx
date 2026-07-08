@@ -152,24 +152,24 @@ export default function BooksPage() {
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Books", url: `${SITE_URL}/books` }]))}
         </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "name": "Books by Kiminou Knox",
-            "url": "https://www.kiminouknox.com/books",
-            "numberOfItems": 8,
-            "author": { "@id": "https://www.kiminouknox.com/#person" },
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "The Spirit of Solomon", "url": "https://www.kiminouknox.com/books/spirit-solomon" },
-              { "@type": "ListItem", "position": 2, "name": "Our Father?", "url": "https://www.kiminouknox.com/books/our-father" },
-              { "@type": "ListItem", "position": 3, "name": "Poems from a Black Boy", "url": "https://www.kiminouknox.com/books/poems-black-boy" },
-              { "@type": "ListItem", "position": 4, "name": "Hopeless Romantic", "url": "https://www.kiminouknox.com/books/hopeless-romantic" },
-              { "@type": "ListItem", "position": 5, "name": "Boys Raised in Silence", "url": "https://www.kiminouknox.com/books/boys-raised-in-silence" },
-              { "@type": "ListItem", "position": 6, "name": "The Adventures of Kiminou the Great and Chua the Wise", "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua" }
-            ]
-          })}
-        </script>
+        {books.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "Books by Kiminou Knox",
+              "url": "https://www.kiminouknox.com/books",
+              "numberOfItems": books.length,
+              "author": { "@id": "https://www.kiminouknox.com/#person" },
+              "itemListElement": books.map((b, i) => ({
+                "@type": "ListItem",
+                "position": i + 1,
+                "name": b.title,
+                "url": `https://www.kiminouknox.com/books/${b.id}`,
+              })),
+            })}
+          </script>
+        )}
       </Helmet>
       <Header />
 
