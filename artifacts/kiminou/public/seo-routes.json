@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T22:52:39.550Z",
+  "generatedAt": "2026-07-09T22:56:25.261Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -375,6 +375,44 @@
           "url": "https://www.kiminouknox.com/contact",
           "name": "Contact - Kiminou Knox",
           "description": "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "loc": "/now",
+      "title": "Now - Kiminou Knox",
+      "description": "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox now",
+        "Kiminou Knox current projects"
+      ],
+      "sections": [
+        {
+          "heading": "Now",
+          "text": "What's current across the page, the court, the mic, and the work."
+        }
+      ],
+      "schemaType": "WebPage",
+      "url": "https://www.kiminouknox.com/now",
+      "lastmod": "2026-07-09",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/now#webpage",
+          "url": "https://www.kiminouknox.com/now",
+          "name": "Now - Kiminou Knox",
+          "description": "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"

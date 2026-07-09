@@ -11,6 +11,7 @@ const links = [
   { href: "/press", label: "Press" },
   { href: "/blog", label: "Blog" },
   { href: "/speaking", label: "KimYaps Podcast" },
+  { href: "/now", label: "Now" },
   { href: "/contact", label: "Contact" },
 ];
 

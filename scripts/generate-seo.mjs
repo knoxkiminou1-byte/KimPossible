@@ -280,6 +280,7 @@ const routes = [
   { loc: "/books/universe", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/speaking", changefreq: "monthly", priority: "0.85", lastmod: today },
   { loc: "/contact", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/now", changefreq: "weekly", priority: "0.6", lastmod: today },
   { loc: "/press", changefreq: "monthly", priority: "0.8", lastmod: today },
   { loc: "/sports", changefreq: "monthly", priority: "0.8", lastmod: today },
   { loc: "/portfolio", changefreq: "monthly", priority: "0.75", lastmod: today },
@@ -444,6 +445,21 @@ const baseRouteMeta = [
       },
     ],
     schemaType: "ContactPage",
+  },
+  {
+    loc: "/now",
+    title: "Now - Kiminou Knox",
+    description:
+      "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["Kiminou Knox now", "Kiminou Knox current projects"],
+    sections: [
+      {
+        heading: "Now",
+        text: "What's current across the page, the court, the mic, and the work.",
+      },
+    ],
+    schemaType: "WebPage",
   },
   {
     loc: "/press",
