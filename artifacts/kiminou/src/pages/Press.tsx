@@ -346,86 +346,9 @@ export default function Press() {
                   </div>
                 </div>
                 <div className="flex-shrink-0">
-                  <motion.button
-                    onClick={() => {
-                      const kit = `KIMINOU KNOX — OFFICIAL PRESS KIT
-Generated: ${new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-ABOUT KIMINOU KNOX
-──────────────────
-Kiminou Knox is a 19-year-old author, NCAA-registered athlete, entrepreneur, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
-
-Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee Williams and Elisha Bonepart McNair.
-
-SHORT BIO (50 words)
-─────────────────────
-Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. Eight published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
-
-PUBLISHED WORKS
-───────────────
-${books
-  .map((b, i) => {
-    const link = b.buyLinks.amazon || b.buyLinks.googleBooks || b.buyLinks.bookshop || "";
-    return `${i + 1}. ${b.title} (${b.year})${b.isbn ? ` — ISBN ${b.isbn}` : ""}
-   ${b.subtitle}${link ? `\n   Amazon: ${link}` : ""}`;
-  })
-  .join("\n\n")}
-
-ATHLETIC PROFILE
-────────────────
-Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
-School: Cristo Rey De La Salle (formerly Ygnacio Valley)
-Status: NCAA Registered & Eligible
-MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
-NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox
-
-SPEAKING TOPICS
-───────────────
-• Discipline and Faith in Daily Practice
-• Black Boy Voice and the Cost of Silence
-• Building Creative Work That Lasts
-
-Audiences: Schools, teams, youth programs, community groups, faith-based organizations
-
-RECOGNITION
-───────────
-• Miles Hall Foundation Youth Summit — Top Essay Finalist (2025)
-  Topic: Youth Advocacy & Mental Health
-  https://www.themileshallfoundation.org/post/youth-summit-essay-finalist
-
-MEDIA & DIGITAL PRESENCE
-─────────────────────────
-Website: https://www.kiminouknox.com
-Instagram: @kiminouknox
-Twitter/X: @KnoxKiminou
-YouTube: https://www.youtube.com/@KiminouKnoxOfficial
-Medium: https://medium.com/@knoxkiminou1
-Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1850364308
-Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
-Amazon Author Store: https://www.amazon.com/stores/author/B0DGM5Z5Q8
-LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/
-
-MEDIA CONTACT
-─────────────
-Email: knoxkiminou1@gmail.com
-Booking & Speaking Inquiries: https://www.kiminouknox.com/contact
-Official Site: https://www.kiminouknox.com
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-© 2025 Kiminou Knox. All rights reserved.
-Press assets and headshots available on request via email.`;
-
-                      const blob = new Blob([kit], { type: "text/plain;charset=utf-8" });
-                      const url = URL.createObjectURL(blob);
-                      const a = document.createElement("a");
-                      a.href = url;
-                      a.download = "kiminou-knox-press-kit.txt";
-                      document.body.appendChild(a);
-                      a.click();
-                      document.body.removeChild(a);
-                      URL.revokeObjectURL(url);
-                    }}
+                  <motion.a
+                    href="/press/kiminou-knox-press-kit.pdf"
+                    download
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.97 }}
                     className="inline-flex items-center gap-3 px-8 py-4 bg-amber-400 text-black text-xs uppercase tracking-[0.25em] font-semibold hover:bg-amber-300 transition-colors duration-300"
@@ -433,8 +356,8 @@ Press assets and headshots available on request via email.`;
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Download Press Kit
-                  </motion.button>
+                    Download Press Kit (PDF)
+                  </motion.a>
                 </div>
               </div>
             </Reveal>

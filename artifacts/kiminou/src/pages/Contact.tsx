@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -22,13 +22,12 @@ const PROCESS = [
   { step: "03", title: "Connect", desc: "We get on a call, align on scope, and build something meaningful together." },
 ];
 
-const INQUIRY_TYPES = [
-  { label: "Speaking", desc: "Schools, teams, youth orgs, faith spaces" },
-  { label: "Press & Media", desc: "Interviews, features, editorial coverage" },
-  { label: "Book Collaboration", desc: "Projects, endorsements, partnerships" },
-  { label: "AAFC Builders", desc: "Web design, digital infrastructure, brand systems" },
-  { label: "Youth Programs", desc: "TeeShirtTeens, AAFC mentorship, community" },
-  { label: "Other", desc: "Anything else. Reach out." },
+const INQUIRY_TYPES: { label: string; desc: string; value: "speaking" | "press" | "book" | "basketball" | "other" }[] = [
+  { label: "Speaking", desc: "Schools, teams, youth orgs, faith spaces", value: "speaking" },
+  { label: "Press & Media", desc: "Interviews, features, editorial coverage", value: "press" },
+  { label: "Book / Author", desc: "Projects, endorsements, partnerships", value: "book" },
+  { label: "Basketball / Athlete", desc: "Coaches, recruiters, program inquiries", value: "basketball" },
+  { label: "Other", desc: "Anything else. Reach out.", value: "other" },
 ];
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
@@ -44,9 +43,19 @@ function Reveal({ children, delay = 0, className = "" }: { children: React.React
   );
 }
 
+type InquiryType = "speaking" | "press" | "book" | "basketball" | "other";
+const VALID_INQUIRY_TYPES = new Set<InquiryType>(["speaking", "press", "book", "basketball", "other"]);
+
+function getInitialInquiryType(): InquiryType {
+  if (typeof window === "undefined") return "other";
+  const type = new URLSearchParams(window.location.search).get("type") as InquiryType | null;
+  return type && VALID_INQUIRY_TYPES.has(type) ? type : "other";
+}
+
 export default function Contact() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
+  const [defaultInquiryType] = useState<InquiryType>(getInitialInquiryType);
 
   return (
     <>
@@ -223,7 +232,7 @@ export default function Contact() {
                   <ContactForm
                     title=""
                     description=""
-                    defaultInquiryType="other"
+                    defaultInquiryType={defaultInquiryType}
                     successMessage="Thank you for reaching out. I'll get back to you personally within 3–5 days."
                   />
                 </div>

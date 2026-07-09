@@ -9,7 +9,8 @@ import {
   animate,
 } from "framer-motion";
 import { useRef, Suspense, useEffect, useState, lazy } from "react";
-import { ExternalLink, Trophy, TrendingUp, Target, Zap, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
+import { ExternalLink, Trophy, TrendingUp, Target, Zap, ChevronDown, ArrowUpRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
@@ -542,6 +543,21 @@ export default function Sports() {
                   </RevealCard>
                 ))}
               </div>
+              <RevealCard delay={0.3} className="mt-6">
+                <Link href="/sports/recruiting">
+                  <div className="group relative overflow-hidden p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 cursor-pointer"
+                    style={{ background: "rgba(245,158,11,0.03)", border: "1px solid rgba(245,158,11,0.15)" }}>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-2">For Coaches & Recruiters</p>
+                      <h3 className="font-serif text-2xl text-white">Full Recruiting Packet</h3>
+                      <p className="text-white/40 text-sm mt-2 max-w-lg">Measurables, highlights, film, verified profiles, and a direct contact line — all in one place.</p>
+                    </div>
+                    <span className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
+                      View Packet <ArrowUpRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              </RevealCard>
             </div>
           </DarkSection>
 

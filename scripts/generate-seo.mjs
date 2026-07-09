@@ -283,6 +283,7 @@ const routes = [
   { loc: "/now", changefreq: "weekly", priority: "0.6", lastmod: today },
   { loc: "/press", changefreq: "monthly", priority: "0.8", lastmod: today },
   { loc: "/sports", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/sports/recruiting", changefreq: "monthly", priority: "0.75", lastmod: today },
   { loc: "/portfolio", changefreq: "monthly", priority: "0.75", lastmod: today },
   { loc: "/blog", changefreq: "weekly", priority: "0.9", lastmod: today },
   { loc: "/reading-list", changefreq: "monthly", priority: "0.75", lastmod: today },
@@ -487,6 +488,21 @@ const baseRouteMeta = [
       {
         heading: "Sports & Athletics",
         text: "Kiminou Knox is a Bay Area basketball player and multi-sport athlete with public athletic profiles and recruiting context.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
+    loc: "/sports/recruiting",
+    title: "Athlete Recruiting Packet - Kiminou Knox",
+    description:
+      "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
+    image: KIMINOU_PHOTOS.basketballJumpShot.loc,
+    keywords: ["Kiminou Knox recruiting", "Kiminou Knox basketball recruiting", "Cristo Rey De La Salle basketball"],
+    sections: [
+      {
+        heading: "Athlete Recruiting Packet",
+        text: "Measurables, verified profiles, athletic highlights, and coach contact information for Kiminou Knox.",
       },
     ],
     schemaType: "ProfilePage",

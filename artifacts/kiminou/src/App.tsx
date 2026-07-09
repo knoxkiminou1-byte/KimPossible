@@ -33,6 +33,7 @@ const BookUniverse = lazy(() => import("@/pages/BookUniverse"));
 const BookDetail = lazy(() => import("@/pages/BookDetail"));
 const Press = lazy(() => import("@/pages/Press"));
 const Sports = lazy(() => import("@/pages/Sports"));
+const Recruiting = lazy(() => import("@/pages/Recruiting"));
 const Author = lazy(() => import("@/pages/Author"));
 const LegacyTimeline = lazy(() => import("@/pages/LegacyTimeline"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
@@ -116,6 +117,7 @@ function Router() {
         </Route>
         <Route path="/press" component={Press} />
         <Route path="/sports" component={Sports} />
+        <Route path="/sports/recruiting" component={Recruiting} />
         <Route path="/basketball">
           <Redirect to="/sports" />
         </Route>

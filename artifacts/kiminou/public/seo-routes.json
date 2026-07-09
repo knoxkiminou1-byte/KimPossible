@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T22:56:25.261Z",
+  "generatedAt": "2026-07-09T23:06:54.893Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -491,6 +491,45 @@
           "url": "https://www.kiminouknox.com/sports",
           "name": "Sports & Athletics - Kiminou Knox",
           "description": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "loc": "/sports/recruiting",
+      "title": "Athlete Recruiting Packet - Kiminou Knox",
+      "description": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+      "keywords": [
+        "Kiminou Knox recruiting",
+        "Kiminou Knox basketball recruiting",
+        "Cristo Rey De La Salle basketball"
+      ],
+      "sections": [
+        {
+          "heading": "Athlete Recruiting Packet",
+          "text": "Measurables, verified profiles, athletic highlights, and coach contact information for Kiminou Knox."
+        }
+      ],
+      "schemaType": "ProfilePage",
+      "url": "https://www.kiminouknox.com/sports/recruiting",
+      "lastmod": "2026-07-09",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": "https://www.kiminouknox.com/sports/recruiting#webpage",
+          "url": "https://www.kiminouknox.com/sports/recruiting",
+          "name": "Athlete Recruiting Packet - Kiminou Knox",
+          "description": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
