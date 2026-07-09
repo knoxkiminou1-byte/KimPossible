@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T19:46:12.281Z",
+  "generatedAt": "2026-07-09T19:52:30.649Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -217,6 +217,45 @@
           "url": "https://www.kiminouknox.com/books",
           "name": "Published Books - Kiminou Knox",
           "description": "Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "loc": "/books/universe",
+      "title": "Book Universe Map - Kiminou Knox",
+      "description": "Every book by Kiminou Knox grouped by the world it belongs to: Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+      "keywords": [
+        "Kiminou Knox books",
+        "book universe map",
+        "poetry collections by theme"
+      ],
+      "sections": [
+        {
+          "heading": "Book Universe Map",
+          "text": "Six worlds — Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination — and the books that live in each one."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/books/universe",
+      "lastmod": "2026-07-09",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/books/universe#webpage",
+          "url": "https://www.kiminouknox.com/books/universe",
+          "name": "Book Universe Map - Kiminou Knox",
+          "description": "Every book by Kiminou Knox grouped by the world it belongs to: Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination.",
           "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"

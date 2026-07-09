@@ -276,6 +276,7 @@ const routes = [
   { loc: "/works", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/author", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/books", changefreq: "weekly", priority: "0.95", lastmod: today },
+  { loc: "/books/universe", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/speaking", changefreq: "monthly", priority: "0.85", lastmod: today },
   { loc: "/contact", changefreq: "monthly", priority: "0.8", lastmod: today },
   { loc: "/press", changefreq: "monthly", priority: "0.8", lastmod: today },
@@ -379,6 +380,21 @@ const baseRouteMeta = [
       {
         heading: "Published Books",
         text: books.map((book) => `${book.title}, ${book.subtitle}. ${book.description}`).join(" "),
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/books/universe",
+    title: "Book Universe Map - Kiminou Knox",
+    description:
+      "Every book by Kiminou Knox grouped by the world it belongs to: Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination.",
+    image: "/kiminou-knox-book-universe-portal.png",
+    keywords: ["Kiminou Knox books", "book universe map", "poetry collections by theme"],
+    sections: [
+      {
+        heading: "Book Universe Map",
+        text: "Six worlds — Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination — and the books that live in each one.",
       },
     ],
     schemaType: "CollectionPage",

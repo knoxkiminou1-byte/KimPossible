@@ -640,6 +640,17 @@ export default function Author() {
                   </div>
                 </Link>
               </Reveal>
+              {/* Universe map CTA card */}
+              <Reveal delay={0.56}>
+                <Link href="/books/universe">
+                  <div className="flex-shrink-0 w-48 border border-amber-400/20 p-6 flex flex-col items-center justify-center gap-4 hover:border-amber-400/50 hover:bg-amber-400/5 transition-all duration-500 cursor-pointer h-full min-h-[340px]">
+                    <div className="w-10 h-10 rounded-full border border-amber-400/30 flex items-center justify-center">
+                      <span className="text-amber-400 text-lg">✦</span>
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/60 text-center">Explore the Universe Map</span>
+                  </div>
+                </Link>
+              </Reveal>
             </div>
           </div>
         </section>

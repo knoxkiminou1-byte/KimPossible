@@ -260,6 +260,24 @@ export default function BooksPage() {
           </div>
         </section>
 
+        {/* ── UNIVERSE MAP CTA ── */}
+        <section className="pb-28">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Link href="/books/universe">
+              <div className="group relative overflow-hidden border border-amber-400/15 bg-amber-400/[0.02] p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-amber-400/35 hover:bg-amber-400/[0.05] transition-all duration-500 cursor-pointer">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3">Six Worlds</p>
+                  <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-2">Explore the Book Universe Map</h2>
+                  <p className="text-white/40 text-sm max-w-xl">Faith, wisdom, boyhood, voice, love, and imagination — see how every book connects.</p>
+                </div>
+                <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
+                  View Map <ExternalLink className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* ── FREE CHAPTER ── */}
         <FreeChapterCapture />
       </main>

@@ -28,6 +28,7 @@ const Speaking = lazy(() => import("@/pages/Speaking"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Books = lazy(() => import("@/pages/Books"));
+const BookUniverse = lazy(() => import("@/pages/BookUniverse"));
 const BookDetail = lazy(() => import("@/pages/BookDetail"));
 const Press = lazy(() => import("@/pages/Press"));
 const Sports = lazy(() => import("@/pages/Sports"));
@@ -117,6 +118,7 @@ function Router() {
         </Route>
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/books" component={Books} />
+        <Route path="/books/universe" component={BookUniverse} />
         <Route path="/books/:id" component={BookDetail} />
         <Route path="/author" component={Author} />
         <Route path="/blog" component={Blog} />
