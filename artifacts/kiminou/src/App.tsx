@@ -33,6 +33,7 @@ const BookDetail = lazy(() => import("@/pages/BookDetail"));
 const Press = lazy(() => import("@/pages/Press"));
 const Sports = lazy(() => import("@/pages/Sports"));
 const Author = lazy(() => import("@/pages/Author"));
+const LegacyTimeline = lazy(() => import("@/pages/LegacyTimeline"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
 
 const POEM_FRAGMENTS = [
@@ -121,6 +122,7 @@ function Router() {
         <Route path="/books/universe" component={BookUniverse} />
         <Route path="/books/:id" component={BookDetail} />
         <Route path="/author" component={Author} />
+        <Route path="/legacy" component={LegacyTimeline} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />

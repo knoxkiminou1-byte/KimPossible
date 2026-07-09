@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T19:52:30.649Z",
+  "generatedAt": "2026-07-09T22:52:39.550Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -177,6 +177,45 @@
           "url": "https://www.kiminouknox.com/author",
           "name": "Kiminou Knox | Author Profile",
           "description": "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-09"
+        }
+      ]
+    },
+    {
+      "loc": "/legacy",
+      "title": "Legacy Timeline - Kiminou Knox",
+      "description": "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox timeline",
+        "Kiminou Knox legacy",
+        "Kiminou Knox milestones"
+      ],
+      "sections": [
+        {
+          "heading": "Legacy Timeline",
+          "text": "Books, athletic milestones, community recognition, and builder work — one thread, told in order."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/legacy",
+      "lastmod": "2026-07-09",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/legacy#webpage",
+          "url": "https://www.kiminouknox.com/legacy",
+          "name": "Legacy Timeline - Kiminou Knox",
+          "description": "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"

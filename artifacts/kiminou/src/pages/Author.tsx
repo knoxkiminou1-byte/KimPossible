@@ -683,6 +683,22 @@ export default function Author() {
             </div>
           </section>
 
+          {/* ─── LEGACY TIMELINE CTA ────────────────────────── */}
+          <section className="py-20 border-t border-white/6">
+            <Link href="/legacy">
+              <div className="group relative overflow-hidden border border-amber-400/15 bg-amber-400/[0.02] p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-amber-400/35 hover:bg-amber-400/[0.05] transition-all duration-500 cursor-pointer">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3">The Record So Far</p>
+                  <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-2">See the Full Legacy Timeline</h2>
+                  <p className="text-white/40 text-sm max-w-xl">Books, athletic milestones, community recognition, and builder work — one thread, told in order.</p>
+                </div>
+                <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
+                  View Timeline <ExternalLink className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </Link>
+          </section>
+
           {/* ─── CONNECT ────────────────────────────────────── */}
           <section id="connect" className="py-20 border-t border-white/6 scroll-mt-16">
             <div className="grid md:grid-cols-3 gap-6">

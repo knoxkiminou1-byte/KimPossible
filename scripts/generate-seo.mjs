@@ -275,6 +275,7 @@ const routes = [
   { loc: "/about", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/works", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/author", changefreq: "monthly", priority: "0.9", lastmod: today },
+  { loc: "/legacy", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/books", changefreq: "weekly", priority: "0.95", lastmod: today },
   { loc: "/books/universe", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/speaking", changefreq: "monthly", priority: "0.85", lastmod: today },
@@ -368,6 +369,21 @@ const baseRouteMeta = [
       },
     ],
     schemaType: "ProfilePage",
+  },
+  {
+    loc: "/legacy",
+    title: "Legacy Timeline - Kiminou Knox",
+    description:
+      "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["Kiminou Knox timeline", "Kiminou Knox legacy", "Kiminou Knox milestones"],
+    sections: [
+      {
+        heading: "Legacy Timeline",
+        text: "Books, athletic milestones, community recognition, and builder work — one thread, told in order.",
+      },
+    ],
+    schemaType: "CollectionPage",
   },
   {
     loc: "/books",
