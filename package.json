@@ -14,6 +14,7 @@
     "check:assets": "node scripts/check-assets.mjs",
     "build": "pnpm run generate:seo && pnpm run typecheck && pnpm --filter @workspace/kiminou run build && pnpm run prerender:seo",
     "typecheck": "pnpm --filter @workspace/kiminou run typecheck",
+    "test:e2e": "playwright test",
     "validate": "pnpm run check:assets && pnpm run typecheck && pnpm run build"
   },
   "private": true,
@@ -22,6 +23,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@types/node": "^25.3.3",
     "prettier": "^3.8.3",
     "sharp": "^0.35.3",

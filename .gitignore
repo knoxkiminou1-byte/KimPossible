@@ -50,3 +50,9 @@ Thumbs.db
 
 # Archived on the archive/migration-backup branch — see README.md
 .migration-backup/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
