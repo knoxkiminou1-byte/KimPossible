@@ -107,9 +107,11 @@ export default function BookPreview() {
                 <div className="bg-card border border-border rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
                   {/* Book Cover */}
                   <div className="relative aspect-[3/4] overflow-hidden">
-                    <img 
+                    <img
                       src={book.cover}
                       alt={`${book.title} book cover`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     

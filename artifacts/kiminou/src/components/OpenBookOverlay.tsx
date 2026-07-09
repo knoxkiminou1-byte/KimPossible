@@ -123,6 +123,8 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
           <img
             src={book.cover}
             alt={book.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
             style={{ minHeight: 520 }}
           />

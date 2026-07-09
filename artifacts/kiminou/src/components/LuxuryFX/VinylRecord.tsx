@@ -321,6 +321,7 @@ export default function VinylRecord() {
                   style={{ width: "58%", height: "58%", border: "2px solid rgba(0,0,0,0.6)" }}>
                   <img src="/covers/kiminou-knox-poems-from-black-boy.jpg"
                     alt="Poems from a Black Boy"
+                    loading="lazy" decoding="async"
                     className="w-full h-full object-cover" />
                   {/* Center hole */}
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-black" />

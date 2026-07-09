@@ -100,9 +100,11 @@ export default function Works() {
                 data-testid={`book-card-${book.id}`}
               >
                 <div className="aspect-[3/4] bg-muted overflow-hidden">
-                  <img 
+                  <img
                     src={book.cover}
                     alt={book.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=600&fit=crop';

@@ -132,7 +132,6 @@ export default function Home() {
         <meta name="description" content="Official site of Kiminou Knox — eight-time published Bay Area poet, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast. Explore books, essays, and booking info." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={SITE_URL} />
-        <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
         <meta name="theme-color" content="#090705" />
         
         <meta property="og:type" content="profile" />
