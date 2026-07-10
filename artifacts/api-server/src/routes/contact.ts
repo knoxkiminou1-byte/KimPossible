@@ -13,7 +13,44 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
+  website: z.string().optional(),
+  turnstileToken: z.string().optional(),
 });
+
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const requestLog = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (requestLog.get(ip) || []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  timestamps.push(now);
+  requestLog.set(ip, timestamps);
+  return timestamps.length > RATE_LIMIT_MAX_REQUESTS;
+}
+
+function getClientIp(req: { headers: Record<string, unknown>; ip?: string }): string {
+  const forwarded = req.headers["x-forwarded-for"];
+  if (typeof forwarded === "string" && forwarded.length > 0) return forwarded.split(",")[0]?.trim() ?? "unknown";
+  return req.ip || "unknown";
+}
+
+async function verifyTurnstile(token: string | undefined, ip: string): Promise<boolean> {
+  if (!process.env["TURNSTILE_SECRET_KEY"]) return true;
+  if (!token) return false;
+
+  const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      secret: process.env["TURNSTILE_SECRET_KEY"],
+      response: token,
+      remoteip: ip,
+    }),
+  });
+  const result = (await response.json()) as { success?: boolean };
+  return result.success === true;
+}
 
 const inquiryTypeMap: Record<string, string> = {
   speaking: "Speaking / Appearance",
@@ -33,8 +70,24 @@ function escapeHtml(value = "") {
 }
 
 router.post("/contact", async (req, res) => {
+  const ip = getClientIp(req);
+
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ error: "Too many requests. Please try again later." });
+  }
+
   try {
     const data = contactFormSchema.parse(req.body);
+
+    if (data.website) {
+      // Honeypot tripped — pretend success so the bot doesn't adapt.
+      return res.status(200).json({ message: "Message received successfully" });
+    }
+
+    if (!(await verifyTurnstile(data.turnstileToken, ip))) {
+      return res.status(403).json({ error: "Verification failed. Please try again." });
+    }
+
     const inquiryTypeDisplay = inquiryTypeMap[data.inquiryType] || data.inquiryType;
     const fromAddress = process.env["GMAIL_USER"] || "knoxkiminou1@gmail.com";
     const toAddress = process.env["CONTACT_TO_EMAIL"] || "knoxkiminou1@gmail.com";

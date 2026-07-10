@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, type ContactForm as ContactFormType } from "@/lib/schema";
@@ -34,6 +34,57 @@ interface ContactFormProps {
   compact?: boolean;
 }
 
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY as string | undefined;
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (container: HTMLElement, options: { sitekey: string; callback: (token: string) => void }) => string;
+      reset: (widgetId: string) => void;
+    };
+  }
+}
+
+function useTurnstile(onToken: (token: string) => void) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || !containerRef.current) return;
+
+    const render = () => {
+      if (!window.turnstile || !containerRef.current || widgetIdRef.current) return;
+      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: onToken,
+      });
+    };
+
+    if (window.turnstile) {
+      render();
+      return;
+    }
+
+    const existing = document.querySelector<HTMLScriptElement>('script[data-turnstile]');
+    const script = existing ?? document.createElement("script");
+    if (!existing) {
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      script.dataset.turnstile = "true";
+      document.head.appendChild(script);
+    }
+    script.addEventListener("load", render, { once: true });
+    return () => script.removeEventListener("load", render);
+  }, [onToken]);
+
+  const reset = () => {
+    if (window.turnstile && widgetIdRef.current) window.turnstile.reset(widgetIdRef.current);
+  };
+
+  return { containerRef, reset };
+}
+
 export default function ContactForm({
   defaultInquiryType = "other",
   title = "Get in Touch",
@@ -58,8 +109,14 @@ export default function ContactForm({
       message: "",
       dateWindow: "",
       talkTheme: "",
+      website: "",
+      turnstileToken: "",
     },
   });
+
+  const { containerRef: turnstileRef, reset: resetTurnstile } = useTurnstile((token) =>
+    form.setValue("turnstileToken", token),
+  );
 
   const inquiryType = form.watch("inquiryType");
   const shouldShowOrganization = showOrganization || inquiryType === "press" || inquiryType === "speaking";
@@ -75,6 +132,8 @@ export default function ContactForm({
         body: JSON.stringify(data),
       });
 
+      const body = await response.json().catch(() => null);
+
       if (response.ok) {
         toast({
           title: "Message sent successfully",
@@ -89,6 +148,21 @@ export default function ContactForm({
           message: "",
           dateWindow: "",
           talkTheme: "",
+          website: "",
+          turnstileToken: "",
+        });
+        resetTurnstile();
+      } else if (body?.fallbackEmail) {
+        toast({
+          title: "Message delivery is temporarily unavailable",
+          description: `Please email us directly at ${body.fallbackEmail}`,
+          variant: "destructive",
+        });
+      } else if (response.status === 429) {
+        toast({
+          title: "Too many messages",
+          description: "Please wait a few minutes before sending another message.",
+          variant: "destructive",
         });
       } else {
         throw new Error("Submission failed");
@@ -123,6 +197,18 @@ export default function ContactForm({
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          {/* Honeypot — hidden from real visitors, only bots that autofill every field trip it */}
+          <FormField
+            control={form.control}
+            name="website"
+            render={({ field }) => (
+              <div className="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
+                <label htmlFor="website">Leave this field blank</label>
+                <input id="website" type="text" tabIndex={-1} autoComplete="off" {...field} />
+              </div>
+            )}
+          />
+
           {/* Name */}
           <FormField
             control={form.control}
@@ -264,6 +350,8 @@ export default function ContactForm({
               </FormItem>
             )}
           />
+
+          {TURNSTILE_SITE_KEY && <div ref={turnstileRef} />}
 
           <Button
             type="submit"

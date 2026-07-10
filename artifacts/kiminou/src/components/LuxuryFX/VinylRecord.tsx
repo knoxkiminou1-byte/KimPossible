@@ -321,6 +321,7 @@ export default function VinylRecord() {
                   style={{ width: "58%", height: "58%", border: "2px solid rgba(0,0,0,0.6)" }}>
                   <img src="/covers/kiminou-knox-poems-from-black-boy.jpg"
                     alt="Poems from a Black Boy"
+                    loading="lazy" decoding="async"
                     className="w-full h-full object-cover" />
                   {/* Center hole */}
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-black" />
@@ -349,12 +350,14 @@ export default function VinylRecord() {
               {/* Poem nav + play/stop row */}
               <div className="flex items-center gap-3">
                 <motion.button onClick={handlePrev}
+                  aria-label="Previous poem"
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-amber-400/30 hover:text-amber-300 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <ChevronLeft className="w-4 h-4" />
                 </motion.button>
 
                 <motion.button onClick={handlePlay}
+                  aria-label={playing ? "Pause" : "Play"}
                   className="w-16 h-16 rounded-full flex items-center justify-center relative"
                   style={{
                     background: playing ? "rgba(245,158,11,0.15)" : "rgba(245,158,11,0.12)",
@@ -373,12 +376,14 @@ export default function VinylRecord() {
                 </motion.button>
 
                 <motion.button onClick={handleNext}
+                  aria-label="Next poem"
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-amber-400/30 hover:text-amber-300 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <ChevronRight className="w-4 h-4" />
                 </motion.button>
 
                 <motion.button onClick={handleStop}
+                  aria-label="Stop"
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-red-400/30 hover:text-red-400 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <Square className="w-3.5 h-3.5" />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, BookOpen } from "lucide-react";
 
@@ -26,6 +26,8 @@ interface Props {
 
 export default function OpenBookOverlay({ book, onClose }: Props) {
   const [showBuy, setShowBuy] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const buyLink =
     book.buyLinks.amazon ||
     book.buyLinks.googleBooks ||
@@ -40,13 +42,32 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
   }, []);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    closeButtonRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { onClose(); return; }
+      if (e.key !== "Tab" || !dialogRef.current) return;
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>("button, a[href]");
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
   return (
     <motion.div
+      ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${book.title} preview`}
       className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -64,7 +85,9 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
 
       {/* Close */}
       <button
+        ref={closeButtonRef}
         onClick={onClose}
+        aria-label="Close preview"
         className="absolute top-6 right-6 z-50 w-10 h-10 flex items-center justify-center border border-white/15 text-white/40 hover:text-white hover:border-white/50 transition-all rounded-full"
       >
         <X className="w-4 h-4" />
@@ -100,6 +123,8 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
           <img
             src={book.cover}
             alt={book.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
             style={{ minHeight: 520 }}
           />

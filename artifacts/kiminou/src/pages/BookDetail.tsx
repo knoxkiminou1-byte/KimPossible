@@ -135,7 +135,7 @@ export default function BookDetail() {
       "@type": "Person",
       "name": "Kiminou Knox",
       "url": "https://www.kiminouknox.com",
-      "@id": "https://www.kiminouknox.com/#kiminouknox"
+      "@id": "https://www.kiminouknox.com/#person"
     },
     "datePublished": book.datePublished || `${book.year}-01-01`,
     ...(book.isbn && { "isbn": book.isbn }),
@@ -187,8 +187,6 @@ export default function BookDetail() {
         <meta property="og:image:height" content="900" />
         {book.isbn && <meta property="books:isbn" content={book.isbn} />}
         <meta property="books:author" content="https://www.kiminouknox.com/author" />
-        <meta property="books:rating:value" content="5" />
-        <meta property="books:rating:scale" content="5" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${book.title} — Kiminou Knox`} />
@@ -202,7 +200,7 @@ export default function BookDetail() {
 
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── BACK NAV ─── */}
         <div className="pt-28 pb-0">

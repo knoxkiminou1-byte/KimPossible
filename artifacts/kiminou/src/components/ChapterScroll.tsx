@@ -198,6 +198,7 @@ export default function ChapterScroll() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 10 }}
             onClick={() => goTo(activeIndex + 1)}
+            aria-label="Next chapter"
             className="absolute right-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 border border-white/10 hover:border-amber-400/30 text-white/25 hover:text-amber-400/60 transition-all duration-300"
           >
             →
@@ -212,6 +213,7 @@ export default function ChapterScroll() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -10 }}
             onClick={() => goTo(activeIndex - 1)}
+            aria-label="Previous chapter"
             className="absolute left-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 border border-white/10 hover:border-amber-400/30 text-white/25 hover:text-amber-400/60 transition-all duration-300"
           >
             ←

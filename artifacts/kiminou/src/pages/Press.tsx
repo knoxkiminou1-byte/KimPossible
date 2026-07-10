@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import booksData from "@/content/books.json";
+
+type PressBook = { id: string; title: string; subtitle: string; year: number; isbn?: string | null; buyLinks: Record<string, string | null | undefined> };
+const books = booksData as PressBook[];
 
 const recognition = [
   {
@@ -33,8 +37,8 @@ const verificationGroups = [
     items: [
       { name: "Amazon Author Store", desc: "Author storefront and retail listings", url: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
       { name: "Goodreads Author Profile", desc: "Reader-facing author profile and book records, including numeric public author ID", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
-      { name: "Black Boy Poems on Bookshop.org", desc: "Paperback listing with publisher, date, pages, format, and EAN", url: "https://bookshop.org" },
-      { name: "Google Play Books Listings", desc: "Search results for Kiminou Knox books on Google", url: "https://play.google.com" },
+      { name: "The Spirit of Solomon on Bookshop.org", desc: "Paperback listing with publisher, date, pages, and format", url: "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60" },
+      { name: "Google Play Books Search", desc: "Search results for Kiminou Knox books on Google Play", url: "https://play.google.com/store/search?q=Kiminou+Knox&c=books" },
     ],
   },
   {
@@ -65,8 +69,8 @@ const verificationGroups = [
     label: "Profiles",
     items: [
       { name: "LinkedIn", desc: "Professional profile", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
-      { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
-      { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
+      { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminou" },
+      { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org/wiki/Q137260299" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
       { name: "Instagram", desc: "Public social profile. @kiminouknox.", url: "https://www.instagram.com/kiminouknox" },
     ],
@@ -76,7 +80,7 @@ const verificationGroups = [
 const TICKER_ITEMS = [
   "Miles Hall Foundation", "Amazon Author Store", "Goodreads", "MaxPreps", "NCSA Sports",
   "Prep Hoops", "Apple Podcasts", "Spotify", "YouTube", "Medium", "LinkedIn",
-  "Bookshop.org", "Google Play Books", "About.me", "Wikidata", "Stan Store",
+  "Bookshop.org", "Google Play Books", "About.me", "Stan Store",
 ];
 
 const creativeWorkSchema = {
@@ -88,7 +92,7 @@ const creativeWorkSchema = {
 };
 
 const pressImages = [
-  KIMINOU_IMAGES.bwPortrait,
+  KIMINOU_IMAGES.officialHeadshot,
   KIMINOU_IMAGES.casualOutdoorPortrait,
   KIMINOU_IMAGES.taunHallEvent,
 ];
@@ -157,7 +161,7 @@ export default function Press() {
       </Helmet>
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── HERO ─── */}
         <section className="relative pt-40 pb-24 overflow-hidden" ref={heroRef}>
@@ -210,6 +214,11 @@ export default function Press() {
                 </Reveal>
               ))}
             </div>
+            <Reveal delay={0.3} className="mt-8">
+              <Link href="/media" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/70 hover:text-amber-300 transition-colors duration-300">
+                View Full Media Gallery &amp; Book Covers →
+              </Link>
+            </Reveal>
           </div>
         </section>
 
@@ -332,7 +341,7 @@ export default function Press() {
                   <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.2em] text-white/30">
                     <span>Bio (Short & Long)</span>
                     <span>·</span>
-                    <span>8 Published Works</span>
+                    <span>{books.length} Published Works</span>
                     <span>·</span>
                     <span>Athletic Measurables</span>
                     <span>·</span>
@@ -342,102 +351,9 @@ export default function Press() {
                   </div>
                 </div>
                 <div className="flex-shrink-0">
-                  <motion.button
-                    onClick={() => {
-                      const kit = `KIMINOU KNOX — OFFICIAL PRESS KIT
-Generated: ${new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-ABOUT KIMINOU KNOX
-──────────────────
-Kiminou Knox is a 19-year-old author, NCAA-registered athlete, entrepreneur, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
-
-Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee Williams and Elisha Bonepart McNair.
-
-SHORT BIO (50 words)
-─────────────────────
-Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. Eight published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
-
-PUBLISHED WORKS
-───────────────
-1. The Spirit of Solomon (2025) — ISBN 9798316662975
-   What is Love To A Man Made To Destroy It
-   Amazon: https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK
-
-2. Our Father? (2025) — ISBN 9798316682850
-   A Poetic Journey Through Faith, Doubt, and Divine Silence
-   Amazon: https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4
-
-3. Poems from a Black Boy (2024) — ISBN 9798316662975
-   Identity, Heritage, and Hope
-   Amazon: https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2
-
-4. Hopeless Romantic (2025) — ISBN 9798291608128
-   Love, Loss, and Everything Between
-   Amazon: https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N
-
-5. Boys Raised in Silence (2024) — ISBN 9798316735821
-   Breaking the Quiet, Finding Voice
-   Amazon: https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM
-
-6. The Adventures of Kiminou the Great and Chua the Wise (2025)
-   ISBN 9798316591204
-   Amazon: https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5
-
-ATHLETIC PROFILE
-────────────────
-Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
-School: Cristo Rey De La Salle (formerly Ygnacio Valley)
-Status: NCAA Registered & Eligible
-MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
-NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox
-
-SPEAKING TOPICS
-───────────────
-• Discipline and Faith in Daily Practice
-• Black Boy Voice and the Cost of Silence
-• Building Creative Work That Lasts
-
-Audiences: Schools, teams, youth programs, community groups, faith-based organizations
-
-RECOGNITION
-───────────
-• Miles Hall Foundation Youth Summit — Top Essay Finalist (2025)
-  Topic: Youth Advocacy & Mental Health
-  https://www.themileshallfoundation.org/post/youth-summit-essay-finalist
-
-MEDIA & DIGITAL PRESENCE
-─────────────────────────
-Website: https://www.kiminouknox.com
-Instagram: @kiminouknox
-Twitter/X: @KnoxKiminou
-YouTube: https://www.youtube.com/@KiminouKnoxOfficial
-Medium: https://medium.com/@knoxkiminou1
-Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1850364308
-Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
-Amazon Author Store: https://www.amazon.com/stores/author/B0DGM5Z5Q8
-LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/
-
-MEDIA CONTACT
-─────────────
-Email: knoxkiminou1@gmail.com
-Booking & Speaking Inquiries: https://www.kiminouknox.com/contact
-Official Site: https://www.kiminouknox.com
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-© 2025 Kiminou Knox. All rights reserved.
-Press assets and headshots available on request via email.`;
-
-                      const blob = new Blob([kit], { type: "text/plain;charset=utf-8" });
-                      const url = URL.createObjectURL(blob);
-                      const a = document.createElement("a");
-                      a.href = url;
-                      a.download = "kiminou-knox-press-kit.txt";
-                      document.body.appendChild(a);
-                      a.click();
-                      document.body.removeChild(a);
-                      URL.revokeObjectURL(url);
-                    }}
+                  <motion.a
+                    href="/press/kiminou-knox-press-kit.pdf"
+                    download
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.97 }}
                     className="inline-flex items-center gap-3 px-8 py-4 bg-amber-400 text-black text-xs uppercase tracking-[0.25em] font-semibold hover:bg-amber-300 transition-colors duration-300"
@@ -445,8 +361,8 @@ Press assets and headshots available on request via email.`;
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Download Press Kit
-                  </motion.button>
+                    Download Press Kit (PDF)
+                  </motion.a>
                 </div>
               </div>
             </Reveal>

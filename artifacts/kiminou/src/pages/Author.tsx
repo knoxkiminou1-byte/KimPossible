@@ -43,7 +43,7 @@ const SOCIAL_LINKS = [
 
 const BOOKS = [
   { title: "Poems From A Black Boy", desc: "Early poems tracing the inner life of a young Black boy learning how to pray, love, and tell the truth.", cover: "/covers/kiminou-knox-poems-from-black-boy.jpg" },
-  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision.", cover: null },
+  { title: "Black Boy Poems", desc: "A collection documenting the full spectrum of Black boyhood with unflinching emotional precision.", cover: "/covers/kiminou-knox-black-boy-poems.svg" },
   { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender.", cover: "/covers/kiminou-knox-hopeless-romantic-poetry.jpg" },
   { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention.", cover: "/covers/kiminou-knox-spirit-of-solomon-book.jpg" },
   { title: "Our Father?", desc: "A candid wrestling with prayer and presence — when belief collides with unanswered questions.", cover: "/covers/kiminou-knox-our-father-poetry.jpg" },
@@ -330,7 +330,7 @@ export default function Author() {
         </section>
 
 
-        <main className="max-w-5xl mx-auto px-6 lg:px-10">
+        <main id="main-content" className="max-w-5xl mx-auto px-6 lg:px-10">
 
           {/* ─── PULL QUOTE 1 ───────────────────────────────── */}
           <PullQuote quote={PULL_QUOTES[0]} />
@@ -341,8 +341,8 @@ export default function Author() {
               <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
-                    src="/photos/kiminou-knox-bw-portrait.png"
-                    alt="Kiminou Knox black and white author portrait"
+                    src={KIMINOU_IMAGES.casualOutdoorPortrait.src}
+                    alt={KIMINOU_IMAGES.casualOutdoorPortrait.alt}
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -640,6 +640,17 @@ export default function Author() {
                   </div>
                 </Link>
               </Reveal>
+              {/* Universe map CTA card */}
+              <Reveal delay={0.56}>
+                <Link href="/books/universe">
+                  <div className="flex-shrink-0 w-48 border border-amber-400/20 p-6 flex flex-col items-center justify-center gap-4 hover:border-amber-400/50 hover:bg-amber-400/5 transition-all duration-500 cursor-pointer h-full min-h-[340px]">
+                    <div className="w-10 h-10 rounded-full border border-amber-400/30 flex items-center justify-center">
+                      <span className="text-amber-400 text-lg">✦</span>
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/60 text-center">Explore the Universe Map</span>
+                  </div>
+                </Link>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -670,6 +681,22 @@ export default function Author() {
                 </div>
               </Reveal>
             </div>
+          </section>
+
+          {/* ─── LEGACY TIMELINE CTA ────────────────────────── */}
+          <section className="py-20 border-t border-white/6">
+            <Link href="/legacy">
+              <div className="group relative overflow-hidden border border-amber-400/15 bg-amber-400/[0.02] p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-amber-400/35 hover:bg-amber-400/[0.05] transition-all duration-500 cursor-pointer">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3">The Record So Far</p>
+                  <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-2">See the Full Legacy Timeline</h2>
+                  <p className="text-white/40 text-sm max-w-xl">Books, athletic milestones, community recognition, and builder work — one thread, told in order.</p>
+                </div>
+                <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
+                  View Timeline <ExternalLink className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </Link>
           </section>
 
           {/* ─── CONNECT ────────────────────────────────────── */}

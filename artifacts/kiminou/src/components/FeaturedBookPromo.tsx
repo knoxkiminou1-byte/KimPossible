@@ -46,6 +46,8 @@ export default function FeaturedBookPromo() {
                 <img
                   src="/covers/kiminou-knox-hopeless-romantic-poetry.jpg"
                   alt="Hopeless Romantic by Kiminou Knox"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto rounded-r-sm shadow-[0_32px_80px_rgba(0,0,0,0.7),0_8px_20px_rgba(0,0,0,0.5)]"
                   style={{ backfaceVisibility: "hidden" }}
                 />

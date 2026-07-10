@@ -47,6 +47,7 @@ function stripManagedHead(head) {
     /<link\s+rel=["']canonical["']/i,
     /<link\s+rel=["']alternate["']/i,
     /<link\s+rel=["']manifest["']/i,
+    /<link\s+rel=["']preload["']\s+as=["']image["']/i,
   ];
 
   return head
@@ -89,11 +90,17 @@ function renderHead(route) {
   const canonical = route.url;
   const image = route.image || manifest.site.image;
 
+  const heroPreload =
+    route.loc === "/"
+      ? `<link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" fetchpriority="high">`
+      : "";
+
   return `    <title>${escapeHtml(route.title)}</title>
     <meta name="description" content="${escapeAttr(route.description)}">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="theme-color" content="#090705">
     ${keywords ? `<meta name="keywords" content="${escapeAttr(keywords)}">` : ""}
+    ${heroPreload}
     <link rel="canonical" href="${escapeAttr(canonical)}">
     <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href="${manifest.site.url}/rss.xml">
     <link rel="alternate" type="application/atom+xml" title="Kiminou Knox Journal Atom" href="${manifest.site.url}/feed.xml">

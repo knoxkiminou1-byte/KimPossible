@@ -9,12 +9,14 @@ import {
   animate,
 } from "framer-motion";
 import { useRef, Suspense, useEffect, useState, lazy } from "react";
-import { ExternalLink, Trophy, TrendingUp, Target, Zap, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
+import { ExternalLink, Trophy, TrendingUp, Target, Zap, ChevronDown, ArrowUpRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
 import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 const LockerRoom3D = lazy(() => import("@/components/LuxuryFX/LockerRoom3D"));
 
@@ -200,6 +202,7 @@ export default function Sports() {
   const { scrollYProgress } = useScroll({ target: containerRef });
   const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.06], [1, 0]);
   const heroInView = useInView(heroRef, { once: true });
+  const reduceEffects = useShouldReduceEffects();
 
   return (
     <>
@@ -237,22 +240,28 @@ export default function Sports() {
       </Helmet>
 
       {/* ── 3D locker room canvas (fixed, behind everything) ── */}
-      <Suspense fallback={
+      {reduceEffects ? (
         <div className="fixed inset-0 bg-[#080a0c]" style={{ zIndex: 0 }}>
           <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px),repeating-linear-gradient(0deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px)]" />
         </div>
-      }>
-        <LockerRoom3D />
-      </Suspense>
+      ) : (
+        <Suspense fallback={
+          <div className="fixed inset-0 bg-[#080a0c]" style={{ zIndex: 0 }}>
+            <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px),repeating-linear-gradient(0deg,rgba(255,255,255,0.008)_0px,rgba(255,255,255,0.008)_1px,transparent_1px,transparent_80px)]" />
+          </div>
+        }>
+          <LockerRoom3D />
+        </Suspense>
+      )}
 
       {/* ── Ambient overlays ── */}
       <Scanlines />
-      <Particles />
+      {!reduceEffects && <Particles />}
 
       <Header />
 
       <div ref={containerRef} className="relative" style={{ zIndex: 2 }}>
-        <main className="min-h-screen text-white">
+        <main id="main-content" className="min-h-screen text-white">
 
           {/* ══════════════════════════════════════
               HERO — full viewport, glass overlay
@@ -534,6 +543,21 @@ export default function Sports() {
                   </RevealCard>
                 ))}
               </div>
+              <RevealCard delay={0.3} className="mt-6">
+                <Link href="/sports/recruiting">
+                  <div className="group relative overflow-hidden p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 cursor-pointer"
+                    style={{ background: "rgba(245,158,11,0.03)", border: "1px solid rgba(245,158,11,0.15)" }}>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-2">For Coaches & Recruiters</p>
+                      <h3 className="font-serif text-2xl text-white">Full Recruiting Packet</h3>
+                      <p className="text-white/40 text-sm mt-2 max-w-lg">Measurables, highlights, film, verified profiles, and a direct contact line — all in one place.</p>
+                    </div>
+                    <span className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
+                      View Packet <ArrowUpRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              </RevealCard>
             </div>
           </DarkSection>
 

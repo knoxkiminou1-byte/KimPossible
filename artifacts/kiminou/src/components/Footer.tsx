@@ -11,6 +11,7 @@ const links = [
   { href: "/press", label: "Press" },
   { href: "/blog", label: "Blog" },
   { href: "/speaking", label: "KimYaps Podcast" },
+  { href: "/now", label: "Now" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -71,7 +72,7 @@ export default function Footer() {
             </p>
             <ul className="space-y-3">
               {links.map((l) => (
-                <li key={l.href}>
+                <li key={`${l.href}-${l.label}`}>
                   <Link href={l.href}>
                     <span className="text-sm text-white/45 hover:text-amber-300 transition-colors duration-300 cursor-pointer">
                       {l.label}

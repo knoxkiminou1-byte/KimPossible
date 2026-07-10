@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X, ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
 
 type Poem = {
@@ -15,6 +15,8 @@ type Props = {
 
 export default function PoemModal({ title, poems, open, onClose }: Props) {
   const [currentPoem, setCurrentPoem] = useState<number>(0);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   const goToPrevPoem = () => setCurrentPoem(poem => Math.max(0, poem - 1));
   const goToNextPoem = () => setCurrentPoem(poem => Math.min(poems.length - 1, poem + 1));
@@ -22,10 +24,23 @@ export default function PoemModal({ title, poems, open, onClose }: Props) {
   useEffect(() => {
     if (!open) return;
     setCurrentPoem(0); // Reset to first poem when opening
+    closeButtonRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") { onClose(); return; }
       if (e.key === "ArrowLeft") goToPrevPoem();
       if (e.key === "ArrowRight") goToNextPoem();
+      if (e.key !== "Tab" || !dialogRef.current) return;
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>("button:not(:disabled)");
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -41,8 +56,15 @@ export default function PoemModal({ title, poems, open, onClose }: Props) {
 
   return (
     <div className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm p-4 md:p-8">
-      <div className="mx-auto h-full w-full max-w-4xl rounded-2xl border border-white/10 bg-neutral-950 shadow-2xl overflow-hidden relative">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="poem-modal-title"
+        className="mx-auto h-full w-full max-w-4xl rounded-2xl border border-white/10 bg-neutral-950 shadow-2xl overflow-hidden relative"
+      >
         <button
+          ref={closeButtonRef}
           aria-label="Close"
           onClick={onClose}
           className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
@@ -55,7 +77,7 @@ export default function PoemModal({ title, poems, open, onClose }: Props) {
         <div className="h-16 border-b border-white/10 flex items-center justify-between px-5 text-white/90">
           <div className="flex items-center gap-4">
             <BookOpen className="h-5 w-5" />
-            <span className="truncate text-sm">{title} Sample</span>
+            <span id="poem-modal-title" className="truncate text-sm">{title} Sample</span>
             <span className="text-xs opacity-70">
               Poem {currentPoem + 1} of {poems.length}
             </span>

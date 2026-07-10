@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,43 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /contact:
+    post:
+      operationId: submitContactForm
+      tags: [contact]
+      summary: Submit contact form
+      description: >-
+        Sends a contact form submission by email. Includes a honeypot field
+        (website) that must be left empty, optional Cloudflare Turnstile
+        verification (enforced only when TURNSTILE_SECRET_KEY is set
+        server-side), and IP-based rate limiting.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactFormRequest"
+      responses:
+        "200":
+          description: Message received successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactFormResponse"
+        "400":
+          description: Invalid form data
+        "403":
+          description: Turnstile verification failed
+        "429":
+          description: Too many requests
+        "503":
+          description: >-
+            Email delivery is not configured or unavailable. Response
+            includes a fallbackEmail the client should display to the user.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactFormFallback"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +72,55 @@ components:
           type: string
       required:
         - status
+    ContactFormRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        inquiryType:
+          type: string
+          enum: [speaking, press, book, basketball, other]
+        organization:
+          type: string
+        subject:
+          type: string
+        message:
+          type: string
+          minLength: 10
+        dateWindow:
+          type: string
+        talkTheme:
+          type: string
+        website:
+          type: string
+          description: Honeypot field. Must be left empty by real users.
+        turnstileToken:
+          type: string
+          description: Cloudflare Turnstile response token, when Turnstile is enabled.
+      required:
+        - name
+        - email
+        - inquiryType
+        - message
+    ContactFormResponse:
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+        - message
+    ContactFormFallback:
+      type: object
+      properties:
+        error:
+          type: string
+        fallbackEmail:
+          type: string
+          format: email
+      required:
+        - error
+        - fallbackEmail
 

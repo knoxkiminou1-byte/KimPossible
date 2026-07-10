@@ -7,6 +7,25 @@
     "isbn": "9798316662975",
     "datePublished": "2025-01-15",
     "cover": "/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+    "samplePoems": [
+      {
+        "title": "Rise",
+        "content": "They called me wise before I learned\nwhat wisdom cost—\nbefore the gold turned cold\nin hands that held too much.\n\nI built kingdoms on foundations\nof borrowed time,\nthought I could master\nwhat was meant to humble me.\n\nBut every crown weighs heavy\non a head that knows\nthe price of being loved\nfor what you own."
+      },
+      {
+        "title": "The Weight of Choosing",
+        "content": "Between right and easy,\nI chose comfort.\nBetween truth and peace,\nI chose silence.\n\nNow I sit in the ruins\nof my careful compromises,\nwondering if wisdom\nwas always meant to hurt this much.\n\nSolomon had his temple;\nI have my lessons,\nboth built from stones\nof what we thought we knew."
+      },
+      {
+        "title": "What Remains",
+        "content": "When the last applause fades,\nwhen the crowds disperse,\nwhen the mirrors show\nonly the man beneath the myth—\n\nwhat remains?\n\nNot the gold or glory,\nnot the songs they sang,\nbut the quiet truth\nthat love was always\nthe only currency that mattered.\n\nAnd I spent it all\non things that couldn't love me back."
+      }
+    ],
+    "themes": [
+      "Wisdom",
+      "Faith",
+      "Reckoning"
+    ],
     "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
@@ -24,11 +43,32 @@
     "isbn": "9798316682850",
     "datePublished": "2025-02-10",
     "cover": "/covers/kiminou-knox-our-father-poetry.jpg",
+    "samplePoems": [
+      {
+        "title": "Questions in the Dark",
+        "content": "Our Father, who art in heaven—\nor so they tell me.\nBut where were you\nwhen the prayers felt like\nshouting into an empty room?\n\nHallowed be thy name,\nthough I struggle to say it\nwhen doubt sits heavy\non my tongue\nlike communion bread\nthat won't dissolve.\n\nI'm still here,\nstill speaking to the silence,\nstill hoping\nyou're listening\nfrom wherever\nfathers go\nwhen their children\nneed them most."
+      },
+      {
+        "title": "Divine Silence",
+        "content": "They say you work in mysterious ways,\nbut mystery feels a lot like absence\nwhen you're seventeen\nand the world is burning\nand you can't find your voice\nin the choir of certainty.\n\nMaybe silence is an answer.\nMaybe waiting is worship.\nMaybe faith was never\nmeant to be comfortable,\nnever meant to fit\nin the boxes we build\nfor things we think we understand.\n\nSo I'll sit in the questions,\nmake peace with the unknown,\nand call this prayer too."
+      },
+      {
+        "title": "Still Searching",
+        "content": "I used to know you\nin Sunday morning songs,\nin stained glass stories,\nin the easy answers\nof childhood faith.\n\nNow I look for you\nin the spaces between words,\nin the hurt that teaches,\nin the love that stays\neven when belief falters.\n\nOur Father,\nwhoever you are,\nwherever you are,\nI'm still your child,\nstill searching,\nstill hoping\nthat the questions\nare prayers too,\nand that seeking\nis its own form\nof finding."
+      }
+    ],
+    "themes": [
+      "Faith",
+      "Silence",
+      "Searching"
+    ],
     "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
       "amazonUK": "https://www.amazon.co.uk/Our-Father-Poetic-Journey-Silence/dp/B0FH2TPMT4",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ",
+      "waterstones": "https://www.waterstones.com/book/our-father/kiminou-knox/9798316682850",
+      "hatchards": "https://www.hatchards.co.uk/book/our-father/kiminou-knox/9798316682850",
       "bookshop": null,
       "bn": null
     }
@@ -41,11 +81,33 @@
     "isbn": "9798316662975",
     "datePublished": "2024-09-29",
     "cover": "/covers/kiminou-knox-poems-from-black-boy.jpg",
+    "samplePoems": [
+      {
+        "title": "Morning Mirrors",
+        "content": "I wake up Black\nevery morning,\ncheck the mirror\nto make sure\nit's still me\nlooking back.\n\nSome days I see my father's strength,\nmy mother's grace,\nmy grandmother's wisdom\nwoven into the curve\nof my smile,\nthe fire in my eyes.\n\nOther days I see the weight\nof expectations,\nthe burden of representation,\nthe beautiful responsibility\nof carrying ancestors' dreams\nin every step I take.\n\nBut every morning,\nI choose to see\nnot just survival,\nbut the art\nof becoming\nwho I was meant to be."
+      },
+      {
+        "title": "Heritage",
+        "content": "They tried to erase us\nfrom textbooks,\nredline us out of neighborhoods,\ncode-switch us\ninto silence.\n\nBut we are the children\nof people who turned\nscraps into feasts,\nsongs into resistance,\npain into power.\n\nWe carry kingdoms\nin our DNA,\ncarry rhythms\nolder than oppression,\ncarry light\nthat no darkness\ncan diminish.\n\nI am not broken.\nI am not angry.\nI am not less than.\n\nI am heir\nto a legacy\nof overcomers,\nand their strength\nruns through my veins\nlike liquid gold."
+      },
+      {
+        "title": "Future Tense",
+        "content": "To the Black boys\nwho come after me:\n\nYou are not a statistic.\nYou are not a threat.\nYou are not less than\nwhat they see\nwhen they look at you\nwith fear in their eyes.\n\nYou are possibility.\nYou are brilliance.\nYou are the answer\nto prayers your ancestors\nwhispered in the dark.\n\nWear your skin\nlike the crown it is.\nSpeak your truth\nlike the prophecy it is.\nLove yourself\nlike the revolution it is.\n\nThe world is waiting\nfor what only you\ncan give it.\n\nDon't keep us waiting\ntoo long."
+      }
+    ],
+    "themes": [
+      "Identity",
+      "Heritage",
+      "Resilience"
+    ],
     "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ",
       "goodreads": "https://www.goodreads.com/book/show/210495467-poems-from-a-black-boy",
+      "waterstones": "https://www.waterstones.com/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+      "hatchards": "https://www.hatchards.co.uk/book/poems-from-a-black-boy/kiminou-knox/9798316662975",
+      "booksAMillion": "https://www.booksamillion.com/p/Poems-Black-Boy/Kiminou-Knox/9798316662975",
       "bookshop": null,
       "bn": null
     }
@@ -58,11 +120,32 @@
     "isbn": "9798291608128",
     "datePublished": "2025-03-05",
     "cover": "/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+    "samplePoems": [
+      {
+        "title": "First Love",
+        "content": "You were my first lesson\nin what it means\nto give someone else\nthe power to make\nor break your day\nwith just a text message.\n\nI wrote your name\nin the margins\nof math notebooks,\npracticed saying\n'I love you'\nin the mirror\nuntil it sounded\nless like a prayer\nand more like a promise.\n\nYou taught me that hearts\ncan hold infinite love\nand infinite pain\nat the exact same time,\nthat seventeen\nis old enough\nto know forever\nand young enough\nto believe in it.\n\nThank you\nfor being my first\neverything,\neven the first\nto teach me\nhow to let go."
+      },
+      {
+        "title": "After You",
+        "content": "I'm learning to love\nthe sound of my own laugh\nwithout waiting\nfor your approval.\n\nI'm learning to make plans\nwithout checking\nif you're free first,\nto eat at restaurants\nwe never went to together,\nto listen to songs\nthat don't remind me\nof what we used to be.\n\nSlowly, carefully,\nI'm becoming someone\nwho doesn't need you\nto feel complete,\nthough I'm grateful\nfor the time\nwhen I did.\n\nLove taught me\nhow to open.\nLoss is teaching me\nhow to close\nthe things that need closing,\nhow to keep open\nthe things worth keeping.\n\nI'm keeping the way\nyou made me believe\nI was worthy of love.\nI'm closing the door\non needing you\nto prove it."
+      },
+      {
+        "title": "Hope is a Dangerous Thing",
+        "content": "Hope is a dangerous thing\nfor someone like me,\nsomeone who falls\nin love with possibilities,\nwho sees forever\nin a first kiss,\nwho writes wedding vows\nafter a second date.\n\nBut I'd rather be\nhopeless romantic\nthan hopeless cynic,\nrather believe too much\nthan believe too little,\nrather risk heartbreak\nthan risk never feeling\nthe particular magic\nof loving someone\nso completely\nthat their happiness\nbecomes your religion.\n\nSo yes,\nI'll keep believing\nin love at first sight,\nin soulmates,\nin happily ever after,\nin the kind of love\nthat writes itself\ninto poetry.\n\nBecause hope\nis the only thing\nmore dangerous\nthan love itself—\nand I'm addicted\nto both."
+      }
+    ],
+    "themes": [
+      "Love",
+      "Heartbreak",
+      "Healing"
+    ],
     "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
       "amazonUK": "https://www.amazon.co.uk/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ",
+      "waterstones": "https://www.waterstones.com/book/hopeless-romantic/kiminou-knox/9798291608128",
+      "hatchards": "https://www.hatchards.co.uk/book/hopeless-romantic/kiminou-knox/9798291608128",
       "bookshop": null,
       "bn": null
     },
@@ -76,10 +159,30 @@
     "isbn": "9798316735821",
     "datePublished": "2024-06-15",
     "cover": "/covers/kiminou-knox-boys-raised-in-silence.png",
+    "samplePoems": [
+      {
+        "title": "The Quiet",
+        "content": "We were taught to swallow pain\nlike bitter medicine,\nto smile through the ache,\nto carry burdens\nthat would break men twice our size.\n\nSilence was strength,\nthey said.\nTears were weakness.\nVulnerability was surrender.\n\nSo we learned to hide\nbehind masks of toughness,\nburied our emotions\nin unmarked graves,\nbuilt walls so high\neven we forgot\nwhat we were protecting.\n\nBut silence doesn't heal wounds.\nIt just lets them fester\nin the dark."
+      },
+      {
+        "title": "Breaking Point",
+        "content": "There comes a moment\nwhen the weight becomes too much,\nwhen the mask cracks,\nwhen the walls crumble,\nwhen silence\nfinally screams.\n\nFor me, it was midnight,\nalone in my room,\nrealizing that strength\nisn't about holding it all in—\nit's about having the courage\nto let it out.\n\nTo speak.\nTo cry.\nTo ask for help.\nTo admit\nthat I'm not okay,\nand that's okay."
+      },
+      {
+        "title": "Voice",
+        "content": "They tried to silence us\nwith expectations,\nwith stereotypes,\nwith the weight\nof what it means\nto be a man.\n\nBut our voices\nwere always there,\nwaiting beneath the surface,\nready to rise.\n\nNow I speak\nnot just for myself,\nbut for every boy\nwho was told to be quiet,\nevery man\nwho learned too late\nthat vulnerability\nis not the opposite of strength—\nit's the foundation."
+      }
+    ],
+    "themes": [
+      "Silence",
+      "Masculinity",
+      "Healing"
+    ],
     "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+      "waterstones": "https://www.waterstones.com/book/boys-raised-in-silence/kiminou-knox/9798316735821",
       "bookshop": null,
       "bn": null
     }
@@ -92,10 +195,51 @@
     "isbn": "9798316591204",
     "datePublished": "2025-01-20",
     "cover": "/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+    "samplePoems": [
+      {
+        "title": "The Beginning",
+        "content": "In a land where stories bloom like flowers,\nwhere wisdom grows on ancient trees,\ntwo friends embarked on a journey\nthat would change everything.\n\nKiminou the Great,\nwith courage in his heart\nand dreams too big for one world,\nmet Chua the Wise,\nwho saw the truth\nin every shadow,\nheard the lesson\nin every silence.\n\nTogether, they learned\nthat greatness and wisdom\nare not opposites—\nthey are partners\non the path to becoming."
+      },
+      {
+        "title": "The Lesson of the Mountain",
+        "content": "Kiminou wanted to climb the highest peak,\nto plant his flag at the summit,\nto prove his greatness to the world.\n\nBut Chua said,\n'The mountain does not need you\nto climb it.\nIt simply is.\nPerhaps the lesson\nis not in conquering,\nbut in appreciating.\nNot in reaching the top,\nbut in honoring the journey.'\n\nAnd Kiminou learned\nthat true greatness\nisn't about being seen—\nit's about seeing clearly."
+      },
+      {
+        "title": "The Gift of Friendship",
+        "content": "They say you cannot choose your family,\nbut you can choose your friends.\n\nKiminou and Chua chose each other,\nnot because they were alike,\nbut because they were different—\ndifferent in all the right ways.\n\nOne saw adventure where the other saw caution.\nOne saw possibility where the other saw danger.\nOne rushed forward while the other paused to think.\n\nAnd together,\nthey were unstoppable,\nbalanced,\ncomplete.\n\nBecause the greatest adventures\nare always better\nwhen shared with someone\nwho helps you see\nwhat you couldn't see alone."
+      }
+    ],
+    "themes": [
+      "Friendship",
+      "Growth",
+      "Adventure"
+    ],
     "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Poems from the Weight of Black Boyhood",
+    "year": 2025,
+    "isbn": "9798267606912",
+    "datePublished": "2025-01-01",
+    "cover": "/covers/kiminou-knox-black-boy-poems.svg",
+    "samplePoems": [],
+    "themes": [
+      "Identity",
+      "Blackness",
+      "Resilience"
+    ],
+    "description": "An unflinching collection tracing Black boyhood through identity, silence, trauma, and the unbreakable pursuit of joy.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Black-Boy-Poems-Kiminou-Knox/dp/B0FT4CQ9CH",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_In_Silence?id=pHuKEQAAQBAJ",
       "bookshop": null,
       "bn": null
     }
@@ -108,6 +252,12 @@
     "isbn": "",
     "datePublished": "2025-01-01",
     "cover": "/covers/kiminou-knox-world-of-imagination.png",
+    "samplePoems": [],
+    "themes": [
+      "Imagination",
+      "Children",
+      "Play"
+    ],
     "description": "A children's book about imagination, play, and the power of believing in what you can build.",
     "buyLinks": {
       "amazon": null,
