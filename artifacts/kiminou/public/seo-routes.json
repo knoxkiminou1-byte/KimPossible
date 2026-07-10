@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T23:06:54.893Z",
+  "generatedAt": "2026-07-10T00:01:48.527Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -48,7 +48,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -58,6 +58,12 @@
           "name": "Kiminou Knox | Athlete, Author, Speaker",
           "description": "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -65,7 +71,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -73,7 +79,7 @@
       "loc": "/about",
       "title": "About - Kiminou Knox",
       "description": "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
-      "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
       "keywords": [
         "Kiminou Knox biography",
         "Kiminou Knox about",
@@ -88,7 +94,7 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -97,7 +103,13 @@
           "url": "https://www.kiminouknox.com/about",
           "name": "About - Kiminou Knox",
           "description": "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
-          "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+            "caption": "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -105,7 +117,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -128,7 +140,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -138,6 +150,12 @@
           "name": "Works - Kiminou Knox",
           "description": "Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -145,7 +163,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -168,7 +186,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -178,6 +196,12 @@
           "name": "Kiminou Knox | Author Profile",
           "description": "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -185,7 +209,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -207,7 +231,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/legacy",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -217,6 +241,12 @@
           "name": "Legacy Timeline - Kiminou Knox",
           "description": "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -224,7 +254,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -247,7 +277,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -257,6 +287,12 @@
           "name": "Published Books - Kiminou Knox",
           "description": "Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy.",
           "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+            "caption": "Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -264,7 +300,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -286,7 +322,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books/universe",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -296,6 +332,12 @@
           "name": "Book Universe Map - Kiminou Knox",
           "description": "Every book by Kiminou Knox grouped by the world it belongs to: Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination.",
           "image": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png",
+            "caption": "Every book by Kiminou Knox grouped by the world it belongs to: Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -303,7 +345,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -327,7 +369,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -337,6 +379,12 @@
           "name": "Speaking & KimYaps Podcast - Kiminou Knox",
           "description": "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work, or tune into KimYaps podcast episodes.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work, or tune into KimYaps podcast episodes."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -344,7 +392,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -366,7 +414,7 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -376,6 +424,12 @@
           "name": "Contact - Kiminou Knox",
           "description": "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -383,7 +437,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -404,7 +458,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/now",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -414,6 +468,12 @@
           "name": "Now - Kiminou Knox",
           "description": "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -421,7 +481,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -443,7 +503,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -453,6 +513,12 @@
           "name": "Press & Recognition - Kiminou Knox",
           "description": "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Press, recognition, biography, official links, and media resources for Kiminou Knox."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -460,7 +526,52 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
+        }
+      ]
+    },
+    {
+      "loc": "/media",
+      "title": "Media Gallery - Kiminou Knox",
+      "description": "Approved media assets for Kiminou Knox: headshots, athletic photos, speaker photos, and book covers, available for download in high resolution.",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "keywords": [
+        "Kiminou Knox photos",
+        "Kiminou Knox media gallery",
+        "Kiminou Knox headshots"
+      ],
+      "sections": [
+        {
+          "heading": "Media Gallery",
+          "text": "Approved headshots, athletic photos, speaker photos, and book covers, free to use for press coverage and editorial mentions."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/media",
+      "lastmod": "2026-07-10",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/media#webpage",
+          "url": "https://www.kiminouknox.com/media",
+          "name": "Media Gallery - Kiminou Knox",
+          "description": "Approved media assets for Kiminou Knox: headshots, athletic photos, speaker photos, and book covers, available for download in high resolution.",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Approved media assets for Kiminou Knox: headshots, athletic photos, speaker photos, and book covers, available for download in high resolution."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -482,7 +593,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -492,6 +603,12 @@
           "name": "Sports & Athletics - Kiminou Knox",
           "description": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+            "caption": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -499,7 +616,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -521,7 +638,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports/recruiting",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -531,6 +648,12 @@
           "name": "Athlete Recruiting Packet - Kiminou Knox",
           "description": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
           "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+            "caption": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -538,7 +661,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -546,7 +669,7 @@
       "loc": "/portfolio",
       "title": "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
       "description": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
-      "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
       "keywords": [
         "Kiminou Knox portfolio",
         "author athlete entrepreneur",
@@ -560,7 +683,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -569,7 +692,13 @@
           "url": "https://www.kiminouknox.com/portfolio",
           "name": "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
           "description": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
-          "image": "https://www.kiminouknox.com/photos/kiminou-knox-08-outdoor-candid.jpg",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+            "caption": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -577,7 +706,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -600,7 +729,7 @@
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -610,6 +739,12 @@
           "name": "Author's Journal - Kiminou Knox | Essays & Writing",
           "description": "Essays and poems by Kiminou Knox on faith, identity, love, discipline, writing, basketball, and Black boy life.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Essays and poems by Kiminou Knox on faith, identity, love, discipline, writing, basketball, and Black boy life."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -617,7 +752,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -639,7 +774,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-07-09",
+      "lastmod": "2026-07-10",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -649,6 +784,12 @@
           "name": "Reading List - Kiminou Knox | Books Worth Your Time",
           "description": "Kiminou Knox's reading list across faith, discipline, basketball, Black literature, writing craft, and creative growth.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Kiminou Knox's reading list across faith, discipline, basketball, Black literature, writing craft, and creative growth."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -656,7 +797,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-09"
+          "dateModified": "2026-07-10"
         }
       ]
     },
@@ -725,6 +866,12 @@
           "name": "The Spirit of Solomon - Kiminou Knox | Poetry Collection",
           "description": "The Spirit of Solomon by Kiminou Knox. What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg",
+            "caption": "The Spirit of Solomon by Kiminou Knox. What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -829,6 +976,12 @@
           "name": "Our Father? - Kiminou Knox | Poetry Collection",
           "description": "Our Father? by Kiminou Knox. A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg",
+            "caption": "Our Father? by Kiminou Knox. A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -936,6 +1089,12 @@
           "name": "Poems from a Black Boy - Kiminou Knox | Poetry Collection",
           "description": "Poems from a Black Boy by Kiminou Knox. Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg",
+            "caption": "Poems from a Black Boy by Kiminou Knox. Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1043,6 +1202,12 @@
           "name": "Hopeless Romantic - Kiminou Knox | Poetry Collection",
           "description": "Hopeless Romantic by Kiminou Knox. Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg",
+            "caption": "Hopeless Romantic by Kiminou Knox. Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1147,6 +1312,12 @@
           "name": "Boys Raised in Silence - Kiminou Knox | Poetry Collection",
           "description": "Boys Raised in Silence by Kiminou Knox. Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+            "caption": "Boys Raised in Silence by Kiminou Knox. Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1248,6 +1419,12 @@
           "name": "The Adventures of Kiminou the Great and Chua the Wise - Kiminou Knox | Poetry Collection",
           "description": "The Adventures of Kiminou the Great and Chua the Wise by Kiminou Knox. A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+            "caption": "The Adventures of Kiminou the Great and Chua the Wise by Kiminou Knox. A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1344,6 +1521,12 @@
           "name": "Black Boy Poems - Kiminou Knox | Poetry Collection",
           "description": "Black Boy Poems by Kiminou Knox. Poems from the Weight of Black Boyhood. An unflinching collection tracing Black boyhood through identity, silence, trauma, and the unbreakable pursuit of joy.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg",
+            "caption": "Black Boy Poems by Kiminou Knox. Poems from the Weight of Black Boyhood. An unflinching collection tracing Black boyhood through identity, silence, trauma, and the unbreakable pursuit of joy."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1437,6 +1620,12 @@
           "name": "Kiminou's World of Imagination: The Basics - Kiminou Knox | Poetry Collection",
           "description": "Kiminou's World of Imagination: The Basics by Kiminou Knox. A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png",
+            "caption": "Kiminou's World of Imagination: The Basics by Kiminou Knox. A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1533,6 +1722,12 @@
           "name": "The Lie I Was Told About Discipline - Kiminou Knox",
           "description": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Discipline is not about wanting to. Discipline is about doing it anyway when the return is not visible yet."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1635,6 +1830,12 @@
           "name": "On Love That Does Not Perform - Kiminou Knox",
           "description": "I keep writing about love because I keep trying to understand it as practice, not performance.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "I keep writing about love because I keep trying to understand it as practice, not performance."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1737,6 +1938,12 @@
           "name": "Eight Books Before Twenty: Why I Could Not Stop - Kiminou Knox",
           "description": "I am nineteen. I have eight published books. The real answer is that I could not stop.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "I am nineteen. I have eight published books. The real answer is that I could not stop."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1839,6 +2046,12 @@
           "name": "What I Mean When I Write About Faith - Kiminou Knox",
           "description": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Faith in my work is not decoration. It is the wound I keep returning to because it has not resolved."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -1941,6 +2154,12 @@
           "name": "The Court and the Page Are the Same Discipline - Kiminou Knox",
           "description": "People ask how I balance basketball and writing. I do not. They have never been separate.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "People ask how I balance basketball and writing. I do not. They have never been separate."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },
@@ -2043,6 +2262,12 @@
           "name": "What Black Boys Are Not Allowed to Feel - Kiminou Knox",
           "description": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it.",
           "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "There is a performance tax placed on Black boys before they ever learn to speak. This is me refusing to keep paying it."
+          },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
           },

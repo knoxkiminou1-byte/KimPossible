@@ -92,7 +92,7 @@ const creativeWorkSchema = {
 };
 
 const pressImages = [
-  KIMINOU_IMAGES.bwPortrait,
+  KIMINOU_IMAGES.officialHeadshot,
   KIMINOU_IMAGES.casualOutdoorPortrait,
   KIMINOU_IMAGES.taunHallEvent,
 ];
@@ -214,6 +214,11 @@ export default function Press() {
                 </Reveal>
               ))}
             </div>
+            <Reveal delay={0.3} className="mt-8">
+              <Link href="/media" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/70 hover:text-amber-300 transition-colors duration-300">
+                View Full Media Gallery &amp; Book Covers →
+              </Link>
+            </Reveal>
           </div>
         </section>
 

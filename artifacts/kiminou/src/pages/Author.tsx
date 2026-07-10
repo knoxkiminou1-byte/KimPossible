@@ -341,8 +341,8 @@ export default function Author() {
               <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
-                    src="/photos/kiminou-knox-bw-portrait.png"
-                    alt="Kiminou Knox black and white author portrait"
+                    src={KIMINOU_IMAGES.casualOutdoorPortrait.src}
+                    alt={KIMINOU_IMAGES.casualOutdoorPortrait.alt}
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
