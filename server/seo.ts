@@ -33,7 +33,7 @@ type SeoData = {
 };
 
 const SITE_URL = "https://www.kiminouknox.com";
-const LASTMOD = "2026-05-29";
+const LASTMOD = "2026-07-16";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 const PERSON_ID = `${SITE_URL}/#person`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -136,6 +136,34 @@ export const proofLinks: ProofLink[] = [
 ];
 
 const books: BookSeo[] = [
+  {
+    id: "why-did-you-ghost-me",
+    title: "WHY DID YOU GHOST ME",
+    subtitle: "Poems from a Ghosted Lover",
+    year: 2026,
+    datePublished: "2026-07-15",
+    cover: "/covers/why-did-you-ghost-me.jpg",
+    description:
+      "A poetry collection about disappearance, unanswered messages, closure, silence, and the uncomfortable turn when the person who was left becomes the person leaving.",
+    buyLinks: {
+      amazon: "https://www.amazon.com/WHY-DID-YOU-GHOST-ME-ebook/dp/B0H8XZ7N6K",
+      googleBooks: "https://play.google.com/store/books/details?id=zB_1EQAAQBAJ",
+    },
+  },
+  {
+    id: "7-16-74-an-ode-to-rashida",
+    title: "7.16.74",
+    subtitle: "An Ode to Rashida",
+    year: 2026,
+    datePublished: "2026-07-16",
+    cover: "/covers/7-16-74-an-ode-to-rashida.jpg",
+    description:
+      "A poetry collection honoring Rashida Knox through fifty-two poems about love, family, music, protection, influence, and legacy.",
+    buyLinks: {
+      amazon: "https://www.amazon.com/dp/B0H92Q6PM2",
+      googleBooks: "https://play.google.com/store/books/details?id=MTv1EQAAQBAJ",
+    },
+  },
   {
     id: "spirit-solomon",
     title: "The Spirit of Solomon",

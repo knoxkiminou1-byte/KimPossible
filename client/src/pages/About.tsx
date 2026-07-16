@@ -102,7 +102,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                The work now spans an eight-title authored book catalog, chief-editor credits on client book projects, KimYaps, Medium essays, AAFC program work, AAFC Builders, athletics, speaking, and community-facing creative work. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
+                The work now spans an author catalog of 10 published works, chief-editor credits on client book projects, KimYaps, Medium essays, AAFC program work, AAFC Builders, athletics, speaking, and community-facing creative work. I try to keep the same standard in each space: prepare seriously, stay close to the people I serve, and finish what I start.
               </p>
 
               <p data-testid="about-family">
@@ -114,7 +114,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My featured book titles include Kiminou's World of Imagination: The Basics, Poems from a Black Boy, Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am continuing to build those books into a larger body of poems, stories, essays, readings, and media.
+                Kiminou Knox is the author of 10 published works. His catalog includes Kiminou's World of Imagination: The Basics, Poems from a Black Boy, Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, The Adventures of Kiminou the Great and Chua the Wise, WHY DID YOU GHOST ME, and 7.16.74: An Ode to Rashida. He is continuing to build those books into a larger body of poems, stories, essays, readings, and media.
               </p>
 
               <p data-testid="about-speaking">
@@ -127,7 +127,7 @@ export default function About() {
                   <div><dt className="font-semibold">From</dt><dd>Oakland / East Palo Alto community</dd></div>
                   <div><dt className="font-semibold">Roles</dt><dd>Writer, Athlete, Program Builder, Author, Chief Editor, Podcast Host, Creator</dd></div>
                   <div><dt className="font-semibold">Known for</dt><dd>Books, KimYaps, Medium essays, AAFC, AAFC Builders, web design, athletics</dd></div>
-                  <div><dt className="font-semibold">Authored catalog</dt><dd>Eight featured authored books</dd></div>
+                  <div><dt className="font-semibold">Authored catalog</dt><dd>10 published works</dd></div>
                   <div><dt className="font-semibold">Editorial credits</dt><dd>Rhythm & Roux and Voicing The Lens as chief-editor/client book projects</dd></div>
                   <div><dt className="font-semibold">Recognition</dt><dd>Miles Hall Foundation / Breaking Barriers essay recognition</dd></div>
                 </dl>
