@@ -174,4 +174,28 @@
       <image:caption>Kiminou&apos;s World of Imagination: The Basics book cover by Kiminou Knox.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/our-father-father-where-are-you</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
+      <image:title>Our Father? by Kiminou Knox</image:title>
+      <image:caption>Our Father? book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/why-did-you-ghost-me</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/why-did-you-ghost-me.jpg</image:loc>
+      <image:title>WHY DID YOU GHOST ME by Kiminou Knox</image:title>
+      <image:caption>WHY DID YOU GHOST ME book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/7-16-74-an-ode-to-rashida</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/7-16-74-an-ode-to-rashida.jpg</image:loc>
+      <image:title>7.16.74 by Kiminou Knox</image:title>
+      <image:caption>7.16.74 book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
 </urlset>

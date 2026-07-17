@@ -114,7 +114,7 @@ export default function Podcast() {
             <h2 className="font-serif text-2xl text-white mb-5">About the Show</h2>
             <div className="w-8 h-px bg-amber-400/40 mb-7" />
             <p className="text-white/55 leading-relaxed mb-4">
-              KimYaps started as a simple idea: what if we actually talked about the things we're all feeling but pretending not to? Kiminou Knox brings his voice as an eight-time published author, athlete, and youth leader to real conversations — no filter, no performance.
+              KimYaps started as a simple idea: what if we actually talked about the things we're all feeling but pretending not to? Kiminou Knox brings his voice as the author of 10 published works, an athlete, and a youth leader to real conversations — no filter, no performance.
             </p>
             <p className="text-white/55 leading-relaxed">
               Topics range from masculinity and mental health to faith, relationships, and what it means to grow up Black in America today. New episodes drop monthly.

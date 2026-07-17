@@ -139,12 +139,12 @@ export default function BooksPage() {
     <>
       <Helmet>
         <title>Books by Kiminou Knox — Poetry Collections & Published Works</title>
-        <meta name="description" content="Explore all 8 published works by Kiminou Knox including poetry collections on faith, identity, love, Black boyhood, and finding voice. Available on Amazon and Google Books." />
+        <meta name="description" content="Explore all 10 published works by Kiminou Knox, including poetry and children's storytelling on faith, identity, love, Black boyhood, family, imagination, and legacy. Available on Amazon and Google Play Books." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/books" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Books by Kiminou Knox — Poetry Collections & Published Works" />
-        <meta property="og:description" content="8 published poetry collections on faith, identity, love, and Black boyhood. Available on Amazon, Google Books, and more." />
+        <meta property="og:description" content="10 published works on faith, identity, love, Black boyhood, family, imagination, and legacy. Available on Amazon and Google Play Books." />
         <meta property="og:url" content="https://www.kiminouknox.com/books" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />

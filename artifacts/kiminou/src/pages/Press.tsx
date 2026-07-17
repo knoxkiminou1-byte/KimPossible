@@ -33,7 +33,6 @@ const verificationGroups = [
     items: [
       { name: "Amazon Author Store", desc: "Author storefront and retail listings", url: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
       { name: "Goodreads Author Profile", desc: "Reader-facing author profile and book records, including numeric public author ID", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
-      { name: "Black Boy Poems on Bookshop.org", desc: "Paperback listing with publisher, date, pages, format, and EAN", url: "https://bookshop.org" },
       { name: "Google Play Books Listings", desc: "Search results for Kiminou Knox books on Google", url: "https://play.google.com" },
     ],
   },
@@ -68,7 +67,6 @@ const verificationGroups = [
       { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
       { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
-      { name: "Instagram", desc: "Public social profile. @kiminouknox.", url: "https://www.instagram.com/kiminouknox" },
     ],
   },
 ];
@@ -350,39 +348,45 @@ Generated: ${new Date().toLocaleDateString("en-US", { month: "long", day: "numer
 
 ABOUT KIMINOU KNOX
 ──────────────────
-Kiminou Knox is a 19-year-old author, NCAA-registered athlete, entrepreneur, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
+Kiminou Knox is an author, NCAA-registered athlete, entrepreneur, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
 
 Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee Williams and Elisha Bonepart McNair.
 
 SHORT BIO (50 words)
 ─────────────────────
-Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. Eight published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
+Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. He is the author of 10 published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
 
 PUBLISHED WORKS
 ───────────────
-1. The Spirit of Solomon (2025) — ISBN 9798316662975
-   What is Love To A Man Made To Destroy It
-   Amazon: https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK
+1. Kiminou's World of Imagination: The Basics
 
-2. Our Father? (2025) — ISBN 9798316682850
-   A Poetic Journey Through Faith, Doubt, and Divine Silence
-   Amazon: https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4
+2. The Adventures of Kiminou the Great and Chua the Wise
+   Amazon: https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5
 
-3. Poems from a Black Boy (2024) — ISBN 9798316662975
-   Identity, Heritage, and Hope
+3. Poems From A Black Boy
    Amazon: https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2
 
-4. Hopeless Romantic (2025) — ISBN 9798291608128
-   Love, Loss, and Everything Between
-   Amazon: https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N
-
-5. Boys Raised in Silence (2024) — ISBN 9798316735821
-   Breaking the Quiet, Finding Voice
+4. Boys Raised In Silence
    Amazon: https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM
 
-6. The Adventures of Kiminou the Great and Chua the Wise (2025)
-   ISBN 9798316591204
-   Amazon: https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5
+5. The Spirit of Solomon
+   Amazon: https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK
+
+6. Hopeless Romantic
+   Amazon: https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N
+
+7. Our Father?: A Poetic Journey Through Faith, Doubt, and Divine Silence
+
+8. Our Father?: Father Where Are You
+   Amazon: https://www.amazon.com/dp/B0F3VBVWCM
+
+9. WHY DID YOU GHOST ME: Poems from a Ghosted Lover
+   Amazon: https://www.amazon.com/dp/B0H8XZ7N6K
+   Google Play: https://play.google.com/store/books/details?id=zB_1EQAAQBAJ
+
+10. 7.16.74: An Ode to Rashida
+    Amazon: https://www.amazon.com/dp/B0H92Q6PM2
+    Google Play: https://play.google.com/store/books/details?id=MTv1EQAAQBAJ
 
 ATHLETIC PROFILE
 ────────────────
@@ -409,7 +413,6 @@ RECOGNITION
 MEDIA & DIGITAL PRESENCE
 ─────────────────────────
 Website: https://www.kiminouknox.com
-Instagram: @kiminouknox
 Twitter/X: @KnoxKiminou
 YouTube: https://www.youtube.com/@KiminouKnoxOfficial
 Medium: https://medium.com/@knoxkiminou1
@@ -425,7 +428,7 @@ Booking & Speaking Inquiries: https://www.kiminouknox.com/contact
 Official Site: https://www.kiminouknox.com
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-© 2025 Kiminou Knox. All rights reserved.
+© 2026 Kiminou Knox. All rights reserved.
 Press assets and headshots available on request via email.`;
 
                       const blob = new Blob([kit], { type: "text/plain;charset=utf-8" });

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { Instagram, Twitter, ExternalLink, BookOpen, Trophy, Mic, Mail, Globe, FileText, ChevronDown } from "lucide-react";
+import { Twitter, ExternalLink, BookOpen, Trophy, Mic, Mail, Globe, FileText, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,11 +12,11 @@ const caseStudies = [
   {
     category: "Author",
     title: "The Black Boy Lie Universe",
-    sub: "8 title authored book catalog",
-    desc: "A literary universe centered on the interior lives of Black boys and young Black men. Poetry, psychological fiction, children's storybooks, and prophetic reflection. All built before age 19.",
-    detail: "Titles: Poems From A Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, Kiminou's World of Imagination: The Basics, and The Adventures of Kiminou the Great and Chua the Wise.",
+    sub: "10-work authored catalog",
+    desc: "A literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy across poetry and children's storytelling.",
+    detail: "Ten published works, including Poems From A Black Boy, Hopeless Romantic, The Spirit of Solomon, two Our Father? works, Boys Raised In Silence, Kiminou's World of Imagination, The Adventures of Kiminou the Great and Chua the Wise, WHY DID YOU GHOST ME, and 7.16.74.",
     tags: ["Poetry", "Fiction", "Children's"],
-    metric: "8",
+    metric: "10",
     metricLabel: "Published Works",
     link: "/books",
     cta: "View All Books",
@@ -91,13 +91,15 @@ const caseStudies = [
 
 const books = [
   { title: "The Spirit of Solomon", year: 2025, genre: "Poetry", isbn: "9789316882975" },
-  { title: "Our Father?", year: 2025, genre: "Poetry", isbn: "9789316882850" },
+  { title: "Our Father?: A Poetic Journey Through Faith, Doubt, and Divine Silence", year: 2025, genre: "Poetry", isbn: "9789316882850" },
+  { title: "Our Father?: Father Where Are You", year: 2025, genre: "Poetry", isbn: "" },
   { title: "Poems From A Black Boy", year: 2025, genre: "Poetry", isbn: "" },
-  { title: "Black Boy Poems", year: 2025, genre: "Poetry", isbn: "9789826769012" },
   { title: "Hopeless Romantic", year: 2025, genre: "Poetry", isbn: "9789291508128" },
   { title: "Boys Raised In Silence", year: 2025, genre: "Poetry", isbn: "9789316735821" },
   { title: "Kiminou's World of Imagination: The Basics", year: 2026, genre: "Children's", isbn: "" },
   { title: "The Adventures of Kiminou the Great and Chua the Wise", year: 2025, genre: "Children's", isbn: "9789316591204" },
+  { title: "WHY DID YOU GHOST ME: Poems from a Ghosted Lover", year: 2026, genre: "Poetry", isbn: "" },
+  { title: "7.16.74: An Ode to Rashida", year: 2026, genre: "Poetry", isbn: "" },
 ];
 
 const QUICK_FACTS = [
@@ -107,7 +109,6 @@ const QUICK_FACTS = [
 ];
 
 const socials = [
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/kiminouknox", handle: "@kiminouknox" },
   { icon: Twitter, label: "Twitter / X", href: "https://x.com/KnoxKiminou", handle: "@KnoxKiminou" },
 ];
 
@@ -208,18 +209,18 @@ export default function Portfolio() {
     <>
       <Helmet>
         <title>Kiminou Knox | Portfolio — Author, Athlete, Builder & Entrepreneur</title>
-        <meta name="description" content="The full portfolio of Kiminou Knox — 8 published books, NCAA basketball athlete, public speaker, AAFC Builders founder, and youth leader from the Bay Area." />
+        <meta name="description" content="The full portfolio of Kiminou Knox — author of 10 published works, NCAA basketball athlete, public speaker, AAFC Builders founder, and youth leader from the Bay Area." />
         <link rel="canonical" href="https://www.kiminouknox.com/portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kiminouknox.com/portfolio" />
         <meta property="og:title" content="Kiminou Knox | Portfolio — Author, Athlete & Builder" />
-        <meta property="og:description" content="8 published books, NCAA athlete, public speaker, and AAFC Builders founder. The complete work of Kiminou Knox." />
+        <meta property="og:description" content="10 published works, NCAA athlete, public speaker, and AAFC Builders founder. The complete work of Kiminou Knox." />
         <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KiminouKnox" />
         <meta name="twitter:title" content="Kiminou Knox | Portfolio" />
-        <meta name="twitter:description" content="8 published books, NCAA athlete, public speaker, AAFC Builders founder." />
+        <meta name="twitter:description" content="10 published works, NCAA athlete, public speaker, and AAFC Builders founder." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
       </Helmet>
       <Header />

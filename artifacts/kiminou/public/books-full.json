@@ -115,5 +115,55 @@
       "bookshop": null,
       "bn": null
     }
+  },
+  {
+    "id": "our-father-father-where-are-you",
+    "title": "Our Father?",
+    "subtitle": "Father Where Are You",
+    "year": 2025,
+    "isbn": "",
+    "datePublished": "2025-04-06",
+    "cover": "/covers/kiminou-knox-our-father-poetry.jpg",
+    "description": "A search for faith, fatherhood, and presence when answers remain out of reach.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0F3VBVWCM",
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "why-did-you-ghost-me",
+    "title": "WHY DID YOU GHOST ME",
+    "subtitle": "Poems from a Ghosted Lover",
+    "year": 2026,
+    "isbn": "",
+    "datePublished": "2026-07-15",
+    "cover": "/covers/why-did-you-ghost-me.jpg",
+    "description": "Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0H8XZ7N6K",
+      "googleBooks": "https://play.google.com/store/books/details?id=zB_1EQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "7-16-74-an-ode-to-rashida",
+    "title": "7.16.74",
+    "subtitle": "An Ode to Rashida",
+    "year": 2026,
+    "isbn": "",
+    "datePublished": "2026-07-16",
+    "cover": "/covers/7-16-74-an-ode-to-rashida.jpg",
+    "description": "A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0H92Q6PM2",
+      "googleBooks": "https://play.google.com/store/books/details?id=MTv1EQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
   }
 ]

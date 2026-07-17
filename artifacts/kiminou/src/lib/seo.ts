@@ -1,7 +1,7 @@
 export const SITE_NAME = "Kiminou Knox";
 export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox — eight-time published author, NCAA-registered athlete, speaker, and podcast host from the Bay Area.";
+  "Official website of Kiminou Knox — author of 10 published works, NCAA-registered athlete, speaker, and podcast host from the Bay Area.";
 export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
 export const SITE_PERSON_IMAGE =
   "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
@@ -18,7 +18,6 @@ export const SITE_SAME_AS = [
   SITE_MEDIUM_PROFILE,
   SITE_GOODREADS_PROFILE,
   "https://x.com/KnoxKiminou",
-  "https://www.instagram.com/kiminouknox",
   SITE_YOUTUBE,
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
@@ -63,7 +62,7 @@ export function personSchema() {
         },
         jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
         description:
-          "Kiminou Knox is an eight-time published poet, NCAA-registered basketball and football athlete, speaker, and podcast host from the Bay Area of California. Creator of the Black Boy Lie universe.",
+          "Kiminou Knox is the author of 10 published works, a Bay Area poet, NCAA-registered basketball and football athlete, speaker, and podcast host. Creator of the Black Boy Lie universe.",
         birthPlace: {
           "@type": "Place",
           name: "Bay Area, California",

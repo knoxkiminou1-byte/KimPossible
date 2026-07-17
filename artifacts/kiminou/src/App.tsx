@@ -37,7 +37,7 @@ const ReadingList = lazy(() => import("@/pages/ReadingList"));
 
 const POEM_FRAGMENTS = [
   "They called me wise before I learned what wisdom cost.",
-  "Black boy. Bay Area. Eight books before twenty.",
+  "Black boy. Bay Area. Author of 10 published works.",
   "Faith is the question and the answer in the same breath.",
   "The court and the page demand the same thing — truth.",
   "I write from silence. I play from fire.",
