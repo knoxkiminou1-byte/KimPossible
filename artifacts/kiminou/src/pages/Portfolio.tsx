@@ -249,7 +249,7 @@ export default function Portfolio() {
                   <span className="px-3 py-1.5 border border-amber-400/25 text-xs uppercase tracking-[0.2em] text-amber-400/70">Bay Area</span>
                   <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Class of 2025</span>
                   <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">NCAA Eligible</span>
-                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">8 Books Published</span>
+                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">10 Works Published</span>
                 </div>
               </motion.div>
 

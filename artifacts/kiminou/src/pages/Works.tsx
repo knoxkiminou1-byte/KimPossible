@@ -48,20 +48,20 @@ export default function Works() {
   return (
     <>
       <Helmet>
-        <title>Works - Kiminou Knox</title>
-        <meta name="description" content="Books by Kiminou Knox: Poems from a Black Boy, Black Boy Poems, Hopeless Romantic, The Spirit of Solomon, Our Father?, Boys Raised in Silence, The Adventures of Kiminou the Great and Chua the Wise, and Kiminou's World of Imagination." />
+        <title>10 Published Works by Kiminou Knox</title>
+        <meta name="description" content="Explore all 10 published works by Kiminou Knox, including The Spirit of Solomon, Poems From A Black Boy, Boys Raised In Silence, WHY DID YOU GHOST ME, and 7.16.74: An Ode to Rashida." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Works - Kiminou Knox" />
-        <meta property="og:description" content="Published works and books by writer Kiminou Knox" />
+        <meta property="og:title" content="10 Published Works by Kiminou Knox" />
+        <meta property="og:description" content="The official 10-work catalog of author and poet Kiminou Knox." />
         <meta property="og:url" content="https://www.kiminouknox.com/works" />
         <meta property="og:image" content="https://www.kiminouknox.com/og/works.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Works - Kiminou Knox" />
-        <meta name="twitter:description" content="Published books and poetry collections" />
+        <meta name="twitter:title" content="10 Published Works by Kiminou Knox" />
+        <meta name="twitter:description" content="The official 10-work catalog of author and poet Kiminou Knox." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/og/works.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(
@@ -88,7 +88,7 @@ export default function Works() {
               Works
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Poetry collections and stories exploring faith identity love and the Black experience
+              The official catalog of 10 poetry collections and stories exploring faith, identity, love, family, imagination, and the Black experience.
             </p>
           </div>
 

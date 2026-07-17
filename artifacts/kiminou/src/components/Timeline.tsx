@@ -51,15 +51,6 @@ const timelineEvents: TimelineEvent[] = [
     image: KIMINOU_IMAGES.basketballWarmupSmile.src
   },
   {
-    year: "2022",
-    title: "Literary Expansion",
-    description: "Released Our Father, Black Boy Poems, and Boys Raised in Silence, exploring faith, identity, and experience",
-    achievement: "Four Books Published",
-    category: "literary",
-    icon: <Book className="w-5 h-5" />,
-    image: KIMINOU_IMAGES.chessStrategy.src
-  },
-  {
     year: "2023", 
     title: "The Tee Shirt Teens",
     description: "Founded fashion brand focused on youth culture and authentic expression",
@@ -87,15 +78,6 @@ const timelineEvents: TimelineEvent[] = [
     image: KIMINOU_IMAGES.footballLockerRoom.src
   },
   {
-    year: "2024",
-    title: "Hopeless Romantic and Kiminou the Great",
-    description: "Released Hopeless Romantic and The Adventures of Kiminou the Great and Chua the Wise, showcasing emotional depth and creative storytelling",
-    achievement: "Eight Books Published",
-    category: "literary",
-    icon: <Book className="w-5 h-5" />,
-    image: KIMINOU_IMAGES.chessStrategy.src
-  },
-  {
     year: "2025",
     title: "Senior Year Excellence",
     description: "Graduating class of 2025, balancing athletics, academics, business, and creative writing",
@@ -103,6 +85,24 @@ const timelineEvents: TimelineEvent[] = [
     category: "personal",
     icon: <Star className="w-5 h-5" />,
     image: KIMINOU_IMAGES.footballMediaDay.src
+  },
+  {
+    year: "2025",
+    title: "Literary Expansion",
+    description: "The catalog expands to eight published works, including Our Father?, Poems From A Black Boy, and Boys Raised In Silence",
+    achievement: "Eight Works Published",
+    category: "literary",
+    icon: <Book className="w-5 h-5" />,
+    image: KIMINOU_IMAGES.chessStrategy.src
+  },
+  {
+    year: "2026",
+    title: "Ten Published Works",
+    description: "The official catalog reaches 10 works with WHY DID YOU GHOST ME and 7.16.74: An Ode to Rashida",
+    achievement: "Ten Works Published",
+    category: "literary",
+    icon: <Book className="w-5 h-5" />,
+    image: KIMINOU_IMAGES.chessStrategy.src
   }
 ];
 

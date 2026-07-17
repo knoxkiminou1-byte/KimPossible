@@ -4,7 +4,7 @@ import path from "node:path";
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox, an athlete, author, speaker, and creative voice from the Bay Area.";
+  "Official website of Kiminou Knox, author of 10 published works, athlete, speaker, podcast host, and creative voice from the Bay Area.";
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
 const KIMINOU_PHOTOS = {
   officialHeadshot: {
@@ -75,10 +75,10 @@ const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-  "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+  "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+  "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://x.com/KnoxKiminou",
-  "https://x.com/KiminouKnox",
   "https://www.youtube.com/@KiminouKnoxOfficial",
   "https://about.me/kiminou",
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
@@ -339,11 +339,11 @@ const baseRouteMeta = [
   },
   {
     loc: "/works",
-    title: "Works - Kiminou Knox",
+    title: "10 Published Works by Kiminou Knox",
     description:
-      "Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood.",
+      "The official 10-work catalog by Kiminou Knox, including poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy.",
     image: "/kiminou-knox-social-share.png",
-    keywords: ["Kiminou Knox books", "Kiminou Knox works", "poetry books", "Black boy poems"],
+    keywords: ["Kiminou Knox books", "Kiminou Knox works", "poetry books", "Poems From A Black Boy"],
     sections: [
       {
         heading: "Works",
