@@ -13,6 +13,7 @@ import {
   SITE_FEED,
   SITE_GOODREADS_PROFILE,
   SITE_MEDIUM_PROFILE,
+  SITE_PODCAST_APPLE,
   SITE_URL,
 } from "@/lib/seo";
 import { blogCategories, publishedBlogPosts } from "@/content/blogContent";
@@ -219,7 +220,7 @@ function ExternalWritingSection() {
     {
       label: "Podcast",
       title: "KimYaps",
-      href: "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308",
+      href: SITE_PODCAST_APPLE,
       text: "Audio reflections from Kiminou Knox on faith, identity, pressure, and real life.",
     },
     {
@@ -422,7 +423,7 @@ export default function Blog() {
       "name": "Kiminou Knox",
       "url": "https://www.kiminouknox.com"
     },
-    "sameAs": [SITE_MEDIUM_PROFILE, SITE_GOODREADS_PROFILE, "https://podcasts.apple.com/si/podcast/kimyaps/id1850364308"],
+    "sameAs": [SITE_MEDIUM_PROFILE, SITE_GOODREADS_PROFILE, SITE_PODCAST_APPLE],
     "blogPost": posts.slice(0, 6).map((post) => ({
       "@type": "BlogPosting",
       "headline": post.title,

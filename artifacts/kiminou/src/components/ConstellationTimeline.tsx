@@ -31,13 +31,6 @@ const MILESTONES = [
     x: 62, y: 48,
   },
   {
-    year: "2022",
-    title: "Four Books Published",
-    detail: "Our Father, Poems from a Black Boy, and two more — exploring faith, identity, love.",
-    category: "literary",
-    x: 38, y: 75,
-  },
-  {
     year: "2023",
     title: "The Tee Shirt Teens",
     detail: "Founds his own fashion brand rooted in youth culture and authentic expression.",
@@ -52,11 +45,11 @@ const MILESTONES = [
     x: 18, y: 82,
   },
   {
-    year: "2024",
-    title: "Eight Books Published",
-    detail: "Hopeless Romantic and Kiminou the Great complete a 7-book literary universe.",
+    year: "2025",
+    title: "Eight Published Works",
+    detail: "The catalog expands with Our Father?, Poems From A Black Boy, Boys Raised In Silence, and other works.",
     category: "literary",
-    x: 85, y: 65,
+    x: 38, y: 75,
   },
   {
     year: "2025",
@@ -64,6 +57,13 @@ const MILESTONES = [
     detail: "Class of 2025. Athlete. Author. Entrepreneur. The next chapter begins.",
     category: "personal",
     x: 52, y: 88,
+  },
+  {
+    year: "2026",
+    title: "Ten Published Works",
+    detail: "WHY DID YOU GHOST ME and 7.16.74: An Ode to Rashida bring the official catalog to 10 works.",
+    category: "literary",
+    x: 85, y: 65,
   },
 ];
 

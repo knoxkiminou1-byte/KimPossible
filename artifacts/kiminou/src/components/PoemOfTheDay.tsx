@@ -49,7 +49,7 @@ export default function PoemOfTheDay() {
   const [poem, setPoem] = useState<Poem>({
     title: "Rising",
     text: "Every morning I decide\nTo stand when I could fall\nTo speak when I could hide\nTo answer destiny's call\n\nNot perfect, not without fear\nBut present, here, awake\nEach day another year\nOf choices that I make",
-    sourceBook: "Black Boy Poems",
+    sourceBook: "Poems From A Black Boy",
     rating: "General",
   });
 

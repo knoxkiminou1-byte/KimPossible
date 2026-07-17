@@ -12,6 +12,7 @@ export const SITE_GOODREADS_PROFILE =
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox";
 export const SITE_PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 export const SITE_PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
+export const SITE_PODCAST_RSS = "https://api.riverside.fm/hosting/Qs2CJYe0.rss";
 export const SITE_YOUTUBE = "https://www.youtube.com/@KiminouKnoxOfficial";
 
 export const SITE_SAME_AS = [
@@ -127,8 +128,9 @@ export function podcastSchema() {
     name: "KimYaps",
     description:
       "KimYaps is a podcast by Kiminou Knox — honest conversations about navigating pain, finding purpose, and giving yourself (and others) a little extra grace.",
-    url: SITE_PODCAST_APPLE,
-    webFeed: SITE_PODCAST_SPOTIFY,
+    url: `${SITE_URL}/podcast`,
+    webFeed: SITE_PODCAST_RSS,
+    sameAs: [SITE_PODCAST_APPLE, SITE_PODCAST_SPOTIFY, SITE_YOUTUBE],
     author: { "@id": `${SITE_URL}/#person` },
     inLanguage: "en",
     image: SITE_PERSON_IMAGE,
