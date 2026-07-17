@@ -50,7 +50,6 @@ const sameAsLinks = [
   "https://about.me/kiminou",
   "https://stan.store/kiminou",
   "https://www.wikidata.org/wiki/Q137260299",
-  "https://www.instagram.com/kiminouknox",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
 ];
@@ -118,13 +117,6 @@ export const proofLinks: ProofLink[] = [
     url: "https://www.linkedin.com/in/kiminou-knox-50691a394/",
     category: "Profiles",
     description: "Professional profile for Kiminou Knox.",
-  },
-  {
-    name: "Instagram Profile",
-    source: "Instagram",
-    url: "https://www.instagram.com/kiminouknox",
-    category: "Profiles",
-    description: "Public social profile.",
   },
   {
     name: "Spotify Show",

@@ -159,12 +159,6 @@ const verificationGroups: Array<{ title: string; items: VerificationLink[] }> = 
         link: "https://www.youtube.com/@KiminouKnoxOfficial"
       },
       {
-        name: "Instagram",
-        source: "Instagram",
-        detail: "Public social profile.",
-        link: "https://www.instagram.com/kiminouknox"
-      },
-      {
         name: "Listen to KimYaps on Spotify",
         source: "Spotify",
         detail: "Audio profile connected to Kiminou Knox.",

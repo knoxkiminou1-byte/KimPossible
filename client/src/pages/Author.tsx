@@ -191,7 +191,6 @@ export default function Author() {
                     { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/basketball/stats/?careerid=84brnk148sii2" },
                     { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
                     { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
-                    { name: "Instagram", url: "https://www.instagram.com/kiminouknox" },
                     { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
                     { name: "Spotify", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" }
                   ].map((link, index) => (
@@ -342,9 +341,6 @@ export default function Author() {
                   </a>
                   <a href="https://prephoops.com/player/kiminou-knox/" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
                     Prep Hoops
-                  </a>
-                  <a href="https://www.instagram.com/kiminouknox" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 text-sm font-medium transition-colors">
-                    Instagram
                   </a>
                 </div>
               </motion.div>

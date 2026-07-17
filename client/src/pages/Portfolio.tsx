@@ -6,7 +6,6 @@ import {
   MapPin,
   Calendar as CalendarIcon,
   Layers,
-  Instagram,
   Linkedin,
 } from "lucide-react";
 
@@ -36,7 +35,6 @@ const Card = ({ children, className = "" }: any) => (
 // --- Main Component ---
 export default function Portfolio() {
   const socials = [
-    { name: "Instagram", href: "https://instagram.com/kiminouknox", icon: Instagram },
     { name: "LinkedIn", href: "https://www.linkedin.com/in/kiminou-knox-50691a394/", icon: Linkedin },
   ];
 

@@ -23,7 +23,6 @@ export default function Home() {
       "https://prephoops.com/player/kiminou-knox/",
       "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
       "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-      "https://www.instagram.com/kiminouknox",
       "https://www.linkedin.com/in/kiminou-knox-50691a394/",
       "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg"
     ],
