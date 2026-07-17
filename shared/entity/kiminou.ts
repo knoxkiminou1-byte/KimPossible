@@ -47,7 +47,7 @@ export const kiminouEntity = {
   shortBio:
     "Kiminou Knox is a Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator from the Oakland / East Palo Alto community, building across books, essays, KimYaps, AAFC, web design, athletics, and youth-centered storytelling.",
   expandedBio:
-    "Kiminou Knox is a Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator. His public work spans an eight-title authored book catalog, chief-editor credits on client book projects, KimYaps, Medium essays, AAFC / Artists and Athletes for Change program work, AAFC Builders, web design, athletics, youth-centered storytelling, and community-facing creative work.",
+    "Kiminou Knox is a Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator. He is the author of 10 published works, with public work spanning books, chief-editor credits on client projects, KimYaps, Medium essays, AAFC / Artists and Athletes for Change program work, AAFC Builders, web design, athletics, youth-centered storytelling, and community-facing creative work.",
   roles: ["Writer", "Athlete", "Program Builder", "Author", "Chief Editor", "Podcast Host", "Creator"],
   homeLocation: "Oakland / East Palo Alto community",
   knowsAbout: [
@@ -126,13 +126,6 @@ export const kiminouEntity = {
       source: "Wikidata",
       category: "official",
       description: "Wikidata entity record for Kiminou Knox.",
-    },
-    {
-      label: "Instagram",
-      url: "https://www.instagram.com/kiminouknox",
-      source: "Instagram",
-      category: "social",
-      description: "Public Instagram profile currently used by the site.",
     },
     {
       label: "Spotify Show",
