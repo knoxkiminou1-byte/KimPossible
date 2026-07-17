@@ -15,7 +15,6 @@ const links = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "https://www.instagram.com/kiminouknox" },
   { label: "Twitter / X", href: "https://x.com/KnoxKiminou" },
   { label: "YouTube", href: "https://www.youtube.com/@KiminouKnoxOfficial" },
   { label: "KimYaps Podcast", href: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" },
@@ -57,7 +56,7 @@ export default function Footer() {
               Author · Athlete · Speaker · Podcast Host
             </p>
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
-              Eight-time published Bay Area poet and NCAA-registered basketball athlete building a legacy through books, sport, youth leadership, and the KimYaps podcast.
+              Bay Area poet and author of 10 published works, NCAA-registered basketball athlete, youth leader, and host of the KimYaps podcast.
             </p>
           </motion.div>
 

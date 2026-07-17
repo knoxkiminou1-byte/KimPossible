@@ -20,7 +20,7 @@ const testimonials = [
     name: "Ms. Rodriguez",
     role: "English Department Head",
     org: "Ygnacio Valley High School",
-    quote: "Eight published works by 19. I stopped counting and just started reading. His poetry hits like he already knows what you've been carrying.",
+    quote: "Ten published works and counting. I stopped counting and just started reading. His poetry hits like he already knows what you've been carrying.",
     avatar: teacherImage,
     category: "Literature",
   },
