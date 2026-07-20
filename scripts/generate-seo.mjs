@@ -4,7 +4,7 @@ import path from "node:path";
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox, author of 10 published works, athlete, speaker, podcast host, and creative voice from the Bay Area.";
+  "Official website of Kiminou Knox, author of 10 original works and seven remastered editions, athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area.";
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
 const KIMINOU_PHOTOS = {
   officialHeadshot: {
@@ -77,6 +77,7 @@ const externalProfiles = [
   "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
   "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
   "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
+  "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://x.com/KnoxKiminou",
   "https://www.youtube.com/@KiminouKnoxOfficial",
@@ -84,6 +85,9 @@ const externalProfiles = [
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
+  "https://about.me/kiminou",
+  "https://stan.store/kiminouknox",
+  "https://www.wikidata.org/wiki/Q137260299",
 ];
 
 const discoveredMediumPosts = [
@@ -494,6 +498,7 @@ const bookRouteMeta = books.map((book) => ({
   title: `${book.title} - Kiminou Knox | Poetry Collection`,
   description: compactText(`${book.title} by Kiminou Knox. ${book.subtitle}. ${book.description}`, 300),
   image: book.cover || "/kiminou-knox-social-share.png",
+  ...(book.edition ? { imageWidth: 1600, imageHeight: 2560, imageType: "image/jpeg" } : {}),
   keywords: [book.title, "Kiminou Knox book", ...(book.themes || []), "poetry collection"],
   sections: [
     {
@@ -526,6 +531,8 @@ const bookRouteMeta = books.map((book) => ({
     publisher: { "@type": "Person", name: SITE_NAME },
     datePublished: book.datePublished,
     isbn: book.isbn,
+    ...(book.edition ? { bookEdition: book.edition } : {}),
+    ...(book.numberOfPages ? { numberOfPages: book.numberOfPages } : {}),
     description: book.description,
     genre: "Poetry",
     inLanguage: "en-US",

@@ -198,4 +198,60 @@
       <image:caption>7.16.74 book cover by Kiminou Knox.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/spirit-solomon-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg</image:loc>
+      <image:title>The Spirit of Solomon: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>The Spirit of Solomon: Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/our-father-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg</image:loc>
+      <image:title>Our Father? Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Our Father? Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg</image:loc>
+      <image:title>Hopeless Romantic: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Hopeless Romantic: Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg</image:loc>
+      <image:title>Poems From A Black Boy: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Poems From A Black Boy: Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg</image:loc>
+      <image:title>Boys Raised by Silence: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Boys Raised by Silence: Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg</image:loc>
+      <image:title>Why Did You Ghost Me? Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Why Did You Ghost Me? Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/books/my-father-remastered-edition</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg</image:loc>
+      <image:title>My Father. Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>My Father. Remastered Edition book cover by Kiminou Knox.</image:caption>
+    </image:image>
+  </url>
 </urlset>

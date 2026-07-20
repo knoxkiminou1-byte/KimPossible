@@ -209,18 +209,18 @@ export default function Portfolio() {
     <>
       <Helmet>
         <title>Kiminou Knox | Portfolio — Author, Athlete, Builder & Entrepreneur</title>
-        <meta name="description" content="The full portfolio of Kiminou Knox — author of 10 published works, NCAA basketball athlete, public speaker, AAFC Builders founder, and youth leader from the Bay Area." />
+        <meta name="description" content="The full portfolio of Kiminou Knox — author of 10 original works and seven remastered editions, NCAA basketball athlete, public speaker, AAFC Builders founder, and Bay Area youth leader." />
         <link rel="canonical" href="https://www.kiminouknox.com/portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kiminouknox.com/portfolio" />
         <meta property="og:title" content="Kiminou Knox | Portfolio — Author, Athlete & Builder" />
-        <meta property="og:description" content="10 published works, NCAA athlete, public speaker, and AAFC Builders founder. The complete work of Kiminou Knox." />
+        <meta property="og:description" content="10 original works, seven remastered editions, NCAA athlete, public speaker, and AAFC Builders founder. The complete work of Kiminou Knox." />
         <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KiminouKnox" />
         <meta name="twitter:title" content="Kiminou Knox | Portfolio" />
-        <meta name="twitter:description" content="10 published works, NCAA athlete, public speaker, and AAFC Builders founder." />
+        <meta name="twitter:description" content="10 original works, seven remastered editions, NCAA athlete, public speaker, and AAFC Builders founder." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
       </Helmet>
       <Header />

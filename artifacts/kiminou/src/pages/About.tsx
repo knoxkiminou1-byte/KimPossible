@@ -27,7 +27,7 @@ export default function About() {
         "@id": "https://www.kiminouknox.com/about#webpage",
         "url": "https://www.kiminouknox.com/about",
         "name": "About Kiminou Knox — Author, Athlete, Speaker",
-        "description": "Learn about Kiminou Knox — author of 10 published works, Bay Area poet, NCAA-registered basketball athlete, youth speaker, and podcast host.",
+        "description": "Learn about Kiminou Knox — author of 10 original works and seven remastered editions, Bay Area poet, NCAA-registered basketball athlete, youth speaker, and podcast host.",
         "isPartOf": { "@id": "https://www.kiminouknox.com/#website" },
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
@@ -46,7 +46,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About Kiminou Knox — Author, Athlete &amp; Speaker | Bay Area</title>
-        <meta name="description" content="Kiminou Knox is the author of 10 published works, a Bay Area poet, NCAA-registered basketball athlete, speaker, and podcast host. Creator of the Black Boy Lie universe." />
+        <meta name="description" content="Kiminou Knox is the author of 10 original works and seven remastered editions, a Bay Area poet, NCAA-registered basketball athlete, speaker, and podcast host. Creator of the Black Boy Lie universe." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
@@ -54,7 +54,7 @@ export default function About() {
         <meta property="og:profile:first_name" content="Kiminou" />
         <meta property="og:profile:last_name" content="Knox" />
         <meta property="og:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta property="og:description" content="Bay Area poet and author of 10 published works, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
+        <meta property="og:description" content="Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
         <meta property="og:image" content={outdoorPortraitUrl} />
         <meta property="og:site_name" content="Kiminou Knox" />
@@ -62,7 +62,7 @@ export default function About() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta name="twitter:description" content="Bay Area poet and author of 10 published works, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
+        <meta name="twitter:description" content="Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
         <meta name="twitter:image" content={outdoorPortraitUrl} />
         
         <script type="application/ld+json">
@@ -118,7 +118,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                My work includes 10 published works and recognition through multiple awards, including the Miles Hall Foundation Youth Summit Top Essay Finalist (2025). I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                My work includes 10 original works, seven remastered editions, and recognition through multiple awards, including the Miles Hall Foundation Youth Summit Top Essay Finalist (2025). I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
               </p>
 
               <p data-testid="about-family">

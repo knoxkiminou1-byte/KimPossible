@@ -51,6 +51,7 @@ const verificationGroups = [
       { name: "YouTube — @KiminouKnoxOfficial", desc: "Official YouTube channel for Kiminou Knox — talks, interviews, and poetry readings.", url: "https://www.youtube.com/@KiminouKnoxOfficial" },
       { name: "Read Kiminou Knox essays on Medium", desc: "Medium author profile and public essay archive. Topics: faith, resilience, love, healing, Black boy life.", url: "https://medium.com/@knoxkiminou1" },
       { name: "KimYaps on Spotify", desc: "Spotify show profile", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" },
+      { name: "KimYaps on Amazon Music", desc: "Amazon Music podcast profile", url: "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps" },
     ],
   },
   {
@@ -64,8 +65,8 @@ const verificationGroups = [
     label: "Profiles",
     items: [
       { name: "LinkedIn", desc: "Professional profile", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
-      { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminouknox" },
-      { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org" },
+      { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminou" },
+      { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org/wiki/Q137260299" },
       { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
     ],
   },
@@ -73,7 +74,7 @@ const verificationGroups = [
 
 const TICKER_ITEMS = [
   "Miles Hall Foundation", "Amazon Author Store", "Goodreads", "MaxPreps", "NCSA Sports",
-  "Prep Hoops", "Apple Podcasts", "Spotify", "YouTube", "Medium", "LinkedIn",
+  "Prep Hoops", "Apple Podcasts", "Spotify", "Amazon Music", "YouTube", "Medium", "LinkedIn",
   "Bookshop.org", "Google Play Books", "About.me", "Wikidata", "Stan Store",
 ];
 
@@ -330,7 +331,7 @@ export default function Press() {
                   <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.2em] text-white/30">
                     <span>Bio (Short & Long)</span>
                     <span>·</span>
-                    <span>8 Published Works</span>
+                    <span>10 Original Works · 7 Remastered Editions</span>
                     <span>·</span>
                     <span>Athletic Measurables</span>
                     <span>·</span>
@@ -354,7 +355,7 @@ Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee W
 
 SHORT BIO (50 words)
 ─────────────────────
-Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. He is the author of 10 published works spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
+Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. He is the author of 10 original works and seven remastered editions spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
 
 PUBLISHED WORKS
 ───────────────
@@ -388,6 +389,19 @@ PUBLISHED WORKS
     Amazon: https://www.amazon.com/dp/B0H92Q6PM2
     Google Play: https://play.google.com/store/books/details?id=MTv1EQAAQBAJ
 
+REMASTERED EDITIONS — 2026
+──────────────────────────
+• The Spirit of Solomon: Remastered Edition
+  Amazon: https://www.amazon.com/dp/B0H9K2VXMS
+  Google Play: https://play.google.com/store/books/details?id=7UP2EQAAQBAJ
+• Our Father? Remastered Edition
+  Google Play: https://play.google.com/store/books/details?id=DUT2EQAAQBAJ
+• Hopeless Romantic: Remastered Edition
+• Poems From A Black Boy: Remastered Edition
+• Boys Raised by Silence: Remastered Edition
+• Why Did You Ghost Me? Remastered Edition
+• My Father. Remastered Edition
+
 ATHLETIC PROFILE
 ────────────────
 Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
@@ -417,9 +431,13 @@ Twitter/X: @KnoxKiminou
 YouTube: https://www.youtube.com/@KiminouKnoxOfficial
 Medium: https://medium.com/@knoxkiminou1
 Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1850364308
+Spotify: https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg
+Amazon Music: https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps
 Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
 Amazon Author Store: https://www.amazon.com/stores/author/B0DGM5Z5Q8
 LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/
+About.me: https://about.me/kiminou
+Stan Store: https://stan.store/kiminouknox
 
 MEDIA CONTACT
 ─────────────

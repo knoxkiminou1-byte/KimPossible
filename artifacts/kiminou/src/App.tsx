@@ -37,7 +37,7 @@ const ReadingList = lazy(() => import("@/pages/ReadingList"));
 
 const POEM_FRAGMENTS = [
   "They called me wise before I learned what wisdom cost.",
-  "Black boy. Bay Area. Author of 10 published works.",
+  "Black boy. Bay Area. Author of 10 original works and seven remastered editions.",
   "Faith is the question and the answer in the same breath.",
   "The court and the page demand the same thing — truth.",
   "I write from silence. I play from fire.",
@@ -89,6 +89,22 @@ function DeferredChrome() {
       <SectionDotNav />
     </Suspense>
   );
+}
+
+function DocumentTitleSync() {
+  useEffect(() => {
+    const syncTitle = () => {
+      const socialTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.content;
+      if (socialTitle && document.title !== socialTitle) document.title = socialTitle;
+    };
+
+    syncTitle();
+    const observer = new MutationObserver(syncTitle);
+    observer.observe(document.head, { childList: true, subtree: true, attributes: true });
+    return () => observer.disconnect();
+  }, []);
+
+  return null;
 }
 
 function Router() {
@@ -149,6 +165,7 @@ function App() {
             Skip to content
           </a>
           <DeferredChrome />
+          <DocumentTitleSync />
           <div className="grain"></div>
           <Toaster />
           <Router />

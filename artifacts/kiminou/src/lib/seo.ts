@@ -1,7 +1,7 @@
 export const SITE_NAME = "Kiminou Knox";
 export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox — author of 10 published works, NCAA-registered athlete, speaker, and podcast host from the Bay Area.";
+  "Official website of Kiminou Knox — author of 10 original works and seven remastered editions, NCAA-registered athlete, speaker, and KimYaps podcast host from the Bay Area.";
 export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
 export const SITE_PERSON_IMAGE =
   "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
@@ -12,24 +12,37 @@ export const SITE_GOODREADS_PROFILE =
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox";
 export const SITE_PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 export const SITE_PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
+export const SITE_PODCAST_AMAZON =
+  "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps";
 export const SITE_PODCAST_RSS = "https://api.riverside.fm/hosting/Qs2CJYe0.rss";
 export const SITE_YOUTUBE = "https://www.youtube.com/@KiminouKnoxOfficial";
+export const SITE_X = "https://x.com/KnoxKiminou";
+export const SITE_LINKEDIN = "https://www.linkedin.com/in/kiminou-knox-50691a394/";
+export const SITE_AMAZON_AUTHOR = "https://www.amazon.com/stores/author/B0DGM5Z5Q8";
+export const SITE_ABOUT_ME = "https://about.me/kiminou";
+export const SITE_STAN_STORE = "https://stan.store/kiminouknox";
+export const SITE_WIKIDATA = "https://www.wikidata.org/wiki/Q137260299";
+
+export const SITE_SOCIAL_LINKS = [
+  { label: "Twitter / X", href: SITE_X },
+  { label: "YouTube", href: SITE_YOUTUBE },
+  { label: "LinkedIn", href: SITE_LINKEDIN },
+  { label: "Medium", href: SITE_MEDIUM_PROFILE },
+  { label: "Goodreads", href: SITE_GOODREADS_PROFILE },
+  { label: "Amazon Author Store", href: SITE_AMAZON_AUTHOR },
+  { label: "KimYaps on Apple Podcasts", href: SITE_PODCAST_APPLE },
+  { label: "KimYaps on Spotify", href: SITE_PODCAST_SPOTIFY },
+  { label: "KimYaps on Amazon Music", href: SITE_PODCAST_AMAZON },
+  { label: "About.me", href: SITE_ABOUT_ME },
+  { label: "Stan Store", href: SITE_STAN_STORE },
+] as const;
 
 export const SITE_SAME_AS = [
-  SITE_MEDIUM_PROFILE,
-  SITE_GOODREADS_PROFILE,
-  "https://x.com/KnoxKiminou",
-  SITE_YOUTUBE,
-  "https://www.linkedin.com/in/kiminou-knox-50691a394/",
-  "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
-  SITE_PODCAST_APPLE,
-  SITE_PODCAST_SPOTIFY,
-  "https://about.me/kiminou",
+  ...SITE_SOCIAL_LINKS.map(({ href }) => href),
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
-  "https://stan.store/kiminouknox",
-  "https://www.wikidata.org/wiki/Q137260299",
+  SITE_WIKIDATA,
 ];
 
 export type BreadcrumbItem = {
@@ -63,7 +76,7 @@ export function personSchema() {
         },
         jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
         description:
-          "Kiminou Knox is the author of 10 published works, a Bay Area poet, NCAA-registered basketball and football athlete, speaker, and podcast host. Creator of the Black Boy Lie universe.",
+          "Kiminou Knox is the author of 10 original works and seven remastered editions, a Bay Area poet, NCAA-registered basketball and football athlete, speaker, and KimYaps podcast host. Creator of the Black Boy Lie universe.",
         birthPlace: {
           "@type": "Place",
           name: "Bay Area, California",
@@ -130,7 +143,7 @@ export function podcastSchema() {
       "KimYaps is a podcast by Kiminou Knox — honest conversations about navigating pain, finding purpose, and giving yourself (and others) a little extra grace.",
     url: `${SITE_URL}/podcast`,
     webFeed: SITE_PODCAST_RSS,
-    sameAs: [SITE_PODCAST_APPLE, SITE_PODCAST_SPOTIFY, SITE_YOUTUBE],
+    sameAs: [SITE_PODCAST_APPLE, SITE_PODCAST_SPOTIFY, SITE_PODCAST_AMAZON, SITE_YOUTUBE],
     author: { "@id": `${SITE_URL}/#person` },
     inLanguage: "en",
     image: SITE_PERSON_IMAGE,

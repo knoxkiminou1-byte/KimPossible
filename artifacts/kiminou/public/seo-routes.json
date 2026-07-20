@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-17T06:07:41.690Z",
+  "generatedAt": "2026-07-20T01:47:22.223Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
-    "description": "Official website of Kiminou Knox, author of 10 published works, athlete, speaker, podcast host, and creative voice from the Bay Area.",
+    "description": "Official website of Kiminou Knox, author of 10 original works and seven remastered editions, athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area.",
     "image": "https://www.kiminouknox.com/og-image.png",
     "personImage": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
     "sameAs": [
@@ -12,13 +12,17 @@
       "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
       "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
       "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
+      "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps",
       "https://www.linkedin.com/in/kiminou-knox-50691a394/",
       "https://x.com/KnoxKiminou",
       "https://www.youtube.com/@KiminouKnoxOfficial",
       "https://about.me/kiminou",
       "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
       "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
-      "https://prephoops.com/player/kiminou-knox/"
+      "https://prephoops.com/player/kiminou-knox/",
+      "https://about.me/kiminou",
+      "https://stan.store/kiminouknox",
+      "https://www.wikidata.org/wiki/Q137260299"
     ]
   },
   "routes": [
@@ -38,7 +42,7 @@
       "sections": [
         {
           "heading": "Kiminou Knox",
-          "text": "Official website of Kiminou Knox, author of 10 published works, athlete, speaker, podcast host, and creative voice from the Bay Area."
+          "text": "Official website of Kiminou Knox, author of 10 original works and seven remastered editions, athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area."
         },
         {
           "heading": "Featured Work",
@@ -47,7 +51,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -64,7 +68,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -87,7 +91,7 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -104,7 +108,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -122,12 +126,12 @@
       "sections": [
         {
           "heading": "Works",
-          "text": "The Spirit of Solomon: A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?: A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy: Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic: An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence: A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise: A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics: A children's book about imagination, play, and the power of believing in what you can build. Our Father?: A search for faith, fatherhood, and presence when answers remain out of reach. WHY DID YOU GHOST ME: Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted. 7.16.74: A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life."
+          "text": "The Spirit of Solomon: A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?: A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy: Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic: An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence: A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise: A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics: A children's book about imagination, play, and the power of believing in what you can build. Our Father?: A search for faith, fatherhood, and presence when answers remain out of reach. WHY DID YOU GHOST ME: Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted. 7.16.74: A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life. The Spirit of Solomon: Remastered Edition: A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change. Our Father? Remastered Edition: Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name. Hopeless Romantic: Remastered Edition: Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment. Poems From A Black Boy: Remastered Edition: A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth. Boys Raised by Silence: Remastered Edition: Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing. Why Did You Ghost Me? Remastered Edition: Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing. My Father. Remastered Edition: Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too."
         }
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -144,7 +148,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -167,7 +171,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -184,7 +188,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -202,12 +206,12 @@
       "sections": [
         {
           "heading": "Published Books",
-          "text": "The Spirit of Solomon, What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?, A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy, Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic, Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence, Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise, A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics, A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build. Our Father?, Father Where Are You. A search for faith, fatherhood, and presence when answers remain out of reach. WHY DID YOU GHOST ME, Poems from a Ghosted Lover. Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted. 7.16.74, An Ode to Rashida. A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life."
+          "text": "The Spirit of Solomon, What is Love To A Man Made To Destroy It. A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price. Our Father?, A Poetic Journey Through Faith, Doubt, and Divine Silence. A candid wrestling with prayer and presence—when belief collides with unanswered questions. Poems from a Black Boy, Identity, Heritage, and Hope. Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming. Hopeless Romantic, Love, Loss, and Everything Between. An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Boys Raised in Silence, Breaking the Quiet, Finding Voice. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. The Adventures of Kiminou the Great and Chua the Wise, A Journey of Friendship and Discovery. A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures. Kiminou's World of Imagination: The Basics, A Colorful Journey Through Imagination and Play. A children's book about imagination, play, and the power of believing in what you can build. Our Father?, Father Where Are You. A search for faith, fatherhood, and presence when answers remain out of reach. WHY DID YOU GHOST ME, Poems from a Ghosted Lover. Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted. 7.16.74, An Ode to Rashida. A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life. The Spirit of Solomon: Remastered Edition, What Is Love to a Man Made to Destroy It. A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change. Our Father? Remastered Edition, A Poetic Journey Through Faith, Doubt, and Divine Silence. Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name. Hopeless Romantic: Remastered Edition, Love Poems for the Ones Who Feel Everything. Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment. Poems From A Black Boy: Remastered Edition, A Poetry Collection on Black Boyhood, Identity, Faith, and Healing. A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth. Boys Raised by Silence: Remastered Edition, Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing. Why Did You Ghost Me? Remastered Edition, Poems from a Ghosted Lover. Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing. My Father. Remastered Edition, Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too."
         }
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -224,7 +228,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -248,7 +252,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -265,7 +269,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -287,7 +291,7 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -304,7 +308,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -326,7 +330,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -343,7 +347,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -365,7 +369,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -382,7 +386,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -404,7 +408,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -421,7 +425,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -444,7 +448,7 @@
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -461,7 +465,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -483,7 +487,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-07-17",
+      "lastmod": "2026-07-20",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -500,7 +504,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-07-17"
+          "dateModified": "2026-07-20"
         }
       ]
     },
@@ -1501,6 +1505,681 @@
             "https://www.amazon.com/dp/B0H92Q6PM2",
             "https://play.google.com/store/books/details?id=MTv1EQAAQBAJ"
           ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/spirit-solomon-remastered-edition",
+      "title": "The Spirit of Solomon: Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "The Spirit of Solomon: Remastered Edition by Kiminou Knox. What Is Love to a Man Made to Destroy It. A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change.",
+      "image": "https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "The Spirit of Solomon: Remastered Edition",
+        "Kiminou Knox book",
+        "Black Love",
+        "Masculinity",
+        "Accountability",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "The Spirit of Solomon: Remastered Edition",
+          "text": "What Is Love to a Man Made to Destroy It. A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Black Love, Masculinity, Accountability"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition#book",
+        "name": "The Spirit of Solomon: Remastered Edition",
+        "alternateName": "What Is Love to a Man Made to Destroy It",
+        "url": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 64,
+        "description": "A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.amazon.com/dp/B0H9K2VXMS",
+          "https://play.google.com/store/books/details?id=7UP2EQAAQBAJ"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition",
+          "name": "The Spirit of Solomon: Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "The Spirit of Solomon: Remastered Edition by Kiminou Knox. What Is Love to a Man Made to Destroy It. A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change.",
+          "image": "https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition#book",
+          "name": "The Spirit of Solomon: Remastered Edition",
+          "alternateName": "What Is Love to a Man Made to Destroy It",
+          "url": "https://www.kiminouknox.com/books/spirit-solomon-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 64,
+          "description": "A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://www.amazon.com/dp/B0H9K2VXMS",
+            "https://play.google.com/store/books/details?id=7UP2EQAAQBAJ"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/our-father-remastered-edition",
+      "title": "Our Father? Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "Our Father? Remastered Edition by Kiminou Knox. A Poetic Journey Through Faith, Doubt, and Divine Silence. Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the...",
+      "image": "https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "Our Father? Remastered Edition",
+        "Kiminou Knox book",
+        "Faith",
+        "Religious Trauma",
+        "Divine Silence",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Our Father? Remastered Edition",
+          "text": "A Poetic Journey Through Faith, Doubt, and Divine Silence. Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Faith, Religious Trauma, Divine Silence"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/our-father-remastered-edition#book",
+        "name": "Our Father? Remastered Edition",
+        "alternateName": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+        "url": "https://www.kiminouknox.com/books/our-father-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 72,
+        "description": "Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://play.google.com/store/books/details?id=DUT2EQAAQBAJ"
+        ]
+      },
+      "url": "https://www.kiminouknox.com/books/our-father-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/our-father-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/our-father-remastered-edition",
+          "name": "Our Father? Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "Our Father? Remastered Edition by Kiminou Knox. A Poetic Journey Through Faith, Doubt, and Divine Silence. Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the...",
+          "image": "https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/our-father-remastered-edition#book",
+          "name": "Our Father? Remastered Edition",
+          "alternateName": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+          "url": "https://www.kiminouknox.com/books/our-father-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 72,
+          "description": "Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": [
+            "https://play.google.com/store/books/details?id=DUT2EQAAQBAJ"
+          ]
+        }
+      ]
+    },
+    {
+      "loc": "/books/hopeless-romantic-remastered-edition",
+      "title": "Hopeless Romantic: Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "Hopeless Romantic: Remastered Edition by Kiminou Knox. Love Poems for the Ones Who Feel Everything. Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment.",
+      "image": "https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "Hopeless Romantic: Remastered Edition",
+        "Kiminou Knox book",
+        "Love",
+        "Attachment",
+        "Boundaries",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Hopeless Romantic: Remastered Edition",
+          "text": "Love Poems for the Ones Who Feel Everything. Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Love, Attachment, Boundaries"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition#book",
+        "name": "Hopeless Romantic: Remastered Edition",
+        "alternateName": "Love Poems for the Ones Who Feel Everything",
+        "url": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 62,
+        "description": "Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition",
+          "name": "Hopeless Romantic: Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "Hopeless Romantic: Remastered Edition by Kiminou Knox. Love Poems for the Ones Who Feel Everything. Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment.",
+          "image": "https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition#book",
+          "name": "Hopeless Romantic: Remastered Edition",
+          "alternateName": "Love Poems for the Ones Who Feel Everything",
+          "url": "https://www.kiminouknox.com/books/hopeless-romantic-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 62,
+          "description": "Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
+        }
+      ]
+    },
+    {
+      "loc": "/books/poems-from-a-black-boy-remastered-edition",
+      "title": "Poems From A Black Boy: Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "Poems From A Black Boy: Remastered Edition by Kiminou Knox. A Poetry Collection on Black Boyhood, Identity, Faith, and Healing. A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in t...",
+      "image": "https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "Poems From A Black Boy: Remastered Edition",
+        "Kiminou Knox book",
+        "Black Boyhood",
+        "Identity",
+        "Healing",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Poems From A Black Boy: Remastered Edition",
+          "text": "A Poetry Collection on Black Boyhood, Identity, Faith, and Healing. A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Black Boyhood, Identity, Healing"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition#book",
+        "name": "Poems From A Black Boy: Remastered Edition",
+        "alternateName": "A Poetry Collection on Black Boyhood, Identity, Faith, and Healing",
+        "url": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 84,
+        "description": "A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition",
+          "name": "Poems From A Black Boy: Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "Poems From A Black Boy: Remastered Edition by Kiminou Knox. A Poetry Collection on Black Boyhood, Identity, Faith, and Healing. A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in t...",
+          "image": "https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition#book",
+          "name": "Poems From A Black Boy: Remastered Edition",
+          "alternateName": "A Poetry Collection on Black Boyhood, Identity, Faith, and Healing",
+          "url": "https://www.kiminouknox.com/books/poems-from-a-black-boy-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 84,
+          "description": "A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
+        }
+      ]
+    },
+    {
+      "loc": "/books/boys-raised-by-silence-remastered-edition",
+      "title": "Boys Raised by Silence: Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "Boys Raised by Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+      "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "Boys Raised by Silence: Remastered Edition",
+        "Kiminou Knox book",
+        "Masculinity",
+        "Emotional Silence",
+        "Healing",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Boys Raised by Silence: Remastered Edition",
+          "text": "Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Masculinity, Emotional Silence, Healing"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition#book",
+        "name": "Boys Raised by Silence: Remastered Edition",
+        "alternateName": "Poems for the Feelings We Learned to Carry",
+        "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 60,
+        "description": "Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
+          "name": "Boys Raised by Silence: Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "Boys Raised by Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+          "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition#book",
+          "name": "Boys Raised by Silence: Remastered Edition",
+          "alternateName": "Poems for the Feelings We Learned to Carry",
+          "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 60,
+          "description": "Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
+        }
+      ]
+    },
+    {
+      "loc": "/books/why-did-you-ghost-me-remastered-edition",
+      "title": "Why Did You Ghost Me? Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "Why Did You Ghost Me? Remastered Edition by Kiminou Knox. Poems from a Ghosted Lover. Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
+      "image": "https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "Why Did You Ghost Me? Remastered Edition",
+        "Kiminou Knox book",
+        "Ghosting",
+        "Heartbreak",
+        "Closure",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "Why Did You Ghost Me? Remastered Edition",
+          "text": "Poems from a Ghosted Lover. Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Ghosting, Heartbreak, Closure"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition#book",
+        "name": "Why Did You Ghost Me? Remastered Edition",
+        "alternateName": "Poems from a Ghosted Lover",
+        "url": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 78,
+        "description": "Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition",
+          "name": "Why Did You Ghost Me? Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "Why Did You Ghost Me? Remastered Edition by Kiminou Knox. Poems from a Ghosted Lover. Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
+          "image": "https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition#book",
+          "name": "Why Did You Ghost Me? Remastered Edition",
+          "alternateName": "Poems from a Ghosted Lover",
+          "url": "https://www.kiminouknox.com/books/why-did-you-ghost-me-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 78,
+          "description": "Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
+        }
+      ]
+    },
+    {
+      "loc": "/books/my-father-remastered-edition",
+      "title": "My Father. Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "My Father. Remastered Edition by Kiminou Knox. Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
+      "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
+      "imageWidth": 1600,
+      "imageHeight": 2560,
+      "imageType": "image/jpeg",
+      "keywords": [
+        "My Father. Remastered Edition",
+        "Kiminou Knox book",
+        "Fatherhood",
+        "Faith",
+        "Grace",
+        "poetry collection"
+      ],
+      "sections": [
+        {
+          "heading": "My Father. Remastered Edition",
+          "text": "Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too. Published 2026. ISBN available through retailers."
+        },
+        {
+          "heading": "Themes",
+          "text": "Fatherhood, Faith, Grace"
+        }
+      ],
+      "schemaType": "WebPage",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "@id": "https://www.kiminouknox.com/books/my-father-remastered-edition#book",
+        "name": "My Father. Remastered Edition",
+        "alternateName": "Love Letters to God",
+        "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
+        "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
+        "author": {
+          "@id": "https://www.kiminouknox.com/#person"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kiminou Knox"
+        },
+        "datePublished": "2026-07-19",
+        "bookEdition": "Remastered Edition",
+        "numberOfPages": 134,
+        "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
+        "genre": "Poetry",
+        "inLanguage": "en-US",
+        "sameAs": []
+      },
+      "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
+      "lastmod": "2026-07-19",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/books/my-father-remastered-edition#webpage",
+          "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
+          "name": "My Father. Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "My Father. Remastered Edition by Kiminou Knox. Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
+          "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-07-19"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "@id": "https://www.kiminouknox.com/books/my-father-remastered-edition#book",
+          "name": "My Father. Remastered Edition",
+          "alternateName": "Love Letters to God",
+          "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
+          "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Kiminou Knox"
+          },
+          "datePublished": "2026-07-19",
+          "bookEdition": "Remastered Edition",
+          "numberOfPages": 134,
+          "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
+          "genre": "Poetry",
+          "inLanguage": "en-US",
+          "sameAs": []
         }
       ]
     },

@@ -271,5 +271,145 @@
       "bn": null
     },
     "featured": true
+  },
+  {
+    "id": "spirit-solomon-remastered-edition",
+    "title": "The Spirit of Solomon: Remastered Edition",
+    "subtitle": "What Is Love to a Man Made to Destroy It",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 64,
+    "cover": "/covers/spirit-solomon-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Black Love", "Masculinity", "Accountability"],
+    "description": "A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0H9K2VXMS",
+      "googleBooks": "https://play.google.com/store/books/details?id=7UP2EQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "our-father-remastered-edition",
+    "title": "Our Father? Remastered Edition",
+    "subtitle": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 72,
+    "cover": "/covers/our-father-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Faith", "Religious Trauma", "Divine Silence"],
+    "description": "Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": "https://play.google.com/store/books/details?id=DUT2EQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "hopeless-romantic-remastered-edition",
+    "title": "Hopeless Romantic: Remastered Edition",
+    "subtitle": "Love Poems for the Ones Who Feel Everything",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 62,
+    "cover": "/covers/hopeless-romantic-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Love", "Attachment", "Boundaries"],
+    "description": "Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "poems-from-a-black-boy-remastered-edition",
+    "title": "Poems From A Black Boy: Remastered Edition",
+    "subtitle": "A Poetry Collection on Black Boyhood, Identity, Faith, and Healing",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 84,
+    "cover": "/covers/poems-from-a-black-boy-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Black Boyhood", "Identity", "Healing"],
+    "description": "A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "boys-raised-by-silence-remastered-edition",
+    "title": "Boys Raised by Silence: Remastered Edition",
+    "subtitle": "Poems for the Feelings We Learned to Carry",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 60,
+    "cover": "/covers/boys-raised-by-silence-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Masculinity", "Emotional Silence", "Healing"],
+    "description": "Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "why-did-you-ghost-me-remastered-edition",
+    "title": "Why Did You Ghost Me? Remastered Edition",
+    "subtitle": "Poems from a Ghosted Lover",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 78,
+    "cover": "/covers/why-did-you-ghost-me-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Ghosting", "Heartbreak", "Closure"],
+    "description": "Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "my-father-remastered-edition",
+    "title": "My Father. Remastered Edition",
+    "subtitle": "Love Letters to God",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 134,
+    "cover": "/covers/my-father-remastered-edition.jpg",
+    "samplePoems": [],
+    "themes": ["Fatherhood", "Faith", "Grace"],
+    "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
   }
 ]
