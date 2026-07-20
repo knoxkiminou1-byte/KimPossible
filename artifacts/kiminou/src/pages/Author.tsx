@@ -9,7 +9,7 @@ import TypewriterConfessional from "@/components/LuxuryFX/TypewriterConfessional
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
-import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { breadcrumbSchema, SITE_SOCIAL_LINKS, SITE_URL } from "@/lib/seo";
 
 const CHAPTERS = [
   { id: "portrait", label: "Profile" },
@@ -32,12 +32,10 @@ const CREDENTIALS = [
 ];
 
 const SOCIAL_LINKS = [
-  { name: "Goodreads", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
+  ...SITE_SOCIAL_LINKS.map(({ label, href }) => ({ name: label, url: href })),
   { name: "MaxPreps", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc" },
   { name: "NCSA", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
   { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
-  { name: "Spotify", url: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348" },
 ];
 
 const BOOKS = [
@@ -200,14 +198,14 @@ export default function Author() {
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/author" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
-        <meta property="og:description" content="Author of 10 published works spanning poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area born." />
+        <meta property="og:description" content="Author of 10 original works and seven remastered editions spanning poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area born." />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:description" content="Poet and author of 10 published works. Bay Area born. Creator of the Black Boy Lie universe." />
+        <meta name="twitter:description" content="Poet and author of 10 original works and seven remastered editions. Bay Area born. Creator of the Black Boy Lie universe." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify(

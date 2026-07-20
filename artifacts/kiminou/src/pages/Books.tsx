@@ -20,7 +20,7 @@ import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 type Poem = { title: string; content: string };
 type Book = {
   id: string; title: string; subtitle: string; year: number;
-  isbn?: string | null; cover: string; samplePoems: Poem[];
+  isbn?: string | null; edition?: string; numberOfPages?: number; cover: string; samplePoems: Poem[];
   themes: string[]; description: string; featured?: boolean;
   buyLinks: { amazon?: string | null; googleBooks?: string | null; bookshop?: string | null; bn?: string | null };
 };
@@ -61,10 +61,12 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
           {index < 3 ? (
             <CMYKReveal>
               <img src={book.cover} alt={`${book.title} cover`}
+                loading={index < 4 ? "eager" : "lazy"} decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </CMYKReveal>
           ) : (
             <img src={book.cover} alt={`${book.title} cover`}
+              loading={index < 4 ? "eager" : "lazy"} decoding="async"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -85,7 +87,7 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
 
       <div className="flex flex-col flex-1">
         <p className="text-xs uppercase tracking-[0.2em] text-amber-400/60 mb-2">
-          {book.year}{book.isbn ? ` · ISBN ${book.isbn}` : ""}
+          {book.year}{book.edition ? ` · ${book.edition}` : ""}{book.isbn ? ` · ISBN ${book.isbn}` : ""}
         </p>
         <h3 className="font-serif text-xl font-light text-white mb-1 group-hover:text-amber-100 transition-colors duration-300">
           {book.title}
@@ -139,12 +141,12 @@ export default function BooksPage() {
     <>
       <Helmet>
         <title>Books by Kiminou Knox — Poetry Collections & Published Works</title>
-        <meta name="description" content="Explore all 10 published works by Kiminou Knox, including poetry and children's storytelling on faith, identity, love, Black boyhood, family, imagination, and legacy. Available on Amazon and Google Play Books." />
+        <meta name="description" content="Explore 10 original works and seven new remastered editions by Kiminou Knox—poetry and storytelling on faith, identity, love, Black boyhood, family, imagination, healing, and legacy." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/books" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Books by Kiminou Knox — Poetry Collections & Published Works" />
-        <meta property="og:description" content="10 published works on faith, identity, love, Black boyhood, family, imagination, and legacy. Available on Amazon and Google Play Books." />
+        <meta property="og:description" content="10 original works and seven remastered editions on faith, identity, love, Black boyhood, family, imagination, healing, and legacy." />
         <meta property="og:url" content="https://www.kiminouknox.com/books" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -158,16 +160,14 @@ export default function BooksPage() {
             "@type": "ItemList",
             "name": "Books by Kiminou Knox",
             "url": "https://www.kiminouknox.com/books",
-            "numberOfItems": 8,
+            "numberOfItems": books.length,
             "author": { "@id": "https://www.kiminouknox.com/#person" },
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "The Spirit of Solomon", "url": "https://www.kiminouknox.com/books/spirit-solomon" },
-              { "@type": "ListItem", "position": 2, "name": "Our Father?", "url": "https://www.kiminouknox.com/books/our-father" },
-              { "@type": "ListItem", "position": 3, "name": "Poems from a Black Boy", "url": "https://www.kiminouknox.com/books/poems-black-boy" },
-              { "@type": "ListItem", "position": 4, "name": "Hopeless Romantic", "url": "https://www.kiminouknox.com/books/hopeless-romantic" },
-              { "@type": "ListItem", "position": 5, "name": "Boys Raised in Silence", "url": "https://www.kiminouknox.com/books/boys-raised-in-silence" },
-              { "@type": "ListItem", "position": 6, "name": "The Adventures of Kiminou the Great and Chua the Wise", "url": "https://www.kiminouknox.com/books/adventures-kiminou-chua" }
-            ]
+            "itemListElement": books.map((book, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": book.title,
+              "url": `https://www.kiminouknox.com/books/${book.id}`
+            }))
           })}
         </script>
       </Helmet>
@@ -181,7 +181,7 @@ export default function BooksPage() {
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">8 Published Works</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">10 Original Works · 7 Remastered Editions</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
                 <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
                   <ScrambleText text="Published" className="block" delay={0.3} />

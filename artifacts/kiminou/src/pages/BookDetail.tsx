@@ -20,6 +20,8 @@ type Book = {
   year: number;
   isbn?: string | null;
   datePublished?: string;
+  edition?: string;
+  numberOfPages?: number;
   cover: string;
   samplePoems: Poem[];
   themes: string[];
@@ -135,15 +137,17 @@ export default function BookDetail() {
       "@type": "Person",
       "name": "Kiminou Knox",
       "url": "https://www.kiminouknox.com",
-      "@id": "https://www.kiminouknox.com/#kiminouknox"
+      "@id": "https://www.kiminouknox.com/#person"
     },
     "datePublished": book.datePublished || `${book.year}-01-01`,
     ...(book.isbn && { "isbn": book.isbn }),
+    ...(book.edition && { "bookEdition": book.edition }),
+    ...(book.numberOfPages && { "numberOfPages": book.numberOfPages }),
     "url": `https://www.kiminouknox.com/books/${book.id}`,
     "image": `https://www.kiminouknox.com${book.cover}`,
     "genre": "Poetry",
     "inLanguage": "en",
-    "bookFormat": "Paperback",
+    "bookFormat": book.edition ? "EBook" : "Paperback",
     "offers": Object.entries(book.buyLinks)
       .filter(([_, url]) => url)
       .map(([_, url]) => ({
@@ -164,6 +168,10 @@ export default function BookDetail() {
   const availableRetailers = Object.entries(book.buyLinks)
     .filter(([_, url]) => url)
     .map(([key, url]) => ({ key, url: url as string, name: retailerNames[key] || key, icon: retailerIcons[key] || "→" }));
+  const availabilityDescription = availableRetailers.length > 0
+    ? `Available from ${availableRetailers.map(({ name }) => name).join(", ")}.`
+    : "Retailer publication is in progress.";
+  const isHighResolutionEdition = Boolean(book.edition);
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: SITE_URL },
     { name: "Books", url: `${SITE_URL}/books` },
@@ -174,7 +182,7 @@ export default function BookDetail() {
     <>
       <Helmet>
         <title>{book.title} — Kiminou Knox | Poetry Collection</title>
-        <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. Available at Amazon, Waterstones, Google Play Books, and more.`} />
+        <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. ${availabilityDescription}`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://www.kiminouknox.com/books/${book.id}`} />
 
@@ -183,8 +191,11 @@ export default function BookDetail() {
         <meta property="og:description" content={book.description} />
         <meta property="og:url" content={`https://www.kiminouknox.com/books/${book.id}`} />
         <meta property="og:image" content={`https://www.kiminouknox.com${book.cover}`} />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="900" />
+        <meta property="og:image:secure_url" content={`https://www.kiminouknox.com${book.cover}`} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content={isHighResolutionEdition ? "1600" : "600"} />
+        <meta property="og:image:height" content={isHighResolutionEdition ? "2560" : "900"} />
+        <meta property="og:image:alt" content={`${book.title} book cover by Kiminou Knox`} />
         {book.isbn && <meta property="books:isbn" content={book.isbn} />}
         <meta property="books:author" content="https://www.kiminouknox.com/author" />
         <meta property="books:rating:value" content="5" />
@@ -194,6 +205,7 @@ export default function BookDetail() {
         <meta name="twitter:title" content={`${book.title} — Kiminou Knox`} />
         <meta name="twitter:description" content={book.description} />
         <meta name="twitter:image" content={`https://www.kiminouknox.com${book.cover}`} />
+        <meta name="twitter:image:alt" content={`${book.title} book cover by Kiminou Knox`} />
         <meta name="twitter:creator" content="@KnoxKiminou" />
 
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -238,7 +250,11 @@ export default function BookDetail() {
                     <img
                       src={book.cover}
                       alt={`${book.title} — Kiminou Knox`}
-                      loading="lazy"
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
+                      width={isHighResolutionEdition ? 1600 : 600}
+                      height={isHighResolutionEdition ? 2560 : 900}
                       className="w-full shadow-2xl shadow-black/80 border border-white/5 group-hover:border-amber-400/15 transition-colors duration-500"
                       data-testid="img-book-cover"
                     />
@@ -251,7 +267,7 @@ export default function BookDetail() {
                 <Reveal delay={0.1}>
                   <div>
                     <p className="text-xs uppercase tracking-[0.4em] text-amber-400/50 mb-3">
-                      {book.year}{book.isbn ? ` · ISBN ${book.isbn}` : ""}
+                      {book.year}{book.edition ? ` · ${book.edition}` : ""}{book.isbn ? ` · ISBN ${book.isbn}` : ""}
                     </p>
                     <h1
                       className="font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-white mb-3"

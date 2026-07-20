@@ -89,27 +89,30 @@ function renderHead(route) {
   const canonical = route.url;
   const image = route.image || manifest.site.image;
 
-  return `    <title>${escapeHtml(route.title)}</title>
-    <meta name="description" content="${escapeAttr(route.description)}">
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-    <meta name="theme-color" content="#090705">
-    ${keywords ? `<meta name="keywords" content="${escapeAttr(keywords)}">` : ""}
-    <link rel="canonical" href="${escapeAttr(canonical)}">
-    <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href="${manifest.site.url}/rss.xml">
-    <link rel="alternate" type="application/atom+xml" title="Kiminou Knox Journal Atom" href="${manifest.site.url}/feed.xml">
-    <link rel="manifest" href="/manifest.webmanifest">
-    <meta property="og:type" content="${route.loc?.startsWith("/blog/") ? "article" : "website"}">
-    <meta property="og:url" content="${escapeAttr(canonical)}">
-    <meta property="og:title" content="${escapeAttr(route.title)}">
-    <meta property="og:description" content="${escapeAttr(route.description)}">
-    <meta property="og:image" content="${escapeAttr(image)}">
-    <meta property="og:image:alt" content="${escapeAttr(route.title)}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="${escapeAttr(canonical)}">
-    <meta name="twitter:title" content="${escapeAttr(route.title)}">
-    <meta name="twitter:description" content="${escapeAttr(route.description)}">
-    <meta name="twitter:image" content="${escapeAttr(image)}">
-    <style>
+  return `    <title data-seo-static>${escapeHtml(route.title)}</title>
+    <meta data-seo-static name="description" content="${escapeAttr(route.description)}">
+    <meta data-seo-static name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta data-seo-static name="theme-color" content="#090705">
+    ${keywords ? `<meta data-seo-static name="keywords" content="${escapeAttr(keywords)}">` : ""}
+    <link data-seo-static rel="canonical" href="${escapeAttr(canonical)}">
+    <link data-seo-static rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href="${manifest.site.url}/rss.xml">
+    <link data-seo-static rel="alternate" type="application/atom+xml" title="Kiminou Knox Journal Atom" href="${manifest.site.url}/feed.xml">
+    <link data-seo-static rel="manifest" href="/manifest.webmanifest">
+    <meta data-seo-static property="og:type" content="${route.loc?.startsWith("/blog/") ? "article" : route.loc?.startsWith("/books/") ? "book" : "website"}">
+    <meta data-seo-static property="og:url" content="${escapeAttr(canonical)}">
+    <meta data-seo-static property="og:title" content="${escapeAttr(route.title)}">
+    <meta data-seo-static property="og:description" content="${escapeAttr(route.description)}">
+    <meta data-seo-static property="og:image" content="${escapeAttr(image)}">
+    ${route.imageType ? `<meta data-seo-static property="og:image:type" content="${escapeAttr(route.imageType)}">` : ""}
+    ${route.imageWidth ? `<meta data-seo-static property="og:image:width" content="${escapeAttr(route.imageWidth)}">` : ""}
+    ${route.imageHeight ? `<meta data-seo-static property="og:image:height" content="${escapeAttr(route.imageHeight)}">` : ""}
+    <meta data-seo-static property="og:image:alt" content="${escapeAttr(route.title)}">
+    <meta data-seo-static name="twitter:card" content="summary_large_image">
+    <meta data-seo-static name="twitter:url" content="${escapeAttr(canonical)}">
+    <meta data-seo-static name="twitter:title" content="${escapeAttr(route.title)}">
+    <meta data-seo-static name="twitter:description" content="${escapeAttr(route.description)}">
+    <meta data-seo-static name="twitter:image" content="${escapeAttr(image)}">
+    <style data-seo-static>
       .seo-prerender{min-height:100vh;background:#050505;color:#f6f0df;font-family:Inter,system-ui,sans-serif;padding:40px 24px}
       .seo-prerender a{color:#f5c542}.seo-prerender__wrap{max-width:920px;margin:0 auto}
       .seo-prerender h1{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,8vw,92px);font-weight:400;line-height:.95;margin:48px 0 24px}
@@ -118,7 +121,7 @@ function renderHead(route) {
       .seo-prerender nav{display:flex;flex-wrap:wrap;gap:16px;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
     </style>
 ${pageSchemas(route)
-  .map((schema) => `    <script type="application/ld+json">${safeJson(schema)}</script>`)
+  .map((schema) => `    <script data-seo-static type="application/ld+json">${safeJson(schema)}</script>`)
   .join("\n")}`;
 }
 

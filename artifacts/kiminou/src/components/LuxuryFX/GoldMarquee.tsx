@@ -6,7 +6,7 @@ const DEFAULT_ITEMS = [
   "Black Boy Lie",
   "Spirit of Solomon",
   "East Palo Alto",
-  "8 Published Works",
+  "7 Remastered Editions",
   "Youth Advocate",
   "AAFC Director",
 ];

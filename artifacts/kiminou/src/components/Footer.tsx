@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "wouter";
 import SignatureAnimation from "@/components/SignatureAnimation";
+import { SITE_SOCIAL_LINKS } from "@/lib/seo";
 
 const links = [
   { href: "/books", label: "Books" },
@@ -12,18 +13,6 @@ const links = [
   { href: "/blog", label: "Blog" },
   { href: "/speaking", label: "KimYaps Podcast" },
   { href: "/contact", label: "Contact" },
-];
-
-const socials = [
-  { label: "Twitter / X", href: "https://x.com/KnoxKiminou" },
-  { label: "YouTube", href: "https://www.youtube.com/@KiminouKnoxOfficial" },
-  { label: "KimYaps Podcast", href: "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
-    { label: "Goodreads", href: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
-  { label: "Amazon", href: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
-  { label: "Medium", href: "https://medium.com/@knoxkiminou1" },
-  { label: "Stan Store", href: "https://stan.store/kiminouknox" },
-  { label: "Spotify Podcast", href: "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg" },
 ];
 
 export default function Footer() {
@@ -56,7 +45,7 @@ export default function Footer() {
               Author · Athlete · Speaker · Podcast Host
             </p>
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
-              Bay Area poet and author of 10 published works, NCAA-registered basketball athlete, youth leader, and host of the KimYaps podcast.
+              Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered basketball athlete, youth leader, and host of the KimYaps podcast.
             </p>
           </motion.div>
 
@@ -90,7 +79,7 @@ export default function Footer() {
               Connect
             </p>
             <ul className="space-y-3 mb-8">
-              {socials.map((s) => (
+              {SITE_SOCIAL_LINKS.map((s) => (
                 <li key={s.href}>
                   <a
                     href={s.href}

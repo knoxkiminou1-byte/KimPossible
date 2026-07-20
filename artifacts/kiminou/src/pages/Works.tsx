@@ -15,14 +15,14 @@ interface Book {
   isbn: string;
   cover: string;
   description: string;
-  buyLinks: Record<string, string>;
+  buyLinks: Record<string, string | null>;
 }
 
 export default function Works() {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    fetch('/books-full.json')
+    fetch('/books.json')
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(err => console.error('Failed to load books:', err));
@@ -48,20 +48,20 @@ export default function Works() {
   return (
     <>
       <Helmet>
-        <title>10 Published Works by Kiminou Knox</title>
-        <meta name="description" content="Explore all 10 published works by Kiminou Knox, including The Spirit of Solomon, Poems From A Black Boy, Boys Raised In Silence, WHY DID YOU GHOST ME, and 7.16.74: An Ode to Rashida." />
+        <title>Books by Kiminou Knox | 10 Original Works & 7 Remastered Editions</title>
+        <meta name="description" content="Explore 10 original works and seven remastered editions by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, Poems From A Black Boy, and My Father." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="10 Published Works by Kiminou Knox" />
-        <meta property="og:description" content="The official 10-work catalog of author and poet Kiminou Knox." />
+        <meta property="og:title" content="Books by Kiminou Knox | Original & Remastered Editions" />
+        <meta property="og:description" content="The official catalog: 10 original works and seven high-resolution remastered editions." />
         <meta property="og:url" content="https://www.kiminouknox.com/works" />
         <meta property="og:image" content="https://www.kiminouknox.com/og/works.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="10 Published Works by Kiminou Knox" />
-        <meta name="twitter:description" content="The official 10-work catalog of author and poet Kiminou Knox." />
+        <meta name="twitter:title" content="Books by Kiminou Knox | Original & Remastered Editions" />
+        <meta name="twitter:description" content="The official catalog: 10 original works and seven high-resolution remastered editions." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/og/works.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(
@@ -119,11 +119,11 @@ export default function Works() {
                   <p className="text-sm text-muted-foreground mb-4">
                     {book.year}
                   </p>
-                  {book.buyLinks.amazon && (
-                    <Button
-                      variant="default"
-                      className="w-full"
-                      onClick={() => window.open(book.buyLinks.amazon, '_blank')}
+              {book.buyLinks.amazon && (
+                <Button
+                  variant="default"
+                  className="w-full"
+                  onClick={() => window.open(book.buyLinks.amazon ?? undefined, '_blank')}
                       data-testid={`buy-button-${book.id}`}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
