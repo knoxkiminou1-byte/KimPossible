@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
 import { useIdleReady } from "@/hooks/useIdleReady";
+import { CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 import {
   breadcrumbSchema,
   faqSchema,
@@ -50,7 +51,7 @@ const homeFaq = [
   {
     question: "How many books has Kiminou Knox published?",
     answer:
-      "Kiminou Knox is the author of 10 original works and seven remastered editions spanning poetry, faith, identity, imagination, family, love, and healing. Each catalog page includes a high-resolution cover, description, structured book data, and verified retailer links as they become available.",
+      `Kiminou Knox is a ten-time published author whose books span poetry, faith, identity, imagination, family, love, and healing. ${CATALOG_EDITION_NOTE} Each catalog page includes a high-resolution cover, description, structured book data, and verified retailer links as they become available.`,
   },
   {
     question: "What does he speak about?",
@@ -127,7 +128,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author, Athlete, Speaker, Podcast Host</title>
-        <meta name="description" content="Official site of Kiminou Knox — Bay Area author of 10 original works and seven remastered editions, NCAA-registered athlete, speaker, and host of KimYaps. Explore books, essays, and booking information." />
+        <meta name="description" content="Official site of Kiminou Knox — ten-time published Bay Area author, NCAA-registered athlete, speaker, and host of KimYaps. Explore books, essays, and booking information." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={SITE_URL} />
         <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
@@ -135,7 +136,7 @@ export default function Home() {
         
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
-        <meta property="og:description" content="Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered athlete, speaker, and host of KimYaps." />
+        <meta property="og:description" content="Bay Area poet and ten-time published author, NCAA-registered athlete, speaker, and host of KimYaps." />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:image:width" content="1200" />
@@ -146,7 +147,7 @@ export default function Home() {
         <meta name="twitter:site" content={SITE_TWITTER} />
         <meta name="twitter:creator" content={SITE_TWITTER} />
         <meta name="twitter:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
-        <meta name="twitter:description" content="Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered athlete, speaker, and host of KimYaps." />
+        <meta name="twitter:description" content="Bay Area poet and ten-time published author, NCAA-registered athlete, speaker, and host of KimYaps." />
         <meta name="twitter:image" content={SITE_IMAGE} />
         
         <script type="application/ld+json">

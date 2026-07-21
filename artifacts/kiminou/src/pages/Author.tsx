@@ -10,6 +10,7 @@ import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_SOCIAL_LINKS, SITE_URL } from "@/lib/seo";
+import { CANONICAL_BOOKS, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
 const CHAPTERS = [
   { id: "portrait", label: "Profile" },
@@ -23,7 +24,7 @@ const CHAPTERS = [
 ];
 
 const CREDENTIALS = [
-  { label: "10×", sub: "Published Works" },
+  { label: "10×", sub: "Published Books" },
   { label: "Poet", sub: "Primary Craft" },
   { label: "NCAA", sub: "Eligible Athlete" },
   { label: "AAFC", sub: "Director" },
@@ -38,18 +39,7 @@ const SOCIAL_LINKS = [
   { name: "Prep Hoops", url: "https://prephoops.com/player/kiminou-knox/" },
 ];
 
-const BOOKS = [
-  { title: "Poems From A Black Boy", desc: "Early poems tracing the inner life of a young Black boy learning how to pray, love, and tell the truth.", cover: "/covers/kiminou-knox-poems-from-black-boy.jpg" },
-  { title: "Hopeless Romantic", desc: "A lyric study of love, heartbreak, and healing written from the point of view of a young man who wants to stay tender.", cover: "/covers/kiminou-knox-hopeless-romantic-poetry.jpg" },
-  { title: "The Spirit of Solomon", desc: "Prophetic reflection on wisdom, discipline, and the sacred weight of a life lived with intention.", cover: "/covers/kiminou-knox-spirit-of-solomon-book.jpg" },
-  { title: "Our Father?: A Poetic Journey Through Faith, Doubt, and Divine Silence", desc: "A candid wrestling with prayer and presence — when belief collides with unanswered questions.", cover: "/covers/kiminou-knox-our-father-poetry.jpg" },
-  { title: "Our Father?: Father Where Are You", desc: "A search for faith, fatherhood, and presence when answers remain out of reach.", cover: "/covers/kiminou-knox-our-father-poetry.jpg" },
-  { title: "Boys Raised In Silence", desc: "Poems for the boys who were never allowed to feel, and the men they grow into when they finally learn to speak.", cover: "/covers/kiminou-knox-boys-raised-in-silence.png" },
-  { title: "The Adventures of Kiminou the Great and Chua the Wise", desc: "Two friends learn that courage and wisdom work best together. Written with his brother.", cover: "/covers/kiminou-knox-adventures-kiminou-great-chua.png" },
-  { title: "Kiminou\'s World of Imagination: The Basics", desc: "A children's book about imagination, play, and the power of believing in what you can build.", cover: "/covers/kiminou-knox-world-of-imagination.png" },
-  { title: "WHY DID YOU GHOST ME: Poems from a Ghosted Lover", desc: "Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted.", cover: "/covers/why-did-you-ghost-me.jpg" },
-  { title: "7.16.74: An Ode to Rashida", desc: "A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life.", cover: "/covers/7-16-74-an-ode-to-rashida.jpg" },
-];
+const BOOKS = CANONICAL_BOOKS.map(({ title, description, cover }) => ({ title, desc: description, cover }));
 
 const PULL_QUOTES: { text: string; author: string; source?: string }[] = [
   {
@@ -198,14 +188,14 @@ export default function Author() {
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/author" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
-        <meta property="og:description" content="Author of 10 original works and seven remastered editions spanning poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area born." />
+        <meta property="og:description" content="Ten-time published author writing across poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area born." />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:description" content="Poet and author of 10 original works and seven remastered editions. Bay Area born. Creator of the Black Boy Lie universe." />
+        <meta name="twitter:description" content="Poet and ten-time published author. Bay Area born. Creator of the Black Boy Lie universe." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify(
@@ -406,11 +396,11 @@ export default function Author() {
 
           {/* ─── LITERARY WORK ──────────────────────────────── */}
           <section id="literary" className="py-20 scroll-mt-16">
-            <SectionHeading eyebrow="10 Published Works" title="Literary Work & Themes" />
+            <SectionHeading eyebrow="Ten Published Books" title="Literary Work & Themes" />
             <div className="grid md:grid-cols-2 gap-10">
               <Reveal>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  Kiminou Knox is the author of 10 published works that form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
+                  Kiminou Knox is a ten-time published author whose books form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
@@ -589,7 +579,8 @@ export default function Author() {
         {/* ─── THE UNIVERSE (full bleed) ──────────────────── */}
         <section id="universe" className="py-24 border-t border-white/6 scroll-mt-16 overflow-hidden">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 mb-12">
-            <SectionHeading eyebrow="10 Published Works" title="The Black Boy Lie Universe" />
+            <SectionHeading eyebrow="Ten Published Books" title="The Black Boy Lie Universe" />
+            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-white/45">{CATALOG_EDITION_NOTE}</p>
           </div>
           <div className="relative">
             {/* Horizontal scroll container */}

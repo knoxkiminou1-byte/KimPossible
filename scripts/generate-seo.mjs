@@ -1,10 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
 
+const repoRoot = process.cwd();
+const authorProfilePath = path.join(repoRoot, "artifacts", "kiminou", "src", "content", "author-profile.json");
+const authorProfile = JSON.parse(fs.readFileSync(authorProfilePath, "utf8"));
+const canonicalBookTitles = authorProfile.canonicalBooks.map(({ title }) => title);
+
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
-const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox, author of 10 original works and seven remastered editions, athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area.";
+const SITE_DESCRIPTION = authorProfile.searchDescription;
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
 const KIMINOU_PHOTOS = {
   officialHeadshot: {
@@ -51,7 +55,6 @@ const KIMINOU_PHOTOS = {
 const KIMINOU_PERSON_IMAGE = `${SITE_URL}${KIMINOU_PHOTOS.officialHeadshot.loc}`;
 const MEDIUM_FEED_URL = "https://medium.com/feed/@knoxkiminou1";
 
-const repoRoot = process.cwd();
 const siteRoot = path.join(repoRoot, "artifacts", "kiminou");
 const publicRoot = path.join(siteRoot, "public");
 const booksPath = path.join(publicRoot, "books.json");
@@ -74,19 +77,18 @@ const blogData = JSON.parse(fs.readFileSync(blogDataPath, "utf8"));
 const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
-  "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
+  "https://www.amazon.com/author/kiminou",
   "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
   "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
   "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps",
   "https://www.linkedin.com/in/kiminou-knox-50691a394/",
   "https://x.com/KnoxKiminou",
   "https://www.youtube.com/@KiminouKnoxOfficial",
+  "https://www.tiktok.com/@kiminou.knox",
   "https://about.me/kiminou",
   "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc",
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
-  "https://about.me/kiminou",
-  "https://stan.store/kiminouknox",
   "https://www.wikidata.org/wiki/Q137260299",
 ];
 
@@ -343,15 +345,15 @@ const baseRouteMeta = [
   },
   {
     loc: "/works",
-    title: "10 Published Works by Kiminou Knox",
+    title: "Ten Published Books by Kiminou Knox",
     description:
-      "The official 10-work catalog by Kiminou Knox, including poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy.",
+      "The official ten-book bibliography by Kiminou Knox, including poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy.",
     image: "/kiminou-knox-social-share.png",
     keywords: ["Kiminou Knox books", "Kiminou Knox works", "poetry books", "Poems From A Black Boy"],
     sections: [
       {
         heading: "Works",
-        text: books.map((book) => `${book.title}: ${book.description}`).join(" "),
+        text: `${canonicalBookTitles.join("; ")} ${authorProfile.catalogEditionNote}`,
       },
     ],
     schemaType: "CollectionPage",
@@ -381,7 +383,7 @@ const baseRouteMeta = [
     sections: [
       {
         heading: "Published Books",
-        text: books.map((book) => `${book.title}, ${book.subtitle}. ${book.description}`).join(" "),
+        text: `${canonicalBookTitles.join("; ")} ${authorProfile.catalogEditionNote}`,
       },
     ],
     schemaType: "CollectionPage",

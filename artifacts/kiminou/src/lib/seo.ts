@@ -1,7 +1,8 @@
+import { AUTHOR_SEARCH_DESCRIPTION, AUTHOR_SHORT_BIO } from "@/content/authorProfile";
+
 export const SITE_NAME = "Kiminou Knox";
 export const SITE_URL = "https://www.kiminouknox.com";
-export const SITE_DESCRIPTION =
-  "Official website of Kiminou Knox — author of 10 original works and seven remastered editions, NCAA-registered athlete, speaker, and KimYaps podcast host from the Bay Area.";
+export const SITE_DESCRIPTION = AUTHOR_SEARCH_DESCRIPTION;
 export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
 export const SITE_PERSON_IMAGE =
   "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
@@ -16,16 +17,17 @@ export const SITE_PODCAST_AMAZON =
   "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps";
 export const SITE_PODCAST_RSS = "https://api.riverside.fm/hosting/Qs2CJYe0.rss";
 export const SITE_YOUTUBE = "https://www.youtube.com/@KiminouKnoxOfficial";
+export const SITE_TIKTOK = "https://www.tiktok.com/@kiminou.knox";
 export const SITE_X = "https://x.com/KnoxKiminou";
 export const SITE_LINKEDIN = "https://www.linkedin.com/in/kiminou-knox-50691a394/";
-export const SITE_AMAZON_AUTHOR = "https://www.amazon.com/stores/author/B0DGM5Z5Q8";
+export const SITE_AMAZON_AUTHOR = "https://www.amazon.com/author/kiminou";
 export const SITE_ABOUT_ME = "https://about.me/kiminou";
-export const SITE_STAN_STORE = "https://stan.store/kiminouknox";
 export const SITE_WIKIDATA = "https://www.wikidata.org/wiki/Q137260299";
 
 export const SITE_SOCIAL_LINKS = [
   { label: "Twitter / X", href: SITE_X },
   { label: "YouTube", href: SITE_YOUTUBE },
+  { label: "TikTok", href: SITE_TIKTOK },
   { label: "LinkedIn", href: SITE_LINKEDIN },
   { label: "Medium", href: SITE_MEDIUM_PROFILE },
   { label: "Goodreads", href: SITE_GOODREADS_PROFILE },
@@ -34,7 +36,6 @@ export const SITE_SOCIAL_LINKS = [
   { label: "KimYaps on Spotify", href: SITE_PODCAST_SPOTIFY },
   { label: "KimYaps on Amazon Music", href: SITE_PODCAST_AMAZON },
   { label: "About.me", href: SITE_ABOUT_ME },
-  { label: "Stan Store", href: SITE_STAN_STORE },
 ] as const;
 
 export const SITE_SAME_AS = [
@@ -75,8 +76,7 @@ export function personSchema() {
           caption: "Kiminou Knox — official author headshot 2026",
         },
         jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
-        description:
-          "Kiminou Knox is the author of 10 original works and seven remastered editions, a Bay Area poet, NCAA-registered basketball and football athlete, speaker, and KimYaps podcast host. Creator of the Black Boy Lie universe.",
+        description: AUTHOR_SHORT_BIO,
         birthPlace: {
           "@type": "Place",
           name: "Bay Area, California",

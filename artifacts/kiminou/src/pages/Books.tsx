@@ -16,6 +16,7 @@ import PoemModal from "@/components/PDFModal";
 import OpenBookOverlay from "@/components/OpenBookOverlay";
 import BookShelf3D from "@/components/BookShelf3D";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -141,12 +142,12 @@ export default function BooksPage() {
     <>
       <Helmet>
         <title>Books by Kiminou Knox — Poetry Collections & Published Works</title>
-        <meta name="description" content="Explore 10 original works and seven new remastered editions by Kiminou Knox—poetry and storytelling on faith, identity, love, Black boyhood, family, imagination, healing, and legacy." />
+        <meta name="description" content="Explore the ten-book bibliography of Kiminou Knox, with original and remastered editions across poetry, faith, identity, love, Black boyhood, family, imagination, healing, and legacy." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/books" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Books by Kiminou Knox — Poetry Collections & Published Works" />
-        <meta property="og:description" content="10 original works and seven remastered editions on faith, identity, love, Black boyhood, family, imagination, healing, and legacy." />
+        <meta property="og:description" content="The canonical ten-book bibliography of Kiminou Knox, plus verified original and remastered formats." />
         <meta property="og:url" content="https://www.kiminouknox.com/books" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -160,13 +161,12 @@ export default function BooksPage() {
             "@type": "ItemList",
             "name": "Books by Kiminou Knox",
             "url": "https://www.kiminouknox.com/books",
-            "numberOfItems": books.length,
+            "numberOfItems": CANONICAL_BOOK_TITLES.length,
             "author": { "@id": "https://www.kiminouknox.com/#person" },
-            "itemListElement": books.map((book, index) => ({
+            "itemListElement": CANONICAL_BOOK_TITLES.map((title, index) => ({
               "@type": "ListItem",
               "position": index + 1,
-              "name": book.title,
-              "url": `https://www.kiminouknox.com/books/${book.id}`
+              "name": title
             }))
           })}
         </script>
@@ -181,7 +181,7 @@ export default function BooksPage() {
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">10 Original Works · 7 Remastered Editions</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Ten Published Books · Original &amp; Remastered Editions</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
                 <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
                   <ScrambleText text="Published" className="block" delay={0.3} />
@@ -197,6 +197,22 @@ export default function BooksPage() {
                 <span>Google Play ratings on <span className="text-white/70 italic">Hopeless Romantic</span> — Kiminou's most-read collection</span>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/6 bg-white/[0.015] py-14" aria-labelledby="canonical-bibliography-heading">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/45 mb-3">Official Bibliography</p>
+            <h2 id="canonical-bibliography-heading" className="font-serif text-3xl font-light text-white mb-8">The Canonical Ten Books</h2>
+            <ol className="grid gap-x-10 gap-y-3 sm:grid-cols-2">
+              {CANONICAL_BOOK_TITLES.map((title, index) => (
+                <li key={title} className="flex gap-4 border-b border-white/6 pb-3 text-white/65">
+                  <span className="font-serif text-amber-400/45">{String(index + 1).padStart(2, "0")}</span>
+                  <span>{title}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/40">{CATALOG_EDITION_NOTE}</p>
           </div>
         </section>
 

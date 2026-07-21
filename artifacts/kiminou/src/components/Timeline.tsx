@@ -89,17 +89,17 @@ const timelineEvents: TimelineEvent[] = [
   {
     year: "2025",
     title: "Literary Expansion",
-    description: "The catalog expands to eight published works, including Our Father?, Poems From A Black Boy, and Boys Raised In Silence",
-    achievement: "Eight Works Published",
+    description: "The bibliography expands across faith, Black boyhood, love, family, imagination, and youth storytelling.",
+    achievement: "Catalog Expansion",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
     image: KIMINOU_IMAGES.chessStrategy.src
   },
   {
     year: "2026",
-    title: "Ten Published Works",
-    description: "The official catalog reaches 10 works with WHY DID YOU GHOST ME and 7.16.74: An Ode to Rashida",
-    achievement: "Ten Works Published",
+    title: "Ten Published Books",
+    description: "The official bibliography reaches ten distinct published books, with original and remastered formats cataloged as editions.",
+    achievement: "Ten Books Published",
     category: "literary",
     icon: <Book className="w-5 h-5" />,
     image: KIMINOU_IMAGES.chessStrategy.src
@@ -204,7 +204,7 @@ export default function Timeline() {
             The Timeline
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="timeline-subtitle">
-            Born in Hayward, raised in East Palo Alto — 10 published works, NCAA ball, and a program building the next generation. Here is where it came from.
+            Born in Hayward, raised in East Palo Alto — ten published books, NCAA ball, and a program building the next generation. Here is where it came from.
           </p>
         </div>
 

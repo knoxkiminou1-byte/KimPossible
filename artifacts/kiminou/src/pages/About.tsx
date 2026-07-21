@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
 import SplitNarrative from "@/components/SplitNarrative";
+import { CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, personSchema, SITE_URL } from "@/lib/seo";
 
@@ -27,7 +28,7 @@ export default function About() {
         "@id": "https://www.kiminouknox.com/about#webpage",
         "url": "https://www.kiminouknox.com/about",
         "name": "About Kiminou Knox — Author, Athlete, Speaker",
-        "description": "Learn about Kiminou Knox — author of 10 original works and seven remastered editions, Bay Area poet, NCAA-registered basketball athlete, youth speaker, and podcast host.",
+        "description": "Learn about Kiminou Knox — ten-time published author, Bay Area poet, NCAA-registered basketball athlete, youth speaker, and podcast host.",
         "isPartOf": { "@id": "https://www.kiminouknox.com/#website" },
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
@@ -46,7 +47,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About Kiminou Knox — Author, Athlete &amp; Speaker | Bay Area</title>
-        <meta name="description" content="Kiminou Knox is the author of 10 original works and seven remastered editions, a Bay Area poet, NCAA-registered basketball athlete, speaker, and podcast host. Creator of the Black Boy Lie universe." />
+        <meta name="description" content="Kiminou Knox is a ten-time published author, Bay Area poet, NCAA-registered basketball athlete, speaker, and podcast host. Creator of the Black Boy Lie universe." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
@@ -54,7 +55,7 @@ export default function About() {
         <meta property="og:profile:first_name" content="Kiminou" />
         <meta property="og:profile:last_name" content="Knox" />
         <meta property="og:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta property="og:description" content="Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
+        <meta property="og:description" content="Bay Area poet and ten-time published author, NCAA-registered basketball athlete, speaker, and host of the KimYaps podcast." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
         <meta property="og:image" content={outdoorPortraitUrl} />
         <meta property="og:site_name" content="Kiminou Knox" />
@@ -62,7 +63,7 @@ export default function About() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta name="twitter:description" content="Bay Area poet and author of 10 original works and seven remastered editions, NCAA-registered basketball athlete, speaker, and host of KimYaps podcast." />
+        <meta name="twitter:description" content="Bay Area poet and ten-time published author, NCAA-registered basketball athlete, speaker, and host of the KimYaps podcast." />
         <meta name="twitter:image" content={outdoorPortraitUrl} />
         
         <script type="application/ld+json">
@@ -114,11 +115,11 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from the Bay Area, California, telling stories that carry faith, grit, and love. I attended Ygnacio Valley High School, Cristo Rey De La Salle, and Bishop O'Dowd — three schools, three different chapters, all part of the same story. Through books, poems, and youth work, I try to say the things that usually go unsaid.
+                I am a writer and athlete from the Bay Area, California, telling stories that carry faith, grit, and love. I attended Ygnacio Valley High School, Cristo Rey De La Salle, and Bishop O'Dowd — three schools, three different chapters, all part of the same story. Through books, poems, and youth work, I try to say the things that usually go unsaid.
               </p>
 
               <p data-testid="about-stats">
-                My work includes 10 original works, seven remastered editions, and recognition through multiple awards, including the Miles Hall Foundation Youth Summit Top Essay Finalist (2025). I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                I am a ten-time published author and a 2025 Miles Hall Foundation Youth Summit Top Essay Finalist. I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
               </p>
 
               <p data-testid="about-family">
@@ -129,9 +130,14 @@ export default function About() {
                 On the page, I explore Black boy life, love, and becoming through verse and narrative. On the court, I play forward and center, bringing the same discipline to both arenas. The principles remain constant: show up, do the work, leave every space better than you found it.
               </p>
 
-              <p data-testid="about-books">
-                Kiminou Knox is the author of 10 published works: Kiminou's World of Imagination: The Basics; The Adventures of Kiminou the Great and Chua the Wise; Poems From A Black Boy; Boys Raised In Silence; The Spirit of Solomon; Hopeless Romantic; Our Father?: A Poetic Journey Through Faith, Doubt, and Divine Silence; Our Father?: Father Where Are You; WHY DID YOU GHOST ME: Poems from a Ghosted Lover; and 7.16.74: An Ode to Rashida. I am building a universe that weaves together poems, stories, essays, visual media, and live performance.
-              </p>
+              <div data-testid="about-books">
+                <p>Kiminou Knox is the author of ten published books:</p>
+                <ol className="mt-4 grid gap-2 pl-6 sm:grid-cols-2">
+                  {CANONICAL_BOOK_TITLES.map((title) => <li key={title}>{title}</li>)}
+                </ol>
+                <p className="mt-4 text-base text-muted-foreground">{CATALOG_EDITION_NOTE}</p>
+                <p className="mt-4">I am building a universe that weaves together poems, stories, essays, visual media, and live performance.</p>
+              </div>
 
               <p data-testid="about-speaking">
                 As a speaker, I address craft, discipline, voice, and the cost of silence. I work with teams, schools, and community organizations.

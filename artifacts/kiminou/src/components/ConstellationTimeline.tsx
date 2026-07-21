@@ -46,8 +46,8 @@ const MILESTONES = [
   },
   {
     year: "2025",
-    title: "Eight Published Works",
-    detail: "The catalog expands with Our Father?, Poems From A Black Boy, Boys Raised In Silence, and other works.",
+    title: "Literary Expansion",
+    detail: "The bibliography expands across faith, Black boyhood, love, family, imagination, and youth storytelling.",
     category: "literary",
     x: 38, y: 75,
   },
@@ -60,8 +60,8 @@ const MILESTONES = [
   },
   {
     year: "2026",
-    title: "Ten Published Works",
-    detail: "WHY DID YOU GHOST ME and 7.16.74: An Ode to Rashida bring the official catalog to 10 works.",
+    title: "Ten Published Books",
+    detail: "The official bibliography reaches ten distinct published books, with original and remastered formats cataloged as editions.",
     category: "literary",
     x: 85, y: 65,
   },

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { PUBLISHED_BOOK_COUNT } from "@/content/authorProfile";
 
 export default function SplitNarrative() {
   const ref = useRef<HTMLDivElement>(null);
@@ -164,9 +165,9 @@ export default function SplitNarrative() {
               transition={{ delay: 0.9, duration: 0.6 }}
             >
               {[
-                ["8 Books", "published since 2020"],
+                [`${PUBLISHED_BOOK_COUNT} Books`, "published since 2020"],
                 ["Faith · Love · Identity", "recurring themes"],
-                ["Miles Hall Award", "community recognition"],
+                ["Top Essay Finalist", "2025 Miles Hall Youth Summit"],
                 ["The Tee Shirt Teens", "founder & director"],
               ].map(([stat, label]) => (
                 <div key={stat} className="flex items-baseline gap-3">
