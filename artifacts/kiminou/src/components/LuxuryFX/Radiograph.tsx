@@ -21,7 +21,7 @@ const ZONES: Zone[] = [
     id: "spine",
     label: "Literary Foundation",
     title: "Literary Foundation",
-    body: "10 published works. Poetry as a survival language, not a performance.",
+    body: "Ten published books. Poetry as a survival language, not a performance.",
     tip: { x: 64, y: 40 },
   },
   {

@@ -1,0 +1,59 @@
+{
+  "publishedBookCount": 10,
+  "authorCountLabel": "Ten-time published author",
+  "searchDescription": "Official website of Kiminou Knox, a ten-time published author, NCAA-registered athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area.",
+  "shortBio": "Kiminou Knox is a ten-time published author, Bay Area poet, NCAA-registered basketball player, speaker, and creator of the Black Boy Lie universe. His books span poetry, faith, identity, love, family, and youth storytelling. He was a top essay finalist at the 2025 Miles Hall Foundation Youth Summit.",
+  "catalogEditionNote": "The bibliography contains ten distinct published books. Original and remastered formats are cataloged as editions of those books, not counted as additional titles.",
+  "canonicalBooks": [
+    {
+      "title": "The Spirit of Solomon",
+      "description": "Poetry on wisdom, desire, accountability, faith, and the cost of becoming.",
+      "cover": "/covers/kiminou-knox-spirit-of-solomon-book.jpg"
+    },
+    {
+      "title": "Our Father?",
+      "description": "A poetic journey through faith, doubt, prayer, and divine silence.",
+      "cover": "/covers/kiminou-knox-our-father-poetry.jpg"
+    },
+    {
+      "title": "Hopeless Romantic",
+      "description": "Poems about love, heartbreak, tenderness, closure, and healing.",
+      "cover": "/covers/kiminou-knox-hopeless-romantic-poetry.jpg"
+    },
+    {
+      "title": "Poems From a Black Boy",
+      "description": "Poetry on Black boyhood, identity, family, faith, survival, and self-definition.",
+      "cover": "/covers/kiminou-knox-poems-from-black-boy.jpg"
+    },
+    {
+      "title": "The Adventures of Kiminou the Great and Chua the Wise",
+      "description": "A youth story about friendship, courage, wisdom, and discovery.",
+      "cover": "/covers/kiminou-knox-adventures-kiminou-great-chua.png"
+    },
+    {
+      "title": "Kiminou’s World of Imagination: The Basics",
+      "description": "A children's book about imagination, play, creativity, and possibility.",
+      "cover": "/covers/kiminou-knox-world-of-imagination.png"
+    },
+    {
+      "title": "Boys Raised by Silence",
+      "description": "Poetry about emotional silence, masculinity, fathers, community, and healing.",
+      "cover": "/covers/boys-raised-by-silence-remastered-edition.jpg"
+    },
+    {
+      "title": "Black Boy Poems",
+      "description": "Poems centered on Black boyhood, voice, feeling, truth, and becoming.",
+      "cover": null
+    },
+    {
+      "title": "Why Did You Ghost Me?",
+      "description": "Poems about ghosting, heartbreak, unanswered messages, closure, and self-worth.",
+      "cover": "/covers/why-did-you-ghost-me.jpg"
+    },
+    {
+      "title": "My Father.",
+      "description": "Poetry about fatherhood, faith, prayer, grace, and spiritual inheritance.",
+      "cover": "/covers/my-father-remastered-edition.jpg"
+    }
+  ]
+}

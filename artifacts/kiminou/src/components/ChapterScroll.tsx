@@ -8,7 +8,7 @@ const CHAPTERS = [
     label: "Author",
     num: "01",
     headline: "The Black Boy Lie Universe",
-    subline: "10 Original Works · 7 Remastered Editions",
+    subline: "Ten Published Books · Multiple Available Editions",
     body: "Poetry that doesn't perform. Each collection is a confession — on faith, silence, love, identity, and what it costs to grow up Black, honest, and unafraid. From Bay Area corners to Waterstones London.",
     cta: { label: "Browse the Books", href: "/books" },
     accent: "from-amber-400 to-yellow-300",

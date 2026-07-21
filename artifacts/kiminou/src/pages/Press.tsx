@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
 const recognition = [
   {
@@ -31,7 +32,7 @@ const verificationGroups = [
   {
     label: "Books",
     items: [
-      { name: "Amazon Author Store", desc: "Author storefront and retail listings", url: "https://www.amazon.com/stores/author/B0DGM5Z5Q8" },
+      { name: "Amazon Author Store", desc: "Author storefront and retail listings", url: "https://www.amazon.com/author/kiminou" },
       { name: "Goodreads Author Profile", desc: "Reader-facing author profile and book records, including numeric public author ID", url: "https://www.goodreads.com/author/show/55621683.Kiminou_Knox" },
       { name: "Google Play Books Listings", desc: "Search results for Kiminou Knox books on Google", url: "https://play.google.com" },
     ],
@@ -65,9 +66,9 @@ const verificationGroups = [
     label: "Profiles",
     items: [
       { name: "LinkedIn", desc: "Professional profile", url: "https://www.linkedin.com/in/kiminou-knox-50691a394/" },
+      { name: "TikTok", desc: "Official short-form video profile", url: "https://www.tiktok.com/@kiminou.knox" },
       { name: "About.me", desc: "Public profile page", url: "https://about.me/kiminou" },
       { name: "Wikidata", desc: "Public entity record", url: "https://www.wikidata.org/wiki/Q137260299" },
-      { name: "Stan Store", desc: "Creator storefront", url: "https://stan.store/kiminouknox" },
     ],
   },
 ];
@@ -75,7 +76,7 @@ const verificationGroups = [
 const TICKER_ITEMS = [
   "Miles Hall Foundation", "Amazon Author Store", "Goodreads", "MaxPreps", "NCSA Sports",
   "Prep Hoops", "Apple Podcasts", "Spotify", "Amazon Music", "YouTube", "Medium", "LinkedIn",
-  "Bookshop.org", "Google Play Books", "About.me", "Wikidata", "Stan Store",
+  "Bookshop.org", "Google Play Books", "TikTok", "About.me", "Wikidata",
 ];
 
 const creativeWorkSchema = {
@@ -331,7 +332,7 @@ export default function Press() {
                   <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.2em] text-white/30">
                     <span>Bio (Short & Long)</span>
                     <span>·</span>
-                    <span>10 Original Works · 7 Remastered Editions</span>
+                    <span>Ten Published Books · Multiple Available Editions</span>
                     <span>·</span>
                     <span>Athletic Measurables</span>
                     <span>·</span>
@@ -353,41 +354,17 @@ Kiminou Knox is an author, NCAA-registered athlete, entrepreneur, and creative f
 
 Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee Williams and Elisha Bonepart McNair.
 
-SHORT BIO (50 words)
-─────────────────────
-Kiminou Knox is a Bay Area author and NCAA-registered basketball player. Creator of the Black Boy Lie universe. He is the author of 10 original works and seven remastered editions spanning poetry, faith, and youth fiction. Top essay finalist, Miles Hall Foundation Youth Summit, 2025. He writes to say what silence never could.
+SHORT BIO
+─────────
+${AUTHOR_SHORT_BIO}
 
-PUBLISHED WORKS
-───────────────
-1. Kiminou's World of Imagination: The Basics
+CANONICAL TEN-BOOK BIBLIOGRAPHY
+──────────────────────────────
+${CANONICAL_BOOK_TITLES.map((title, index) => `${index + 1}. ${title}`).join("\n")}
 
-2. The Adventures of Kiminou the Great and Chua the Wise
-   Amazon: https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5
-
-3. Poems From A Black Boy
-   Amazon: https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2
-
-4. Boys Raised In Silence
-   Amazon: https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM
-
-5. The Spirit of Solomon
-   Amazon: https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK
-
-6. Hopeless Romantic
-   Amazon: https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N
-
-7. Our Father?: A Poetic Journey Through Faith, Doubt, and Divine Silence
-
-8. Our Father?: Father Where Are You
-   Amazon: https://www.amazon.com/dp/B0F3VBVWCM
-
-9. WHY DID YOU GHOST ME: Poems from a Ghosted Lover
-   Amazon: https://www.amazon.com/dp/B0H8XZ7N6K
-   Google Play: https://play.google.com/store/books/details?id=zB_1EQAAQBAJ
-
-10. 7.16.74: An Ode to Rashida
-    Amazon: https://www.amazon.com/dp/B0H92Q6PM2
-    Google Play: https://play.google.com/store/books/details?id=MTv1EQAAQBAJ
+CATALOG NOTE
+────────────
+${CATALOG_EDITION_NOTE}
 
 REMASTERED EDITIONS — 2026
 ──────────────────────────
@@ -429,15 +406,15 @@ MEDIA & DIGITAL PRESENCE
 Website: https://www.kiminouknox.com
 Twitter/X: @KnoxKiminou
 YouTube: https://www.youtube.com/@KiminouKnoxOfficial
+TikTok: https://www.tiktok.com/@kiminou.knox
 Medium: https://medium.com/@knoxkiminou1
 Podcast (KimYaps): https://podcasts.apple.com/us/podcast/kimyaps/id1850364308
 Spotify: https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg
 Amazon Music: https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps
 Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
-Amazon Author Store: https://www.amazon.com/stores/author/B0DGM5Z5Q8
+Amazon Author Store: https://www.amazon.com/author/kiminou
 LinkedIn: https://www.linkedin.com/in/kiminou-knox-50691a394/
 About.me: https://about.me/kiminou
-Stan Store: https://stan.store/kiminouknox
 
 MEDIA CONTACT
 ─────────────

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import { PUBLISHED_BOOK_COUNT } from "@/content/authorProfile";
 
 const WORDS = [
   { word: "Faith", books: ["Our Father?", "The Spirit of Solomon"], size: "text-3xl" },
@@ -153,7 +154,7 @@ export default function WordCloud() {
         >
           <div className="h-px w-10 bg-gradient-to-r from-transparent to-amber-400/25" />
           <p className="text-[10px] uppercase tracking-[0.3em] text-white/20">
-            {WORDS.length} themes across 8 books
+            {WORDS.length} themes across {PUBLISHED_BOOK_COUNT} books
           </p>
           <div className="h-px w-10 bg-gradient-to-l from-transparent to-amber-400/25" />
         </motion.div>
