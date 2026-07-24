@@ -3,6 +3,7 @@ import { motion, useInView, AnimatePresence, useSpring } from "framer-motion";
 import CMYKReveal from "@/components/LuxuryFX/CMYKReveal";
 
 const VinylRecord = lazy(() => import("@/components/LuxuryFX/VinylRecord"));
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 import FreeChapterCapture from "@/components/FreeChapterCapture";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
@@ -189,7 +190,11 @@ export default function BooksPage() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 left-1/3 w-[500px] h-[400px] bg-amber-500/4 rounded-full blur-[140px]" />
           </div>
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          {/* Foreground 3D hero — sits above the glow, behind the text (z-10). */}
+          <Suspense fallback={null}>
+            <PageHero3D variant="books" />
+          </Suspense>
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
               <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">8 Published Works</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">

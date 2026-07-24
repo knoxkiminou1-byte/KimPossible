@@ -12,6 +12,7 @@ import RadioDial from "@/components/LuxuryFX/RadioDial";
 import { breadcrumbSchema, faqSchema, podcastSchema, SITE_URL } from "@/lib/seo";
 
 const ApplausePhysics = lazy(() => import("@/components/LuxuryFX/ApplausePhysics"));
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 
 const PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 const PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
@@ -539,6 +540,11 @@ export default function Speaking() {
                 VOICE<br />& SIGNAL
               </span>
             </div>
+
+            {/* Foreground 3D hero — reactive sound rings, behind the text (z-10). */}
+            <Suspense fallback={null}>
+              <PageHero3D variant="speaking" />
+            </Suspense>
 
             <motion.div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-24 md:pb-36 w-full"
               style={{ opacity: heroOpacity }}>
