@@ -9,7 +9,8 @@ import {
   Instance,
   AdaptiveDpr,
 } from "@react-three/drei";
-import { EffectComposer, Bloom, Vignette, SMAA } from "@react-three/postprocessing";
+import { EffectComposer, Bloom, Vignette, SMAA, ChromaticAberration } from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 import { use3DEnabled } from "@/hooks/use3D";
 import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
@@ -51,13 +52,18 @@ function HomeForm() {
         <MeshTransmissionMaterial
           transmission={1}
           thickness={1}
-          roughness={0.1}
+          roughness={0.06}
           ior={1.5}
-          chromaticAberration={0.24}
-          anisotropy={0.3}
+          chromaticAberration={0.3}
+          anisotropy={0.4}
           distortion={0.3}
           distortionScale={0.4}
           temporalDistortion={0.2}
+          clearcoat={1}
+          clearcoatRoughness={0.08}
+          iridescence={1}
+          iridescenceIOR={1.6}
+          iridescenceThicknessRange={[100, 480]}
           color="#f5ead0"
           emissive="#d4a017"
           emissiveIntensity={0.12}
@@ -147,13 +153,18 @@ function AboutForm() {
   return (
     <Float speed={0.8} rotationIntensity={0.25} floatIntensity={0.5}>
       <mesh ref={ref}>
-        <torusGeometry args={[1.3, 0.12, 24, 80]} />
+        <torusGeometry args={[1.3, 0.12, 48, 140]} />
         <MeshTransmissionMaterial
           transmission={1}
           thickness={0.8}
-          roughness={0.15}
+          roughness={0.08}
           ior={1.4}
-          chromaticAberration={0.18}
+          chromaticAberration={0.24}
+          clearcoat={1}
+          clearcoatRoughness={0.1}
+          iridescence={0.9}
+          iridescenceIOR={1.5}
+          iridescenceThicknessRange={[120, 500]}
           color="#f0e2c0"
           attenuationColor="#c99a3a"
           attenuationDistance={3}
@@ -183,15 +194,24 @@ function HeroScene({ variant }: { variant: HeroVariant }) {
       <ambientLight intensity={0.4} />
       <pointLight position={[5, 4, 3]} intensity={30} color="#fff2d0" distance={30} />
       <pointLight position={[-5, -3, -3]} intensity={16} color={accent} distance={30} />
+      {/* Gold rim light — rakes the form's edges for that expensive glass glint. */}
+      <spotLight position={[0, -1, -6]} intensity={60} angle={0.9} penumbra={1} color="#ffd77a" distance={26} />
       {form}
-      <Environment resolution={128} frames={Infinity}>
-        <Lightformer intensity={1.6} color="#fff2d0" position={[0, 4, -5]} scale={[10, 6, 1]} />
-        <Lightformer intensity={1} color={accent} position={[-6, 0, 1]} rotation={[0, Math.PI / 2, 0]} scale={[8, 5, 1]} />
-        <Lightformer intensity={1} color={accent} position={[6, 0, 1]} rotation={[0, -Math.PI / 2, 0]} scale={[8, 5, 1]} />
+      <Environment resolution={160} frames={Infinity}>
+        <Lightformer intensity={1.7} color="#fff2d0" position={[0, 4, -5]} scale={[10, 6, 1]} />
+        <Lightformer intensity={1.1} color={accent} position={[-6, 0, 1]} rotation={[0, Math.PI / 2, 0]} scale={[8, 5, 1]} />
+        <Lightformer intensity={1.1} color={accent} position={[6, 0, 1]} rotation={[0, -Math.PI / 2, 0]} scale={[8, 5, 1]} />
+        <Lightformer form="ring" intensity={1.4} color="#ffe9b0" position={[0, 0, 6]} scale={[3, 3, 1]} />
       </Environment>
       <EffectComposer multisampling={0}>
-        <Bloom mipmapBlur intensity={0.9} luminanceThreshold={0.55} luminanceSmoothing={0.3} />
-        <Vignette eskil={false} offset={0.3} darkness={0.65} />
+        <Bloom mipmapBlur intensity={1.05} luminanceThreshold={0.5} luminanceSmoothing={0.32} />
+        <ChromaticAberration
+          blendFunction={BlendFunction.NORMAL}
+          offset={[0.0005, 0.0007]}
+          radialModulation={false}
+          modulationOffset={0}
+        />
+        <Vignette eskil={false} offset={0.28} darkness={0.68} />
         <SMAA />
       </EffectComposer>
       <AdaptiveDpr pixelated />
