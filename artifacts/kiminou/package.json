@@ -12,7 +12,9 @@
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
     "@types/three": "^0.184.1",
+    "postprocessing": "^6.36.4",
     "react-helmet-async": "^3.0.0",
     "three": "^0.184.0"
   },

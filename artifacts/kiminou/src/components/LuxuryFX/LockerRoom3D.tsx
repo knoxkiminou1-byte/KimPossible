@@ -1,5 +1,15 @@
 import { useRef, useMemo, useEffect, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Environment, Lightformer } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  SSAO,
+  Vignette,
+  ChromaticAberration,
+  ToneMapping,
+} from "@react-three/postprocessing";
+import { BlendFunction, ToneMappingMode } from "postprocessing";
 import * as THREE from "three";
 
 /* ─── Constants ──────────────────────────────────────────────── */
@@ -430,6 +440,38 @@ function FloorLines() {
   );
 }
 
+/* ─── Post-processing stack ───────────────────────────────────── */
+function PostFX() {
+  return (
+    <EffectComposer multisampling={4} enableNormalPass>
+      {/* Ambient occlusion for contact grounding in the corners */}
+      <SSAO
+        blendFunction={BlendFunction.MULTIPLY}
+        samples={16}
+        radius={5}
+        intensity={18}
+        luminanceInfluence={0.6}
+        color={"black" as any}
+      />
+      {/* Bloom lifts the strip lights, gold trim and warm locker glow */}
+      <Bloom
+        mipmapBlur
+        intensity={1.0}
+        luminanceThreshold={0.6}
+        luminanceSmoothing={0.3}
+      />
+      <ChromaticAberration
+        blendFunction={BlendFunction.NORMAL}
+        offset={[0.0004, 0.0006]}
+        radialModulation={false}
+        modulationOffset={0}
+      />
+      <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
+      <Vignette eskil={false} offset={0.28} darkness={0.8} />
+    </EffectComposer>
+  );
+}
+
 /* ─── Full 3D Scene ───────────────────────────────────────────── */
 function LockerRoomScene() {
   const mats = useLockerMats();
@@ -445,6 +487,14 @@ function LockerRoomScene() {
 
       {/* Ambient — cool blue tint */}
       <ambientLight color={0x131a2a} intensity={1.1} />
+
+      {/* Procedural HDRI — gives the metal lockers real reflections (no external file) */}
+      <Environment resolution={256} frames={Infinity}>
+        <Lightformer intensity={2.2} color="#fff2d0" position={[0, 4, -6]} scale={[14, 6, 1]} />
+        <Lightformer intensity={1.1} color="#2050ff" position={[-8, 1, 0]} rotation={[0, Math.PI / 2, 0]} scale={[10, 5, 1]} />
+        <Lightformer intensity={1.1} color="#1a3aff" position={[8, 1, 0]} rotation={[0, -Math.PI / 2, 0]} scale={[10, 5, 1]} />
+        <Lightformer intensity={1.6} color="#f0a010" position={[0, 0, -5]} scale={[3, 3, 1]} />
+      </Environment>
 
       {/* Ceiling strip lights — more of them */}
       <StripLight x={-4} z={-2} intensity={2.0} mats={mats} />
@@ -555,6 +605,9 @@ function LockerRoomScene() {
 
       {/* Dust particles */}
       <DustParticles />
+
+      {/* Cinematic post-processing */}
+      <PostFX />
     </>
   );
 }
@@ -564,7 +617,12 @@ export default function LockerRoom3D() {
   return (
     <Canvas
       shadows
-      gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
+      gl={{
+        antialias: false,
+        alpha: false,
+        powerPreference: "high-performance",
+        toneMapping: THREE.NoToneMapping,
+      }}
       camera={{ fov: 58, near: 0.1, far: 50 }}
       style={{ position: "fixed", inset: 0, zIndex: 0 }}
       dpr={[1, 1.8]}
