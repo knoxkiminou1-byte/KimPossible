@@ -8,7 +8,7 @@ import {
   Instance,
   AdaptiveDpr,
 } from "@react-three/drei";
-import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
+import { EffectComposer, Bloom, Vignette, SMAA } from "@react-three/postprocessing";
 import { useLocation } from "wouter";
 import * as THREE from "three";
 import { use3DEnabled } from "@/hooks/use3D";
@@ -170,10 +170,12 @@ function SceneContents() {
         <Lightformer intensity={0.8} color="#4560ff" position={[-6, 0, 0]} rotation={[0, Math.PI / 2, 0]} scale={[8, 5, 1]} />
       </Environment>
 
-      {/* Gentle glow: soft bloom on the aura + motes, plus a calming vignette. */}
-      <EffectComposer>
+      {/* Gentle glow: soft bloom on the aura + motes, calming vignette, SMAA
+          for clean edges (no pixelated shimmer on the drifting motes). */}
+      <EffectComposer multisampling={0}>
         <Bloom mipmapBlur intensity={0.9} luminanceThreshold={0.5} luminanceSmoothing={0.35} />
         <Vignette eskil={false} offset={0.28} darkness={0.7} />
+        <SMAA />
       </EffectComposer>
 
       <AdaptiveDpr pixelated />

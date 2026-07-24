@@ -8,6 +8,7 @@ import {
   Vignette,
   ChromaticAberration,
   ToneMapping,
+  SMAA,
 } from "@react-three/postprocessing";
 import { BlendFunction, ToneMappingMode } from "postprocessing";
 import * as THREE from "three";
@@ -443,7 +444,8 @@ function FloorLines() {
 /* ─── Post-processing stack ───────────────────────────────────── */
 function PostFX() {
   return (
-    <EffectComposer multisampling={4} enableNormalPass>
+    // multisampling off — SMAA owns anti-aliasing (clean edges, cheaper).
+    <EffectComposer multisampling={0} enableNormalPass>
       {/* Ambient occlusion for contact grounding in the corners */}
       <SSAO
         blendFunction={BlendFunction.MULTIPLY}
@@ -468,6 +470,7 @@ function PostFX() {
       />
       <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
       <Vignette eskil={false} offset={0.28} darkness={0.8} />
+      <SMAA />
     </EffectComposer>
   );
 }
