@@ -36,8 +36,13 @@ function crowdAmbiance() {
   window.setTimeout(() => ctx.close().catch(() => undefined), 2000);
 }
 
+const SESSION_KEY = "kiminou-green-room-entered";
+
 export default function GreenRoomStage({ children }: { children: ReactNode }) {
-  const [isOnStage, setIsOnStage] = useState(false);
+  const [isOnStage, setIsOnStage] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return sessionStorage.getItem(SESSION_KEY) === "1";
+  });
   const [transitioning, setTransitioning] = useState(false);
   const transitioningRef = useRef(false);
 
@@ -48,6 +53,7 @@ export default function GreenRoomStage({ children }: { children: ReactNode }) {
     crowdAmbiance();
     window.setTimeout(() => {
       setIsOnStage(true);
+      sessionStorage.setItem(SESSION_KEY, "1");
     }, 450);
     window.setTimeout(() => {
       transitioningRef.current = false;

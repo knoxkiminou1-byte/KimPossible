@@ -93,6 +93,8 @@ function TestimonialCard({ t, index }: { t: (typeof testimonials)[0]; index: num
         <img
           src={t.avatar}
           alt={t.name}
+          loading="lazy"
+          decoding="async"
           className="w-10 h-10 rounded-full object-cover grayscale opacity-70 group-hover:opacity-90 group-hover:grayscale-0 transition-all duration-500"
         />
         <div className="flex-1 min-w-0">

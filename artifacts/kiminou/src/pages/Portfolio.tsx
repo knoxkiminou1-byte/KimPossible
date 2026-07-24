@@ -212,7 +212,7 @@ export default function Portfolio() {
         <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
       </Helmet>
       <Header />
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── HERO ─── */}
         <section className="relative pt-40 pb-28 overflow-hidden" ref={heroRef}>

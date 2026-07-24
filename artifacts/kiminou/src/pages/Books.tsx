@@ -3,6 +3,7 @@ import { motion, useInView, AnimatePresence, useSpring } from "framer-motion";
 import CMYKReveal from "@/components/LuxuryFX/CMYKReveal";
 
 const VinylRecord = lazy(() => import("@/components/LuxuryFX/VinylRecord"));
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 import FreeChapterCapture from "@/components/FreeChapterCapture";
 import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
@@ -17,6 +18,7 @@ import OpenBookOverlay from "@/components/OpenBookOverlay";
 import BookShelf3D from "@/components/BookShelf3D";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import { CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 type Poem = { title: string; content: string };
 type Book = {
@@ -51,7 +53,15 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
       style={{ transformPerspective: 900, transformStyle: "preserve-3d", rotateX: springX, rotateY: springY }}
       className="group flex flex-col"
     >
-      <div className="relative mb-5 cursor-pointer" style={{ perspective: "1000px" }} onClick={() => onOpenBook(book)}>
+      <div
+        className="relative mb-5 cursor-pointer"
+        style={{ perspective: "1000px" }}
+        onClick={() => onOpenBook(book)}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenBook(book); } }}
+        role="button"
+        tabIndex={0}
+        aria-label={`Preview ${book.title}`}
+      >
         <motion.div
           className="relative aspect-[3/4] overflow-hidden bg-black"
           initial={{ rotateY: -8 }}
@@ -133,6 +143,7 @@ export default function BooksPage() {
   const [openBook, setOpenBook] = useState<Book | null>(null);
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
+  const reduceEffects = useShouldReduceEffects();
 
   useEffect(() => {
     fetch("/books.json").then(r => r.json()).then(setBooks).catch(() => setBooks([]));
@@ -173,13 +184,17 @@ export default function BooksPage() {
       </Helmet>
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
         {/* ── HERO ── */}
         <section className="relative pt-40 pb-20 overflow-hidden" ref={heroRef}>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 left-1/3 w-[500px] h-[400px] bg-amber-500/4 rounded-full blur-[140px]" />
           </div>
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          {/* Foreground 3D hero — sits above the glow, behind the text (z-10). */}
+          <Suspense fallback={null}>
+            <PageHero3D variant="books" />
+          </Suspense>
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
               <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Ten Published Books · Original &amp; Remastered Editions</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
@@ -217,24 +232,26 @@ export default function BooksPage() {
         </section>
 
         {/* ── 3D BOOKSHELF ── */}
-        <section className="pb-8 border-t border-white/6">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12">
-            {books.length === 0 ? (
-              <div className="flex items-center justify-center py-32">
-                <motion.div className="w-10 h-10 border-2 border-amber-400/20 border-t-amber-400/60 rounded-full"
-                  animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
-              </div>
-            ) : (
-              <>
-                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-4">
-                  <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">The Collection</p>
-                  <p className="text-xs text-white/25">Hover a book to preview · Click to open</p>
-                </motion.div>
-                <BookShelf3D books={books} onBookClick={(book) => setOpenBook(book)} />
-              </>
-            )}
-          </div>
-        </section>
+        {!reduceEffects && (
+          <section className="pb-8 border-t border-white/6">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12">
+              {books.length === 0 ? (
+                <div className="flex items-center justify-center py-32">
+                  <motion.div className="w-10 h-10 border-2 border-amber-400/20 border-t-amber-400/60 rounded-full"
+                    animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
+                </div>
+              ) : (
+                <>
+                  <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-4">
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">The Collection</p>
+                    <p className="text-xs text-white/25">Hover a book to preview · Click to open</p>
+                  </motion.div>
+                  <BookShelf3D books={books} onBookClick={(book) => setOpenBook(book)} />
+                </>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* ── RECORD PLAYER + POEM READER ── */}
         <Suspense fallback={null}>
@@ -261,6 +278,24 @@ export default function BooksPage() {
                 />
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── UNIVERSE MAP CTA ── */}
+        <section className="pb-28">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Link href="/books/universe">
+              <div className="group relative overflow-hidden border border-amber-400/15 bg-amber-400/[0.02] p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-amber-400/35 hover:bg-amber-400/[0.05] transition-all duration-500 cursor-pointer">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3">Six Worlds</p>
+                  <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-2">Explore the Book Universe Map</h2>
+                  <p className="text-white/40 text-sm max-w-xl">Faith, wisdom, boyhood, voice, love, and imagination — see how every book connects.</p>
+                </div>
+                <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
+                  View Map <ExternalLink className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </Link>
           </div>
         </section>
 

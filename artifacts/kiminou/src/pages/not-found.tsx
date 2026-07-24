@@ -1,26 +1,30 @@
 import { Helmet } from "react-helmet-async";
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
+    <>
       <Helmet>
-        <title>Page Not Found - Kiminou Knox</title>
+        <title>Find Your Way Back — Kiminou Knox</title>
         <meta name="robots" content="noindex,nofollow" />
       </Helmet>
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            The page you are looking for is not available.
+      <Header />
+      <main id="main-content" className="min-h-screen bg-black flex items-center justify-center px-6">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">404</p>
+          <h1 className="font-serif text-5xl font-light text-white mb-6">Every page leads somewhere</h1>
+          <p className="text-white/40 mb-8 max-w-sm mx-auto">
+            This one has moved on. The rest of the story is still here — pick up where it continues.
           </p>
-        </CardContent>
-      </Card>
-    </div>
+          <Link href="/" className="inline-flex items-center gap-2 text-amber-400/60 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em]">
+            <ArrowLeft className="w-3 h-3" /> Return home
+          </Link>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }

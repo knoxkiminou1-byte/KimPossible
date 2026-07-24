@@ -107,9 +107,11 @@ export default function BookPreview() {
                 <div className="bg-card border border-border rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
                   {/* Book Cover */}
                   <div className="relative aspect-[3/4] overflow-hidden">
-                    <img 
+                    <img
                       src={book.cover}
                       alt={`${book.title} book cover`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     
@@ -181,6 +183,7 @@ export default function BookPreview() {
             {/* Close Button */}
             <button
               onClick={closePreview}
+              aria-label="Close"
               className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors"
               data-testid="book-modal-close"
             >

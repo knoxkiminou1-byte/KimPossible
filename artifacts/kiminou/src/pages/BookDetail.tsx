@@ -198,8 +198,6 @@ export default function BookDetail() {
         <meta property="og:image:alt" content={`${book.title} book cover by Kiminou Knox`} />
         {book.isbn && <meta property="books:isbn" content={book.isbn} />}
         <meta property="books:author" content="https://www.kiminouknox.com/author" />
-        <meta property="books:rating:value" content="5" />
-        <meta property="books:rating:scale" content="5" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${book.title} — Kiminou Knox`} />
@@ -214,7 +212,7 @@ export default function BookDetail() {
 
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── BACK NAV ─── */}
         <div className="pt-28 pb-0">

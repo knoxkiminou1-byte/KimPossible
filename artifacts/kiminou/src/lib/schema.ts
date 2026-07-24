@@ -45,6 +45,11 @@ export const contactFormSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
   dateWindow: z.string().optional(),
   talkTheme: z.string().optional(),
+  // Honeypot: real visitors never see or fill this field. Bots that
+  // autofill every input trip it, and the server silently drops the
+  // submission instead of sending it on.
+  website: z.string().max(0, "").optional().or(z.literal("")),
+  turnstileToken: z.string().optional(),
 });
 
 export type ContactForm = z.infer<typeof contactFormSchema>;

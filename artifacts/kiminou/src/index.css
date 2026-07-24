@@ -935,3 +935,27 @@
   .paper-depth-card-three { right: 2%; top: 39%; }
   .paper-depth-card-four { left: 27%; bottom: 4%; }
 }
+
+/* ─── Global 3D backdrop reveal ──────────────────────────────────────────
+   When the site-wide 3D scene is active (<html class="threed-on">), turn the
+   full-page shells into a translucent dark scrim so the fixed WebGL canvas
+   (z-index:-1) glows through everywhere. The scrim keeps text contrast intact
+   and only targets page-level shells — cards using .bg-background are untouched
+   because they don't also carry .min-h-screen / .antialiased. Sections with
+   their own opaque image/gradient backgrounds naturally keep covering it. */
+html.threed-on {
+  /* Dark base so any transparent pixels of the canvas reveal deep ink,
+     never the browser's white default. */
+  background-color: #08090c;
+}
+html.threed-on body {
+  background-color: transparent;
+}
+html.threed-on .min-h-screen.bg-background,
+html.threed-on .bg-background.antialiased {
+  background-color: rgba(12, 12, 14, 0.5);
+}
+/* A hair more scrim on very text-dense mains for readability. */
+html.threed-on main.min-h-screen.bg-background {
+  background-color: rgba(12, 12, 14, 0.6);
+}

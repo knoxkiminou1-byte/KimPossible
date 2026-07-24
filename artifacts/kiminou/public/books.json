@@ -21,7 +21,11 @@
         "content": "When the last applause fades,\nwhen the crowds disperse,\nwhen the mirrors show\nonly the man beneath the myth—\n\nwhat remains?\n\nNot the gold or glory,\nnot the songs they sang,\nbut the quiet truth\nthat love was always\nthe only currency that mattered.\n\nAnd I spent it all\non things that couldn't love me back."
       }
     ],
-    "themes": ["Wisdom", "Faith", "Reckoning"],
+    "themes": [
+      "Wisdom",
+      "Faith",
+      "Reckoning"
+    ],
     "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
@@ -53,7 +57,11 @@
         "content": "I used to know you\nin Sunday morning songs,\nin stained glass stories,\nin the easy answers\nof childhood faith.\n\nNow I look for you\nin the spaces between words,\nin the hurt that teaches,\nin the love that stays\neven when belief falters.\n\nOur Father,\nwhoever you are,\nwherever you are,\nI'm still your child,\nstill searching,\nstill hoping\nthat the questions\nare prayers too,\nand that seeking\nis its own form\nof finding."
       }
     ],
-    "themes": ["Faith", "Silence", "Searching"],
+    "themes": [
+      "Faith",
+      "Silence",
+      "Searching"
+    ],
     "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
@@ -87,7 +95,11 @@
         "content": "To the Black boys\nwho come after me:\n\nYou are not a statistic.\nYou are not a threat.\nYou are not less than\nwhat they see\nwhen they look at you\nwith fear in their eyes.\n\nYou are possibility.\nYou are brilliance.\nYou are the answer\nto prayers your ancestors\nwhispered in the dark.\n\nWear your skin\nlike the crown it is.\nSpeak your truth\nlike the prophecy it is.\nLove yourself\nlike the revolution it is.\n\nThe world is waiting\nfor what only you\ncan give it.\n\nDon't keep us waiting\ntoo long."
       }
     ],
-    "themes": ["Identity", "Heritage", "Resilience"],
+    "themes": [
+      "Identity",
+      "Heritage",
+      "Resilience"
+    ],
     "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
@@ -122,7 +134,11 @@
         "content": "Hope is a dangerous thing\nfor someone like me,\nsomeone who falls\nin love with possibilities,\nwho sees forever\nin a first kiss,\nwho writes wedding vows\nafter a second date.\n\nBut I'd rather be\nhopeless romantic\nthan hopeless cynic,\nrather believe too much\nthan believe too little,\nrather risk heartbreak\nthan risk never feeling\nthe particular magic\nof loving someone\nso completely\nthat their happiness\nbecomes your religion.\n\nSo yes,\nI'll keep believing\nin love at first sight,\nin soulmates,\nin happily ever after,\nin the kind of love\nthat writes itself\ninto poetry.\n\nBecause hope\nis the only thing\nmore dangerous\nthan love itself—\nand I'm addicted\nto both."
       }
     ],
-    "themes": ["Love", "Heartbreak", "Healing"],
+    "themes": [
+      "Love",
+      "Heartbreak",
+      "Healing"
+    ],
     "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
@@ -157,7 +173,11 @@
         "content": "They tried to silence us\nwith expectations,\nwith stereotypes,\nwith the weight\nof what it means\nto be a man.\n\nBut our voices\nwere always there,\nwaiting beneath the surface,\nready to rise.\n\nNow I speak\nnot just for myself,\nbut for every boy\nwho was told to be quiet,\nevery man\nwho learned too late\nthat vulnerability\nis not the opposite of strength—\nit's the foundation."
       }
     ],
-    "themes": ["Silence", "Masculinity", "Healing"],
+    "themes": [
+      "Silence",
+      "Masculinity",
+      "Healing"
+    ],
     "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
@@ -189,11 +209,37 @@
         "content": "They say you cannot choose your family,\nbut you can choose your friends.\n\nKiminou and Chua chose each other,\nnot because they were alike,\nbut because they were different—\ndifferent in all the right ways.\n\nOne saw adventure where the other saw caution.\nOne saw possibility where the other saw danger.\nOne rushed forward while the other paused to think.\n\nAnd together,\nthey were unstoppable,\nbalanced,\ncomplete.\n\nBecause the greatest adventures\nare always better\nwhen shared with someone\nwho helps you see\nwhat you couldn't see alone."
       }
     ],
-    "themes": ["Friendship", "Growth", "Adventure"],
+    "themes": [
+      "Friendship",
+      "Growth",
+      "Adventure"
+    ],
     "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Poems from the Weight of Black Boyhood",
+    "year": 2025,
+    "isbn": "9798267606912",
+    "datePublished": "2025-01-01",
+    "cover": "/covers/kiminou-knox-black-boy-poems.svg",
+    "samplePoems": [],
+    "themes": [
+      "Identity",
+      "Blackness",
+      "Resilience"
+    ],
+    "description": "An unflinching collection tracing Black boyhood through identity, silence, trauma, and the unbreakable pursuit of joy.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Black-Boy-Poems-Kiminou-Knox/dp/B0FT4CQ9CH",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_In_Silence?id=pHuKEQAAQBAJ",
       "bookshop": null,
       "bn": null
     }
@@ -207,7 +253,11 @@
     "datePublished": "2025-01-01",
     "cover": "/covers/kiminou-knox-world-of-imagination.png",
     "samplePoems": [],
-    "themes": ["Imagination", "Children", "Play"],
+    "themes": [
+      "Imagination",
+      "Children",
+      "Play"
+    ],
     "description": "A children's book about imagination, play, and the power of believing in what you can build.",
     "buyLinks": {
       "amazon": null,

@@ -1,7 +1,8 @@
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback, lazy, Suspense } from "react";
 import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import GoldParticles from "@/components/LuxuryFX/GoldParticles";
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 import MagneticElement from "@/components/LuxuryFX/MagneticElement";
 
 const ROLE_WORDS = [
@@ -381,6 +382,13 @@ export default function Hero({ paperMode = false }: HeroProps) {
       {/* Gold dust particles */}
       <div className="absolute inset-0 z-[5] pointer-events-none">
         <GoldParticles count={55} className="w-full h-full" />
+      </div>
+
+      {/* Foreground 3D hero — signature glass form, above the mural, below text. */}
+      <div className="absolute inset-0 z-[7] pointer-events-none">
+        <Suspense fallback={null}>
+          <PageHero3D variant="home" />
+        </Suspense>
       </div>
 
       {/* Main content */}

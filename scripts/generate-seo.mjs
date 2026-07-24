@@ -10,55 +10,13 @@ const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION = authorProfile.searchDescription;
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
-const KIMINOU_PHOTOS = {
-  officialHeadshot: {
-    loc: "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-    title: "Kiminou Knox official author headshot",
-    caption: "Official headshot of Kiminou Knox for author, press, and speaker profiles.",
-  },
-  outdoorPortrait: {
-    loc: "/photos/kiminou-knox-08-outdoor-candid.jpg",
-    title: "Kiminou Knox outdoor portrait",
-    caption: "Kiminou Knox outdoor portrait for biography and author profile pages.",
-  },
-  basketballHuddle: {
-    loc: "/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
-    title: "Kiminou Knox basketball huddle",
-    caption: "Kiminou Knox with teammates during a basketball game huddle.",
-  },
-  basketballJumpShot: {
-    loc: "/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-    title: "Kiminou Knox basketball jump shot",
-    caption: "Kiminou Knox taking a jump shot during basketball warmups.",
-  },
-  basketballWarmupSmile: {
-    loc: "/photos/kiminou-knox/kiminou-knox-basketball-warmup-smile.jpg",
-    title: "Kiminou Knox basketball warmup",
-    caption: "Kiminou Knox smiling during basketball warmups.",
-  },
-  chessStrategy: {
-    loc: "/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg",
-    title: "Kiminou Knox chess strategy",
-    caption: "Kiminou Knox studying chess as a visual signal of strategy, focus, and discipline.",
-  },
-  footballMediaDay: {
-    loc: "/photos/kiminou-knox/kiminou-knox-football-media-day.jpg",
-    title: "Kiminou Knox football media day",
-    caption: "Kiminou Knox in football uniform during a field media moment.",
-  },
-  footballLockerRoom: {
-    loc: "/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg",
-    title: "Kiminou Knox Ygnacio football locker room",
-    caption: "Kiminou Knox seated in a Ygnacio football uniform in the locker room.",
-  },
-};
-const KIMINOU_PERSON_IMAGE = `${SITE_URL}${KIMINOU_PHOTOS.officialHeadshot.loc}`;
 const MEDIUM_FEED_URL = "https://medium.com/feed/@knoxkiminou1";
 
 const siteRoot = path.join(repoRoot, "artifacts", "kiminou");
 const publicRoot = path.join(siteRoot, "public");
 const booksPath = path.join(publicRoot, "books.json");
 const blogDataPath = path.join(siteRoot, "src", "content", "blogData.json");
+const kiminouImagesPath = path.join(siteRoot, "src", "content", "kiminouImages.json");
 
 const sitemapPath = path.join(publicRoot, "sitemap.xml");
 const imageSitemapPath = path.join(publicRoot, "image-sitemap.xml");
@@ -73,6 +31,13 @@ const now = new Date();
 const today = now.toISOString().slice(0, 10);
 const books = JSON.parse(fs.readFileSync(booksPath, "utf8"));
 const blogData = JSON.parse(fs.readFileSync(blogDataPath, "utf8"));
+const kiminouImageData = JSON.parse(fs.readFileSync(kiminouImagesPath, "utf8"));
+const KIMINOU_IMAGE_ITEMS = kiminouImageData.images.map((image) => ({
+  ...image,
+  loc: image.src,
+}));
+const KIMINOU_PHOTOS = Object.fromEntries(KIMINOU_IMAGE_ITEMS.map((image) => [image.id, image]));
+const KIMINOU_PERSON_IMAGE = `${SITE_URL}${KIMINOU_PHOTOS.officialHeadshot.loc}`;
 
 const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
@@ -280,11 +245,16 @@ const routes = [
   { loc: "/about", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/works", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/author", changefreq: "monthly", priority: "0.9", lastmod: today },
+  { loc: "/legacy", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/books", changefreq: "weekly", priority: "0.95", lastmod: today },
+  { loc: "/books/universe", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/speaking", changefreq: "monthly", priority: "0.85", lastmod: today },
   { loc: "/contact", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/now", changefreq: "weekly", priority: "0.6", lastmod: today },
   { loc: "/press", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/media", changefreq: "monthly", priority: "0.65", lastmod: today },
   { loc: "/sports", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/sports/recruiting", changefreq: "monthly", priority: "0.75", lastmod: today },
   { loc: "/portfolio", changefreq: "monthly", priority: "0.75", lastmod: today },
   { loc: "/blog", changefreq: "weekly", priority: "0.9", lastmod: today },
   { loc: "/reading-list", changefreq: "monthly", priority: "0.75", lastmod: today },
@@ -374,6 +344,21 @@ const baseRouteMeta = [
     schemaType: "ProfilePage",
   },
   {
+    loc: "/legacy",
+    title: "Legacy Timeline - Kiminou Knox",
+    description:
+      "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["Kiminou Knox timeline", "Kiminou Knox legacy", "Kiminou Knox milestones"],
+    sections: [
+      {
+        heading: "Legacy Timeline",
+        text: "Books, athletic milestones, community recognition, and builder work — one thread, told in order.",
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
     loc: "/books",
     title: "Published Books - Kiminou Knox",
     description:
@@ -384,6 +369,21 @@ const baseRouteMeta = [
       {
         heading: "Published Books",
         text: `${canonicalBookTitles.join("; ")} ${authorProfile.catalogEditionNote}`,
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/books/universe",
+    title: "Book Universe Map - Kiminou Knox",
+    description:
+      "Every book by Kiminou Knox grouped by the world it belongs to: Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination.",
+    image: "/kiminou-knox-book-universe-portal.png",
+    keywords: ["Kiminou Knox books", "book universe map", "poetry collections by theme"],
+    sections: [
+      {
+        heading: "Book Universe Map",
+        text: "Six worlds — Faith, Wisdom, Black Boyhood, Voice, Love, and Imagination — and the books that live in each one.",
       },
     ],
     schemaType: "CollectionPage",
@@ -419,6 +419,21 @@ const baseRouteMeta = [
     schemaType: "ContactPage",
   },
   {
+    loc: "/now",
+    title: "Now - Kiminou Knox",
+    description:
+      "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["Kiminou Knox now", "Kiminou Knox current projects"],
+    sections: [
+      {
+        heading: "Now",
+        text: "What's current across the page, the court, the mic, and the work.",
+      },
+    ],
+    schemaType: "WebPage",
+  },
+  {
     loc: "/press",
     title: "Press & Recognition - Kiminou Knox",
     description:
@@ -434,6 +449,21 @@ const baseRouteMeta = [
     schemaType: "ProfilePage",
   },
   {
+    loc: "/media",
+    title: "Media Gallery - Kiminou Knox",
+    description:
+      "Approved media assets for Kiminou Knox: headshots, athletic photos, speaker photos, and book covers, available for download in high resolution.",
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["Kiminou Knox photos", "Kiminou Knox media gallery", "Kiminou Knox headshots"],
+    sections: [
+      {
+        heading: "Media Gallery",
+        text: "Approved headshots, athletic photos, speaker photos, and book covers, free to use for press coverage and editorial mentions.",
+      },
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
     loc: "/sports",
     title: "Sports & Athletics - Kiminou Knox",
     description:
@@ -444,6 +474,21 @@ const baseRouteMeta = [
       {
         heading: "Sports & Athletics",
         text: "Kiminou Knox is a Bay Area basketball player and multi-sport athlete with public athletic profiles and recruiting context.",
+      },
+    ],
+    schemaType: "ProfilePage",
+  },
+  {
+    loc: "/sports/recruiting",
+    title: "Athlete Recruiting Packet - Kiminou Knox",
+    description:
+      "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
+    image: KIMINOU_PHOTOS.basketballJumpShot.loc,
+    keywords: ["Kiminou Knox recruiting", "Kiminou Knox basketball recruiting", "Cristo Rey De La Salle basketball"],
+    sections: [
+      {
+        heading: "Athlete Recruiting Packet",
+        text: "Measurables, verified profiles, athletic highlights, and coach contact information for Kiminou Knox.",
       },
     ],
     schemaType: "ProfilePage",
@@ -579,6 +624,7 @@ const blogRouteMeta = publishedPosts.map((post) => ({
 
 const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMeta].map((route) => {
   const matchedSitemap = routes.find((entry) => entry.loc === route.loc);
+  const primaryImageUrl = absoluteUrl(route.image || "/og-image.png");
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": route.schemaType || "WebPage",
@@ -586,7 +632,13 @@ const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMet
     url: absoluteUrl(route.loc),
     name: route.title,
     description: route.description,
-    image: absoluteUrl(route.image || "/og-image.png"),
+    image: primaryImageUrl,
+    thumbnailUrl: primaryImageUrl,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: primaryImageUrl,
+      caption: route.description,
+    },
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
     inLanguage: "en-US",
@@ -597,115 +649,74 @@ const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMet
     ...route,
     url: absoluteUrl(route.loc),
     lastmod: matchedSitemap?.lastmod || today,
-    image: absoluteUrl(route.image || "/og-image.png"),
+    image: primaryImageUrl,
     schemas: [webpageSchema, ...(route.schema ? [route.schema] : [])],
   };
 });
 
-const imageEntries = [
+function imageForSitemap(image) {
+  return {
+    loc: image.loc || image.src,
+    title: image.title,
+    caption: image.caption || image.alt || image.title,
+    geoLocation: image.geoLocation,
+    license: image.license,
+  };
+}
+
+const routeImageMap = new Map();
+
+function addRouteImage(routeLoc, image) {
+  if (!routeLoc || !image?.loc) return;
+  if (!routeImageMap.has(routeLoc)) routeImageMap.set(routeLoc, new Map());
+  routeImageMap.get(routeLoc).set(image.loc, imageForSitemap(image));
+}
+
+function addRouteImages(routeLoc, images) {
+  for (const image of images) addRouteImage(routeLoc, image);
+}
+
+addRouteImages("/", [
   {
-    loc: "/",
-    images: [
-      {
-        loc: "/og-image.png",
-        title: "Kiminou Knox official website image",
-        caption: "Kiminou Knox author, athlete, and speaker official website preview.",
-      },
-      {
-        ...KIMINOU_PHOTOS.officialHeadshot,
-      },
-      {
-        ...KIMINOU_PHOTOS.outdoorPortrait,
-      },
-    ],
+    loc: "/og-image.png",
+    title: "Kiminou Knox official website image",
+    caption: "Kiminou Knox author, athlete, and speaker official website preview.",
   },
-  {
-    loc: "/about",
-    images: [
-      {
-        ...KIMINOU_PHOTOS.outdoorPortrait,
-      },
-      {
-        ...KIMINOU_PHOTOS.officialHeadshot,
-      },
-    ],
-  },
-  {
-    loc: "/author",
-    images: [
-      {
-        ...KIMINOU_PHOTOS.officialHeadshot,
-      },
-      {
-        ...KIMINOU_PHOTOS.outdoorPortrait,
-      },
-      {
-        ...KIMINOU_PHOTOS.chessStrategy,
-      },
-    ],
-  },
-  {
-    loc: "/press",
-    images: [
-      {
-        ...KIMINOU_PHOTOS.officialHeadshot,
-      },
-      {
-        ...KIMINOU_PHOTOS.footballMediaDay,
-      },
-      {
-        ...KIMINOU_PHOTOS.chessStrategy,
-      },
-    ],
-  },
-  {
-    loc: "/sports",
-    images: [
-      {
-        ...KIMINOU_PHOTOS.basketballJumpShot,
-      },
-      {
-        ...KIMINOU_PHOTOS.basketballWarmupSmile,
-      },
-      {
-        ...KIMINOU_PHOTOS.basketballHuddle,
-      },
-      {
-        ...KIMINOU_PHOTOS.footballLockerRoom,
-      },
-      {
-        ...KIMINOU_PHOTOS.footballMediaDay,
-      },
-    ],
-  },
-  {
-    loc: "/portfolio",
-    images: [
-      {
-        ...KIMINOU_PHOTOS.outdoorPortrait,
-      },
-      {
-        ...KIMINOU_PHOTOS.officialHeadshot,
-      },
-      {
-        ...KIMINOU_PHOTOS.basketballJumpShot,
-      },
-      {
-        ...KIMINOU_PHOTOS.chessStrategy,
-      },
-    ],
-  },
-  ...books.map((book) => ({
-    loc: `/books/${book.id}`,
-    images: [
-      {
-        loc: book.cover,
-        title: `${book.title} by Kiminou Knox`,
-        caption: `${book.title} book cover by Kiminou Knox.`,
-      },
-    ].filter((image) => image.loc),
-  })),
-];
+]);
+
+for (const image of KIMINOU_IMAGE_ITEMS) {
+  for (const routeLoc of image.pages || []) {
+    addRouteImage(routeLoc, image);
+  }
+}
+
+for (const route of baseRouteMeta) {
+  if (route.image) {
+    addRouteImage(route.loc, {
+      loc: route.image,
+      title: route.title,
+      caption: route.description,
+    });
+  }
+}
+
+for (const book of books) {
+  addRouteImage(`/books/${book.id}`, {
+    loc: book.cover,
+    title: `${book.title} by Kiminou Knox`,
+    caption: `${book.title} book cover by Kiminou Knox.`,
+  });
+  addRouteImage("/media", {
+    loc: book.cover,
+    title: `${book.title} by Kiminou Knox`,
+    caption: `${book.title} book cover by Kiminou Knox.`,
+  });
+}
+
+const imageEntries = [...routeImageMap.entries()].map(([loc, images]) => ({
+  loc,
+  images: [...images.values()],
+}));
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -731,11 +742,20 @@ ${imageEntries
     <loc>${xmlEscape(absoluteUrl(entry.loc))}</loc>
 ${entry.images
   .map(
-    (image) => `    <image:image>
+    (image) => {
+      const geoLocation = image.geoLocation
+        ? `      <image:geo_location>${xmlEscape(image.geoLocation)}</image:geo_location>\n`
+        : "";
+      const license = image.license
+        ? `      <image:license>${xmlEscape(absoluteUrl(image.license))}</image:license>\n`
+        : "";
+      return `    <image:image>
       <image:loc>${xmlEscape(absoluteUrl(image.loc))}</image:loc>
       <image:title>${xmlEscape(image.title)}</image:title>
       <image:caption>${xmlEscape(image.caption)}</image:caption>
-    </image:image>`,
+${geoLocation}${license}
+    </image:image>`;
+    },
   )
   .join("\n")}
   </url>`,
@@ -826,7 +846,16 @@ const entityProfile = {
     name: SITE_NAME,
     alternateName: "Kiminou",
     url: SITE_URL,
-    image: KIMINOU_PERSON_IMAGE,
+    image: {
+      "@type": "ImageObject",
+      "@id": `${KIMINOU_PERSON_IMAGE}#image`,
+      url: KIMINOU_PERSON_IMAGE,
+      contentUrl: KIMINOU_PERSON_IMAGE,
+      name: KIMINOU_PHOTOS.officialHeadshot.title,
+      caption: KIMINOU_PHOTOS.officialHeadshot.caption,
+      width: KIMINOU_PHOTOS.officialHeadshot.width,
+      height: KIMINOU_PHOTOS.officialHeadshot.height,
+    },
     description: SITE_DESCRIPTION,
     birthPlace: "Hayward, California",
     homeLocation: "Oakland, California",

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { lazy, Suspense } from "react";
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
@@ -81,10 +82,14 @@ export default function About() {
 
       <Header />
 
-      <main className="min-h-screen bg-background pt-32 pb-20">
+      <main id="main-content" className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="mb-12">
-            <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="about-heading">
+          <div className="relative mb-12 flex min-h-[300px] items-end overflow-hidden">
+            {/* Contained foreground 3D band behind the title (glass frame). */}
+            <Suspense fallback={null}>
+              <PageHero3D variant="about" />
+            </Suspense>
+            <h1 className="relative z-10 text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="about-heading">
               About
             </h1>
           </div>

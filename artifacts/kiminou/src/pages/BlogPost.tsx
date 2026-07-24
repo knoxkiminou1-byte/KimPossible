@@ -1,17 +1,28 @@
 import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "wouter";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, Calendar, Clock, Share2, Twitter, Facebook, Linkedin } from "lucide-react";
 import { format } from "date-fns";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import {
   blogCategories,
   findPublishedBlogPost,
   relatedPublishedBlogPosts,
 } from "@/content/blogContent";
+
+function ShareButton({ label, onClick, children }: { label: string; onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      onClick={onClick}
+      className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:border-amber-400/40 hover:text-amber-300 transition-colors duration-300"
+    >
+      {children}
+    </button>
+  );
+}
 
 function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -20,24 +31,24 @@ function BlogPostPage() {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Helmet>
-          <title>Article Not Found - Kiminou Knox</title>
-          <meta name="robots" content="noindex,nofollow" />
-        </Helmet>
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
-          <p className="text-muted-foreground mb-6">
-            The article you're looking for doesn't exist or has been removed.
-          </p>
-          <Link href="/blog">
-            <Button data-testid="button-back-to-blog">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Button>
-          </Link>
+      <>
+        <Header />
+        <div id="main-content" className="min-h-screen bg-black flex items-center justify-center px-6">
+          <Helmet>
+            <title>Keep Reading — Kiminou Knox</title>
+            <meta name="robots" content="noindex,nofollow" />
+          </Helmet>
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">404</p>
+            <h1 className="font-serif text-5xl font-light text-white mb-6">This one has moved on</h1>
+            <p className="text-white/40 mb-8">The rest of the writing is still waiting for you.</p>
+            <Link href="/blog" className="inline-flex items-center gap-2 text-amber-400/60 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em]">
+              <ArrowLeft className="w-3 h-3" /> Explore the blog
+            </Link>
+          </div>
         </div>
-      </div>
+        <Footer />
+      </>
     );
   }
 
@@ -46,7 +57,7 @@ function BlogPostPage() {
   const publishedAtIso = post.publishedAt?.toISOString();
   const updatedAtIso = post.updatedAt?.toISOString() || publishedAtIso;
 
-  const shareUrl = window.location.href;
+  const shareUrl = typeof window !== "undefined" ? window.location.href : `${SITE_URL}/blog/${post.slug}`;
   const shareText = `${post.title} by Kiminou Knox`;
 
   const handleShare = (platform: string) => {
@@ -101,7 +112,7 @@ function BlogPostPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
+    <>
       <Helmet>
         <title>{post.title} — Kiminou Knox</title>
         <meta name="description" content={post.excerpt || `${post.title} — An essay by Kiminou Knox.`} />
@@ -128,175 +139,136 @@ function BlogPostPage() {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>
       </Helmet>
-      {/* Header Navigation */}
-      <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <Link href="/blog">
-            <Button variant="ghost" size="sm" data-testid="button-back-to-blog">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Button>
-          </Link>
+
+      <Header />
+
+      <main id="main-content" className="min-h-screen bg-black text-white">
+        <div className="pt-28 pb-0">
+          <div className="max-w-3xl mx-auto px-6 lg:px-10">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/30 hover:text-amber-400/60 transition-colors duration-300 group"
+            >
+              <ArrowLeft className="w-3 h-3 group-hover:-translate-x-0.5 transition-transform" />
+              All Articles
+            </Link>
+          </div>
         </div>
-      </div>
 
-      <article className="container mx-auto px-4 py-12 max-w-4xl">
-        {/* Article Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            {category && (
-              <Badge variant="secondary" className="px-3 py-1">
-                {category.name}
-              </Badge>
+        <article className="max-w-3xl mx-auto px-6 lg:px-10 py-16">
+          <header className="mb-12">
+            <div className="flex items-center gap-4 mb-6 flex-wrap">
+              {category && (
+                <span className="text-xs uppercase tracking-[0.3em] text-amber-400/60 border border-amber-400/20 px-3 py-1">
+                  {category.name}
+                </span>
+              )}
+              <div className="flex items-center text-xs text-white/30 gap-4 uppercase tracking-[0.15em]">
+                {post.publishedAt && (
+                  <span className="flex items-center gap-1.5">
+                    <Calendar className="w-3 h-3" />
+                    {format(post.publishedAt, "MMMM d, yyyy")}
+                  </span>
+                )}
+                <span className="flex items-center gap-1.5">
+                  <Clock className="w-3 h-3" />
+                  {post.readTime || 5} min read
+                </span>
+              </div>
+            </div>
+
+            <h1 className="font-serif text-4xl md:text-6xl font-light leading-tight text-white mb-6">
+              {post.title}
+            </h1>
+
+            {post.excerpt && (
+              <p className="font-serif text-xl text-white/50 italic leading-relaxed mb-8">
+                {post.excerpt}
+              </p>
             )}
-            <div className="flex items-center text-sm text-muted-foreground gap-4">
-              <span className="flex items-center">
-                <Calendar className="w-4 h-4 mr-1" />
-                {post.publishedAt && format(post.publishedAt, "MMMM d, yyyy")}
-              </span>
-              <span className="flex items-center">
-                <Clock className="w-4 h-4 mr-1" />
-                {post.readTime || 5} min read
-              </span>
+
+            {post.tags && post.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-8">
+                {post.tags.map((tag) => (
+                  <span key={tag} className="px-3 py-1 border border-white/10 text-xs text-white/35 uppercase tracking-[0.1em]">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/25">Share</span>
+              <div className="flex gap-2">
+                <ShareButton label="Share on Twitter" onClick={() => handleShare("twitter")}>
+                  <Twitter className="w-4 h-4" />
+                </ShareButton>
+                <ShareButton label="Share on Facebook" onClick={() => handleShare("facebook")}>
+                  <Facebook className="w-4 h-4" />
+                </ShareButton>
+                <ShareButton label="Share on LinkedIn" onClick={() => handleShare("linkedin")}>
+                  <Linkedin className="w-4 h-4" />
+                </ShareButton>
+                <ShareButton label="Copy link" onClick={() => handleShare("copy")}>
+                  <Share2 className="w-4 h-4" />
+                </ShareButton>
+              </div>
             </div>
-          </div>
 
-          <h1 className="text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            {post.title}
-          </h1>
+            <div className="w-full h-px bg-white/8" />
+          </header>
 
-          {post.excerpt && (
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              {post.excerpt}
-            </p>
-          )}
-
-          {/* Tags */}
-          {post.tags && post.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-8">
-              {post.tags.map((tag) => (
-                <Badge key={tag} variant="outline" className="px-3 py-1">
-                  #{tag}
-                </Badge>
-              ))}
-            </div>
-          )}
-
-          {/* Share Buttons */}
-          <div className="flex items-center gap-4 mb-8">
-            <span className="text-sm text-muted-foreground">Share this article:</span>
-            <div className="flex gap-2">
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => handleShare("twitter")}
-                data-testid="button-share-twitter"
-              >
-                <Twitter className="w-4 h-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => handleShare("facebook")}
-                data-testid="button-share-facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => handleShare("linkedin")}
-                data-testid="button-share-linkedin"
-              >
-                <Linkedin className="w-4 h-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => handleShare("copy")}
-                data-testid="button-copy-link"
-              >
-                <Share2 className="w-4 h-4" />
-              </Button>
-            </div>
-          </div>
-
-          <Separator className="mb-8" />
-        </header>
-
-        {/* Article Content */}
-        <div className="prose prose-lg max-w-none mb-12">
-          <div className="whitespace-pre-wrap leading-relaxed text-foreground">
+          <div className="font-serif text-lg text-white/70 leading-relaxed whitespace-pre-wrap mb-16">
             {post.content}
           </div>
-        </div>
 
-        <Separator className="mb-12" />
+          <div className="h-px bg-white/8 mb-16" />
 
-        {/* Author Bio */}
-        <div className="bg-card/50 backdrop-blur-sm rounded-lg p-8 mb-12">
-          <div className="flex items-start gap-6">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-primary to-purple-500 flex items-center justify-center text-white font-bold text-2xl">
-              KK
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Kiminou Knox</h3>
-              <p className="text-muted-foreground mb-4">
-                Author, athlete, and builder from the Bay Area. Ten published works. NCAA registered. He writes what others leave out.
-              </p>
-              <div className="flex gap-2">
-                <Link href="/">
-                  <Button variant="outline" size="sm" data-testid="link-author-profile">
+          <div className="border border-white/8 bg-white/[0.015] p-8 mb-16">
+            <div className="flex items-start gap-6">
+              <div className="w-16 h-16 flex-shrink-0 rounded-full border border-amber-400/30 flex items-center justify-center text-amber-300 font-serif text-xl">
+                KK
+              </div>
+              <div>
+                <h3 className="font-serif text-xl text-white mb-2">Kiminou Knox</h3>
+                <p className="text-white/40 text-sm leading-relaxed mb-4">
+                  Author, athlete, and builder from the Bay Area. Ten published works. NCAA registered. He writes what others leave out.
+                </p>
+                <div className="flex gap-4 text-xs uppercase tracking-[0.2em]">
+                  <Link href="/author" className="text-amber-400/60 hover:text-amber-300 transition-colors">
                     View Profile
-                  </Button>
-                </Link>
-                <Link href="/blog">
-                  <Button variant="outline" size="sm" data-testid="link-more-articles">
+                  </Link>
+                  <Link href="/blog" className="text-amber-400/60 hover:text-amber-300 transition-colors">
                     More Articles
-                  </Button>
-                </Link>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Related Posts */}
-        {otherRelatedPosts.length > 0 && (
-          <section>
-            <h2 className="text-3xl font-bold mb-8">Related Articles</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {otherRelatedPosts.map((relatedPost) => (
-                <Card key={relatedPost.id} className="group hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="mb-3">
-                      <Badge variant="outline" className="text-xs">
-                        {categories.find(c => c.id === relatedPost.categoryId)?.name || "Uncategorized"}
-                      </Badge>
-                    </div>
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+          {otherRelatedPosts.length > 0 && (
+            <section>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">Related Articles</p>
+              <div className="grid sm:grid-cols-3 gap-5">
+                {otherRelatedPosts.map((relatedPost) => (
+                  <Link key={relatedPost.id} href={`/blog/${relatedPost.slug}`} className="group block border border-white/8 bg-white/[0.015] hover:border-amber-400/25 hover:bg-white/[0.04] transition-all duration-300 p-5">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-amber-400/50">
+                      {categories.find(c => c.id === relatedPost.categoryId)?.name || "Uncategorized"}
+                    </span>
+                    <h3 className="font-serif text-base text-white/85 mt-2 mb-2 leading-snug line-clamp-2 group-hover:text-amber-100 transition-colors">
                       {relatedPost.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                      {relatedPost.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">
-                        {relatedPost.publishedAt && format(relatedPost.publishedAt, "MMM d")}
-                      </span>
-                      <Link href={`/blog/${relatedPost.slug}`}>
-                        <Button variant="ghost" size="sm" data-testid={`link-related-post-${relatedPost.slug}`}>
-                          Read
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
-        )}
-      </article>
-    </div>
+                    <p className="text-xs text-white/35 line-clamp-2 leading-relaxed">{relatedPost.excerpt}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+        </article>
+      </main>
+
+      <Footer />
+    </>
   );
 }
 

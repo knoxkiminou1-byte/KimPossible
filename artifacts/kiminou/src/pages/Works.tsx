@@ -81,7 +81,7 @@ export default function Works() {
 
       <Header />
 
-      <main className="min-h-screen bg-background pt-32 pb-20">
+      <main id="main-content" className="min-h-screen bg-background pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h1 className="text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="works-heading">
@@ -100,9 +100,11 @@ export default function Works() {
                 data-testid={`book-card-${book.id}`}
               >
                 <div className="aspect-[3/4] bg-muted overflow-hidden">
-                  <img 
+                  <img
                     src={book.cover}
                     alt={book.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=600&fit=crop';

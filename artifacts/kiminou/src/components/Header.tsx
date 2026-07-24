@@ -122,6 +122,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [location] = useLocation();
   const { isPaper, toggle } = useInkPaper();
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -130,6 +132,36 @@ export default function Header() {
   }, []);
 
   useEffect(() => { setMenuOpen(false); }, [location]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const firstLink = menuRef.current?.querySelector<HTMLElement>("a, button");
+    firstLink?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        menuToggleRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab" || !menuRef.current) return;
+      const focusable = menuRef.current.querySelectorAll<HTMLElement>("a, button");
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
 
   return (
     <>
@@ -176,9 +208,12 @@ export default function Header() {
             </nav>
 
             <button
+              ref={menuToggleRef}
               className={`md:hidden transition-colors p-1 ${isPaper ? "text-amber-900/70 hover:text-amber-900" : "text-white/70 hover:text-white"}`}
               onClick={() => setMenuOpen((o) => !o)}
-              aria-label="Toggle menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-nav-menu"
             >
               {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -189,6 +224,11 @@ export default function Header() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            ref={menuRef}
+            id="mobile-nav-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
             className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 ${
               isPaper ? "bg-amber-50" : "bg-black"
             }`}

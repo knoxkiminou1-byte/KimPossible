@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useIdleReady } from "@/hooks/useIdleReady";
+import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 const LuxuryCursor = lazy(() => import("@/components/LuxuryFX/Cursor"));
 const LiteraryTrail = lazy(() => import("@/components/LuxuryFX/LiteraryTrail"));
@@ -14,25 +15,30 @@ const BackToTop = lazy(() => import("@/components/LuxuryFX/BackToTop"));
 const PageTransition = lazy(() => import("@/components/LuxuryFX/PageTransition"));
 const CursorSpotlight = lazy(() => import("@/components/LuxuryFX/CursorSpotlight"));
 const SectionDotNav = lazy(() => import("@/components/SectionDotNav"));
-const AdminGate = lazy(() => import("@/components/AdminGate"));
 const FirstEditionOverlay = lazy(() => import("@/components/FirstEditionOverlay"));
+const GlobalScene3D = lazy(() => import("@/components/LuxuryFX/GlobalScene3D"));
+const Scene3DToggle = lazy(() => import("@/components/LuxuryFX/Scene3DToggle"));
 
 const Splash = lazy(() => import("@/pages/Splash"));
 const Home = lazy(() => import("@/pages/home"));
 const About = lazy(() => import("@/pages/About"));
 const Works = lazy(() => import("@/pages/Works"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const Now = lazy(() => import("@/pages/Now"));
 const Portfolio = lazy(() => import("@/pages/Portfolio"));
-const BlogAdmin = lazy(() => import("@/pages/BlogAdmin"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 const Speaking = lazy(() => import("@/pages/Speaking"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Books = lazy(() => import("@/pages/Books"));
+const BookUniverse = lazy(() => import("@/pages/BookUniverse"));
 const BookDetail = lazy(() => import("@/pages/BookDetail"));
 const Press = lazy(() => import("@/pages/Press"));
+const MediaGallery = lazy(() => import("@/pages/MediaGallery"));
 const Sports = lazy(() => import("@/pages/Sports"));
+const Recruiting = lazy(() => import("@/pages/Recruiting"));
 const Author = lazy(() => import("@/pages/Author"));
+const LegacyTimeline = lazy(() => import("@/pages/LegacyTimeline"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
 
 const POEM_FRAGMENTS = [
@@ -73,19 +79,22 @@ function PageFallback() {
 
 function DeferredChrome() {
   const ready = useIdleReady();
+  const reduceEffects = useShouldReduceEffects();
 
   if (!ready) return null;
 
   return (
     <Suspense fallback={null}>
+      <GlobalScene3D />
+      <Scene3DToggle />
       <FirstEditionOverlay />
       <LiteraryTrail />
       <ScrollProgress />
       <ScrollProgressArc />
-      <LuxuryCursor />
+      {!reduceEffects && <LuxuryCursor />}
       <BackToTop />
       <PageTransition />
-      <CursorSpotlight />
+      {!reduceEffects && <CursorSpotlight />}
       <SectionDotNav />
     </Suspense>
   );
@@ -120,6 +129,7 @@ function Router() {
         <Route path="/works" component={Works} />
         <Route path="/speaking" component={Speaking} />
         <Route path="/contact" component={Contact} />
+        <Route path="/now" component={Now} />
         <Route path="/press-kit">
           <Redirect to="/press" />
         </Route>
@@ -127,14 +137,18 @@ function Router() {
           <Redirect to="/press" />
         </Route>
         <Route path="/press" component={Press} />
+        <Route path="/media" component={MediaGallery} />
         <Route path="/sports" component={Sports} />
+        <Route path="/sports/recruiting" component={Recruiting} />
         <Route path="/basketball">
           <Redirect to="/sports" />
         </Route>
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/books" component={Books} />
+        <Route path="/books/universe" component={BookUniverse} />
         <Route path="/books/:id" component={BookDetail} />
         <Route path="/author" component={Author} />
+        <Route path="/legacy" component={LegacyTimeline} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />
@@ -143,9 +157,6 @@ function Router() {
         </Route>
         <Route path="/kimyaps">
           <Redirect to="/speaking" />
-        </Route>
-        <Route path="/admin/blog">
-          <AdminGate><BlogAdmin /></AdminGate>
         </Route>
         <Route component={NotFound} />
       </Switch>

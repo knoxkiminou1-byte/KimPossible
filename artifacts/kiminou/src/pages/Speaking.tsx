@@ -12,6 +12,7 @@ import RadioDial from "@/components/LuxuryFX/RadioDial";
 import { breadcrumbSchema, faqSchema, podcastSchema, SITE_URL } from "@/lib/seo";
 
 const ApplausePhysics = lazy(() => import("@/components/LuxuryFX/ApplausePhysics"));
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 
 const PODCAST_APPLE = "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308";
 const PODCAST_SPOTIFY = "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg";
@@ -524,12 +525,12 @@ export default function Speaking() {
       <Header />
 
       <GreenRoomStage>
-        <main className="min-h-screen bg-black text-white">
+        <main id="main-content" className="min-h-screen bg-black text-white">
 
           {/* ─── HERO ─── */}
           <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">
             <motion.div className="absolute inset-0 bg-cover bg-center bg-[center_20%]"
-              style={{ backgroundImage: "url('/kiminou-splash-art.png')", y: bgY, scale: 1.08 }} />
+              style={{ backgroundImage: "url('/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg')", y: bgY, scale: 1.08 }} />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
 
@@ -539,6 +540,11 @@ export default function Speaking() {
                 VOICE<br />& SIGNAL
               </span>
             </div>
+
+            {/* Foreground 3D hero — reactive sound rings, behind the text (z-10). */}
+            <Suspense fallback={null}>
+              <PageHero3D variant="speaking" />
+            </Suspense>
 
             <motion.div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-24 md:pb-36 w-full"
               style={{ opacity: heroOpacity }}>
@@ -624,7 +630,7 @@ export default function Speaking() {
                   {/* YouTube CTA */}
                   <div className="flex flex-col gap-6">
                     <div className="relative group border border-white/8 overflow-hidden bg-black/40">
-                      <img src="/kiminou-splash-art.png" alt="Kiminou Knox on stage" loading="lazy"
+                      <img src="/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg" alt="Kiminou Knox on stage" loading="lazy"
                         className="w-full object-cover object-top opacity-35 group-hover:opacity-45 transition-opacity duration-500"
                         style={{ maxHeight: "250px" }} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
