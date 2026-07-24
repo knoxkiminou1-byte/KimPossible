@@ -34,32 +34,35 @@ const ACCENT: Record<HeroVariant, string> = {
   about: "#c99a3a",
 };
 
-/* home — a slow gold glass knot, the site's signature focal form. */
+/* home — a small gold glass accent, lifted clear of the centered wordmark so
+   it complements the mural hero instead of colliding with the title. */
 function HomeForm() {
   const ref = useRef<THREE.Mesh>(null!);
   useFrame((_, dt) => {
     if (ref.current) {
-      ref.current.rotation.y += dt * 0.15;
-      ref.current.rotation.x += dt * 0.06;
+      ref.current.rotation.y += dt * 0.18;
+      ref.current.rotation.x += dt * 0.07;
     }
   });
   return (
-    <Float speed={1} rotationIntensity={0.3} floatIntensity={0.7}>
-      <mesh ref={ref}>
-        <torusKnotGeometry args={[1.05, 0.34, 260, 40]} />
+    <Float speed={1.1} rotationIntensity={0.35} floatIntensity={0.8}>
+      <mesh ref={ref} position={[0, 2.35, 0]} scale={0.42}>
+        <torusKnotGeometry args={[1.05, 0.34, 220, 36]} />
         <MeshTransmissionMaterial
           transmission={1}
-          thickness={1.2}
-          roughness={0.12}
+          thickness={1}
+          roughness={0.1}
           ior={1.5}
-          chromaticAberration={0.22}
+          chromaticAberration={0.24}
           anisotropy={0.3}
           distortion={0.3}
           distortionScale={0.4}
           temporalDistortion={0.2}
-          color="#f3e6c0"
-          attenuationColor="#d4a017"
-          attenuationDistance={2.4}
+          color="#f5ead0"
+          emissive="#d4a017"
+          emissiveIntensity={0.12}
+          attenuationColor="#e2b23a"
+          attenuationDistance={2}
         />
       </mesh>
     </Float>
@@ -68,17 +71,17 @@ function HomeForm() {
 
 /* books — a cluster of glowing tomes orbiting a center. */
 function BooksForm() {
-  const COUNT = 26;
+  const COUNT = 22;
   const group = useRef<THREE.Group>(null!);
   const seeds = useMemo(() => {
     const a: { p: THREE.Vector3; r: THREE.Euler; s: number }[] = [];
     for (let i = 0; i < COUNT; i++) {
       const theta = (i / COUNT) * Math.PI * 2;
-      const rad = 1.6 + Math.random() * 1.6;
+      const rad = 1.7 + Math.random() * 1.4;
       a.push({
-        p: new THREE.Vector3(Math.cos(theta) * rad, (Math.random() - 0.5) * 2.6, Math.sin(theta) * rad),
+        p: new THREE.Vector3(Math.cos(theta) * rad, (Math.random() - 0.5) * 2.4, Math.sin(theta) * rad),
         r: new THREE.Euler(Math.random() * 6, Math.random() * 6, Math.random() * 6),
-        s: 0.5 + Math.random() * 0.5,
+        s: 0.42 + Math.random() * 0.42,
       });
     }
     return a;
@@ -87,7 +90,8 @@ function BooksForm() {
     if (group.current) group.current.rotation.y += dt * 0.14;
   });
   return (
-    <group ref={group}>
+    // Offset right + back so the cluster clears the left wordmark and top nav.
+    <group ref={group} position={[1.4, -0.2, -0.6]}>
       <Instances limit={COUNT} range={COUNT}>
         <boxGeometry args={[0.7, 0.95, 0.12]} />
         <meshStandardMaterial color="#c8912a" emissive="#c8912a" emissiveIntensity={0.7} roughness={0.45} metalness={0.35} />

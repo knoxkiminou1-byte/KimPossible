@@ -35,15 +35,15 @@ function BlogPostPage() {
         <Header />
         <div id="main-content" className="min-h-screen bg-black flex items-center justify-center px-6">
           <Helmet>
-            <title>Article Not Found - Kiminou Knox</title>
+            <title>Keep Reading — Kiminou Knox</title>
             <meta name="robots" content="noindex,nofollow" />
           </Helmet>
           <div className="text-center">
             <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">404</p>
-            <h1 className="font-serif text-5xl font-light text-white mb-6">Article Not Found</h1>
-            <p className="text-white/40 mb-8">The article you're looking for doesn't exist or has been removed.</p>
+            <h1 className="font-serif text-5xl font-light text-white mb-6">This one has moved on</h1>
+            <p className="text-white/40 mb-8">The rest of the writing is still waiting for you.</p>
             <Link href="/blog" className="inline-flex items-center gap-2 text-amber-400/60 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em]">
-              <ArrowLeft className="w-3 h-3" /> Back to Blog
+              <ArrowLeft className="w-3 h-3" /> Explore the blog
             </Link>
           </div>
         </div>
