@@ -26,13 +26,14 @@ import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
    and reduced-motion / touch.
    ========================================================================= */
 
-export type HeroVariant = "home" | "books" | "speaking" | "about";
+export type HeroVariant = "home" | "books" | "speaking" | "about" | "portfolio";
 
 const ACCENT: Record<HeroVariant, string> = {
   home: "#d4a017",
   books: "#c8912a",
   speaking: "#8a5cc8",
   about: "#c99a3a",
+  portfolio: "#d4a017",
 };
 
 /* home — a small gold glass accent, lifted clear of the centered wordmark so
@@ -174,6 +175,84 @@ function AboutForm() {
   );
 }
 
+/* portfolio — a full showstopper: a slow ring of reflective monolith "work"
+   slabs orbiting an iridescent glass core, with the whole rig gently tumbling. */
+function MonolithRing() {
+  const SLABS = 11;
+  const ring = useRef<THREE.Group>(null!);
+  const core = useRef<THREE.Mesh>(null!);
+  const slabs = useMemo(() => {
+    const a: { angle: number; h: number; tilt: number }[] = [];
+    for (let i = 0; i < SLABS; i++) {
+      a.push({
+        angle: (i / SLABS) * Math.PI * 2,
+        h: 1.6 + Math.random() * 1.4,
+        tilt: (Math.random() - 0.5) * 0.3,
+      });
+    }
+    return a;
+  }, []);
+  useFrame((state, dt) => {
+    if (ring.current) {
+      ring.current.rotation.y += dt * 0.16;
+      ring.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.15) * 0.08;
+    }
+    if (core.current) {
+      core.current.rotation.y -= dt * 0.25;
+      core.current.rotation.x += dt * 0.1;
+    }
+  });
+  const RADIUS = 2.3;
+  return (
+    // Offset right so the ring dominates center-right and clears the left copy.
+    <group position={[0.9, 0, 0]}>
+      <group ref={ring}>
+        {slabs.map((s, i) => (
+          <mesh
+            key={i}
+            position={[Math.cos(s.angle) * RADIUS, 0, Math.sin(s.angle) * RADIUS]}
+            rotation={[s.tilt, -s.angle + Math.PI / 2, 0]}
+            castShadow
+          >
+            <boxGeometry args={[0.9, s.h, 0.08]} />
+            <meshStandardMaterial
+              color="#14161c"
+              roughness={0.28}
+              metalness={0.92}
+              envMapIntensity={0.7}
+              emissive="#d4a017"
+              emissiveIntensity={0.02}
+            />
+          </mesh>
+        ))}
+      </group>
+      {/* iridescent glass core */}
+      <mesh ref={core}>
+        <icosahedronGeometry args={[0.95, 1]} />
+        <MeshTransmissionMaterial
+          transmission={1}
+          thickness={1.4}
+          roughness={0.06}
+          ior={1.5}
+          chromaticAberration={0.34}
+          anisotropy={0.5}
+          distortion={0.35}
+          distortionScale={0.5}
+          temporalDistortion={0.25}
+          clearcoat={1}
+          clearcoatRoughness={0.08}
+          iridescence={1}
+          iridescenceIOR={1.6}
+          iridescenceThicknessRange={[100, 520]}
+          color="#f5ead0"
+          attenuationColor="#e2b23a"
+          attenuationDistance={2.4}
+        />
+      </mesh>
+    </group>
+  );
+}
+
 function HeroScene({ variant }: { variant: HeroVariant }) {
   const accent = ACCENT[variant];
   const form = (() => {
@@ -184,6 +263,8 @@ function HeroScene({ variant }: { variant: HeroVariant }) {
         return <SpeakingForm />;
       case "about":
         return <AboutForm />;
+      case "portfolio":
+        return <MonolithRing />;
       default:
         return <HomeForm />;
     }

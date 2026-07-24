@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, lazy, Suspense } from "react";
 import { Twitter, ExternalLink, BookOpen, Trophy, Mic, Mail, Globe, FileText, ChevronDown } from "lucide-react";
+const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -214,12 +215,16 @@ export default function Portfolio() {
       <Header />
       <main id="main-content" className="min-h-screen bg-black text-white">
 
-        {/* ─── HERO ─── */}
-        <section className="relative pt-40 pb-28 overflow-hidden" ref={heroRef}>
+        {/* ─── HERO (full-viewport 3D showstopper) ─── */}
+        <section className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-20" ref={heroRef}>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-amber-500/4 rounded-full blur-[160px]" />
           </div>
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          {/* Foreground 3D — a ring of monolith "work" slabs orbiting a glass core */}
+          <Suspense fallback={null}>
+            <PageHero3D variant="portfolio" />
+          </Suspense>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 24 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
