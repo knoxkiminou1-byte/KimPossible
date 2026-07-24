@@ -953,9 +953,9 @@ html.threed-on body {
 }
 html.threed-on .min-h-screen.bg-background,
 html.threed-on .bg-background.antialiased {
-  background-color: rgba(12, 12, 14, 0.62);
+  background-color: rgba(12, 12, 14, 0.5);
 }
 /* A hair more scrim on very text-dense mains for readability. */
 html.threed-on main.min-h-screen.bg-background {
-  background-color: rgba(12, 12, 14, 0.7);
+  background-color: rgba(12, 12, 14, 0.6);
 }
