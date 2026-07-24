@@ -16,6 +16,8 @@ const PageTransition = lazy(() => import("@/components/LuxuryFX/PageTransition")
 const CursorSpotlight = lazy(() => import("@/components/LuxuryFX/CursorSpotlight"));
 const SectionDotNav = lazy(() => import("@/components/SectionDotNav"));
 const FirstEditionOverlay = lazy(() => import("@/components/FirstEditionOverlay"));
+const GlobalScene3D = lazy(() => import("@/components/LuxuryFX/GlobalScene3D"));
+const Scene3DToggle = lazy(() => import("@/components/LuxuryFX/Scene3DToggle"));
 
 const Splash = lazy(() => import("@/pages/Splash"));
 const Home = lazy(() => import("@/pages/home"));
@@ -83,6 +85,8 @@ function DeferredChrome() {
 
   return (
     <Suspense fallback={null}>
+      <GlobalScene3D />
+      <Scene3DToggle />
       <FirstEditionOverlay />
       <LiteraryTrail />
       <ScrollProgress />
