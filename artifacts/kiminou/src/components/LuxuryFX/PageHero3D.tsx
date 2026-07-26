@@ -1,4 +1,4 @@
-import { Suspense, useMemo, useRef } from "react";
+import { Suspense, useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Environment,
@@ -12,7 +12,7 @@ import {
 import { EffectComposer, Bloom, Vignette, SMAA, ChromaticAberration } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
-import { use3DEnabled } from "@/hooks/use3D";
+import { use3DEnabled, registerForegroundScene } from "@/hooks/use3D";
 import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 /* =========================================================================
@@ -278,7 +278,8 @@ function HeroScene({ variant }: { variant: HeroVariant }) {
       {/* Gold rim light — rakes the form's edges for that expensive glass glint. */}
       <spotLight position={[0, -1, -6]} intensity={60} angle={0.9} penumbra={1} color="#ffd77a" distance={26} />
       {form}
-      <Environment resolution={160} frames={Infinity}>
+      {/* Static lightformers — bake once rather than every frame. */}
+      <Environment resolution={160} frames={1}>
         <Lightformer intensity={1.7} color="#fff2d0" position={[0, 4, -5]} scale={[10, 6, 1]} />
         <Lightformer intensity={1.1} color={accent} position={[-6, 0, 1]} rotation={[0, Math.PI / 2, 0]} scale={[8, 5, 1]} />
         <Lightformer intensity={1.1} color={accent} position={[6, 0, 1]} rotation={[0, -Math.PI / 2, 0]} scale={[8, 5, 1]} />
@@ -303,7 +304,16 @@ function HeroScene({ variant }: { variant: HeroVariant }) {
 export default function PageHero3D({ variant }: { variant: HeroVariant }) {
   const enabled = use3DEnabled();
   const reduceEffects = useShouldReduceEffects();
-  if (!enabled || reduceEffects) return null;
+  const active = enabled && !reduceEffects;
+
+  // Tell the site-wide backdrop to stand down while this hero owns the page,
+  // so only one WebGL context is ever live.
+  useEffect(() => {
+    if (!active) return;
+    return registerForegroundScene();
+  }, [active]);
+
+  if (!active) return null;
 
   return (
     <div

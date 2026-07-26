@@ -130,14 +130,14 @@ export default function Home() {
         <title>Kiminou Knox | Author, Athlete, Speaker, Podcast Host</title>
         <meta name="description" content="Official site of Kiminou Knox — ten-time published Bay Area author, NCAA-registered athlete, speaker, and host of KimYaps. Explore books, essays, and booking information." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href={SITE_URL} />
+        <link rel="canonical" href={`${SITE_URL}/`} />
         <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
         <meta name="theme-color" content="#090705" />
         
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
         <meta property="og:description" content="Bay Area poet and ten-time published author, NCAA-registered athlete, speaker, and host of KimYaps." />
-        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -191,6 +191,9 @@ export default function Home() {
         >
           3D
         </button>
+        {/* The site-wide skip link targets #main-content, so every route needs
+            this landmark — the homepage was missing it entirely. */}
+        <main id="main-content">
         {paperMode ? (
           <Suspense fallback={<div className="min-h-screen bg-black" />}>
             <PaperRealmPortal />
@@ -258,6 +261,7 @@ export default function Home() {
             </IdleMount>
           </>
         )}
+        </main>
         <Footer />
         <ContactFAB />
         <IdleMount timeout={1800}>

@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CANONICAL_BOOK_TITLES } from "@/content/authorProfile";
+import { breadcrumbSchema, SITE_TWITTER, SITE_URL } from "@/lib/seo";
 
 const FILTERS = ["All", "Author", "Athlete", "Speaker", "Builder", "Editorial"];
 
@@ -207,10 +208,29 @@ export default function Portfolio() {
         <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@KiminouKnox" />
+        <meta name="twitter:site" content={SITE_TWITTER} />
         <meta name="twitter:title" content="Kiminou Knox | Portfolio" />
         <meta name="twitter:description" content="Ten published books, NCAA athletics, public speaking, and AAFC Builders." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Portfolio", url: `${SITE_URL}/portfolio` }]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "@id": `${SITE_URL}/portfolio#webpage`,
+            url: `${SITE_URL}/portfolio`,
+            name: "Kiminou Knox | Portfolio",
+            description:
+              "The full portfolio of Kiminou Knox — ten-time published author, NCAA basketball athlete, public speaker, AAFC Builders founder, and Bay Area youth leader.",
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            about: { "@id": `${SITE_URL}/#person` },
+            mainEntity: { "@id": `${SITE_URL}/#person` },
+            inLanguage: "en-US",
+          })}
+        </script>
       </Helmet>
       <Header />
       <main id="main-content" className="min-h-screen bg-black text-white">

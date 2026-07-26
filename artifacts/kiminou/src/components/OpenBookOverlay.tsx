@@ -4,15 +4,16 @@ import { X, ExternalLink, BookOpen } from "lucide-react";
 
 type Poem = { title: string; content: string };
 
+// Mirrors the generated books.json shape: only `id`/`title` are guaranteed.
 interface Book {
   id: string;
   title: string;
-  subtitle: string;
-  cover: string;
-  description: string;
-  year: number;
-  samplePoems: Poem[];
-  buyLinks: {
+  subtitle?: string;
+  cover?: string;
+  description?: string;
+  year?: number;
+  samplePoems?: Poem[];
+  buyLinks?: {
     amazon?: string | null;
     googleBooks?: string | null;
     bookshop?: string | null;
@@ -29,9 +30,9 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const buyLink =
-    book.buyLinks.amazon ||
-    book.buyLinks.googleBooks ||
-    book.buyLinks.bookshop ||
+    book.buyLinks?.amazon ||
+    book.buyLinks?.googleBooks ||
+    book.buyLinks?.bookshop ||
     null;
 
   const firstPoem = book.samplePoems?.[0];
@@ -121,7 +122,7 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
           }}
         >
           <img
-            src={book.cover}
+            src={book.cover || "/og-image.png"}
             alt={book.title}
             loading="lazy"
             decoding="async"

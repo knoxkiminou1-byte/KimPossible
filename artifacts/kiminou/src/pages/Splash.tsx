@@ -242,7 +242,7 @@ export default function Splash() {
         }
       `}} />
       
-      <div className="splash-page">
+      <div className="splash-page" id="main-content">
         <div className="splash" id="splash">
           <picture>
             <source srcSet="/kiminou-knox-basketball-player-interactive.webp" type="image/webp" />

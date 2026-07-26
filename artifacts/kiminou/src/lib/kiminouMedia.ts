@@ -28,7 +28,19 @@ export const KIMINOU_ARCHIVE_IMAGES: KiminouImage[] = imageItems.filter(
   (image) => image.category !== "Brand" && image.pages.some((page) => page !== "/media"),
 );
 
-export const KIMINOU_SPORTS_IMAGES: KiminouImage[] = [
+/**
+ * Look images up by id, dropping any that no longer exist in the catalog.
+ *
+ * Image ids are hand-written across pages while the catalog is generated
+ * content, so an id can go stale. Reading `.src` off the resulting `undefined`
+ * throws mid-render and blanks the whole page, so every id list goes through
+ * here instead of indexing KIMINOU_IMAGES directly.
+ */
+export function pickImages(...ids: string[]): KiminouImage[] {
+  return ids.map((id) => KIMINOU_IMAGES[id]).filter((image): image is KiminouImage => Boolean(image));
+}
+
+export const KIMINOU_SPORTS_IMAGES: KiminouImage[] = pickImages(
   "basketballJumpShot",
   "basketballGameAction",
   "basketballWarmupSmile",
@@ -38,4 +50,4 @@ export const KIMINOU_SPORTS_IMAGES: KiminouImage[] = [
   "footballMediaDay",
   "footballGameAction",
   "footballTeamTunnel",
-].map((id) => KIMINOU_IMAGES[id]);
+);

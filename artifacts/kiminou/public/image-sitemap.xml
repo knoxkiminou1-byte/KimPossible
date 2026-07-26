@@ -345,25 +345,25 @@
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/spirit-of-solomon-cover.jpg</image:loc>
       <image:title>The Spirit of Solomon by Kiminou Knox</image:title>
       <image:caption>The Spirit of Solomon book cover by Kiminou Knox.</image:caption>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/our-father-cover.jpg</image:loc>
       <image:title>Our Father? by Kiminou Knox</image:title>
       <image:caption>Our Father? book cover by Kiminou Knox.</image:caption>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/poems-from-a-black-boy-cover.jpg</image:loc>
       <image:title>Poems from a Black Boy by Kiminou Knox</image:title>
       <image:caption>Poems from a Black Boy book cover by Kiminou Knox.</image:caption>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/hopeless-romantic-cover.jpg</image:loc>
       <image:title>Hopeless Romantic by Kiminou Knox</image:title>
       <image:caption>Hopeless Romantic book cover by Kiminou Knox.</image:caption>
 
@@ -381,15 +381,69 @@
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg</image:loc>
-      <image:title>Black Boy Poems by Kiminou Knox</image:title>
-      <image:caption>Black Boy Poems book cover by Kiminou Knox.</image:caption>
-
-    </image:image>
-    <image:image>
       <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png</image:loc>
       <image:title>Kiminou&apos;s World of Imagination: The Basics by Kiminou Knox</image:title>
       <image:caption>Kiminou&apos;s World of Imagination: The Basics book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
+      <image:title>Our Father? by Kiminou Knox</image:title>
+      <image:caption>Our Father? book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/why-did-you-ghost-me.jpg</image:loc>
+      <image:title>WHY DID YOU GHOST ME by Kiminou Knox</image:title>
+      <image:caption>WHY DID YOU GHOST ME book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/7-16-74-an-ode-to-rashida.jpg</image:loc>
+      <image:title>7.16.74 by Kiminou Knox</image:title>
+      <image:caption>7.16.74 book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg</image:loc>
+      <image:title>The Spirit of Solomon: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>The Spirit of Solomon: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg</image:loc>
+      <image:title>Our Father? Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Our Father? Remastered Edition book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg</image:loc>
+      <image:title>Hopeless Romantic: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Hopeless Romantic: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg</image:loc>
+      <image:title>Poems From A Black Boy: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Poems From A Black Boy: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg</image:loc>
+      <image:title>Boys Raised by Silence: Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Boys Raised by Silence: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg</image:loc>
+      <image:title>Why Did You Ghost Me? Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>Why Did You Ghost Me? Remastered Edition book cover by Kiminou Knox.</image:caption>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg</image:loc>
+      <image:title>My Father. Remastered Edition by Kiminou Knox</image:title>
+      <image:caption>My Father. Remastered Edition book cover by Kiminou Knox.</image:caption>
 
     </image:image>
   </url>
@@ -631,8 +685,8 @@
     <loc>https://www.kiminouknox.com/works</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
-      <image:title>Works - Kiminou Knox</image:title>
-      <image:caption>Published books and creative works by Kiminou Knox, including poetry, faith-centered writing, love poems, and books on Black boyhood.</image:caption>
+      <image:title>Ten Published Books by Kiminou Knox</image:title>
+      <image:caption>The official ten-book bibliography by Kiminou Knox, including poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy.</image:caption>
 
     </image:image>
   </url>
@@ -666,7 +720,7 @@
   <url>
     <loc>https://www.kiminouknox.com/books/spirit-solomon</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-spirit-of-solomon-book.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/spirit-of-solomon-cover.jpg</image:loc>
       <image:title>The Spirit of Solomon by Kiminou Knox</image:title>
       <image:caption>The Spirit of Solomon book cover by Kiminou Knox.</image:caption>
 
@@ -675,7 +729,7 @@
   <url>
     <loc>https://www.kiminouknox.com/books/our-father</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/our-father-cover.jpg</image:loc>
       <image:title>Our Father? by Kiminou Knox</image:title>
       <image:caption>Our Father? book cover by Kiminou Knox.</image:caption>
 
@@ -684,7 +738,7 @@
   <url>
     <loc>https://www.kiminouknox.com/books/poems-black-boy</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-poems-from-black-boy.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/poems-from-a-black-boy-cover.jpg</image:loc>
       <image:title>Poems from a Black Boy by Kiminou Knox</image:title>
       <image:caption>Poems from a Black Boy book cover by Kiminou Knox.</image:caption>
 
@@ -693,7 +747,7 @@
   <url>
     <loc>https://www.kiminouknox.com/books/hopeless-romantic</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-hopeless-romantic-poetry.jpg</image:loc>
+      <image:loc>https://www.kiminouknox.com/books/hopeless-romantic-cover.jpg</image:loc>
       <image:title>Hopeless Romantic by Kiminou Knox</image:title>
       <image:caption>Hopeless Romantic book cover by Kiminou Knox.</image:caption>
 
@@ -718,15 +772,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.kiminouknox.com/books/black-boy-poems</loc>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg</image:loc>
-      <image:title>Black Boy Poems by Kiminou Knox</image:title>
-      <image:caption>Black Boy Poems book cover by Kiminou Knox.</image:caption>
-
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.kiminouknox.com/books/world-of-imagination</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-world-of-imagination.png</image:loc>
@@ -741,6 +786,7 @@
       <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-our-father-poetry.jpg</image:loc>
       <image:title>Our Father? by Kiminou Knox</image:title>
       <image:caption>Our Father? book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -749,6 +795,7 @@
       <image:loc>https://www.kiminouknox.com/covers/why-did-you-ghost-me.jpg</image:loc>
       <image:title>WHY DID YOU GHOST ME by Kiminou Knox</image:title>
       <image:caption>WHY DID YOU GHOST ME book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -757,6 +804,7 @@
       <image:loc>https://www.kiminouknox.com/covers/7-16-74-an-ode-to-rashida.jpg</image:loc>
       <image:title>7.16.74 by Kiminou Knox</image:title>
       <image:caption>7.16.74 book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -765,6 +813,7 @@
       <image:loc>https://www.kiminouknox.com/covers/spirit-solomon-remastered-edition.jpg</image:loc>
       <image:title>The Spirit of Solomon: Remastered Edition by Kiminou Knox</image:title>
       <image:caption>The Spirit of Solomon: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -773,6 +822,7 @@
       <image:loc>https://www.kiminouknox.com/covers/our-father-remastered-edition.jpg</image:loc>
       <image:title>Our Father? Remastered Edition by Kiminou Knox</image:title>
       <image:caption>Our Father? Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -781,6 +831,7 @@
       <image:loc>https://www.kiminouknox.com/covers/hopeless-romantic-remastered-edition.jpg</image:loc>
       <image:title>Hopeless Romantic: Remastered Edition by Kiminou Knox</image:title>
       <image:caption>Hopeless Romantic: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -789,6 +840,7 @@
       <image:loc>https://www.kiminouknox.com/covers/poems-from-a-black-boy-remastered-edition.jpg</image:loc>
       <image:title>Poems From A Black Boy: Remastered Edition by Kiminou Knox</image:title>
       <image:caption>Poems From A Black Boy: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -797,6 +849,7 @@
       <image:loc>https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg</image:loc>
       <image:title>Boys Raised by Silence: Remastered Edition by Kiminou Knox</image:title>
       <image:caption>Boys Raised by Silence: Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -805,6 +858,7 @@
       <image:loc>https://www.kiminouknox.com/covers/why-did-you-ghost-me-remastered-edition.jpg</image:loc>
       <image:title>Why Did You Ghost Me? Remastered Edition by Kiminou Knox</image:title>
       <image:caption>Why Did You Ghost Me? Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
   <url>
@@ -813,6 +867,7 @@
       <image:loc>https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg</image:loc>
       <image:title>My Father. Remastered Edition by Kiminou Knox</image:title>
       <image:caption>My Father. Remastered Edition book cover by Kiminou Knox.</image:caption>
+
     </image:image>
   </url>
 </urlset>

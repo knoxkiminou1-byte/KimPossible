@@ -9,7 +9,7 @@ import {
 import { EffectComposer, Bloom, Vignette, SMAA } from "@react-three/postprocessing";
 import { useLocation } from "wouter";
 import * as THREE from "three";
-import { use3DEnabled } from "@/hooks/use3D";
+import { use3DEnabled, useForegroundSceneActive } from "@/hooks/use3D";
 import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 import { Formation, worldForRoute } from "@/components/LuxuryFX/Formations";
 
@@ -101,7 +101,9 @@ function SceneContents() {
       {/* Per-route 3D world — keyed so switching pages remounts cleanly. */}
       <Formation key={world.kind} kind={world.kind} target={target} />
 
-      <Environment resolution={128} frames={Infinity}>
+      {/* Static lightformers, so bake the cubemap once instead of re-rendering
+          all six faces every frame — this was the single biggest GPU cost. */}
+      <Environment resolution={128} frames={1}>
         <Lightformer intensity={1.4} color="#fff2d0" position={[0, 4, -6]} scale={[10, 6, 1]} />
         <Lightformer intensity={0.8} color="#4560ff" position={[-6, 0, 0]} rotation={[0, Math.PI / 2, 0]} scale={[8, 5, 1]} />
       </Environment>
@@ -136,12 +138,13 @@ export default function GlobalScene3D() {
   const enabled = use3DEnabled();
   const reduceEffects = useShouldReduceEffects();
   const visible = useTabVisible();
-  const [location] = useLocation();
 
-  // /sports has its own dedicated LockerRoom3D canvas — don't stack a second
-  // heavy WebGL context on top of it (keeps that page lag-free).
-  const onDedicated3DPage = location.toLowerCase().startsWith("/sports");
-  const active = enabled && !reduceEffects && !onDedicated3DPage;
+  // Pages that own a foreground canvas (PageHero3D / LockerRoom3D) register
+  // themselves. Stacking the backdrop on top of one meant two live WebGL
+  // contexts, two post-processing chains and two render loops on the same page
+  // — the main reason those routes felt sluggish. The hero canvas wins.
+  const foregroundActive = useForegroundSceneActive();
+  const active = enabled && !reduceEffects && !foregroundActive;
 
   // Toggle a root class so a single CSS rule can turn the full-page shells
   // into a translucent scrim that lets the backdrop glow through — without

@@ -232,7 +232,7 @@ function BlogAdmin() {
         <title>Blog Administration | Kiminou Knox</title>
         <meta name="robots" content="noindex,nofollow" />
       </Helmet>
-      <div className="container mx-auto p-6 space-y-6">
+      <div className="container mx-auto p-6 space-y-6" id="main-content">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold tracking-tight">Blog Administration</h1>
         </div>

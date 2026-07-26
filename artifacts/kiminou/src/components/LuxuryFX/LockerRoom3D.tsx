@@ -12,6 +12,7 @@ import {
 } from "@react-three/postprocessing";
 import { BlendFunction, ToneMappingMode } from "postprocessing";
 import * as THREE from "three";
+import { registerForegroundScene } from "@/hooks/use3D";
 
 /* ─── Constants ──────────────────────────────────────────────── */
 const LOCKER_W = 0.72;
@@ -492,7 +493,8 @@ function LockerRoomScene() {
       <ambientLight color={0x131a2a} intensity={1.1} />
 
       {/* Procedural HDRI — gives the metal lockers real reflections (no external file) */}
-      <Environment resolution={256} frames={Infinity}>
+      {/* Static lightformers — bake once rather than every frame. */}
+      <Environment resolution={256} frames={1}>
         <Lightformer intensity={2.2} color="#fff2d0" position={[0, 4, -6]} scale={[14, 6, 1]} />
         <Lightformer intensity={1.1} color="#2050ff" position={[-8, 1, 0]} rotation={[0, Math.PI / 2, 0]} scale={[10, 5, 1]} />
         <Lightformer intensity={1.1} color="#1a3aff" position={[8, 1, 0]} rotation={[0, -Math.PI / 2, 0]} scale={[10, 5, 1]} />
@@ -617,6 +619,9 @@ function LockerRoomScene() {
 
 /* ─── Exported Canvas Wrapper ─────────────────────────────────── */
 export default function LockerRoom3D() {
+  // This page owns the only WebGL context while it's mounted.
+  useEffect(() => registerForegroundScene(), []);
+
   return (
     <Canvas
       shadows

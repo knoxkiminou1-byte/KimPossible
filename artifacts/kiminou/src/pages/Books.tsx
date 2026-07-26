@@ -21,14 +21,22 @@ import { CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorPro
 import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
 type Poem = { title: string; content: string };
+// Everything past `id` is optional on purpose: books.json is generated content
+// and entries legitimately ship without sample poems or buy links. Treating
+// those as required is what blanked this whole page — a single missing field
+// threw during render and took the entire app down with it.
 type Book = {
-  id: string; title: string; subtitle: string; year: number;
-  isbn?: string | null; edition?: string; numberOfPages?: number; cover: string; samplePoems: Poem[];
-  themes: string[]; description: string; featured?: boolean;
-  buyLinks: { amazon?: string | null; googleBooks?: string | null; bookshop?: string | null; bn?: string | null };
+  id: string; title: string; subtitle?: string; year?: number;
+  isbn?: string | null; edition?: string; numberOfPages?: number; cover?: string; samplePoems?: Poem[];
+  themes?: string[]; description?: string; featured?: boolean;
+  buyLinks?: { amazon?: string | null; googleBooks?: string | null; bookshop?: string | null; bn?: string | null };
 };
 
 function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: number; onSample: (b: Book) => void; onOpenBook: (b: Book) => void }) {
+  const samplePoems = book.samplePoems ?? [];
+  const themes = book.themes ?? [];
+  const buyLinks = book.buyLinks ?? {};
+  const cover = book.cover || "/og-image.png";
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const springX = useSpring(0, { stiffness: 280, damping: 28 });
@@ -71,12 +79,12 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
         >
           {index < 3 ? (
             <CMYKReveal>
-              <img src={book.cover} alt={`${book.title} cover`}
+              <img src={cover} alt={`${book.title} cover`}
                 loading={index < 4 ? "eager" : "lazy"} decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </CMYKReveal>
           ) : (
-            <img src={book.cover} alt={`${book.title} cover`}
+            <img src={cover} alt={`${book.title} cover`}
               loading={index < 4 ? "eager" : "lazy"} decoding="async"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           )}
@@ -106,26 +114,26 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
         <p className="text-sm text-white/40 mb-3 italic">{book.subtitle}</p>
         <p className="text-sm text-white/40 leading-relaxed line-clamp-3 mb-4 flex-1">{book.description}</p>
         <div className="flex flex-wrap gap-1.5 mb-5">
-          {book.themes.map(t => (
+          {themes.map(t => (
             <span key={t} className="px-2.5 py-1 border border-white/10 text-xs text-white/30 rounded-full tracking-wide">{t}</span>
           ))}
         </div>
         <div className="flex flex-col gap-2 mt-auto">
           <div className="grid grid-cols-2 gap-2">
-            {book.samplePoems.length > 0 && (
+            {samplePoems.length > 0 && (
               <button onClick={() => onSample(book)}
                 className="py-2.5 border border-white/15 text-xs uppercase tracking-[0.15em] text-white/50 hover:border-amber-400/40 hover:text-amber-300 transition-all duration-300">
                 Read Sample
               </button>
             )}
             <Link href={`/books/${book.id}`}>
-              <span className={`block py-2.5 bg-amber-400/10 border border-amber-400/20 text-xs uppercase tracking-[0.15em] text-amber-400/80 hover:bg-amber-400 hover:text-black hover:border-amber-400 transition-all duration-300 text-center cursor-pointer ${book.samplePoems.length === 0 ? "col-span-2" : ""}`}>
+              <span className={`block py-2.5 bg-amber-400/10 border border-amber-400/20 text-xs uppercase tracking-[0.15em] text-amber-400/80 hover:bg-amber-400 hover:text-black hover:border-amber-400 transition-all duration-300 text-center cursor-pointer ${samplePoems.length === 0 ? "col-span-2" : ""}`}>
                 View Details
               </span>
             </Link>
           </div>
-          {(book.buyLinks.amazon || book.buyLinks.googleBooks) && (
-            <a href={book.buyLinks.amazon || book.buyLinks.googleBooks || ""}
+          {(buyLinks.amazon || buyLinks.googleBooks) && (
+            <a href={buyLinks.amazon || buyLinks.googleBooks || ""}
               target="_blank" rel="noopener noreferrer external"
               className="flex items-center justify-center gap-2 py-2.5 border border-white/8 text-xs uppercase tracking-[0.15em] text-white/35 hover:border-amber-400/30 hover:text-amber-400/70 transition-all duration-300">
               <ExternalLink className="w-3.5 h-3.5" /> Buy Now
@@ -146,7 +154,12 @@ export default function BooksPage() {
   const reduceEffects = useShouldReduceEffects();
 
   useEffect(() => {
-    fetch("/books.json").then(r => r.json()).then(setBooks).catch(() => setBooks([]));
+    // Guard the shape too — a bad deploy can serve the SPA shell for this path,
+    // and `books.map` on a non-array would blank the page.
+    fetch("/books.json")
+      .then(r => r.json())
+      .then(data => setBooks(Array.isArray(data) ? data.filter(b => b && b.id) : []))
+      .catch(() => setBooks([]));
   }, []);
 
   return (
@@ -273,7 +286,7 @@ export default function BooksPage() {
                   key={b.id}
                   book={b}
                   index={i}
-                  onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems, title: book.title })}
+                  onSample={(book) => setOpen({ id: book.id, poems: book.samplePoems ?? [], title: book.title })}
                   onOpenBook={(book) => setOpenBook(book)}
                 />
               ))}

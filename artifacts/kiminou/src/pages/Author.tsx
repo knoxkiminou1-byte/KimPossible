@@ -319,7 +319,7 @@ export default function Author() {
         </section>
 
 
-        <main className="max-w-5xl mx-auto px-6 lg:px-10">
+        <main id="main-content" className="max-w-5xl mx-auto px-6 lg:px-10">
 
           {/* ─── PULL QUOTE 1 ───────────────────────────────── */}
           <PullQuote quote={PULL_QUOTES[0]} />
@@ -330,8 +330,8 @@ export default function Author() {
               <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
-                    src="/photos/kiminou-knox-bw-portrait.png"
-                    alt="Kiminou Knox black and white author portrait"
+                    src="/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg"
+                    alt="Kiminou Knox official author headshot"
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"

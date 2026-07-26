@@ -10,6 +10,10 @@ const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION = authorProfile.searchDescription;
 const SITE_IMAGE = `${SITE_URL}/og-image.png`;
+// Same asset, relative. On-page <img> fallbacks must not hardcode the
+// production origin: it costs a cross-origin fetch for a file we already
+// serve, and it breaks on preview deployments.
+const SITE_IMAGE_PATH = "/og-image.png";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@knoxkiminou1";
 
 const siteRoot = path.join(repoRoot, "artifacts", "kiminou");
@@ -66,7 +70,7 @@ const discoveredMediumPosts = [
     updatedAt: "2026-01-11T00:00:00.000Z",
     author: SITE_NAME,
     categories: ["history", "poetry", "poems-on-medium", "kiminou-knox"],
-    thumbnail: SITE_IMAGE,
+    thumbnail: SITE_IMAGE_PATH,
     excerpt:
       "A political and spiritual poem tracing systems of control through history, media, religion, algorithms, housing, and private prisons.",
     source: "public-search",
@@ -79,7 +83,7 @@ const discoveredMediumPosts = [
     updatedAt: "2026-01-09T00:00:00.000Z",
     author: SITE_NAME,
     categories: ["love", "poetry", "poetry-on-medium", "kiminou-knox"],
-    thumbnail: SITE_IMAGE,
+    thumbnail: SITE_IMAGE_PATH,
     excerpt:
       "A poem about longing for love, fearing real intimacy, and wanting something honest enough to change a life.",
     source: "public-search",
@@ -172,17 +176,31 @@ function parseMediumFeed(xml) {
         updatedAt: tagValue(itemXml, "atom:updated"),
         author: tagValue(itemXml, "dc:creator") || SITE_NAME,
         categories: tagValues(itemXml, "category"),
-        thumbnail: firstContentImage(content) || SITE_IMAGE,
+        thumbnail: firstContentImage(content) || SITE_IMAGE_PATH,
         excerpt: excerpt(content),
       };
     })
     .filter((item) => item.title && item.link);
 }
 
+// Thumbnails render as on-page <img> tags, so any that point back at our own
+// origin become a needless cross-origin request (and break on preview URLs).
+// Rewrite them to a path — this also heals entries already baked into the
+// committed cache from earlier runs.
+function relativizeOwnOrigin(url) {
+  if (typeof url !== "string") return SITE_IMAGE_PATH;
+  try {
+    const parsed = new URL(url, SITE_URL);
+    return parsed.origin === new URL(SITE_URL).origin ? `${parsed.pathname}${parsed.search}` : url;
+  } catch {
+    return url;
+  }
+}
+
 function mergeMediumPosts(items) {
   const byLink = new Map();
   for (const item of [...items, ...discoveredMediumPosts]) {
-    byLink.set(item.link, item);
+    byLink.set(item.link, { ...item, thumbnail: relativizeOwnOrigin(item.thumbnail) });
   }
 
   return [...byLink.values()].sort(

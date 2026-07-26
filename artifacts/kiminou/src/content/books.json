@@ -91,8 +91,8 @@
     "subtitle": "Breaking the Quiet, Finding Voice",
     "year": 2024,
     "isbn": "9798316735821",
-    "cover": "/books/boys-raised-in-silence-cover.jpg",
-    "pdf": "/books/boys-raised-in-silence-sample.pdf",
+    "cover": "/covers/kiminou-knox-boys-raised-in-silence.png",
+    "pdf": "",
     "themes": [
       "Silence",
       "Masculinity",
@@ -112,8 +112,8 @@
     "subtitle": "A Journey of Friendship and Discovery",
     "year": 2025,
     "isbn": "9798316591204",
-    "cover": "/books/adventures-kiminou-chua-cover.jpg",
-    "pdf": "/books/adventures-kiminou-chua-sample.pdf",
+    "cover": "/covers/kiminou-knox-adventures-kiminou-great-chua.png",
+    "pdf": "",
     "themes": [
       "Friendship",
       "Growth",
@@ -134,7 +134,7 @@
     "year": 2026,
     "isbn": "",
     "cover": "/covers/kiminou-knox-world-of-imagination.png",
-    "pdf": "/books/world-of-imagination-sample.pdf",
+    "pdf": "",
     "themes": [
       "Imagination",
       "Children",

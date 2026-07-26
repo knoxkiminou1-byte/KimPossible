@@ -1,11 +1,12 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { Switch, Route, Redirect, Router as WouterRouter } from "wouter";
+import { Switch, Route, Redirect, Router as WouterRouter, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useIdleReady } from "@/hooks/useIdleReady";
 import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
+import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 
 const LuxuryCursor = lazy(() => import("@/components/LuxuryFX/Cursor"));
 const LiteraryTrail = lazy(() => import("@/components/LuxuryFX/LiteraryTrail"));
@@ -117,7 +118,12 @@ function DocumentTitleSync() {
 }
 
 function Router() {
+  const [location] = useLocation();
+
   return (
+    // Keyed on location so the boundary resets when the visitor navigates away
+    // from a page that failed — one bad route never traps the whole session.
+    <RouteErrorBoundary key={location}>
     <Suspense fallback={<PageFallback />}>
       <Switch>
         <Route path="/" component={Home} />
@@ -161,6 +167,7 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
     </Suspense>
+    </RouteErrorBoundary>
   );
 }
 

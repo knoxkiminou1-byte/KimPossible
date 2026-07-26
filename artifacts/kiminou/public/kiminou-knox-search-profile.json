@@ -1,14 +1,23 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-07-21T21:20:24.607Z",
+  "dateModified": "2026-07-26T03:33:35.723Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
     "name": "Kiminou Knox",
     "alternateName": "Kiminou",
     "url": "https://www.kiminouknox.com",
-    "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+    "image": {
+      "@type": "ImageObject",
+      "@id": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg#image",
+      "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "name": "Kiminou Knox official author headshot 2026",
+      "caption": "Official author headshot of Kiminou Knox for press, speaker, and biography pages.",
+      "width": 2200,
+      "height": 2933
+    },
     "description": "Official website of Kiminou Knox, a ten-time published author, NCAA-registered athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area.",
     "birthPlace": "Hayward, California",
     "homeLocation": "Oakland, California",

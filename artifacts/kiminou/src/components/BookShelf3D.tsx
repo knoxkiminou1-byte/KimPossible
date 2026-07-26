@@ -1,11 +1,12 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
+// Mirrors the generated books.json shape: only `id`/`title` are guaranteed.
 type Book = {
-  id: string; title: string; subtitle: string; year: number;
-  cover: string; themes: string[]; description: string;
-  samplePoems: { title: string; content: string }[];
-  buyLinks: { amazon?: string | null; googleBooks?: string | null };
+  id: string; title: string; subtitle?: string; year?: number;
+  cover?: string; themes?: string[]; description?: string;
+  samplePoems?: { title: string; content: string }[];
+  buyLinks?: { amazon?: string | null; googleBooks?: string | null };
 };
 
 function ShelfBook({
@@ -53,7 +54,7 @@ function ShelfBook({
           style={{ backfaceVisibility: "hidden" }}
         >
           <img
-            src={book.cover}
+            src={book.cover || "/og-image.png"}
             alt={book.title}
             className="w-full h-full object-cover"
             loading="lazy"
