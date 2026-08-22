@@ -131,6 +131,28 @@ export default function Footer() {
             Bay Area · Class of 2025
           </p>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.55, delay: 0.42 }}
+          className="mt-9 flex justify-center"
+        >
+          <motion.a
+            href="/knox-lab.html"
+            data-testid="enter-lab"
+            className="group inline-flex items-center gap-3 rounded-full border border-cyan-200 bg-fuchsia-400 px-6 py-3 text-[10px] font-black uppercase tracking-[0.28em] text-black shadow-[0_0_38px_rgba(232,121,249,0.35)] transition-colors duration-300 hover:border-lime-300 hover:bg-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+            whileHover={{ y: -2, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span
+              aria-hidden="true"
+              className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]"
+            />
+            Enter the Lab
+            <span aria-hidden="true">↗</span>
+          </motion.a>
+        </motion.div>
       </div>
     </footer>
   );
