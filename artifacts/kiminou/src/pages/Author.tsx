@@ -26,7 +26,7 @@ const CHAPTERS = [
 const CREDENTIALS = [
   { label: "10×", sub: "Published Books" },
   { label: "Poet", sub: "Primary Craft" },
-  { label: "AAFC", sub: "Director" },
+  { label: "Athlete", sub: "Multi-Sport" },
   { label: "AAFC", sub: "Director" },
   { label: "6'7\"", sub: "On The Court" },
   { label: "EPA", sub: "East Palo Alto" },
@@ -182,20 +182,20 @@ export default function Author() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
-        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder Bay Area raised, New Orleans based whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
+        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder born in Hayward, raised in East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/author" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
-        <meta property="og:description" content="Author and poet with ten published books writing across poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area raised, New Orleans based." />
+        <meta property="og:description" content="Author and poet with ten published books. Bay Area raised, New Orleans based. Creator of the Black Boy Lie universe." />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:description" content="Poet and author with ten published books. Bay Area born. Creator of the Black Boy Lie universe." />
+        <meta name="twitter:description" content="Poet and author of ten books. Bay Area raised, New Orleans based. Creator of the Black Boy Lie universe." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify(
@@ -292,7 +292,7 @@ export default function Author() {
               className="font-serif text-xl md:text-2xl text-white/70 font-light max-w-2xl leading-relaxed"
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.7 }}>
-              Poet, novelist, athlete, and builder Bay Area raised, New Orleans based. Creator of The Black Boy Lie universe.
+              Poet, novelist, athlete, and builder born in Hayward, raised in East Palo Alto. Creator of The Black Boy Lie universe.
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-3 mt-8"
@@ -319,7 +319,7 @@ export default function Author() {
         </section>
 
 
-        <main id="main-content" className="max-w-5xl mx-auto px-6 lg:px-10">
+        <main className="max-w-5xl mx-auto px-6 lg:px-10">
 
           {/* ─── PULL QUOTE 1 ───────────────────────────────── */}
           <PullQuote quote={PULL_QUOTES[0]} />
@@ -330,8 +330,8 @@ export default function Author() {
               <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
-                    src="/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg"
-                    alt="Kiminou Knox official author headshot"
+                    src="/photos/kiminou-knox-bw-portrait.png"
+                    alt="Kiminou Knox black and white author portrait"
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -341,7 +341,7 @@ export default function Author() {
                   <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/60 mb-5">Press Image</p>
                   <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-5">The face behind the work.</h2>
                   <p className="text-white/55 leading-relaxed text-lg">
-                    The public voice, the court discipline, and the written work all belong to one body of proof: a young Bay Area author building a life in full view.
+                    The public voice, the court discipline, and the written work all belong to one body of proof: a Bay Area raised author building a life in full view.
                   </p>
                 </div>
               </div>
@@ -400,7 +400,7 @@ export default function Author() {
             <div className="grid md:grid-cols-2 gap-10">
               <Reveal>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  Kiminou Knox is a author with ten published books whose books form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
+                  Kiminou Knox is the author of ten books that form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
@@ -529,6 +529,7 @@ export default function Author() {
                     { label: "Height", value: "6'7\"", pct: 92 },
                     { label: "Weight", value: "235 lbs", pct: 78 },
                     { label: "Position", value: "F / C", pct: 85 },
+                    { label: "Sports", value: "Basketball · Football", pct: 100 },
                     { label: "Sports", value: "Basketball · Football", pct: 100 },
                   ].map((stat, i) => (
                     <StatBar key={i} label={stat.label} value={stat.value} pct={stat.pct} index={i} />
@@ -665,7 +666,7 @@ export default function Author() {
           <section id="connect" className="py-20 border-t border-white/6 scroll-mt-16">
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. Multi-sport athlete.", link: "/sports", cta: "Athletic Profile" },
+                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. Multi-sport competitor.", link: "/sports", cta: "Athletic Profile" },
                 { icon: Mic, title: "Speaker", desc: "Talks on discipline, Black boy voice, and creative work that lasts.", link: "/speaking", cta: "Speaking Info" },
                 { icon: Users, title: "Director", desc: "Director of Artists & Athletes For Change. Youth development.", link: "/contact", cta: "Connect" },
               ].map((item, i) => (
@@ -707,4 +708,3 @@ export default function Author() {
     </>
   );
 }
-

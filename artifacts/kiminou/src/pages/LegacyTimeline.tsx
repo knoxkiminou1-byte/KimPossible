@@ -32,7 +32,7 @@ const MILESTONES: Milestone[] = [
     date: "June 2024",
     pillar: "Author",
     title: "First Book — Boys Raised in Silence",
-    detail: "A collection on the cost of silence and the courage to speak, the beginning of eight published works.",
+    detail: "A collection on the cost of silence and the courage to speak, part of an official ten-book catalog.",
     link: { label: "Read the book", href: "/books/boys-raised-in-silence" },
   },
   {
@@ -67,7 +67,7 @@ const MILESTONES: Milestone[] = [
     date: "March 2025",
     pillar: "Author",
     title: "Eighth Book — Hopeless Romantic",
-    detail: "An intimate collection on longing, closure, and the courage to stay tender — the most-read of the eight collections.",
+    detail: "An intimate collection on longing, closure, and the courage to stay tender — one of the most-read regular books.",
     link: { label: "Read the book", href: "/books/hopeless-romantic" },
   },
   {
@@ -80,8 +80,8 @@ const MILESTONES: Milestone[] = [
   {
     date: "2025",
     pillar: "Athletics",
-    title: "Varsity Athletic Record",
-    detail: "Registered and eligible for collegiate athletics — forward/center, 6'8\", playing for Cristo Rey De La Salle.",
+    title: "Varsity Athlete, Cristo Rey De La Salle",
+    detail: "Competing as a forward/center, 6'8\", representing Cristo Rey De La Salle in basketball and football.",
     link: { label: "NCSA profile", href: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
   },
   {

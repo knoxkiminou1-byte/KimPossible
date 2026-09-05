@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const SENTENCES = [
-  "Kiminou Knox is an author, athlete, and speaker from the Bay Area.",
-  "He is a ten-time published author.",
+  "Kiminou Knox is an author and poet. Bay Area raised, New Orleans based.",
+  "He is the author of ten books.",
   "No ghost writers. No shortcuts.",
-  "Basketball player. 6 feet, 7 inches. varsity eligible.",
+  "Basketball player. 6 feet, 7 inches. Multi-sport.",
   "Host of KimYaps. He talks so you don't have to stay quiet.",
   "This is a portrait of someone who started before he was ready. That's the only way to start.",
 ];

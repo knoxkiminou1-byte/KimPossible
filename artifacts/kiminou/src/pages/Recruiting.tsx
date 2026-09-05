@@ -14,11 +14,11 @@ const MEASURABLES = [
   { label: "Position", value: "Forward / Center", source: "MaxPreps" },
   { label: "Class", value: "2025", source: "NCSA" },
   { label: "School", value: "Cristo Rey De La Salle", source: "MaxPreps" },
-  { label: "Status", value: "Varsity Athlete", source: "NCSA" },
+  { label: "Status", value: "Available for Recruitment", source: "NCSA" },
 ];
 
 const HIGHLIGHTS = [
-  { year: "2025", title: "Athletic Development", desc: "Multi-sport varsity athlete at Cristo Rey De La Salle pursuing collegiate athletics." },
+  { year: "2025", title: "Active Recruitment", desc: "Available for collegiate athletics — verified profiles on NCSA, MaxPreps, and Prep Hoops." },
   { year: "2024", title: "Varsity Captain", desc: "Led Cristo Rey De La Salle as captain, on and off the court." },
   { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop, a premier AAU evaluation platform." },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance." },
@@ -27,7 +27,7 @@ const HIGHLIGHTS = [
 ];
 
 const VERIFIED_PROFILES = [
-  { name: "NCSA Recruiting Profile", desc: "Measurements, position, school, and recruiting profile", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+  { name: "NCSA Recruiting Profile", desc: "Measurements, position, school, and recruiting signal", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
   { name: "MaxPreps Career Profile", desc: "Public career profile, stats, and game log", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc" },
   { name: "Prep Hoops Profile", desc: "Rankings, scouting notes, and recruiting analysis", url: "https://prephoops.com/player/kiminou-knox/" },
 ];
@@ -104,7 +104,7 @@ export default function Recruiting() {
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
               <p className="text-base text-white/45 max-w-xl leading-relaxed">
-                Forward / Center · Cristo Rey De La Salle · Varsity Multi-Sport. Measurables, verified profiles, and direct contact for coaches and recruiters.
+                Forward / Center · Cristo Rey De La Salle · Multi-sport athlete. Measurables, verified profiles, and direct contact for coaches and recruiters.
               </p>
             </motion.div>
           </div>

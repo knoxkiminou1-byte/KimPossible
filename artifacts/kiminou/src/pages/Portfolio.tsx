@@ -7,7 +7,6 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CANONICAL_BOOK_TITLES } from "@/content/authorProfile";
-import { breadcrumbSchema, SITE_TWITTER, SITE_URL } from "@/lib/seo";
 
 const FILTERS = ["All", "Author", "Athlete", "Speaker", "Builder", "Editorial"];
 
@@ -28,10 +27,10 @@ const caseStudies = [
   {
     category: "Athlete",
     title: "Cristo Rey De La Salle",
-    sub: "Varsity · 6'7\" · 235 lbs",
+    sub: "Multi-Sport · 6'7\" · 235 lbs",
     desc: "Multi-sport athlete bringing the same operating standard to the court and field that governs every other arena: consistency, resilience, refusal to cut corners.",
-    detail: "Forward / Center. Multi-sport varsity athlete. Verified profiles on MaxPreps, NCSA Sports, and Prep Hoops. Basketball and football. Cristo Rey De La Salle captain.",
-    tags: ["Basketball", "Football", "Varsity"],
+    detail: "Forward / Center. Verified profiles on MaxPreps, NCSA Sports, and Prep Hoops. Basketball and football. Cristo Rey De La Salle captain.",
+    tags: ["Basketball", "Football", "Athlete"],
     metric: "6'7\"",
     metricLabel: "Forward / Center",
     link: "/sports",
@@ -199,38 +198,19 @@ export default function Portfolio() {
     <>
       <Helmet>
         <title>Kiminou Knox | Portfolio — Author, Athlete, Builder & Entrepreneur</title>
-        <meta name="description" content="The full portfolio of Kiminou Knox — author and poet with ten published books, public speaker, AAFC director, KimYaps host, and Bay Area raised, New Orleans based youth leader." />
+        <meta name="description" content="The full portfolio of Kiminou Knox — author of ten books, multi-sport athlete, public speaker, AAFC Director, and Bay Area raised creative." />
         <link rel="canonical" href="https://www.kiminouknox.com/portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kiminouknox.com/portfolio" />
         <meta property="og:title" content="Kiminou Knox | Portfolio — Author, Athlete & Builder" />
-        <meta property="og:description" content="Ten published books, athletics, public speaking, and AAFC. The complete work of Kiminou Knox." />
+        <meta property="og:description" content="Ten published books, multi-sport athletics, public speaking, and AAFC. The complete work of Kiminou Knox." />
         <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={SITE_TWITTER} />
+        <meta name="twitter:site" content="@KiminouKnox" />
         <meta name="twitter:title" content="Kiminou Knox | Portfolio" />
-        <meta name="twitter:description" content="Ten published books, athletics, public speaking, and AAFC." />
+        <meta name="twitter:description" content="Ten published books, multi-sport athletics, public speaking, and AAFC. The complete work of Kiminou Knox." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
-        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Portfolio", url: `${SITE_URL}/portfolio` }]))}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfilePage",
-            "@id": `${SITE_URL}/portfolio#webpage`,
-            url: `${SITE_URL}/portfolio`,
-            name: "Kiminou Knox | Portfolio",
-            description:
-              "The full portfolio of Kiminou Knox — author and poet with ten published books, public speaker, AAFC director, and Bay Area raised, New Orleans based youth leader.",
-            isPartOf: { "@id": `${SITE_URL}/#website` },
-            about: { "@id": `${SITE_URL}/#person` },
-            mainEntity: { "@id": `${SITE_URL}/#person` },
-            inLanguage: "en-US",
-          })}
-        </script>
       </Helmet>
       <Header />
       <main id="main-content" className="min-h-screen bg-black text-white">
@@ -261,8 +241,8 @@ export default function Portfolio() {
                 <div className="flex items-center gap-3 flex-wrap">
                   <span className="px-3 py-1.5 border border-amber-400/25 text-xs uppercase tracking-[0.2em] text-amber-400/70">Bay Area</span>
                   <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Class of 2025</span>
-                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Varsity</span>
-                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Ten-Time Published Author</span>
+                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Multi-Sport</span>
+                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Author of Ten Books</span>
                 </div>
               </motion.div>
 

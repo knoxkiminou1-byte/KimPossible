@@ -22,7 +22,7 @@ const NOW_ITEMS: NowItem[] = [
     icon: BookOpen,
     label: "Latest Book",
     title: "Hopeless Romantic",
-    detail: "The eighth published collection — an intimate, emotionally charged set on longing, closure, and staying tender. Currently the most-read of the eight.",
+    detail: "The eighth published collection — an intimate, emotionally charged set on longing, closure, and staying tender. Currently one of the most-read regular books.",
     link: { label: "Read the book", href: "/books/hopeless-romantic" },
   },
   {
@@ -42,8 +42,8 @@ const NOW_ITEMS: NowItem[] = [
   {
     icon: Trophy,
     label: "Athletics",
-    title: "Senior Season, Varsity Basketball",
-    detail: "Forward/center at Cristo Rey De La Salle. Multi-sport varsity athlete focused on the recruiting process this season.",
+    title: "Senior Season, Cristo Rey De La Salle",
+    detail: "Forward/center, 6'8\". Multi-sport athlete focused on the recruiting process this season.",
     link: { label: "Athletic profile", href: "/sports" },
   },
   {

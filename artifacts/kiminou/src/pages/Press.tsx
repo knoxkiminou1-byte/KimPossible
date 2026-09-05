@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { KIMINOU_IMAGES, pickImages } from "@/lib/kiminouMedia";
+import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
@@ -41,7 +41,7 @@ const verificationGroups = [
     label: "Basketball",
     items: [
       { name: "MaxPreps Basketball Profile", desc: "Public career profile and high school basketball record", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc" },
-      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, school, and varsity athletic record.", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, school, and NCAA eligibility signal", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
       { name: "Prep Hoops Profile", desc: "Basketball profile and player listing", url: "https://prephoops.com/player/kiminou-knox/" },
     ],
   },
@@ -87,13 +87,11 @@ const creativeWorkSchema = {
   url: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
 };
 
-// `bwPortrait` was retired from the image catalog; `pickImages` resolves ids
-// safely so a stale one can never throw during render again.
-const pressImages = pickImages(
-  "smilingBlazerPortrait",
-  "casualOutdoorPortrait",
-  "taunHallEvent",
-);
+const pressImages = [
+  KIMINOU_IMAGES.bwPortrait,
+  KIMINOU_IMAGES.casualOutdoorPortrait,
+  KIMINOU_IMAGES.taunHallEvent,
+];
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
@@ -123,13 +121,13 @@ export default function Press() {
         <meta property="og:title" content="Kiminou Knox — Press, Recognition & Public References" />
         <meta property="og:description" content="Miles Hall Foundation Youth Summit Top Essay Finalist (2025). Verified on Amazon, Goodreads, MaxPreps, NCSA, Apple Podcasts, and LinkedIn." />
         <meta property="og:url" content="https://www.kiminouknox.com/press" />
-        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot?.src ?? "/og-image.png"}`} />
+        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Press & Recognition" />
         <meta name="twitter:description" content="Miles Hall Foundation Youth Summit Top Essay Finalist (2025). Verified across Amazon, Goodreads, MaxPreps, NCSA, and Apple Podcasts." />
-        <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot?.src ?? "/og-image.png"}`} />
+        <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">{JSON.stringify(creativeWorkSchema)}</script>
         <script type="application/ld+json">
           {JSON.stringify({
@@ -159,7 +157,7 @@ export default function Press() {
       </Helmet>
       <Header />
 
-      <main id="main-content" className="min-h-screen bg-black text-white">
+      <main className="min-h-screen bg-black text-white">
 
         {/* ─── HERO ─── */}
         <section className="relative pt-40 pb-24 overflow-hidden" ref={heroRef}>
@@ -352,7 +350,7 @@ Generated: ${new Date().toLocaleDateString("en-US", { month: "long", day: "numer
 
 ABOUT KIMINOU KNOX
 ──────────────────
-Kiminou Knox is an author, poet, athlete, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
+Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
 
 Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee Williams and Elisha Bonepart McNair.
 
@@ -360,7 +358,7 @@ SHORT BIO
 ─────────
 ${AUTHOR_SHORT_BIO}
 
-CANONICAL TEN-BOOK BIBLIOGRAPHY
+OFFICIAL TEN-BOOK BIBLIOGRAPHY
 ──────────────────────────────
 ${CANONICAL_BOOK_TITLES.map((title, index) => `${index + 1}. ${title}`).join("\n")}
 
@@ -379,13 +377,13 @@ REMASTERED EDITIONS — 2026
 • Poems From A Black Boy: Remastered Edition
 • Boys Raised by Silence: Remastered Edition
 • Why Did You Ghost Me? Remastered Edition
-• 7.16.74: An Ode to Rashida
+• My Father. Remastered Edition
 
 ATHLETIC PROFILE
 ────────────────
 Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
 School: Cristo Rey De La Salle (formerly Ygnacio Valley)
-Status: Varsity Athlete
+Status: Available for Collegiate Recruitment
 MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
 NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox
 

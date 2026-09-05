@@ -28,7 +28,7 @@ const measurables = [
 ];
 
 const highlights = [
-  { year: "2025", title: "Athletics", desc: "Current athletic development — kept secondary to the literary public identity. Multi-sport varsity athlete." },
+  { year: "2025", title: "Varsity Athletic Career", desc: "Competing in basketball and football at Cristo Rey De La Salle, available for collegiate recruitment" },
   { year: "2024", title: "Varsity Captain at Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
   { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop, one of the premier AAU evaluation platforms" },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance" },
@@ -207,21 +207,21 @@ export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox — Athletics" Forward/Center</title>
-        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb  basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
+        <title>Kiminou Knox — Basketball Athlete Profile | 6'8" Forward/Center, Cristo Rey De La Salle</title>
+        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
-        <meta property="og:title" content="Kiminou Knox — Athletics" />
-        <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb  basketball athlete at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
+        <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile | Cristo Rey De La Salle" />
+        <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
-        <meta name="twitter:description" content={"6'8\"  athlete. Varsity captain. CaliHoop top-team selection. Cristo Rey De La Salle."} />
+        <meta name="twitter:description" content={"6'8\" multi-sport athlete. Varsity captain. CaliHoop top-team selection. Cristo Rey De La Salle."} />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -230,7 +230,7 @@ export default function Sports() {
             url: `${SITE_URL}/sports`, sport: "Basketball",
             height: { "@type": "QuantitativeValue", value: 80, unitCode: "INH" },
             affiliation: [{ "@type": "SportsTeam", name: "Cristo Rey De La Salle Basketball" }],
-            memberOf: [{ "@type": "Organization", name: "AAFC (Artists and Athletes for Change)", url: "https://aafcbuilders.org" }],
+            memberOf: [{ "@type": "Organization", name: "Cristo Rey De La Salle Athletics" }],
             sameAs: SITE_SAME_AS,
           })}
         </script>
@@ -322,7 +322,7 @@ export default function Sports() {
               <motion.div className="flex flex-wrap gap-4 mt-10"
                 initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.3 }}>
-                {["6'8\"", "235 lbs", "F / C", "Varsity"].map((badge) => (
+                {["6'8\"", "235 lbs", "F / C", "Multi-Sport"].map((badge) => (
                   <motion.span key={badge}
                     className="px-4 py-1.5 border border-amber-400/35 text-amber-300/80 text-xs uppercase tracking-[0.2em] font-medium"
                     style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}

@@ -437,7 +437,7 @@ export default function Blog() {
     <>
       <Helmet>
         <title>Author's Journal — Kiminou Knox | Essays & Writing</title>
-        <meta name="description" content="Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice. Essays and reflections from the Bay Area author." />
+        <meta name="description" content="Public writing by Kiminou Knox on faith, discipline, love, healing, Black boy life, and creative voice. Essays and reflections from an author and poet." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/blog" />
         <link rel="alternate" type="application/rss+xml" title="Kiminou Knox Journal RSS" href={SITE_FEED} />

@@ -29,7 +29,7 @@ export default function About() {
         "@id": "https://www.kiminouknox.com/about#webpage",
         "url": "https://www.kiminouknox.com/about",
         "name": "About Kiminou Knox — Author, Athlete, Speaker",
-        "description": "Learn about Kiminou Knox — author and poet with ten published books, Bay Area raised, New Orleans based, speaker, and host of KimYaps.",
+        "description": "Learn about Kiminou Knox — Bay Area raised, New Orleans based author and poet of ten books, host of KimYaps, Director at AAFC, and youth speaker.",
         "isPartOf": { "@id": "https://www.kiminouknox.com/#website" },
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
@@ -47,24 +47,24 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Kiminou Knox — Author, Athlete &amp; Speaker | Bay Area</title>
-        <meta name="description" content="Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps." />
+        <title>About Kiminou Knox — Author and Poet | Bay Area Raised, New Orleans Based</title>
+        <meta name="description" content="Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books. Host of KimYaps. Director at AAFC. Creator of the Black Boy Lie universe." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
         <meta property="og:type" content="profile" />
         <meta property="og:profile:first_name" content="Kiminou" />
         <meta property="og:profile:last_name" content="Knox" />
-        <meta property="og:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps." />
+        <meta property="og:title" content="About Kiminou Knox — Author and Poet" />
+        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet with ten published books. Host of KimYaps. Director at AAFC." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
         <meta property="og:image" content={outdoorPortraitUrl} />
         <meta property="og:site_name" content="Kiminou Knox" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
-        <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps." />
+        <meta name="twitter:title" content="About Kiminou Knox — Author and Poet" />
+        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet with ten published books. Host of KimYaps. Director at AAFC." />
         <meta name="twitter:image" content={outdoorPortraitUrl} />
         
         <script type="application/ld+json">
@@ -124,7 +124,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                I am a Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps.
+                I am the author of ten books and a 2025 Miles Hall Foundation Youth Summit Top Essay Finalist. I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
               </p>
 
               <p data-testid="about-family">

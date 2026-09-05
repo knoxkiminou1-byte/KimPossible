@@ -42,7 +42,7 @@ const ZONES: Zone[] = [
     id: "legs",
     label: "Athletic Career",
     title: "Athletic Career",
-    body: "6'7\". Cristo Rey De La Salle. varsity registered. The same discipline that fills a page fills a gym.",
+    body: "6'7\". Cristo Rey De La Salle. Multi-sport athlete. The same discipline that fills a page fills a gym.",
     tip: { x: 64, y: 72 },
   },
 ];

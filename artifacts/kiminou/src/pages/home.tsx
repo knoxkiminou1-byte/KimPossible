@@ -22,7 +22,6 @@ const GoldMarquee = lazy(() => import("@/components/LuxuryFX/GoldMarquee"));
 const FeaturedBookPromo = lazy(() => import("@/components/FeaturedBookPromo"));
 const WhoIsKiminou = lazy(() => import("@/components/WhoIsKiminou"));
 const FilmStripGallery = lazy(() => import("@/components/FilmStripGallery"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
 const BookPreview = lazy(() => import("@/components/BookPreview"));
 const ParticleEffect = lazy(() => import("@/components/ParticleEffect"));
 const PressStrip = lazy(() => import("@/components/PressStrip"));
@@ -51,7 +50,7 @@ const homeFaq = [
   {
     question: "How many books has Kiminou Knox published?",
     answer:
-      `Kiminou Knox is an author and poet with ten published books spanning poetry, faith, identity, imagination, family, love, and healing. ${CATALOG_EDITION_NOTE} Each catalog page includes a high-resolution cover, description, structured book data, and verified retailer links as they become available.`,
+      `Kiminou Knox is the author of ten books spanning poetry, faith, identity, imagination, family, love, and healing. ${CATALOG_EDITION_NOTE} Each catalog page includes a high-resolution cover, description, structured book data, and verified retailer links as they become available.`,
   },
   {
     question: "What does he speak about?",
@@ -128,16 +127,16 @@ export default function Home() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author, Athlete, Speaker, Podcast Host</title>
-        <meta name="description" content="Official site of Kiminou Knox — author and poet with ten published books, speaker, and host of KimYaps. Explore books, essays, and booking information." />
+        <meta name="description" content="Official site of Kiminou Knox — Bay Area raised, New Orleans based author and poet of ten books. Host of KimYaps. Director at AAFC. Explore books, essays, and booking information." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href={`${SITE_URL}/`} />
+        <link rel="canonical" href={SITE_URL} />
         <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
         <meta name="theme-color" content="#090705" />
         
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
-        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet with ten published books, speaker, and host of KimYaps." />
-        <meta property="og:url" content={`${SITE_URL}/`} />
+        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
+        <meta property="og:url" content={SITE_URL} />
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -147,7 +146,7 @@ export default function Home() {
         <meta name="twitter:site" content={SITE_TWITTER} />
         <meta name="twitter:creator" content={SITE_TWITTER} />
         <meta name="twitter:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
-        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet with ten published books, speaker, and host of KimYaps." />
+        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
         <meta name="twitter:image" content={SITE_IMAGE} />
         
         <script type="application/ld+json">
@@ -191,9 +190,6 @@ export default function Home() {
         >
           3D
         </button>
-        {/* The site-wide skip link targets #main-content, so every route needs
-            this landmark — the homepage was missing it entirely. */}
-        <main id="main-content">
         {paperMode ? (
           <Suspense fallback={<div className="min-h-screen bg-black" />}>
             <PaperRealmPortal />
@@ -243,9 +239,6 @@ export default function Home() {
             <DeferredSection id="section-press" minHeight={360}>
               <PressStrip />
             </DeferredSection>
-            <DeferredSection id="section-testimonials" minHeight={760}>
-              <Testimonials />
-            </DeferredSection>
             <DeferredSection minHeight={620}>
               <SeoFaqSection
                 title="A few common questions"
@@ -261,7 +254,6 @@ export default function Home() {
             </IdleMount>
           </>
         )}
-        </main>
         <Footer />
         <ContactFAB />
         <IdleMount timeout={1800}>

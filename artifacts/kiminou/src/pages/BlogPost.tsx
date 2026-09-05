@@ -232,7 +232,7 @@ function BlogPostPage() {
               <div>
                 <h3 className="font-serif text-xl text-white mb-2">Kiminou Knox</h3>
                 <p className="text-white/40 text-sm leading-relaxed mb-4">
-                  Author, athlete, and builder from the Bay Area. Ten published works. varsity registered. He writes what others leave out.
+                  Bay Area raised, New Orleans based author and poet. Ten published books. He writes what others leave out.
                 </p>
                 <div className="flex gap-4 text-xs uppercase tracking-[0.2em]">
                   <Link href="/author" className="text-amber-400/60 hover:text-amber-300 transition-colors">
