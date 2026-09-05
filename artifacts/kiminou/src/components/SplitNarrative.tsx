@@ -91,7 +91,7 @@ export default function SplitNarrative() {
                 ["6'7\"", "on the court"],
                 ["235 lbs", "of controlled force"],
                 ["Multi-Sport", "captain & leader"],
-                ["NCAA Registered", "class of 2025"],
+                ["varsity Registered", "class of 2025"],
               ].map(([stat, label]) => (
                 <div key={stat} className="flex items-baseline gap-3">
                   <span className="font-serif text-xl text-white font-light">{stat}</span>
