@@ -10,7 +10,7 @@ export default function Sports() {
     <>
       <Helmet>
         <title>Sports & Athletics - Kiminou Knox</title>
-        <meta name="description" content="Kiminou Knox's athletic profile, statistics, and achievements. NCAA registered athlete with verified stats and profiles on NCSA, MaxPreps, and 247Sports." />
+        <meta name="description" content="Kiminou Knox's secondary athletics page, preserving current athletic pursuit and historical sports references without NCAA registration claims." />
         <link rel="canonical" href="https://kiminouknox.com/sports" />
         
         <meta property="og:type" content="website" />
@@ -42,7 +42,7 @@ export default function Sports() {
               Sports & Athletics
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Multi-sport athlete with varsity experience and NCAA eligibility
+              Current athletic pursuit and historical varsity experience
             </p>
           </motion.div>
 
@@ -236,9 +236,9 @@ export default function Sports() {
                 <div className="flex items-start gap-4">
                   <div className="w-3 h-3 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">NCAA Eligibility</h3>
+                    <h3 className="font-semibold text-lg mb-1">Current Athletic Development</h3>
                     <p className="text-muted-foreground">
-                      Registered with NCAA eligibility for collegiate athletics
+                      Athletics remain active and secondary to the public author and poet identity
                     </p>
                   </div>
                 </div>

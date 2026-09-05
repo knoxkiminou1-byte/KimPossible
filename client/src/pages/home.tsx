@@ -20,28 +20,28 @@ export default function Home() {
     "url": "https://kiminouknox.com/",
     "sameAs": [
       "https://x.com/KnoxKiminou",
-      "https://x.com/KiminouKnox",
-      "https://www.instagram.com/hofkiminou"
+      "https://www.youtube.com/@KiminouKnoxOfficial",
+      "https://www.tiktok.com/@kiminou.knox"
     ],
-    "jobTitle": "Athlete, Author, Entrepreneur"
+    "jobTitle": "Author and Poet"
   };
 
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox - Athlete, Author, Entrepreneur</title>
-        <meta name="description" content="Official website of Kiminou Knox. 19 year old athlete, published author, entrepreneur, and creative from the Bay Area. Six published works, NCAA registered athlete, and youth advocate." />
+        <title>Kiminou Knox - Author and Poet</title>
+        <meta name="description" content="Official website of Kiminou Knox, a Bay Area raised, New Orleans based author and poet with ten published books, essays, speaking, KimYaps, and selected media." />
         <link rel="canonical" href="https://kiminouknox.com/" />
         
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta property="og:description" content="19 year old athlete, published author, entrepreneur, and creative from the Bay Area" />
+        <meta property="og:title" content="Kiminou Knox - Author and Poet" />
+        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet. Ten books. Host of KimYaps." />
         <meta property="og:url" content="https://kiminouknox.com/" />
         <meta property="og:image" content="https://kiminouknox.com/og-image.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kiminou Knox - Athlete, Author, Entrepreneur" />
-        <meta name="twitter:description" content="19 year old athlete, published author, entrepreneur, and creative" />
+        <meta name="twitter:title" content="Kiminou Knox - Author and Poet" />
+        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet. Ten books. Host of KimYaps." />
         <meta name="twitter:image" content="https://kiminouknox.com/og-image.png" />
         
         <script type="application/ld+json">

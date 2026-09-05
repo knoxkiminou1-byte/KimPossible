@@ -52,6 +52,22 @@
     }
   },
   {
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Identity, Silence, Trauma, and Redemption",
+    "year": 2024,
+    "isbn": "9798267606912",
+    "cover": "/books/black-boy-poems-cover.jpg",
+    "themes": ["Identity", "Silence", "Trauma", "Redemption"],
+    "description": "A raw and honest collection tracing the interior life of a young Black man navigating silence, trauma, and the long road toward redemption.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
     "id": "hopeless-romantic",
     "title": "Hopeless Romantic",
     "subtitle": "Love, Loss, and Everything Between",
@@ -64,6 +80,90 @@
     "buyLinks": {
       "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "boys-raised-in-silence",
+    "title": "Boys Raised in Silence",
+    "subtitle": "Breaking the Quiet, Finding Voice",
+    "year": 2024,
+    "isbn": "9798316735821",
+    "cover": "/books/boys-raised-in-silence-cover.jpg",
+    "themes": ["Silence", "Masculinity", "Healing"],
+    "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "adventures-kiminou-chua",
+    "title": "The Adventures of Kiminou the Great and Chua the Wise",
+    "subtitle": "A Journey of Friendship and Discovery",
+    "year": 2025,
+    "isbn": "9798316591204",
+    "cover": "/books/adventures-kiminou-chua-cover.jpg",
+    "themes": ["Friendship", "Growth", "Adventure"],
+    "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "kiminous-world-of-imagination",
+    "title": "Kiminou's World of Imagination: The Basics",
+    "subtitle": "A Children's Imagination and Creativity Book",
+    "year": 2024,
+    "cover": "/books/kiminous-world-imagination-cover.jpg",
+    "themes": ["Imagination", "Creativity", "Children"],
+    "description": "A children's book that opens doors to imagination and creative thinking, inviting young readers into a world where anything is possible.",
+    "buyLinks": {
+      "amazon": null,
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
+    "id": "why-did-you-ghost-me",
+    "title": "WHY DID YOU GHOST ME",
+    "subtitle": "Poems from a Ghosted Lover",
+    "year": 2026,
+    "asin": "B0H8XZ7N6K",
+    "datePublished": "2026-07-15",
+    "cover": "/books/why-did-you-ghost-me-cover.jpg",
+    "themes": ["Love", "Loss", "Abandonment"],
+    "description": "A collection of poems written from the raw aftermath of being left without explanation — love, grief, and the silence that follows.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/WHY-DID-YOU-GHOST-ME-ebook/dp/B0H8XZ7N6K",
+      "googleBooks": "https://play.google.com/store/books/details?id=zB_1EQAAQBAJ",
+      "bookshop": null,
+      "bn": null
+    },
+    "featured": true
+  },
+  {
+    "id": "7-16-74-an-ode-to-rashida",
+    "title": "7.16.74",
+    "subtitle": "An Ode to Rashida",
+    "year": 2026,
+    "asin": "B0H92Q6PM2",
+    "paperbackAsin": "B0H94HBS6K",
+    "datePublished": "2026-07-16",
+    "cover": "/books/7-16-74-cover.jpg",
+    "themes": ["Family", "Love", "Legacy"],
+    "description": "A deeply personal ode — a book-length poem written for and about Rashida, honoring a love and a legacy that deserves to be named.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0H92Q6PM2",
+      "googleBooks": "https://play.google.com/store/books/details?id=MTv1EQAAQBAJ",
       "bookshop": null,
       "bn": null
     },

@@ -94,7 +94,7 @@ export default function Hero() {
               className="mb-6"
             >
               <span className="text-sm md:text-base uppercase tracking-[0.3em] text-white/80 font-light">
-                Athlete • Author • Entrepreneur
+                Author • Poet • KimYaps
               </span>
             </motion.div>
 
@@ -125,7 +125,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.7 }}
               data-testid="hero-intro"
             >
-              I am a Bay Area writer and basketball athlete building a legacy through books, sport, and youth leadership.
+              I am a Bay Area raised, New Orleans based author and poet writing books and essays about Black boyhood, faith, love, grief, masculinity, family, and becoming.
             </motion.p>
 
             <motion.div 

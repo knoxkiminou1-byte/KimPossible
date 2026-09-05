@@ -10,9 +10,9 @@ const lookbookImages = [
   },
   {
     src: "/photos/brown-suit-author.jpg",
-    alt: "Published author with six works",
+    alt: "Published author with ten books",
     title: "Published Author",
-    description: "Six published works by age 19, exploring love, faith, and identity"
+    description: "Ten books exploring love, faith, Black boyhood, family, imagination, and legacy"
   },
   {
     src: "/photos/entrepreneur-style.jpg",
@@ -63,7 +63,7 @@ export default function Lookbook() {
             className="text-xl opacity-90 font-light max-w-2xl mx-auto animate-on-scroll"
             data-testid="lookbook-description"
           >
-            Highlights from the multifaceted journey of a 19 year old Bay Area renaissance talent.
+            Highlights from the public journey of a Bay Area raised, New Orleans based author and poet.
           </p>
         </div>
       </div>

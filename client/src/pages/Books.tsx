@@ -51,18 +51,18 @@ export default function BooksPage() {
     <>
       <Helmet>
         <title>Published Books - Kiminou Knox</title>
-        <meta name="description" content="Explore all 6 published works by Kiminou Knox including poetry collections and stories on faith, identity, love, and finding voice." />
+        <meta name="description" content="Explore the canonical ten-book bibliography by Kiminou Knox, including poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy." />
         <link rel="canonical" href="https://kiminouknox.com/books" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Published Books - Kiminou Knox" />
-        <meta property="og:description" content="Six published works of poetry and stories" />
+        <meta property="og:description" content="The canonical ten-book bibliography by Kiminou Knox" />
         <meta property="og:url" content="https://kiminouknox.com/books" />
         <meta property="og:image" content="https://kiminouknox.com/og/books.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Published Books - Kiminou Knox" />
-        <meta name="twitter:description" content="Six published works of poetry and stories" />
+        <meta name="twitter:description" content="The canonical ten-book bibliography by Kiminou Knox" />
         <meta name="twitter:image" content="https://kiminouknox.com/og/books.jpg" />
       </Helmet>
 

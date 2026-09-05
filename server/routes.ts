@@ -280,7 +280,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           "name": "Who is Kiminou Knox?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiminou Knox is a 6'7 basketball player, entrepreneur, and 6-time published author of African American, Jamaican, and Congolese descent."
+            "text": "Kiminou Knox is a Bay Area raised, New Orleans based author and poet. He is the author of ten books and host of KimYaps."
           }
         },
         {
@@ -296,7 +296,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           "name": "What sports does Kiminou Knox play?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiminou Knox is a 6'7 varsity basketball player who plays Forward/Center position. He is NCAA registered with verified profiles on NCSA, MaxPreps, and PrepHoops."
+            "text": "Kiminou Knox is currently pursuing athletics. Historical sports profiles document earlier high school basketball and football activity."
           }
         },
         {
@@ -304,7 +304,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           "name": "How many books has Kiminou Knox written?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kiminou Knox has published 6 books including poetry collections and a children's storybook. His works include 'Poems From A Black Boy', 'Black Boy Poems', 'Hopeless Romantic', 'The Spirit of Solomon', 'Our Father', and 'Boys Raised In Silence'."
+            "text": "Kiminou Knox has published exactly ten distinct original books. Revised, remastered, and alternate editions are not counted as new original books."
           }
         }
       ]

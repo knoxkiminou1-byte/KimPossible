@@ -5,12 +5,12 @@ const milestones = [
   {
     icon: BookText,
     title: "Published Author",
-    description: "Six published works on faith, love, and mental survival, all written by age 19"
+    description: "Ten distinct original books across faith, love, Black boyhood, family, imagination, and legacy"
   },
   {
     icon: Trophy,
     title: "Multi Sport Athlete",
-    description: "Varsity basketball captain and multi sport leader with NCAA eligibility registration"
+    description: "Current athletic pursuit and historical varsity experience kept secondary to the literary public identity"
   },
   {
     icon: Users,

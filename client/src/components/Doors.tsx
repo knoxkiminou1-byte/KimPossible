@@ -12,7 +12,7 @@ const doors = [
     id: "author",
     title: "AUTHOR",
     subtitle: "Published Poet",
-    description: "Six published works including Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise, all published by age 19.",
+    description: "Ten distinct original books across poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy.",
     image: "/photos/author-reading-book.jpg",
   },
   {

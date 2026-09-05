@@ -7,12 +7,12 @@ export default function Footer() {
             KIMINOU KNOX
           </h2>
           <p className="text-lg opacity-90 mb-8" data-testid="footer-subtitle">
-            ATHLETE • AUTHOR • ENTREPRENEUR
+            AUTHOR • POET • KIMYAPS
           </p>
           
           <div className="border-t border-white/20 pt-8">
             <p className="text-sm opacity-80" data-testid="footer-copyright">
-              © 2025 Kiminou Knox. All rights reserved. | Bay Area Renaissance • Class of 2025
+              © 2025 Kiminou Knox. All rights reserved. | Bay Area raised, New Orleans based
             </p>
           </div>
         </div>

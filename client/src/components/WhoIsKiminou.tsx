@@ -7,8 +7,8 @@ const identity = [
     id: "books",
     icon: BookOpen,
     label: "Author",
-    title: "Six Published Works",
-    description: "Published writer exploring faith, identity, love, and the Black experience through powerful poetry and narrative.",
+    title: "Ten Published Books",
+    description: "Author and poet exploring faith, identity, love, Black boyhood, grief, family, and becoming.",
     link: "/books",
     cta: "View Books"
   },
@@ -16,8 +16,8 @@ const identity = [
     id: "basketball",
     icon: Trophy,
     label: "Athlete",
-    title: "6'7\" Multi Sport Leader",
-    description: "Varsity basketball captain and multi sport athlete combining physical excellence with leadership on and off the court.",
+    title: "Athletics",
+    description: "Current athletic pursuit and historical varsity experience, kept secondary to the literary public identity.",
     link: "/sports",
     cta: "View Athletics"
   },
@@ -62,7 +62,7 @@ export default function WhoIsKiminou() {
             className="text-xl text-muted-foreground max-w-3xl mx-auto animate-on-scroll"
             data-testid="who-description"
           >
-            A writer and athlete from East Palo Alto, California, building a legacy through books, sport, and youth leadership.
+            A Bay Area raised, New Orleans based author and poet. Ten books, KimYaps, speaking, AAFC, music, athletics, and technology work each have their own room.
           </p>
         </div>
 

@@ -21,19 +21,19 @@ export default function About() {
           </h2>
           <div className="h-px w-24 bg-accent mb-12 mx-auto"></div>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8" data-testid="about-description-1">
-            Kiminou Knox is a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, he creates work that helps people feel deeply and act with purpose.
+            Kiminou Knox is a Bay Area raised, New Orleans based author and poet. He writes books and essays about Black boyhood, faith, love, grief, masculinity, family, and becoming.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-2">
-            Standing at 6 feet 7 inches and weighing 235 lbs, Kiminou excelled as a varsity basketball captain and multi sport athlete. His accomplishments include 6 published works and recognition through 5 major awards. Academically, he scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+            He is the author of ten distinct original books and host of KimYaps. Athletics, speaking, music, AAFC, faith work, Social Following Studios, and technology work remain secondary public rooms rather than the first line of the author identity.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-3">
             His family serves as his compass. He is the son of Rashida Knox, a distinguished Bay Area marketer and presidential singer whose dedication to excellence shapes his approach to every endeavor. His grandmother, Dr. Faye McNair Knox, devoted her life to serving the One East Palo Alto community as its executive director, teaching him that service is a promise you renew each day.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="about-description-4">
-            On the page, he explores Black boy life, love, and becoming through verse and narrative. On the court, he plays forward and center, bringing the same discipline to both arenas. The principles remain constant: show up, do the work, leave every space better than you found it.
+            On the page, he explores Black boy life, faith, love, grief, masculinity, family, and becoming through verse and narrative. The principles remain constant: show up, do the work, leave every space better than you found it.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-12" data-testid="about-description-5">
-            His published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. He is building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work. As a speaker, he addresses craft, discipline, voice, and the cost of silence, collaborating with teams, schools, and community organizations to transform ideas into meaningful action.
+            His published books include poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy. As a speaker, he addresses craft, discipline, voice, and the cost of silence, collaborating with teams, schools, and community organizations to transform ideas into meaningful action.
           </p>
           
           {/* Newsletter Signup */}
@@ -62,7 +62,7 @@ export default function About() {
                 </button>
               </div>
               <p className="text-sm text-muted-foreground" data-testid="newsletter-description">
-                Stay updated on Kiminou's latest books, athletic achievements, and business ventures.
+                Stay updated on Kiminou's latest books, essays, speaking, and media.
               </p>
             </form>
           </div>

@@ -1,80 +1,136 @@
 [
   {
-    "id": "black-boy-poems",
-    "title": "Black Boy Poems",
-    "subtitle": "Poetry that speaks with a clear voice",
-    "year": 2024,
+    "id": "spirit-solomon",
+    "title": "The Spirit of Solomon",
+    "subtitle": "What is Love To A Man Made To Destroy It",
+    "year": 2025,
     "isbn": "9798316662975",
-    "datePublished": "2024-09-29",
-    "cover": "https://m.media-amazon.com/images/I/71oBDW7JHNL._SY466_.jpg",
-    "description": "Poetry that speaks with a clear voice",
+    "datePublished": "2025-01-15",
+    "cover": "/covers/spirit-solomon.jpg",
+    "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
     "buyLinks": {
-      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+      "amazon": "https://www.amazon.com/Spirit-Solomon-What-Love-Destroy/dp/B0F3VGQ1TK",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Spirit_of_Solomon?id=yIRsEQAAQBAJ"
     }
   },
   {
     "id": "our-father",
-    "title": "Our Father",
-    "subtitle": "Reflections on faith and family",
+    "title": "Our Father?",
+    "subtitle": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+    "year": 2025,
+    "isbn": "9798316682850",
+    "datePublished": "2025-02-10",
+    "cover": "/covers/our-father.jpg",
+    "description": "A candid wrestling with prayer and presence — when belief collides with unanswered questions.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ"
+    }
+  },
+  {
+    "id": "poems-black-boy",
+    "title": "Poems from a Black Boy",
+    "subtitle": "Identity, Heritage, and Hope",
     "year": 2024,
-    "isbn": "TBD",
-    "datePublished": "2024",
-    "cover": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop",
-    "description": "Reflections on faith and family",
+    "datePublished": "2024-09-29",
+    "cover": "/covers/poems-black-boy.jpg",
+    "description": "Raw, unfiltered verse on belonging, history, and the beauty found in surviving and becoming.",
     "buyLinks": {
-      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+      "amazon": "https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Poems_from_a_Black_Boy?id=-eBNEQAAQBAJ"
     }
   },
   {
-    "id": "boys-raised-in-silence",
-    "title": "Boys Raised in Silence",
-    "subtitle": "Poems for what we were never allowed to feel",
-    "year": 2025,
-    "isbn": "TBD",
-    "datePublished": "2025",
-    "cover": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
-    "description": "Poems for what we were never allowed to feel",
+    "id": "black-boy-poems",
+    "title": "Black Boy Poems",
+    "subtitle": "Identity, Silence, Trauma, and Redemption",
+    "year": 2024,
+    "isbn": "9798267606912",
+    "cover": "/covers/black-boy-poems.jpg",
+    "description": "A raw and honest collection tracing the interior life of a young Black man navigating silence, trauma, and the long road toward redemption.",
     "buyLinks": {
-      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
-    }
-  },
-  {
-    "id": "spirit-solomon",
-    "title": "The Spirit of Solomon",
-    "subtitle": "A modern Solomon story in verse",
-    "year": 2025,
-    "isbn": "TBD",
-    "datePublished": "2025-01-15",
-    "cover": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=400&h=600&fit=crop",
-    "description": "A modern Solomon story in verse",
-    "buyLinks": {
-      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+      "amazon": null
     }
   },
   {
     "id": "hopeless-romantic",
     "title": "Hopeless Romantic",
-    "subtitle": "Love as faith as fight",
+    "subtitle": "Love, Loss, and Everything Between",
     "year": 2025,
-    "isbn": "TBD",
+    "isbn": "9798291608128",
     "datePublished": "2025-03-05",
-    "cover": "https://images.unsplash.com/photo-1518893063132-36e46dbe2428?w=400&h=600&fit=crop",
-    "description": "Love as faith as fight",
+    "cover": "/covers/hopeless-romantic.jpg",
+    "description": "An intimate, emotionally charged collection on longing, closure, and the courage to stay tender.",
     "buyLinks": {
-      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+      "amazon": "https://www.amazon.com/Hopeless-Romantic-Kiminou-Knox/dp/B0FH32385N",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Hopeless_Romantic?id=AdZrEQAAQBAJ"
     }
   },
   {
-    "id": "kiminou-great-chua-wise",
-    "title": "The Adventures of Kiminou the Great and Chua the Wise",
-    "subtitle": "A children story of courage and care",
-    "year": 2025,
-    "isbn": "TBD",
-    "datePublished": "2025",
-    "cover": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
-    "description": "A children story of courage and care",
+    "id": "boys-raised-in-silence",
+    "title": "Boys Raised in Silence",
+    "subtitle": "Breaking the Quiet, Finding Voice",
+    "year": 2024,
+    "isbn": "9798316735821",
+    "datePublished": "2024-06-15",
+    "cover": "/covers/boys-raised-silence.png",
+    "description": "A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
     "buyLinks": {
-      "amazon": "https://www.amazon.com/stores/author/B0DGM5Z5Q8"
+      "amazon": "https://www.amazon.com/Boys-Raised-Silence-Kiminou-Knox/dp/B0FK95TQRM",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Boys_Raised_in_Silence?id=RxZNEQAAQBAJ"
+    }
+  },
+  {
+    "id": "adventures-kiminou-chua",
+    "title": "The Adventures of Kiminou the Great and Chua the Wise",
+    "subtitle": "A Journey of Friendship and Discovery",
+    "year": 2025,
+    "isbn": "9798316591204",
+    "datePublished": "2025-01-20",
+    "cover": "/covers/adventures-chua-kiminou.png",
+    "description": "A whimsical tale of two friends learning that courage and wisdom work best together on life's greatest adventures.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/Adventures-Kiminou-Great-Chua-Wise/dp/B0FH38DNQ5",
+      "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ"
+    }
+  },
+  {
+    "id": "kiminous-world-of-imagination",
+    "title": "Kiminou's World of Imagination: The Basics",
+    "subtitle": "A Children's Imagination and Creativity Book",
+    "year": 2024,
+    "cover": "/covers/kiminous-world-imagination.jpg",
+    "description": "A children's book that opens doors to imagination and creative thinking, inviting young readers into a world where anything is possible.",
+    "buyLinks": {
+      "amazon": null
+    }
+  },
+  {
+    "id": "why-did-you-ghost-me",
+    "title": "WHY DID YOU GHOST ME",
+    "subtitle": "Poems from a Ghosted Lover",
+    "year": 2026,
+    "asin": "B0H8XZ7N6K",
+    "datePublished": "2026-07-15",
+    "cover": "/covers/why-did-you-ghost-me.jpg",
+    "description": "A collection of poems written from the raw aftermath of being left without explanation — love, grief, and the silence that follows.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/WHY-DID-YOU-GHOST-ME-ebook/dp/B0H8XZ7N6K",
+      "googleBooks": "https://play.google.com/store/books/details?id=zB_1EQAAQBAJ"
+    }
+  },
+  {
+    "id": "7-16-74-an-ode-to-rashida",
+    "title": "7.16.74",
+    "subtitle": "An Ode to Rashida",
+    "year": 2026,
+    "asin": "B0H92Q6PM2",
+    "datePublished": "2026-07-16",
+    "cover": "/covers/7-16-74.jpg",
+    "description": "A deeply personal ode — a book-length poem written for and about Rashida, honoring a love and a legacy that deserves to be named.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0H92Q6PM2",
+      "googleBooks": "https://play.google.com/store/books/details?id=MTv1EQAAQBAJ"
     }
   }
 ]

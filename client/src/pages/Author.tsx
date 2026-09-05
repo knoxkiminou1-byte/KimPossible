@@ -52,7 +52,7 @@ export default function Author() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
-        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
+        <meta name="description" content="Kiminou Knox is a Bay Area raised, New Orleans based author and poet. He is the author of ten books and host of KimYaps." />
         <link rel="canonical" href="https://kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
@@ -130,8 +130,8 @@ export default function Author() {
                 <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-2 ring-amber-300/50 shadow-2xl shadow-amber-900/40 relative">
                   <motion.img
                     src="/author-kiminou.jpg"
-                    alt="Kiminou Knox - Author, Athlete, Entrepreneur from East Palo Alto, creator of The Black Boy Lie universe"
-                    title="Kiminou Knox - Author, Athlete & Entrepreneur"
+                    alt="Kiminou Knox - author and poet"
+                    title="Kiminou Knox - Author and Poet"
                     className="w-full h-full object-cover"
                     initial={{ scale: 1.1, filter: "grayscale(100%)" }}
                     animate={{ scale: 1, filter: "grayscale(0%)" }}
@@ -147,7 +147,7 @@ export default function Author() {
                   transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  Poet · Author · Athlete
+                  Author · Poet
                 </motion.div>
               </motion.div>
 
@@ -180,7 +180,7 @@ export default function Author() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
                 >
-                  Poet, novelist, athlete, and builder from East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city.
+                  Bay Area raised, New Orleans based author and poet whose work follows Black boys wrestling with God, grief, desire, family, love, silence, and becoming.
                 </motion.p>
                 <motion.p 
                   className="text-gray-400"
@@ -188,7 +188,7 @@ export default function Author() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
                 >
-                  Creator of The Black Boy Lie universe. Author of six poetry collections and a children's storybook.
+                  Author of ten books and host of KimYaps.
                 </motion.p>
 
                 <motion.div 
@@ -259,13 +259,13 @@ export default function Author() {
                 </h2>
                 <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                   <p>
-                    Kiminou Knox is a poet, novelist, and creative organizer from East Palo Alto now based in Oakland California. Son of Rashida Knox, grandson of Faye McNair Knox, and great grandson of Sarah Lee Williams and Elisha Bonepart McNair. A creative force of African American, Jamaican, and Congolese descent, he came up between church benches, school gyms, and crowded apartments where everybody was carrying more than they could say out loud. Those rooms and those silences are where his voice began.
+                    Kiminou Knox is a Bay Area raised, New Orleans based author and poet. He writes books and essays about Black boyhood, faith, love, grief, masculinity, family, and the things young men learn to hide before anybody teaches them how to name them.
                   </p>
                   <p>
-                    He has released several poetry collections including <em className="text-amber-300/90">Poems From A Black Boy</em>, <em className="text-amber-300/90">Black Boy Poems</em>, <em className="text-amber-300/90">Hopeless Romantic</em>, <em className="text-amber-300/90">The Spirit of Solomon</em>, <em className="text-amber-300/90">Our Father</em>, and <em className="text-amber-300/90">Boys Raised In Silence</em>, plus a children's storybook written with his younger brother. His work walks through faith, family, mental health, and desire, following Black boys who are trying to understand God, forgive their fathers, love their friends, and keep breathing in neighborhoods that do not always love them back. The poems move from classrooms to courts to kitchen tables and bedroom prayers, speaking in the plain voice of a young man who refuses to lie about what hurts and what heals.
+                    He is the author of ten distinct original books. The current bibliography treats revised, remastered, and alternate editions as editions rather than new original works.
                   </p>
                   <p>
-                    Away from the page, Kiminou is a committed student athlete and youth builder. He competes as a varsity level basketball player, trains with the same intensity he brings to the notebook, and studies film and footwork with professional ambition. He is the Director of Artists and Athletes For Change, a platform that uses story, apparel, and mentorship to help young people turn their talent into testimony and their testimony into work that can feed them.
+                    Away from the page, Kiminou hosts KimYaps, speaks, makes music under the name Kiminou Knox, continues his athletic development, and serves as Director at Artists and Athletes for Change.
                   </p>
                   <p>
                     On stage and on the court he carries the same mission as in his books: to prove that Black boys are not problems to control but lives to protect, futures to fund, and voices that deserve to stand at the center of the room.

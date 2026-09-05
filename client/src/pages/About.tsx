@@ -13,17 +13,16 @@ export default function About() {
         "alternateName": "Kiminou",
         "url": "https://kiminouknox.com/",
         "image": "https://kiminouknox.com/media/headshot.jpg",
-        "description": "Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact.",
-        "jobTitle": "Writer and athlete",
+        "description": "Bay Area raised, New Orleans based author and poet. Author of ten books and host of KimYaps.",
+        "jobTitle": "Author and Poet",
         "affiliation": [{
           "@type": "Organization",
           "name": "Artists and Athletes for Change"
         }],
         "sameAs": [
-          "https://instagram.com/hofkiminou",
-          "https://x.com/KiminouKnox",
           "https://x.com/KnoxKiminou",
-          "https://www.youtube.com/@KiminouKnoxVevo",
+          "https://www.youtube.com/@KiminouKnoxOfficial",
+          "https://www.tiktok.com/@kiminou.knox",
           "https://www.amazon.com/stores/author/B0DGM5Z5Q8",
           "https://kiminouknox.com/"
         ]
@@ -55,18 +54,18 @@ export default function About() {
     <>
       <Helmet>
         <title>About - Kiminou Knox</title>
-        <meta name="description" content="Writer and athlete from East Palo Alto, California. I tell stories that carry faith grit and love. I build books poems and youth projects that help people feel and act with purpose." />
+        <meta name="description" content="Kiminou Knox is a Bay Area raised, New Orleans based author and poet. He is the author of ten books and host of KimYaps." />
         <link rel="canonical" href="https://kiminouknox.com/about" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About - Kiminou Knox" />
-        <meta property="og:description" content="Writer and athlete building books poems and youth facing projects with focus on craft service and lasting impact" />
+        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet. Ten books. Host of KimYaps." />
         <meta property="og:url" content="https://kiminouknox.com/about" />
         <meta property="og:image" content="https://kiminouknox.com/og/about.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About - Kiminou Knox" />
-        <meta name="twitter:description" content="Writer and athlete from East Palo Alto, California" />
+        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet" />
         <meta name="twitter:image" content="https://kiminouknox.com/og/about.jpg" />
         
         <script type="application/ld+json">
@@ -87,11 +86,11 @@ export default function About() {
           <div className="prose prose-lg max-w-none">
             <div className="space-y-6 text-foreground leading-relaxed text-lg">
               <p data-testid="about-intro">
-                I am a 19 year old writer and athlete from East Palo Alto, California, telling stories that carry faith, grit, and love. Through books, poems, and youth focused projects, I create work that helps people feel deeply and act with purpose.
+                I am a Bay Area raised, New Orleans based author and poet. I write books and essays about Black boyhood, faith, love, grief, masculinity, family, and becoming.
               </p>
 
               <p data-testid="about-stats">
-                My work includes 6 published books and recognition through 5 major awards. Academically, I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                My work includes ten distinct original books and KimYaps. Athletics, speaking, music, AAFC, faith work, Social Following Studios, and technology work remain secondary public rooms.
               </p>
 
               <p data-testid="about-family">
@@ -103,7 +102,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-books">
-                My published works include Black Boy Poems, Our Father, Boys Raised in Silence, The Spirit of Solomon, Hopeless Romantic, and The Adventures of Kiminou the Great and Chua the Wise. I am building an interconnected author universe that weaves together poems, stories, essays, visual media, and live performances into a cohesive body of work.
+                My published books include poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy. Revised, remastered, and alternate editions are editions rather than new original works.
               </p>
 
               <p data-testid="about-speaking">
