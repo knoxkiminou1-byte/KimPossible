@@ -42,8 +42,8 @@ const NOW_ITEMS: NowItem[] = [
   {
     icon: Trophy,
     label: "Athletics",
-    title: "Senior Season, NCAA Registered",
-    detail: "Forward/center at Cristo Rey De La Salle. NCAA eligibility registered, focused on the recruiting process this season.",
+    title: "Senior Season, Varsity Basketball",
+    detail: "Forward/center at Cristo Rey De La Salle. Multi-sport varsity athlete focused on the recruiting process this season.",
     link: { label: "Athletic profile", href: "/sports" },
   },
   {
