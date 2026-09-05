@@ -530,7 +530,6 @@ export default function Author() {
                     { label: "Weight", value: "235 lbs", pct: 78 },
                     { label: "Position", value: "F / C", pct: 85 },
                     { label: "Sports", value: "Basketball · Football", pct: 100 },
-                    ,
                   ].map((stat, i) => (
                     <StatBar key={i} label={stat.label} value={stat.value} pct={stat.pct} index={i} />
                   ))}
@@ -708,3 +707,4 @@ export default function Author() {
     </>
   );
 }
+
