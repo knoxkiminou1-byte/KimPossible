@@ -28,7 +28,7 @@ const measurables = [
 ];
 
 const highlights = [
-  { year: "2025", title: "Athletics", desc: "Current athletic development — kept secondary to the literary public identity. Historical varsity NCAA eligibility for collegiate athletics" },
+  { year: "2025", title: "Athletics", desc: "Current athletic development — kept secondary to the literary public identity. Multi-sport varsity athlete." },
   { year: "2024", title: "Varsity Captain at Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
   { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop, one of the premier AAU evaluation platforms" },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance" },
@@ -230,7 +230,7 @@ export default function Sports() {
             url: `${SITE_URL}/sports`, sport: "Basketball",
             height: { "@type": "QuantitativeValue", value: 80, unitCode: "INH" },
             affiliation: [{ "@type": "SportsTeam", name: "Cristo Rey De La Salle Basketball" }],
-            memberOf: [{ "@type": "Organization", name: "NCAA", url: "https://www.ncaa.org" }],
+            memberOf: [{ "@type": "Organization", name: "AAFC (Artists and Athletes for Change)", url: "https://aafcbuilders.org" }],
             sameAs: SITE_SAME_AS,
           })}
         </script>
@@ -315,14 +315,14 @@ export default function Sports() {
               <motion.p className="text-lg text-white/55 max-w-xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.15 }}>
-                Multi-sport athlete with varsity experience, NCAA eligibility, and verified profiles on every major recruiting platform.
+                Multi-sport athlete with varsity experience and verified profiles on every major recruiting platform.
               </motion.p>
 
               {/* Stat pills */}
               <motion.div className="flex flex-wrap gap-4 mt-10"
                 initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.3 }}>
-                {["6'8\"", "235 lbs", "F / C", "NCAA Eligible"].map((badge) => (
+                {["6'8\"", "235 lbs", "F / C", "Varsity"].map((badge) => (
                   <motion.span key={badge}
                     className="px-4 py-1.5 border border-amber-400/35 text-amber-300/80 text-xs uppercase tracking-[0.2em] font-medium"
                     style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}
