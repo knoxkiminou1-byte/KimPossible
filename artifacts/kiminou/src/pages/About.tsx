@@ -29,7 +29,7 @@ export default function About() {
         "@id": "https://www.kiminouknox.com/about#webpage",
         "url": "https://www.kiminouknox.com/about",
         "name": "About Kiminou Knox — Author, Athlete, Speaker",
-        "description": "Learn about Kiminou Knox — ten-time published author, Bay Area poet, NCAA-registered basketball athlete, youth speaker, and podcast host.",
+        "description": "Learn about Kiminou Knox — author and poet with ten published books, Bay Area raised, New Orleans based, speaker, and host of KimYaps.",
         "isPartOf": { "@id": "https://www.kiminouknox.com/#website" },
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
@@ -48,7 +48,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About Kiminou Knox — Author, Athlete &amp; Speaker | Bay Area</title>
-        <meta name="description" content="Kiminou Knox is a ten-time published author, Bay Area poet, NCAA-registered basketball athlete, speaker, and podcast host. Creator of the Black Boy Lie universe." />
+        <meta name="description" content="Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/about" />
         
@@ -56,7 +56,7 @@ export default function About() {
         <meta property="og:profile:first_name" content="Kiminou" />
         <meta property="og:profile:last_name" content="Knox" />
         <meta property="og:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta property="og:description" content="Bay Area poet and ten-time published author, NCAA-registered basketball athlete, speaker, and host of the KimYaps podcast." />
+        <meta property="og:description" content="Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
         <meta property="og:image" content={outdoorPortraitUrl} />
         <meta property="og:site_name" content="Kiminou Knox" />
@@ -64,7 +64,7 @@ export default function About() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:title" content="About Kiminou Knox — Author, Athlete &amp; Speaker" />
-        <meta name="twitter:description" content="Bay Area poet and ten-time published author, NCAA-registered basketball athlete, speaker, and host of the KimYaps podcast." />
+        <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps." />
         <meta name="twitter:image" content={outdoorPortraitUrl} />
         
         <script type="application/ld+json">
@@ -124,7 +124,7 @@ export default function About() {
               </p>
 
               <p data-testid="about-stats">
-                I am a ten-time published author and a 2025 Miles Hall Foundation Youth Summit Top Essay Finalist. I scored 1380 on the SAT while maintaining excellence in both athletics and creative writing.
+                I am a Bay Area raised, New Orleans based author and poet with ten published books and host of KimYaps.
               </p>
 
               <p data-testid="about-family">
