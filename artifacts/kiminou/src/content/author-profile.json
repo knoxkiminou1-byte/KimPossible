@@ -36,7 +36,7 @@
       "cover": "/covers/kiminou-knox-world-of-imagination.png"
     },
     {
-      "title": "Boys Raised by Silence",
+      "title": "Boys Raised in Silence",
       "description": "Poetry about emotional silence, masculinity, fathers, community, and healing.",
       "cover": "/covers/boys-raised-by-silence-remastered-edition.jpg"
     },
@@ -46,14 +46,18 @@
       "cover": null
     },
     {
-      "title": "Why Did You Ghost Me?",
+      "title": "WHY DID YOU GHOST ME",
       "description": "Poems about ghosting, heartbreak, unanswered messages, closure, and self-worth.",
-      "cover": "/covers/why-did-you-ghost-me.jpg"
+      "cover": "/covers/why-did-you-ghost-me.jpg",
+      "subtitle": "Poems from a Ghosted Lover"
     },
     {
-      "title": "My Father.",
-      "description": "Poetry about fatherhood, faith, prayer, grace, and spiritual inheritance.",
-      "cover": "/covers/my-father-remastered-edition.jpg"
+      "title": "7.16.74",
+      "description": "A deeply personal ode — a book-length poem written for and about Rashida, honoring a love and a legacy that deserves to be named.",
+      "cover": "/covers/my-father-remastered-edition.jpg",
+      "subtitle": "An Ode to Rashida",
+      "year": 2026,
+      "asin": "B0H92Q6PM2"
     }
   ]
 }
