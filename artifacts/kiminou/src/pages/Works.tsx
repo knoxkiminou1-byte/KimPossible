@@ -18,13 +18,18 @@ interface Book {
   buyLinks: Record<string, string | null>;
 }
 
+const EXCLUDED_CATALOG_IDS = new Set([
+  "black-boy-poems",
+  "our-father",
+]);
+
 export default function Works() {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
     fetch('/books.json')
       .then(res => res.json())
-      .then(data => setBooks(data))
+      .then((data: Book[]) => setBooks(data.filter(book => !EXCLUDED_CATALOG_IDS.has(book.id))))
       .catch(err => console.error('Failed to load books:', err));
   }, []);
 
@@ -49,19 +54,19 @@ export default function Works() {
     <>
       <Helmet>
         <title>Books by Kiminou Knox | Ten-Book Bibliography &amp; Editions</title>
-        <meta name="description" content="Explore Kiminou Knox's canonical ten-book bibliography and verified original and remastered editions, including The Spirit of Solomon, Our Father?, Hopeless Romantic, Poems From a Black Boy, and My Father." />
+        <meta name="description" content="Explore Kiminou Knox's official ten-book bibliography—eight regular books and two cartoon books—plus original and remastered editions." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/works" />
         
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Books by Kiminou Knox | Ten-Book Bibliography &amp; Editions" />
-        <meta property="og:description" content="The official ten-book bibliography with verified original and remastered formats." />
+        <meta property="og:description" content="The official ten-book bibliography: eight regular books, two cartoon books, and their cataloged editions." />
         <meta property="og:url" content="https://www.kiminouknox.com/works" />
         <meta property="og:image" content="https://www.kiminouknox.com/og/works.jpg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Books by Kiminou Knox | Ten-Book Bibliography &amp; Editions" />
-        <meta name="twitter:description" content="The official ten-book bibliography with verified original and remastered formats." />
+        <meta name="twitter:description" content="The official ten-book bibliography: eight regular books, two cartoon books, and their cataloged editions." />
         <meta name="twitter:image" content="https://www.kiminouknox.com/og/works.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(
@@ -88,7 +93,7 @@ export default function Works() {
               Works
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The official catalog records for ten published books and their available original and remastered editions, spanning poetry, faith, identity, love, family, imagination, and the Black experience.
+              The official catalog records for ten published books—eight regular books and two cartoon books—plus their original and remastered editions.
             </p>
           </div>
 

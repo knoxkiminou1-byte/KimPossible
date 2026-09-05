@@ -11,7 +11,7 @@ const identity = [
     id: "books",
     number: "01",
     label: "Author",
-    title: "Ten Published Works",
+    title: "Ten Published Books",
     description: "Published writer exploring faith, identity, love, and the Black experience through powerful poetry and narrative.",
     link: "/books",
     cta: "View Books",

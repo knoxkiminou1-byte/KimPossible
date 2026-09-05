@@ -34,7 +34,7 @@
       "Silence",
       "Searching"
     ],
-    "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
+    "description": "A candid wrestling with prayer and presence\u2014when belief collides with unanswered questions.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/Our-Father-Where-Are-You/dp/B0FH2TPMT4",
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_Our_Father?id=PbFNEQAAQBAJ",
@@ -64,29 +64,6 @@
     }
   },
   {
-    "id": "black-boy-poems",
-    "title": "Black Boy Poems",
-    "subtitle": "Identity, Silence, Trauma, and Redemption",
-    "year": 2024,
-    "isbn": "9798267606912",
-    "cover": "/books/black-boy-poems-cover.jpg",
-    "themes": [
-      "Identity",
-      "Silence",
-      "Trauma",
-      "Redemption"
-    ],
-    "description": "A raw and honest collection tracing the interior life of a young Black man navigating silence, trauma, and the long road toward redemption.",
-    "buyLinks": {
-      "amazon": null,
-      "googleBooks": null,
-      "bookshop": null,
-      "bn": null
-    },
-    "samplePoems": [],
-    "featured": false
-  },
-  {
     "id": "hopeless-romantic",
     "title": "Hopeless Romantic",
     "subtitle": "Love, Loss, and Everything Between",
@@ -114,8 +91,8 @@
     "subtitle": "Breaking the Quiet, Finding Voice",
     "year": 2024,
     "isbn": "9798316735821",
-    "cover": "/covers/kiminou-knox-boys-raised-in-silence.png",
-    "pdf": "",
+    "cover": "/books/boys-raised-in-silence-cover.jpg",
+    "pdf": "/books/boys-raised-in-silence-sample.pdf",
     "themes": [
       "Silence",
       "Masculinity",
@@ -136,7 +113,7 @@
     "year": 2025,
     "isbn": "9798316591204",
     "cover": "/covers/kiminou-knox-adventures-kiminou-great-chua.png",
-    "pdf": "",
+    "pdf": "/books/adventures-kiminou-chua-sample.pdf",
     "themes": [
       "Friendship",
       "Growth",
@@ -151,13 +128,13 @@
     }
   },
   {
-    "id": "kiminous-world-of-imagination",
+    "id": "world-of-imagination",
     "title": "Kiminou's World of Imagination: The Basics",
     "subtitle": "The Basics",
     "year": 2026,
     "isbn": "",
     "cover": "/covers/kiminou-knox-world-of-imagination.png",
-    "pdf": "",
+    "pdf": "/books/world-of-imagination-sample.pdf",
     "themes": [
       "Imagination",
       "Children",
@@ -172,6 +149,23 @@
     }
   },
   {
+    "id": "our-father-father-where-are-you",
+    "title": "Our Father?",
+    "subtitle": "Father Where Are You",
+    "year": 2025,
+    "isbn": "",
+    "cover": "/covers/kiminou-knox-our-father-poetry.jpg",
+    "pdf": "",
+    "themes": ["Faith", "Fatherhood", "Searching"],
+    "description": "A search for faith, fatherhood, and presence when answers remain out of reach.",
+    "buyLinks": {
+      "amazon": "https://www.amazon.com/dp/B0F3VBVWCM",
+      "googleBooks": null,
+      "bookshop": null,
+      "bn": null
+    }
+  },
+  {
     "id": "why-did-you-ghost-me",
     "title": "WHY DID YOU GHOST ME",
     "subtitle": "Poems from a Ghosted Lover",
@@ -179,11 +173,7 @@
     "isbn": "",
     "cover": "/covers/why-did-you-ghost-me.jpg",
     "pdf": "",
-    "themes": [
-      "Love",
-      "Absence",
-      "Healing"
-    ],
+    "themes": ["Love", "Absence", "Healing"],
     "description": "Poems about abrupt absence, unanswered questions, heartbreak, and rebuilding after being ghosted.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/dp/B0H8XZ7N6K",
@@ -201,11 +191,7 @@
     "isbn": "",
     "cover": "/covers/7-16-74-an-ode-to-rashida.jpg",
     "pdf": "",
-    "themes": [
-      "Motherhood",
-      "Family",
-      "Legacy"
-    ],
+    "themes": ["Motherhood", "Family", "Legacy"],
     "description": "A full-length poetic tribute to Rashida Knox and the legacy of a mother whose love shaped a life.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/dp/B0H92Q6PM2",
@@ -213,6 +199,104 @@
       "bookshop": null,
       "bn": null
     },
+    "featured": true
+  },
+  {
+    "id": "spirit-solomon-remastered-edition",
+    "title": "The Spirit of Solomon: Remastered Edition",
+    "subtitle": "What Is Love to a Man Made to Destroy It",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 64,
+    "cover": "/covers/spirit-solomon-remastered-edition.jpg",
+    "themes": ["Black Love", "Masculinity", "Accountability"],
+    "description": "A sharper, deeper remaster of Kiminou Knox's contemporary poetry on desire, Black masculinity, Scripture, consent, loneliness, accountability, and the difficult distance between wisdom and change.",
+    "buyLinks": { "amazon": "https://www.amazon.com/dp/B0H9K2VXMS", "googleBooks": "https://play.google.com/store/books/details?id=7UP2EQAAQBAJ", "bookshop": null, "bn": null },
+    "featured": true
+  },
+  {
+    "id": "our-father-remastered-edition",
+    "title": "Our Father? Remastered Edition",
+    "subtitle": "A Poetic Journey Through Faith, Doubt, and Divine Silence",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 72,
+    "cover": "/covers/our-father-remastered-edition.jpg",
+    "themes": ["Faith", "Religious Trauma", "Divine Silence"],
+    "description": "Christian poetry for believers, doubters, and deconstructing readers wrestling with church trauma, Black history, unanswered prayer, grief, and the ache of wanting God while questioning the house built around His name.",
+    "buyLinks": { "amazon": null, "googleBooks": "https://play.google.com/store/books/details?id=DUT2EQAAQBAJ", "bookshop": null, "bn": null },
+    "featured": true
+  },
+  {
+    "id": "hopeless-romantic-remastered-edition",
+    "title": "Hopeless Romantic: Remastered Edition",
+    "subtitle": "Love Poems for the Ones Who Feel Everything",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 62,
+    "cover": "/covers/hopeless-romantic-remastered-edition.jpg",
+    "themes": ["Love", "Attachment", "Boundaries"],
+    "description": "Contemporary love poetry about situationships, anxious attachment, unrequited love, heartbreak, boundaries, self-worth, Black love, and the courage to remain tender after disappointment.",
+    "buyLinks": { "amazon": null, "googleBooks": null, "bookshop": null, "bn": null },
+    "featured": true
+  },
+  {
+    "id": "poems-from-a-black-boy-remastered-edition",
+    "title": "Poems From A Black Boy: Remastered Edition",
+    "subtitle": "A Poetry Collection on Black Boyhood, Identity, Faith, and Healing",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 84,
+    "cover": "/covers/poems-from-a-black-boy-remastered-edition.jpg",
+    "themes": ["Black Boyhood", "Identity", "Healing"],
+    "description": "A remastered poetry collection on Black boyhood, family, faith, school, masculinity, mental health, survival, adultification, self-definition, and the freedom found in telling the truth.",
+    "buyLinks": { "amazon": null, "googleBooks": null, "bookshop": null, "bn": null },
+    "featured": true
+  },
+  {
+    "id": "boys-raised-by-silence-remastered-edition",
+    "title": "Boys Raised by Silence: Remastered Edition",
+    "subtitle": "Poems for the Feelings We Learned to Carry",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 60,
+    "cover": "/covers/boys-raised-by-silence-remastered-edition.jpg",
+    "themes": ["Masculinity", "Emotional Silence", "Healing"],
+    "description": "Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+    "buyLinks": { "amazon": null, "googleBooks": null, "bookshop": null, "bn": null },
+    "featured": true
+  },
+  {
+    "id": "why-did-you-ghost-me-remastered-edition",
+    "title": "Why Did You Ghost Me? Remastered Edition",
+    "subtitle": "Poems from a Ghosted Lover",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 78,
+    "cover": "/covers/why-did-you-ghost-me-remastered-edition.jpg",
+    "themes": ["Ghosting", "Heartbreak", "Closure"],
+    "description": "Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
+    "buyLinks": { "amazon": null, "googleBooks": null, "bookshop": null, "bn": null },
+    "featured": true
+  },
+  {
+    "id": "my-father-remastered-edition",
+    "title": "My Father. Remastered Edition",
+    "subtitle": "Love Letters to God",
+    "year": 2026,
+    "datePublished": "2026-07-19",
+    "edition": "Remastered Edition",
+    "numberOfPages": 134,
+    "cover": "/covers/my-father-remastered-edition.jpg",
+    "themes": ["Fatherhood", "Faith", "Grace"],
+    "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
+    "buyLinks": { "amazon": null, "googleBooks": null, "bookshop": null, "bn": null },
     "featured": true
   }
 ]

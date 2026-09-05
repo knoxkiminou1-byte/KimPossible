@@ -50,3 +50,5 @@ Thumbs.db
 
 # Local Vercel project metadata
 .vercel/
+.vercel
+.env*

@@ -335,7 +335,7 @@ const baseRouteMeta = [
     loc: "/works",
     title: "Ten Published Books by Kiminou Knox",
     description:
-      "The official ten-book bibliography by Kiminou Knox, including poetry, faith-centered writing, love poems, Black boyhood, family, imagination, and legacy.",
+      "The official ten-book bibliography by Kiminou Knox: eight regular books, two cartoon books, and their cataloged editions.",
     image: "/kiminou-knox-social-share.png",
     keywords: ["Kiminou Knox books", "Kiminou Knox works", "poetry books", "Poems From A Black Boy"],
     sections: [

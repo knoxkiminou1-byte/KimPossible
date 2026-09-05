@@ -166,12 +166,12 @@ export default function BooksPage() {
     <>
       <Helmet>
         <title>Books by Kiminou Knox — Poetry Collections & Published Works</title>
-        <meta name="description" content="Explore the ten-book bibliography of Kiminou Knox, with original and remastered editions across poetry, faith, identity, love, Black boyhood, family, imagination, healing, and legacy." />
+        <meta name="description" content="Explore the official ten-book bibliography of Kiminou Knox—eight regular books and two cartoon books—with original and remastered editions." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/books" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Books by Kiminou Knox — Poetry Collections & Published Works" />
-        <meta property="og:description" content="The canonical ten-book bibliography of Kiminou Knox, plus verified original and remastered formats." />
+        <meta property="og:description" content="The official ten-book bibliography of Kiminou Knox: eight regular books, two cartoon books, and cataloged editions." />
         <meta property="og:url" content="https://www.kiminouknox.com/books" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -209,7 +209,7 @@ export default function BooksPage() {
           </Suspense>
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Ten Published Books · Original &amp; Remastered Editions</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Ten Published Books · Eight Regular · Two Cartoon</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
                 <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
                   <ScrambleText text="Published" className="block" delay={0.3} />
@@ -231,7 +231,7 @@ export default function BooksPage() {
         <section className="border-y border-white/6 bg-white/[0.015] py-14" aria-labelledby="canonical-bibliography-heading">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/45 mb-3">Official Bibliography</p>
-            <h2 id="canonical-bibliography-heading" className="font-serif text-3xl font-light text-white mb-8">The Canonical Ten Books</h2>
+            <h2 id="canonical-bibliography-heading" className="font-serif text-3xl font-light text-white mb-8">The Official Ten Books</h2>
             <ol className="grid gap-x-10 gap-y-3 sm:grid-cols-2">
               {CANONICAL_BOOK_TITLES.map((title, index) => (
                 <li key={title} className="flex gap-4 border-b border-white/6 pb-3 text-white/65">

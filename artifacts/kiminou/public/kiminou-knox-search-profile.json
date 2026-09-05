@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-07-26T03:33:35.723Z",
+  "dateModified": "2026-09-05T16:54:31.880Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
@@ -18,7 +18,7 @@
       "width": 2200,
       "height": 2933
     },
-    "description": "Official website of Kiminou Knox, a author and poet with ten published books",
+    "description": "Official website of Kiminou Knox, Bay Area raised, New Orleans based author and poet of ten published books, host of KimYaps, Director at AAFC, and creator of the Black Boy Lie universe.",
     "birthPlace": "Hayward, California",
     "homeLocation": "Oakland, California",
     "knowsAbout": [
