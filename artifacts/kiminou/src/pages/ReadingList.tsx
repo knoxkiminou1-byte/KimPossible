@@ -229,7 +229,7 @@ export default function ReadingList() {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kiminou Knox's Reading List — Books Worth Your Time" />
-        <meta property="og:description" content="Curated books on Black identity, faith, athletics, and craft from Kiminou Knox — ten-time published author and NCAA athlete." />
+        <meta property="og:description" content="Curated books on Black identity, faith, athletics, and craft from Kiminou Knox — author and poet with ten published books." />
         <meta property="og:url" content="https://www.kiminouknox.com/reading-list" />
         <meta property="og:image" content="https://www.kiminouknox.com/kiminou-knox-social-share.png" />
 
