@@ -26,7 +26,7 @@ const CHAPTERS = [
 const CREDENTIALS = [
   { label: "10×", sub: "Published Books" },
   { label: "Poet", sub: "Primary Craft" },
-  { label: "NCAA", sub: "Eligible Athlete" },
+  { label: "AAFC", sub: "Director" },
   { label: "AAFC", sub: "Director" },
   { label: "6'7\"", sub: "On The Court" },
   { label: "EPA", sub: "East Palo Alto" },
@@ -182,7 +182,7 @@ export default function Author() {
     <>
       <Helmet>
         <title>Kiminou Knox | Author Profile</title>
-        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder born in Hayward, raised in East Palo Alto whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
+        <meta name="description" content="Kiminou Knox is a poet, novelist, athlete, and builder Bay Area raised, New Orleans based whose work follows Black boys wrestling with God, grief, desire, and the courage to stay soft in a hard city." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/author" />
         <meta property="og:type" content="profile" />
@@ -195,7 +195,7 @@ export default function Author() {
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox | Author Profile" />
-        <meta name="twitter:description" content="Poet and ten-time published author. Bay Area born. Creator of the Black Boy Lie universe." />
+        <meta name="twitter:description" content="Poet and author with ten published books. Bay Area born. Creator of the Black Boy Lie universe." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify(
@@ -292,7 +292,7 @@ export default function Author() {
               className="font-serif text-xl md:text-2xl text-white/70 font-light max-w-2xl leading-relaxed"
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.7 }}>
-              Poet, novelist, athlete, and builder born in Hayward, raised in East Palo Alto. Creator of The Black Boy Lie universe.
+              Poet, novelist, athlete, and builder Bay Area raised, New Orleans based. Creator of The Black Boy Lie universe.
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-3 mt-8"
@@ -400,7 +400,7 @@ export default function Author() {
             <div className="grid md:grid-cols-2 gap-10">
               <Reveal>
                 <p className="text-white/60 text-lg leading-relaxed">
-                  Kiminou Knox is a ten-time published author whose books form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
+                  Kiminou Knox is a author with ten published books whose books form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
@@ -530,7 +530,7 @@ export default function Author() {
                     { label: "Weight", value: "235 lbs", pct: 78 },
                     { label: "Position", value: "F / C", pct: 85 },
                     { label: "Sports", value: "Basketball · Football", pct: 100 },
-                    { label: "Eligibility", value: "NCAA Registered", pct: 100 },
+                    ,
                   ].map((stat, i) => (
                     <StatBar key={i} label={stat.label} value={stat.value} pct={stat.pct} index={i} />
                   ))}
