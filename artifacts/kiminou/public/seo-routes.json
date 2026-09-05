@@ -3,7 +3,7 @@
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
-    "description": "Official website of Kiminou Knox, a ten-time published author, NCAA-registered athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area.",
+    "description": "Official website of Kiminou Knox, an author and poet with ten published books, speaker, KimYaps podcast host, and creative voice from the Bay Area.",
     "image": "https://www.kiminouknox.com/og-image.png",
     "personImage": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
     "sameAs": [
@@ -41,7 +41,7 @@
       "sections": [
         {
           "heading": "Kiminou Knox",
-          "text": "Official website of Kiminou Knox, a ten-time published author, NCAA-registered athlete, speaker, KimYaps podcast host, and creative voice from the Bay Area."
+          "text": "Official website of Kiminou Knox, an author and poet with ten published books, speaker, KimYaps podcast host, and creative voice from the Bay Area."
         },
         {
           "heading": "Featured Work",
@@ -137,7 +137,7 @@
       "sections": [
         {
           "heading": "Works",
-          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; The Adventures of Kiminou the Great and Chua the Wise; Kiminou’s World of Imagination: The Basics; Boys Raised by Silence; Black Boy Poems; Why Did You Ghost Me?; My Father. The bibliography contains ten distinct published books. Original and remastered formats are cataloged as editions of those books, not counted as additional titles."
+          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; The Adventures of Kiminou the Great and Chua the Wise; Kiminou’s World of Imagination: The Basics; Boys Raised in Silence; Black Boy Poems; WHY DID YOU GHOST ME; 7.16.74: An Ode to Rashida. The bibliography contains ten distinct published books. Remasters are editions, not separate titles."
         }
       ],
       "schemaType": "CollectionPage",
@@ -274,7 +274,7 @@
       "sections": [
         {
           "heading": "Published Books",
-          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; The Adventures of Kiminou the Great and Chua the Wise; Kiminou’s World of Imagination: The Basics; Boys Raised by Silence; Black Boy Poems; Why Did You Ghost Me?; My Father. The bibliography contains ten distinct published books. Original and remastered formats are cataloged as editions of those books, not counted as additional titles."
+          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; The Adventures of Kiminou the Great and Chua the Wise; Kiminou’s World of Imagination: The Basics; Boys Raised in Silence; Black Boy Poems; WHY DID YOU GHOST ME; 7.16.74: An Ode to Rashida. The bibliography contains ten distinct published books. Remasters are editions, not separate titles."
         }
       ],
       "schemaType": "CollectionPage",
@@ -2213,14 +2213,14 @@
     },
     {
       "loc": "/books/boys-raised-by-silence-remastered-edition",
-      "title": "Boys Raised by Silence: Remastered Edition - Kiminou Knox | Poetry Collection",
-      "description": "Boys Raised by Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+      "title": "Boys Raised in Silence: Remastered Edition - Kiminou Knox | Poetry Collection",
+      "description": "Boys Raised in Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
       "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
       "imageWidth": 1600,
       "imageHeight": 2560,
       "imageType": "image/jpeg",
       "keywords": [
-        "Boys Raised by Silence: Remastered Edition",
+        "Boys Raised in Silence: Remastered Edition",
         "Kiminou Knox book",
         "Masculinity",
         "Emotional Silence",
@@ -2229,7 +2229,7 @@
       ],
       "sections": [
         {
-          "heading": "Boys Raised by Silence: Remastered Edition",
+          "heading": "Boys Raised in Silence: Remastered Edition",
           "text": "Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing. Published 2026. ISBN available through retailers."
         },
         {
@@ -2242,7 +2242,7 @@
         "@context": "https://schema.org",
         "@type": "Book",
         "@id": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition#book",
-        "name": "Boys Raised by Silence: Remastered Edition",
+        "name": "Boys Raised in Silence: Remastered Edition",
         "alternateName": "Poems for the Feelings We Learned to Carry",
         "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
         "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
@@ -2269,14 +2269,14 @@
           "@type": "WebPage",
           "@id": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition#webpage",
           "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
-          "name": "Boys Raised by Silence: Remastered Edition - Kiminou Knox | Poetry Collection",
-          "description": "Boys Raised by Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
+          "name": "Boys Raised in Silence: Remastered Edition - Kiminou Knox | Poetry Collection",
+          "description": "Boys Raised in Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing.",
           "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
           "thumbnailUrl": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
           "primaryImageOfPage": {
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
-            "caption": "Boys Raised by Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing."
+            "caption": "Boys Raised in Silence: Remastered Edition by Kiminou Knox. Poems for the Feelings We Learned to Carry. Poetry about boys taught to swallow emotion, the men they become, the fathers and communities that shape them, and the work of turning inherited silence into honesty, care, and healing."
           },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
@@ -2291,7 +2291,7 @@
           "@context": "https://schema.org",
           "@type": "Book",
           "@id": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition#book",
-          "name": "Boys Raised by Silence: Remastered Edition",
+          "name": "Boys Raised in Silence: Remastered Edition",
           "alternateName": "Poems for the Feelings We Learned to Carry",
           "url": "https://www.kiminouknox.com/books/boys-raised-by-silence-remastered-edition",
           "image": "https://www.kiminouknox.com/covers/boys-raised-by-silence-remastered-edition.jpg",
@@ -2407,107 +2407,6 @@
           "bookEdition": "Remastered Edition",
           "numberOfPages": 78,
           "description": "Poems for anyone left with a read receipt, an unanswered message, or a relationship that disappeared without explanation—moving through heartbreak, anger, self-worth, closure, and healing.",
-          "genre": "Poetry",
-          "inLanguage": "en-US",
-          "sameAs": []
-        }
-      ]
-    },
-    {
-      "loc": "/books/my-father-remastered-edition",
-      "title": "My Father. Remastered Edition - Kiminou Knox | Poetry Collection",
-      "description": "My Father. Remastered Edition by Kiminou Knox. Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
-      "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-      "imageWidth": 1600,
-      "imageHeight": 2560,
-      "imageType": "image/jpeg",
-      "keywords": [
-        "My Father. Remastered Edition",
-        "Kiminou Knox book",
-        "Fatherhood",
-        "Faith",
-        "Grace",
-        "poetry collection"
-      ],
-      "sections": [
-        {
-          "heading": "My Father. Remastered Edition",
-          "text": "Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too. Published 2026. ISBN available through retailers."
-        },
-        {
-          "heading": "Themes",
-          "text": "Fatherhood, Faith, Grace"
-        }
-      ],
-      "schemaType": "WebPage",
-      "schema": {
-        "@context": "https://schema.org",
-        "@type": "Book",
-        "@id": "https://www.kiminouknox.com/books/my-father-remastered-edition#book",
-        "name": "My Father. Remastered Edition",
-        "alternateName": "Love Letters to God",
-        "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
-        "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-        "author": {
-          "@id": "https://www.kiminouknox.com/#person"
-        },
-        "publisher": {
-          "@type": "Person",
-          "name": "Kiminou Knox"
-        },
-        "datePublished": "2026-07-19",
-        "bookEdition": "Remastered Edition",
-        "numberOfPages": 134,
-        "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
-        "genre": "Poetry",
-        "inLanguage": "en-US",
-        "sameAs": []
-      },
-      "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
-      "lastmod": "2026-07-19",
-      "schemas": [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "@id": "https://www.kiminouknox.com/books/my-father-remastered-edition#webpage",
-          "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
-          "name": "My Father. Remastered Edition - Kiminou Knox | Poetry Collection",
-          "description": "My Father. Remastered Edition by Kiminou Knox. Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
-          "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-          "thumbnailUrl": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-            "caption": "My Father. Remastered Edition by Kiminou Knox. Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too."
-          },
-          "isPartOf": {
-            "@id": "https://www.kiminouknox.com/#website"
-          },
-          "about": {
-            "@id": "https://www.kiminouknox.com/#person"
-          },
-          "inLanguage": "en-US",
-          "dateModified": "2026-07-19"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Book",
-          "@id": "https://www.kiminouknox.com/books/my-father-remastered-edition#book",
-          "name": "My Father. Remastered Edition",
-          "alternateName": "Love Letters to God",
-          "url": "https://www.kiminouknox.com/books/my-father-remastered-edition",
-          "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-          "author": {
-            "@id": "https://www.kiminouknox.com/#person"
-          },
-          "publisher": {
-            "@type": "Person",
-            "name": "Kiminou Knox"
-          },
-          "datePublished": "2026-07-19",
-          "bookEdition": "Remastered Edition",
-          "numberOfPages": 134,
-          "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
           "genre": "Poetry",
           "inLanguage": "en-US",
           "sameAs": []
