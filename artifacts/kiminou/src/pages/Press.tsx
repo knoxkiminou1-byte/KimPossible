@@ -41,7 +41,7 @@ const verificationGroups = [
     label: "Basketball",
     items: [
       { name: "MaxPreps Basketball Profile", desc: "Public career profile and high school basketball record", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc" },
-      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, school, and NCAA eligibility signal", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, school, and varsity athletic record.", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
       { name: "Prep Hoops Profile", desc: "Basketball profile and player listing", url: "https://prephoops.com/player/kiminou-knox/" },
     ],
   },
@@ -352,7 +352,7 @@ Generated: ${new Date().toLocaleDateString("en-US", { month: "long", day: "numer
 
 ABOUT KIMINOU KNOX
 ──────────────────
-Kiminou Knox is an author, NCAA-registered athlete, entrepreneur, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
+Kiminou Knox is an author, poet, athlete, and creative from the San Francisco Bay Area. Of African American, Jamaican, and Congolese descent, Knox is the creator of the Black Boy Lie universe — a body of poetic work that explores identity, faith, silence, love, and the interior lives of young Black men.
 
 Son of Rashida Knox, grandson of Faye McNair Knox, great-grandson of Sarah Lee Williams and Elisha Bonepart McNair.
 
@@ -379,13 +379,13 @@ REMASTERED EDITIONS — 2026
 • Poems From A Black Boy: Remastered Edition
 • Boys Raised by Silence: Remastered Edition
 • Why Did You Ghost Me? Remastered Edition
-• My Father. Remastered Edition
+• 7.16.74: An Ode to Rashida
 
 ATHLETIC PROFILE
 ────────────────
 Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
 School: Cristo Rey De La Salle (formerly Ygnacio Valley)
-Status: NCAA Registered & Eligible
+Status: Varsity Athlete
 MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
 NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox
 
