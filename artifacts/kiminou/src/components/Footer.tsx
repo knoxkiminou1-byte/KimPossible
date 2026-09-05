@@ -46,7 +46,7 @@ export default function Footer() {
               Author · Athlete · Speaker · Podcast Host
             </p>
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
-              Bay Area poet and ten-time published author, NCAA-registered basketball athlete, youth leader, and host of the KimYaps podcast.
+              Bay Area poet and author and poet with ten published books, and host of the KimYaps podcast.
             </p>
           </motion.div>
 
