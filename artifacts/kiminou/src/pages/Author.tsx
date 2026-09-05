@@ -188,7 +188,7 @@ export default function Author() {
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/author" />
         <meta property="og:title" content="Kiminou Knox | Author Profile" />
-        <meta property="og:description" content="Ten-time published author writing across poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area born." />
+        <meta property="og:description" content="Author and poet with ten published books writing across poetry, children's storytelling, faith, love, grief, imagination, and legacy. Bay Area raised, New Orleans based." />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -666,7 +666,7 @@ export default function Author() {
           <section id="connect" className="py-20 border-t border-white/6 scroll-mt-16">
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. NCAA registered. Multi-sport.", link: "/sports", cta: "Athletic Profile" },
+                { icon: Trophy, title: "Athlete", desc: "Cristo Rey De La Salle forward. Multi-sport athlete.", link: "/sports", cta: "Athletic Profile" },
                 { icon: Mic, title: "Speaker", desc: "Talks on discipline, Black boy voice, and creative work that lasts.", link: "/speaking", cta: "Speaking Info" },
                 { icon: Users, title: "Director", desc: "Director of Artists & Athletes For Change. Youth development.", link: "/contact", cta: "Connect" },
               ].map((item, i) => (
