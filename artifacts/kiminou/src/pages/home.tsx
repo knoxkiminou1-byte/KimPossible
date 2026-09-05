@@ -51,7 +51,7 @@ const homeFaq = [
   {
     question: "How many books has Kiminou Knox published?",
     answer:
-      `Kiminou Knox is a ten-time published author whose books span poetry, faith, identity, imagination, family, love, and healing. ${CATALOG_EDITION_NOTE} Each catalog page includes a high-resolution cover, description, structured book data, and verified retailer links as they become available.`,
+      `Kiminou Knox is an author and poet with ten published books spanning poetry, faith, identity, imagination, family, love, and healing. ${CATALOG_EDITION_NOTE} Each catalog page includes a high-resolution cover, description, structured book data, and verified retailer links as they become available.`,
   },
   {
     question: "What does he speak about?",
