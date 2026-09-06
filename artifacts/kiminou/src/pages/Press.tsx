@@ -41,7 +41,7 @@ const verificationGroups = [
     label: "Basketball",
     items: [
       { name: "MaxPreps Basketball Profile", desc: "Public career profile and high school basketball record", url: "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc" },
-      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, school, and NCAA eligibility signal", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
+      { name: "NCSA Recruiting Profile", desc: "Basketball recruiting profile with measurements, position, and school", url: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
       { name: "Prep Hoops Profile", desc: "Basketball profile and player listing", url: "https://prephoops.com/player/kiminou-knox/" },
     ],
   },
@@ -377,7 +377,6 @@ REMASTERED EDITIONS — 2026
 • Poems From A Black Boy: Remastered Edition
 • Boys Raised by Silence: Remastered Edition
 • Why Did You Ghost Me? Remastered Edition
-• My Father. Remastered Edition
 
 ATHLETIC PROFILE
 ────────────────
