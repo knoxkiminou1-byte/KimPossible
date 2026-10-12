@@ -218,6 +218,17 @@ export default function Author() {
             height: KIMINOU_IMAGES.officialHeadshot.height,
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "@id": `${SITE_URL}/author#profilepage`,
+            url: `${SITE_URL}/author`,
+            name: "Kiminou Knox | Author Profile",
+            about: { "@id": `${SITE_URL}/#person` },
+            mainEntity: { "@id": `${SITE_URL}/#person` },
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
