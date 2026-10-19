@@ -501,7 +501,7 @@ export default function Hero({ paperMode = false }: HeroProps) {
               <MagneticElement strength={0.3} radius={100}>
                 <motion.a
                   href="/books"
-                  className="group relative luxury-button px-12 py-4 bg-white text-black font-semibold uppercase tracking-[0.18em] text-sm overflow-hidden"
+                  className="group relative inline-block luxury-button px-12 py-4 bg-white text-black font-semibold uppercase tracking-[0.18em] text-sm overflow-hidden"
                   whileHover={{ scale: 1.04, boxShadow: "0 20px 60px rgba(255,255,255,0.22)" }}
                   whileTap={{ scale: 0.97 }}
                   data-testid="button-read-work"
@@ -518,7 +518,7 @@ export default function Hero({ paperMode = false }: HeroProps) {
               <MagneticElement strength={0.3} radius={100}>
                 <motion.a
                   href="/contact"
-                  className="luxury-button px-12 py-4 border border-white/50 text-white font-semibold uppercase tracking-[0.18em] text-sm hover:bg-white hover:text-black transition-all duration-400 backdrop-blur-sm"
+                  className="inline-block luxury-button px-12 py-4 border border-white/50 text-white font-semibold uppercase tracking-[0.18em] text-sm hover:bg-white hover:text-black transition-all duration-400 backdrop-blur-sm"
                   whileHover={{ scale: 1.04, borderColor: "rgba(255,255,255,1)", boxShadow: "0 20px 50px rgba(255,255,255,0.12)" }}
                   whileTap={{ scale: 0.97 }}
                   data-testid="button-work-with-me"
