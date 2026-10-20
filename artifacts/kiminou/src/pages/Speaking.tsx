@@ -390,7 +390,8 @@ function RadioStation() {
                   <p className="text-xs text-white/53 leading-relaxed mt-4">
                     Also on{" "}
                     <a href={PODCAST_APPLE} target="_blank" rel="noopener noreferrer" className="text-amber-400/72 hover:text-amber-300 transition-colors">Apple Podcasts</a>
-                    . New episodes monthly.
+, or{" "}
+                    <a href="/podcast" className="text-amber-400/72 hover:text-amber-300 transition-colors">browse every episode</a>.
                   </p>
                   <div className="mt-5 border border-amber-400/15 bg-amber-400/4 p-4 text-xs text-white/58 leading-relaxed">
                     <span className="text-amber-400/75 font-semibold uppercase tracking-wider text-[10px]">Note — </span>

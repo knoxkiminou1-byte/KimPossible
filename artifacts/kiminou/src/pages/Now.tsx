@@ -21,9 +21,9 @@ const NOW_ITEMS: NowItem[] = [
   {
     icon: BookOpen,
     label: "Latest Book",
-    title: "Hopeless Romantic",
-    detail: "The eighth published collection — an intimate, emotionally charged set on longing, closure, and staying tender. Currently one of the most-read regular books.",
-    link: { label: "Read the book", href: "/books/hopeless-romantic" },
+    title: "7.16.74: An Ode to Rashida",
+    detail: "The newest of ten published books, released July 16, 2026 in Kindle and paperback: a full-length poetic tribute to his mother.",
+    link: { label: "Read the book", href: "/books/7-16-74-an-ode-to-rashida" },
   },
   {
     icon: PenLine,
@@ -37,7 +37,7 @@ const NOW_ITEMS: NowItem[] = [
     label: "Podcast",
     title: "KimYaps",
     detail: "Honest conversations about pain, purpose, and grace — new episodes on Apple Podcasts, Spotify, and streaming live on KimYaps FM.",
-    link: { label: "Listen now", href: "/speaking" },
+    link: { label: "All episodes", href: "/podcast" },
   },
   {
     icon: Trophy,

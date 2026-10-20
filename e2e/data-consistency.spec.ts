@@ -43,3 +43,35 @@ test("seo-routes.json has route metadata for every canonical book", () => {
     expect(routeLocs.has(`/books/${book.id}`), `seo-routes.json missing /books/${book.id}`).toBe(true);
   }
 });
+
+function isValidIsbn13(isbn: string) {
+  if (!/^97[89]\d{10}$/.test(isbn)) return false;
+  const digits = [...isbn].map(Number);
+  const sum = digits.slice(0, 12).reduce((total, d, i) => total + d * (i % 2 === 0 ? 1 : 3), 0);
+  return (10 - (sum % 10)) % 10 === digits[12];
+}
+
+test("every published ISBN is a valid ISBN-13", () => {
+  const canonical = readJson("src/content/books.json") as { id: string; isbn?: string }[];
+  for (const book of canonical) {
+    if (!book.isbn) continue;
+    expect(isValidIsbn13(book.isbn), `${book.id} has invalid ISBN ${book.isbn}`).toBe(true);
+  }
+});
+
+test("no generated route description contains an empty sentence", () => {
+  const seoRoutes = readJson("public/seo-routes.json");
+  for (const route of seoRoutes.routes as { loc: string; description: string }[]) {
+    expect(route.description, `${route.loc} description`).not.toMatch(/\.\s+\./);
+  }
+});
+
+test("podcast hub is in the sitemap and has cached episodes", () => {
+  const sitemap = fs.readFileSync(path.join(kiminouRoot, "public", "sitemap.xml"), "utf8");
+  expect(sitemap).toContain("https://www.kiminouknox.com/podcast</loc>");
+  const cache = readJson("public/podcast-episodes.json");
+  expect(cache.episodes.length).toBeGreaterThan(0);
+  for (const episode of cache.episodes as { title: string; audioUrl: string }[]) {
+    expect(episode.audioUrl, episode.title).toMatch(/^https:\/\//);
+  }
+});

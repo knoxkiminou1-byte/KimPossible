@@ -30,6 +30,16 @@ const mediumCachePath = path.join(publicRoot, "medium-posts.json");
 const entityProfilePath = path.join(publicRoot, "kiminou-knox-search-profile.json");
 const routeManifestPath = path.join(publicRoot, "seo-routes.json");
 const robotsPath = path.join(publicRoot, "robots.txt");
+const podcastCachePath = path.join(publicRoot, "podcast-episodes.json");
+const PODCAST_FEED_URL = "https://api.riverside.fm/hosting/Qs2CJYe0.rss";
+const PODCAST_DESCRIPTION =
+  "KimYaps is where Kiminou Knox talks through faith, Black boyhood, masculinity, relationships, culture, grief, discipline, purpose, love, and the parts of life people usually struggle to say plainly.";
+const PODCAST_LISTEN_LINKS = [
+  "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
+  "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
+  "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps",
+  "https://www.youtube.com/@KiminouKnoxOfficial",
+];
 
 const now = new Date();
 const today = now.toISOString().slice(0, 10);
@@ -254,6 +264,74 @@ async function fetchMediumPosts() {
   }
 }
 
+function tagAttr(xml, tagName, attr) {
+  const tag = xml.match(new RegExp(`<${tagName}\\s[^>]*>`, "i"));
+  const value = tag?.[0].match(new RegExp(`\\s${attr}=["']([^"']*)["']`, "i"));
+  return value ? decodeEntities(value[1]) : "";
+}
+
+// "00:41:43" or "2503" (seconds) -> "PT41M43S"
+function isoDuration(value) {
+  const parts = String(value || "").split(":").map(Number);
+  if (!parts.length || parts.some(Number.isNaN)) return "";
+  const seconds = parts.reduce((total, part) => total * 60 + part, 0);
+  if (!seconds) return "";
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const sec = seconds % 60;
+  return `PT${h ? `${h}H` : ""}${m ? `${m}M` : ""}${sec ? `${sec}S` : ""}`;
+}
+
+function parsePodcastFeed(xml) {
+  return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)]
+    .map((match) => {
+      const itemXml = match[1];
+      return {
+        title: tagValue(itemXml, "title"),
+        guid: tagValue(itemXml, "guid"),
+        link: tagValue(itemXml, "link"),
+        datePublished: dateOnly(tagValue(itemXml, "pubDate"), ""),
+        duration: isoDuration(tagValue(itemXml, "itunes:duration")),
+        description: excerpt(tagValue(itemXml, "description") || tagValue(itemXml, "itunes:summary"), 420),
+        audioUrl: tagAttr(itemXml, "enclosure", "url"),
+        audioType: tagAttr(itemXml, "enclosure", "type") || "audio/mpeg",
+        // Only transcripts the host actually publishes in the feed; nothing is generated here.
+        transcriptUrl: tagAttr(itemXml, "podcast:transcript", "url"),
+        transcriptType: tagAttr(itemXml, "podcast:transcript", "type"),
+      };
+    })
+    .filter((episode) => episode.title && episode.audioUrl)
+    .sort((a, b) => (b.datePublished || "").localeCompare(a.datePublished || ""));
+}
+
+function readPodcastCache() {
+  try {
+    const cached = JSON.parse(fs.readFileSync(podcastCachePath, "utf8"));
+    return Array.isArray(cached.episodes) ? cached.episodes : [];
+  } catch {
+    return [];
+  }
+}
+
+async function fetchPodcastEpisodes() {
+  try {
+    const response = await fetch(PODCAST_FEED_URL, {
+      headers: { "user-agent": "KiminouKnoxSEOGenerator/1.0 (+https://www.kiminouknox.com)" },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!response.ok) throw new Error(`Podcast RSS returned ${response.status}`);
+    const episodes = parsePodcastFeed(await response.text());
+    if (episodes.length === 0) throw new Error("Podcast RSS returned no episodes");
+    return episodes;
+  } catch (error) {
+    console.warn(`[seo] Podcast RSS unavailable, using cache: ${error.message}`);
+    return readPodcastCache();
+  }
+}
+
+const podcastEpisodes = await fetchPodcastEpisodes();
+const latestEpisodeDate = podcastEpisodes[0]?.datePublished || today;
+
 const publishedPosts = blogData.posts
   .filter((post) => post.isPublished)
   .sort((a, b) => new Date(b.publishedAt ?? 0).getTime() - new Date(a.publishedAt ?? 0).getTime());
@@ -262,6 +340,7 @@ const routes = [
   { loc: "/", changefreq: "weekly", priority: "1.0", lastmod: today },
   { loc: "/about", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/works", changefreq: "monthly", priority: "0.9", lastmod: today },
+  { loc: "/podcast", changefreq: "weekly", priority: "0.85", lastmod: latestEpisodeDate },
   { loc: "/author", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/legacy", changefreq: "monthly", priority: "0.7", lastmod: today },
   { loc: "/books", changefreq: "weekly", priority: "0.95", lastmod: today },
@@ -299,11 +378,11 @@ for (const post of publishedPosts) {
 const baseRouteMeta = [
   {
     loc: "/",
-    title: "Kiminou Knox | Athlete, Author, Speaker",
+    title: "Kiminou Knox | Author, Poet, and Host of KimYaps",
     description:
-      "Official home of Kiminou Knox: author, athlete, speaker, and creative voice from the Bay Area. Explore books, essays, sports, and booking info.",
+      "Official home of Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, host of the KimYaps podcast, and director at Artists and Athletes for Change.",
     image: KIMINOU_PHOTOS.officialHeadshot.loc,
-    keywords: ["Kiminou Knox", "author", "athlete", "speaker", "Bay Area", "poetry"],
+    keywords: ["Kiminou Knox", "author", "poet", "KimYaps", "Bay Area", "New Orleans", "poetry"],
     sections: [
       {
         heading: "Kiminou Knox",
@@ -320,13 +399,13 @@ const baseRouteMeta = [
     loc: "/about",
     title: "About - Kiminou Knox",
     description:
-      "About Kiminou Knox, Bay Area author, athlete, speaker, and creative voice writing across faith, identity, love, and discipline.",
+      "About Kiminou Knox, a Bay Area raised, New Orleans based author and poet writing across faith, Black boyhood, identity, love, and discipline.",
     image: KIMINOU_PHOTOS.outdoorPortrait.loc,
     keywords: ["Kiminou Knox biography", "Kiminou Knox about", "Bay Area author", "athlete author"],
     sections: [
       {
         heading: "About Kiminou Knox",
-        text: "Kiminou Knox is an author, athlete, speaker, and creative voice from the Bay Area.",
+        text: authorProfile.shortBio,
       },
     ],
     schemaType: "AboutPage",
@@ -335,7 +414,7 @@ const baseRouteMeta = [
     loc: "/works",
     title: "Ten Published Books by Kiminou Knox",
     description:
-      "The official ten-book bibliography by Kiminou Knox: eight regular books, two cartoon books, and their cataloged editions.",
+      "The official ten-book bibliography by Kiminou Knox: eight poetry collections and two children's books, with their cataloged editions.",
     image: "/kiminou-knox-social-share.png",
     keywords: ["Kiminou Knox books", "Kiminou Knox works", "poetry books", "Poems From A Black Boy"],
     sections: [
@@ -420,6 +499,43 @@ const baseRouteMeta = [
       },
     ],
     schemaType: "WebPage",
+  },
+  {
+    loc: "/podcast",
+    title: "KimYaps Podcast by Kiminou Knox | All Episodes",
+    description: `${PODCAST_DESCRIPTION} Listen to every episode on Apple Podcasts, Spotify, Amazon Music, and YouTube.`,
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
+    keywords: ["KimYaps", "KimYaps podcast", "Kiminou Knox podcast", "faith podcast", "Black boyhood podcast"],
+    sections: [
+      { heading: "KimYaps", text: PODCAST_DESCRIPTION },
+      ...podcastEpisodes.slice(0, 15).map((episode) => ({
+        heading: episode.title,
+        text: `${episode.datePublished}. ${episode.description}`,
+      })),
+    ],
+    schemaType: "CollectionPage",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "@id": `${SITE_URL}/#podcast`,
+      name: "KimYaps",
+      description: PODCAST_DESCRIPTION,
+      url: absoluteUrl("/podcast"),
+      webFeed: PODCAST_FEED_URL,
+      author: { "@id": `${SITE_URL}/#person` },
+      inLanguage: "en",
+      sameAs: PODCAST_LISTEN_LINKS,
+      episode: podcastEpisodes.slice(0, 15).map((episode) => ({
+        "@type": "PodcastEpisode",
+        name: episode.title,
+        ...(episode.datePublished ? { datePublished: episode.datePublished } : {}),
+        ...(episode.duration ? { timeRequired: episode.duration } : {}),
+        description: episode.description,
+        ...(episode.link ? { url: episode.link } : {}),
+        associatedMedia: { "@type": "MediaObject", contentUrl: episode.audioUrl, encodingFormat: episode.audioType },
+        partOfSeries: { "@id": `${SITE_URL}/#podcast` },
+      })),
+    },
   },
   {
     loc: "/contact",
@@ -558,17 +674,21 @@ const baseRouteMeta = [
   },
 ];
 
+// Empty subtitles used to leak through as "Title by Kiminou Knox. . Description".
+const subtitleSentence = (book) => (book.subtitle ? `${book.subtitle}. ` : "");
+const isChildrensBook = (book) => book.genre === "Children's literature";
+
 const bookRouteMeta = books.map((book) => ({
   loc: `/books/${book.id}`,
-  title: `${book.title} - Kiminou Knox | Poetry Collection`,
-  description: compactText(`${book.title} by Kiminou Knox. ${book.subtitle}. ${book.description}`, 300),
+  title: `${book.title} by Kiminou Knox | ${isChildrensBook(book) ? "Children's Book" : "Poetry Collection"}`,
+  description: compactText(`${book.title} by Kiminou Knox. ${subtitleSentence(book)}${book.description}`, 300),
   image: book.cover || "/kiminou-knox-social-share.png",
   ...(book.edition ? { imageWidth: 1600, imageHeight: 2560, imageType: "image/jpeg" } : {}),
-  keywords: [book.title, "Kiminou Knox book", ...(book.themes || []), "poetry collection"],
+  keywords: [book.title, "Kiminou Knox book", ...(book.themes || []), isChildrensBook(book) ? "children's book" : "poetry collection"],
   sections: [
     {
       heading: book.title,
-      text: `${book.subtitle}. ${book.description} Published ${book.year}. ISBN ${book.isbn || "available through retailers"}.`,
+      text: `${subtitleSentence(book)}${book.description} Published ${book.year}.${book.isbn ? ` ISBN ${book.isbn}.` : ""}`,
     },
     {
       heading: "Themes",
@@ -589,17 +709,20 @@ const bookRouteMeta = books.map((book) => ({
     "@type": "Book",
     "@id": `${absoluteUrl(`/books/${book.id}`)}#book`,
     name: book.title,
-    alternateName: book.subtitle,
+    ...(book.subtitle ? { alternateName: book.subtitle } : {}),
     url: absoluteUrl(`/books/${book.id}`),
     image: absoluteUrl(book.cover || "/kiminou-knox-social-share.png"),
     author: { "@id": `${SITE_URL}/#person` },
+    ...(book.contributors?.length
+      ? { contributor: book.contributors.map(({ name }) => ({ "@type": "Person", name })) }
+      : {}),
     publisher: { "@type": "Person", name: SITE_NAME },
-    datePublished: book.datePublished,
-    isbn: book.isbn,
+    datePublished: book.datePublished || String(book.year),
+    ...(book.isbn ? { isbn: book.isbn } : {}),
     ...(book.edition ? { bookEdition: book.edition } : {}),
     ...(book.numberOfPages ? { numberOfPages: book.numberOfPages } : {}),
     description: book.description,
-    genre: "Poetry",
+    genre: book.genre || "Poetry",
     inLanguage: "en-US",
     sameAs: Object.values(book.buyLinks || {}).filter(Boolean),
   },
@@ -698,7 +821,7 @@ addRouteImages("/", [
   {
     loc: "/og-image.png",
     title: "Kiminou Knox official website image",
-    caption: "Kiminou Knox author, athlete, and speaker official website preview.",
+    caption: "Kiminou Knox, author and poet, official website preview.",
   },
 ]);
 
@@ -876,7 +999,7 @@ const entityProfile = {
     },
     description: SITE_DESCRIPTION,
     birthPlace: "Hayward, California",
-    homeLocation: "Oakland, California",
+    homeLocation: { "@type": "Place", name: "New Orleans, Louisiana" },
     knowsAbout: [
       "Poetry",
       "Basketball",
@@ -896,6 +1019,11 @@ fs.writeFileSync(imageSitemapPath, imageSitemapXml, "utf8");
 fs.writeFileSync(rssPath, rssXml, "utf8");
 fs.writeFileSync(atomPath, atomXml, "utf8");
 fs.writeFileSync(mediumCachePath, `${JSON.stringify(mediumJson, null, 2)}\n`, "utf8");
+fs.writeFileSync(
+  podcastCachePath,
+  `${JSON.stringify({ source: PODCAST_FEED_URL, generatedAt: now.toISOString(), episodes: podcastEpisodes }, null, 2)}\n`,
+  "utf8",
+);
 fs.writeFileSync(entityProfilePath, `${JSON.stringify(entityProfile, null, 2)}\n`, "utf8");
 fs.writeFileSync(
   routeManifestPath,

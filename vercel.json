@@ -33,23 +33,13 @@
       "permanent": false
     },
     {
-      "source": "/podcast",
-      "destination": "/speaking",
-      "permanent": true
-    },
-    {
-      "source": "/podcast/",
-      "destination": "/speaking",
-      "permanent": true
-    },
-    {
       "source": "/kimyaps",
-      "destination": "/speaking",
+      "destination": "/podcast",
       "permanent": true
     },
     {
       "source": "/kimyaps/",
-      "destination": "/speaking",
+      "destination": "/podcast",
       "permanent": true
     },
     {
@@ -64,12 +54,22 @@
     },
     {
       "source": "/blog/seven-books-before-twenty-why-i-couldnt-stop",
-      "destination": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "destination": "/blog/ten-books-before-twenty-why-i-couldnt-stop",
       "permanent": true
     },
     {
       "source": "/blog/seven-books-before-twenty-why-i-couldnt-stop/",
-      "destination": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "destination": "/blog/ten-books-before-twenty-why-i-couldnt-stop",
+      "permanent": true
+    },
+    {
+      "source": "/blog/eight-books-before-twenty-why-i-couldnt-stop",
+      "destination": "/blog/ten-books-before-twenty-why-i-couldnt-stop",
+      "permanent": true
+    },
+    {
+      "source": "/blog/eight-books-before-twenty-why-i-couldnt-stop/",
+      "destination": "/blog/ten-books-before-twenty-why-i-couldnt-stop",
       "permanent": true
     }
   ],
