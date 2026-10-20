@@ -85,7 +85,7 @@ export default function SectionDotNav() {
                   exit={{ opacity: 0, x: 8 }}
                   transition={{ duration: 0.18 }}
                 >
-                  <span className="px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] bg-black/90 border border-white/10 text-white/60 backdrop-blur-sm">
+                  <span className="px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] bg-black/90 border border-white/10 text-white/65 backdrop-blur-sm">
                     {s.label}
                   </span>
                 </motion.div>

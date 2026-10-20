@@ -123,16 +123,16 @@ export default function FreeChapterCapture() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-4 h-4 text-amber-400/60" />
-            <span className="text-xs uppercase tracking-[0.4em] text-amber-400/60 font-medium">Free Download</span>
-            <Sparkles className="w-4 h-4 text-amber-400/60" />
+            <Sparkles className="w-4 h-4 text-amber-400/72" />
+            <span className="text-xs uppercase tracking-[0.4em] text-amber-400/72 font-medium">Free Download</span>
+            <Sparkles className="w-4 h-4 text-amber-400/72" />
           </div>
 
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-4">
             Read a Free Chapter
           </h2>
           <div className="w-10 h-px bg-amber-400/50 mx-auto mb-6" />
-          <p className="text-white/45 text-base leading-relaxed mb-10">
+          <p className="text-white/60 text-base leading-relaxed mb-10">
             Get three poems from <em className="text-amber-200/70">The Spirit of Solomon</em> — free, delivered instantly. No spam. Ever.
           </p>
 
@@ -146,7 +146,7 @@ export default function FreeChapterCapture() {
                 className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
               >
                 <div className="relative flex-1">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/25" />
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/53" />
                   <input
                     type="email"
                     required
@@ -190,10 +190,10 @@ export default function FreeChapterCapture() {
                   <Check className="w-5 h-5 text-amber-400" />
                 </div>
                 <p className="text-amber-200/80 text-sm uppercase tracking-[0.2em]">Your chapter is downloading</p>
-                <p className="text-white/30 text-xs">Check your downloads folder for the file.</p>
+                <p className="text-white/55 text-xs">Check your downloads folder for the file.</p>
                 <button
                   onClick={() => downloadChapter(email)}
-                  className="text-xs text-amber-400/50 hover:text-amber-400 transition-colors uppercase tracking-[0.2em] underline underline-offset-4"
+                  className="text-xs text-amber-400/69 hover:text-amber-400 transition-colors uppercase tracking-[0.2em] underline underline-offset-4"
                 >
                   Download again
                 </button>
@@ -201,7 +201,7 @@ export default function FreeChapterCapture() {
             )}
           </AnimatePresence>
 
-          <p className="mt-6 text-white/20 text-xs">
+          <p className="mt-6 text-white/52 text-xs">
             By downloading, you agree to receive occasional updates from Kiminou Knox.
             Unsubscribe anytime.
           </p>

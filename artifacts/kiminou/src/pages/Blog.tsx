@@ -102,7 +102,7 @@ function MediumPostCard({ post, index }: { post: MediumPost; index: number }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 border border-white/10 px-2 py-1 rounded-sm">
                 <svg viewBox="0 0 24 24" className="w-3 h-3 fill-white/60"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-                <span className="text-[10px] text-white/50 uppercase tracking-widest">Medium</span>
+                <span className="text-[10px] text-white/62 uppercase tracking-widest">Medium</span>
               </div>
             </div>
           )}
@@ -110,9 +110,9 @@ function MediumPostCard({ post, index }: { post: MediumPost; index: number }) {
           <div className="p-7 flex flex-col gap-4 flex-1">
             <div className="flex items-center justify-between">
               {tag && (
-                <span className="text-xs uppercase tracking-[0.2em] text-amber-400/60 font-medium truncate max-w-[70%]">{tag}</span>
+                <span className="text-xs uppercase tracking-[0.2em] text-amber-400/72 font-medium truncate max-w-[70%]">{tag}</span>
               )}
-              <span className="flex items-center gap-1.5 text-xs text-white/20 uppercase tracking-[0.15em] ml-auto">
+              <span className="flex items-center gap-1.5 text-xs text-white/52 uppercase tracking-[0.15em] ml-auto">
                 <Clock className="w-3 h-3" />
                 {mins} min
               </span>
@@ -122,15 +122,15 @@ function MediumPostCard({ post, index }: { post: MediumPost; index: number }) {
               {post.title}
             </h3>
 
-            <p className="text-sm text-white/35 leading-relaxed line-clamp-2 flex-1">{excerpt}</p>
+            <p className="text-sm text-white/57 leading-relaxed line-clamp-2 flex-1">{excerpt}</p>
 
             <div className="flex items-center justify-between pt-3 border-t border-white/6 mt-auto">
-              <span className="flex items-center gap-1.5 text-xs text-white/20 uppercase tracking-[0.15em]">
+              <span className="flex items-center gap-1.5 text-xs text-white/52 uppercase tracking-[0.15em]">
                 <Calendar className="w-3 h-3" />
                 {post.pubDate ? format(new Date(post.pubDate), "MMM d, yyyy") : ""}
               </span>
               <motion.span
-                className="text-xs uppercase tracking-[0.18em] text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300 flex items-center gap-1.5"
+                className="text-xs uppercase tracking-[0.18em] text-amber-400/69 group-hover:text-amber-400 transition-colors duration-300 flex items-center gap-1.5"
                 whileHover={{ x: 3 }}
               >
                 Read on Medium <ExternalLink className="w-3 h-3" />
@@ -161,7 +161,7 @@ function MediumSection() {
         >
           <div className="flex items-end justify-between flex-wrap gap-4">
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium flex items-center gap-2">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3 font-medium flex items-center gap-2">
                 <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-amber-400/60"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
                 From Medium
               </p>
@@ -195,7 +195,7 @@ function MediumSection() {
           </div>
         ) : (
           <div className="text-center py-20">
-            <p className="font-serif text-xl text-white/25">No essays found</p>
+            <p className="font-serif text-xl text-white/53">No essays found</p>
           </div>
         )}
       </div>
@@ -235,7 +235,7 @@ function ExternalWritingSection() {
     <section className="py-16 border-t border-white/6">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3">Across the Web</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 mb-3">Across the Web</p>
           <h2 className="font-serif text-3xl md:text-5xl font-light leading-tight">Where the writing lives</h2>
           <div className="w-8 h-px bg-amber-400/50 mt-4" />
         </div>
@@ -249,11 +249,11 @@ function ExternalWritingSection() {
               className="group border border-white/8 bg-white/[0.015] p-6 hover:border-amber-400/25 hover:bg-white/[0.04] transition-all duration-300"
             >
               <div className="flex items-center justify-between gap-4 mb-5">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-amber-400/60">{link.label}</span>
-                <ExternalLink className="w-4 h-4 text-white/25 group-hover:text-amber-300 transition-colors" />
+                <span className="text-[10px] uppercase tracking-[0.25em] text-amber-400/72">{link.label}</span>
+                <ExternalLink className="w-4 h-4 text-white/53 group-hover:text-amber-300 transition-colors" />
               </div>
               <h3 className="font-serif text-2xl text-white/85 mb-3">{link.title}</h3>
-              <p className="text-sm text-white/40 leading-relaxed">{link.text}</p>
+              <p className="text-sm text-white/58 leading-relaxed">{link.text}</p>
             </a>
           ))}
         </div>
@@ -286,7 +286,7 @@ function FeaturedPost({ post, categories }: { post: BlogPost; categories: BlogCa
         <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}>
           {cat && (
-            <span className="inline-block text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-5 border border-amber-400/20 px-3 py-1">
+            <span className="inline-block text-xs uppercase tracking-[0.35em] text-amber-400/72 mb-5 border border-amber-400/20 px-3 py-1">
               {cat.name}
             </span>
           )}
@@ -294,10 +294,10 @@ function FeaturedPost({ post, categories }: { post: BlogPost; categories: BlogCa
             {post.title}
           </h2>
           {post.excerpt && (
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-8">{post.excerpt}</p>
+            <p className="text-white/63 text-lg leading-relaxed max-w-2xl mb-8">{post.excerpt}</p>
           )}
           <div className="flex items-center gap-6 flex-wrap">
-            <div className="flex items-center gap-4 text-white/30 text-xs">
+            <div className="flex items-center gap-4 text-white/55 text-xs">
               <span className="flex items-center gap-1.5 uppercase tracking-[0.2em]">
                 <Calendar className="w-3 h-3" />
                 {post.publishedAt && format(new Date(post.publishedAt), "MMMM d, yyyy")}
@@ -350,9 +350,9 @@ function PostCard({ post, categories, index }: { post: BlogPost; categories: Blo
           <div className="p-7 flex flex-col gap-4 flex-1">
             <div className="flex items-center justify-between">
               {cat && (
-                <span className="text-xs uppercase tracking-[0.2em] text-amber-400/60 font-medium">{cat.name}</span>
+                <span className="text-xs uppercase tracking-[0.2em] text-amber-400/72 font-medium">{cat.name}</span>
               )}
-              <span className="flex items-center gap-1.5 text-xs text-white/20 uppercase tracking-[0.15em]">
+              <span className="flex items-center gap-1.5 text-xs text-white/52 uppercase tracking-[0.15em]">
                 <Clock className="w-3 h-3" />
                 {minutes} min
               </span>
@@ -363,15 +363,15 @@ function PostCard({ post, categories, index }: { post: BlogPost; categories: Blo
             </h3>
 
             {post.excerpt && (
-              <p className="text-sm text-white/35 leading-relaxed line-clamp-2 flex-1">{post.excerpt}</p>
+              <p className="text-sm text-white/57 leading-relaxed line-clamp-2 flex-1">{post.excerpt}</p>
             )}
 
             <div className="flex items-center justify-between pt-3 border-t border-white/6 mt-auto">
-              <span className="flex items-center gap-1.5 text-xs text-white/20 uppercase tracking-[0.15em]">
+              <span className="flex items-center gap-1.5 text-xs text-white/52 uppercase tracking-[0.15em]">
                 <Calendar className="w-3 h-3" />
                 {post.publishedAt && format(new Date(post.publishedAt), "MMM d, yyyy")}
               </span>
-              <motion.span className="text-xs uppercase tracking-[0.18em] text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300 flex items-center gap-1.5"
+              <motion.span className="text-xs uppercase tracking-[0.18em] text-amber-400/69 group-hover:text-amber-400 transition-colors duration-300 flex items-center gap-1.5"
                 whileHover={{ x: 3 }}>
                 Read <ArrowRight className="w-3 h-3" />
               </motion.span>
@@ -474,13 +474,13 @@ export default function Blog() {
             <motion.div initial={{ opacity: 0, y: 24 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Writing</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Writing</p>
               <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6">
                 Author's<br />
                 <span className="italic text-amber-200/90">Journal</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Public writing on faith, discipline, love, healing, Black boy life, creative voice, and youth-centered storytelling. Essays on Medium and this official site.
               </p>
             </motion.div>
@@ -501,7 +501,7 @@ export default function Blog() {
                   className={`px-4 py-2 text-xs uppercase tracking-[0.15em] border transition-all duration-300 ${
                     selectedCategory === "all"
                       ? "border-amber-400/60 bg-amber-400/10 text-amber-300"
-                      : "border-white/10 text-white/40 hover:border-white/25 hover:text-white/70"
+                      : "border-white/10 text-white/58 hover:border-white/25 hover:text-white/70"
                   }`}>
                   All
                 </button>
@@ -510,14 +510,14 @@ export default function Blog() {
                     className={`px-4 py-2 text-xs uppercase tracking-[0.15em] border transition-all duration-300 ${
                       selectedCategory === c.id
                         ? "border-amber-400/60 bg-amber-400/10 text-amber-300"
-                        : "border-white/10 text-white/40 hover:border-white/25 hover:text-white/70"
+                        : "border-white/10 text-white/58 hover:border-white/25 hover:text-white/70"
                     }`}>
                     {c.name}
                   </button>
                 ))}
               </div>
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/25" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/53" />
                 <input type="text" placeholder="Search articles..."
                   value={searchTerm} onChange={e => setSearchTerm(e.target.value)}
                   className="pl-9 pr-4 py-2 bg-white/[0.04] border border-white/10 text-sm text-white placeholder-white/25 focus:outline-none focus:border-amber-400/40 transition-colors duration-300 w-56"
@@ -539,7 +539,7 @@ export default function Blog() {
               <>
                 {featuredPost && !searchTerm && selectedCategory === "all" && (
                   <div className="mb-8">
-                    <p className="text-xs uppercase tracking-[0.35em] text-white/20 mb-6">More from the Journal</p>
+                    <p className="text-xs uppercase tracking-[0.35em] text-white/52 mb-6">More from the Journal</p>
                   </div>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

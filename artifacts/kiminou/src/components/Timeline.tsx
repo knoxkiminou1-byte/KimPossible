@@ -347,7 +347,7 @@ export default function Timeline() {
                       }`}></div>
 
                       {/* Tap/Click Indicator for Mobile */}
-                      <div className="md:hidden absolute top-4 left-4 text-xs text-muted-foreground/60 font-medium">
+                      <div className="md:hidden absolute top-4 left-4 text-xs text-muted-foreground font-medium">
                         {isExpanded ? 'Tap to close' : 'Tap to expand'}
                       </div>
                     </div>

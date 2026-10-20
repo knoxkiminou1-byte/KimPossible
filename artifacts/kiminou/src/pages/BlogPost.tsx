@@ -17,7 +17,7 @@ function ShareButton({ label, onClick, children }: { label: string; onClick: () 
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/40 hover:border-amber-400/40 hover:text-amber-300 transition-colors duration-300"
+      className="w-9 h-9 flex items-center justify-center border border-white/10 text-white/58 hover:border-amber-400/40 hover:text-amber-300 transition-colors duration-300"
     >
       {children}
     </button>
@@ -39,10 +39,10 @@ function BlogPostPage() {
             <meta name="robots" content="noindex,nofollow" />
           </Helmet>
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">404</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-6">404</p>
             <h1 className="font-serif text-5xl font-light text-white mb-6">This one has moved on</h1>
-            <p className="text-white/40 mb-8">The rest of the writing is still waiting for you.</p>
-            <Link href="/blog" className="inline-flex items-center gap-2 text-amber-400/60 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em]">
+            <p className="text-white/58 mb-8">The rest of the writing is still waiting for you.</p>
+            <Link href="/blog" className="inline-flex items-center gap-2 text-amber-400/72 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em]">
               <ArrowLeft className="w-3 h-3" /> Explore the blog
             </Link>
           </div>
@@ -147,7 +147,7 @@ function BlogPostPage() {
           <div className="max-w-3xl mx-auto px-6 lg:px-10">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/30 hover:text-amber-400/60 transition-colors duration-300 group"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/55 hover:text-amber-400/72 transition-colors duration-300 group"
             >
               <ArrowLeft className="w-3 h-3 group-hover:-translate-x-0.5 transition-transform" />
               All Articles
@@ -159,11 +159,11 @@ function BlogPostPage() {
           <header className="mb-12">
             <div className="flex items-center gap-4 mb-6 flex-wrap">
               {category && (
-                <span className="text-xs uppercase tracking-[0.3em] text-amber-400/60 border border-amber-400/20 px-3 py-1">
+                <span className="text-xs uppercase tracking-[0.3em] text-amber-400/72 border border-amber-400/20 px-3 py-1">
                   {category.name}
                 </span>
               )}
-              <div className="flex items-center text-xs text-white/30 gap-4 uppercase tracking-[0.15em]">
+              <div className="flex items-center text-xs text-white/55 gap-4 uppercase tracking-[0.15em]">
                 {post.publishedAt && (
                   <span className="flex items-center gap-1.5">
                     <Calendar className="w-3 h-3" />
@@ -182,7 +182,7 @@ function BlogPostPage() {
             </h1>
 
             {post.excerpt && (
-              <p className="font-serif text-xl text-white/50 italic leading-relaxed mb-8">
+              <p className="font-serif text-xl text-white/62 italic leading-relaxed mb-8">
                 {post.excerpt}
               </p>
             )}
@@ -190,7 +190,7 @@ function BlogPostPage() {
             {post.tags && post.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-8">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 border border-white/10 text-xs text-white/35 uppercase tracking-[0.1em]">
+                  <span key={tag} className="px-3 py-1 border border-white/10 text-xs text-white/57 uppercase tracking-[0.1em]">
                     #{tag}
                   </span>
                 ))}
@@ -198,7 +198,7 @@ function BlogPostPage() {
             )}
 
             <div className="flex items-center gap-4 mb-8">
-              <span className="text-xs uppercase tracking-[0.2em] text-white/25">Share</span>
+              <span className="text-xs uppercase tracking-[0.2em] text-white/53">Share</span>
               <div className="flex gap-2">
                 <ShareButton label="Share on Twitter" onClick={() => handleShare("twitter")}>
                   <Twitter className="w-4 h-4" />
@@ -231,14 +231,14 @@ function BlogPostPage() {
               </div>
               <div>
                 <h3 className="font-serif text-xl text-white mb-2">Kiminou Knox</h3>
-                <p className="text-white/40 text-sm leading-relaxed mb-4">
+                <p className="text-white/58 text-sm leading-relaxed mb-4">
                   Bay Area raised, New Orleans based author and poet. Ten published books. He writes what others leave out.
                 </p>
                 <div className="flex gap-4 text-xs uppercase tracking-[0.2em]">
-                  <Link href="/author" className="text-amber-400/60 hover:text-amber-300 transition-colors">
+                  <Link href="/author" className="text-amber-400/72 hover:text-amber-300 transition-colors">
                     View Profile
                   </Link>
-                  <Link href="/blog" className="text-amber-400/60 hover:text-amber-300 transition-colors">
+                  <Link href="/blog" className="text-amber-400/72 hover:text-amber-300 transition-colors">
                     More Articles
                   </Link>
                 </div>
@@ -248,17 +248,17 @@ function BlogPostPage() {
 
           {otherRelatedPosts.length > 0 && (
             <section>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">Related Articles</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-6">Related Articles</p>
               <div className="grid sm:grid-cols-3 gap-5">
                 {otherRelatedPosts.map((relatedPost) => (
                   <Link key={relatedPost.id} href={`/blog/${relatedPost.slug}`} className="group block border border-white/8 bg-white/[0.015] hover:border-amber-400/25 hover:bg-white/[0.04] transition-all duration-300 p-5">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-amber-400/50">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-amber-400/69">
                       {categories.find(c => c.id === relatedPost.categoryId)?.name || "Uncategorized"}
                     </span>
                     <h3 className="font-serif text-base text-white/85 mt-2 mb-2 leading-snug line-clamp-2 group-hover:text-amber-100 transition-colors">
                       {relatedPost.title}
                     </h3>
-                    <p className="text-xs text-white/35 line-clamp-2 leading-relaxed">{relatedPost.excerpt}</p>
+                    <p className="text-xs text-white/57 line-clamp-2 leading-relaxed">{relatedPost.excerpt}</p>
                   </Link>
                 ))}
               </div>

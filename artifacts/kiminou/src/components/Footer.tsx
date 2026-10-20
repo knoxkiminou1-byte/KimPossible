@@ -40,12 +40,12 @@ export default function Footer() {
               Kiminou Knox
             </h2>
             <p
-              className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-6"
+              className="text-xs uppercase tracking-[0.3em] text-amber-400/72 mb-6"
               data-testid="footer-subtitle"
             >
               Author · Athlete · Speaker · Podcast Host
             </p>
-            <p className="text-sm text-white/35 leading-relaxed max-w-xs">
+            <p className="text-sm text-white/57 leading-relaxed max-w-xs">
               Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC.
             </p>
           </motion.div>
@@ -55,14 +55,14 @@ export default function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <p className="text-xs uppercase tracking-[0.3em] text-white/25 mb-6 font-medium">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/53 mb-6 font-medium">
               Navigate
             </p>
             <ul className="space-y-3">
               {links.map((l) => (
                 <li key={`${l.href}-${l.label}`}>
                   <Link href={l.href}>
-                    <span className="text-sm text-white/45 hover:text-amber-300 transition-colors duration-300 cursor-pointer">
+                    <span className="text-sm text-white/60 hover:text-amber-300 transition-colors duration-300 cursor-pointer">
                       {l.label}
                     </span>
                   </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <p className="text-xs uppercase tracking-[0.3em] text-white/25 mb-6 font-medium">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/53 mb-6 font-medium">
               Connect
             </p>
             <ul className="space-y-3 mb-8">
@@ -86,7 +86,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-white/45 hover:text-amber-300 transition-colors duration-300"
+                    className="text-sm text-white/60 hover:text-amber-300 transition-colors duration-300"
                   >
                     {s.label}
                   </a>
@@ -122,12 +122,12 @@ export default function Footer() {
           className="border-t border-white/6 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <p
-            className="text-xs text-white/20"
+            className="text-xs text-white/52"
             data-testid="footer-copyright"
           >
             © 2026 Kiminou Knox. All rights reserved.
           </p>
-          <p className="text-xs text-white/15 tracking-widest uppercase">
+          <p className="text-xs text-white/50 tracking-widest uppercase">
             Bay Area · Class of 2025
           </p>
         </motion.div>

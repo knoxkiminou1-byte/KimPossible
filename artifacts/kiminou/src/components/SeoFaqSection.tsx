@@ -19,9 +19,9 @@ export default function SeoFaqSection({ title, intro, items, className = "" }: S
           transition={{ duration: 0.7 }}
           className="max-w-3xl mb-10"
         >
-          <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">FAQ</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4 font-medium">FAQ</p>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-4">{title}</h2>
-          {intro && <p className="text-white/45 leading-relaxed max-w-2xl">{intro}</p>}
+          {intro && <p className="text-white/60 leading-relaxed max-w-2xl">{intro}</p>}
         </motion.div>
 
         <div className="grid gap-4">
@@ -40,7 +40,7 @@ export default function SeoFaqSection({ title, intro, items, className = "" }: S
                   Expand
                 </span>
               </summary>
-              <p className="mt-4 text-white/50 leading-relaxed max-w-3xl">{item.answer}</p>
+              <p className="mt-4 text-white/62 leading-relaxed max-w-3xl">{item.answer}</p>
             </motion.details>
           ))}
         </div>

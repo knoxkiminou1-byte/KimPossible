@@ -62,7 +62,7 @@ export default function TypewriterConfessional() {
           <motion.div
             style={{ opacity: useTransform(scrollYProgress, [0, 0.05, 0.95, 1], [0, 1, 1, 0]) }}
           >
-            <p className="text-[9px] uppercase tracking-[0.55em] text-amber-400/40 mb-8 font-medium">Confessional</p>
+            <p className="text-[9px] uppercase tracking-[0.55em] text-amber-400/66 mb-8 font-medium">Confessional</p>
 
             <div className="space-y-4 mb-8">
               {LINES.map((line, i) => (
@@ -83,7 +83,7 @@ export default function TypewriterConfessional() {
                 className="mt-10 flex items-center gap-4"
               >
                 <div className="w-10 h-px bg-amber-400/40" />
-                <span className="text-[9px] uppercase tracking-[0.4em] text-amber-400/50 font-medium">
+                <span className="text-[9px] uppercase tracking-[0.4em] text-amber-400/69 font-medium">
                   Kiminou Knox · Bay Area · 2025
                 </span>
               </motion.div>

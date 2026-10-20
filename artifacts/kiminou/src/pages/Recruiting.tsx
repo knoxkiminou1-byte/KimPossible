@@ -95,15 +95,15 @@ export default function Recruiting() {
           </div>
           <div className="max-w-5xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <Link href="/sports" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/30 hover:text-amber-400/60 transition-colors duration-300 mb-8">
+              <Link href="/sports" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/55 hover:text-amber-400/72 transition-colors duration-300 mb-8">
                 <ArrowLeft className="w-3 h-3" /> Athletic Profile
               </Link>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Recruiting Packet</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Recruiting Packet</p>
               <h1 className="font-serif text-5xl md:text-7xl font-light leading-tight mb-6">
                 Kiminou <span className="italic text-amber-200/90">Knox</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Forward / Center · Cristo Rey De La Salle · Multi-sport athlete. Measurables, verified profiles, and direct contact for coaches and recruiters.
               </p>
             </motion.div>
@@ -114,16 +114,16 @@ export default function Recruiting() {
         <section className="pb-20 border-t border-white/6">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 pt-16">
             <Reveal className="mb-10">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-2">Measurables</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-2">Measurables</p>
               <div className="w-8 h-px bg-amber-400/30 mt-4" />
             </Reveal>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/6">
               {MEASURABLES.map((m, i) => (
                 <Reveal key={m.label} delay={i * 0.06}>
                   <div className="bg-black p-6 h-full">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-white/25 mb-2">{m.label}</p>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-white/53 mb-2">{m.label}</p>
                     <p className="font-serif text-2xl text-white/90">{m.value}</p>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-amber-400/40 mt-2">Source: {m.source}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-amber-400/66 mt-2">Source: {m.source}</p>
                   </div>
                 </Reveal>
               ))}
@@ -135,19 +135,19 @@ export default function Recruiting() {
         <section className="pb-20 border-t border-white/6">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 pt-16">
             <Reveal className="mb-10">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-2">Highlights</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-2">Highlights</p>
               <div className="w-8 h-px bg-amber-400/30 mt-4" />
             </Reveal>
             <div className="space-y-0">
               {HIGHLIGHTS.map((h, i) => (
                 <Reveal key={h.title} delay={i * 0.05}>
                   <div className="flex items-start gap-6 py-6 border-t border-white/8 first:border-t-0">
-                    <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/50 w-16 flex-shrink-0 pt-1">
+                    <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/69 w-16 flex-shrink-0 pt-1">
                       <Trophy className="w-3.5 h-3.5" /> {h.year}
                     </span>
                     <div>
                       <h3 className="font-serif text-xl text-white/90 mb-1">{h.title}</h3>
-                      <p className="text-sm text-white/40 leading-relaxed">{h.desc}</p>
+                      <p className="text-sm text-white/58 leading-relaxed">{h.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -160,10 +160,10 @@ export default function Recruiting() {
         <section className="pb-20 border-t border-white/6">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 pt-16">
             <Reveal>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-2">Film</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-2">Film</p>
               <div className="w-8 h-px bg-amber-400/30 mt-4 mb-8" />
               <div className="border border-white/8 bg-white/[0.015] p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <p className="text-sm text-white/40 leading-relaxed max-w-xl">
+                <p className="text-sm text-white/58 leading-relaxed max-w-xl">
                   Game film and cut-ups available on request. For the fastest response, include your program and what you're looking for in the message below.
                 </p>
                 <a
@@ -183,7 +183,7 @@ export default function Recruiting() {
         <section className="pb-20 border-t border-white/6">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 pt-16">
             <Reveal className="mb-10">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-2">Verified Profiles</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-2">Verified Profiles</p>
               <div className="w-8 h-px bg-amber-400/30 mt-4" />
             </Reveal>
             <div className="grid md:grid-cols-3 gap-4">
@@ -197,9 +197,9 @@ export default function Recruiting() {
                   >
                     <div className="flex items-start justify-between gap-3 mb-3">
                       <h3 className="font-serif text-lg text-white/90 group-hover:text-amber-100 transition-colors duration-300">{p.name}</h3>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-white/20 group-hover:text-amber-400/60 transition-colors duration-300 flex-shrink-0 mt-1" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-white/52 group-hover:text-amber-400/72 transition-colors duration-300 flex-shrink-0 mt-1" />
                     </div>
-                    <p className="text-xs text-white/35 leading-relaxed">{p.desc}</p>
+                    <p className="text-xs text-white/57 leading-relaxed">{p.desc}</p>
                   </a>
                 </Reveal>
               ))}
@@ -217,18 +217,18 @@ export default function Recruiting() {
                 className="group flex items-center justify-between gap-4 border border-amber-400/15 bg-amber-400/[0.02] p-8 hover:border-amber-400/35 hover:bg-amber-400/[0.05] transition-all duration-300"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-2">Download</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-amber-400/72 mb-2">Download</p>
                   <h3 className="font-serif text-xl text-white">Recruiting Packet PDF</h3>
                 </div>
-                <Download className="w-5 h-5 text-amber-400/60 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0" />
+                <Download className="w-5 h-5 text-amber-400/72 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0" />
               </a>
               <Link href="/contact?type=basketball">
                 <div className="group flex items-center justify-between gap-4 border border-white/8 bg-white/[0.015] p-8 hover:border-amber-400/25 hover:bg-white/[0.03] transition-all duration-300 cursor-pointer h-full">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/30 mb-2">Coaches & Recruiters</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/55 mb-2">Coaches & Recruiters</p>
                     <h3 className="font-serif text-xl text-white">Contact Directly</h3>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-white/25 group-hover:text-amber-400/60 transition-colors duration-300 flex-shrink-0" />
+                  <ArrowUpRight className="w-5 h-5 text-white/53 group-hover:text-amber-400/72 transition-colors duration-300 flex-shrink-0" />
                 </div>
               </Link>
             </Reveal>

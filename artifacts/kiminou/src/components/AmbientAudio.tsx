@@ -146,7 +146,7 @@ export default function AmbientAudio({ theme = "default" }: AmbientAudioProps) {
           />
         ))}
       </div>
-      <span className="text-[9px] uppercase tracking-[0.3em] text-white/40 group-hover:text-amber-400/70 transition-colors">
+      <span className="text-[9px] uppercase tracking-[0.3em] text-white/58 group-hover:text-amber-400/75 transition-colors">
         {playing ? "Sound" : initialized ? "Sound" : "Sound"}
       </span>
       <AnimatePresence>

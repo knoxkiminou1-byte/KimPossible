@@ -105,24 +105,24 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
       </div>
 
       <div className="flex flex-col flex-1">
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-400/60 mb-2">
+        <p className="text-xs uppercase tracking-[0.2em] text-amber-400/72 mb-2">
           {book.year}{book.edition ? ` · ${book.edition}` : ""}{book.isbn ? ` · ISBN ${book.isbn}` : ""}
         </p>
         <h3 className="font-serif text-xl font-light text-white mb-1 group-hover:text-amber-100 transition-colors duration-300">
           {book.title}
         </h3>
-        <p className="text-sm text-white/40 mb-3 italic">{book.subtitle}</p>
-        <p className="text-sm text-white/40 leading-relaxed line-clamp-3 mb-4 flex-1">{book.description}</p>
+        <p className="text-sm text-white/58 mb-3 italic">{book.subtitle}</p>
+        <p className="text-sm text-white/58 leading-relaxed line-clamp-3 mb-4 flex-1">{book.description}</p>
         <div className="flex flex-wrap gap-1.5 mb-5">
           {themes.map(t => (
-            <span key={t} className="px-2.5 py-1 border border-white/10 text-xs text-white/30 rounded-full tracking-wide">{t}</span>
+            <span key={t} className="px-2.5 py-1 border border-white/10 text-xs text-white/55 rounded-full tracking-wide">{t}</span>
           ))}
         </div>
         <div className="flex flex-col gap-2 mt-auto">
           <div className="grid grid-cols-2 gap-2">
             {samplePoems.length > 0 && (
               <button onClick={() => onSample(book)}
-                className="py-2.5 border border-white/15 text-xs uppercase tracking-[0.15em] text-white/50 hover:border-amber-400/40 hover:text-amber-300 transition-all duration-300">
+                className="py-2.5 border border-white/15 text-xs uppercase tracking-[0.15em] text-white/62 hover:border-amber-400/40 hover:text-amber-300 transition-all duration-300">
                 Read Sample
               </button>
             )}
@@ -135,7 +135,7 @@ function BookCard({ book, index, onSample, onOpenBook }: { book: Book; index: nu
           {(buyLinks.amazon || buyLinks.googleBooks) && (
             <a href={buyLinks.amazon || buyLinks.googleBooks || ""}
               target="_blank" rel="noopener noreferrer external"
-              className="flex items-center justify-center gap-2 py-2.5 border border-white/8 text-xs uppercase tracking-[0.15em] text-white/35 hover:border-amber-400/30 hover:text-amber-400/70 transition-all duration-300">
+              className="flex items-center justify-center gap-2 py-2.5 border border-white/8 text-xs uppercase tracking-[0.15em] text-white/57 hover:border-amber-400/30 hover:text-amber-400/75 transition-all duration-300">
               <ExternalLink className="w-3.5 h-3.5" /> Buy Now
             </a>
           )}
@@ -209,7 +209,7 @@ export default function BooksPage() {
           </Suspense>
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Ten Published Books · Eight Regular · Two Cartoon</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Ten Published Books · Eight Regular · Two Cartoon</p>
               <GoldUnmask delay={0.1} className="inline-block mb-6">
                 <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight">
                   <ScrambleText text="Published" className="block" delay={0.3} />
@@ -217,10 +217,10 @@ export default function BooksPage() {
                 </h1>
               </GoldUnmask>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Real covers, real links, sample poems from each collection: faith, identity, love, and the Black experience.
               </p>
-              <div className="mt-8 inline-flex items-center gap-3 border border-amber-400/20 bg-amber-400/4 px-5 py-3 text-sm text-white/50">
+              <div className="mt-8 inline-flex items-center gap-3 border border-amber-400/20 bg-amber-400/4 px-5 py-3 text-sm text-white/62">
                 <span className="text-amber-400 font-semibold">145</span>
                 <span>Google Play ratings on <span className="text-white/70 italic">Hopeless Romantic</span> — Kiminou's most-read collection</span>
               </div>
@@ -230,17 +230,17 @@ export default function BooksPage() {
 
         <section className="border-y border-white/6 bg-white/[0.015] py-14" aria-labelledby="canonical-bibliography-heading">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/45 mb-3">Official Bibliography</p>
+            <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/68 mb-3">Official Bibliography</p>
             <h2 id="canonical-bibliography-heading" className="font-serif text-3xl font-light text-white mb-8">The Official Ten Books</h2>
             <ol className="grid gap-x-10 gap-y-3 sm:grid-cols-2">
               {CANONICAL_BOOK_TITLES.map((title, index) => (
                 <li key={title} className="flex gap-4 border-b border-white/6 pb-3 text-white/65">
-                  <span className="font-serif text-amber-400/45">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="font-serif text-amber-400/68">{String(index + 1).padStart(2, "0")}</span>
                   <span>{title}</span>
                 </li>
               ))}
             </ol>
-            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/40">{CATALOG_EDITION_NOTE}</p>
+            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/58">{CATALOG_EDITION_NOTE}</p>
           </div>
         </section>
 
@@ -256,8 +256,8 @@ export default function BooksPage() {
               ) : (
                 <>
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-4">
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">The Collection</p>
-                    <p className="text-xs text-white/25">Hover a book to preview · Click to open</p>
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/66 mb-2">The Collection</p>
+                    <p className="text-xs text-white/53">Hover a book to preview · Click to open</p>
                   </motion.div>
                   <BookShelf3D books={books} onBookClick={(book) => setOpenBook(book)} />
                 </>
@@ -276,7 +276,7 @@ export default function BooksPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20">
             <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.6 }} className="mb-12">
-              <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/40 mb-2">All Books</p>
+              <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/66 mb-2">All Books</p>
               <h2 className="font-serif text-3xl font-light text-white">Browse the Collection</h2>
               <div className="w-8 h-px bg-amber-400/30 mt-4" />
             </motion.div>
@@ -300,9 +300,9 @@ export default function BooksPage() {
             <Link href="/books/universe">
               <div className="group relative overflow-hidden border border-amber-400/15 bg-amber-400/[0.02] p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-amber-400/35 hover:bg-amber-400/[0.05] transition-all duration-500 cursor-pointer">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3">Six Worlds</p>
+                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3">Six Worlds</p>
                   <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-2">Explore the Book Universe Map</h2>
-                  <p className="text-white/40 text-sm max-w-xl">Faith, wisdom, boyhood, voice, love, and imagination — see how every book connects.</p>
+                  <p className="text-white/58 text-sm max-w-xl">Faith, wisdom, boyhood, voice, love, and imagination — see how every book connects.</p>
                 </div>
                 <span className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
                   View Map <ExternalLink className="w-3.5 h-3.5" />

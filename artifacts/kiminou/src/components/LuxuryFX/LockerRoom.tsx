@@ -60,7 +60,7 @@ export default function LockerRoom() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-12 flex items-center gap-4">
           <div className="h-px w-10 bg-amber-400/30" />
-          <p className="text-[10px] uppercase tracking-[0.4em] text-white/20">The Locker Room</p>
+          <p className="text-[10px] uppercase tracking-[0.4em] text-white/52">The Locker Room</p>
         </div>
 
         {/* Desktop 3D room */}
@@ -90,15 +90,15 @@ export default function LockerRoom() {
                     <path d="M30 10 L50 20 L70 10 L80 30 L65 40 V100 H35 V40 L20 30 Z" fill="none" stroke="rgba(245,158,11,0.5)" strokeWidth="2" />
                     <text x="50" y="70" textAnchor="middle" fill="rgba(245,158,11,0.9)" fontSize="16" fontFamily="serif">#1</text>
                   </svg>
-                  <p className="mt-1 text-center font-serif text-xs text-white/60">KNOX #1</p>
-                  <p className="mt-2 text-center text-[8px] uppercase tracking-[0.15em] text-amber-400/50">
+                  <p className="mt-1 text-center font-serif text-xs text-white/65">KNOX #1</p>
+                  <p className="mt-2 text-center text-[8px] uppercase tracking-[0.15em] text-amber-400/69">
                     MVP · All-Conference · Scholar-Athlete
                   </p>
                   <div className="mt-2 space-y-1">
                     {NOTES.map((n, i) => (
                       <p
                         key={i}
-                        className="bg-amber-100/5 px-1 py-0.5 text-center text-[8px] text-white/45"
+                        className="bg-amber-100/5 px-1 py-0.5 text-center text-[8px] text-white/60"
                         style={{ transform: `rotate(${n.r}deg)`, fontFamily: "cursive" }}
                       >
                         {n.text}
@@ -108,7 +108,7 @@ export default function LockerRoom() {
                   <button
                     type="button"
                     onClick={() => cassetteMotif(ctxRef)}
-                    className="mx-auto mt-2 block border border-amber-400/30 px-2 py-1 text-[8px] uppercase tracking-[0.15em] text-amber-400/70 hover:bg-amber-400 hover:text-black"
+                    className="mx-auto mt-2 block border border-amber-400/30 px-2 py-1 text-[8px] uppercase tracking-[0.15em] text-amber-400/75 hover:bg-amber-400 hover:text-black"
                   >
                     ▤ Play Tape
                   </button>
@@ -128,7 +128,7 @@ export default function LockerRoom() {
                   }}
                 >
                   <span className="absolute right-3 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full border-2 border-white/20" />
-                  <span className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[8px] uppercase tracking-[0.2em] text-white/30">
+                  <span className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[8px] uppercase tracking-[0.2em] text-white/55">
                     {open ? "" : "Click to open"}
                   </span>
                 </button>
@@ -183,12 +183,12 @@ export default function LockerRoom() {
         <div className="grid gap-4 md:hidden">
           <div className="border border-amber-400/30 bg-[#0d0f12] p-6">
             <p className="mb-1 font-serif text-lg text-white/70">KNOX #1</p>
-            <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-amber-400/50">
+            <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-amber-400/69">
               MVP · All-Conference · Scholar-Athlete
             </p>
             <div className="space-y-2">
               {NOTES.map((n, i) => (
-                <p key={i} className="bg-amber-100/5 px-3 py-2 text-sm text-white/50" style={{ fontFamily: "cursive" }}>
+                <p key={i} className="bg-amber-100/5 px-3 py-2 text-sm text-white/62" style={{ fontFamily: "cursive" }}>
                   {n.text}
                 </p>
               ))}
@@ -196,14 +196,14 @@ export default function LockerRoom() {
             <button
               type="button"
               onClick={() => cassetteMotif(ctxRef)}
-              className="mt-4 border border-amber-400/30 px-3 py-1.5 text-[10px] uppercase tracking-[0.15em] text-amber-400/70"
+              className="mt-4 border border-amber-400/30 px-3 py-1.5 text-[10px] uppercase tracking-[0.15em] text-amber-400/75"
             >
               ▤ Play Tape
             </button>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {SIDE_LOCKERS.map((l, i) => (
-              <div key={i} className="border border-white/10 p-4 text-[9px] uppercase tracking-[0.15em] text-white/35">
+              <div key={i} className="border border-white/10 p-4 text-[9px] uppercase tracking-[0.15em] text-white/57">
                 {l.text}
               </div>
             ))}

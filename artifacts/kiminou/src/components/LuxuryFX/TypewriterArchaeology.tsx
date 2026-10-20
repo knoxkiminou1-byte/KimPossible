@@ -136,7 +136,7 @@ export default function TypewriterArchaeology() {
           {KEYCAPS.map((k, i) => (
             <span
               key={i}
-              className="inline-flex h-8 w-8 items-center justify-center border border-white/10 bg-white/5 font-mono text-xs text-white/40"
+              className="inline-flex h-8 w-8 items-center justify-center border border-white/10 bg-white/5 font-mono text-xs text-white/58"
             >
               {k}
             </span>

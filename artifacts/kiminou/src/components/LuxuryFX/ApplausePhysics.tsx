@@ -167,10 +167,10 @@ export default function ApplausePhysics() {
         <button
           type="button"
           onClick={() => setCollapsed((c) => !c)}
-          className="flex w-full items-center justify-between px-4 py-2.5 text-[10px] uppercase tracking-[0.25em] text-amber-400/70"
+          className="flex w-full items-center justify-between px-4 py-2.5 text-[10px] uppercase tracking-[0.25em] text-amber-400/75"
         >
           <span>{tier}</span>
-          <span className="text-white/30">{collapsed ? "↑" : "↓"}</span>
+          <span className="text-white/55">{collapsed ? "↑" : "↓"}</span>
         </button>
         {!collapsed && (
           <div className="px-4 pb-3">
@@ -181,7 +181,7 @@ export default function ApplausePhysics() {
                 transition={{ duration: 0.4 }}
               />
             </div>
-            <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-white/25">
+            <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-white/53">
               Engagement {score}%
             </p>
           </div>

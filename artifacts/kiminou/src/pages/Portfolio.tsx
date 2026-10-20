@@ -130,19 +130,19 @@ function CaseCard({ item, index }: { item: typeof caseStudies[0]; index: number 
       <button className="text-left p-7 flex-1" onClick={() => setOpen(o => !o)}>
         <div className="flex items-start justify-between gap-4 mb-5">
           <div className="w-10 h-10 rounded-full border border-amber-400/20 flex items-center justify-center flex-shrink-0 group-hover:border-amber-400/40 transition-colors duration-300">
-            <Icon className="w-4 h-4 text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300" />
+            <Icon className="w-4 h-4 text-amber-400/69 group-hover:text-amber-400 transition-colors duration-300" />
           </div>
           <div className="text-right">
             <div className="font-serif text-2xl text-amber-300/80 leading-none">{item.metric}</div>
-            <div className="text-[9px] uppercase tracking-[0.25em] text-white/25 mt-0.5">{item.metricLabel}</div>
+            <div className="text-[9px] uppercase tracking-[0.25em] text-white/53 mt-0.5">{item.metricLabel}</div>
           </div>
         </div>
-        <p className="text-[10px] uppercase tracking-[0.3em] text-amber-400/50 mb-2">{item.category}</p>
+        <p className="text-[10px] uppercase tracking-[0.3em] text-amber-400/69 mb-2">{item.category}</p>
         <h3 className="font-serif text-xl text-white font-light mb-1 group-hover:text-amber-100 transition-colors duration-300 leading-snug">
           {item.title}
         </h3>
-        <p className="text-xs text-white/30 mb-4 italic">{item.sub}</p>
-        <p className="text-sm text-white/50 leading-relaxed mb-5">{item.desc}</p>
+        <p className="text-xs text-white/55 mb-4 italic">{item.sub}</p>
+        <p className="text-sm text-white/62 leading-relaxed mb-5">{item.desc}</p>
 
         {/* Expanded detail */}
         <AnimatePresence>
@@ -154,7 +154,7 @@ function CaseCard({ item, index }: { item: typeof caseStudies[0]; index: number 
               transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="overflow-hidden">
               <div className="border-t border-white/8 pt-4 pb-2">
-                <p className="text-sm text-white/40 leading-relaxed">{item.detail}</p>
+                <p className="text-sm text-white/58 leading-relaxed">{item.detail}</p>
               </div>
             </motion.div>
           )}
@@ -162,7 +162,7 @@ function CaseCard({ item, index }: { item: typeof caseStudies[0]; index: number 
 
         <div className="flex flex-wrap gap-1.5 mt-3">
           {item.tags.map(tag => (
-            <span key={tag} className="px-2.5 py-1 border border-white/8 text-[10px] uppercase tracking-[0.15em] text-white/25 rounded-full">
+            <span key={tag} className="px-2.5 py-1 border border-white/8 text-[10px] uppercase tracking-[0.15em] text-white/53 rounded-full">
               {tag}
             </span>
           ))}
@@ -171,12 +171,12 @@ function CaseCard({ item, index }: { item: typeof caseStudies[0]; index: number 
 
       <div className="flex items-center justify-between px-7 py-4 border-t border-white/6">
         <Link href={item.link}>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-amber-400/50 hover:text-amber-300 transition-colors cursor-pointer">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-amber-400/69 hover:text-amber-300 transition-colors cursor-pointer">
             {item.cta} →
           </span>
         </Link>
         <button onClick={() => setOpen(o => !o)}
-          className="flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-white/20 hover:text-white/50 transition-colors">
+          className="flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-white/52 hover:text-white/62 transition-colors">
           <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }}>
             <ChevronDown className="w-3 h-3" />
           </motion.span>
@@ -229,20 +229,20 @@ export default function Portfolio() {
               <motion.div initial={{ opacity: 0, y: 24 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8 }}>
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Portfolio</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Portfolio</p>
                 <h1 className="font-serif text-6xl md:text-7xl font-light leading-tight mb-6">
                   Kiminou<br />
                   <span className="italic text-amber-200/90">Knox</span>
                 </h1>
                 <div className="w-12 h-px bg-amber-400/50 mb-8" />
-                <p className="text-lg text-white/55 leading-relaxed max-w-md mb-8">
+                <p className="text-lg text-white/63 leading-relaxed max-w-md mb-8">
                   Bay Area writer, athlete, program builder, author, chief editor, podcast host, and creator from the Oakland / East Palo Alto community. Building across books, essays, KimYaps, AAFC, web design, athletics, and youth centered storytelling.
                 </p>
                 <div className="flex items-center gap-3 flex-wrap">
-                  <span className="px-3 py-1.5 border border-amber-400/25 text-xs uppercase tracking-[0.2em] text-amber-400/70">Bay Area</span>
-                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Class of 2025</span>
-                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Multi-Sport</span>
-                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/40">Author of Ten Books</span>
+                  <span className="px-3 py-1.5 border border-amber-400/25 text-xs uppercase tracking-[0.2em] text-amber-400/75">Bay Area</span>
+                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/58">Class of 2025</span>
+                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/58">Multi-Sport</span>
+                  <span className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/58">Author of Ten Books</span>
                 </div>
               </motion.div>
 
@@ -250,11 +250,11 @@ export default function Portfolio() {
               <motion.div initial={{ opacity: 0, x: 32 }}
                 animate={heroInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.15 }}>
-                <p className="text-[10px] uppercase tracking-[0.35em] text-white/20 mb-5">Quick Facts</p>
+                <p className="text-[10px] uppercase tracking-[0.35em] text-white/52 mb-5">Quick Facts</p>
                 <div className="space-y-0">
                   {QUICK_FACTS.map((fact, i) => (
                     <div key={i} className="grid grid-cols-[140px_1fr] gap-4 border-t border-white/6 py-4">
-                      <span className="text-xs uppercase tracking-[0.15em] text-white/25">{fact.label}</span>
+                      <span className="text-xs uppercase tracking-[0.15em] text-white/53">{fact.label}</span>
                       <span className="text-sm text-white/65 leading-snug">{fact.value}</span>
                     </div>
                   ))}
@@ -266,8 +266,8 @@ export default function Portfolio() {
                     return (
                       <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 border border-white/8 hover:border-amber-400/25 transition-colors duration-300 group">
-                        <Icon className="w-3.5 h-3.5 text-white/25 group-hover:text-amber-400/60 transition-colors duration-300" />
-                        <span className="text-xs text-white/40 group-hover:text-amber-200 transition-colors duration-300">{s.handle}</span>
+                        <Icon className="w-3.5 h-3.5 text-white/53 group-hover:text-amber-400/72 transition-colors duration-300" />
+                        <span className="text-xs text-white/58 group-hover:text-amber-200 transition-colors duration-300">{s.handle}</span>
                       </a>
                     );
                   })}
@@ -283,7 +283,7 @@ export default function Portfolio() {
             <Reveal className="mb-12">
               <div className="flex flex-col md:flex-row md:items-end gap-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3 font-medium">Work Lanes</p>
+                  <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 mb-3 font-medium">Work Lanes</p>
                   <h2 className="font-serif text-3xl md:text-4xl font-light text-white">What I Do</h2>
                   <div className="w-12 h-px bg-amber-400/40 mt-5" />
                 </div>
@@ -293,7 +293,7 @@ export default function Portfolio() {
                       className={`px-4 py-2 text-xs uppercase tracking-[0.18em] border transition-all duration-300 ${
                         activeFilter === f
                           ? "border-amber-400/60 bg-amber-400/10 text-amber-300"
-                          : "border-white/10 text-white/35 hover:border-white/25 hover:text-white/65"
+                          : "border-white/10 text-white/57 hover:border-white/25 hover:text-white/65"
                       }`}>
                       {f}
                     </button>
@@ -322,7 +322,7 @@ export default function Portfolio() {
         <section className="py-24 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="text-center">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-6 font-medium">Connect</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-6 font-medium">Connect</p>
               <h2 className="font-serif text-4xl md:text-6xl font-light text-white mb-10">
                 Let's Build<br />
                 <span className="italic text-amber-200/90">Something Together</span>

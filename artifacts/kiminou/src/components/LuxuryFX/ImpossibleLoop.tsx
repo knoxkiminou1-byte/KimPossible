@@ -69,7 +69,7 @@ export default function ImpossibleLoop() {
             <button
               type="button"
               onClick={skip}
-              className="absolute top-6 right-6 text-[10px] uppercase tracking-[0.3em] text-white/20 hover:text-amber-400/60 transition-colors"
+              className="absolute top-6 right-6 text-[10px] uppercase tracking-[0.3em] text-white/52 hover:text-amber-400/72 transition-colors"
             >
               Skip
             </button>
@@ -112,7 +112,7 @@ export default function ImpossibleLoop() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-10 font-serif text-white/20 tracking-[0.3em] text-sm uppercase"
+              className="mt-10 font-serif text-white/52 tracking-[0.3em] text-sm uppercase"
             >
               You've come full circle.
             </motion.p>

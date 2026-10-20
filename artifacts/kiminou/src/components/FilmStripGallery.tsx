@@ -47,7 +47,7 @@ export default function FilmStripGallery() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-3 font-medium">
+          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/69 mb-3 font-medium">
             In the Frame
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-white">
@@ -103,7 +103,7 @@ export default function FilmStripGallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-[9px] uppercase tracking-[0.25em] text-amber-400/70 mb-1">
+                    <p className="text-[9px] uppercase tracking-[0.25em] text-amber-400/75 mb-1">
                       {img.category}
                     </p>
                     <p className="text-sm font-serif font-light text-white">
@@ -111,7 +111,7 @@ export default function FilmStripGallery() {
                     </p>
                   </div>
                   {/* Frame number */}
-                  <div className="absolute top-3 right-3 text-[9px] text-white/20 font-mono">
+                  <div className="absolute top-3 right-3 text-[9px] text-white/52 font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                 </motion.div>
@@ -125,7 +125,7 @@ export default function FilmStripGallery() {
 
       {/* Drag hint */}
       <motion.p
-        className="text-center text-[9px] uppercase tracking-[0.3em] text-white/20 mt-5"
+        className="text-center text-[9px] uppercase tracking-[0.3em] text-white/52 mt-5"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ delay: 1.2 }}
@@ -146,14 +146,14 @@ export default function FilmStripGallery() {
             <button
               onClick={() => setLightbox(null)}
               aria-label="Close"
-              className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+              className="absolute top-6 right-6 text-white/62 hover:text-white transition-colors"
             >
               <X className="w-7 h-7" />
             </button>
             <button
               onClick={() => setLightbox((p) => (p! > 0 ? p! - 1 : IMAGES.length - 1))}
               aria-label="Previous image"
-              className="absolute left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-amber-400 transition-colors"
+              className="absolute left-6 top-1/2 -translate-y-1/2 text-white/58 hover:text-amber-400 transition-colors"
             >
               <ChevronLeft className="w-10 h-10" />
             </button>
@@ -170,12 +170,12 @@ export default function FilmStripGallery() {
             <button
               onClick={() => setLightbox((p) => (p! < IMAGES.length - 1 ? p! + 1 : 0))}
               aria-label="Next image"
-              className="absolute right-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-amber-400 transition-colors"
+              className="absolute right-6 top-1/2 -translate-y-1/2 text-white/58 hover:text-amber-400 transition-colors"
             >
               <ChevronRight className="w-10 h-10" />
             </button>
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
-              <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/60 mb-1">
+              <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/72 mb-1">
                 {IMAGES[lightbox].category}
               </p>
               <p className="font-serif text-xl text-white">{IMAGES[lightbox].title}</p>

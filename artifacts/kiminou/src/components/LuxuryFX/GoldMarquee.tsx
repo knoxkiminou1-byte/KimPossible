@@ -43,10 +43,10 @@ export default function GoldMarquee({
       >
         {doubled.map((item, i) => (
           <span key={i} className="inline-flex items-center gap-3 mr-3">
-            <span className="text-[10px] uppercase tracking-[0.35em] font-medium text-white/30 hover:text-amber-400/70 transition-colors duration-300">
+            <span className="text-[10px] uppercase tracking-[0.35em] font-medium text-white/55 hover:text-amber-400/75 transition-colors duration-300">
               {item}
             </span>
-            <span className="text-amber-400/30 text-xs">{separator}</span>
+            <span className="text-amber-400/63 text-xs">{separator}</span>
           </span>
         ))}
       </div>

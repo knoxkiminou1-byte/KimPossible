@@ -123,7 +123,7 @@ function MilestoneRow({ milestone, index }: { milestone: Milestone; index: numbe
   const Content = (
     <div className="group flex flex-col md:flex-row gap-4 md:gap-10 py-8 border-t border-white/8 first:border-t-0">
       <div className="md:w-40 flex-shrink-0">
-        <p className="text-xs uppercase tracking-[0.3em] text-white/30">{milestone.date}</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-white/55">{milestone.date}</p>
         <span className={`inline-block mt-2 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] border rounded-full ${PILLAR_COLOR[milestone.pillar]}`}>
           {milestone.pillar}
         </span>
@@ -132,9 +132,9 @@ function MilestoneRow({ milestone, index }: { milestone: Milestone; index: numbe
         <h3 className="font-serif text-2xl text-white/90 mb-2 group-hover:text-amber-100 transition-colors duration-300">
           {milestone.title}
         </h3>
-        <p className="text-sm text-white/40 leading-relaxed max-w-2xl">{milestone.detail}</p>
+        <p className="text-sm text-white/58 leading-relaxed max-w-2xl">{milestone.detail}</p>
         {milestone.link && (
-          <span className="inline-flex items-center gap-1.5 mt-4 text-xs uppercase tracking-[0.2em] text-amber-400/60 group-hover:text-amber-300 transition-colors duration-300">
+          <span className="inline-flex items-center gap-1.5 mt-4 text-xs uppercase tracking-[0.2em] text-amber-400/72 group-hover:text-amber-300 transition-colors duration-300">
             {milestone.link.label} <ArrowUpRight className="w-3 h-3" />
           </span>
         )}
@@ -212,12 +212,12 @@ export default function LegacyTimeline() {
           </div>
           <div className="max-w-4xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">The Record So Far</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">The Record So Far</p>
               <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6">
                 Legacy <span className="italic text-amber-200/90">Timeline</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Author, athlete, speaker, builder — one thread, told in order. Books, milestones, recognition, and the work still in motion.
               </p>
             </motion.div>

@@ -95,7 +95,7 @@ export default function SplitNarrative() {
               ].map(([stat, label]) => (
                 <div key={stat} className="flex items-baseline gap-3">
                   <span className="font-serif text-xl text-white font-light">{stat}</span>
-                  <span className="text-xs text-white/30 uppercase tracking-[0.15em]">{label}</span>
+                  <span className="text-xs text-white/55 uppercase tracking-[0.15em]">{label}</span>
                 </div>
               ))}
             </motion.div>
@@ -131,7 +131,7 @@ export default function SplitNarrative() {
 
           <motion.div style={{ y: rightY }}>
             <motion.p
-              className="text-[10px] uppercase tracking-[0.45em] text-amber-400/60 mb-6"
+              className="text-[10px] uppercase tracking-[0.45em] text-amber-400/72 mb-6"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
@@ -172,7 +172,7 @@ export default function SplitNarrative() {
               ].map(([stat, label]) => (
                 <div key={stat} className="flex items-baseline gap-3">
                   <span className="font-serif text-xl text-white font-light">{stat}</span>
-                  <span className="text-xs text-white/30 uppercase tracking-[0.15em]">{label}</span>
+                  <span className="text-xs text-white/55 uppercase tracking-[0.15em]">{label}</span>
                 </div>
               ))}
             </motion.div>
@@ -183,7 +183,7 @@ export default function SplitNarrative() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 1.2, duration: 0.6 }}
             >
-              <p className="font-serif italic text-white/45 text-sm leading-relaxed">
+              <p className="font-serif italic text-white/60 text-sm leading-relaxed">
                 "Seeking is its own form of finding."
               </p>
             </motion.blockquote>

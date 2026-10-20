@@ -76,7 +76,7 @@ export default function Podcast() {
           <Reveal>
             <div className="flex items-center justify-center gap-3 mb-6">
               <Mic className="w-5 h-5 text-amber-400" />
-              <span className="text-xs uppercase tracking-[0.35em] text-amber-400/70 font-medium">
+              <span className="text-xs uppercase tracking-[0.35em] text-amber-400/75 font-medium">
                 KimYaps · Active Since 2024
               </span>
             </div>
@@ -84,7 +84,7 @@ export default function Podcast() {
               KimYaps
             </h1>
             <div className="w-10 h-px bg-amber-400/50 mx-auto mb-8" />
-            <p className="text-lg text-white/55 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-white/63 leading-relaxed max-w-2xl mx-auto">
               Honest conversations about navigating pain, finding purpose, and giving yourself — and others — a little extra grace. Hosted by Kiminou Knox.
             </p>
           </Reveal>
@@ -101,7 +101,7 @@ export default function Podcast() {
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="font-serif text-3xl text-amber-300 mb-1">{stat.value}</p>
-                  <p className="text-xs uppercase tracking-[0.25em] text-white/40">{stat.label}</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-white/58">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -113,10 +113,10 @@ export default function Podcast() {
           <section className="max-w-3xl mx-auto px-6 lg:px-10 mb-20">
             <h2 className="font-serif text-2xl text-white mb-5">About the Show</h2>
             <div className="w-8 h-px bg-amber-400/40 mb-7" />
-            <p className="text-white/55 leading-relaxed mb-4">
+            <p className="text-white/63 leading-relaxed mb-4">
               KimYaps started as a simple idea: what if we actually talked about the things we're all feeling but pretending not to? Kiminou Knox brings his voice as the author of ten books, an athlete, and a youth leader to real conversations — no filter, no performance.
             </p>
-            <p className="text-white/55 leading-relaxed">
+            <p className="text-white/63 leading-relaxed">
               Topics range from masculinity and mental health to faith, relationships, and what it means to grow up Black in America today. New episodes drop monthly.
             </p>
           </section>
@@ -157,7 +157,7 @@ export default function Podcast() {
         {/* Note to show notes */}
         <Reveal delay={0.25}>
           <section className="max-w-3xl mx-auto px-6 lg:px-10">
-            <div className="border border-amber-400/20 bg-amber-400/4 p-6 text-sm text-white/50 leading-relaxed">
+            <div className="border border-amber-400/20 bg-amber-400/4 p-6 text-sm text-white/62 leading-relaxed">
               <span className="text-amber-400/80 font-semibold uppercase tracking-wider text-xs">Note — </span>
               Some older episode show notes reference <span className="text-white/70">@Kiminou</span> on X/Twitter. The correct handle is{" "}
               <a

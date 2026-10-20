@@ -152,12 +152,12 @@ export default function GenerativeScore() {
       onClick={() => setMuted((m) => !m)}
       aria-pressed={muted}
       aria-label={muted ? "Unmute generative score" : "Mute generative score"}
-      className="fixed bottom-4 left-4 z-[110] flex items-center gap-2 border border-amber-400/20 bg-black/70 px-3 py-2 text-[10px] uppercase tracking-[0.25em] text-white/40 backdrop-blur-md transition-colors hover:border-amber-400/50 hover:text-amber-300"
+      className="fixed bottom-4 left-4 z-[110] flex items-center gap-2 border border-amber-400/20 bg-black/70 px-3 py-2 text-[10px] uppercase tracking-[0.25em] text-white/58 backdrop-blur-md transition-colors hover:border-amber-400/50 hover:text-amber-300"
     >
-      <span className={muted ? "text-white/25" : "text-amber-400/80"}>♩</span>
+      <span className={muted ? "text-white/53" : "text-amber-400/80"}>♩</span>
       <span>Score</span>
-      <span className="text-white/25">·</span>
-      <span className="text-white/30 normal-case tracking-normal">
+      <span className="text-white/53">·</span>
+      <span className="text-white/55 normal-case tracking-normal">
         {muted ? "muted" : started ? modeName : "tap to begin"}
       </span>
     </button>

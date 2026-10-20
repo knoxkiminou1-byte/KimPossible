@@ -110,12 +110,12 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.9, delay: 0.5 }}>
-                <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/60 mb-4">AAFC Mission</p>
+                <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/72 mb-4">AAFC Mission</p>
                 <div className="w-8 h-px bg-amber-400/40 mb-5" />
                 <p className="font-serif text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-sm italic">
                   "Artists and Athletes For Change. Uniting creatives and athletes to make meaningful community impact."
                 </p>
-                <p className="text-xs text-white/30 mt-4 uppercase tracking-[0.2em]">Kiminou Knox, Director</p>
+                <p className="text-xs text-white/55 mt-4 uppercase tracking-[0.2em]">Kiminou Knox, Director</p>
               </motion.div>
             </div>
 
@@ -131,29 +131,29 @@ export default function Contact() {
             initial={{ opacity: 0, x: 40 }}
             animate={heroInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}>
-            <p className="text-xs uppercase tracking-[0.55em] text-amber-400/60 mb-5">Get in Touch</p>
+            <p className="text-xs uppercase tracking-[0.55em] text-amber-400/72 mb-5">Get in Touch</p>
             <h1 className="font-serif text-5xl md:text-6xl font-light leading-tight mb-4" data-testid="contact-heading">
               Let's<br />
               <span className="italic text-amber-200/90">Connect</span>
             </h1>
             <div className="w-12 h-px bg-amber-400/40 mb-8" />
-            <p className="text-white/45 leading-relaxed mb-10 max-w-sm">
+            <p className="text-white/60 leading-relaxed mb-10 max-w-sm">
               Reach out for speaking engagements, media inquiries, book collaborations, or any other opportunity. I respond personally.
             </p>
 
             {/* Direct channels */}
             <div className="space-y-0 mb-10">
-              <p className="text-[10px] uppercase tracking-[0.35em] text-white/20 mb-4">Direct Channels</p>
+              <p className="text-[10px] uppercase tracking-[0.35em] text-white/52 mb-4">Direct Channels</p>
               {channels.map((c) => (
                 <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
                   className="group flex items-center justify-between border-t border-white/8 py-4 hover:border-amber-400/25 transition-colors duration-300">
                   <div>
-                    <span className="text-xs uppercase tracking-[0.2em] text-white/25 group-hover:text-amber-400/60 transition-colors duration-300 block">{c.label}</span>
-                    <span className="text-xs text-white/20 mt-0.5">{c.desc}</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-white/53 group-hover:text-amber-400/72 transition-colors duration-300 block">{c.label}</span>
+                    <span className="text-xs text-white/52 mt-0.5">{c.desc}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-white/55 group-hover:text-amber-300 transition-colors duration-300">{c.handle}</span>
-                    <ExternalLink className="w-3 h-3 text-white/15 group-hover:text-amber-400/50 transition-colors" />
+                    <span className="text-sm text-white/63 group-hover:text-amber-300 transition-colors duration-300">{c.handle}</span>
+                    <ExternalLink className="w-3 h-3 text-white/50 group-hover:text-amber-400/69 transition-colors" />
                   </div>
                 </a>
               ))}
@@ -166,7 +166,7 @@ export default function Contact() {
         <section className="py-20 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-14">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">What I Work On</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">What I Work On</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Inquiry Types</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
@@ -176,7 +176,7 @@ export default function Contact() {
                   <div className="bg-black p-7 group hover:bg-white/[0.03] transition-colors duration-400 h-full">
                     <div className="w-5 h-px bg-amber-400/25 mb-4 group-hover:w-8 transition-all duration-400" />
                     <h3 className="font-serif text-lg text-white mb-2">{item.label}</h3>
-                    <p className="text-white/35 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-white/57 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </Reveal>
               ))}
@@ -188,7 +188,7 @@ export default function Contact() {
         <section className="py-20 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-14">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">How It Works</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">How It Works</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">The Process</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
@@ -201,10 +201,10 @@ export default function Contact() {
                     </span>
                     <div className="w-6 h-px bg-amber-400/35 mb-6" />
                     <h3 className="font-serif text-2xl text-white mb-3">{step.title}</h3>
-                    <p className="text-white/45 leading-relaxed text-sm">{step.desc}</p>
+                    <p className="text-white/60 leading-relaxed text-sm">{step.desc}</p>
                     {i < PROCESS.length - 1 && (
                       <div className="hidden md:block absolute top-1/2 -right-3 z-10">
-                        <span className="text-amber-400/25 text-xl">→</span>
+                        <span className="text-amber-400/62 text-xl">→</span>
                       </div>
                     )}
                   </div>
@@ -218,7 +218,7 @@ export default function Contact() {
         <section className="py-24 border-t border-white/6">
           <div className="max-w-3xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-12">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Send a Message</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4 font-medium">Send a Message</p>
               <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-4">
                 Start the<br />
                 <span className="italic text-amber-200/90">Conversation</span>

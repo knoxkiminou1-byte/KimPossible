@@ -84,17 +84,17 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
         {/* Header */}
         <div className="flex items-center justify-between w-full">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-amber-400/60">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-amber-400/72">
               {page === 0 ? "Cover" : `Poem ${page} of ${totalPages - 1}`}
             </p>
-            <p className="font-serif text-white/40 text-xs italic mt-0.5 truncate max-w-[220px]">
+            <p className="font-serif text-white/58 text-xs italic mt-0.5 truncate max-w-[220px]">
               {book.title}
             </p>
           </div>
           <button
             onClick={onClose}
             aria-label="Close"
-            className="w-9 h-9 flex items-center justify-center border border-white/15 text-white/50 hover:text-white hover:border-white/40 transition-all rounded-full"
+            className="w-9 h-9 flex items-center justify-center border border-white/15 text-white/62 hover:text-white hover:border-white/40 transition-all rounded-full"
           >
             <X className="w-4 h-4" />
           </button>
@@ -151,7 +151,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
             onClick={() => goTo(page - 1)}
             disabled={page === 0}
             aria-label="Previous page"
-            className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/50 hover:border-amber-400/50 hover:text-amber-400 transition-all disabled:opacity-20 disabled:cursor-not-allowed rounded-full"
+            className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/62 hover:border-amber-400/50 hover:text-amber-400 transition-all disabled:opacity-20 disabled:cursor-not-allowed rounded-full"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -176,7 +176,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
             onClick={() => goTo(page + 1)}
             disabled={page === totalPages - 1}
             aria-label="Next page"
-            className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/50 hover:border-amber-400/50 hover:text-amber-400 transition-all disabled:opacity-20 disabled:cursor-not-allowed rounded-full"
+            className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/62 hover:border-amber-400/50 hover:text-amber-400 transition-all disabled:opacity-20 disabled:cursor-not-allowed rounded-full"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
@@ -187,7 +187,7 @@ export default function FlipbookModal({ book, onClose }: FlipbookModalProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-xs text-white/25 tracking-wide"
+            className="text-xs text-white/53 tracking-wide"
           >
             Tap ❯ to flip through sample poems
           </motion.p>
@@ -217,7 +217,7 @@ function CoverPage({ book }: { book: FlipbookModalProps["book"] }) {
         <p className="font-serif text-white text-xl font-light leading-snug mb-1">
           {book.title}
         </p>
-        <p className="text-white/45 text-xs italic">{book.subtitle}</p>
+        <p className="text-white/60 text-xs italic">{book.subtitle}</p>
       </div>
       <div className="absolute right-0 top-0 bottom-0 w-2"
         style={{ background: "linear-gradient(to left, rgba(255,255,255,0.06), transparent)" }}

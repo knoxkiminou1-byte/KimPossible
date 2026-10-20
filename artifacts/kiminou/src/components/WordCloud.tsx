@@ -62,13 +62,13 @@ export default function WordCloud() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-4 font-medium">
+          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/69 mb-4 font-medium">
             The Universe of His Work
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-3">
             Themes &amp; Ideas
           </h2>
-          <p className="text-sm text-white/30 max-w-md mx-auto">
+          <p className="text-sm text-white/55 max-w-md mx-auto">
             Hover any word to see which books explore it
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ export default function WordCloud() {
                   className={`font-serif font-light transition-colors duration-300 ${item.size} ${
                     isActive
                       ? "text-amber-300"
-                      : "text-white/55"
+                      : "text-white/63"
                   }`}
                   style={
                     isActive
@@ -131,7 +131,7 @@ export default function WordCloud() {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="bg-black/90 border border-amber-400/20 backdrop-blur-md px-4 py-3 text-center shadow-2xl">
-                      <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/60 mb-1.5">Found in</p>
+                      <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/72 mb-1.5">Found in</p>
                       {item.books.map((b) => (
                         <p key={b} className="text-xs text-white/70 font-serif italic leading-snug">
                           {b}
@@ -153,7 +153,7 @@ export default function WordCloud() {
           transition={{ delay: 1.2 }}
         >
           <div className="h-px w-10 bg-gradient-to-r from-transparent to-amber-400/25" />
-          <p className="text-[10px] uppercase tracking-[0.3em] text-white/20">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-white/52">
             {WORDS.length} themes across {PUBLISHED_BOOK_COUNT} books
           </p>
           <div className="h-px w-10 bg-gradient-to-l from-transparent to-amber-400/25" />

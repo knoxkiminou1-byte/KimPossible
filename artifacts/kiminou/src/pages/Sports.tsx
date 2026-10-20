@@ -288,7 +288,7 @@ export default function Sports() {
 
             <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full pt-40 pb-32">
               {/* Label */}
-              <motion.p className="text-xs uppercase tracking-[0.5em] text-amber-400/70 mb-8 font-medium"
+              <motion.p className="text-xs uppercase tracking-[0.5em] text-amber-400/75 mb-8 font-medium"
                 initial={{ opacity: 0, x: -20 }} animate={heroInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}>
                 ◆ Athletic Profile ◆
@@ -312,7 +312,7 @@ export default function Sports() {
                 <div className="w-2 h-2 rounded-full bg-amber-400/60" />
               </motion.div>
 
-              <motion.p className="text-lg text-white/55 max-w-xl leading-relaxed"
+              <motion.p className="text-lg text-white/63 max-w-xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.15 }}>
                 Multi-sport athlete with varsity experience and verified profiles on every major recruiting platform.
@@ -339,9 +339,9 @@ export default function Sports() {
               style={{ opacity: scrollIndicatorOpacity }}
               initial={{ opacity: 0 }} animate={heroInView ? { opacity: 1 } : {}}
               transition={{ delay: 2, duration: 0.6 }}>
-              <span className="text-[9px] uppercase tracking-[0.35em] text-white/30">Scroll</span>
+              <span className="text-[9px] uppercase tracking-[0.35em] text-white/55">Scroll</span>
               <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}>
-                <ChevronDown className="w-4 h-4 text-amber-400/50" />
+                <ChevronDown className="w-4 h-4 text-amber-400/69" />
               </motion.div>
             </motion.div>
           </section>
@@ -352,7 +352,7 @@ export default function Sports() {
           <DarkSection opacity={0.72} className="py-20">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <RevealCard className="mb-14">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium">Visual Record</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3 font-medium">Visual Record</p>
                 <h2 className="font-serif text-3xl md:text-5xl font-light text-white">
                   <GlitchTitle text="Basketball, Football, Discipline" />
                 </h2>
@@ -395,7 +395,7 @@ export default function Sports() {
             ))}
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <RevealCard className="mb-16">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium">Measurables</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3 font-medium">Measurables</p>
                 <h2 className="font-serif text-3xl md:text-5xl font-light text-white">Physical Profile</h2>
                 <div className="w-12 h-px bg-amber-400/40 mt-5" />
               </RevealCard>
@@ -410,18 +410,18 @@ export default function Sports() {
                         transition={{ duration: 0.3 }}>
                         <motion.div className="absolute -top-10 -right-10 w-32 h-32 rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-400"
                           style={{ background: "radial-gradient(circle,rgba(245,158,11,0.12),transparent 70%)" }} />
-                        <Icon className="w-7 h-7 text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300" />
+                        <Icon className="w-7 h-7 text-amber-400/69 group-hover:text-amber-400 transition-colors duration-300" />
                         <div>
-                          <p className="text-xs uppercase tracking-[0.3em] text-white/30 mb-2">{m.label}</p>
+                          <p className="text-xs uppercase tracking-[0.3em] text-white/55 mb-2">{m.label}</p>
                           <p className="font-serif font-light text-white mb-1" style={{ fontSize: "clamp(2.2rem,5vw,3.5rem)" }}>
                             {m.numericEnd != null ? (
-                              <><CounterNum end={m.numericEnd} />{(m as { unit?: string }).unit && <span className="text-2xl text-white/60 ml-1">{(m as { unit?: string }).unit}</span>}</>
+                              <><CounterNum end={m.numericEnd} />{(m as { unit?: string }).unit && <span className="text-2xl text-white/65 ml-1">{(m as { unit?: string }).unit}</span>}</>
                             ) : m.value}
                           </p>
-                          <p className="text-sm text-white/40">{m.sub}</p>
+                          <p className="text-sm text-white/58">{m.sub}</p>
                         </div>
                         <a href={m.sourceUrl} target="_blank" rel="noopener noreferrer"
-                          className="text-xs text-amber-400/45 hover:text-amber-400 transition-colors duration-200 mt-auto">
+                          className="text-xs text-amber-400/68 hover:text-amber-400 transition-colors duration-200 mt-auto">
                           Verified by {m.source} →
                         </a>
                         <motion.div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-amber-400/60 to-transparent"
@@ -442,7 +442,7 @@ export default function Sports() {
           <section className="relative py-40 flex flex-col items-center justify-center text-center px-8">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,0,0,0.7) 0%,transparent 100%)" }} />
             <div className="relative z-10">
-              <motion.p className="text-xs uppercase tracking-[0.45em] text-amber-400/60 mb-5"
+              <motion.p className="text-xs uppercase tracking-[0.45em] text-amber-400/72 mb-5"
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}>In The Locker Room</motion.p>
               <motion.h2 className="font-serif font-light text-white leading-tight max-w-3xl"
@@ -454,7 +454,7 @@ export default function Sports() {
               <motion.div className="w-16 h-px bg-amber-400/50 mt-8 mx-auto"
                 initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.8 }} style={{ transformOrigin: "center" }} />
-              <motion.p className="text-sm text-white/30 mt-4 uppercase tracking-[0.3em]"
+              <motion.p className="text-sm text-white/55 mt-4 uppercase tracking-[0.3em]"
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 1.0 }}>
                 Kiminou Knox — Ygnacio Valley
@@ -476,7 +476,7 @@ export default function Sports() {
             ))}
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <RevealCard className="mb-16">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium">Career</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3 font-medium">Career</p>
                 <h2 className="font-serif text-3xl md:text-5xl font-light text-white">Highlights</h2>
                 <div className="w-12 h-px bg-amber-400/40 mt-5" />
               </RevealCard>
@@ -487,14 +487,14 @@ export default function Sports() {
                     <RevealCard key={i} delay={i * 0.1} direction={i % 2 === 0 ? "left" : "right"}>
                       <motion.div className="group flex gap-8 items-start border-t border-white/8 py-8"
                         whileHover={{ borderColor: "rgba(245,158,11,0.3)" }} transition={{ duration: 0.25 }}>
-                        <span className="font-serif text-sm text-amber-400/45 w-20 shrink-0 pt-1 text-right group-hover:text-amber-400/90 transition-colors duration-300 hidden md:block">{h.year}</span>
+                        <span className="font-serif text-sm text-amber-400/68 w-20 shrink-0 pt-1 text-right group-hover:text-amber-400/90 transition-colors duration-300 hidden md:block">{h.year}</span>
                         <motion.div className="hidden md:flex items-center justify-center w-3 h-3 rounded-full border border-white/20 bg-black mt-1.5 shrink-0 relative z-10"
                           whileHover={{ borderColor: "rgba(245,158,11,0.8)", backgroundColor: "rgba(245,158,11,0.15)", scale: 1.5 }}
                           transition={{ type: "spring", stiffness: 300 }} />
                         <div className="flex-1">
-                          <span className="text-xs text-amber-400/50 mb-2 block md:hidden">{h.year}</span>
+                          <span className="text-xs text-amber-400/69 mb-2 block md:hidden">{h.year}</span>
                           <h3 className="font-serif text-xl md:text-2xl font-light text-white mb-2 group-hover:text-amber-100 transition-colors duration-300" data-testid={`highlight-${i}`}>{h.title}</h3>
-                          <p className="text-sm text-white/40 leading-relaxed">{h.desc}</p>
+                          <p className="text-sm text-white/58 leading-relaxed">{h.desc}</p>
                         </div>
                       </motion.div>
                     </RevealCard>
@@ -510,7 +510,7 @@ export default function Sports() {
           <DarkSection opacity={0.75} className="py-28">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <RevealCard className="mb-16">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium">Recruiting</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3 font-medium">Recruiting</p>
                 <h2 className="font-serif text-3xl md:text-5xl font-light text-white">Verified Profiles</h2>
                 <div className="w-12 h-px bg-amber-400/40 mt-5" />
               </RevealCard>
@@ -525,15 +525,15 @@ export default function Sports() {
                       data-testid={p.testId}>
                       <div className="flex items-start justify-between mb-5 relative z-10">
                         <motion.div whileHover={{ rotate: 15, scale: 1.2 }} transition={{ type: "spring", stiffness: 300 }}>
-                          <Zap className="w-6 h-6 text-amber-400/50 group-hover:text-amber-400 transition-colors duration-300" />
+                          <Zap className="w-6 h-6 text-amber-400/69 group-hover:text-amber-400 transition-colors duration-300" />
                         </motion.div>
-                        <ExternalLink className="w-4 h-4 text-white/20 group-hover:text-amber-400/70 transition-colors duration-300" />
+                        <ExternalLink className="w-4 h-4 text-white/52 group-hover:text-amber-400/75 transition-colors duration-300" />
                       </div>
                       <h3 className="font-serif text-xl font-light text-white mb-3 group-hover:text-amber-100 transition-colors duration-300 relative z-10">{p.name}</h3>
-                      <p className="text-sm text-white/38 leading-relaxed mb-5 relative z-10">{p.desc}</p>
+                      <p className="text-sm text-white/58 leading-relaxed mb-5 relative z-10">{p.desc}</p>
                       <div className="flex items-center gap-2 relative z-10">
-                        <span className="text-xs uppercase tracking-[0.2em] text-amber-400/55 group-hover:text-amber-400 transition-colors duration-300">View Profile</span>
-                        <motion.span className="text-amber-400/55 group-hover:text-amber-400"
+                        <span className="text-xs uppercase tracking-[0.2em] text-amber-400/71 group-hover:text-amber-400 transition-colors duration-300">View Profile</span>
+                        <motion.span className="text-amber-400/71 group-hover:text-amber-400"
                           animate={{ x: [0, 3, 0] }} transition={{ duration: 1.4, repeat: Infinity }}>→</motion.span>
                       </div>
                       <motion.div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-amber-400/70 to-amber-400/20"
@@ -548,9 +548,9 @@ export default function Sports() {
                   <div className="group relative overflow-hidden p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 cursor-pointer"
                     style={{ background: "rgba(245,158,11,0.03)", border: "1px solid rgba(245,158,11,0.15)" }}>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-2">For Coaches & Recruiters</p>
+                      <p className="text-xs uppercase tracking-[0.3em] text-amber-400/72 mb-2">For Coaches & Recruiters</p>
                       <h3 className="font-serif text-2xl text-white">Full Recruiting Packet</h3>
-                      <p className="text-white/40 text-sm mt-2 max-w-lg">Measurables, highlights, film, verified profiles, and a direct contact line — all in one place.</p>
+                      <p className="text-white/58 text-sm mt-2 max-w-lg">Measurables, highlights, film, verified profiles, and a direct contact line — all in one place.</p>
                     </div>
                     <span className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/80 group-hover:text-amber-300 transition-colors duration-300 flex-shrink-0">
                       View Packet <ArrowUpRight className="w-4 h-4" />

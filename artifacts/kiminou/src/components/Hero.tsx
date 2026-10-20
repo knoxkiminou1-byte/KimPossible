@@ -34,7 +34,7 @@ function KineticRoles() {
           </motion.span>
           {idx < ROLE_WORDS.length - 1 && (
             <motion.span
-              className="text-amber-400/40 text-[10px] select-none"
+              className="text-amber-400/66 text-[10px] select-none"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.85 + delay, duration: 0.4, ease: "backOut" }}
@@ -543,7 +543,7 @@ export default function Hero({ paperMode = false }: HeroProps) {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <ChevronDown className="w-7 h-7 text-white/40 hover:text-amber-300 transition-colors duration-300" />
+          <ChevronDown className="w-7 h-7 text-white/58 hover:text-amber-300 transition-colors duration-300" />
         </motion.div>
       </motion.div>
 

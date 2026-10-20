@@ -76,7 +76,7 @@ export default function GreenRoomStage({ children }: { children: ReactNode }) {
           <button
             type="button"
             onClick={() => setIsOnStage(false)}
-            className="fixed left-4 top-24 z-[90] border border-white/15 bg-black/60 px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-white/40 backdrop-blur-md transition-colors hover:border-amber-400/40 hover:text-amber-300"
+            className="fixed left-4 top-24 z-[90] border border-white/15 bg-black/60 px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-white/58 backdrop-blur-md transition-colors hover:border-amber-400/40 hover:text-amber-300"
           >
             ← Backstage
           </button>
@@ -128,7 +128,7 @@ export default function GreenRoomStage({ children }: { children: ReactNode }) {
             {NOTES.map((n, i) => (
               <p
                 key={i}
-                className="pointer-events-none absolute max-w-[160px] font-mono text-xs text-white/20"
+                className="pointer-events-none absolute max-w-[160px] font-mono text-xs text-white/52"
                 style={{ left: n.x, top: n.y, transform: `rotate(${n.r}deg)` }}
               >
                 {n.text}

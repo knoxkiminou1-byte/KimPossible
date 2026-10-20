@@ -113,7 +113,7 @@ export default function QuoteTypewriter() {
 
       <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
         <motion.p
-          className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-12 font-medium"
+          className="text-[10px] uppercase tracking-[0.45em] text-amber-400/69 mb-12 font-medium"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.3 }}
@@ -171,7 +171,7 @@ export default function QuoteTypewriter() {
         <AnimatePresence mode="wait">
           <motion.p
             key={quoteIdx}
-            className="mt-8 text-xs uppercase tracking-[0.3em] text-amber-400/45 font-medium"
+            className="mt-8 text-xs uppercase tracking-[0.3em] text-amber-400/68 font-medium"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
