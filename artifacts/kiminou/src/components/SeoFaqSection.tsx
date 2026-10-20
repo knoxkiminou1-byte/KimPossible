@@ -36,7 +36,7 @@ export default function SeoFaqSection({ title, intro, items, className = "" }: S
             >
               <summary className="cursor-pointer list-none flex items-start justify-between gap-6 text-left">
                 <span className="font-serif text-xl md:text-2xl text-white/90 pr-6">{item.question}</span>
-                <span className="text-amber-300/50 text-sm uppercase tracking-[0.25em] group-open:text-amber-200">
+                <span className="text-amber-300/70 text-sm uppercase tracking-[0.25em] group-open:text-amber-200">
                   Expand
                 </span>
               </summary>

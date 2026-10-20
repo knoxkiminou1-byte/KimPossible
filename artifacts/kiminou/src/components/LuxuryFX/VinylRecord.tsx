@@ -288,7 +288,7 @@ export default function VinylRecord() {
                 style={{
                   border: `1px solid ${i === poemIdx ? "rgba(245,158,11,0.5)" : "rgba(255,255,255,0.08)"}`,
                   background: i === poemIdx ? "rgba(245,158,11,0.07)" : "transparent",
-                  color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.25)",
+                  color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.55)",
                 }}>
                 {p.title}
               </button>
@@ -411,7 +411,7 @@ export default function VinylRecord() {
                     className="px-2.5 py-1 text-[8px] uppercase tracking-[0.2em] transition-all"
                     style={{
                       border: `1px solid ${i === poemIdx ? "rgba(245,158,11,0.4)" : "rgba(255,255,255,0.08)"}`,
-                      color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.25)",
+                      color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.55)",
                     }}>
                     {p.title}
                   </button>
