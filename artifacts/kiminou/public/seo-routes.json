@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T04:10:26.905Z",
+  "generatedAt": "2026-10-20T04:15:49.912Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -1912,7 +1912,7 @@
     {
       "loc": "/books/boys-raised-in-silence",
       "title": "Boys Raised in Silence by Kiminou Knox | Poetry Collection",
-      "description": "Boys Raised in Silence by Kiminou Knox. A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+      "description": "Boys Raised in Silence by Kiminou Knox. Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
       "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
       "keywords": [
         "Boys Raised in Silence",
@@ -1925,7 +1925,7 @@
       "sections": [
         {
           "heading": "Boys Raised in Silence",
-          "text": "A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. Published 2025. ISBN 9798267592383."
+          "text": "Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man. Published 2025. ISBN 9798267592383."
         },
         {
           "heading": "Themes",
@@ -1938,7 +1938,7 @@
         "@type": "Book",
         "@id": "https://www.kiminouknox.com/books/boys-raised-in-silence#book",
         "name": "Boys Raised in Silence",
-        "alternateName": "A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing",
+        "alternateName": "Poems for the Things We Were Never Allowed to Feel",
         "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
         "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
         "author": {
@@ -1967,13 +1967,13 @@
           "@id": "https://www.kiminouknox.com/books/boys-raised-in-silence#webpage",
           "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
           "name": "Boys Raised in Silence by Kiminou Knox | Poetry Collection",
-          "description": "Boys Raised in Silence by Kiminou Knox. A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
+          "description": "Boys Raised in Silence by Kiminou Knox. Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
           "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
           "primaryImageOfPage": {
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
-            "caption": "Boys Raised in Silence by Kiminou Knox. A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man."
+            "caption": "Boys Raised in Silence by Kiminou Knox. Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man."
           },
           "isPartOf": {
             "@id": "https://www.kiminouknox.com/#website"
@@ -1989,7 +1989,7 @@
           "@type": "Book",
           "@id": "https://www.kiminouknox.com/books/boys-raised-in-silence#book",
           "name": "Boys Raised in Silence",
-          "alternateName": "A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing",
+          "alternateName": "Poems for the Things We Were Never Allowed to Feel",
           "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
           "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
           "author": {

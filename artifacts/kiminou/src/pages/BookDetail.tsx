@@ -178,6 +178,8 @@ export default function BookDetail() {
     ? `Available from ${availableRetailers.map(({ name }) => name).join(", ")}.`
     : "Retailer publication is in progress.";
   const isHighResolutionEdition = Boolean(book.edition);
+  // Matches the prerendered <title>; App's DocumentTitleSync mirrors og:title into document.title.
+  const pageTitle = `${book.title} by Kiminou Knox | ${book.genre === "Children's literature" ? "Children's Book" : "Poetry Collection"}`;
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: SITE_URL },
     { name: "Books", url: `${SITE_URL}/books` },
@@ -187,13 +189,13 @@ export default function BookDetail() {
   return (
     <>
       <Helmet>
-        <title>{`${book.title} by Kiminou Knox | ${book.genre === "Children's literature" ? "Children's Book" : "Poetry Collection"}`}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. ${availabilityDescription}`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://www.kiminouknox.com/books/${book.id}`} />
 
         <meta property="og:type" content="book" />
-        <meta property="og:title" content={`${book.title} — Kiminou Knox`} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={book.description} />
         <meta property="og:url" content={`https://www.kiminouknox.com/books/${book.id}`} />
         <meta property="og:image" content={`https://www.kiminouknox.com${book.cover}`} />
@@ -206,7 +208,7 @@ export default function BookDetail() {
         <meta property="books:author" content="https://www.kiminouknox.com/author" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${book.title} — Kiminou Knox`} />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={book.description} />
         <meta name="twitter:image" content={`https://www.kiminouknox.com${book.cover}`} />
         <meta name="twitter:image:alt" content={`${book.title} book cover by Kiminou Knox`} />
