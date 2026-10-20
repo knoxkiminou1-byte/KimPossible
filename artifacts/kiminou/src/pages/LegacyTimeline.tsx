@@ -53,7 +53,7 @@ const MILESTONES: Milestone[] = [
     date: "January – February 2025",
     pillar: "Author",
     title: "Five Books in One Winter",
-    detail: "The Spirit of Solomon, The Adventures of Kiminou the Great and Chua the Wise, Black Boy Poems, Kiminou's World of Imagination, and Our Father? — five collections released within a few months of each other.",
+    detail: "The Spirit of Solomon, The Adventures of Kiminou the Great and Chua the Wise, Poems From A Black Boy, Kiminou's World of Imagination, and Our Father? — five collections released within a few months of each other.",
     link: { label: "Browse the collection", href: "/books" },
   },
   {

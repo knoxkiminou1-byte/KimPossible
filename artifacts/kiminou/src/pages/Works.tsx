@@ -18,10 +18,8 @@ interface Book {
   buyLinks: Record<string, string | null>;
 }
 
-const EXCLUDED_CATALOG_IDS = new Set([
-  "black-boy-poems",
-  "our-father",
-]);
+// Every book in books.json is one of the ten; nothing is hidden from /works.
+const EXCLUDED_CATALOG_IDS = new Set<string>([]);
 
 export default function Works() {
   const [books, setBooks] = useState<Book[]>([]);

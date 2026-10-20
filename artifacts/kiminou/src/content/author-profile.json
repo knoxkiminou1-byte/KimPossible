@@ -3,7 +3,7 @@
   "authorCountLabel": "Author of ten books",
   "searchDescription": "Official website of Kiminou Knox, Bay Area raised, New Orleans based author and poet of ten published books, host of KimYaps, Director at AAFC, and creator of the Black Boy Lie universe.",
   "shortBio": "Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books. He writes across poetry, faith, identity, love, family, imagination, and youth storytelling, hosts the KimYaps podcast, created the Black Boy Lie universe, and serves as a director at Artists and Athletes for Change. His essay was selected as the top essay from the Miles Hall Foundation's February 2025 Breaking Barriers Youth Summit.",
-  "catalogEditionNote": "The official bibliography contains ten distinct published books: eight poetry collections and two children's books. Original and remastered formats are cataloged as editions of those books, not counted as additional titles.",
+  "catalogEditionNote": "The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father is published as a Remastered Edition, its only public edition. Other remastered formats are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy.",
   "canonicalBooks": [
     {
       "title": "The Spirit of Solomon",
@@ -22,13 +22,13 @@
     },
     {
       "title": "Poems From a Black Boy",
-      "description": "Poetry on Black boyhood, identity, family, faith, survival, and self-definition.",
+      "description": "Poetry on Black boyhood, identity, family, faith, survival, and self-definition. Also published in paperback as Black Boy Poems.",
       "cover": "/covers/kiminou-knox-poems-from-black-boy.jpg"
     },
     {
       "title": "Boys Raised in Silence",
       "description": "Poetry about emotional silence, masculinity, fathers, community, and healing.",
-      "cover": "/covers/boys-raised-in-silence-title-card.svg"
+      "cover": "/covers/kiminou-knox-boys-raised-in-silence-cover.png"
     },
     {
       "title": "Why Did You Ghost Me?",
@@ -36,9 +36,9 @@
       "cover": "/covers/why-did-you-ghost-me.jpg"
     },
     {
-      "title": "Black Boy Poems",
-      "description": "A raw collection of poems on Black boyhood, pain, survival, and identity.",
-      "cover": "/covers/kiminou-knox-black-boy-poems.svg"
+      "title": "My Father",
+      "description": "Poetry on fatherhood, faith, prayer, and grace: love letters to God.",
+      "cover": "/covers/my-father-remastered-edition.jpg"
     },
     {
       "title": "7.16.74: An Ode to Rashida",

@@ -71,6 +71,16 @@
       "source": "/blog/eight-books-before-twenty-why-i-couldnt-stop/",
       "destination": "/blog/ten-books-before-twenty-why-i-couldnt-stop",
       "permanent": true
+    },
+    {
+      "source": "/books/black-boy-poems",
+      "destination": "/books/poems-black-boy",
+      "permanent": true
+    },
+    {
+      "source": "/books/black-boy-poems/",
+      "destination": "/books/poems-black-boy",
+      "permanent": true
     }
   ],
   "rewrites": [

@@ -363,9 +363,9 @@
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg</image:loc>
-      <image:title>Black Boy Poems by Kiminou Knox</image:title>
-      <image:caption>Black Boy Poems book cover by Kiminou Knox.</image:caption>
+      <image:loc>https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg</image:loc>
+      <image:title>My Father by Kiminou Knox</image:title>
+      <image:caption>My Father book cover by Kiminou Knox.</image:caption>
 
     </image:image>
     <image:image>
@@ -375,9 +375,9 @@
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg</image:loc>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence-cover.png</image:loc>
       <image:title>Boys Raised in Silence by Kiminou Knox</image:title>
-      <image:caption>Temporary title card for Boys Raised in Silence by Kiminou Knox. Official cover artwork pending approval.</image:caption>
+      <image:caption>Boys Raised in Silence book cover by Kiminou Knox.</image:caption>
 
     </image:image>
     <image:image>
@@ -712,11 +712,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.kiminouknox.com/books/black-boy-poems</loc>
+    <loc>https://www.kiminouknox.com/books/my-father</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-black-boy-poems.svg</image:loc>
-      <image:title>Black Boy Poems by Kiminou Knox</image:title>
-      <image:caption>Black Boy Poems book cover by Kiminou Knox.</image:caption>
+      <image:loc>https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg</image:loc>
+      <image:title>My Father by Kiminou Knox</image:title>
+      <image:caption>My Father book cover by Kiminou Knox.</image:caption>
 
     </image:image>
   </url>
@@ -732,9 +732,9 @@
   <url>
     <loc>https://www.kiminouknox.com/books/boys-raised-in-silence</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg</image:loc>
+      <image:loc>https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence-cover.png</image:loc>
       <image:title>Boys Raised in Silence by Kiminou Knox</image:title>
-      <image:caption>Temporary title card for Boys Raised in Silence by Kiminou Knox. Official cover artwork pending approval.</image:caption>
+      <image:caption>Boys Raised in Silence book cover by Kiminou Knox.</image:caption>
 
     </image:image>
   </url>
