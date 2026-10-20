@@ -87,8 +87,10 @@ const creativeWorkSchema = {
   url: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
 };
 
+// bwPortrait was retired from kiminouImages.json; an undefined entry here crashed /press
+// and the route error boundary then served it with noindex.
 const pressImages = [
-  KIMINOU_IMAGES.bwPortrait,
+  KIMINOU_IMAGES.officialHeadshot,
   KIMINOU_IMAGES.casualOutdoorPortrait,
   KIMINOU_IMAGES.taunHallEvent,
 ];

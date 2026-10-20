@@ -72,8 +72,9 @@ test("footer links all resolve (internal routes only)", async ({ page, request }
 test("/podcast lists episodes from the build-time feed with playable audio", async ({ page }) => {
   await page.goto("/podcast");
   await expect(page.getByRole("heading", { level: 1, name: "KimYaps" })).toBeVisible({ timeout: 10_000 });
+  // The list renders after /podcast-episodes.json loads; wait on its status line, not a fixed race.
+  await expect(page.getByText(/\d+ episodes, newest first\./)).toBeVisible({ timeout: 30_000 });
   const episodes = page.locator("ol > li");
-  await expect(episodes.first()).toBeVisible({ timeout: 10_000 });
   expect(await episodes.count()).toBeGreaterThan(5);
   await expect(episodes.first().locator("audio source")).toHaveAttribute("src", /^https:\/\//);
 });
