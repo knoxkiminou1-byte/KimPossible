@@ -190,6 +190,8 @@ export default function Home() {
         >
           3D
         </button>
+        {/* The site-wide skip link targets #main-content, so every route needs
+            this landmark — the homepage was missing it entirely. */}
         <main id="main-content">
         {paperMode ? (
           <Suspense fallback={<div className="min-h-screen bg-black" />}>
