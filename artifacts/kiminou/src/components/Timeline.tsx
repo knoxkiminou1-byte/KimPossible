@@ -60,9 +60,9 @@ const timelineEvents: TimelineEvent[] = [
     image: KIMINOU_IMAGES.outdoorPortrait.src
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Miles Hall Foundation Honor",
-    description: "Won essay contest recognizing community leadership and grandmother's legacy continuation",
+    description: "Essay selected as the top essay from the Breaking Barriers Youth Summit (February 2025)",
     achievement: "Community Recognition",
     category: "personal",
     icon: <Heart className="w-5 h-5" />,

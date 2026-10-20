@@ -100,6 +100,19 @@ const discoveredMediumPosts = [
   },
 ];
 
+// Owner-confirmed (2026-10-20): Kiminou Knox holds the rights to the photos under /photos/.
+// Google reads these fields for image license metadata. /media states the reuse terms.
+function photoRights(url) {
+  if (!String(url).includes("/photos/")) return {};
+  return {
+    creator: { "@id": `${SITE_URL}/#person` },
+    creditText: SITE_NAME,
+    copyrightNotice: `© ${SITE_NAME}`,
+    license: `${SITE_URL}/media`,
+    acquireLicensePage: `${SITE_URL}/contact`,
+  };
+}
+
 function absoluteUrl(route) {
   return new URL(route, SITE_URL).toString();
 }
@@ -778,7 +791,9 @@ const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMet
     primaryImageOfPage: {
       "@type": "ImageObject",
       url: primaryImageUrl,
+      contentUrl: primaryImageUrl,
       caption: route.description,
+      ...photoRights(primaryImageUrl),
     },
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
@@ -996,6 +1011,7 @@ const entityProfile = {
       caption: KIMINOU_PHOTOS.officialHeadshot.caption,
       width: KIMINOU_PHOTOS.officialHeadshot.width,
       height: KIMINOU_PHOTOS.officialHeadshot.height,
+      ...photoRights(KIMINOU_PERSON_IMAGE),
     },
     description: SITE_DESCRIPTION,
     birthPlace: "Hayward, California",
@@ -1036,6 +1052,14 @@ fs.writeFileSync(
         description: SITE_DESCRIPTION,
         image: SITE_IMAGE,
         personImage: KIMINOU_PERSON_IMAGE,
+        personImageObject: {
+          "@type": "ImageObject",
+          url: KIMINOU_PERSON_IMAGE,
+          contentUrl: KIMINOU_PERSON_IMAGE,
+          width: KIMINOU_PHOTOS.officialHeadshot.width,
+          height: KIMINOU_PHOTOS.officialHeadshot.height,
+          ...photoRights(KIMINOU_PERSON_IMAGE),
+        },
         sameAs: externalProfiles,
       },
       routes: routeManifestRoutes,

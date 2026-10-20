@@ -13,7 +13,7 @@ const MEASURABLES = [
   { label: "Weight", value: "235 lbs", source: "NCSA" },
   { label: "Position", value: "Forward / Center", source: "MaxPreps" },
   { label: "Class", value: "2025", source: "NCSA" },
-  { label: "School", value: "Cristo Rey De La Salle", source: "MaxPreps" },
+  { label: "School", value: "Ygnacio Valley (Class of 2025)", source: "MaxPreps" },
   { label: "Status", value: "Available for Recruitment", source: "NCSA" },
 ];
 
@@ -104,7 +104,7 @@ export default function Recruiting() {
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
               <p className="text-base text-white/60 max-w-xl leading-relaxed">
-                Forward / Center · Cristo Rey De La Salle · Multi-sport athlete. Measurables, verified profiles, and direct contact for coaches and recruiters.
+                Forward / Center · Ygnacio Valley, Class of 2025 · Multi-sport athlete. Measurables, verified profiles, and direct contact for coaches and recruiters.
               </p>
             </motion.div>
           </div>

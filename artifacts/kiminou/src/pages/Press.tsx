@@ -383,7 +383,7 @@ REMASTERED EDITIONS — 2026
 ATHLETIC PROFILE
 ────────────────
 Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
-School: Cristo Rey De La Salle (formerly Ygnacio Valley)
+School: Ygnacio Valley High School (Class of 2025); earlier seasons at Cristo Rey De La Salle and Bishop O'Dowd
 Status: Available for Collegiate Recruitment
 MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
 NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox

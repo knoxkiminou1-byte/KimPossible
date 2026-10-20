@@ -24,11 +24,11 @@ const LockerRoom3D = lazy(() => import("@/components/LuxuryFX/LockerRoom3D"));
 const measurables = [
   { label: "Height", value: "6'8\"", numericEnd: null, sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
   { label: "Weight", value: "235", numericEnd: 235, unit: "lbs", sub: "Elite Athletic Build", icon: Target, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
-  { label: "Position", value: "F / C", numericEnd: null, sub: "Cristo Rey De La Salle", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
+  { label: "Position", value: "F / C", numericEnd: null, sub: "Ygnacio Valley, Class of 2025", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
 ];
 
 const highlights = [
-  { year: "2025", title: "Varsity Athletic Career", desc: "Competing in basketball and football at Cristo Rey De La Salle, available for collegiate recruitment" },
+  { year: "2025", title: "Graduated, Ygnacio Valley High School", desc: "Finished a varsity basketball and football career at Ygnacio Valley after earlier seasons at Cristo Rey De La Salle and Bishop O'Dowd" },
   { year: "2024", title: "Varsity Captain at Cristo Rey De La Salle", desc: "Led team as captain, demonstrating leadership and athletic excellence on and off the court" },
   { year: "2024", title: "CaliHoop Top Team Selection", desc: "Selected for elite team recognition by CaliHoop, one of the premier AAU evaluation platforms" },
   { year: "2023", title: "Redwood Christian MVP", desc: "Most Valuable Player recognition for outstanding individual performance" },
@@ -207,30 +207,31 @@ export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox — Basketball Athlete Profile | 6'8" Forward/Center, Cristo Rey De La Salle</title>
-        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete (Forward/Center) at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
+        <title>Kiminou Knox — Basketball Athlete Profile | 6'8" Forward/Center, Ygnacio Valley Class of 2025</title>
+        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete (Forward/Center), Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
-        <meta property="og:title" content="Kiminou Knox — Basketball Athlete Profile | Cristo Rey De La Salle" />
-        <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete at Cristo Rey De La Salle. Varsity captain, CaliHoop top-team selection."} />
+        <meta property="og:title" content={"Kiminou Knox — Basketball Athlete Profile | 6'8\" Forward/Center, Ygnacio Valley Class of 2025"} />
+        <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete, Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
-        <meta name="twitter:description" content={"6'8\" multi-sport athlete. Varsity captain. CaliHoop top-team selection. Cristo Rey De La Salle."} />
+        <meta name="twitter:description" content={"6'8\" multi-sport athlete. Former Cristo Rey De La Salle captain. CaliHoop top-team selection. Ygnacio Valley Class of 2025."} />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "Person",
             "@id": `${SITE_URL}/#person`, name: "Kiminou Knox",
-            url: `${SITE_URL}/sports`, sport: "Basketball",
+            url: SITE_URL, sport: "Basketball",
             height: { "@type": "QuantitativeValue", value: 80, unitCode: "INH" },
-            affiliation: [{ "@type": "SportsTeam", name: "Cristo Rey De La Salle Basketball" }],
-            memberOf: [{ "@type": "Organization", name: "Cristo Rey De La Salle Athletics" }],
+            alumniOf: ["Ygnacio Valley High School", "Cristo Rey De La Salle", "Bishop O'Dowd High School"].map(
+              (name) => ({ "@type": "EducationalOrganization", name }),
+            ),
             sameAs: SITE_SAME_AS,
           })}
         </script>

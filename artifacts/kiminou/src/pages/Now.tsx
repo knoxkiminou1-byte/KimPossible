@@ -42,8 +42,8 @@ const NOW_ITEMS: NowItem[] = [
   {
     icon: Trophy,
     label: "Athletics",
-    title: "Senior Season, Cristo Rey De La Salle",
-    detail: "Forward/center, 6'8\". Multi-sport athlete focused on the recruiting process this season.",
+    title: "Basketball and Football",
+    detail: "Forward/center. Ygnacio Valley High School, Class of 2025, after earlier seasons at Cristo Rey De La Salle and Bishop O'Dowd.",
     link: { label: "Athletic profile", href: "/sports" },
   },
   {
