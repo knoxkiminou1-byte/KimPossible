@@ -131,7 +131,7 @@ export default function PoemModal({ title, poems, open, onClose }: Props) {
               ))}
             </div>
             
-            <div className="mt-8 text-white/60 text-sm">
+            <div className="mt-8 text-white/65 text-sm">
               This is a sample from {title}. Get the full collection to read all poems.
             </div>
           </div>

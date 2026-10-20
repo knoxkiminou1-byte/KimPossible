@@ -187,7 +187,7 @@ function BookEntry({ book, index }: { book: Book; index: number }) {
     >
       <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
         <div className="flex-shrink-0 w-24">
-          <span className="text-xs uppercase tracking-[0.3em] text-amber-400/40 font-medium">{book.category}</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-amber-400/66 font-medium">{book.category}</span>
         </div>
         <div className="flex-1">
           <div className="flex items-start justify-between gap-4 mb-3">
@@ -195,18 +195,18 @@ function BookEntry({ book, index }: { book: Book; index: number }) {
               <h3 className="font-serif text-xl md:text-2xl font-light text-white/90 group-hover:text-amber-100 transition-colors duration-300 leading-tight">
                 {book.title}
               </h3>
-              <p className="text-sm text-white/35 mt-1 uppercase tracking-[0.15em]">
+              <p className="text-sm text-white/57 mt-1 uppercase tracking-[0.15em]">
                 {book.author}{book.year ? ` — ${book.year}` : ""}
               </p>
             </div>
             {book.link && (
               <a href={book.link} target="_blank" rel="noopener noreferrer"
-                className="flex-shrink-0 flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-amber-400/40 hover:text-amber-300 transition-colors duration-300 mt-1">
+                className="flex-shrink-0 flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-amber-400/66 hover:text-amber-300 transition-colors duration-300 mt-1">
                 Find it <ExternalLink className="w-3 h-3" />
               </a>
             )}
           </div>
-          <p className="text-sm text-white/50 leading-relaxed italic">
+          <p className="text-sm text-white/62 leading-relaxed italic">
             "{book.why}"
           </p>
         </div>
@@ -262,13 +262,13 @@ export default function ReadingList() {
             <motion.div initial={{ opacity: 0, y: 24 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Curated by Kiminou</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Curated by Kiminou</p>
               <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6">
                 Reading<br />
                 <span className="italic text-amber-200/90">List</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Books that shaped how I think, write, and compete. Not a syllabus — a survival kit. Each one earned its place.
               </p>
             </motion.div>
@@ -282,7 +282,7 @@ export default function ReadingList() {
               <Reveal delay={0}>
                 <div className="mb-10">
                   <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-2">{section.heading}</h2>
-                  <p className="text-sm text-white/35 uppercase tracking-[0.2em]">{section.subheading}</p>
+                  <p className="text-sm text-white/57 uppercase tracking-[0.2em]">{section.subheading}</p>
                   <div className="w-10 h-px bg-amber-400/40 mt-5" />
                 </div>
               </Reveal>
@@ -298,11 +298,11 @@ export default function ReadingList() {
           {/* ─── CTA ─── */}
           <Reveal>
             <div className="border border-amber-400/15 bg-amber-400/[0.02] p-10 md:p-14 text-center">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Your Turn</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">Your Turn</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-4">
                 Now read mine.
               </h2>
-              <p className="text-white/40 text-sm leading-relaxed max-w-md mx-auto mb-8">
+              <p className="text-white/58 text-sm leading-relaxed max-w-md mx-auto mb-8">
                 Everything on this list influenced the Black Boy Lie universe. See where it went.
               </p>
               <Link href="/books">

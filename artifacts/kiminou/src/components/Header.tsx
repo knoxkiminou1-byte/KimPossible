@@ -55,7 +55,7 @@ function MagneticNavLink({ href, label, active, index }: { href: string; label: 
       <motion.span
         ref={ref}
         className={`relative text-xs uppercase tracking-[0.18em] font-medium cursor-pointer transition-colors duration-300 inline-block ${
-          active ? "text-amber-300" : "text-white/60 hover:text-white"
+          active ? "text-amber-300" : "text-white/65 hover:text-white"
         }`}
         style={{ x: rawX, y: rawY }}
         initial={{ opacity: 0, y: -8 }}
@@ -107,7 +107,7 @@ function InkPaperToggle({ isPaper, onToggle }: { isPaper: boolean; onToggle: () 
             initial={{ opacity: 0, y: 4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
-            className="text-[8px] uppercase tracking-[0.35em] text-white/30 group-hover:text-amber-400/60"
+            className="text-[8px] uppercase tracking-[0.35em] text-white/55 group-hover:text-amber-400/72"
           >
             ◻ Paper
           </motion.span>
@@ -261,7 +261,7 @@ export default function Header() {
             ))}
             <button
               onClick={toggle}
-              className={`text-sm uppercase tracking-[0.3em] mt-4 ${isPaper ? "text-amber-800/50" : "text-white/30"}`}
+              className={`text-sm uppercase tracking-[0.3em] mt-4 ${isPaper ? "text-amber-800/50" : "text-white/55"}`}
             >
               {isPaper ? "◼ Switch to Ink" : "◻ Switch to Paper"}
             </button>

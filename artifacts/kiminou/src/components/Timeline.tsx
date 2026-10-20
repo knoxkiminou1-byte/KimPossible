@@ -60,9 +60,9 @@ const timelineEvents: TimelineEvent[] = [
     image: KIMINOU_IMAGES.outdoorPortrait.src
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Miles Hall Foundation Honor",
-    description: "Won essay contest recognizing community leadership and grandmother's legacy continuation",
+    description: "Essay selected as the top essay from the Breaking Barriers Youth Summit (February 2025)",
     achievement: "Community Recognition",
     category: "personal",
     icon: <Heart className="w-5 h-5" />,
@@ -347,7 +347,7 @@ export default function Timeline() {
                       }`}></div>
 
                       {/* Tap/Click Indicator for Mobile */}
-                      <div className="md:hidden absolute top-4 left-4 text-xs text-muted-foreground/60 font-medium">
+                      <div className="md:hidden absolute top-4 left-4 text-xs text-muted-foreground font-medium">
                         {isExpanded ? 'Tap to close' : 'Tap to expand'}
                       </div>
                     </div>

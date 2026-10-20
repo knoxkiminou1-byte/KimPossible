@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox | Author, Athlete, Speaker, Podcast Host</title>
+        <title>Kiminou Knox | Author, Poet, and Host of KimYaps</title>
         <meta name="description" content="Official site of Kiminou Knox — Bay Area raised, New Orleans based author and poet of ten books. Host of KimYaps. Director at AAFC. Explore books, essays, and booking information." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`${SITE_URL}/`} />
@@ -134,7 +134,7 @@ export default function Home() {
         <meta name="theme-color" content="#090705" />
         
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
+        <meta property="og:title" content="Kiminou Knox | Author, Poet, and Host of KimYaps" />
         <meta property="og:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:image" content={SITE_IMAGE} />
@@ -145,7 +145,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={SITE_TWITTER} />
         <meta name="twitter:creator" content={SITE_TWITTER} />
-        <meta name="twitter:title" content="Kiminou Knox | Author, Athlete, Speaker, Podcast Host" />
+        <meta name="twitter:title" content="Kiminou Knox | Author, Poet, and Host of KimYaps" />
         <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
         <meta name="twitter:image" content={SITE_IMAGE} />
         

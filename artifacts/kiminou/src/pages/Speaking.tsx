@@ -121,7 +121,7 @@ function TalkCard({ talk, index }: { talk: typeof talks[0]; index: number }) {
         <span className="font-serif text-4xl text-white/6 font-light group-hover:text-amber-400/12 transition-colors duration-400 hidden md:block">{talk.num}</span>
         <div>
           <h3 className="font-serif text-2xl md:text-3xl font-light text-white mb-3 group-hover:text-amber-100 transition-colors duration-300">{talk.title}</h3>
-          <p className="text-white/45 leading-relaxed max-w-2xl">{talk.full}</p>
+          <p className="text-white/60 leading-relaxed max-w-2xl">{talk.full}</p>
           <motion.div initial={false} animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }}
             transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }} className="overflow-hidden">
             <div className="pt-6 space-y-4">
@@ -132,12 +132,12 @@ function TalkCard({ talk, index }: { talk: typeof talks[0]; index: number }) {
           </motion.div>
           <div className="flex flex-wrap gap-2 mt-4">
             {talk.tags.map(tag => (
-              <span key={tag} className="px-3 py-1 border border-white/8 text-xs uppercase tracking-[0.15em] text-white/30 rounded-full">{tag}</span>
+              <span key={tag} className="px-3 py-1 border border-white/8 text-xs uppercase tracking-[0.15em] text-white/55 rounded-full">{tag}</span>
             ))}
           </div>
         </div>
         <div className="flex-shrink-0 hidden md:flex items-center justify-center w-10 h-10 border border-white/10 group-hover:border-amber-400/30 transition-colors duration-300 mt-1">
-          <motion.span className="text-amber-400/50 text-lg leading-none" animate={{ rotate: expanded ? 45 : 0 }} transition={{ duration: 0.3 }}>+</motion.span>
+          <motion.span className="text-amber-400/69 text-lg leading-none" animate={{ rotate: expanded ? 45 : 0 }} transition={{ duration: 0.3 }}>+</motion.span>
         </div>
       </button>
     </motion.div>
@@ -208,15 +208,15 @@ function RadioStation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10" ref={sectionRef}>
         <Reveal className="mb-16">
           <div className="flex items-center gap-4 mb-4">
-            <Radio className="w-5 h-5 text-amber-400/60" />
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 font-medium">KimYaps · Live Broadcast</p>
+            <Radio className="w-5 h-5 text-amber-400/72" />
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 font-medium">KimYaps · Live Broadcast</p>
           </div>
           <h2 className="font-serif text-4xl md:text-6xl font-light text-white mb-4">
             Tune In to<br />
             <span className="italic text-amber-200/90">KimYaps FM</span>
           </h2>
           <div className="w-12 h-px bg-amber-400/40 mt-6" />
-          <p className="text-white/40 max-w-lg mt-5 leading-relaxed">
+          <p className="text-white/58 max-w-lg mt-5 leading-relaxed">
             Drag the dial to 97.3 to unlock the broadcast. Honest conversations about pain, purpose, and grace — hosted by Kiminou Knox.
           </p>
         </Reveal>
@@ -235,7 +235,7 @@ function RadioStation() {
                 <ExternalLink className="w-3.5 h-3.5" /> Apple Podcasts
               </motion.a>
               <motion.a href={PODCAST_SPOTIFY} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/60 text-xs uppercase tracking-[0.14em] hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/65 text-xs uppercase tracking-[0.14em] hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300"
                 whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <ExternalLink className="w-3.5 h-3.5" /> Spotify
               </motion.a>
@@ -250,7 +250,7 @@ function RadioStation() {
               ].map(s => (
                 <div key={s.label} className="flex items-center gap-4 border-b border-white/6 pb-3">
                   <span className="font-serif text-2xl text-amber-300/80 w-16 shrink-0">{s.val}</span>
-                  <span className="text-xs uppercase tracking-[0.25em] text-white/35">{s.label}</span>
+                  <span className="text-xs uppercase tracking-[0.25em] text-white/57">{s.label}</span>
                 </div>
               ))}
             </div>
@@ -279,13 +279,13 @@ function RadioStation() {
                   >
                     <div className="flex items-start justify-between gap-5 mb-4">
                       <div>
-                        <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/60 mb-2">
+                        <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/72 mb-2">
                           Now Playing
                         </p>
                         <h3 className="font-serif text-2xl text-white/90 font-light">
                           {activeLocalEpisode.title}
                         </h3>
-                        <p className="text-xs uppercase tracking-[0.24em] text-white/25 mt-2">
+                        <p className="text-xs uppercase tracking-[0.24em] text-white/53 mt-2">
                           {activeLocalEpisode.label} · {activeLocalEpisode.duration}
                         </p>
                       </div>
@@ -318,7 +318,7 @@ function RadioStation() {
                             className={`min-h-14 text-left px-4 py-3 border transition-colors duration-300 ${
                               active
                                 ? "border-amber-400/45 bg-amber-400/10 text-amber-100"
-                                : "border-white/8 bg-black/25 text-white/45 hover:border-white/20 hover:text-white/70"
+                                : "border-white/8 bg-black/25 text-white/60 hover:border-white/20 hover:text-white/70"
                             }`}
                           >
                             <span className="block text-[10px] uppercase tracking-[0.22em]">
@@ -335,8 +335,8 @@ function RadioStation() {
 
                   <div className="mt-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <Headphones className="w-4 h-4 text-amber-400/50" />
-                      <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 font-medium">
+                      <Headphones className="w-4 h-4 text-amber-400/69" />
+                      <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 font-medium">
                         Popular Episodes First
                       </p>
                     </div>
@@ -349,10 +349,10 @@ function RadioStation() {
                         >
                           <div className="flex items-center justify-between gap-4 mb-3 px-1">
                             <div className="flex items-center gap-3 min-w-0">
-                              <span className="font-serif text-lg text-white/20 w-7 shrink-0">{episode.rank}</span>
+                              <span className="font-serif text-lg text-white/52 w-7 shrink-0">{episode.rank}</span>
                               <p className="text-sm text-white/65 leading-tight truncate">{episode.title}</p>
                             </div>
-                            <span className="text-[10px] uppercase tracking-[0.18em] text-white/25 shrink-0">
+                            <span className="text-[10px] uppercase tracking-[0.18em] text-white/53 shrink-0">
                               {episode.duration}
                             </span>
                           </div>
@@ -372,8 +372,8 @@ function RadioStation() {
 
                   <div className="mt-5 border border-white/8 bg-black/35 p-3" onPointerDown={pauseLocalForSpotify}>
                     <div className="flex items-center justify-between gap-4 mb-3 px-1">
-                      <p className="text-sm text-white/50">Full KimYaps show</p>
-                      <a href={PODCAST_SPOTIFY} target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.2em] text-amber-400/60 hover:text-amber-300 transition-colors">
+                      <p className="text-sm text-white/62">Full KimYaps show</p>
+                      <a href={PODCAST_SPOTIFY} target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.2em] text-amber-400/72 hover:text-amber-300 transition-colors">
                         Spotify
                       </a>
                     </div>
@@ -387,14 +387,15 @@ function RadioStation() {
                       style={{ border: "none", display: "block", borderRadius: 2 }}
                     />
                   </div>
-                  <p className="text-xs text-white/25 leading-relaxed mt-4">
+                  <p className="text-xs text-white/53 leading-relaxed mt-4">
                     Also on{" "}
-                    <a href={PODCAST_APPLE} target="_blank" rel="noopener noreferrer" className="text-amber-400/60 hover:text-amber-300 transition-colors">Apple Podcasts</a>
-                    . New episodes monthly.
+                    <a href={PODCAST_APPLE} target="_blank" rel="noopener noreferrer" className="text-amber-400/72 hover:text-amber-300 transition-colors">Apple Podcasts</a>
+, or{" "}
+                    <a href="/podcast" className="text-amber-400/72 hover:text-amber-300 transition-colors">browse every episode</a>.
                   </p>
-                  <div className="mt-5 border border-amber-400/15 bg-amber-400/4 p-4 text-xs text-white/40 leading-relaxed">
-                    <span className="text-amber-400/70 font-semibold uppercase tracking-wider text-[10px]">Note — </span>
-                    Some older episodes reference <span className="text-white/60">@Kiminou</span> on X. The correct handle is{" "}
+                  <div className="mt-5 border border-amber-400/15 bg-amber-400/4 p-4 text-xs text-white/58 leading-relaxed">
+                    <span className="text-amber-400/75 font-semibold uppercase tracking-wider text-[10px]">Note — </span>
+                    Some older episodes reference <span className="text-white/65">@Kiminou</span> on X. The correct handle is{" "}
                     <a href="https://x.com/KnoxKiminou" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">@KnoxKiminou</a>.
                   </div>
                 </motion.div>
@@ -446,10 +447,10 @@ function RadioStation() {
                           ))}
                         </div>
 
-                        <p className="text-sm text-white/35 leading-relaxed max-w-xs mx-auto text-center">
+                        <p className="text-sm text-white/57 leading-relaxed max-w-xs mx-auto text-center">
                           {info.desc}
                         </p>
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-white/15 mt-5 text-center">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mt-5 text-center">
                           Streaming through the receiver
                         </p>
                       </div>
@@ -473,11 +474,11 @@ function RadioStation() {
                         transition={{ duration: 2.4, delay: i * 0.7, repeat: Infinity, ease: "easeOut" }}
                         style={{ width: 40, height: 40 }} />
                     ))}
-                    <Radio className="w-8 h-8 text-amber-400/40" />
+                    <Radio className="w-8 h-8 text-amber-400/66" />
                   </div>
                   <div>
-                    <p className="font-serif text-xl text-white/30 mb-2">Signal not found</p>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/18">Drag the dial to tune in</p>
+                    <p className="font-serif text-xl text-white/55 mb-2">Signal not found</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/51">Drag the dial to tune in</p>
                   </div>
                   <motion.div className="w-32 h-px"
                     style={{ background: "linear-gradient(90deg,transparent,rgba(245,158,11,0.4),transparent)" }}
@@ -551,8 +552,8 @@ export default function Speaking() {
               <motion.div className="flex items-center gap-3 mb-5"
                 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}>
-                <Mic className="w-4 h-4 text-amber-400/60" />
-                <p className="text-xs uppercase tracking-[0.55em] text-amber-400/70">Speaking · KimYaps Podcast</p>
+                <Mic className="w-4 h-4 text-amber-400/72" />
+                <p className="text-xs uppercase tracking-[0.55em] text-amber-400/75">Speaking · KimYaps Podcast</p>
               </motion.div>
               <motion.h1 className="font-serif font-light leading-none mb-8"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}>
@@ -575,13 +576,13 @@ export default function Speaking() {
           <section className="py-20 border-t border-white/6">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <Reveal className="mb-12">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Talk Topics</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4 font-medium">Talk Topics</p>
                 <div className="flex flex-col md:flex-row md:items-end gap-6">
                   <h2 className="font-serif text-4xl md:text-5xl font-light text-white">What I Speak On</h2>
                   <div className="flex flex-wrap gap-2 md:ml-auto">
                     {AUDIENCES.map(a => (
                       <button key={a} onClick={() => setAudience(a)}
-                        className={`px-4 py-2 text-xs uppercase tracking-[0.18em] border transition-all duration-300 ${audience === a ? "border-amber-400/60 bg-amber-400/10 text-amber-300" : "border-white/10 text-white/35 hover:border-white/25 hover:text-white/60"}`}>
+                        className={`px-4 py-2 text-xs uppercase tracking-[0.18em] border transition-all duration-300 ${audience === a ? "border-amber-400/60 bg-amber-400/10 text-amber-300" : "border-white/10 text-white/57 hover:border-white/25 hover:text-white/65"}`}>
                         {a}
                       </button>
                     ))}
@@ -593,7 +594,7 @@ export default function Speaking() {
                 {filtered.map((t, i) => <TalkCard key={t.num} talk={t} index={i} />)}
                 {filtered.length === 0 && (
                   <div className="py-20 text-center">
-                    <p className="font-serif text-xl text-white/30">No talks match this audience type.</p>
+                    <p className="font-serif text-xl text-white/55">No talks match this audience type.</p>
                   </div>
                 )}
               </div>
@@ -604,7 +605,7 @@ export default function Speaking() {
           <section className="py-20 border-t border-white/6">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
               <Reveal className="mb-12">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">In The Room</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4 font-medium">In The Room</p>
                 <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-2">See Kiminou Speak</h2>
                 <div className="w-12 h-px bg-amber-400/40 mt-6" />
               </Reveal>
@@ -622,7 +623,7 @@ export default function Speaking() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/70 mb-1">Live Event · 2025</p>
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/75 mb-1">Live Event · 2025</p>
                       <p className="font-serif text-lg text-white/90 font-light">Youth Summit — with Taun Hall</p>
                     </div>
                   </div>
@@ -642,7 +643,7 @@ export default function Speaking() {
                           </motion.div>
                           <div className="text-center">
                             <p className="font-serif text-xl text-white/90 mb-0.5">More on YouTube</p>
-                            <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60">@KiminouKnoxOfficial</p>
+                            <p className="text-xs uppercase tracking-[0.3em] text-amber-400/72">@KiminouKnoxOfficial</p>
                           </div>
                         </a>
                       </div>
@@ -650,8 +651,8 @@ export default function Speaking() {
 
                     {/* Caption block */}
                     <div className="border border-white/6 p-6 bg-white/[0.02]">
-                      <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/50 mb-3">Speaking Format</p>
-                      <p className="text-white/50 text-sm leading-relaxed">
+                      <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/69 mb-3">Speaking Format</p>
+                      <p className="text-white/62 text-sm leading-relaxed">
                         Kiminou speaks directly and without performance — on discipline, identity, faith, and the cost of silence. Assemblies, team events, community gatherings.
                       </p>
                     </div>
@@ -665,12 +666,12 @@ export default function Speaking() {
           <section className="py-24 border-t border-white/6">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
               <Reveal className="mb-12">
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4 font-medium">Book Now</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4 font-medium">Book Now</p>
                 <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-4">
                   Request an<br /><span className="italic text-amber-200/90">Engagement</span>
                 </h2>
                 <div className="w-12 h-px bg-amber-400/40 mt-6 mb-6" />
-                <p className="text-white/45 leading-relaxed">
+                <p className="text-white/60 leading-relaxed">
                   Share the event, audience, and what you want the room to leave with. I'll get back to you personally.
                 </p>
               </Reveal>

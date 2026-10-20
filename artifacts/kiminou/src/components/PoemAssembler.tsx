@@ -54,13 +54,13 @@ export default function PoemAssembler() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-3 font-medium">
+          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/69 mb-3 font-medium">
             A Poem in Motion
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-light text-white/90 italic">
             {POEM_TITLE}
           </h2>
-          <p className="text-xs text-white/25 mt-2 tracking-[0.2em] uppercase">
+          <p className="text-xs text-white/53 mt-2 tracking-[0.2em] uppercase">
             from {POEM_SOURCE}
           </p>
           <div className="mt-6 w-10 h-px bg-amber-400/30 mx-auto" />

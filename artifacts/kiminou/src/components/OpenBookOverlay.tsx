@@ -89,14 +89,14 @@ export default function OpenBookOverlay({ book, onClose }: Props) {
         ref={closeButtonRef}
         onClick={onClose}
         aria-label="Close preview"
-        className="absolute top-6 right-6 z-50 w-10 h-10 flex items-center justify-center border border-white/15 text-white/40 hover:text-white hover:border-white/50 transition-all rounded-full"
+        className="absolute top-6 right-6 z-50 w-10 h-10 flex items-center justify-center border border-white/15 text-white/58 hover:text-white hover:border-white/50 transition-all rounded-full"
       >
         <X className="w-4 h-4" />
       </button>
 
       {/* Label */}
       <motion.p
-        className="absolute top-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-amber-400/50 font-medium"
+        className="absolute top-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-amber-400/69 font-medium"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}

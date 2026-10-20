@@ -48,11 +48,11 @@ export default class RouteErrorBoundary extends Component<Props, State> {
         </Helmet>
         <main id="main-content" className="min-h-screen bg-black text-white flex items-center">
           <div className="max-w-2xl mx-auto px-6 py-24">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-6">Kiminou Knox</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-6">Kiminou Knox</p>
             <h1 className="font-serif text-4xl md:text-5xl font-light mb-6">
               This page is catching its breath.
             </h1>
-            <p className="text-white/50 leading-relaxed mb-10">
+            <p className="text-white/62 leading-relaxed mb-10">
               Something on this page failed to load. Everything else on the site is still here —
               pick up wherever you like.
             </p>

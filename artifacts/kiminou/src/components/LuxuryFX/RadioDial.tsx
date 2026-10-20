@@ -487,7 +487,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
                 style={{ color: locked ? "rgba(134,239,172,0.8)" : "rgba(245,158,11,0.6)" }}>
                 KimYaps Studio
               </p>
-              <p className="text-[7px] uppercase tracking-[0.3em] text-white/20">Broadcast Receiver · Model KY-273</p>
+              <p className="text-[7px] uppercase tracking-[0.3em] text-white/52">Broadcast Receiver · Model KY-273</p>
             </div>
           </div>
           {/* On-Air indicator */}
@@ -556,7 +556,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
                       style={{ color: "rgba(134,239,172,0.8)" }}>{lockedPreset?.label ?? "KimYaps"} FM</span>
                   </motion.div>
                 ) : (
-                  <motion.p key="scan" className="text-[8px] uppercase tracking-[0.3em] text-white/20"
+                  <motion.p key="scan" className="text-[8px] uppercase tracking-[0.3em] text-white/52"
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                     {PRESETS.find(p => angleDiff(angle, p.angle) < 15)?.label ?? "· · · · ·"}
                   </motion.p>
@@ -576,7 +576,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
               {["88", "", "", "92", "", "", "96", "", "", "100", "", "", "104", "", "", "108"].map((f, i) => (
                 <div key={i} className="flex flex-col items-center" style={{ flex: 1 }}>
                   <div className="w-px mb-0.5" style={{ height: f ? 8 : 5, background: f ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.07)" }} />
-                  {f && <span className="text-[6px] text-white/20 font-mono">{f}</span>}
+                  {f && <span className="text-[6px] text-white/52 font-mono">{f}</span>}
                 </div>
               ))}
             </div>
@@ -652,7 +652,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
               <div className="flex items-center gap-4">
                 <div className="flex flex-col items-center gap-1.5">
                   <span className="text-[7px] uppercase tracking-[0.4em]"
-                    style={{ color: "rgba(255,255,255,0.2)" }}>Tune</span>
+                    style={{ color: "rgba(255,255,255,0.52)" }}>Tune</span>
                   <div ref={dialRef} className="relative cursor-grab active:cursor-grabbing"
                     style={{ width: 90, height: 90 }}
                     onPointerDown={onPointerDown}>
@@ -737,7 +737,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
                   {/* Signal bars */}
                   <div>
                     <p className="text-[7px] uppercase tracking-[0.3em] mb-1.5"
-                      style={{ color: "rgba(255,255,255,0.2)" }}>Signal</p>
+                      style={{ color: "rgba(255,255,255,0.52)" }}>Signal</p>
                     <div className="flex items-end gap-1">
                       {[0.18, 0.36, 0.54, 0.72, 0.9].map((t, i) => (
                         <div key={i} className="rounded-sm transition-all duration-150"
@@ -770,7 +770,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
                   <AnimatePresence>
                     {!hasStarted && (
                       <motion.p className="text-[7px] uppercase tracking-[0.25em] text-center"
-                        style={{ color: "rgba(245,158,11,0.45)" }}
+                        style={{ color: "rgba(245,158,11,0.7)" }}
                         animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}
                         exit={{ opacity: 0 }}>
                         drag dial or tap ⇒
@@ -787,7 +787,7 @@ export default function RadioDial({ onLock }: { onLock?: (locked: boolean, freq:
               {["Vol", "Bass", "Treb"].map((label, i) => (
                 <div key={label} className="flex items-center gap-1.5">
                   <span className="text-[6px] uppercase tracking-[0.2em]"
-                    style={{ color: "rgba(255,255,255,0.15)" }}>{label}</span>
+                    style={{ color: "rgba(255,255,255,0.5)" }}>{label}</span>
                   <div className="w-7 h-7 rounded-full cursor-default"
                     style={{
                       background: "radial-gradient(circle at 40% 35%, #1e2230, #0d0f14)",

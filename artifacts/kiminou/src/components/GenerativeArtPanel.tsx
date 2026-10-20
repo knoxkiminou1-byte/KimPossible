@@ -113,7 +113,7 @@ export default function GenerativeArtPanel() {
 
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
         <motion.p
-          className="text-[10px] uppercase tracking-[0.5em] text-amber-400/40 mb-4"
+          className="text-[10px] uppercase tracking-[0.5em] text-amber-400/66 mb-4"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.5 }}
@@ -121,7 +121,7 @@ export default function GenerativeArtPanel() {
           Generative — Always Different
         </motion.p>
         <motion.h2
-          className="font-serif text-3xl md:text-5xl font-light text-white/20 text-center"
+          className="font-serif text-3xl md:text-5xl font-light text-white/52 text-center"
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.7, duration: 0.8 }}

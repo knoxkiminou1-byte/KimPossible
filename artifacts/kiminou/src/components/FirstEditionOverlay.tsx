@@ -80,7 +80,7 @@ export default function FirstEditionOverlay() {
               className="flex items-center gap-3"
             >
               <div className="w-12 h-px bg-amber-400/30" />
-              <span className="text-[9px] uppercase tracking-[0.55em] text-amber-400/50 font-medium">First Edition</span>
+              <span className="text-[9px] uppercase tracking-[0.55em] text-amber-400/69 font-medium">First Edition</span>
               <div className="w-12 h-px bg-amber-400/30" />
             </motion.div>
 
@@ -109,7 +109,7 @@ export default function FirstEditionOverlay() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.8, duration: 1 }}
-              className="font-serif text-base md:text-lg italic text-white/50 leading-relaxed whitespace-pre-line"
+              className="font-serif text-base md:text-lg italic text-white/62 leading-relaxed whitespace-pre-line"
             >
               "{POEM_LINE}"
             </motion.p>
@@ -118,7 +118,7 @@ export default function FirstEditionOverlay() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.2 }}
-              className="text-[9px] uppercase tracking-[0.4em] text-amber-400/30"
+              className="text-[9px] uppercase tracking-[0.4em] text-amber-400/63"
             >
               — The Spirit of Solomon
             </motion.p>
@@ -147,7 +147,7 @@ export default function FirstEditionOverlay() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 3 }}
-              className="text-[9px] text-white/15 uppercase tracking-[0.3em]"
+              className="text-[9px] text-white/50 uppercase tracking-[0.3em]"
             >
               Author · Athlete · Entrepreneur
             </motion.p>

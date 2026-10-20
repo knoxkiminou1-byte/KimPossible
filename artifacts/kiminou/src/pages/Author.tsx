@@ -84,7 +84,7 @@ function StatBar({ label, value, pct, index }: { label: string; value: string; p
   return (
     <div ref={ref}>
       <div className="flex justify-between text-xs mb-2">
-        <span className="uppercase tracking-[0.2em] text-white/40">{label}</span>
+        <span className="uppercase tracking-[0.2em] text-white/58">{label}</span>
         <span className="text-amber-300/80 font-medium">{value}</span>
       </div>
       <div className="h-px bg-white/8">
@@ -123,8 +123,8 @@ function PullQuote({ quote, delay = 0 }: { quote: { text: string; author: string
       </p>
       <div className="mt-8 flex items-center gap-4">
         <div className="w-8 h-px bg-amber-400/50" />
-        <p className="text-xs uppercase tracking-[0.25em] text-amber-400/70">
-          {quote.author}{quote.source && <span className="text-white/30 normal-case not-italic tracking-normal font-sans ml-2">· {quote.source}</span>}
+        <p className="text-xs uppercase tracking-[0.25em] text-amber-400/75">
+          {quote.author}{quote.source && <span className="text-white/55 normal-case not-italic tracking-normal font-sans ml-2">· {quote.source}</span>}
         </p>
       </div>
     </motion.div>
@@ -147,7 +147,7 @@ function TreeNode({ role, name, delay = 0, center = false, featured = false }: {
       {featured && (
         <div className="absolute -inset-px border border-amber-400/30 pointer-events-none" />
       )}
-      <p className={`text-[9px] uppercase tracking-[0.3em] mb-1.5 ${featured ? "text-amber-400" : "text-amber-400/50"}`}>
+      <p className={`text-[9px] uppercase tracking-[0.3em] mb-1.5 ${featured ? "text-amber-400" : "text-amber-400/69"}`}>
         {role}
       </p>
       <p className={`font-serif leading-snug ${featured ? "text-base text-amber-100" : "text-sm text-white/80"}`}>
@@ -163,7 +163,7 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
   return (
     <motion.div ref={ref} initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }} className="mb-12">
-      <p className="text-xs uppercase tracking-[0.45em] text-amber-400/60 mb-4 font-medium">{eyebrow}</p>
+      <p className="text-xs uppercase tracking-[0.45em] text-amber-400/72 mb-4 font-medium">{eyebrow}</p>
       <GlitchHeading as="h2" className="font-serif text-4xl md:text-5xl font-light text-white leading-tight">{title}</GlitchHeading>
       <div className="w-12 h-px bg-amber-400/50 mt-6" />
     </motion.div>
@@ -256,7 +256,7 @@ export default function Author() {
                 transition={{ delay: 1.4 + i * 0.1, duration: 0.5 }}
                 whileHover={{ borderColor: "rgba(251,191,36,0.6)", x: -4 }}>
                 <div className="font-serif text-xl text-amber-300 font-light leading-none">{c.label}</div>
-                <div className="text-[10px] uppercase tracking-[0.25em] text-white/40 mt-0.5">{c.sub}</div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-white/58 mt-0.5">{c.sub}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -264,7 +264,7 @@ export default function Author() {
           {/* Hero content */}
           <motion.div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 pb-20 md:pb-32 w-full"
             style={{ opacity: heroOpacity }}>
-            <motion.p className="text-xs uppercase tracking-[0.55em] text-amber-400/70 mb-6"
+            <motion.p className="text-xs uppercase tracking-[0.55em] text-amber-400/75 mb-6"
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}>
               Author Profile
@@ -311,7 +311,7 @@ export default function Author() {
               transition={{ delay: 2 }}>
               {["Author", "Poet", "Athlete", "Director", "Podcaster"].map((tag, i) => (
                 <motion.span key={tag}
-                  className="px-4 py-1.5 border border-white/15 text-xs uppercase tracking-[0.2em] text-white/50 hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300 cursor-default"
+                  className="px-4 py-1.5 border border-white/15 text-xs uppercase tracking-[0.2em] text-white/62 hover:border-amber-400/50 hover:text-amber-300 transition-all duration-300 cursor-default"
                   initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2.1 + i * 0.08 }}>
                   {tag}
@@ -324,7 +324,7 @@ export default function Author() {
           <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }}>
             <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-              <ChevronDown className="w-6 h-6 text-white/30" />
+              <ChevronDown className="w-6 h-6 text-white/55" />
             </motion.div>
           </motion.div>
         </section>
@@ -341,17 +341,17 @@ export default function Author() {
               <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch border border-white/8 bg-white/[0.025] p-4 md:p-6">
                 <div className="relative min-h-[440px] overflow-hidden bg-white/[0.03]">
                   <img
-                    src="/photos/kiminou-knox-bw-portrait.png"
-                    alt="Kiminou Knox black and white author portrait"
+                    src="/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg"
+                    alt="Kiminou Knox official author headshot"
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex flex-col justify-center p-4 md:p-8">
-                  <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/60 mb-5">Press Image</p>
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/72 mb-5">Press Image</p>
                   <h2 className="font-serif text-3xl md:text-4xl font-light text-white mb-5">The face behind the work.</h2>
-                  <p className="text-white/55 leading-relaxed text-lg">
+                  <p className="text-white/63 leading-relaxed text-lg">
                     The public voice, the court discipline, and the written work all belong to one body of proof: a Bay Area raised author building a life in full view.
                   </p>
                 </div>
@@ -410,25 +410,25 @@ export default function Author() {
             <SectionHeading eyebrow="Ten Published Books" title="Literary Work & Themes" />
             <div className="grid md:grid-cols-2 gap-10">
               <Reveal>
-                <p className="text-white/60 text-lg leading-relaxed">
+                <p className="text-white/65 text-lg leading-relaxed">
                   Kiminou Knox is the author of ten books that form a literary universe centered on faith, Black boyhood, family, love, grief, imagination, and legacy. His work moves fluidly across poetry, children's storytelling, and prophetic reflection.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
-                <p className="text-white/60 text-lg leading-relaxed">
+                <p className="text-white/65 text-lg leading-relaxed">
                   His pages are filled with faith, mental health, generational trauma, masculinity, family fracture, love, and longing, all rendered with clinical honesty and lyrical precision. Knox refuses to sand down pain into something easy to consume.
                 </p>
               </Reveal>
             </div>
             <Reveal delay={0.2}>
-              <p className="text-white/60 text-lg leading-relaxed mt-8 max-w-3xl">
+              <p className="text-white/65 text-lg leading-relaxed mt-8 max-w-3xl">
                 Across his body of work, Black boys are not symbols or headlines; they are complex, vulnerable, searching human beings whose emotions are allowed to be expansive and exact. In a culture that often demands performance, Knox writes toward the parts of life that usually remain unspoken.
               </p>
             </Reveal>
 
             <div className="mt-16 space-y-4">
               <Reveal>
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/50 mb-8">Voice, Form & Craft</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/69 mb-8">Voice, Form & Craft</p>
               </Reveal>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
@@ -440,7 +440,7 @@ export default function Author() {
                     <div className="border border-white/8 p-6 hover:border-amber-400/25 transition-colors duration-500 group">
                       <div className="w-8 h-px bg-amber-400/40 mb-5 group-hover:w-12 transition-all duration-500" />
                       <h4 className="font-serif text-lg text-white mb-3">{item.title}</h4>
-                      <p className="text-white/45 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -477,11 +477,11 @@ export default function Author() {
               ].map((item, i) => (
                 <Reveal key={i} delay={i * 0.15}>
                   <div className="relative p-8 bg-gradient-to-b from-white/[0.03] to-transparent border border-white/8 hover:border-amber-400/20 transition-all duration-500 group h-full">
-                    <span className="text-amber-400/40 text-3xl font-serif mb-6 block group-hover:text-amber-400/70 transition-colors duration-500">
+                    <span className="text-amber-400/66 text-3xl font-serif mb-6 block group-hover:text-amber-400/75 transition-colors duration-500">
                       {item.icon}
                     </span>
                     <h3 className="font-serif text-2xl text-white mb-4">{item.title}</h3>
-                    <p className="text-white/50 leading-relaxed text-[15px]">{item.desc}</p>
+                    <p className="text-white/62 leading-relaxed text-[15px]">{item.desc}</p>
                   </div>
                 </Reveal>
               ))}
@@ -497,9 +497,9 @@ export default function Author() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-3">Podcast</p>
+                    <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 mb-3">Podcast</p>
                     <h3 className="font-serif text-3xl text-white mb-4">KimYaps</h3>
-                    <p className="text-white/55 leading-relaxed max-w-2xl">
+                    <p className="text-white/63 leading-relaxed max-w-2xl">
                       Knox extends his literary sensibility into audio, a space where he speaks with the same intimacy and conviction that animate his writing. Episodes address Christianity, love, relationships, identity, emotional growth, and the costly truths people negotiate in private but rarely speak in public.
                     </p>
                     <a href="https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg?si=743c2b2226084348"
@@ -519,10 +519,10 @@ export default function Author() {
             <SectionHeading eyebrow="Cristo Rey De La Salle" title="Athletics & Discipline" />
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <Reveal>
-                <p className="text-white/60 text-lg leading-relaxed mb-6">
+                <p className="text-white/65 text-lg leading-relaxed mb-6">
                   A multi-sport athlete, Knox brings long-view intention and disciplined rigor to his physical training that mirrors his commitment to the page. For him, athletics is not simply competition; it is a practice of stewardship over body, mind, and focus.
                 </p>
-                <p className="text-white/60 text-lg leading-relaxed">
+                <p className="text-white/65 text-lg leading-relaxed">
                   The same internal standards that govern his literary craft: consistency, resilience, and a refusal to cut corners, shape how he moves through weight rooms, fields, and courts.
                 </p>
                 <Link href="/sports">
@@ -569,9 +569,9 @@ export default function Author() {
                 <Reveal key={i} delay={i * 0.15}>
                   <div className="group p-8 border border-white/8 hover:border-amber-400/25 transition-all duration-500 relative overflow-hidden">
                     <motion.div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/50 mb-3 relative z-10">{item.role}</p>
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-amber-400/69 mb-3 relative z-10">{item.role}</p>
                     <h3 className="font-serif text-2xl text-white mb-4 relative z-10">{item.org}</h3>
-                    <p className="text-white/50 leading-relaxed relative z-10">{item.desc}</p>
+                    <p className="text-white/62 leading-relaxed relative z-10">{item.desc}</p>
                   </div>
                 </Reveal>
               ))}
@@ -591,7 +591,7 @@ export default function Author() {
         <section id="universe" className="py-24 border-t border-white/6 scroll-mt-16 overflow-hidden">
           <div className="max-w-5xl mx-auto px-6 lg:px-10 mb-12">
             <SectionHeading eyebrow="Ten Published Books" title="The Black Boy Lie Universe" />
-            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-white/45">{CATALOG_EDITION_NOTE}</p>
+            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-white/60">{CATALOG_EDITION_NOTE}</p>
           </div>
           <div className="relative">
             {/* Horizontal scroll container */}
@@ -620,13 +620,13 @@ export default function Author() {
                           <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 via-transparent to-black/50" />
                           <div className="absolute top-3 left-3 w-4 h-px bg-amber-400/40" />
                           <div className="absolute top-3 right-3 w-4 h-px bg-amber-400/40" />
-                          <span className="font-serif text-amber-400/30 text-[40px] leading-none absolute bottom-4 left-4 z-10">{i + 1}</span>
+                          <span className="font-serif text-amber-400/63 text-[40px] leading-none absolute bottom-4 left-4 z-10">{i + 1}</span>
                         </>
                       )}
                     </div>
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/50 mb-2">Vol. {String(i + 1).padStart(2, "0")}</p>
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-amber-400/69 mb-2">Vol. {String(i + 1).padStart(2, "0")}</p>
                     <h4 className="font-serif text-base text-white leading-snug mb-3 group-hover:text-amber-100 transition-colors duration-300">{book.title}</h4>
-                    <p className="text-white/35 text-xs leading-relaxed">{book.desc}</p>
+                    <p className="text-white/57 text-xs leading-relaxed">{book.desc}</p>
                   </motion.div>
                 </Reveal>
               ))}
@@ -637,7 +637,7 @@ export default function Author() {
                     <div className="w-10 h-10 rounded-full border border-amber-400/30 flex items-center justify-center">
                       <span className="text-amber-400 text-lg">→</span>
                     </div>
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/60 text-center">View All Books</span>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/72 text-center">View All Books</span>
                   </div>
                 </Link>
               </Reveal>
@@ -651,7 +651,7 @@ export default function Author() {
             <SectionHeading eyebrow="Operating Standard" title="Philosophy & Legacy" />
             <div className="grid md:grid-cols-2 gap-16">
               <Reveal>
-                <p className="text-white/60 text-lg leading-relaxed">
+                <p className="text-white/65 text-lg leading-relaxed">
                   Every arena Knox enters: literature, media, leadership, athletics. Each receives the same operating standard: excellence with substance and ambition grounded in soul. He is less interested in momentary visibility than in building a life and body of work that will still matter when trends pass.
                 </p>
               </Reveal>
@@ -686,10 +686,10 @@ export default function Author() {
                     <motion.div className="group p-8 border border-white/8 hover:border-amber-400/25 transition-all duration-500 cursor-pointer relative overflow-hidden h-full"
                       whileHover={{ y: -2 }}>
                       <motion.div className="absolute inset-0 bg-gradient-to-b from-amber-400/6 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <item.icon className="w-5 h-5 text-amber-400/50 mb-6 group-hover:text-amber-400 transition-colors duration-300 relative z-10" />
+                      <item.icon className="w-5 h-5 text-amber-400/69 mb-6 group-hover:text-amber-400 transition-colors duration-300 relative z-10" />
                       <h3 className="font-serif text-xl text-white mb-3 relative z-10">{item.title}</h3>
-                      <p className="text-white/40 text-sm leading-relaxed mb-6 relative z-10">{item.desc}</p>
-                      <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/50 group-hover:text-amber-300 transition-colors duration-300 relative z-10">
+                      <p className="text-white/58 text-sm leading-relaxed mb-6 relative z-10">{item.desc}</p>
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-amber-400/69 group-hover:text-amber-300 transition-colors duration-300 relative z-10">
                         {item.cta} →
                       </span>
                     </motion.div>
@@ -700,11 +700,11 @@ export default function Author() {
 
             {/* All links */}
             <Reveal delay={0.2} className="mt-16">
-              <p className="text-xs uppercase tracking-[0.4em] text-white/20 mb-6">Find Kiminou Online</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-white/52 mb-6">Find Kiminou Online</p>
               <div className="flex flex-wrap gap-6">
                 {SOCIAL_LINKS.map(l => (
                   <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-[0.2em] text-white/30 hover:text-amber-300 transition-colors duration-300 flex items-center gap-1.5 group">
+                    className="text-xs uppercase tracking-[0.2em] text-white/55 hover:text-amber-300 transition-colors duration-300 flex items-center gap-1.5 group">
                     {l.name}
                     <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>

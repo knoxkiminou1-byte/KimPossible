@@ -140,7 +140,7 @@ export function podcastSchema() {
     "@id": `${SITE_URL}/#podcast`,
     name: "KimYaps",
     description:
-      "KimYaps is a podcast by Kiminou Knox — honest conversations about navigating pain, finding purpose, and giving yourself (and others) a little extra grace.",
+      "KimYaps is where Kiminou Knox talks through faith, Black boyhood, masculinity, relationships, culture, grief, discipline, purpose, love, and the parts of life people usually struggle to say plainly.",
     url: `${SITE_URL}/podcast`,
     webFeed: SITE_PODCAST_RSS,
     sameAs: [SITE_PODCAST_APPLE, SITE_PODCAST_SPOTIFY, SITE_PODCAST_AMAZON, SITE_YOUTUBE],

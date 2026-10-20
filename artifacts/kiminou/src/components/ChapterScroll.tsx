@@ -88,14 +88,14 @@ function ChapterPanel({ chapter, active }: { chapter: typeof CHAPTERS[0]; active
               <p className={`text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${chapter.accent} opacity-80`}>
                 {chapter.stat}
               </p>
-              <p className="text-[9px] uppercase tracking-[0.35em] text-white/25 mt-1">{chapter.statLabel}</p>
+              <p className="text-[9px] uppercase tracking-[0.35em] text-white/53 mt-1">{chapter.statLabel}</p>
             </div>
           </div>
 
-          <p className="text-[10px] uppercase tracking-[0.5em] text-white/30 mb-3 font-medium">{chapter.subline}</p>
+          <p className="text-[10px] uppercase tracking-[0.5em] text-white/55 mb-3 font-medium">{chapter.subline}</p>
           <h2 className="font-serif text-4xl md:text-6xl font-light text-white leading-tight mb-4">{chapter.headline}</h2>
           <div className={`w-10 h-px bg-gradient-to-r ${chapter.accent} mb-6 opacity-60`} />
-          <p className="text-white/50 leading-relaxed text-base mb-8 max-w-lg">{chapter.body}</p>
+          <p className="text-white/62 leading-relaxed text-base mb-8 max-w-lg">{chapter.body}</p>
 
           <Link href={chapter.cta.href}>
             <motion.span
@@ -141,7 +141,7 @@ export default function ChapterScroll() {
       {/* Section label */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
         <div className="w-8 h-px bg-amber-400/30" />
-        <span className="text-[9px] uppercase tracking-[0.5em] text-amber-400/40 font-medium">
+        <span className="text-[9px] uppercase tracking-[0.5em] text-amber-400/66 font-medium">
           Chapters
         </span>
         <div className="w-8 h-px bg-amber-400/30" />
@@ -181,7 +181,7 @@ export default function ChapterScroll() {
               className="h-px bg-amber-400 rounded-full"
             />
             <span className={`text-[8px] uppercase tracking-[0.3em] transition-colors duration-300 ${
-              activeIndex === i ? "text-amber-400/80" : "text-white/20 group-hover:text-white/40"
+              activeIndex === i ? "text-amber-400/80" : "text-white/52 group-hover:text-white/58"
             }`}>
               {c.label}
             </span>
@@ -199,7 +199,7 @@ export default function ChapterScroll() {
             exit={{ opacity: 0, x: 10 }}
             onClick={() => goTo(activeIndex + 1)}
             aria-label="Next chapter"
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 border border-white/10 hover:border-amber-400/30 text-white/25 hover:text-amber-400/60 transition-all duration-300"
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 border border-white/10 hover:border-amber-400/30 text-white/53 hover:text-amber-400/72 transition-all duration-300"
           >
             →
           </motion.button>
@@ -214,7 +214,7 @@ export default function ChapterScroll() {
             exit={{ opacity: 0, x: -10 }}
             onClick={() => goTo(activeIndex - 1)}
             aria-label="Previous chapter"
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 border border-white/10 hover:border-amber-400/30 text-white/25 hover:text-amber-400/60 transition-all duration-300"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 border border-white/10 hover:border-amber-400/30 text-white/53 hover:text-amber-400/72 transition-all duration-300"
           >
             ←
           </motion.button>

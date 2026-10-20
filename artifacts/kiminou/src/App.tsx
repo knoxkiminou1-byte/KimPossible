@@ -41,6 +41,7 @@ const Recruiting = lazy(() => import("@/pages/Recruiting"));
 const Author = lazy(() => import("@/pages/Author"));
 const LegacyTimeline = lazy(() => import("@/pages/LegacyTimeline"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
+const Podcast = lazy(() => import("@/pages/Podcast"));
 
 const POEM_FRAGMENTS = [
   "They called me wise before I learned what wisdom cost.",
@@ -67,10 +68,10 @@ function PageFallback() {
     <div className="min-h-screen bg-black flex items-center justify-center">
       <div className="text-center max-w-md px-8">
         <div className="w-px h-16 bg-amber-400/20 mx-auto mb-8 animate-pulse" />
-        <p className="font-serif italic text-white/30 text-sm leading-relaxed">
+        <p className="font-serif italic text-white/55 text-sm leading-relaxed">
           "{POEM_FRAGMENTS[fragmentIdx]}"
         </p>
-        <p className="text-[9px] uppercase tracking-[0.4em] text-amber-400/20 mt-6 animate-pulse">
+        <p className="text-[9px] uppercase tracking-[0.4em] text-amber-400/60 mt-6 animate-pulse">
           Kiminou Knox
         </p>
       </div>
@@ -158,11 +159,9 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />
-        <Route path="/podcast">
-          <Redirect to="/speaking" />
-        </Route>
+        <Route path="/podcast" component={Podcast} />
         <Route path="/kimyaps">
-          <Redirect to="/speaking" />
+          <Redirect to="/podcast" />
         </Route>
         <Route component={NotFound} />
       </Switch>

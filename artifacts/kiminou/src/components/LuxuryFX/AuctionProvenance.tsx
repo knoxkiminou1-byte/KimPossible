@@ -59,14 +59,14 @@ function ProvenanceCard({ book, lot }: { book: Book; lot: string }) {
         />
       </motion.svg>
 
-      <p className="mb-4 font-serif text-[10px] uppercase tracking-[0.3em] text-amber-400/30">
+      <p className="mb-4 font-serif text-[10px] uppercase tracking-[0.3em] text-amber-400/63">
         LOT {lot}
       </p>
       <h3 className="mb-3 font-serif text-2xl font-light leading-tight text-white">
         {book.title}
       </h3>
-      <p className="mb-4 text-xs leading-relaxed text-white/40">{provenance}</p>
-      <p className="mb-6 text-[10px] uppercase tracking-[0.25em] text-white/25">
+      <p className="mb-4 text-xs leading-relaxed text-white/58">{provenance}</p>
+      <p className="mb-6 text-[10px] uppercase tracking-[0.25em] text-white/53">
         Condition: As New
       </p>
 
@@ -114,7 +114,7 @@ export default function AuctionProvenance() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 text-center">
-          <p className="mb-3 font-serif text-[11px] uppercase tracking-[0.4em] text-amber-400/20">
+          <p className="mb-3 font-serif text-[11px] uppercase tracking-[0.4em] text-amber-400/60">
             From the Collection Of
           </p>
           <h2 className="font-serif text-4xl font-light text-white md:text-5xl">

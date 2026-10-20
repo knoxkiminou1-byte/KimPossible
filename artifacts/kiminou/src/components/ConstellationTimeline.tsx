@@ -193,13 +193,13 @@ export default function ConstellationTimeline() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/50 mb-4 font-medium">
+          <p className="text-[10px] uppercase tracking-[0.45em] text-amber-400/69 mb-4 font-medium">
             The Record So Far
           </p>
           <h2 className="font-serif text-4xl md:text-6xl font-light text-white mb-4">
             The Constellation
           </h2>
-          <p className="text-sm text-white/30 max-w-sm mx-auto">
+          <p className="text-sm text-white/55 max-w-sm mx-auto">
             Hover a star to reveal the milestone
           </p>
 
@@ -211,7 +211,7 @@ export default function ConstellationTimeline() {
                   className="w-2 h-2 rounded-full"
                   style={{ background: colors.star, boxShadow: `0 0 6px ${colors.glow}` }}
                 />
-                <span className="text-[9px] uppercase tracking-[0.25em] text-white/30 capitalize">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-white/55 capitalize">
                   {cat}
                 </span>
               </div>
@@ -289,7 +289,7 @@ export default function ConstellationTimeline() {
                   <h3 className="font-serif text-lg text-white mb-2">
                     {activeMilestone.title}
                   </h3>
-                  <p className="text-sm text-white/50 leading-relaxed">
+                  <p className="text-sm text-white/62 leading-relaxed">
                     {activeMilestone.detail}
                   </p>
                 </div>

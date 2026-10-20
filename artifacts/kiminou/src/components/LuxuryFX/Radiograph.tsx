@@ -103,7 +103,7 @@ export default function Radiograph() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
         <div className="mb-14 flex items-center gap-4">
           <div className="h-px w-10 bg-white/10" />
-          <p className="text-[10px] uppercase tracking-[0.4em] text-white/20">
+          <p className="text-[10px] uppercase tracking-[0.4em] text-white/52">
             The Anatomy of Kiminou Knox
           </p>
         </div>
@@ -158,7 +158,7 @@ export default function Radiograph() {
                   <h3 className="mb-3 font-serif text-2xl font-light text-white">
                     {activeZone.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-white/55">{activeZone.body}</p>
+                  <p className="text-sm leading-relaxed text-white/63">{activeZone.body}</p>
                 </motion.div>
               ) : (
                 <motion.p
@@ -166,7 +166,7 @@ export default function Radiograph() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="font-serif text-lg italic text-white/20"
+                  className="font-serif text-lg italic text-white/52"
                 >
                   Hover a region to read the bone of the work.
                 </motion.p>
@@ -186,7 +186,7 @@ export default function Radiograph() {
                 {zone.label}
               </p>
               <h3 className="mb-2 font-serif text-xl font-light text-white">{zone.title}</h3>
-              <p className="text-sm leading-relaxed text-white/55">{zone.body}</p>
+              <p className="text-sm leading-relaxed text-white/63">{zone.body}</p>
             </div>
           ))}
         </div>

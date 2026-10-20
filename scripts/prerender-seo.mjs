@@ -64,8 +64,13 @@ function pageSchemas(route) {
     name: manifest.site.name,
     alternateName: "Kiminou",
     url: manifest.site.url,
-    image: manifest.site.personImage || `${manifest.site.url}/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg`,
-    jobTitle: ["Athlete", "Author", "Speaker", "Entrepreneur"],
+    image:
+      manifest.site.personImageObject ||
+      manifest.site.personImage ||
+      `${manifest.site.url}/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg`,
+    jobTitle: ["Author", "Poet", "Podcast host"],
+    homeLocation: { "@type": "Place", name: "New Orleans, Louisiana" },
+    affiliation: { "@type": "Organization", name: "Artists and Athletes for Change", url: "https://www.aafcbuilders.org/" },
     description: manifest.site.description,
     sameAs: manifest.site.sameAs,
   };

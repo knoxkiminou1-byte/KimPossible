@@ -271,12 +271,12 @@ export default function VinylRecord() {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/50 mb-2">Hear the Poems</p>
+            <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/69 mb-2">Hear the Poems</p>
             <h2 className="font-serif text-4xl md:text-5xl font-light text-white">
               Poems from a Black Boy
             </h2>
             <div className="w-10 h-px bg-amber-400/40 mt-4" />
-            <p className="text-sm text-white/30 mt-3 max-w-sm leading-relaxed">
+            <p className="text-sm text-white/55 mt-3 max-w-sm leading-relaxed">
               Press play to hear the poem read aloud. Each line highlights as it's spoken.
             </p>
           </div>
@@ -288,7 +288,7 @@ export default function VinylRecord() {
                 style={{
                   border: `1px solid ${i === poemIdx ? "rgba(245,158,11,0.5)" : "rgba(255,255,255,0.08)"}`,
                   background: i === poemIdx ? "rgba(245,158,11,0.07)" : "transparent",
-                  color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.25)",
+                  color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.55)",
                 }}>
                 {p.title}
               </button>
@@ -351,7 +351,7 @@ export default function VinylRecord() {
               <div className="flex items-center gap-3">
                 <motion.button onClick={handlePrev}
                   aria-label="Previous poem"
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-amber-400/30 hover:text-amber-300 transition-all"
+                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/58 hover:border-amber-400/30 hover:text-amber-300 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <ChevronLeft className="w-4 h-4" />
                 </motion.button>
@@ -377,14 +377,14 @@ export default function VinylRecord() {
 
                 <motion.button onClick={handleNext}
                   aria-label="Next poem"
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-amber-400/30 hover:text-amber-300 transition-all"
+                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/58 hover:border-amber-400/30 hover:text-amber-300 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <ChevronRight className="w-4 h-4" />
                 </motion.button>
 
                 <motion.button onClick={handleStop}
                   aria-label="Stop"
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-red-400/30 hover:text-red-400 transition-all"
+                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/58 hover:border-red-400/30 hover:text-red-400 transition-all"
                   whileTap={{ scale: 0.9 }}>
                   <Square className="w-3.5 h-3.5" />
                 </motion.button>
@@ -393,7 +393,7 @@ export default function VinylRecord() {
               {/* Now playing */}
               <div className="text-center">
                 <p className="font-serif text-xl text-white/80 mb-0.5">{poem.title}</p>
-                <p className="text-[9px] uppercase tracking-[0.35em] text-amber-400/50">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-amber-400/69">
                   Poems from a Black Boy · {poemIdx + 1} of {POEMS.length}
                 </p>
               </div>
@@ -411,7 +411,7 @@ export default function VinylRecord() {
                     className="px-2.5 py-1 text-[8px] uppercase tracking-[0.2em] transition-all"
                     style={{
                       border: `1px solid ${i === poemIdx ? "rgba(245,158,11,0.4)" : "rgba(255,255,255,0.08)"}`,
-                      color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.25)",
+                      color: i === poemIdx ? "rgba(245,158,11,0.8)" : "rgba(255,255,255,0.55)",
                     }}>
                     {p.title}
                   </button>
@@ -437,7 +437,7 @@ export default function VinylRecord() {
               <div className="px-8 pt-7 pb-5 border-b border-white/5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-[8px] uppercase tracking-[0.5em] text-amber-400/40 mb-1">Reading Now</p>
+                    <p className="text-[8px] uppercase tracking-[0.5em] text-amber-400/66 mb-1">Reading Now</p>
                     <h3 className="font-serif text-xl font-light text-white">{poem.title}</h3>
                   </div>
                   {playing && (
@@ -494,12 +494,12 @@ export default function VinylRecord() {
 
               {/* Footer */}
               <div className="px-8 py-4 border-t border-white/5 flex items-center justify-between">
-                <p className="text-[8px] uppercase tracking-[0.3em] text-white/20">
+                <p className="text-[8px] uppercase tracking-[0.3em] text-white/52">
                   Kiminou Knox · 2024
                 </p>
                 <a href="https://www.amazon.com/Poems-Black-Boy-Kiminou-Knox/dp/B0FK8WPQR2"
                   target="_blank" rel="noopener noreferrer"
-                  className="text-[8px] uppercase tracking-[0.25em] text-amber-400/50 hover:text-amber-300 transition-colors">
+                  className="text-[8px] uppercase tracking-[0.25em] text-amber-400/69 hover:text-amber-300 transition-colors">
                   Get the Book →
                 </a>
               </div>
@@ -507,7 +507,7 @@ export default function VinylRecord() {
 
             {/* Browser TTS note */}
             {!window.speechSynthesis && (
-              <p className="mt-3 text-[9px] text-white/20 text-center">
+              <p className="mt-3 text-[9px] text-white/52 text-center">
                 Text-to-speech is not supported in this browser.
               </p>
             )}

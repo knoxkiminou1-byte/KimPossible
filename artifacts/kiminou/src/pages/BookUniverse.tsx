@@ -64,11 +64,11 @@ function CategoryCluster({ category, books, index }: { category: (typeof UNIVERS
   return (
     <Reveal delay={(index % 3) * 0.08} className="border border-white/8 bg-white/[0.015] hover:border-amber-400/20 transition-colors duration-500">
       <div className="p-7 md:p-8">
-        <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/50 mb-3">
+        <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/69 mb-3">
           {String(index + 1).padStart(2, "0")} · {books.length} {books.length === 1 ? "Book" : "Books"}
         </p>
         <h2 className="font-serif text-3xl font-light text-white mb-3">{category.name}</h2>
-        <p className="text-sm text-white/40 leading-relaxed mb-6">{category.caption}</p>
+        <p className="text-sm text-white/58 leading-relaxed mb-6">{category.caption}</p>
         <div className="space-y-3">
           {books.map((book) => (
             <Link key={book.id} href={`/books/${book.id}`}>
@@ -80,9 +80,9 @@ function CategoryCluster({ category, books, index }: { category: (typeof UNIVERS
                   <span className="block text-sm text-white/80 group-hover:text-amber-200 transition-colors duration-300 leading-snug">
                     {book.title}
                   </span>
-                  <span className="block text-xs text-white/30 mt-0.5">{book.year}</span>
+                  <span className="block text-xs text-white/55 mt-0.5">{book.year}</span>
                 </span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-white/15 group-hover:text-amber-400/60 transition-colors duration-300 flex-shrink-0" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-white/50 group-hover:text-amber-400/72 transition-colors duration-300 flex-shrink-0" />
               </span>
             </Link>
           ))}
@@ -160,15 +160,15 @@ export default function BookUniverse() {
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <Link href="/books" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/30 hover:text-amber-400/60 transition-colors duration-300 mb-8">
+              <Link href="/books" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/55 hover:text-amber-400/72 transition-colors duration-300 mb-8">
                 <ArrowLeft className="w-3 h-3" /> All Books
               </Link>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Six Worlds</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Six Worlds</p>
               <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6">
                 Book <span className="italic text-amber-200/90">Universe</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Every book belongs to a world. This is the map — faith, wisdom, boyhood, voice, love, and imagination — and how they connect.
               </p>
             </motion.div>

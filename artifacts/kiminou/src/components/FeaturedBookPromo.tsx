@@ -70,7 +70,7 @@ export default function FeaturedBookPromo() {
             className="flex flex-col gap-7"
           >
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/70 mb-5 font-medium">
+              <p className="text-xs uppercase tracking-[0.35em] text-amber-400/75 mb-5 font-medium">
                 Most-Read · 145 Ratings
               </p>
               <h2
@@ -83,7 +83,7 @@ export default function FeaturedBookPromo() {
             </div>
 
             <p
-              className="text-base text-white/55 leading-relaxed"
+              className="text-base text-white/63 leading-relaxed"
               data-testid="featured-book-description"
             >
               An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Kiminou's most-read work — 145 ratings on Google Play Books.
@@ -93,7 +93,7 @@ export default function FeaturedBookPromo() {
               {["Love", "Heartbreak", "Healing", "Poetry"].map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 border border-white/10 text-white/50 text-xs uppercase tracking-[0.15em] rounded-full"
+                  className="px-3 py-1 border border-white/10 text-white/62 text-xs uppercase tracking-[0.15em] rounded-full"
                 >
                   {tag}
                 </span>

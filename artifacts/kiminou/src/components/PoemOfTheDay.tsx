@@ -109,7 +109,7 @@ export default function PoemOfTheDay() {
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-3 font-medium">
+          <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-3 font-medium">
             Poem of the Day
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-light text-white/90 italic">
@@ -136,12 +136,12 @@ export default function PoemOfTheDay() {
           className="flex items-center gap-6"
         >
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-white/30 mb-1">From</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-white/55 mb-1">From</p>
             <p className="font-serif text-sm text-amber-300/80 italic">{poem.sourceBook}</p>
           </div>
           <div className="h-8 w-px bg-white/10" />
           <Link href="/books">
-            <span className="text-xs uppercase tracking-[0.25em] text-white/40 hover:text-amber-300 transition-colors duration-300 cursor-pointer">
+            <span className="text-xs uppercase tracking-[0.25em] text-white/58 hover:text-amber-300 transition-colors duration-300 cursor-pointer">
               View All Books →
             </span>
           </Link>

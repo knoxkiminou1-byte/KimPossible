@@ -32,8 +32,8 @@ export default function AdminGate({ children }: { children: React.ReactNode }) {
         className="w-full max-w-sm"
       >
         <div className="flex items-center gap-3 mb-8">
-          <Lock className="w-5 h-5 text-amber-400/60" />
-          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 font-medium">Admin Access</p>
+          <Lock className="w-5 h-5 text-amber-400/72" />
+          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 font-medium">Admin Access</p>
         </div>
         <h1 className="font-serif text-4xl font-light text-white mb-8">Blog Admin</h1>
         <form onSubmit={handleSubmit} className="space-y-4">

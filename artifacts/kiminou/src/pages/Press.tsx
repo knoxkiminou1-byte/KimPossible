@@ -170,16 +170,16 @@ export default function Press() {
             <motion.div initial={{ opacity: 0, y: 24 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.55em] text-amber-400/60 mb-5 font-medium">Verification</p>
+              <p className="text-xs uppercase tracking-[0.55em] text-amber-400/72 mb-5 font-medium">Verification</p>
               <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6" data-testid="press-heading">
                 Press, Recognition<br />
                 <span className="italic text-amber-200/90">& Public References</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Public sources for books, basketball, recognition, and profile verification. Media and booking requests can go through the{" "}
                 <Link href="/contact">
-                  <span className="text-amber-400/70 hover:text-amber-300 transition-colors cursor-pointer underline underline-offset-4">contact form</span>
+                  <span className="text-amber-400/75 hover:text-amber-300 transition-colors cursor-pointer underline underline-offset-4">contact form</span>
                 </Link>.
               </p>
             </motion.div>
@@ -190,7 +190,7 @@ export default function Press() {
         <section className="py-16 border-y border-white/6 bg-white/[0.015]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-10">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Media Images</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">Media Images</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Author, Athlete, Strategist</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
@@ -219,7 +219,7 @@ export default function Press() {
         <div className="border-y border-white/6 py-4 overflow-hidden relative">
           <div className="flex gap-0" style={{ animation: "tickerScroll 30s linear infinite" }}>
             {[...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
-              <span key={i} className="flex-shrink-0 text-xs uppercase tracking-[0.3em] text-white/20 px-8 flex items-center gap-8">
+              <span key={i} className="flex-shrink-0 text-xs uppercase tracking-[0.3em] text-white/52 px-8 flex items-center gap-8">
                 {item}
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400/30 inline-block" />
               </span>
@@ -237,7 +237,7 @@ export default function Press() {
         <section className="py-20 border-b border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-10">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Recognition</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">Recognition</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Featured Recognition</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
@@ -255,19 +255,19 @@ export default function Press() {
                     <div className="relative z-10">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                         <div>
-                          <p className="text-xs uppercase tracking-[0.3em] text-amber-400/50 mb-2 italic">{item.date}</p>
-                          <p className="text-xs uppercase tracking-[0.2em] text-white/35 mb-3">{item.source}</p>
+                          <p className="text-xs uppercase tracking-[0.3em] text-amber-400/69 mb-2 italic">{item.date}</p>
+                          <p className="text-xs uppercase tracking-[0.2em] text-white/57 mb-3">{item.source}</p>
                           <h3 className="font-serif text-xl md:text-2xl text-white font-light group-hover:text-amber-100 transition-colors duration-300">
                             {item.headline}
                           </h3>
                         </div>
                         <a href={item.link} target="_blank" rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/50 hover:text-amber-400 transition-colors flex-shrink-0 group/link">
+                          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/69 hover:text-amber-400 transition-colors flex-shrink-0 group/link">
                           Read feature
                           <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                         </a>
                       </div>
-                      <p className="text-white/45 leading-relaxed">{item.detail}</p>
+                      <p className="text-white/60 leading-relaxed">{item.detail}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -280,7 +280,7 @@ export default function Press() {
         <section className="py-20 pb-32">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-14">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Verification Links</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">Verification Links</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Public Records</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
@@ -289,7 +289,7 @@ export default function Press() {
               {verificationGroups.map((group, gi) => (
                 <Reveal key={gi} delay={gi * 0.08}>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/50 mb-5 border-b border-white/6 pb-3">
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400/69 mb-5 border-b border-white/6 pb-3">
                       {group.label}
                     </p>
                     <div className="space-y-4">
@@ -303,9 +303,9 @@ export default function Press() {
                             <p className="text-sm text-white/65 group-hover:text-amber-200 transition-colors duration-300 leading-snug mb-1">
                               {item.name}
                             </p>
-                            <p className="text-xs text-white/25 leading-snug line-clamp-2">{item.desc}</p>
+                            <p className="text-xs text-white/53 leading-snug line-clamp-2">{item.desc}</p>
                           </div>
-                          <ExternalLink className="w-3.5 h-3.5 text-white/15 group-hover:text-amber-400/50 transition-colors duration-300 flex-shrink-0 mt-0.5" />
+                          <ExternalLink className="w-3.5 h-3.5 text-white/50 group-hover:text-amber-400/69 transition-colors duration-300 flex-shrink-0 mt-0.5" />
                         </a>
                       ))}
                     </div>
@@ -319,7 +319,7 @@ export default function Press() {
         <section className="py-20 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-10">
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Press Kit</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-4">Press Kit</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Download Press Kit</h2>
               <div className="w-12 h-px bg-amber-400/40 mt-6" />
             </Reveal>
@@ -328,10 +328,10 @@ export default function Press() {
               <div className="border border-amber-400/15 bg-amber-400/[0.02] p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center gap-8">
                 <div className="flex-1">
                   <h3 className="font-serif text-xl text-white mb-3">Official Press Kit — Kiminou Knox</h3>
-                  <p className="text-white/45 text-sm leading-relaxed mb-4">
+                  <p className="text-white/60 text-sm leading-relaxed mb-4">
                     Full bio, headshot credits, book details, speaking topics, athletic profile, and media contact. Use freely for event programs, press coverage, and editorial mentions.
                   </p>
-                  <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.2em] text-white/30">
+                  <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.2em] text-white/55">
                     <span>Bio (Short & Long)</span>
                     <span>·</span>
                     <span>Ten Published Books · Multiple Available Editions</span>
@@ -383,7 +383,7 @@ REMASTERED EDITIONS — 2026
 ATHLETIC PROFILE
 ────────────────
 Height: 6'7" | Weight: 235 lbs | Position: Forward / Center
-School: Cristo Rey De La Salle (formerly Ygnacio Valley)
+School: Ygnacio Valley High School (Class of 2025); earlier seasons at Cristo Rey De La Salle and Bishop O'Dowd
 Status: Available for Collegiate Recruitment
 MaxPreps: https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves/athletes/kiminou-knox/?careerid=3flsq42m4bpcc
 NCSA: https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox

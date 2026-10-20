@@ -34,7 +34,7 @@ function MarqueeRow({ items, reverse = false, speed = 40 }: { items: string[]; r
           <span key={i} className="inline-flex items-center gap-6 mx-8 shrink-0">
             <span
               className={`font-serif text-lg md:text-xl tracking-wide ${
-                reverse ? "text-white/25" : "text-white/40"
+                reverse ? "text-white/53" : "text-white/58"
               } hover:text-amber-300/70 transition-colors duration-300`}
             >
               {item}

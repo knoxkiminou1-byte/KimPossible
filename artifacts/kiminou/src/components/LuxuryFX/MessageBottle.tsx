@@ -118,7 +118,7 @@ export default function MessageBottle({
                   key="sent"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="font-serif text-2xl italic text-white/40"
+                  className="font-serif text-2xl italic text-white/58"
                 >
                   Sent to sea.
                 </motion.p>
@@ -137,7 +137,7 @@ export default function MessageBottle({
             exit={{ opacity: 0 }}
             className="absolute inset-0 z-40 flex items-center justify-center bg-[#02080f]"
           >
-            <p className="font-serif text-lg italic text-white/30">It will find its way.</p>
+            <p className="font-serif text-lg italic text-white/55">It will find its way.</p>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-09-06T21:10:33.984Z",
+  "dateModified": "2026-10-20T05:23:08.228Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
@@ -16,11 +16,21 @@
       "name": "Kiminou Knox official author headshot 2026",
       "caption": "Official author headshot of Kiminou Knox for press, speaker, and biography pages.",
       "width": 2200,
-      "height": 2933
+      "height": 2933,
+      "creator": {
+        "@id": "https://www.kiminouknox.com/#person"
+      },
+      "creditText": "Kiminou Knox",
+      "copyrightNotice": "© Kiminou Knox",
+      "license": "https://www.kiminouknox.com/media",
+      "acquireLicensePage": "https://www.kiminouknox.com/contact"
     },
     "description": "Official website of Kiminou Knox, Bay Area raised, New Orleans based author and poet of ten published books, host of KimYaps, Director at AAFC, and creator of the Black Boy Lie universe.",
     "birthPlace": "Hayward, California",
-    "homeLocation": "Oakland, California",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "New Orleans, Louisiana"
+    },
     "knowsAbout": [
       "Poetry",
       "Basketball",

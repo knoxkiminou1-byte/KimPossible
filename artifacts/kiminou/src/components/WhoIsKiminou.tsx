@@ -60,7 +60,7 @@ function Card({ item, index }: { item: (typeof identity)[0]; index: number }) {
       data-testid={`identity-card-${item.id}`}
     >
       <div className="flex items-start justify-between gap-4">
-        <span className="font-serif text-5xl text-foreground/10 font-light leading-none select-none group-hover:text-amber-400/30 transition-colors duration-500">
+        <span className="font-serif text-5xl text-foreground/10 font-light leading-none select-none group-hover:text-amber-400/63 transition-colors duration-500">
           {item.number}
         </span>
         <span className="text-xs uppercase tracking-[0.25em] text-amber-500 font-medium mt-1">
@@ -119,7 +119,7 @@ export default function WhoIsKiminou() {
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="lg:sticky lg:top-32"
           >
-            <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-5 font-medium">
+            <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 mb-5 font-medium">
               About
             </p>
             <GoldUnmask delay={0.1} className="inline-block mb-8">
@@ -143,7 +143,7 @@ export default function WhoIsKiminou() {
             </GoldUnmask>
             <div className="w-10 h-px bg-amber-400/50 mb-8" />
             <p
-              className="text-base text-white/55 leading-relaxed max-w-sm"
+              className="text-base text-white/63 leading-relaxed max-w-sm"
               data-testid="who-description"
             >
               A writer and multi-sport athlete from the Bay Area, California, building a legacy through books, sport, and youth leadership.

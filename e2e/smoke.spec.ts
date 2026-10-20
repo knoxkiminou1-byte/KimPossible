@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const ROUTES = ["/", "/books", "/books/hopeless-romantic", "/speaking", "/sports", "/press", "/contact"];
+const ROUTES = ["/", "/books", "/books/hopeless-romantic", "/books/boys-raised-in-silence", "/speaking", "/podcast", "/sports", "/press", "/contact"];
 
 // Every route shows a full-screen "First Edition" welcome overlay on a
 // visitor's first-ever page view (see FirstEditionOverlay.tsx). Mark it
@@ -66,5 +66,24 @@ test("footer links all resolve (internal routes only)", async ({ page, request }
   for (const href of unique) {
     const response = await request.get(href);
     expect(response.ok(), `${href} returned ${response.status()}`).toBeTruthy();
+  }
+});
+
+test("/podcast lists episodes from the build-time feed with playable audio", async ({ page }) => {
+  await page.goto("/podcast");
+  await expect(page.getByRole("heading", { level: 1, name: "KimYaps" })).toBeVisible({ timeout: 10_000 });
+  // The list renders after /podcast-episodes.json loads; wait on its status line, not a fixed race.
+  await expect(page.getByText(/\d+ episodes, newest first\./)).toBeVisible({ timeout: 30_000 });
+  const episodes = page.locator("ol > li");
+  expect(await episodes.count()).toBeGreaterThan(5);
+  await expect(episodes.first().locator("audio source")).toHaveAttribute("src", /^https:\/\//);
+});
+
+test("every book cover image on /books resolves", async ({ page, request }) => {
+  const response = await request.get("/books.json");
+  const books = (await response.json()) as { id: string; cover: string }[];
+  for (const book of books) {
+    const cover = await request.get(book.cover);
+    expect(cover.ok(), `${book.id} cover ${book.cover} returned ${cover.status()}`).toBeTruthy();
   }
 });

@@ -57,7 +57,7 @@ export default function StatsBanner() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-xs uppercase tracking-[0.4em] text-amber-400/50 text-center mb-14 font-medium"
+          className="text-xs uppercase tracking-[0.4em] text-amber-400/69 text-center mb-14 font-medium"
         >
           By the Numbers
         </motion.p>
@@ -72,7 +72,7 @@ export default function StatsBanner() {
               className="flex flex-col items-center text-center gap-2"
             >
               <Counter value={s.value} suffix={s.suffix} active={inView} />
-              <span className="text-xs uppercase tracking-[0.2em] text-white/35 font-medium">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/57 font-medium">
                 {s.label}
               </span>
             </motion.div>

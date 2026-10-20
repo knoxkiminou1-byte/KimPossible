@@ -59,7 +59,7 @@ const testimonials = [
 ];
 
 const categoryColors: Record<string, string> = {
-  Athletics: "text-amber-400/70",
+  Athletics: "text-amber-400/75",
   Literature: "text-blue-300/70",
   Business: "text-emerald-400/70",
   Community: "text-purple-400/70",
@@ -99,9 +99,9 @@ function TestimonialCard({ t, index }: { t: (typeof testimonials)[0]; index: num
         />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-white/80 truncate">{t.name}</p>
-          <p className="text-xs text-white/40 truncate">{t.role} · {t.org}</p>
+          <p className="text-xs text-white/58 truncate">{t.role} · {t.org}</p>
         </div>
-        <span className={`text-xs uppercase tracking-[0.2em] font-medium ${categoryColors[t.category] ?? "text-white/30"} shrink-0`}>
+        <span className={`text-xs uppercase tracking-[0.2em] font-medium ${categoryColors[t.category] ?? "text-white/55"} shrink-0`}>
           {t.category}
         </span>
       </div>
@@ -123,7 +123,7 @@ export default function Testimonials() {
           transition={{ duration: 0.7 }}
           className="mb-16"
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/60 mb-4 font-medium">
+          <p className="text-xs uppercase tracking-[0.35em] text-amber-400/72 mb-4 font-medium">
             Testimonials
           </p>
           <h2

@@ -20,6 +20,8 @@ type Book = {
   year: number;
   isbn?: string | null;
   datePublished?: string;
+  genre?: string;
+  contributors?: { name: string; role: string }[];
   edition?: string;
   numberOfPages?: number;
   cover: string;
@@ -103,7 +105,7 @@ export default function BookDetail() {
         <div className="min-h-screen bg-black flex items-center justify-center">
           <div className="text-center">
             <div className="w-px h-20 bg-amber-400/30 mx-auto mb-6 animate-pulse" />
-            <p className="text-xs uppercase tracking-[0.3em] text-amber-400/50">Loading</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-amber-400/69">Loading</p>
           </div>
         </div>
       </>
@@ -116,9 +118,9 @@ export default function BookDetail() {
         <Header />
         <div className="min-h-screen bg-black flex items-center justify-center">
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">404</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-6">404</p>
             <h1 className="font-serif text-5xl font-light text-white mb-6">Book Not Found</h1>
-            <Link href="/books" className="text-amber-400/60 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em] flex items-center gap-2 justify-center">
+            <Link href="/books" className="text-amber-400/72 hover:text-amber-300 transition-colors text-xs uppercase tracking-[0.3em] flex items-center gap-2 justify-center">
               <ArrowLeft className="w-3 h-3" /> Back to Books
             </Link>
           </div>
@@ -139,13 +141,17 @@ export default function BookDetail() {
       "url": "https://www.kiminouknox.com",
       "@id": "https://www.kiminouknox.com/#person"
     },
-    "datePublished": book.datePublished || `${book.year}-01-01`,
+    // A bare year is valid ISO 8601; inventing January 1 is not a real date.
+    "datePublished": book.datePublished || String(book.year),
+    ...(book.contributors?.length && {
+      "contributor": book.contributors.map(({ name }) => ({ "@type": "Person", "name": name })),
+    }),
     ...(book.isbn && { "isbn": book.isbn }),
     ...(book.edition && { "bookEdition": book.edition }),
     ...(book.numberOfPages && { "numberOfPages": book.numberOfPages }),
     "url": `https://www.kiminouknox.com/books/${book.id}`,
     "image": `https://www.kiminouknox.com${book.cover}`,
-    "genre": "Poetry",
+    "genre": book.genre || "Poetry",
     "inLanguage": "en",
     "bookFormat": book.edition ? "EBook" : "Paperback",
     "offers": Object.entries(book.buyLinks)
@@ -172,6 +178,8 @@ export default function BookDetail() {
     ? `Available from ${availableRetailers.map(({ name }) => name).join(", ")}.`
     : "Retailer publication is in progress.";
   const isHighResolutionEdition = Boolean(book.edition);
+  // Matches the prerendered <title>; App's DocumentTitleSync mirrors og:title into document.title.
+  const pageTitle = `${book.title} by Kiminou Knox | ${book.genre === "Children's literature" ? "Children's Book" : "Poetry Collection"}`;
   const breadcrumbs = breadcrumbSchema([
     { name: "Home", url: SITE_URL },
     { name: "Books", url: `${SITE_URL}/books` },
@@ -181,13 +189,13 @@ export default function BookDetail() {
   return (
     <>
       <Helmet>
-        <title>{book.title} — Kiminou Knox | Poetry Collection</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. ${availabilityDescription}`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://www.kiminouknox.com/books/${book.id}`} />
 
         <meta property="og:type" content="book" />
-        <meta property="og:title" content={`${book.title} — Kiminou Knox`} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={book.description} />
         <meta property="og:url" content={`https://www.kiminouknox.com/books/${book.id}`} />
         <meta property="og:image" content={`https://www.kiminouknox.com${book.cover}`} />
@@ -200,7 +208,7 @@ export default function BookDetail() {
         <meta property="books:author" content="https://www.kiminouknox.com/author" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${book.title} — Kiminou Knox`} />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={book.description} />
         <meta name="twitter:image" content={`https://www.kiminouknox.com${book.cover}`} />
         <meta name="twitter:image:alt" content={`${book.title} book cover by Kiminou Knox`} />
@@ -219,7 +227,7 @@ export default function BookDetail() {
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Link
               href="/books"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/30 hover:text-amber-400/60 transition-colors duration-300 group"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/55 hover:text-amber-400/72 transition-colors duration-300 group"
               data-testid="link-back-to-books"
             >
               <ArrowLeft className="w-3 h-3 group-hover:-translate-x-0.5 transition-transform" />
@@ -264,7 +272,7 @@ export default function BookDetail() {
               <div className="flex flex-col gap-8">
                 <Reveal delay={0.1}>
                   <div>
-                    <p className="text-xs uppercase tracking-[0.4em] text-amber-400/50 mb-3">
+                    <p className="text-xs uppercase tracking-[0.4em] text-amber-400/69 mb-3">
                       {book.year}{book.edition ? ` · ${book.edition}` : ""}{book.isbn ? ` · ISBN ${book.isbn}` : ""}
                     </p>
                     <h1
@@ -274,20 +282,27 @@ export default function BookDetail() {
                       {book.title}
                     </h1>
                     <div className="w-12 h-px bg-amber-400/40 my-5" />
-                    <p className="font-serif text-xl text-amber-200/60 italic mb-6">{book.subtitle}</p>
-                    <p className="text-white/50 leading-relaxed max-w-lg">{book.description}</p>
+                    {book.subtitle && (
+                      <p className="font-serif text-xl text-amber-200/60 italic mb-6">{book.subtitle}</p>
+                    )}
+                    {book.contributors?.length ? (
+                      <p className="text-sm text-white/62 mb-6">
+                        With {book.contributors.map(({ name, role }) => `${name} (${role})`).join(", ")}
+                      </p>
+                    ) : null}
+                    <p className="text-white/62 leading-relaxed max-w-lg">{book.description}</p>
                   </div>
                 </Reveal>
 
                 {/* Themes */}
                 <Reveal delay={0.2}>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-white/20 mb-3">Themes</p>
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-white/52 mb-3">Themes</p>
                     <div className="flex flex-wrap gap-2">
                       {book.themes.map(theme => (
                         <span
                           key={theme}
-                          className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/35 hover:border-amber-400/25 hover:text-amber-200/60 transition-colors duration-300"
+                          className="px-3 py-1.5 border border-white/10 text-xs uppercase tracking-[0.2em] text-white/57 hover:border-amber-400/25 hover:text-amber-200/60 transition-colors duration-300"
                         >
                           {theme}
                         </span>
@@ -300,7 +315,7 @@ export default function BookDetail() {
                 <Reveal delay={0.25}>
                   <button
                     onClick={() => setOpen(true)}
-                    className="inline-flex items-center gap-3 w-fit px-6 py-3.5 border border-white/12 text-xs uppercase tracking-[0.25em] text-white/50 hover:border-amber-400/30 hover:text-amber-300 transition-all duration-300 group"
+                    className="inline-flex items-center gap-3 w-fit px-6 py-3.5 border border-white/12 text-xs uppercase tracking-[0.25em] text-white/62 hover:border-amber-400/30 hover:text-amber-300 transition-all duration-300 group"
                     data-testid="button-read-sample-poems"
                   >
                     <BookOpen className="w-3.5 h-3.5 group-hover:rotate-6 transition-transform duration-300" />
@@ -311,7 +326,7 @@ export default function BookDetail() {
                 {/* Buy Links */}
                 <Reveal delay={0.3}>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.4em] text-white/20 mb-5">Available At</p>
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-white/52 mb-5">Available At</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {availableRetailers.map(({ key, url, name }) => (
                         <motion.a
@@ -323,10 +338,10 @@ export default function BookDetail() {
                           className="group/link flex items-center justify-between gap-3 px-5 py-3.5 border border-white/8 hover:border-amber-400/30 hover:bg-amber-400/[0.04] transition-all duration-300"
                           data-testid={`link-buy-${key}`}
                         >
-                          <span className="text-sm text-white/55 group-hover/link:text-amber-200 transition-colors duration-300">
+                          <span className="text-sm text-white/63 group-hover/link:text-amber-200 transition-colors duration-300">
                             {name}
                           </span>
-                          <ExternalLink className="w-3 h-3 text-white/15 group-hover/link:text-amber-400/50 transition-colors duration-300 flex-shrink-0" />
+                          <ExternalLink className="w-3 h-3 text-white/50 group-hover/link:text-amber-400/69 transition-colors duration-300 flex-shrink-0" />
                         </motion.a>
                       ))}
                     </div>
@@ -342,14 +357,14 @@ export default function BookDetail() {
           <section className="py-20 border-t border-white/6">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
               <Reveal>
-                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/50 mb-4">A Taste</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-amber-400/69 mb-4">A Taste</p>
                 <h2 className="font-serif text-3xl font-light text-white mb-10">From The Pages</h2>
               </Reveal>
 
               <Reveal delay={0.1}>
                 <div className="relative border border-white/6 bg-white/[0.015] p-8 md:p-12">
                   <div className="absolute top-0 left-0 w-1 h-full bg-amber-400/25" />
-                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/40 mb-6">
+                  <p className="text-xs uppercase tracking-[0.4em] text-amber-400/66 mb-6">
                     {book.samplePoems[0].title}
                   </p>
                   <pre className="font-serif text-base md:text-lg text-white/65 leading-relaxed whitespace-pre-wrap">
@@ -357,7 +372,7 @@ export default function BookDetail() {
                   </pre>
                   <button
                     onClick={() => setOpen(true)}
-                    className="mt-8 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-amber-400/50 hover:text-amber-300 transition-colors"
+                    className="mt-8 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-amber-400/69 hover:text-amber-300 transition-colors"
                   >
                     Read more poems →
                   </button>
@@ -371,10 +386,10 @@ export default function BookDetail() {
         <section className="py-20 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
             <Reveal>
-              <p className="text-xs uppercase tracking-[0.4em] text-white/20 mb-6">Explore the collection</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-white/52 mb-6">Explore the collection</p>
               <Link href="/books">
                 <motion.span
-                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-amber-400/60 hover:text-amber-300 transition-colors duration-300 cursor-pointer"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-amber-400/72 hover:text-amber-300 transition-colors duration-300 cursor-pointer"
                   whileHover={{ x: -4 }}
                 >
                   <ArrowLeft className="w-3 h-3" />

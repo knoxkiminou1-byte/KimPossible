@@ -60,13 +60,13 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
               <Download className="w-3 h-3" /> Download
             </a>
           </div>
-          <span className="absolute top-3 left-3 px-2 py-1 bg-black/70 border border-white/10 text-[9px] uppercase tracking-[0.2em] text-amber-400/70">
+          <span className="absolute top-3 left-3 px-2 py-1 bg-black/70 border border-white/10 text-[9px] uppercase tracking-[0.2em] text-amber-400/75">
             {item.category}
           </span>
         </div>
         <div className="p-3">
-          <p className="text-xs text-white/50 truncate">{item.title}</p>
-          {!isBook && <p className="text-[10px] text-white/25 mt-0.5">{item.width} × {item.height}</p>}
+          <p className="text-xs text-white/62 truncate">{item.title}</p>
+          {!isBook && <p className="text-[10px] text-white/53 mt-0.5">{item.width} × {item.height}</p>}
         </div>
       </div>
     </Reveal>
@@ -154,12 +154,12 @@ export default function MediaGallery() {
           </div>
           <div className="max-w-4xl mx-auto px-6 lg:px-10">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-5 font-medium">Approved Assets</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/72 mb-5 font-medium">Approved Assets</p>
               <h1 className="font-serif text-6xl md:text-8xl font-light leading-tight mb-6">
                 Media <span className="italic text-amber-200/90">Gallery</span>
               </h1>
               <div className="w-12 h-px bg-amber-400/50 mb-8" />
-              <p className="text-base text-white/45 max-w-xl leading-relaxed">
+              <p className="text-base text-white/60 max-w-xl leading-relaxed">
                 Headshots, athletic photos, speaker photos, and book covers — free to use for press coverage, event programs, and editorial mentions. Hover any image to download.
               </p>
             </motion.div>
@@ -176,7 +176,7 @@ export default function MediaGallery() {
                   className={`px-4 py-2 text-xs uppercase tracking-[0.15em] border transition-all duration-300 ${
                     activeCategory === cat
                       ? "border-amber-400/60 bg-amber-400/10 text-amber-300"
-                      : "border-white/10 text-white/40 hover:border-white/25 hover:text-white/70"
+                      : "border-white/10 text-white/58 hover:border-white/25 hover:text-white/70"
                   }`}
                 >
                   {cat}
@@ -195,7 +195,7 @@ export default function MediaGallery() {
             </div>
             {filtered.length === 0 && (
               <div className="py-20 text-center">
-                <p className="font-serif text-xl text-white/25">Loading assets…</p>
+                <p className="font-serif text-xl text-white/53">Loading assets…</p>
               </div>
             )}
           </div>
