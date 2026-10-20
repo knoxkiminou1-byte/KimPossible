@@ -129,14 +129,14 @@ export default function Home() {
         <title>Kiminou Knox | Author, Poet, and Host of KimYaps</title>
         <meta name="description" content="Official site of Kiminou Knox — Bay Area raised, New Orleans based author and poet of ten books. Host of KimYaps. Director at AAFC. Explore books, essays, and booking information." />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-        <link rel="canonical" href={SITE_URL} />
+        <link rel="canonical" href={`${SITE_URL}/`} />
         <link rel="preload" as="image" href="/kiminou-knox-author-athlete-bay-area.webp" />
         <meta name="theme-color" content="#090705" />
         
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Kiminou Knox | Author, Poet, and Host of KimYaps" />
         <meta property="og:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
-        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:image" content={SITE_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
