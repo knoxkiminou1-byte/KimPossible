@@ -20,7 +20,7 @@ const UNIVERSE_CATEGORIES = [
   {
     name: "Faith",
     caption: "Prayer, doubt, and what's left when certainty runs out.",
-    bookIds: ["our-father"],
+    bookIds: ["our-father", "my-father"],
   },
   {
     name: "Wisdom",
@@ -30,7 +30,7 @@ const UNIVERSE_CATEGORIES = [
   {
     name: "Black Boyhood",
     caption: "Identity, heritage, and the weight carried before it's understood.",
-    bookIds: ["poems-black-boy", "black-boy-poems"],
+    bookIds: ["poems-black-boy"],
   },
   {
     name: "Voice",
@@ -40,7 +40,7 @@ const UNIVERSE_CATEGORIES = [
   {
     name: "Love",
     caption: "Longing, closure, and staying tender anyway.",
-    bookIds: ["hopeless-romantic"],
+    bookIds: ["hopeless-romantic", "why-did-you-ghost-me", "7-16-74-an-ode-to-rashida"],
   },
   {
     name: "Imagination",
