@@ -14,12 +14,14 @@
     ],
     "description": "A confession in verse tracing the rise and fall of a man who believed he could have it all without paying the price.",
     "buyLinks": {
-      "amazon": "https://www.amazon.com/dp/B0F3VBKKPD",
+      "amazon": "https://www.amazon.com/dp/B0F48XNF15",
       "googleBooks": "https://play.google.com/store/books/details?id=yIRsEQAAQBAJ",
       "bookshop": "https://bookshop.org/p/books/the-spirit-of-solomon-what-is-love-to-a-man-made-to-destroy-it/6a03b29b81766c60",
       "bn": null
     },
-    "featured": true
+    "featured": true,
+    "datePublished": "2025-04-03",
+    "genre": "Poetry"
   },
   {
     "id": "our-father",
@@ -34,19 +36,21 @@
       "Silence",
       "Searching"
     ],
-    "description": "A candid wrestling with prayer and presence\u2014when belief collides with unanswered questions.",
+    "description": "A candid wrestling with prayer and presence—when belief collides with unanswered questions.",
     "buyLinks": {
       "amazon": "https://www.amazon.com/dp/B0F3VBVWCM",
       "googleBooks": "https://play.google.com/store/books/details?id=PbFNEQAAQBAJ",
       "bookshop": null,
       "bn": null
-    }
+    },
+    "datePublished": "2025-03-11",
+    "genre": "Poetry"
   },
   {
     "id": "poems-black-boy",
     "title": "Poems from a Black Boy",
-    "subtitle": "Identity, Heritage, and Hope",
-    "year": 2024,
+    "subtitle": "Poems from the Weight of Black Boyhood",
+    "year": 2025,
     "isbn": "",
     "cover": "/books/poems-from-a-black-boy-cover.jpg",
     "pdf": "/books/poems-from-a-black-boy-sample.pdf",
@@ -61,13 +65,14 @@
       "googleBooks": "https://play.google.com/store/books/details?id=0HuKEQAAQBAJ",
       "bookshop": null,
       "bn": null
-    }
+    },
+    "genre": "Poetry"
   },
   {
     "id": "black-boy-poems",
     "title": "Black Boy Poems",
     "subtitle": "",
-    "year": 2024,
+    "year": 2025,
     "isbn": "9798267606912",
     "cover": "/covers/kiminou-knox-black-boy-poems.svg",
     "pdf": null,
@@ -78,16 +83,18 @@
     ],
     "description": "A raw collection of poems on Black boyhood, pain, survival, and identity.",
     "buyLinks": {
-      "amazon": null,
+      "amazon": "https://www.amazon.com/dp/B0FT4CQ9CH",
       "googleBooks": null,
       "bookshop": null,
       "bn": null
-    }
+    },
+    "datePublished": "2025-09-29",
+    "genre": "Poetry"
   },
   {
     "id": "hopeless-romantic",
     "title": "Hopeless Romantic",
-    "subtitle": "Love, Loss, and Everything Between",
+    "subtitle": "Love Poems for the Ones Who Feel Everything",
     "year": 2025,
     "isbn": "9798291608128",
     "cover": "/books/hopeless-romantic-cover.jpg",
@@ -104,16 +111,18 @@
       "bookshop": null,
       "bn": null
     },
-    "featured": false
+    "featured": false,
+    "datePublished": "2025-07-07",
+    "genre": "Poetry"
   },
   {
     "id": "boys-raised-in-silence",
     "title": "Boys Raised in Silence",
-    "subtitle": "Breaking the Quiet, Finding Voice",
-    "year": 2024,
-    "isbn": "9798316735821",
-    "cover": "/books/boys-raised-in-silence-cover.jpg",
-    "pdf": "/books/boys-raised-in-silence-sample.pdf",
+    "subtitle": "A Poetry Collection on Masculinity, Emotional Silence, and the Journey to Healing",
+    "year": 2025,
+    "isbn": "9798267592383",
+    "cover": "/covers/kiminou-knox-boys-raised-in-silence.png",
+    "pdf": "",
     "themes": [
       "Silence",
       "Masculinity",
@@ -125,16 +134,18 @@
       "googleBooks": "https://play.google.com/store/books/details?id=pHuKEQAAQBAJ",
       "bookshop": null,
       "bn": null
-    }
+    },
+    "datePublished": "2025-09-28",
+    "genre": "Poetry"
   },
   {
     "id": "adventures-kiminou-chua",
     "title": "The Adventures of Kiminou the Great and Chua the Wise",
-    "subtitle": "A Journey of Friendship and Discovery",
+    "subtitle": "A Story of Brotherhood, Culture, and Black Boy Joy",
     "year": 2025,
-    "isbn": "9798316591204",
+    "isbn": "",
     "cover": "/covers/kiminou-knox-adventures-kiminou-great-chua.png",
-    "pdf": "/books/adventures-kiminou-chua-sample.pdf",
+    "pdf": "",
     "themes": [
       "Friendship",
       "Growth",
@@ -146,16 +157,24 @@
       "googleBooks": "https://play.google.com/store/books/details/Kiminou_Knox_The_Adventures_of_Kiminou_the_Great_a?id=CHyKEQAAQBAJ",
       "bookshop": null,
       "bn": null
-    }
+    },
+    "datePublished": "2025-09-28",
+    "genre": "Children's literature",
+    "contributors": [
+      {
+        "name": "Matsoua Malonga",
+        "role": "Co-author"
+      }
+    ]
   },
   {
     "id": "world-of-imagination",
     "title": "Kiminou's World of Imagination: The Basics",
-    "subtitle": "The Basics",
+    "subtitle": "",
     "year": 2026,
     "isbn": "",
     "cover": "/covers/kiminou-knox-world-of-imagination.png",
-    "pdf": "/books/world-of-imagination-sample.pdf",
+    "pdf": "",
     "themes": [
       "Imagination",
       "Children",
@@ -167,7 +186,9 @@
       "googleBooks": "https://play.google.com/store/books/details?id=KArCEQAAQBAJ",
       "bookshop": null,
       "bn": null
-    }
+    },
+    "datePublished": "2026-02-18",
+    "genre": "Children's literature"
   },
   {
     "id": "why-did-you-ghost-me",
@@ -189,14 +210,16 @@
       "bookshop": null,
       "bn": null
     },
-    "featured": false
+    "featured": false,
+    "datePublished": "2026-07-15",
+    "genre": "Poetry"
   },
   {
     "id": "7-16-74-an-ode-to-rashida",
     "title": "7.16.74: An Ode to Rashida",
-    "subtitle": "An Ode to Rashida",
+    "subtitle": "",
     "year": 2026,
-    "isbn": "",
+    "isbn": "9798187509638",
     "cover": "/covers/7-16-74-an-ode-to-rashida.jpg",
     "pdf": "",
     "themes": [
@@ -211,6 +234,8 @@
       "bookshop": null,
       "bn": null
     },
-    "featured": false
+    "featured": false,
+    "datePublished": "2026-07-16",
+    "genre": "Poetry"
   }
 ]

@@ -20,6 +20,8 @@ type Book = {
   year: number;
   isbn?: string | null;
   datePublished?: string;
+  genre?: string;
+  contributors?: { name: string; role: string }[];
   edition?: string;
   numberOfPages?: number;
   cover: string;
@@ -139,13 +141,17 @@ export default function BookDetail() {
       "url": "https://www.kiminouknox.com",
       "@id": "https://www.kiminouknox.com/#person"
     },
-    "datePublished": book.datePublished || `${book.year}-01-01`,
+    // A bare year is valid ISO 8601; inventing January 1 is not a real date.
+    "datePublished": book.datePublished || String(book.year),
+    ...(book.contributors?.length && {
+      "contributor": book.contributors.map(({ name }) => ({ "@type": "Person", "name": name })),
+    }),
     ...(book.isbn && { "isbn": book.isbn }),
     ...(book.edition && { "bookEdition": book.edition }),
     ...(book.numberOfPages && { "numberOfPages": book.numberOfPages }),
     "url": `https://www.kiminouknox.com/books/${book.id}`,
     "image": `https://www.kiminouknox.com${book.cover}`,
-    "genre": "Poetry",
+    "genre": book.genre || "Poetry",
     "inLanguage": "en",
     "bookFormat": book.edition ? "EBook" : "Paperback",
     "offers": Object.entries(book.buyLinks)
@@ -181,7 +187,7 @@ export default function BookDetail() {
   return (
     <>
       <Helmet>
-        <title>{book.title} — Kiminou Knox | Poetry Collection</title>
+        <title>{`${book.title} by Kiminou Knox | ${book.genre === "Children's literature" ? "Children's Book" : "Poetry Collection"}`}</title>
         <meta name="description" content={`${book.description} Published ${book.year} by Kiminou Knox. ${availabilityDescription}`} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href={`https://www.kiminouknox.com/books/${book.id}`} />
@@ -274,7 +280,14 @@ export default function BookDetail() {
                       {book.title}
                     </h1>
                     <div className="w-12 h-px bg-amber-400/40 my-5" />
-                    <p className="font-serif text-xl text-amber-200/60 italic mb-6">{book.subtitle}</p>
+                    {book.subtitle && (
+                      <p className="font-serif text-xl text-amber-200/60 italic mb-6">{book.subtitle}</p>
+                    )}
+                    {book.contributors?.length ? (
+                      <p className="text-sm text-white/62 mb-6">
+                        With {book.contributors.map(({ name, role }) => `${name} (${role})`).join(", ")}
+                      </p>
+                    ) : null}
                     <p className="text-white/62 leading-relaxed max-w-lg">{book.description}</p>
                   </div>
                 </Reveal>
