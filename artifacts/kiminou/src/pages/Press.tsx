@@ -87,6 +87,8 @@ const creativeWorkSchema = {
   url: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
 };
 
+// `bwPortrait` was retired from the image catalog; `pickImages` resolves ids
+// safely so a stale one can never throw during render again.
 const pressImages = pickImages(
   "smilingBlazerPortrait",
   "casualOutdoorPortrait",
