@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useInView, useReducedMotion } from "framer-motion";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#$@&%";
 
@@ -13,18 +13,20 @@ interface Props {
 export default function ScrambleText({ text, className = "", delay = 0, speed = 38 }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const reduceMotion = useReducedMotion();
   const [display, setDisplay] = useState(text);
   const started = useRef(false);
 
   useEffect(() => {
-    if (!inView || started.current) return;
+    if (!inView || started.current || reduceMotion) return;
     started.current = true;
 
+    let interval: ReturnType<typeof setInterval> | undefined;
     const timeout = setTimeout(() => {
       let frame = 0;
       const totalFrames = text.length * 4;
 
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         setDisplay(
           text
             .split("")
@@ -41,16 +43,19 @@ export default function ScrambleText({ text, className = "", delay = 0, speed = 
           clearInterval(interval);
         }
       }, speed);
-
-      return () => clearInterval(interval);
     }, delay * 1000);
 
-    return () => clearTimeout(timeout);
-  }, [inView, text, delay, speed]);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
+  }, [inView, text, delay, speed, reduceMotion]);
 
+  // Screen readers get the real text; the scrambling glyphs are decorative.
   return (
-    <span ref={ref} className={className} aria-label={text}>
-      {display}
+    <span ref={ref} className={className}>
+      <span aria-hidden="true">{display}</span>
+      <span className="sr-only">{text}</span>
     </span>
   );
 }
