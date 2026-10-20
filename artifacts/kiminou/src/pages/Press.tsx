@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
+import { KIMINOU_IMAGES, pickImages } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
@@ -87,13 +87,11 @@ const creativeWorkSchema = {
   url: "https://www.themileshallfoundation.org/post/youth-summit-essay-finalist",
 };
 
-// bwPortrait was retired from kiminouImages.json; an undefined entry here crashed /press
-// and the route error boundary then served it with noindex.
-const pressImages = [
-  KIMINOU_IMAGES.officialHeadshot,
-  KIMINOU_IMAGES.casualOutdoorPortrait,
-  KIMINOU_IMAGES.taunHallEvent,
-];
+const pressImages = pickImages(
+  "smilingBlazerPortrait",
+  "casualOutdoorPortrait",
+  "taunHallEvent",
+);
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
@@ -123,7 +121,7 @@ export default function Press() {
         <meta property="og:title" content="Kiminou Knox — Press, Recognition & Public References" />
         <meta property="og:description" content="Miles Hall Foundation Youth Summit Top Essay Finalist (2025). Verified on Amazon, Goodreads, MaxPreps, NCSA, Apple Podcasts, and LinkedIn." />
         <meta property="og:url" content="https://www.kiminouknox.com/press" />
-        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`} />
+        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot?.src ?? "/og-image.png"}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
@@ -159,7 +157,7 @@ export default function Press() {
       </Helmet>
       <Header />
 
-      <main className="min-h-screen bg-black text-white">
+      <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── HERO ─── */}
         <section className="relative pt-40 pb-24 overflow-hidden" ref={heroRef}>
