@@ -3,9 +3,16 @@ import { AUTHOR_SEARCH_DESCRIPTION, AUTHOR_SHORT_BIO } from "@/content/authorPro
 export const SITE_NAME = "Kiminou Knox";
 export const SITE_URL = "https://www.kiminouknox.com";
 export const SITE_DESCRIPTION = AUTHOR_SEARCH_DESCRIPTION;
-export const SITE_IMAGE = "https://www.kiminouknox.com/og-image.png";
+// Owner-approved headshot (photo #6), letterboxed to 1200x630 by scripts/generate-photo-variants.mjs.
+export const SITE_IMAGE =
+  "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg";
+export const SITE_IMAGE_WIDTH = 1200;
+export const SITE_IMAGE_HEIGHT = 630;
+export const SITE_IMAGE_ALT = "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace";
 export const SITE_PERSON_IMAGE =
   "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg";
+export const SITE_PERSON_IMAGE_WIDTH = 1152;
+export const SITE_PERSON_IMAGE_HEIGHT = 1536;
 export const SITE_TWITTER = "@KnoxKiminou";
 export const SITE_FEED = "https://www.kiminouknox.com/rss.xml";
 export const SITE_MEDIUM_PROFILE = "https://medium.com/@knoxkiminou1";
@@ -73,7 +80,10 @@ export function personSchema() {
         image: {
           "@type": "ImageObject",
           url: SITE_PERSON_IMAGE,
-          caption: "Kiminou Knox — official author headshot 2026",
+          contentUrl: SITE_PERSON_IMAGE,
+          caption: "Official author headshot of Kiminou Knox.",
+          width: SITE_PERSON_IMAGE_WIDTH,
+          height: SITE_PERSON_IMAGE_HEIGHT,
         },
         jobTitle: ["Author", "Athlete", "Speaker", "Podcast Host"],
         description: AUTHOR_SHORT_BIO,

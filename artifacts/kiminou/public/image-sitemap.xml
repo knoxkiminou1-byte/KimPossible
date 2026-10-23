@@ -3,27 +3,10 @@
   <url>
     <loc>https://www.kiminouknox.com/</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/og-image.png</image:loc>
-      <image:title>Kiminou Knox official website image</image:title>
-      <image:caption>Kiminou Knox, author and poet, official website preview.</image:caption>
-
-    </image:image>
-    <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Kiminou Knox | Author, Poet, and Host of KimYaps</image:title>
-      <image:caption>Official home of Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, host of the KimYaps podcast, and director at Artists and Athletes for Change.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg</image:loc>
-      <image:title>Kiminou Knox outdoor candid portrait</image:title>
-      <image:caption>Kiminou Knox outdoor portrait for biography and author profile pages.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/kiminou-knox-author-athlete-bay-area.webp</image:loc>
-      <image:title>Kiminou Knox website hero illustration</image:title>
-      <image:caption>Illustrated artwork for the official Kiminou Knox website, not a photograph.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
@@ -31,20 +14,23 @@
     <loc>https://www.kiminouknox.com/about</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Kiminou Knox official author headshot 2026</image:title>
-      <image:caption>Official author headshot of Kiminou Knox for press, speaker, and biography pages.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg</image:loc>
-      <image:title>About - Kiminou Knox</image:title>
-      <image:caption>About Kiminou Knox, a Bay Area raised, New Orleans based author and poet writing across faith, Black boyhood, identity, love, and discipline.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-close-portrait-black-shirt.jpg</image:loc>
+      <image:title>Kiminou Knox close portrait in a black shirt</image:title>
+      <image:caption>Close indoor portrait of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-smiling-blazer-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox smiling blazer portrait</image:title>
-      <image:caption>Smiling portrait of Kiminou Knox in a blazer.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg</image:loc>
+      <image:title>Kiminou Knox outdoor portrait with documents</image:title>
+      <image:caption>Outdoor portrait of Kiminou Knox holding a stack of documents.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
@@ -52,32 +38,16 @@
     <loc>https://www.kiminouknox.com/author</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Kiminou Knox | Author Profile</image:title>
-      <image:caption>Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-author-casual-outdoor-portrait-2025.jpg</image:loc>
-      <image:title>Kiminou Knox casual outdoor author portrait 2025</image:title>
-      <image:caption>Kiminou Knox casual outdoor portrait for author and press profiles, 2025.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg</image:loc>
-      <image:title>Kiminou Knox outdoor candid portrait</image:title>
-      <image:caption>Kiminou Knox outdoor portrait for biography and author profile pages.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-author-reading-hopeless-romantic.jpg</image:loc>
-      <image:title>Kiminou Knox reading Hopeless Romantic</image:title>
-      <image:caption>Kiminou Knox with Hopeless Romantic, one of his poetry books.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg</image:loc>
-      <image:title>Kiminou Knox chess strategy</image:title>
-      <image:caption>Kiminou Knox studying chess as a visual signal of strategy, focus, and discipline.</image:caption>
+      <image:title>Kiminou Knox playing chess</image:title>
+      <image:caption>Kiminou Knox at the chess board.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
@@ -85,38 +55,44 @@
     <loc>https://www.kiminouknox.com/press</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Press &amp; Recognition - Kiminou Knox</image:title>
-      <image:caption>Press, recognition, biography, official links, and media resources for Kiminou Knox.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-author-casual-outdoor-portrait-2025.jpg</image:loc>
-      <image:title>Kiminou Knox casual outdoor author portrait 2025</image:title>
-      <image:caption>Kiminou Knox casual outdoor portrait for author and press profiles, 2025.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-close-portrait-black-shirt.jpg</image:loc>
+      <image:title>Kiminou Knox close portrait in a black shirt</image:title>
+      <image:caption>Close indoor portrait of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-media-day.jpg</image:loc>
-      <image:title>Kiminou Knox football media day</image:title>
-      <image:caption>Kiminou Knox in football uniform during a field media moment.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg</image:loc>
-      <image:title>Kiminou Knox chess strategy</image:title>
-      <image:caption>Kiminou Knox studying chess as a visual signal of strategy, focus, and discipline.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-event-podium.png</image:loc>
-      <image:title>Kiminou Knox speaking at youth event podium</image:title>
-      <image:caption>Kiminou Knox speaking at a youth event podium.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg</image:loc>
+      <image:title>Kiminou Knox outdoor portrait with documents</image:title>
+      <image:caption>Outdoor portrait of Kiminou Knox holding a stack of documents.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg</image:loc>
-      <image:title>Kiminou Knox speaking with Taun Hall at youth summit 2025</image:title>
+      <image:title>Kiminou Knox speaking at a youth summit with Taun Hall</image:title>
       <image:caption>Kiminou Knox speaking at a youth summit event alongside Taun Hall, 2025.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg</image:loc>
+      <image:title>Kiminou Knox playing chess</image:title>
+      <image:caption>Kiminou Knox at the chess board.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
+      <image:title>Kiminou Knox basketball portrait in a red uniform</image:title>
+      <image:caption>Basketball portrait of Kiminou Knox in a red uniform.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
@@ -124,206 +100,72 @@
     <loc>https://www.kiminouknox.com/media</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Media Gallery - Kiminou Knox</image:title>
-      <image:caption>Approved media assets for Kiminou Knox: headshots, athletic photos, speaker photos, and book covers, available for download in high resolution.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-author-casual-outdoor-portrait-2025.jpg</image:loc>
-      <image:title>Kiminou Knox casual outdoor author portrait 2025</image:title>
-      <image:caption>Kiminou Knox casual outdoor portrait for author and press profiles, 2025.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-candid-portrait-steps.png</image:loc>
-      <image:title>Kiminou Knox candid portrait on steps</image:title>
-      <image:caption>Candid portrait of Kiminou Knox seated outdoors.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg</image:loc>
-      <image:title>Kiminou Knox outdoor candid portrait</image:title>
-      <image:caption>Kiminou Knox outdoor portrait for biography and author profile pages.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-close-portrait-black-shirt.jpg</image:loc>
+      <image:title>Kiminou Knox close portrait in a black shirt</image:title>
+      <image:caption>Close indoor portrait of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg</image:loc>
       <image:title>Kiminou Knox outdoor portrait with documents</image:title>
-      <image:caption>Outdoor portrait of Kiminou Knox holding documents.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-cafe-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox cafe portrait</image:title>
-      <image:caption>Cafe portrait of Kiminou Knox.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-smiling-blazer-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox smiling blazer portrait</image:title>
-      <image:caption>Smiling portrait of Kiminou Knox in a blazer.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-author-reading-hopeless-romantic.jpg</image:loc>
-      <image:title>Kiminou Knox reading Hopeless Romantic</image:title>
-      <image:caption>Kiminou Knox with Hopeless Romantic, one of his poetry books.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-studio-portrait-sunglasses.jpg</image:loc>
-      <image:title>Kiminou Knox studio portrait with sunglasses</image:title>
-      <image:caption>Studio portrait of Kiminou Knox with sunglasses.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-indoor-selfie-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox indoor selfie portrait</image:title>
-      <image:caption>Indoor portrait of Kiminou Knox.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg</image:loc>
-      <image:title>Kiminou Knox basketball jump shot</image:title>
-      <image:caption>Kiminou Knox taking a jump shot during basketball warmups.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-game-action.jpg</image:loc>
-      <image:title>Kiminou Knox basketball game action</image:title>
-      <image:caption>Kiminou Knox in basketball game action.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-warmup-smile.jpg</image:loc>
-      <image:title>Kiminou Knox basketball warmup smile</image:title>
-      <image:caption>Kiminou Knox smiling during basketball warmups.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg</image:loc>
-      <image:title>Kiminou Knox basketball huddle</image:title>
-      <image:caption>Kiminou Knox with teammates during a basketball game huddle.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
-      <image:title>Kiminou Knox basketball media portrait</image:title>
-      <image:caption>Basketball media portrait of Kiminou Knox in uniform.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-media-day.jpg</image:loc>
-      <image:title>Kiminou Knox football media day</image:title>
-      <image:caption>Kiminou Knox in football uniform during a field media moment.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg</image:loc>
-      <image:title>Kiminou Knox Ygnacio football locker room</image:title>
-      <image:caption>Kiminou Knox seated in a Ygnacio football uniform in the locker room.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-uniform.jpg</image:loc>
-      <image:title>Kiminou Knox football uniform portrait</image:title>
-      <image:caption>Football uniform portrait of Kiminou Knox.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-game-action.jpg</image:loc>
-      <image:title>Kiminou Knox football game action</image:title>
-      <image:caption>Kiminou Knox in football game action.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-team-tunnel.jpg</image:loc>
-      <image:title>Kiminou Knox football team tunnel</image:title>
-      <image:caption>Kiminou Knox with teammates before a football game.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg</image:loc>
-      <image:title>Kiminou Knox chess strategy</image:title>
-      <image:caption>Kiminou Knox studying chess as a visual signal of strategy, focus, and discipline.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-event-podium.png</image:loc>
-      <image:title>Kiminou Knox speaking at youth event podium</image:title>
-      <image:caption>Kiminou Knox speaking at a youth event podium.</image:caption>
+      <image:caption>Outdoor portrait of Kiminou Knox holding a stack of documents.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg</image:loc>
-      <image:title>Kiminou Knox speaking with Taun Hall at youth summit 2025</image:title>
+      <image:title>Kiminou Knox speaking at a youth summit with Taun Hall</image:title>
       <image:caption>Kiminou Knox speaking at a youth summit event alongside Taun Hall, 2025.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-sunglasses-blazer-self-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox sunglasses blazer self portrait</image:title>
-      <image:caption>Curated self portrait of Kiminou Knox wearing reflective sunglasses and a blazer.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg</image:loc>
+      <image:title>Kiminou Knox playing chess</image:title>
+      <image:caption>Kiminou Knox at the chess board.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-blue-patterned-hoodie-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox blue patterned hoodie portrait</image:title>
-      <image:caption>Curated indoor portrait of Kiminou Knox in a blue patterned hoodie.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
+      <image:title>Kiminou Knox basketball portrait in a red uniform</image:title>
+      <image:caption>Basketball portrait of Kiminou Knox in a red uniform.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-black-durag-car-selfie-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox black durag car self portrait</image:title>
-      <image:caption>Curated car portrait of Kiminou Knox wearing a black durag.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg</image:loc>
+      <image:title>Kiminou Knox in the Ygnacio football locker room</image:title>
+      <image:caption>Kiminou Knox in Ygnacio football gear in the locker room.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-green-beanie-indoor-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox green beanie indoor portrait</image:title>
-      <image:caption>Curated indoor portrait of Kiminou Knox in a green beanie and patterned shirt.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-field-photo.jpg</image:loc>
+      <image:title>Kiminou Knox in football uniform on the field</image:title>
+      <image:caption>Kiminou Knox in football uniform on the field.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-patterned-shirt-smiling-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox patterned shirt smiling portrait</image:title>
-      <image:caption>Curated smiling portrait of Kiminou Knox in a patterned shirt.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg</image:loc>
+      <image:title>Kiminou Knox with basketball teammates on the sideline</image:title>
+      <image:caption>Kiminou Knox with basketball teammates on the sideline.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-hooded-night-gym-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox hooded night gym portrait</image:title>
-      <image:caption>Curated night portrait of Kiminou Knox near a gym setting.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-bandana-horizontal-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox bandana horizontal portrait</image:title>
-      <image:caption>Curated horizontal portrait of Kiminou Knox wearing a black bandana.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-black-hoodie-smiling-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox black hoodie smiling portrait</image:title>
-      <image:caption>Curated smiling portrait of Kiminou Knox in a black hoodie.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-black-durag-car-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox black durag car portrait</image:title>
-      <image:caption>Curated car portrait of Kiminou Knox in a black durag and brown hoodie.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-black-durag-car-peace-sign-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox black durag car peace sign portrait</image:title>
-      <image:caption>Curated car portrait of Kiminou Knox holding a peace sign.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-glasses-car-portrait.jpg</image:loc>
-      <image:title>Kiminou Knox glasses car portrait</image:title>
-      <image:caption>Curated car portrait of Kiminou Knox wearing glasses.</image:caption>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-game-action.jpg</image:loc>
+      <image:title>Kiminou Knox Ygnacio football game action at night</image:title>
+      <image:caption>Kiminou Knox in football game action for Ygnacio at night.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
@@ -377,7 +219,7 @@
     <image:image>
       <image:loc>https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg</image:loc>
       <image:title>Boys Raised in Silence by Kiminou Knox</image:title>
-      <image:caption>Temporary title card for Boys Raised in Silence by Kiminou Knox. Official cover artwork pending approval.</image:caption>
+      <image:caption>Boys Raised in Silence book cover by Kiminou Knox.</image:caption>
 
     </image:image>
     <image:image>
@@ -409,61 +251,124 @@
     <loc>https://www.kiminouknox.com/contact</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Contact - Kiminou Knox</image:title>
-      <image:caption>Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.</image:caption>
-
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kiminouknox.com/now</loc>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Now - Kiminou Knox</image:title>
-      <image:caption>What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
   <url>
     <loc>https://www.kiminouknox.com/portfolio</loc>
     <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg</image:loc>
-      <image:title>Kiminou Knox | Portfolio - Author, Athlete, Builder &amp; Entrepreneur</image:title>
-      <image:caption>Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.</image:caption>
-
-    </image:image>
-    <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg</image:loc>
       <image:title>Kiminou Knox outdoor portrait with documents</image:title>
-      <image:caption>Outdoor portrait of Kiminou Knox holding documents.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-studio-portrait-sunglasses.jpg</image:loc>
-      <image:title>Kiminou Knox studio portrait with sunglasses</image:title>
-      <image:caption>Studio portrait of Kiminou Knox with sunglasses.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg</image:loc>
-      <image:title>Kiminou Knox basketball jump shot</image:title>
-      <image:caption>Kiminou Knox taking a jump shot during basketball warmups.</image:caption>
+      <image:caption>Outdoor portrait of Kiminou Knox holding a stack of documents.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-chess-strategy.jpg</image:loc>
-      <image:title>Kiminou Knox chess strategy</image:title>
-      <image:caption>Kiminou Knox studying chess as a visual signal of strategy, focus, and discipline.</image:caption>
+      <image:title>Kiminou Knox playing chess</image:title>
+      <image:caption>Kiminou Knox at the chess board.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/speaking</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg</image:loc>
+      <image:title>Kiminou Knox speaking at a youth summit with Taun Hall</image:title>
+      <image:caption>Kiminou Knox speaking at a youth summit event alongside Taun Hall, 2025.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/sports</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
+      <image:title>Kiminou Knox basketball portrait in a red uniform</image:title>
+      <image:caption>Basketball portrait of Kiminou Knox in a red uniform.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg</image:loc>
+      <image:title>Kiminou Knox in the Ygnacio football locker room</image:title>
+      <image:caption>Kiminou Knox in Ygnacio football gear in the locker room.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-field-photo.jpg</image:loc>
+      <image:title>Kiminou Knox in football uniform on the field</image:title>
+      <image:caption>Kiminou Knox in football uniform on the field.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg</image:loc>
+      <image:title>Kiminou Knox with basketball teammates on the sideline</image:title>
+      <image:caption>Kiminou Knox with basketball teammates on the sideline.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-game-action.jpg</image:loc>
+      <image:title>Kiminou Knox Ygnacio football game action at night</image:title>
+      <image:caption>Kiminou Knox in football game action for Ygnacio at night.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/sports/recruiting</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
+      <image:title>Kiminou Knox basketball portrait in a red uniform</image:title>
+      <image:caption>Basketball portrait of Kiminou Knox in a red uniform.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg</image:loc>
+      <image:title>Kiminou Knox in the Ygnacio football locker room</image:title>
+      <image:caption>Kiminou Knox in Ygnacio football gear in the locker room.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-field-photo.jpg</image:loc>
+      <image:title>Kiminou Knox in football uniform on the field</image:title>
+      <image:caption>Kiminou Knox in football uniform on the field.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg</image:loc>
+      <image:title>Kiminou Knox with basketball teammates on the sideline</image:title>
+      <image:caption>Kiminou Knox with basketball teammates on the sideline.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-game-action.jpg</image:loc>
+      <image:title>Kiminou Knox Ygnacio football game action at night</image:title>
+      <image:caption>Kiminou Knox in football game action for Ygnacio at night.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
   <url>
     <loc>https://www.kiminouknox.com/books</loc>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-author-reading-hopeless-romantic.jpg</image:loc>
-      <image:title>Kiminou Knox reading Hopeless Romantic</image:title>
-      <image:caption>Kiminou Knox with Hopeless Romantic, one of his poetry books.</image:caption>
-
-    </image:image>
     <image:image>
       <image:loc>https://www.kiminouknox.com/kiminou-knox-book-universe-portal.webp</image:loc>
       <image:title>Kiminou Knox book universe illustration</image:title>
@@ -474,153 +379,6 @@
       <image:loc>https://www.kiminouknox.com/kiminou-knox-book-universe-portal.png</image:loc>
       <image:title>Published Books - Kiminou Knox</image:title>
       <image:caption>Explore published books by Kiminou Knox, including The Spirit of Solomon, Our Father?, Hopeless Romantic, and Poems from a Black Boy.</image:caption>
-
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kiminouknox.com/sports</loc>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg</image:loc>
-      <image:title>Sports &amp; Athletics - Kiminou Knox</image:title>
-      <image:caption>Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-game-action.jpg</image:loc>
-      <image:title>Kiminou Knox basketball game action</image:title>
-      <image:caption>Kiminou Knox in basketball game action.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-warmup-smile.jpg</image:loc>
-      <image:title>Kiminou Knox basketball warmup smile</image:title>
-      <image:caption>Kiminou Knox smiling during basketball warmups.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg</image:loc>
-      <image:title>Kiminou Knox basketball huddle</image:title>
-      <image:caption>Kiminou Knox with teammates during a basketball game huddle.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
-      <image:title>Kiminou Knox basketball media portrait</image:title>
-      <image:caption>Basketball media portrait of Kiminou Knox in uniform.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-media-day.jpg</image:loc>
-      <image:title>Kiminou Knox football media day</image:title>
-      <image:caption>Kiminou Knox in football uniform during a field media moment.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg</image:loc>
-      <image:title>Kiminou Knox Ygnacio football locker room</image:title>
-      <image:caption>Kiminou Knox seated in a Ygnacio football uniform in the locker room.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-uniform.jpg</image:loc>
-      <image:title>Kiminou Knox football uniform portrait</image:title>
-      <image:caption>Football uniform portrait of Kiminou Knox.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-game-action.jpg</image:loc>
-      <image:title>Kiminou Knox football game action</image:title>
-      <image:caption>Kiminou Knox in football game action.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-team-tunnel.jpg</image:loc>
-      <image:title>Kiminou Knox football team tunnel</image:title>
-      <image:caption>Kiminou Knox with teammates before a football game.</image:caption>
-
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kiminouknox.com/sports/recruiting</loc>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg</image:loc>
-      <image:title>Athlete Recruiting Packet - Kiminou Knox</image:title>
-      <image:caption>Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-game-action.jpg</image:loc>
-      <image:title>Kiminou Knox basketball game action</image:title>
-      <image:caption>Kiminou Knox in basketball game action.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-warmup-smile.jpg</image:loc>
-      <image:title>Kiminou Knox basketball warmup smile</image:title>
-      <image:caption>Kiminou Knox smiling during basketball warmups.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg</image:loc>
-      <image:title>Kiminou Knox basketball huddle</image:title>
-      <image:caption>Kiminou Knox with teammates during a basketball game huddle.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg</image:loc>
-      <image:title>Kiminou Knox basketball media portrait</image:title>
-      <image:caption>Basketball media portrait of Kiminou Knox in uniform.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-media-day.jpg</image:loc>
-      <image:title>Kiminou Knox football media day</image:title>
-      <image:caption>Kiminou Knox in football uniform during a field media moment.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg</image:loc>
-      <image:title>Kiminou Knox Ygnacio football locker room</image:title>
-      <image:caption>Kiminou Knox seated in a Ygnacio football uniform in the locker room.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-uniform.jpg</image:loc>
-      <image:title>Kiminou Knox football uniform portrait</image:title>
-      <image:caption>Football uniform portrait of Kiminou Knox.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-game-action.jpg</image:loc>
-      <image:title>Kiminou Knox football game action</image:title>
-      <image:caption>Kiminou Knox in football game action.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-football-team-tunnel.jpg</image:loc>
-      <image:title>Kiminou Knox football team tunnel</image:title>
-      <image:caption>Kiminou Knox with teammates before a football game.</image:caption>
-
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kiminouknox.com/speaking</loc>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-event-podium.png</image:loc>
-      <image:title>Kiminou Knox speaking at youth event podium</image:title>
-      <image:caption>Kiminou Knox speaking at a youth event podium.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg</image:loc>
-      <image:title>Kiminou Knox speaking with Taun Hall at youth summit 2025</image:title>
-      <image:caption>Kiminou Knox speaking at a youth summit event alongside Taun Hall, 2025.</image:caption>
-
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Speaking &amp; KimYaps Podcast - Kiminou Knox</image:title>
-      <image:caption>Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work, or tune into KimYaps podcast episodes.</image:caption>
 
     </image:image>
   </url>
@@ -652,8 +410,9 @@
     <loc>https://www.kiminouknox.com/legacy</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>Legacy Timeline - Kiminou Knox</image:title>
-      <image:caption>The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
@@ -661,8 +420,19 @@
     <loc>https://www.kiminouknox.com/podcast</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
-      <image:title>KimYaps Podcast by Kiminou Knox | All Episodes</image:title>
-      <image:caption>KimYaps is where Kiminou Knox talks through faith, Black boyhood, masculinity, relationships, culture, grief, discipline, purpose, love, and the parts of life people usually struggle to say plainly. Listen to every episode on Apple Podcasts, Spotify, Amazon Music, and YouTube.</image:caption>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/now</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
 
     </image:image>
   </url>
@@ -734,7 +504,7 @@
     <image:image>
       <image:loc>https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg</image:loc>
       <image:title>Boys Raised in Silence by Kiminou Knox</image:title>
-      <image:caption>Temporary title card for Boys Raised in Silence by Kiminou Knox. Official cover artwork pending approval.</image:caption>
+      <image:caption>Boys Raised in Silence book cover by Kiminou Knox.</image:caption>
 
     </image:image>
   </url>

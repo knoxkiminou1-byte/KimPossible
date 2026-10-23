@@ -72,7 +72,7 @@ export default function Recruiting() {
         <meta property="og:title" content="Athlete Recruiting Packet — Kiminou Knox" />
         <meta property="og:description" content="Measurables, verified profiles, athletic highlights, and coach contact information." />
         <meta property="og:url" content={`${SITE_URL}/sports/recruiting`} />
-        <meta property="og:image" content={KIMINOU_IMAGES.basketballJumpShot.src} />
+        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballMediaPortrait.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />

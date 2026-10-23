@@ -616,6 +616,8 @@ export default function Speaking() {
                     <img
                       src="/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg"
                       alt="Kiminou Knox speaking alongside Taun Hall at a youth summit event in 2025"
+                      width={437}
+                      height={778}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
@@ -631,7 +633,7 @@ export default function Speaking() {
                   {/* YouTube CTA */}
                   <div className="flex flex-col gap-6">
                     <div className="relative group border border-white/8 overflow-hidden bg-black/40">
-                      <img src="/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg" alt="Kiminou Knox on stage" loading="lazy"
+                      <img src="/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg" alt="" loading="lazy"
                         className="w-full object-cover object-top opacity-35 group-hover:opacity-45 transition-opacity duration-500"
                         style={{ maxHeight: "250px" }} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

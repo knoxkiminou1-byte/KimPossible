@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { KIMINOU_ARCHIVE_IMAGES } from "@/lib/kiminouMedia";
+import { KIMINOU_FEATURED_IMAGES } from "@/lib/kiminouMedia";
 
-const IMAGES = KIMINOU_ARCHIVE_IMAGES;
+const IMAGES = KIMINOU_FEATURED_IMAGES;
 
 const PERFORATION_COUNT = 9;
 

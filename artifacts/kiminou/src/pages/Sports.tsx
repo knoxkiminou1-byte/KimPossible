@@ -14,7 +14,7 @@ import { ExternalLink, Trophy, TrendingUp, Target, Zap, ChevronDown, ArrowUpRigh
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AmbientAudio from "@/components/AmbientAudio";
-import { KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
+import { imageSrcSet, KIMINOU_IMAGES, KIMINOU_SPORTS_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL, SITE_SAME_AS } from "@/lib/seo";
 import { useShouldReduceEffects } from "@/hooks/useReducedMotion";
 
@@ -215,14 +215,14 @@ export default function Sports() {
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
         <meta property="og:title" content={"Kiminou Knox — Basketball Athlete Profile | 6'8\" Forward/Center, Ygnacio Valley Class of 2025"} />
         <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete, Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
-        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
+        <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballMediaPortrait.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
         <meta name="twitter:description" content={"6'8\" multi-sport athlete. Former Cristo Rey De La Salle captain. CaliHoop top-team selection. Ygnacio Valley Class of 2025."} />
-        <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballJumpShot.src}`} />
+        <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballMediaPortrait.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org", "@type": "Person",
@@ -368,7 +368,7 @@ export default function Sports() {
                     <RevealCard key={image.src} delay={i * 0.08} direction={dirs[i] ?? "up"} className={spans[i] ?? "md:col-span-4"}>
                       <motion.figure className="group relative overflow-hidden border border-white/10 bg-black min-h-[280px] h-full"
                         whileHover={{ scale: 1.015 }} transition={{ duration: 0.4, ease: "easeOut" }}>
-                        <motion.img src={image.src} alt={image.alt} width={image.width} height={image.height}
+                        <motion.img src={image.src} srcSet={imageSrcSet(image)} sizes="(min-width: 768px) 50vw, 100vw" alt={image.alt} width={image.width} height={image.height}
                           loading={i === 0 ? "eager" : "lazy"} decoding="async"
                           className="absolute inset-0 w-full h-full object-cover"
                           whileHover={{ scale: 1.06 }} transition={{ duration: 0.7, ease: "easeOut" }} />

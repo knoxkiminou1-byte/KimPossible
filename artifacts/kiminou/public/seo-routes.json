@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-20T05:23:08.228Z",
+  "generatedAt": "2026-10-23T00:37:23.916Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
     "description": "Official website of Kiminou Knox, Bay Area raised, New Orleans based author and poet of ten published books, host of KimYaps, Director at AAFC, and creator of the Black Boy Lie universe.",
-    "image": "https://www.kiminouknox.com/og-image.png",
+    "image": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
     "personImage": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
     "personImageObject": {
       "@type": "ImageObject",
       "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
       "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-      "width": 2200,
-      "height": 2933,
+      "width": 1152,
+      "height": 1536,
       "creator": {
         "@id": "https://www.kiminouknox.com/#person"
       },
@@ -65,7 +65,15 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -80,7 +88,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "Official home of Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, host of the KimYaps podcast, and director at Artists and Athletes for Change.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -96,7 +106,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -104,7 +114,7 @@
       "loc": "/about",
       "title": "About - Kiminou Knox",
       "description": "About Kiminou Knox, a Bay Area raised, New Orleans based author and poet writing across faith, Black boyhood, identity, love, and discipline.",
-      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
       "keywords": [
         "Kiminou Knox biography",
         "Kiminou Knox about",
@@ -119,7 +129,15 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -128,13 +146,15 @@
           "url": "https://www.kiminouknox.com/about",
           "name": "About - Kiminou Knox",
           "description": "About Kiminou Knox, a Bay Area raised, New Orleans based author and poet writing across faith, Black boyhood, identity, love, and discipline.",
-          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
-          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
-            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
-            "caption": "About Kiminou Knox, a Bay Area raised, New Orleans based author and poet writing across faith, Black boyhood, identity, love, and discipline.",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -150,7 +170,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -173,7 +193,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -197,7 +217,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -220,7 +240,15 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -235,7 +263,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "Author profile for Kiminou Knox, a young Bay Area writer with published books across poetry, faith, identity, love, and voice.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -251,7 +281,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -273,7 +303,15 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/legacy",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -288,7 +326,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "The record so far: books, athletic milestones, community recognition, and builder work from Kiminou Knox — author, athlete, speaker, and program director.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -304,7 +344,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -327,7 +367,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -351,7 +391,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -373,7 +413,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books/universe",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -397,7 +437,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -421,7 +461,15 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -436,7 +484,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "Book Kiminou Knox for talks on discipline, Black boy voice, faith, youth leadership, writing, athletics, and creative work, or tune into KimYaps podcast episodes.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -452,7 +502,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -783,6 +833,14 @@
       },
       "url": "https://www.kiminouknox.com/podcast",
       "lastmod": "2026-09-25",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -797,7 +855,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "KimYaps is where Kiminou Knox talks through faith, Black boyhood, masculinity, relationships, culture, grief, discipline, purpose, love, and the parts of life people usually struggle to say plainly. Listen to every episode on Apple Podcasts, Spotify, Amazon Music, and YouTube.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1081,7 +1141,15 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1096,7 +1164,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "Contact Kiminou Knox for speaking, press, book, basketball, interview, school, and creative collaboration inquiries.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1112,7 +1182,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1133,7 +1203,15 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/now",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1148,7 +1226,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "What Kiminou Knox is working on right now: latest book, latest essay, podcast, athletics, building, and speaking availability.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1164,7 +1244,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1186,7 +1266,15 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1201,7 +1289,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1217,7 +1307,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1239,7 +1329,15 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/media",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 1536,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox smiling in a brown blazer, green shirt, and cross necklace",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1254,7 +1352,9 @@
             "@type": "ImageObject",
             "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
             "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
-            "caption": "Approved media assets for Kiminou Knox: headshots, athletic photos, speaker photos, and book covers, available for download in high resolution.",
+            "caption": "Official author headshot of Kiminou Knox.",
+            "width": 1152,
+            "height": 1536,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1270,7 +1370,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1278,7 +1378,7 @@
       "loc": "/sports",
       "title": "Sports & Athletics - Kiminou Knox",
       "description": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
-      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
       "keywords": [
         "Kiminou Knox basketball",
         "Kiminou Knox athlete",
@@ -1292,7 +1392,15 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1440,
+      "imageHeight": 1794,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox in a red and white basketball uniform holding a basketball in front of a dark graphic backdrop",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-basketball-media-portrait-red-uniform-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1301,13 +1409,15 @@
           "url": "https://www.kiminouknox.com/sports",
           "name": "Sports & Athletics - Kiminou Knox",
           "description": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
-          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-            "caption": "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+            "caption": "Basketball portrait of Kiminou Knox in a red uniform.",
+            "width": 1440,
+            "height": 1794,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1323,7 +1433,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1331,7 +1441,7 @@
       "loc": "/sports/recruiting",
       "title": "Athlete Recruiting Packet - Kiminou Knox",
       "description": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
-      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
       "keywords": [
         "Kiminou Knox recruiting",
         "Kiminou Knox basketball recruiting",
@@ -1345,7 +1455,15 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports/recruiting",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1440,
+      "imageHeight": 1794,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox in a red and white basketball uniform holding a basketball in front of a dark graphic backdrop",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-basketball-media-portrait-red-uniform-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1354,13 +1472,15 @@
           "url": "https://www.kiminouknox.com/sports/recruiting",
           "name": "Athlete Recruiting Packet - Kiminou Knox",
           "description": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
-          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
-            "caption": "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+            "caption": "Basketball portrait of Kiminou Knox in a red uniform.",
+            "width": 1440,
+            "height": 1794,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1376,7 +1496,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1384,7 +1504,7 @@
       "loc": "/portfolio",
       "title": "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
       "description": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
-      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+      "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
       "keywords": [
         "Kiminou Knox portfolio",
         "author athlete entrepreneur",
@@ -1398,7 +1518,15 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
+      "imageWidth": 1152,
+      "imageHeight": 2048,
+      "imageType": "image/jpeg",
+      "imageAlt": "Kiminou Knox standing outdoors in a green striped long-sleeve shirt, holding a stack of papers",
+      "imagePath": "/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
+      "ogImage": "https://www.kiminouknox.com/photos/kiminou-knox/social/kiminou-knox-outdoor-portrait-documents-1200x630.jpg",
+      "ogImageWidth": 1200,
+      "ogImageHeight": 630,
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1407,13 +1535,15 @@
           "url": "https://www.kiminouknox.com/portfolio",
           "name": "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
           "description": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
-          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
-          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
+          "image": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
+          "thumbnailUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
-            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-candid-green-striped-sweater.jpg",
-            "caption": "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
+            "url": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
+            "contentUrl": "https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
+            "caption": "Outdoor portrait of Kiminou Knox holding a stack of documents.",
+            "width": 1152,
+            "height": 2048,
             "creator": {
               "@id": "https://www.kiminouknox.com/#person"
             },
@@ -1429,7 +1559,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1452,7 +1582,7 @@
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1476,7 +1606,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1498,7 +1628,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1522,7 +1652,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         }
       ]
     },
@@ -1783,7 +1913,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/books/poems-black-boy",
-      "lastmod": "2026-10-20",
+      "lastmod": "2026-10-23",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1807,7 +1937,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-10-20"
+          "dateModified": "2026-10-23"
         },
         {
           "@context": "https://schema.org",
@@ -2041,7 +2171,7 @@
       "loc": "/books/boys-raised-in-silence",
       "title": "Boys Raised in Silence by Kiminou Knox | Poetry Collection",
       "description": "Boys Raised in Silence by Kiminou Knox. Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
-      "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+      "image": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
       "keywords": [
         "Boys Raised in Silence",
         "Kiminou Knox book",
@@ -2068,7 +2198,7 @@
         "name": "Boys Raised in Silence",
         "alternateName": "Poems for the Things We Were Never Allowed to Feel",
         "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
-        "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+        "image": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
         "author": {
           "@id": "https://www.kiminouknox.com/#person"
         },
@@ -2096,12 +2226,12 @@
           "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
           "name": "Boys Raised in Silence by Kiminou Knox | Poetry Collection",
           "description": "Boys Raised in Silence by Kiminou Knox. Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man.",
-          "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
-          "thumbnailUrl": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "image": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
+          "thumbnailUrl": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
-            "contentUrl": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+            "url": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
+            "contentUrl": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
             "caption": "Boys Raised in Silence by Kiminou Knox. Poems for the Things We Were Never Allowed to Feel. A powerful exploration of the cost of silence and the courage required to speak your truth as a young Black man."
           },
           "isPartOf": {
@@ -2120,7 +2250,7 @@
           "name": "Boys Raised in Silence",
           "alternateName": "Poems for the Things We Were Never Allowed to Feel",
           "url": "https://www.kiminouknox.com/books/boys-raised-in-silence",
-          "image": "https://www.kiminouknox.com/covers/kiminou-knox-boys-raised-in-silence.png",
+          "image": "https://www.kiminouknox.com/covers/boys-raised-in-silence-title-card.svg",
           "author": {
             "@id": "https://www.kiminouknox.com/#person"
           },

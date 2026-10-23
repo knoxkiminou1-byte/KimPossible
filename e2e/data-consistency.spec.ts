@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -74,4 +75,82 @@ test("podcast hub is in the sitemap and has cached episodes", () => {
   for (const episode of cache.episodes as { title: string; audioUrl: string }[]) {
     expect(episode.audioUrl, episode.title).toMatch(/^https:\/\//);
   }
+});
+
+type CatalogImage = {
+  id: string;
+  src: string;
+  title: string;
+  alt: string;
+  caption: string;
+  category: string;
+  width: number;
+  height: number;
+  approved?: boolean;
+  ownerPhotoNumber?: number;
+  sha256?: string;
+};
+
+const RESPONSIVE_WIDTHS = [480, 960, 1600];
+
+function catalogImages() {
+  return readJson("src/content/kiminouImages.json").images as CatalogImage[];
+}
+
+test("owner-approved photo set is complete and matches its source bytes", () => {
+  const images = catalogImages();
+  const approved = images.filter((image) => image.approved);
+
+  expect(approved.map((image) => image.ownerPhotoNumber).sort((a, b) => a! - b!)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  expect(new Set(images.map((image) => image.src)).size, "duplicate src in catalog").toBe(images.length);
+  expect(new Set(approved.map((image) => image.sha256)).size, "same photo under two approved records").toBe(10);
+
+  for (const image of approved) {
+    const file = path.join(kiminouRoot, "public", image.src);
+    const sha = crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+    expect(sha, `${image.id} bytes`).toBe(image.sha256);
+    expect(image.src, `${image.id} src casing`).toBe(image.src.toLowerCase());
+    for (const width of RESPONSIVE_WIDTHS.filter((w) => w < image.width)) {
+      const base = image.src.replace(/\/([^/]+)\.jpg$/, "/responsive/$1");
+      expect(fs.existsSync(path.join(kiminouRoot, "public", `${base}-${width}w.webp`)), `${image.id} ${width}w`).toBe(true);
+    }
+  }
+});
+
+test("primary headshot is owner photo #6 and drives the Person image", () => {
+  const headshot = catalogImages().find((image) => image.id === "officialHeadshot")!;
+  expect(headshot.ownerPhotoNumber).toBe(6);
+
+  const seoRoutes = readJson("public/seo-routes.json");
+  expect(seoRoutes.site.personImage).toBe(`https://www.kiminouknox.com${headshot.src}`);
+  expect(seoRoutes.site.personImageObject.width).toBe(headshot.width);
+  expect(seoRoutes.site.personImageObject.height).toBe(headshot.height);
+
+  const seoTs = fs.readFileSync(path.join(kiminouRoot, "src", "lib", "seo.ts"), "utf8");
+  expect(seoTs).toContain(`"https://www.kiminouknox.com${headshot.src}"`);
+});
+
+test("sports photos are labeled with the sport they show", () => {
+  const byNumber = new Map(catalogImages().map((image) => [image.ownerPhotoNumber, image]));
+  const text = (n: number) => {
+    const image = byNumber.get(n)!;
+    return `${image.src} ${image.title} ${image.alt} ${image.caption}`.toLowerCase();
+  };
+  // #9 shows a basketball sideline; it was once filed as a football tunnel.
+  expect(text(9)).toContain("basketball");
+  expect(text(9)).not.toContain("football");
+  // #1 shows football action; it was once uploaded as brown-suit-author.jpg.
+  expect(text(1)).toContain("football");
+  expect(text(1)).not.toMatch(/suit|blazer|headshot/);
+  expect(text(10)).toContain("basketball");
+});
+
+test("image sitemap promotes approved photos only", () => {
+  const sitemap = fs.readFileSync(path.join(kiminouRoot, "public", "image-sitemap.xml"), "utf8");
+  const images = catalogImages();
+  const photoLocs = [...sitemap.matchAll(/<image:loc>https:\/\/www\.kiminouknox\.com(\/photos\/[^<]+)<\/image:loc>/g)].map((m) => m[1]);
+  const approvedSrcs = new Set(images.filter((image) => image.approved).map((image) => image.src));
+
+  for (const src of approvedSrcs) expect(photoLocs, `sitemap missing ${src}`).toContain(src);
+  for (const loc of photoLocs) expect(approvedSrcs.has(loc), `non-approved photo in sitemap: ${loc}`).toBe(true);
 });
