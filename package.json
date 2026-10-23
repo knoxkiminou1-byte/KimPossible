@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "pnpm --filter @workspace/kiminou run dev",
     "generate:books": "node scripts/generate-books.mjs",
+    "generate:photos": "node scripts/generate-photo-variants.mjs",
     "generate:seo": "pnpm run generate:books && node scripts/generate-seo.mjs",
     "prerender:seo": "node scripts/prerender-seo.mjs",
     "check:assets": "node scripts/check-assets.mjs",

@@ -92,7 +92,9 @@ function pageSchemas(route) {
 function renderHead(route) {
   const keywords = Array.isArray(route.keywords) ? route.keywords.join(", ") : "";
   const canonical = route.url;
-  const image = route.image || manifest.site.image;
+  const image = route.ogImage || route.image || manifest.site.image;
+  const imageWidth = route.ogImage ? route.ogImageWidth : route.imageWidth;
+  const imageHeight = route.ogImage ? route.ogImageHeight : route.imageHeight;
 
   return `    <title data-seo-static>${escapeHtml(route.title)}</title>
     <meta data-seo-static name="description" content="${escapeAttr(route.description)}">
@@ -109,14 +111,15 @@ function renderHead(route) {
     <meta data-seo-static property="og:description" content="${escapeAttr(route.description)}">
     <meta data-seo-static property="og:image" content="${escapeAttr(image)}">
     ${route.imageType ? `<meta data-seo-static property="og:image:type" content="${escapeAttr(route.imageType)}">` : ""}
-    ${route.imageWidth ? `<meta data-seo-static property="og:image:width" content="${escapeAttr(route.imageWidth)}">` : ""}
-    ${route.imageHeight ? `<meta data-seo-static property="og:image:height" content="${escapeAttr(route.imageHeight)}">` : ""}
-    <meta data-seo-static property="og:image:alt" content="${escapeAttr(route.title)}">
+    ${imageWidth ? `<meta data-seo-static property="og:image:width" content="${escapeAttr(imageWidth)}">` : ""}
+    ${imageHeight ? `<meta data-seo-static property="og:image:height" content="${escapeAttr(imageHeight)}">` : ""}
+    <meta data-seo-static property="og:image:alt" content="${escapeAttr(route.imageAlt || route.title)}">
     <meta data-seo-static name="twitter:card" content="summary_large_image">
     <meta data-seo-static name="twitter:url" content="${escapeAttr(canonical)}">
     <meta data-seo-static name="twitter:title" content="${escapeAttr(route.title)}">
     <meta data-seo-static name="twitter:description" content="${escapeAttr(route.description)}">
     <meta data-seo-static name="twitter:image" content="${escapeAttr(image)}">
+    ${route.imageAlt ? `<meta data-seo-static name="twitter:image:alt" content="${escapeAttr(route.imageAlt)}">` : ""}
     <style data-seo-static>
       .seo-prerender{min-height:100vh;background:#050505;color:#f6f0df;font-family:Inter,system-ui,sans-serif;padding:40px 24px}
       .seo-prerender a{color:#f5c542}.seo-prerender__wrap{max-width:920px;margin:0 auto}
@@ -151,6 +154,7 @@ function renderBody(route) {
           <main id="main-content">
             <article>
               <h1>${escapeHtml(heading)}</h1>
+              ${route.imagePath && route.imageAlt ? `<img src="${escapeAttr(route.imagePath)}" alt="${escapeAttr(route.imageAlt)}" width="${route.imageWidth}" height="${route.imageHeight}" loading="eager" decoding="async" style="display:block;width:min(100%,320px);height:auto;margin:0 0 24px">` : ""}
               <p>${escapeHtml(route.description)}</p>
               ${(route.sections || [])
                 .slice(1)

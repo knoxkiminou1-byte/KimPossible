@@ -9,7 +9,8 @@ const canonicalBookTitles = authorProfile.canonicalBooks.map(({ title }) => titl
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION = authorProfile.searchDescription;
-const SITE_IMAGE = `${SITE_URL}/og-image.png`;
+// Owner-approved headshot letterboxed to 1200x630 (scripts/generate-photo-variants.mjs).
+const SITE_IMAGE = `${SITE_URL}/photos/kiminou-knox/social/kiminou-knox-official-author-headshot-2026-1200x630.jpg`;
 // Same asset, relative. On-page <img> fallbacks must not hardcode the
 // production origin: it costs a cross-origin fetch for a file we already
 // serve, and it breaks on preview deployments.
@@ -52,6 +53,12 @@ const KIMINOU_IMAGE_ITEMS = kiminouImageData.images.map((image) => ({
 }));
 const KIMINOU_PHOTOS = Object.fromEntries(KIMINOU_IMAGE_ITEMS.map((image) => [image.id, image]));
 const KIMINOU_PERSON_IMAGE = `${SITE_URL}${KIMINOU_PHOTOS.officialHeadshot.loc}`;
+const KIMINOU_PHOTOS_BY_LOC = new Map(KIMINOU_IMAGE_ITEMS.map((image) => [image.loc, image]));
+
+// Keep in sync with socialCardPath in scripts/generate-photo-variants.mjs.
+function socialCardPath(src) {
+  return src.replace(/\/([^/]+)\.jpg$/, "/social/$1-1200x630.jpg");
+}
 
 const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
@@ -413,7 +420,7 @@ const baseRouteMeta = [
     title: "About - Kiminou Knox",
     description:
       "About Kiminou Knox, a Bay Area raised, New Orleans based author and poet writing across faith, Black boyhood, identity, love, and discipline.",
-    image: KIMINOU_PHOTOS.outdoorPortrait.loc,
+    image: KIMINOU_PHOTOS.officialHeadshot.loc,
     keywords: ["Kiminou Knox biography", "Kiminou Knox about", "Bay Area author", "athlete author"],
     sections: [
       {
@@ -615,7 +622,7 @@ const baseRouteMeta = [
     title: "Sports & Athletics - Kiminou Knox",
     description:
       "Athletic profile for Kiminou Knox, Bay Area basketball player and multi-sport athlete with recruiting and performance links.",
-    image: KIMINOU_PHOTOS.basketballJumpShot.loc,
+    image: KIMINOU_PHOTOS.basketballMediaPortrait.loc,
     keywords: ["Kiminou Knox basketball", "Kiminou Knox athlete", "Bay Area basketball player"],
     sections: [
       {
@@ -630,7 +637,7 @@ const baseRouteMeta = [
     title: "Athlete Recruiting Packet - Kiminou Knox",
     description:
       "Kiminou Knox recruiting profile: measurables, school, verified NCSA/MaxPreps/Prep Hoops profiles, athletic highlights, and coach contact information.",
-    image: KIMINOU_PHOTOS.basketballJumpShot.loc,
+    image: KIMINOU_PHOTOS.basketballMediaPortrait.loc,
     keywords: ["Kiminou Knox recruiting", "Kiminou Knox basketball recruiting", "Cristo Rey De La Salle basketball"],
     sections: [
       {
@@ -645,7 +652,7 @@ const baseRouteMeta = [
     title: "Kiminou Knox | Portfolio - Author, Athlete, Builder & Entrepreneur",
     description:
       "Portfolio for Kiminou Knox across published books, athletics, speaking, youth leadership, editorial work, and creative projects.",
-    image: KIMINOU_PHOTOS.outdoorPortrait.loc,
+    image: KIMINOU_PHOTOS.outdoorDocuments.loc,
     keywords: ["Kiminou Knox portfolio", "author athlete entrepreneur", "creative portfolio"],
     sections: [
       {
@@ -779,6 +786,7 @@ const blogRouteMeta = publishedPosts.map((post) => ({
 const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMeta].map((route) => {
   const matchedSitemap = routes.find((entry) => entry.loc === route.loc);
   const primaryImageUrl = absoluteUrl(route.image || "/og-image.png");
+  const catalogImage = KIMINOU_PHOTOS_BY_LOC.get(route.image);
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": route.schemaType || "WebPage",
@@ -792,7 +800,8 @@ const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMet
       "@type": "ImageObject",
       url: primaryImageUrl,
       contentUrl: primaryImageUrl,
-      caption: route.description,
+      caption: catalogImage?.caption || route.description,
+      ...(catalogImage ? { width: catalogImage.width, height: catalogImage.height } : {}),
       ...photoRights(primaryImageUrl),
     },
     isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -806,6 +815,18 @@ const routeManifestRoutes = [...baseRouteMeta, ...bookRouteMeta, ...blogRouteMet
     url: absoluteUrl(route.loc),
     lastmod: matchedSitemap?.lastmod || today,
     image: primaryImageUrl,
+    ...(catalogImage
+      ? {
+          imageWidth: catalogImage.width,
+          imageHeight: catalogImage.height,
+          imageType: "image/jpeg",
+          imageAlt: catalogImage.alt,
+          imagePath: catalogImage.loc,
+          ...(catalogImage.approved
+            ? { ogImage: absoluteUrl(socialCardPath(catalogImage.loc)), ogImageWidth: 1200, ogImageHeight: 630 }
+            : {}),
+        }
+      : {}),
     schemas: [webpageSchema, ...(route.schema ? [route.schema] : [])],
   };
 });
@@ -816,7 +837,7 @@ function imageForSitemap(image) {
     title: image.title,
     caption: image.caption || image.alt || image.title,
     geoLocation: image.geoLocation,
-    license: image.license,
+    license: image.license || (String(image.loc).includes("/photos/") ? "/media" : undefined),
   };
 }
 
@@ -832,15 +853,9 @@ function addRouteImages(routeLoc, images) {
   for (const image of images) addRouteImage(routeLoc, image);
 }
 
-addRouteImages("/", [
-  {
-    loc: "/og-image.png",
-    title: "Kiminou Knox official website image",
-    caption: "Kiminou Knox, author and poet, official website preview.",
-  },
-]);
-
-for (const image of KIMINOU_IMAGE_ITEMS) {
+// Only owner-approved photos (and brand art) are promoted in the image sitemap;
+// older photos stay on /media but are no longer submitted for discovery.
+for (const image of KIMINOU_IMAGE_ITEMS.filter((item) => item.approved || item.category === "Brand")) {
   for (const routeLoc of image.pages || []) {
     addRouteImage(routeLoc, image);
   }
@@ -848,11 +863,14 @@ for (const image of KIMINOU_IMAGE_ITEMS) {
 
 for (const route of baseRouteMeta) {
   if (route.image) {
-    addRouteImage(route.loc, {
-      loc: route.image,
-      title: route.title,
-      caption: route.description,
-    });
+    addRouteImage(
+      route.loc,
+      KIMINOU_PHOTOS_BY_LOC.get(route.image) || {
+        loc: route.image,
+        title: route.title,
+        caption: route.description,
+      },
+    );
   }
 }
 

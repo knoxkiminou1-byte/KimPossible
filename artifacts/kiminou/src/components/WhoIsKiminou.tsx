@@ -5,6 +5,9 @@ import GlitchHeading from "@/components/LuxuryFX/GlitchHeading";
 import GoldUnmask from "@/components/LuxuryFX/GoldUnmask";
 import MagneticElement from "@/components/LuxuryFX/MagneticElement";
 import VariableFontWave from "@/components/LuxuryFX/VariableFontWave";
+import { imageSrcSet, KIMINOU_IMAGES } from "@/lib/kiminouMedia";
+
+const headshot = KIMINOU_IMAGES.officialHeadshot;
 
 const identity = [
   {
@@ -148,6 +151,20 @@ export default function WhoIsKiminou() {
             >
               A writer and multi-sport athlete from the Bay Area, California, building a legacy through books, sport, and youth leadership.
             </p>
+            {headshot && (
+              <img
+                src={headshot.src}
+                srcSet={imageSrcSet(headshot)}
+                sizes="(min-width: 1024px) 320px, 80vw"
+                alt={headshot.alt}
+                width={headshot.width}
+                height={headshot.height}
+                loading="lazy"
+                decoding="async"
+                className="mt-10 w-full max-w-xs h-auto border border-white/10"
+                data-testid="who-headshot"
+              />
+            )}
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">

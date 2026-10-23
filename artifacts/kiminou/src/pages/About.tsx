@@ -6,15 +6,15 @@ import Footer from "@/components/Footer";
 import ConstellationTimeline from "@/components/ConstellationTimeline";
 import SplitNarrative from "@/components/SplitNarrative";
 import { CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
-import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
+import { imageSrcSet, KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, personSchema, SITE_URL } from "@/lib/seo";
 
 const Radiograph = lazy(() => import("@/components/LuxuryFX/Radiograph"));
 const TypewriterArchaeology = lazy(() => import("@/components/LuxuryFX/TypewriterArchaeology"));
 
 export default function About() {
-  const officialHeadshotUrl = `${SITE_URL}${KIMINOU_IMAGES.officialHeadshot.src}`;
-  const outdoorPortraitUrl = `${SITE_URL}${KIMINOU_IMAGES.outdoorPortrait.src}`;
+  const headshot = KIMINOU_IMAGES.officialHeadshot;
+  const officialHeadshotUrl = `${SITE_URL}${headshot.src}`;
 
   // Shared Person schema from seo.ts — keeps About and the rest of the site in sync
   const baseSchema = personSchema();
@@ -34,11 +34,12 @@ export default function About() {
         "about": { "@id": "https://www.kiminouknox.com/#person" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": outdoorPortraitUrl,
-          "name": KIMINOU_IMAGES.outdoorPortrait.title,
-          "caption": KIMINOU_IMAGES.outdoorPortrait.caption,
-          "width": KIMINOU_IMAGES.outdoorPortrait.width,
-          "height": KIMINOU_IMAGES.outdoorPortrait.height
+          "url": officialHeadshotUrl,
+          "contentUrl": officialHeadshotUrl,
+          "name": headshot.title,
+          "caption": headshot.caption,
+          "width": headshot.width,
+          "height": headshot.height
         }
       }
     ]
@@ -58,14 +59,17 @@ export default function About() {
         <meta property="og:title" content="About Kiminou Knox — Author and Poet" />
         <meta property="og:description" content="Bay Area raised, New Orleans based author and poet with ten published books. Host of KimYaps. Director at AAFC." />
         <meta property="og:url" content="https://www.kiminouknox.com/about" />
-        <meta property="og:image" content={outdoorPortraitUrl} />
+        <meta property="og:image" content={officialHeadshotUrl} />
+        <meta property="og:image:width" content={String(headshot.width)} />
+        <meta property="og:image:height" content={String(headshot.height)} />
+        <meta property="og:image:alt" content={headshot.alt} />
         <meta property="og:site_name" content="Kiminou Knox" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:title" content="About Kiminou Knox — Author and Poet" />
         <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet with ten published books. Host of KimYaps. Director at AAFC." />
-        <meta name="twitter:image" content={outdoorPortraitUrl} />
+        <meta name="twitter:image" content={officialHeadshotUrl} />
         
         <script type="application/ld+json">
           {JSON.stringify(schema)}
@@ -97,11 +101,14 @@ export default function About() {
           <div className="mb-12 grid gap-6 overflow-hidden border border-border bg-card md:grid-cols-[0.95fr_1.05fr]">
             <div className="relative min-h-[420px] bg-muted">
               <img
-                src={KIMINOU_IMAGES.outdoorPortrait.src}
-                alt={KIMINOU_IMAGES.outdoorPortrait.alt}
-                width={KIMINOU_IMAGES.outdoorPortrait.width}
-                height={KIMINOU_IMAGES.outdoorPortrait.height}
+                src={headshot.src}
+                srcSet={imageSrcSet(headshot)}
+                sizes="(min-width: 768px) 430px, 100vw"
+                alt={headshot.alt}
+                width={headshot.width}
+                height={headshot.height}
                 loading="eager"
+                fetchPriority="high"
                 decoding="async"
                 className="absolute inset-0 h-full w-full object-cover"
               />

@@ -13,6 +13,9 @@ import {
   podcastSchema,
   SITE_DESCRIPTION,
   SITE_IMAGE,
+  SITE_IMAGE_ALT,
+  SITE_IMAGE_HEIGHT,
+  SITE_IMAGE_WIDTH,
   SITE_TWITTER,
   SITE_URL,
   websiteSchema,
@@ -138,8 +141,9 @@ export default function Home() {
         <meta property="og:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:image" content={SITE_IMAGE} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content={String(SITE_IMAGE_WIDTH)} />
+        <meta property="og:image:height" content={String(SITE_IMAGE_HEIGHT)} />
+        <meta property="og:image:alt" content={SITE_IMAGE_ALT} />
         <meta property="og:site_name" content="Kiminou Knox" />
         
         <meta name="twitter:card" content="summary_large_image" />
@@ -148,6 +152,7 @@ export default function Home() {
         <meta name="twitter:title" content="Kiminou Knox | Author, Poet, and Host of KimYaps" />
         <meta name="twitter:description" content="Bay Area raised, New Orleans based author and poet. Ten published books. Host of KimYaps. Director at AAFC." />
         <meta name="twitter:image" content={SITE_IMAGE} />
+        <meta name="twitter:image:alt" content={SITE_IMAGE_ALT} />
         
         <script type="application/ld+json">
           {JSON.stringify(personSchema())}

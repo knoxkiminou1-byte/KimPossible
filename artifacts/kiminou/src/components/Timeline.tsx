@@ -30,7 +30,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Multi Sport Excellence",
     category: "athletic",
     icon: <Trophy className="w-5 h-5" />,
-    image: KIMINOU_IMAGES.basketballHuddle.src
+    image: KIMINOU_IMAGES.basketballTeamSideline.src
   },
   {
     year: "2020",
@@ -84,7 +84,7 @@ const timelineEvents: TimelineEvent[] = [
     achievement: "Renaissance Man",
     category: "personal",
     icon: <Star className="w-5 h-5" />,
-    image: KIMINOU_IMAGES.footballMediaDay.src
+    image: KIMINOU_IMAGES.footballFieldPhoto.src
   },
   {
     year: "2025",

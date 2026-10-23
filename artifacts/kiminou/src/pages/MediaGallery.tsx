@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { Download } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { KIMINOU_MEDIA_IMAGES } from "@/lib/kiminouMedia";
+import { imageSrcSet, KIMINOU_MEDIA_IMAGES, type KiminouImage } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 type Book = { id: string; title: string; cover: string; year: number };
@@ -17,14 +17,24 @@ type GalleryItem = {
   category: "Author" | "Athlete" | "Speaker" | "Strategy" | "Archive" | "Brand" | "Books";
   width: number;
   height: number;
+  approved?: boolean;
+  srcSet?: string;
 };
 
-const PHOTO_ITEMS: GalleryItem[] = KIMINOU_MEDIA_IMAGES.map((img) => ({
+const toGalleryItem = (img: KiminouImage): GalleryItem => ({
   ...img,
   category: img.category as GalleryItem["category"],
-}));
+  srcSet: imageSrcSet(img),
+});
 
-const CATEGORIES = ["All", "Author", "Athlete", "Speaker", "Strategy", "Archive", "Brand", "Books"] as const;
+// Owner-approved photos lead every view; older photos stay reachable after them.
+const PHOTO_ITEMS: GalleryItem[] = [
+  ...KIMINOU_MEDIA_IMAGES.filter((img) => img.approved),
+  ...KIMINOU_MEDIA_IMAGES.filter((img) => !img.approved),
+].map(toGalleryItem);
+const FEATURED_ITEMS = PHOTO_ITEMS.filter((item) => item.approved);
+
+const CATEGORIES = ["Featured", "All", "Author", "Athlete", "Speaker", "Strategy", "Archive", "Brand", "Books"] as const;
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
@@ -45,8 +55,12 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
         <div className={`relative overflow-hidden ${isBook ? "aspect-[3/4]" : "aspect-[3/4]"} bg-black`}>
           <img
             src={item.src}
+            srcSet={item.srcSet}
+            sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
             alt={item.alt}
-            loading="lazy"
+            width={item.width || undefined}
+            height={item.height || undefined}
+            loading={index < 4 ? "eager" : "lazy"}
             decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -75,7 +89,7 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
 
 export default function MediaGallery() {
   const [books, setBooks] = useState<Book[]>([]);
-  const [activeCategory, setActiveCategory] = useState<(typeof CATEGORIES)[number]>("All");
+  const [activeCategory, setActiveCategory] = useState<(typeof CATEGORIES)[number]>("Featured");
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
 
@@ -94,7 +108,12 @@ export default function MediaGallery() {
   }));
 
   const allItems = [...PHOTO_ITEMS, ...bookItems];
-  const filtered = activeCategory === "All" ? allItems : allItems.filter((i) => i.category === activeCategory);
+  const filtered =
+    activeCategory === "Featured"
+      ? FEATURED_ITEMS
+      : activeCategory === "All"
+        ? allItems
+        : allItems.filter((i) => i.category === activeCategory);
   const photoSchema = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
@@ -102,7 +121,7 @@ export default function MediaGallery() {
     name: "Kiminou Knox media gallery",
     description: "Approved photos and media images for Kiminou Knox.",
     about: { "@id": `${SITE_URL}/#person` },
-    image: PHOTO_ITEMS.map((image) => ({
+    image: FEATURED_ITEMS.map((image) => ({
       "@type": "ImageObject",
       "@id": `${SITE_URL}${image.src}#image`,
       url: `${SITE_URL}${image.src}`,
@@ -113,6 +132,11 @@ export default function MediaGallery() {
       width: image.width,
       height: image.height,
       representativeOfPage: image.src === "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      creator: { "@id": `${SITE_URL}/#person` },
+      creditText: "Kiminou Knox",
+      copyrightNotice: "© Kiminou Knox",
+      license: `${SITE_URL}/media`,
+      acquireLicensePage: `${SITE_URL}/contact`,
     })),
   };
 
@@ -131,6 +155,8 @@ export default function MediaGallery() {
         <meta property="og:description" content="Approved headshots, athletic photos, speaker photos, and book covers — available for download." />
         <meta property="og:url" content={`${SITE_URL}/media`} />
         <meta property="og:image" content={`${SITE_URL}/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg`} />
+        <meta property="og:image:width" content="1152" />
+        <meta property="og:image:height" content="1536" />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />

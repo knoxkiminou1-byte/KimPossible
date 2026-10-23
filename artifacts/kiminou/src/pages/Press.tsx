@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { KIMINOU_IMAGES, pickImages } from "@/lib/kiminouMedia";
+import { imageSrcSet, KIMINOU_IMAGES, pickImages } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
@@ -90,9 +90,12 @@ const creativeWorkSchema = {
 // `bwPortrait` was retired from the image catalog; `pickImages` resolves ids
 // safely so a stale one can never throw during render again.
 const pressImages = pickImages(
-  "smilingBlazerPortrait",
-  "casualOutdoorPortrait",
+  "officialHeadshot",
+  "closePortraitBlackShirt",
+  "outdoorDocuments",
   "taunHallEvent",
+  "chessStrategy",
+  "basketballMediaPortrait",
 );
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
@@ -141,6 +144,7 @@ export default function Press() {
             image: pressImages.map((image) => ({
               "@type": "ImageObject",
               url: `${SITE_URL}${image.src}`,
+              contentUrl: `${SITE_URL}${image.src}`,
               name: image.title,
               caption: image.caption,
               width: image.width,
@@ -200,6 +204,8 @@ export default function Press() {
                   <figure className="group relative min-h-[360px] overflow-hidden border border-white/8 bg-white/[0.025]">
                     <img
                       src={image.src}
+                      srcSet={imageSrcSet(image)}
+                      sizes="(min-width: 768px) 330px, 100vw"
                       alt={image.alt}
                       width={image.width}
                       height={image.height}
@@ -207,7 +213,18 @@ export default function Press() {
                       decoding="async"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 text-xs text-white/80">
+                      <span>{image.caption}</span>
+                      <a
+                        href={image.src}
+                        download
+                        className="shrink-0 border border-amber-400/40 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-amber-300 hover:bg-amber-400 hover:text-black transition-colors"
+                        aria-label={`Download ${image.title} (${image.width} × ${image.height})`}
+                      >
+                        Download
+                      </a>
+                    </figcaption>
                   </figure>
                 </Reveal>
               ))}

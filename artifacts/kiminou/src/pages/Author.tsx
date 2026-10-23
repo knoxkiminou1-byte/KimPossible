@@ -239,7 +239,7 @@ export default function Author() {
           {/* Parallax photo */}
           <motion.div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url('${KIMINOU_IMAGES.outdoorPortrait.src}')`, y: heroBgY, scale: 1.08 }}
+            style={{ backgroundImage: `url('${KIMINOU_IMAGES.officialHeadshot.src}')`, y: heroBgY, scale: 1.08 }}
           />
           {/* Gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />

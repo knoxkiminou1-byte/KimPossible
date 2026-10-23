@@ -71,6 +71,101 @@
       "source": "/blog/eight-books-before-twenty-why-i-couldnt-stop/",
       "destination": "/blog/ten-books-before-twenty-why-i-couldnt-stop",
       "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-indoor-selfie-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-close-portrait-black-shirt.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-football-team-tunnel.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-basketball-huddle.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-football-media-day.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-football-field-photo.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-smiling-blazer-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-speaking-event-podium.png",
+      "destination": "/photos/kiminou-knox/kiminou-knox-speaking-taun-hall-youth-summit-event-2025.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-football-uniform.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-ygnacio-football-locker-room.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox/kiminou-knox-basketball-game-action.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-basketball-jump-shot.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/brown-suit-author.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-football-game-action.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/author-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-football-game-action.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/711053A3-6306-4E2F-B87D-8290CDFB28E2_1757265360064.jpeg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-football-game-action.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/hero-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/youth-leader-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/2DF96290-AD3D-41A5-A240-B9609CAF345D_1757265334900.jpeg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/entrepreneur-style.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/8332522F-3820-42C1-B85B-1137C30F203B_1757265360065.jpeg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-basketball-team-sideline.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox-04-indoor-selfie-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-close-portrait-black-shirt.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox-05-outdoor-portrait-documents.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-outdoor-portrait-documents.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/photos/kiminou-knox-07-basketball-media-portrait.jpg",
+      "destination": "/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
+      "permanent": true
     }
   ],
   "rewrites": [
