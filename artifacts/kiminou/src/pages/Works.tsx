@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -18,10 +19,9 @@ interface Book {
   buyLinks: Record<string, string | null>;
 }
 
-const EXCLUDED_CATALOG_IDS = new Set([
-  "black-boy-poems",
-  "our-father",
-]);
+// Only genuinely distinct published books appear in canonical books.json.
+// Do not hide an existing book in this view.
+const EXCLUDED_CATALOG_IDS = new Set<string>([]);
 
 export default function Works() {
   const [books, setBooks] = useState<Book[]>([]);
@@ -33,22 +33,20 @@ export default function Works() {
       .catch(err => console.error('Failed to load books:', err));
   }, []);
 
-  const bookSchemas = books.map(book => ({
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "@id": `https://www.kiminouknox.com/works#${book.id}`,
-    "name": book.title,
-    "author": { "@id": "https://www.kiminouknox.com/#person" },
-    "workExample": [
-      { "@type": "Book", "bookFormat": "https://schema.org/EBook", "url": book.buyLinks.amazon || book.buyLinks.googleBooks || "" },
-      { "@type": "Book", "bookFormat": "https://schema.org/Paperback", "url": book.buyLinks.amazon || "" }
-    ],
-    "offers": {
-      "@type": "Offer",
-      "url": book.buyLinks.amazon || "",
-      "availability": "https://schema.org/InStock"
-    }
-  }));
+  const bookSchemas = books.map(book => {
+    const buyUrl = book.buyLinks?.amazon || book.buyLinks?.googleBooks || undefined;
+    return {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "@id": `${SITE_URL}/books/${book.id}#book`,
+      "url": `${SITE_URL}/books/${book.id}`,
+      "name": book.title,
+      "description": book.description,
+      "image": `${SITE_URL}${book.cover}`,
+      "author": { "@id": `${SITE_URL}/#person` },
+      ...(buyUrl ? { "workExample": { "@type": "Book", "url": buyUrl } } : {}),
+    };
+  });
 
   return (
     <>
@@ -107,18 +105,19 @@ export default function Works() {
                 <div className="aspect-[3/4] bg-muted overflow-hidden">
                   <img
                     src={book.cover}
-                    alt={book.title}
+                    alt={`${book.title} book cover`}
+                    width={480}
+                    height={640}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=600&fit=crop';
-                    }}
                   />
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-serif font-bold mb-2 text-foreground" data-testid={`book-title-${book.id}`}>
-                    {book.title}
+                    <Link href={`/books/${book.id}`} className="hover:underline underline-offset-4">
+                      {book.title}
+                    </Link>
                   </h2>
                   <p className="text-sm text-muted-foreground mb-4 italic">
                     {book.subtitle}
