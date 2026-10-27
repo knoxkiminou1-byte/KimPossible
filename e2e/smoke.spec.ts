@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const ROUTES = ["/", "/books", "/books/hopeless-romantic", "/books/boys-raised-in-silence", "/speaking", "/podcast", "/sports", "/press", "/contact"];
+const ROUTES = ["/", "/books", "/works", "/books/hopeless-romantic", "/books/boys-raised-in-silence", "/books/my-father", "/books/poems-black-boy", "/speaking", "/podcast", "/sports", "/press", "/contact"];
 
 // Every route shows a full-screen "First Edition" welcome overlay on a
 // visitor's first-ever page view (see FirstEditionOverlay.tsx). Mark it

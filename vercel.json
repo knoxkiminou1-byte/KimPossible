@@ -166,6 +166,16 @@
       "source": "/photos/kiminou-knox-07-basketball-media-portrait.jpg",
       "destination": "/photos/kiminou-knox/kiminou-knox-basketball-media-portrait-red-uniform.jpg",
       "permanent": true
+    },
+    {
+      "source": "/books/black-boy-poems",
+      "destination": "/books/poems-black-boy",
+      "permanent": true
+    },
+    {
+      "source": "/books/black-boy-poems/",
+      "destination": "/books/poems-black-boy",
+      "permanent": true
     }
   ],
   "rewrites": [
