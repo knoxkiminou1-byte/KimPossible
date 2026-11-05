@@ -959,3 +959,18 @@ html.threed-on .bg-background.antialiased {
 html.threed-on main.min-h-screen.bg-background {
   background-color: rgba(12, 12, 14, 0.6);
 }
+
+/* ——— Kiminou Knox design tokens (folded in from Copy A, 2026-11-05) ———
+   General design-system tokens, independent of the hero. New code should use
+   these tokens — never hardcode the brand hex values. The alternate-skin
+   overrides ([data-theme="pixel"]) and the pre-paint theme script from Copy A
+   are HELD with the theme step of the fold-in plan and are not included here. */
+:root {
+  --kk-paper: #f2efe6;
+  --kk-ink: #101400;
+  --kk-ink-soft: #2a2e18;
+  --kk-brass: #7d6123;
+  --kk-gold: #d8b45a;
+  --kk-gold-deep: #b98a00;
+  --kk-card: #e7e1d2;
+}

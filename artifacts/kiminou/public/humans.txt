@@ -1,6 +1,68 @@
+/* humans.txt — the humans (and judges) behind kiminouknox.com */
+/* Surviving build: KimPossible (this site). This file was folded in from the
+   retired hand-built build (kiminou-knox-site) on 2026-11-05; credits updated
+   so the surviving build is the one named. The identity block below is
+   KimPossible's own and is kept verbatim. */
+
+/* IDENTITY */
 Kiminou Knox
 Official site: https://www.kiminouknox.com
 Medium: https://medium.com/@knoxkiminou1
 Goodreads: https://www.goodreads.com/author/show/55621683.Kiminou_Knox
 Amazon Author: https://www.amazon.com/stores/author/B0DGM5Z5Q8
 Location: Bay Area, California
+
+/* TEAM */
+Developer: Kiminou Knox (AAFC)
+Design system: studied from landonorris.com (OFF+BRAND, Awwwards Site of the Year 2025),
+remapped to ON THE COURT / OFF THE COURT.
+
+/* SITE HISTORY */
+- KimPossible (React + Vite) is the canonical build and the one you are reading.
+- The hand-built static build (kiminou-knox-site) was retired into KimPossible
+  on 2026-11-05: its lab island lives on at /lab/lab.html, its stock-video set
+  and this humans.txt were folded in, and its particle-hero assets are
+  preserved in the project archive pending the owner's design call.
+- The rebuild canvas (kiminou-knox-website) was retired into KimPossible the
+  same day: /work, the hardened /press section-guard pattern, the design
+  tokens, and the 404 page came from there.
+
+/* PERFORMANCE BUDGET (engineering targets — NOT field measurements yet;
+   real Lighthouse/field numbers still need a deployed host to be meaningful) */
+LCP:  <= 2.5s   (hero is text; hero portrait <= 150px, fetchpriority high)
+INP:  <= 200ms  (scroll work off main thread: wash via animation-timeline, pins only in GSAP)
+CLS:  <= 0.1    (all media have aspect-ratio / intrinsic sizes; content-visibility on long rows)
+Long tasks: < 50ms (init is measurement + listeners; WebGL is ONE global canvas,
+single context, max 3 hero displacement planes, DPR-capped at 1.5)
+Third-party on first load: pinned GSAP 3.12.5 + Lenis 1.1.14 + Google Fonts only.
+WebGL: NEVER in the first viewport on mobile; displacement is fine-pointer-only,
+3 hero moments max, global kill switch (context failure = silent DOM stills).
+
+/* MOTION CONTRACT */
+- prefers-reduced-motion: everything settles to a readable end state (no preloader,
+  no autoplay, no cursor, no displacement, no view transitions, static section paint).
+- No-JS / CDN-failure: page fully readable; videos show posters; preloader never traps.
+- Preloader: <= 1.4s, typed real line, real font+image progress, skipped when cached,
+  on slow connections, or under reduced motion.
+
+/* ORIGINAL INSTRUMENTS (from the retired hand-built build, preserved for the
+   record — see /lab/ for the experiments that live on) */
+- SEAMS/PAGES: puzzle-piece hero — scroll velocity or tap bursts 24 canvas tiles,
+  springs reform them; SCATTER/REFORM button for touch/keyboard; static image
+  under reduced motion or no-JS. No new WebGL (canvas-2D only).
+- THREE DEEP: three parallax layers (gold wash, court lines, symbols) — pointer
+  drift capped 4/8/12px on fine pointers, scroll drift on coarse; static under
+  reduced motion.
+- THE FAN: all ten volumes fanned — arrows/keys/buttons browse, any book opens
+  its existing catalog modal; static screenshot fallback with no-JS.
+- COURT/BOOK: inline SVG line drawing that draws itself on scroll; REPLAY redraws;
+  fully drawn under reduced motion or no-JS (replay hidden when reduced).
+
+/* HONESTY CONTRACT */
+- Every book title is a real published book. Only The Spirit of Solomon shows real
+  cover art; the other nine are labeled house-style cards until final art exists.
+- No invented stats, awards, prices, or achievements anywhere.
+- The Spirit of Solomon modal links its verified Books-A-Million product page
+  (paperback $12.99, ISBN 9798316662975 — verified 2026-09-29) with the publisher's
+  own description. The other nine volumes keep genuine search-engine links —
+  never fake stores or invented product URLs.

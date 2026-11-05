@@ -24,6 +24,7 @@ const Splash = lazy(() => import("@/pages/Splash"));
 const Home = lazy(() => import("@/pages/home"));
 const About = lazy(() => import("@/pages/About"));
 const Works = lazy(() => import("@/pages/Works"));
+const Work = lazy(() => import("@/pages/Work"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const Now = lazy(() => import("@/pages/Now"));
 const Portfolio = lazy(() => import("@/pages/Portfolio"));
@@ -134,6 +135,7 @@ function Router() {
         </Route>
         <Route path="/about" component={About} />
         <Route path="/works" component={Works} />
+        <Route path="/work" component={Work} />
         <Route path="/speaking" component={Speaking} />
         <Route path="/contact" component={Contact} />
         <Route path="/now" component={Now} />

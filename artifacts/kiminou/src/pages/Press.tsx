@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { imageSrcSet, KIMINOU_IMAGES, pickImages } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import SectionGuard from "@/components/SectionGuard";
 import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
 
 const recognition = [
@@ -166,6 +167,7 @@ export default function Press() {
       <main id="main-content" className="min-h-screen bg-black text-white">
 
         {/* ─── HERO ─── */}
+        <SectionGuard label="hero">
         <section className="relative pt-40 pb-24 overflow-hidden" ref={heroRef}>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/3 rounded-full blur-[160px]" />
@@ -189,8 +191,10 @@ export default function Press() {
             </motion.div>
           </div>
         </section>
+        </SectionGuard>
 
         {/* ─── PRESS IMAGES ─── */}
+        <SectionGuard label="press-images">
         <section className="py-16 border-y border-white/6 bg-white/[0.015]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-10">
@@ -231,6 +235,7 @@ export default function Press() {
             </div>
           </div>
         </section>
+        </SectionGuard>
 
         {/* ─── SCROLLING TICKER ─── */}
         <div className="border-y border-white/6 py-4 overflow-hidden relative">
@@ -251,6 +256,7 @@ export default function Press() {
         </div>
 
         {/* ─── FEATURED: MILES HALL FOUNDATION ─── */}
+        <SectionGuard label="featured">
         <section className="py-20 border-b border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-10">
@@ -292,8 +298,10 @@ export default function Press() {
             </div>
           </div>
         </section>
+        </SectionGuard>
 
         {/* ─── VERIFICATION LINKS BY CATEGORY ─── */}
+        <SectionGuard label="verification">
         <section className="py-20 pb-32">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-14">
@@ -332,7 +340,9 @@ export default function Press() {
             </div>
           </div>
         </section>
+        </SectionGuard>
         {/* ─── PRESS KIT DOWNLOAD ─── */}
+        <SectionGuard label="press-kit">
         <section className="py-20 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <Reveal className="mb-10">
@@ -468,6 +478,7 @@ Press assets and headshots available on request via email.`;
             </Reveal>
           </div>
         </section>
+        </SectionGuard>
 
       </main>
 

@@ -4,6 +4,7 @@ import { motion, AnimatePresence, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
+  { href: "/work", label: "Work" },
   { href: "/books", label: "Books" },
   { href: "/sports", label: "Athletics" },
   { href: "/speaking", label: "Voice" },

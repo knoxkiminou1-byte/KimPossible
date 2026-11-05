@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE LAB — Kiminou Knox</title>
+<meta name="description" content="The Lab: a toybox of original interactive 3D assets — particle faces, voxel heads, book towers. Built, not given.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/lab.css">
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="lab-nav">
+  <a class="brand" href="/">KIMINOU KNOX <span>©</span></a>
+  <a class="home" href="/">← BACK TO SITE</a>
+</header>
+
+<main id="main">
+  <section class="lab-hero">
+    <p class="eyebrow">THE TOYBOX</p>
+    <h1>THE <em>LAB.</em></h1>
+    <p class="lab-lede">Eight original interactive assets, built from scratch for this site. Scatter them, spin them, glitch them, pull them apart — then put them back together. Every piece below is playable.</p>
+    <p class="lab-note"><b>Heads up:</b> the 3D toys need WebGL and the three.js library from a CDN. If either one can't load on your device, each card shows a static preview instead — nothing arrives blank.</p>
+  </section>
+
+  <section class="lab-grid" aria-label="Interactive assets">
+
+    <!-- A · FACE ASSEMBLY -->
+    <article class="lab-card hero-card" id="lab-face">
+      <div class="lab-card-head"><span class="lab-index">A</span><h2>FACE <em>ASSEMBLY</em></h2></div>
+      <p class="lab-desc">Thousands of particles fly in from a 3D cloud and build my face out of nothing — then it's yours. Drag to turn it, scroll or pinch to zoom.</p>
+      <div class="lab-stage" data-asset="face">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>3D couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>Interactive 3D needs JavaScript — static portrait shown.</p></div></noscript>
+      </div>
+      <div class="lab-controls">
+        <button class="lab-btn" data-act="scatter">SCATTER</button>
+        <button class="lab-btn ghost" data-act="assemble">ASSEMBLE</button>
+        <label class="lab-slider">SPREAD <input type="range" data-param="spread" min="0.6" max="3" step="0.1" value="1.7" aria-label="Scatter spread"></label>
+        <label class="lab-slider">SPEED <input type="range" data-param="speed" min="0.25" max="2.5" step="0.25" value="1" aria-label="Animation speed"></label>
+        <label class="lab-slider">SIZE <input type="range" data-param="size" min="0.5" max="3" step="0.1" value="1" aria-label="Particle size"></label>
+      </div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="face">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- B · VOXEL HEAD -->
+    <article class="lab-card" id="lab-voxel">
+      <div class="lab-card-head"><span class="lab-index">B</span><h2>VOXEL <em>HEAD</em></h2></div>
+      <p class="lab-desc">My face rebuilt from chunky 3D cubes. Click it and it blows apart — every cube springs home.</p>
+      <div class="lab-stage" data-asset="voxel">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>3D couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>Interactive 3D needs JavaScript — static portrait shown.</p></div></noscript>
+      </div>
+      <div class="lab-controls">
+        <button class="lab-btn" data-act="explode">EXPLODE</button>
+        <span class="lab-hint">or click the head · drag to orbit</span>
+      </div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="voxel">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- C · PARTICLE NAME -->
+    <article class="lab-card" id="lab-name">
+      <div class="lab-card-head"><span class="lab-index">C</span><h2>PARTICLE <em>NAME</em></h2></div>
+      <p class="lab-desc">"KIMINOU" in gold dust. Move through it and the letters scatter — they always find their way back.</p>
+      <div class="lab-stage" data-asset="name">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>Canvas couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><p style="font-family:var(--sans);font-size:2.4rem;color:var(--gold)">KIMINOU</p><p>Interactive particles need JavaScript — static type shown.</p></div></noscript>
+      </div>
+      <div class="lab-controls"><span class="lab-hint">move your pointer or finger through the letters</span></div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="name">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- D · BOOK TOWER -->
+    <article class="lab-card" id="lab-books">
+      <div class="lab-card-head"><span class="lab-index">D</span><h2>BOOK <em>TOWER</em></h2></div>
+      <p class="lab-desc">All ten real covers as 3D books. Drag to orbit the shelf, click a book to pull it forward, double-click to open its store page.</p>
+      <div class="lab-stage" data-asset="books">
+        <div class="lab-fallback" hidden><img src="assets/covers/the-spirit-of-solomon.jpg" alt="Cover of The Spirit of Solomon"><p>3D couldn't start here — static cover shown.</p></div>
+        <noscript><div class="lab-fallback"><img src="assets/covers/the-spirit-of-solomon.jpg" alt="Cover of The Spirit of Solomon"><p>Interactive 3D needs JavaScript — static cover shown.</p></div></noscript>
+      </div>
+      <p class="lab-caption" data-caption aria-live="polite"></p>
+      <div class="lab-controls"><span class="lab-hint">drag to orbit · click a book · double-click opens its store page</span></div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="books">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- E · RIPPLE PORTRAIT -->
+    <article class="lab-card" id="lab-ripple">
+      <div class="lab-card-head"><span class="lab-index">E</span><h2>RIPPLE <em>PORTRAIT</em></h2></div>
+      <p class="lab-desc">My face on water. Touch it anywhere and ripples roll through it.</p>
+      <div class="lab-stage" data-asset="ripple">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>3D couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>Interactive 3D needs JavaScript — static portrait shown.</p></div></noscript>
+      </div>
+      <div class="lab-controls"><span class="lab-hint">click or touch the portrait</span></div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="ripple">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- F · GLITCH PORTRAIT -->
+    <article class="lab-card" id="lab-glitch">
+      <div class="lab-card-head"><span class="lab-index">F</span><h2>GLITCH <em>PORTRAIT</em></h2></div>
+      <p class="lab-desc">RGB-split and slice tears, on demand. Hit the button — or click the portrait itself.</p>
+      <div class="lab-stage" data-asset="glitch">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>3D couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>Interactive 3D needs JavaScript — static portrait shown.</p></div></noscript>
+      </div>
+      <div class="lab-controls">
+        <button class="lab-btn" data-act="glitch">GLITCH IT</button>
+      </div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="glitch">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- G · GOLD COURT -->
+    <article class="lab-card" id="lab-court">
+      <div class="lab-card-head"><span class="lab-index">G</span><h2>GOLD <em>COURT</em></h2></div>
+      <p class="lab-desc">A half-court drawn in light, wrapped in a halo of gold dust. Drag to walk around it.</p>
+      <div class="lab-stage" data-asset="court">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>3D couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><p style="font-family:var(--sans);font-size:2rem;color:var(--gold)">GOLD COURT</p><p>Interactive 3D needs JavaScript.</p></div></noscript>
+      </div>
+      <div class="lab-controls"><span class="lab-hint">drag to orbit</span></div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="court">SNAPSHOT ↓</button>
+    </article>
+
+    <!-- H · ORBIT RINGS -->
+    <article class="lab-card" id="lab-rings">
+      <div class="lab-card-head"><span class="lab-index">H</span><h2>ORBIT <em>RINGS</em></h2></div>
+      <p class="lab-desc">A trophy-gold basketball wearing three tilted orbit rings. Grab it and give it a spin.</p>
+      <div class="lab-stage" data-asset="rings">
+        <div class="lab-fallback" hidden><img src="assets/lab/face.png" alt="Pixel-art portrait of Kiminou Knox"><p>3D couldn't start here — static portrait shown.</p></div>
+        <noscript><div class="lab-fallback"><p style="font-family:var(--sans);font-size:2rem;color:var(--gold)">ORBIT RINGS</p><p>Interactive 3D needs JavaScript.</p></div></noscript>
+      </div>
+      <div class="lab-controls"><span class="lab-hint">drag to spin</span></div>
+      <p class="lab-err" data-err hidden></p>
+      <button class="lab-snap" data-snap="rings">SNAPSHOT ↓</button>
+    </article>
+
+  </section>
+</main>
+
+<footer class="lab-foot">
+  <span>© 2026 KIMINOU KNOX — THE LAB. ALL ASSETS ORIGINAL, BUILT FOR THIS SITE.</span>
+  <a href="/">← BACK TO THE SITE</a>
+</footer>
+
+<script src="assets/lab/face-uri.js"></script>
+<script src="assets/lab/face-data.js"></script>
+<script src="assets/lab/covers-uri.js"></script>
+<script src="js/lab.js"></script>
+<script>
+(function () {
+  var nav = document.querySelector('.lab-nav'), t = false;
+  function up() { t = false; nav.classList.toggle('scrolled', window.scrollY > 48); }
+  window.addEventListener('scroll', function () { if (!t) { t = true; requestAnimationFrame(up); } }, { passive: true });
+  up();
+})();
+</script>
+<script type="module">
+let THREE = null;
+try {
+  THREE = await Promise.race([
+    import('three'),
+    new Promise((_, rej) => setTimeout(() => rej(new Error('three-cdn-timeout')), 12000))
+  ]);
+} catch (err) { THREE = null; }
+if (window.LabBoot) window.LabBoot(THREE);
+</script>
+</body>
+</html>

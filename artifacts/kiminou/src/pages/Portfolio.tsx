@@ -297,6 +297,15 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* ─── KNOX LAB (static island folded in from the retired hand-built build) ─── */}
+        <section className="border-t border-white/6 py-10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <a href="/lab/lab.html" className="text-xs uppercase tracking-[0.3em] text-amber-400/72 hover:text-amber-300 transition-colors">
+              Knox Lab — interactive experiments →
+            </a>
+          </div>
+        </section>
+
         {/* ─── FILTERABLE CASE STUDIES ─── */}
         <section className="py-20 border-t border-white/6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">

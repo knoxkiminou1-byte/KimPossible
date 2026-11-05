@@ -1,0 +1,99 @@
+/* THE LAB — toybox page. Same tokens as the main site. */
+:root{
+  --ink:#101400; --cream:#F2EFE6; --gold:#FFC400;
+  --sans:'Anton',Impact,sans-serif; --serif:'Playfair Display',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  --pad:clamp(1.2rem,4vw,3rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold);color:var(--ink)}
+.skip{position:fixed;top:-4rem;left:1rem;z-index:200;background:var(--gold);color:var(--ink);
+  padding:.6rem 1rem;font-weight:700;text-decoration:none}
+.skip:focus{top:1rem}
+a{color:inherit}
+
+/* ---------- nav ---------- */
+.lab-nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;
+  justify-content:space-between;padding:1.1rem var(--pad);mix-blend-mode:difference;color:#fff}
+.lab-nav .brand{font-family:var(--sans);font-size:1.05rem;letter-spacing:.04em;text-decoration:none}
+.lab-nav .brand span{font-size:.7em;vertical-align:super}
+.lab-nav .home{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-decoration:none;
+  border:1px solid currentColor;border-radius:999px;padding:.55rem 1.1rem}
+.lab-nav{transition:background .35s}
+.lab-nav.scrolled{mix-blend-mode:normal;background:rgba(16,20,0,.86);color:var(--cream);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff17}
+
+/* ---------- hero ---------- */
+.lab-hero{padding:clamp(7rem,14vw,11rem) var(--pad) clamp(3rem,6vw,5rem);max-width:1500px;margin:0 auto}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.28em;color:var(--gold);margin-bottom:1.2rem}
+.lab-hero h1{font-family:var(--sans);font-size:clamp(3.4rem,11vw,9rem);line-height:.95;
+  text-transform:uppercase;letter-spacing:.01em}
+.lab-hero h1 em{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--gold);font-weight:500}
+.lab-lede{max-width:44rem;margin-top:1.6rem;font-size:clamp(1rem,1.6vw,1.2rem);color:#F2EFE6cc}
+.lab-note{margin-top:1rem;font-size:.85rem;color:#F2EFE699;max-width:44rem}
+.lab-note b{color:var(--gold);font-weight:600}
+
+/* ---------- grid & cards ---------- */
+.lab-grid{max-width:1500px;margin:0 auto;padding:0 var(--pad) clamp(4rem,8vw,7rem);
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2.5vw,2rem)}
+.lab-card{background:#181b0c;border:1px solid #ffffff14;border-radius:18px;overflow:hidden;
+  display:flex;flex-direction:column}
+.lab-card.hero-card{grid-column:1/-1}
+.lab-card-head{display:flex;align-items:baseline;gap:1rem;padding:1.4rem 1.6rem 0}
+.lab-index{font-family:var(--sans);color:var(--gold);font-size:1rem;letter-spacing:.1em}
+.lab-card-head h2{font-family:var(--sans);font-size:clamp(1.5rem,2.6vw,2.1rem);text-transform:uppercase;
+  letter-spacing:.02em;line-height:1}
+.lab-card-head h2 em{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--gold);font-weight:500}
+.lab-desc{padding:.7rem 1.6rem 1.2rem;font-size:.92rem;color:#F2EFE6b3;max-width:38rem}
+.lab-stage{position:relative;margin:0 1.6rem;background:#0c0e05;border:1px solid #ffffff0d;
+  border-radius:12px;overflow:hidden;aspect-ratio:16/10;min-height:280px}
+.hero-card .lab-stage{aspect-ratio:16/8;min-height:340px}
+.lab-stage canvas{display:block;width:100%!important;height:100%!important;touch-action:none}
+.lab-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:1rem;padding:2rem;text-align:center}
+.lab-fallback[hidden]{display:none!important}
+.lab-fallback img{max-width:min(60%,320px);border-radius:8px}
+.lab-fallback p{font-size:.85rem;color:#F2EFE699}
+.lab-caption{min-height:1.6em;padding:.4rem 1.6rem 0;font-size:.85rem;letter-spacing:.06em;color:var(--gold)}
+
+/* ---------- controls ---------- */
+.lab-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.1rem;padding:1.2rem 1.6rem .4rem}
+.lab-btn{font:600 .78rem var(--body);letter-spacing:.14em;color:var(--ink);background:var(--gold);
+  border:0;border-radius:999px;padding:.85rem 1.5rem;cursor:pointer;min-height:44px}
+.lab-btn:hover{background:#ffd21f}
+.lab-btn:disabled{opacity:.35;cursor:default}
+.lab-btn.ghost{background:transparent;color:var(--cream);border:1px solid #ffffff2e}
+.lab-btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.lab-slider{display:flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:600;
+  letter-spacing:.12em;color:#F2EFE6b3}
+.lab-slider input[type=range]{width:130px;accent-color:var(--gold);cursor:pointer;min-height:44px}
+.lab-hint{font-size:.78rem;color:#F2EFE680;letter-spacing:.04em}
+.lab-snap{align-self:flex-start;margin:1rem 1.6rem 1.6rem;font:600 .78rem var(--body);
+  letter-spacing:.14em;color:var(--cream);background:transparent;border:1px dashed #ffffff3a;
+  border-radius:999px;padding:.85rem 1.5rem;cursor:pointer;min-height:44px}
+.lab-snap:hover{border-color:var(--gold);color:var(--gold)}
+.lab-snap:disabled{opacity:.35;cursor:default}
+.lab-err{padding:.4rem 1.6rem 0;font-size:.8rem;color:#ff9d7a;min-height:1.4em}
+
+/* ---------- footer ---------- */
+.lab-foot{border-top:1px solid #ffffff14;padding:2.5rem var(--pad) 3rem;max-width:1500px;margin:0 auto;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:#F2EFE699}
+.lab-foot a{color:var(--gold);text-decoration:none;font-weight:600;letter-spacing:.08em}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .lab-grid{grid-template-columns:1fr}
+  .lab-stage{margin:0 1rem;min-height:260px}
+  .lab-controls,.lab-desc{padding-left:1rem;padding-right:1rem}
+  .lab-card-head{padding:1.2rem 1rem 0}
+  .lab-snap{margin:1rem 1rem 1.4rem}
+  .lab-btn{min-height:48px}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
