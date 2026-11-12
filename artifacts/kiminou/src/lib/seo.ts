@@ -30,6 +30,8 @@ export const SITE_LINKEDIN = "https://www.linkedin.com/in/kiminou-knox-50691a394
 export const SITE_AMAZON_AUTHOR = "https://www.amazon.com/author/kiminou";
 export const SITE_ABOUT_ME = "https://about.me/kiminou";
 export const SITE_WIKIDATA = "https://www.wikidata.org/wiki/Q137260299";
+export const SITE_AUTHOR_SPOTLIGHT =
+  "https://www.pyrrhicpress.org/author-spotlight/3446146_kiminou-knox";
 
 export const SITE_SOCIAL_LINKS = [
   { label: "Twitter / X", href: SITE_X },
@@ -51,6 +53,7 @@ export const SITE_SAME_AS = [
   "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
   "https://prephoops.com/player/kiminou-knox/",
   SITE_WIKIDATA,
+  SITE_AUTHOR_SPOTLIGHT,
 ];
 
 export type BreadcrumbItem = {

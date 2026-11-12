@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-10-27T19:12:46.083Z",
+  "dateModified": "2026-11-12T01:49:24.026Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
@@ -44,6 +44,7 @@
       "https://medium.com/@knoxkiminou1",
       "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
       "https://www.amazon.com/author/kiminou",
+      "https://www.pyrrhicpress.org/author-spotlight/3446146_kiminou-knox",
       "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
       "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
       "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps",
@@ -56,6 +57,185 @@
       "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox",
       "https://prephoops.com/player/kiminou-knox/",
       "https://www.wikidata.org/wiki/Q137260299"
+    ],
+    "subjectOf": [
+      {
+        "@type": "WebPage",
+        "name": "Author Spotlight: Kiminou Knox",
+        "url": "https://www.pyrrhicpress.org/author-spotlight/3446146_kiminou-knox",
+        "datePublished": "2026-11-11",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pyrrhic Press Publishing"
+        },
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        }
+      },
+      {
+        "@type": "Article",
+        "name": "Pyrrhic Press Publishing Welcomes Ten-Book Author Kiminou Knox",
+        "url": "https://www.prlog.org/13182624-pyrrhic-press-publishing-welcomes-ten-book-author-kiminou-knox.html",
+        "datePublished": "2026-11-11",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PRLog"
+        },
+        "about": {
+          "@id": "https://www.kiminouknox.com/#person"
+        }
+      }
+    ],
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "Professionals United in Literary & Scholarly Excellence (PULSE)",
+        "url": "https://www.pyrrhicpress.org/associations-and-boards/pulse-association",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Pyrrhic Press Publishing"
+        }
+      }
+    ]
+  },
+  "publications": {
+    "@type": "ItemList",
+    "name": "Kiminou Knox — Published & Featured",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Poem",
+          "name": "Take Another One",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026-11-11",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pyrrhic Press Publishing"
+          },
+          "url": "https://www.pyrrhicpress.org/ink-echo/poems-performances/3446117_take-another-one-kiminou-knox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Poem",
+          "name": "God Ain't Watching",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026-11-11",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pyrrhic Press Publishing"
+          },
+          "url": "https://www.pyrrhicpress.org/ink-echo/poems-performances/3446118_god-ain-t-watching-kiminou-knox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Poem",
+          "name": "there's someone who loves you",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026-11-11",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pyrrhic Press Publishing"
+          },
+          "url": "https://www.pyrrhicpress.org/ink-echo/poems-performances/3446119_there-s-someone-who-loves-you-kiminou-knox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Author Spotlight: Kiminou Knox",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026-11-11",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pyrrhic Press Publishing"
+          },
+          "url": "https://www.pyrrhicpress.org/author-spotlight/3446146_kiminou-knox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Pyrrhic Press Publishing Welcomes Ten-Book Author Kiminou Knox",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026-11-11",
+          "publisher": {
+            "@type": "Organization",
+            "name": "PRLog"
+          },
+          "url": "https://www.prlog.org/13182624-pyrrhic-press-publishing-welcomes-ten-book-author-kiminou-knox.html"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Professionals United in Literary & Scholarly Excellence",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026-11-11",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pyrrhic Press Publishing"
+          },
+          "url": "https://www.pyrrhicpress.org/associations-and-boards/pulse-association"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Poem",
+          "name": "The Black Boy Lie",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Emerald City Ghosts"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Poem",
+          "name": "Made for the Wide",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2026",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Spare Parts Literary"
+          }
+        }
+      }
     ]
   },
   "officialFeeds": [

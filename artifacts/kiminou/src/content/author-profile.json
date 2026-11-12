@@ -4,6 +4,66 @@
   "searchDescription": "Official website of Kiminou Knox, Bay Area raised, New Orleans based author and poet of ten published books, host of KimYaps, Director at AAFC, and creator of the Black Boy Lie universe.",
   "shortBio": "Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books. He writes across poetry, faith, identity, love, family, imagination, and youth storytelling, hosts the KimYaps podcast, created the Black Boy Lie universe, and serves as a director at Artists and Athletes for Change.",
   "catalogEditionNote": "The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father is published as a Remastered Edition, its only public edition. Other remastered formats are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy.",
+  "publications": [
+    {
+      "venue": "Ink & Echo",
+      "publisher": "Pyrrhic Press Publishing",
+      "title": "Take Another One",
+      "type": "Poem",
+      "date": "2026-11-11",
+      "url": "https://www.pyrrhicpress.org/ink-echo/poems-performances/3446117_take-another-one-kiminou-knox"
+    },
+    {
+      "venue": "Ink & Echo",
+      "publisher": "Pyrrhic Press Publishing",
+      "title": "God Ain't Watching",
+      "type": "Poem",
+      "date": "2026-11-11",
+      "url": "https://www.pyrrhicpress.org/ink-echo/poems-performances/3446118_god-ain-t-watching-kiminou-knox"
+    },
+    {
+      "venue": "Ink & Echo",
+      "publisher": "Pyrrhic Press Publishing",
+      "title": "there's someone who loves you",
+      "type": "Poem",
+      "date": "2026-11-11",
+      "url": "https://www.pyrrhicpress.org/ink-echo/poems-performances/3446119_there-s-someone-who-loves-you-kiminou-knox"
+    },
+    {
+      "venue": "Pyrrhic Press Publishing",
+      "title": "Author Spotlight: Kiminou Knox",
+      "type": "Author Spotlight",
+      "date": "2026-11-11",
+      "url": "https://www.pyrrhicpress.org/author-spotlight/3446146_kiminou-knox"
+    },
+    {
+      "venue": "PRLog",
+      "title": "Pyrrhic Press Publishing Welcomes Ten-Book Author Kiminou Knox",
+      "type": "Press Release",
+      "date": "2026-11-11",
+      "url": "https://www.prlog.org/13182624-pyrrhic-press-publishing-welcomes-ten-book-author-kiminou-knox.html"
+    },
+    {
+      "venue": "PULSE",
+      "publisher": "Pyrrhic Press Publishing",
+      "title": "Professionals United in Literary & Scholarly Excellence",
+      "type": "Membership",
+      "date": "2026-11-11",
+      "url": "https://www.pyrrhicpress.org/associations-and-boards/pulse-association"
+    },
+    {
+      "venue": "Emerald City Ghosts",
+      "title": "The Black Boy Lie",
+      "type": "Poem",
+      "date": "2026"
+    },
+    {
+      "venue": "Spare Parts Literary",
+      "title": "Made for the Wide",
+      "type": "Poem",
+      "date": "2026"
+    }
+  ],
   "canonicalBooks": [
     {
       "title": "The Spirit of Solomon",

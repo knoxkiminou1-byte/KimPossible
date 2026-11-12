@@ -6,6 +6,19 @@ const authorProfilePath = path.join(repoRoot, "artifacts", "kiminou", "src", "co
 const authorProfile = JSON.parse(fs.readFileSync(authorProfilePath, "utf8"));
 const canonicalBookTitles = authorProfile.canonicalBooks.map(({ title }) => title);
 
+const publications = authorProfile.publications || [];
+
+function publicationWork(pub) {
+  return {
+    "@type": pub.type === "Poem" ? "Poem" : "CreativeWork",
+    name: pub.title,
+    author: { "@id": `${SITE_URL}/#person` },
+    datePublished: pub.date,
+    publisher: { "@type": "Organization", name: pub.publisher || pub.venue },
+    ...(pub.url ? { url: pub.url } : {}),
+  };
+}
+
 const SITE_URL = "https://www.kiminouknox.com";
 const SITE_NAME = "Kiminou Knox";
 const SITE_DESCRIPTION = authorProfile.searchDescription;
@@ -16,6 +29,33 @@ const SITE_IMAGE = `${SITE_URL}/photos/kiminou-knox/social/kiminou-knox-official
 // serve, and it breaks on preview deployments.
 const SITE_IMAGE_PATH = "/og-image.png";
 const MEDIUM_FEED_URL = "https://medium.com/feed/@knoxkiminou1";
+
+const publicationsItemList = {
+  "@type": "ItemList",
+  name: "Kiminou Knox — Published & Featured",
+  itemListElement: publications.map((pub, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: publicationWork(pub),
+  })),
+};
+
+const publicationsText = publications
+  .map((pub) => `${pub.title} (${pub.type}, ${pub.venue}, ${pub.date})`)
+  .join("; ");
+
+const publicationFeatures = publications
+  .filter((pub) => pub.type === "Author Spotlight" || pub.type === "Press Release")
+  .map((pub) => ({
+    "@type": pub.type === "Press Release" ? "Article" : "WebPage",
+    name: pub.title,
+    url: pub.url,
+    datePublished: pub.date,
+    publisher: { "@type": "Organization", name: pub.venue },
+    about: { "@id": `${SITE_URL}/#person` },
+  }));
+
+const pulseMembership = publications.find((pub) => pub.type === "Membership");
 
 const siteRoot = path.join(repoRoot, "artifacts", "kiminou");
 const publicRoot = path.join(siteRoot, "public");
@@ -64,6 +104,7 @@ const externalProfiles = [
   "https://medium.com/@knoxkiminou1",
   "https://www.goodreads.com/author/show/55621683.Kiminou_Knox",
   "https://www.amazon.com/author/kiminou",
+  "https://www.pyrrhicpress.org/author-spotlight/3446146_kiminou-knox",
   "https://podcasts.apple.com/us/podcast/kimyaps/id1850364308",
   "https://open.spotify.com/show/4TB8QKI52yaGIFDOCCkrYg",
   "https://music.amazon.com/podcasts/3db7d37c-3071-4eba-9fea-cadc50f5c543/kimyaps",
@@ -608,14 +649,30 @@ const baseRouteMeta = [
     description:
       "Press, recognition, biography, official links, and media resources for Kiminou Knox.",
     image: KIMINOU_PHOTOS.officialHeadshot.loc,
-    keywords: ["Kiminou Knox press", "Kiminou Knox media", "Kiminou Knox recognition"],
+    keywords: [
+      "Kiminou Knox press",
+      "Kiminou Knox media",
+      "Kiminou Knox recognition",
+      "Kiminou Knox published poems",
+      "Ink & Echo",
+      "Pyrrhic Press Publishing",
+    ],
     sections: [
       {
         heading: "Press & Recognition",
         text: "Official press context, recognition, biography, books, athletics, and media information for Kiminou Knox.",
       },
+      {
+        heading: "Published & Featured",
+        text: publicationsText,
+      },
     ],
     schemaType: "ProfilePage",
+    schema: {
+      "@context": "https://schema.org",
+      "@id": `${SITE_URL}/press#publications`,
+      ...publicationsItemList,
+    },
   },
   {
     loc: "/media",
@@ -1059,7 +1116,21 @@ const entityProfile = {
       "Publishing",
     ],
     sameAs: externalProfiles,
+    subjectOf: publicationFeatures,
+    ...(pulseMembership
+      ? {
+          memberOf: [
+            {
+              "@type": "Organization",
+              name: `${pulseMembership.title} (${pulseMembership.venue})`,
+              url: pulseMembership.url,
+              parentOrganization: { "@type": "Organization", name: pulseMembership.publisher },
+            },
+          ],
+        }
+      : {}),
   },
+  publications: publicationsItemList,
   officialFeeds: [`${SITE_URL}/rss.xml`, `${SITE_URL}/feed.xml`, MEDIUM_FEED_URL],
 };
 

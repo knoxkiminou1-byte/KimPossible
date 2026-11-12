@@ -8,7 +8,7 @@ import { Link } from "wouter";
 import { imageSrcSet, KIMINOU_IMAGES, pickImages } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 import SectionGuard from "@/components/SectionGuard";
-import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE } from "@/content/authorProfile";
+import { AUTHOR_SHORT_BIO, CANONICAL_BOOK_TITLES, CATALOG_EDITION_NOTE, PUBLICATIONS } from "@/content/authorProfile";
 
 const recognition = [
   {
@@ -75,10 +75,41 @@ const verificationGroups = [
 ];
 
 const TICKER_ITEMS = [
-  "Miles Hall Foundation", "Amazon Author Store", "Goodreads", "MaxPreps", "NCSA Sports",
+  "Miles Hall Foundation", "Pyrrhic Press Publishing", "Ink & Echo", "Amazon Author Store", "Goodreads", "MaxPreps", "NCSA Sports",
   "Prep Hoops", "Apple Podcasts", "Spotify", "Amazon Music", "YouTube", "Medium", "LinkedIn",
   "Bookshop.org", "Google Play Books", "TikTok", "About.me", "Wikidata",
 ];
+
+const MONTH_NAMES = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+function formatPublicationDate(date: string) {
+  const parts = date.split("-");
+  if (parts.length !== 3) return date;
+  const [year, month, day] = parts.map(Number);
+  return `${MONTH_NAMES[month - 1]} ${day}, ${year}`;
+}
+
+const publicationsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://www.kiminouknox.com/press#publications",
+  name: "Kiminou Knox — Published & Featured",
+  itemListElement: PUBLICATIONS.map((pub, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "CreativeWork",
+      name: pub.title,
+      author: { "@id": "https://www.kiminouknox.com/#person" },
+      datePublished: pub.date,
+      publisher: { "@type": "Organization", name: pub.publisher || pub.venue },
+      ...(pub.url ? { url: pub.url } : {}),
+    },
+  })),
+};
 
 const creativeWorkSchema = {
   "@context": "https://schema.org",
@@ -135,6 +166,7 @@ export default function Press() {
         <meta name="twitter:description" content="Miles Hall Foundation Youth Summit Top Essay Finalist (2025). Verified across Amazon, Goodreads, MaxPreps, NCSA, and Apple Podcasts." />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.officialHeadshot?.src ?? "/og-image.png"}`} />
         <script type="application/ld+json">{JSON.stringify(creativeWorkSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(publicationsSchema)}</script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -300,6 +332,53 @@ export default function Press() {
         </section>
         </SectionGuard>
 
+        {/* ─── PUBLISHED & FEATURED ─── */}
+        <SectionGuard label="published">
+        <section className="py-20 border-b border-white/6">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <Reveal className="mb-10">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400/60 mb-4">Publications</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-white">Published & Featured</h2>
+              <div className="w-12 h-px bg-amber-400/40 mt-6" />
+              <p className="text-white/45 leading-relaxed max-w-xl mt-6">
+                Poems and features published outside the books, with the venue and date for each one.
+              </p>
+            </Reveal>
+
+            <div className="space-y-5">
+              {PUBLICATIONS.map((pub, i) => (
+                <Reveal key={`${pub.venue}-${pub.title}`} delay={i * 0.06}>
+                  <div className="group border border-white/8 p-8 md:p-10 hover:border-amber-400/25 transition-all duration-500 relative overflow-hidden">
+                    <motion.div className="absolute inset-0 bg-gradient-to-r from-amber-400/4 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative z-10">
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.3em] text-amber-400/50 mb-2 italic">{formatPublicationDate(pub.date)}</p>
+                          <p className="text-xs uppercase tracking-[0.2em] text-white/35 mb-3">
+                            {pub.venue}{pub.publisher ? ` · ${pub.publisher}` : ""}
+                          </p>
+                          <h3 className="font-serif text-xl md:text-2xl text-white font-light group-hover:text-amber-100 transition-colors duration-300">
+                            {pub.title}
+                          </h3>
+                          <p className="text-xs uppercase tracking-[0.2em] text-white/30 mt-3">{pub.type}</p>
+                        </div>
+                        {pub.url && (
+                          <a href={pub.url} target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-400/50 hover:text-amber-400 transition-colors flex-shrink-0 group/link">
+                            View at {pub.venue}
+                            <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+        </SectionGuard>
+
         {/* ─── VERIFICATION LINKS BY CATEGORY ─── */}
         <SectionGuard label="verification">
         <section className="py-20 pb-32">
@@ -428,6 +507,10 @@ RECOGNITION
 • Miles Hall Foundation Youth Summit — Top Essay Finalist (2025)
   Topic: Youth Advocacy & Mental Health
   https://www.themileshallfoundation.org/post/youth-summit-essay-finalist
+
+PUBLISHED & FEATURED
+────────────────────
+${PUBLICATIONS.map((pub) => `• ${pub.title} — ${pub.type}, ${pub.venue} (${pub.date})${pub.url ? `\n  ${pub.url}` : ""}`).join("\n")}
 
 MEDIA & DIGITAL PRESENCE
 ─────────────────────────

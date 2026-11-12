@@ -407,6 +407,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.kiminouknox.com/work</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
+      <image:title>Kiminou Knox official author headshot</image:title>
+      <image:caption>Official author headshot of Kiminou Knox.</image:caption>
+      <image:license>https://www.kiminouknox.com/media</image:license>
+
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.kiminouknox.com/legacy</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/photos/kiminou-knox/kiminou-knox-official-author-headshot-2026.jpg</image:loc>
