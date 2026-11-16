@@ -71,7 +71,7 @@ export default function FeaturedBookPromo() {
           >
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-amber-400/75 mb-5 font-medium">
-                Most-Read · 145 Ratings
+                Most-Read Collection
               </p>
               <h2
                 className="font-serif text-3xl md:text-4xl xl:text-5xl font-light leading-tight text-white mb-4"
@@ -86,7 +86,7 @@ export default function FeaturedBookPromo() {
               className="text-base text-white/63 leading-relaxed"
               data-testid="featured-book-description"
             >
-              An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Kiminou's most-read work — 145 ratings on Google Play Books.
+              An intimate, emotionally charged collection on longing, closure, and the courage to stay tender. Kiminou's most-read work.
             </p>
 
             <div className="flex flex-wrap gap-2">

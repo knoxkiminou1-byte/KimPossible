@@ -6,8 +6,8 @@ const PageHero3D = lazy(() => import("@/components/LuxuryFX/PageHero3D"));
 import MagneticElement from "@/components/LuxuryFX/MagneticElement";
 
 const ROLE_WORDS = [
-  { word: "ATHLETE", from: { x: -340, y: 0, rotate: -8, filter: "blur(18px)" }, delay: 0.0 },
-  { word: "AUTHOR", from: { x: 0, y: -180, rotate: 6, filter: "blur(18px)" }, delay: 0.18 },
+  { word: "AUTHOR", from: { x: -340, y: 0, rotate: -8, filter: "blur(18px)" }, delay: 0.0 },
+  { word: "ATHLETE", from: { x: 0, y: -180, rotate: 6, filter: "blur(18px)" }, delay: 0.18 },
   { word: "ENTREPRENEUR", from: { x: 340, y: 0, rotate: -5, filter: "blur(18px)" }, delay: 0.34 },
 ];
 

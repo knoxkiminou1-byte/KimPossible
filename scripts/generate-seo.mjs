@@ -401,6 +401,7 @@ const routes = [
   { loc: "/", changefreq: "weekly", priority: "1.0", lastmod: today },
   { loc: "/about", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/works", changefreq: "monthly", priority: "0.9", lastmod: today },
+  { loc: "/work", changefreq: "monthly", priority: "0.8", lastmod: today },
   { loc: "/podcast", changefreq: "weekly", priority: "0.85", lastmod: latestEpisodeDate },
   { loc: "/author", changefreq: "monthly", priority: "0.9", lastmod: today },
   { loc: "/legacy", changefreq: "monthly", priority: "0.7", lastmod: today },
