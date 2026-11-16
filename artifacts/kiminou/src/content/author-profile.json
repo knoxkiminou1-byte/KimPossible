@@ -3,7 +3,7 @@
   "authorCountLabel": "Author of ten books",
   "searchDescription": "Official website of Kiminou Knox, Bay Area raised, New Orleans based author and poet of ten published books, host of KimYaps, Director at AAFC, and creator of the Black Boy Lie universe.",
   "shortBio": "Kiminou Knox is a Bay Area raised, New Orleans based author and poet with ten published books. He writes across poetry, faith, identity, love, family, imagination, and youth storytelling, hosts the KimYaps podcast, created the Black Boy Lie universe, and serves as a director at Artists and Athletes for Change.",
-  "catalogEditionNote": "The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father is published as a Remastered Edition, its only public edition. Other remastered formats are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy.",
+  "catalogEditionNote": "The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father. is an independent original book, the tenth book, not a remastered edition of any earlier book. Remastered formats of other titles are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy.",
   "publications": [
     {
       "venue": "Ink & Echo",
@@ -62,6 +62,30 @@
       "title": "Made for the Wide",
       "type": "Poem",
       "date": "2026"
+    },
+    {
+      "venue": "FEED THE HOLY",
+      "title": "A Father Runs Toward the Scream",
+      "type": "Poem (accepted, forthcoming)",
+      "date": "2027-04-14"
+    },
+    {
+      "venue": "FEED THE HOLY",
+      "title": "My Grandmother's Bible",
+      "type": "Poem (accepted, forthcoming)",
+      "date": "2027-05-17"
+    },
+    {
+      "venue": "FEED THE HOLY",
+      "title": "Teaching Him to Walk",
+      "type": "Poem (accepted, forthcoming)",
+      "date": "2027-06-19"
+    },
+    {
+      "venue": "North of Oxford",
+      "title": "The Fourth Verse",
+      "type": "Poem (accepted, forthcoming)",
+      "date": "2027-04-06"
     }
   ],
   "canonicalBooks": [

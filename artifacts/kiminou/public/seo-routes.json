@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T01:49:24.026Z",
+  "generatedAt": "2026-11-16T20:55:39.814Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -66,7 +66,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -107,7 +107,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -130,7 +130,7 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -171,7 +171,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -189,12 +189,12 @@
       "sections": [
         {
           "heading": "Works",
-          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; Boys Raised in Silence; Why Did You Ghost Me?; My Father; 7.16.74: An Ode to Rashida; The Adventures of Kiminou the Great and Chua the Wise; Kiminou's World of Imagination: The Basics The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father is published as a Remastered Edition, its only public edition. Other remastered formats are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy."
+          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; Boys Raised in Silence; Why Did You Ghost Me?; My Father; 7.16.74: An Ode to Rashida; The Adventures of Kiminou the Great and Chua the Wise; Kiminou's World of Imagination: The Basics The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father. is an independent original book, the tenth book, not a remastered edition of any earlier book. Remastered formats of other titles are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy."
         }
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -218,7 +218,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -241,7 +241,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -282,7 +282,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -305,7 +305,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/work",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -346,7 +346,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -368,7 +368,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/legacy",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -409,7 +409,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -427,12 +427,12 @@
       "sections": [
         {
           "heading": "Published Books",
-          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; Boys Raised in Silence; Why Did You Ghost Me?; My Father; 7.16.74: An Ode to Rashida; The Adventures of Kiminou the Great and Chua the Wise; Kiminou's World of Imagination: The Basics The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father is published as a Remastered Edition, its only public edition. Other remastered formats are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy."
+          "text": "The Spirit of Solomon; Our Father?; Hopeless Romantic; Poems From a Black Boy; Boys Raised in Silence; Why Did You Ghost Me?; My Father; 7.16.74: An Ode to Rashida; The Adventures of Kiminou the Great and Chua the Wise; Kiminou's World of Imagination: The Basics The official bibliography contains ten distinct published books: eight poetry collections and two children's books. My Father. is an independent original book, the tenth book, not a remastered edition of any earlier book. Remastered formats of other titles are cataloged as editions of their originals, not counted as additional titles, and Black Boy Poems is the paperback title of Poems From A Black Boy."
         }
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -456,7 +456,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -478,7 +478,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books/universe",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -502,7 +502,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -526,7 +526,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -567,7 +567,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1206,7 +1206,7 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1247,7 +1247,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1268,7 +1268,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/now",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1309,7 +1309,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1333,7 +1333,7 @@
         },
         {
           "heading": "Published & Featured",
-          "text": "Take Another One (Poem, Ink & Echo, 2026-11-11); God Ain't Watching (Poem, Ink & Echo, 2026-11-11); there's someone who loves you (Poem, Ink & Echo, 2026-11-11); Author Spotlight: Kiminou Knox (Author Spotlight, Pyrrhic Press Publishing, 2026-11-11); Pyrrhic Press Publishing Welcomes Ten-Book Author Kiminou Knox (Press Release, PRLog, 2026-11-11); Professionals United in Literary & Scholarly Excellence (Membership, PULSE, 2026-11-11); The Black Boy Lie (Poem, Emerald City Ghosts, 2026); Made for the Wide (Poem, Spare Parts Literary, 2026)"
+          "text": "Take Another One (Poem, Ink & Echo, 2026-11-11); God Ain't Watching (Poem, Ink & Echo, 2026-11-11); there's someone who loves you (Poem, Ink & Echo, 2026-11-11); Author Spotlight: Kiminou Knox (Author Spotlight, Pyrrhic Press Publishing, 2026-11-11); Pyrrhic Press Publishing Welcomes Ten-Book Author Kiminou Knox (Press Release, PRLog, 2026-11-11); Professionals United in Literary & Scholarly Excellence (Membership, PULSE, 2026-11-11); The Black Boy Lie (Poem, Emerald City Ghosts, 2026); Made for the Wide (Poem, Spare Parts Literary, 2026); A Father Runs Toward the Scream (Poem (accepted, forthcoming), FEED THE HOLY, 2027-04-14); My Grandmother's Bible (Poem (accepted, forthcoming), FEED THE HOLY, 2027-05-17); Teaching Him to Walk (Poem (accepted, forthcoming), FEED THE HOLY, 2027-06-19); The Fourth Verse (Poem (accepted, forthcoming), North of Oxford, 2027-04-06)"
         }
       ],
       "schemaType": "ProfilePage",
@@ -1476,11 +1476,75 @@
                 "name": "Spare Parts Literary"
               }
             }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "A Father Runs Toward the Scream",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              },
+              "datePublished": "2027-04-14",
+              "publisher": {
+                "@type": "Organization",
+                "name": "FEED THE HOLY"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "My Grandmother's Bible",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              },
+              "datePublished": "2027-05-17",
+              "publisher": {
+                "@type": "Organization",
+                "name": "FEED THE HOLY"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Teaching Him to Walk",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              },
+              "datePublished": "2027-06-19",
+              "publisher": {
+                "@type": "Organization",
+                "name": "FEED THE HOLY"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "The Fourth Verse",
+              "author": {
+                "@id": "https://www.kiminouknox.com/#person"
+              },
+              "datePublished": "2027-04-06",
+              "publisher": {
+                "@type": "Organization",
+                "name": "North of Oxford"
+              }
+            }
           }
         ]
       },
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1521,7 +1585,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         },
         {
           "@context": "https://schema.org",
@@ -1662,6 +1726,70 @@
                   "name": "Spare Parts Literary"
                 }
               }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "A Father Runs Toward the Scream",
+                "author": {
+                  "@id": "https://www.kiminouknox.com/#person"
+                },
+                "datePublished": "2027-04-14",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "FEED THE HOLY"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "My Grandmother's Bible",
+                "author": {
+                  "@id": "https://www.kiminouknox.com/#person"
+                },
+                "datePublished": "2027-05-17",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "FEED THE HOLY"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "Teaching Him to Walk",
+                "author": {
+                  "@id": "https://www.kiminouknox.com/#person"
+                },
+                "datePublished": "2027-06-19",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "FEED THE HOLY"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "The Fourth Verse",
+                "author": {
+                  "@id": "https://www.kiminouknox.com/#person"
+                },
+                "datePublished": "2027-04-06",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "North of Oxford"
+                }
+              }
             }
           ]
         }
@@ -1685,7 +1813,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/media",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1726,7 +1854,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1748,7 +1876,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1440,
       "imageHeight": 1794,
       "imageType": "image/jpeg",
@@ -1789,7 +1917,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1811,7 +1939,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports/recruiting",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1440,
       "imageHeight": 1794,
       "imageType": "image/jpeg",
@@ -1852,7 +1980,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1874,7 +2002,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "imageWidth": 1152,
       "imageHeight": 2048,
       "imageType": "image/jpeg",
@@ -1915,7 +2043,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1938,7 +2066,7 @@
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -1962,7 +2090,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -1984,7 +2112,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-16",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -2008,7 +2136,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-12"
+          "dateModified": "2026-11-16"
         }
       ]
     },
@@ -2328,9 +2456,6 @@
       "title": "My Father by Kiminou Knox | Poetry Collection",
       "description": "My Father by Kiminou Knox. Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
       "image": "https://www.kiminouknox.com/covers/my-father-remastered-edition.jpg",
-      "imageWidth": 1600,
-      "imageHeight": 2560,
-      "imageType": "image/jpeg",
       "keywords": [
         "My Father",
         "Kiminou Knox book",
@@ -2342,7 +2467,7 @@
       "sections": [
         {
           "heading": "My Father",
-          "text": "Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too. Published 2026."
+          "text": "Love Letters to God. Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too. Published 2026. ISBN 9798188097127."
         },
         {
           "heading": "Themes",
@@ -2366,7 +2491,7 @@
           "name": "Kiminou Knox"
         },
         "datePublished": "2026-07-20",
-        "bookEdition": "Remastered Edition",
+        "isbn": "9798188097127",
         "numberOfPages": 133,
         "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
         "genre": "Poetry",
@@ -2419,7 +2544,7 @@
             "name": "Kiminou Knox"
           },
           "datePublished": "2026-07-20",
-          "bookEdition": "Remastered Edition",
+          "isbn": "9798188097127",
           "numberOfPages": 133,
           "description": "Contemporary Christian poetry about fatherhood, depression, work, prayer, the Black Church, religious trauma, grace, and the way a struggling believer's questions change when life makes him a father too.",
           "genre": "Poetry",

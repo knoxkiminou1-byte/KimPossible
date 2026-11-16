@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-11-12T01:49:24.026Z",
+  "dateModified": "2026-11-16T20:55:39.814Z",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://www.kiminouknox.com/#person",
@@ -233,6 +233,70 @@
           "publisher": {
             "@type": "Organization",
             "name": "Spare Parts Literary"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "A Father Runs Toward the Scream",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2027-04-14",
+          "publisher": {
+            "@type": "Organization",
+            "name": "FEED THE HOLY"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "My Grandmother's Bible",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2027-05-17",
+          "publisher": {
+            "@type": "Organization",
+            "name": "FEED THE HOLY"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Teaching Him to Walk",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2027-06-19",
+          "publisher": {
+            "@type": "Organization",
+            "name": "FEED THE HOLY"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "The Fourth Verse",
+          "author": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "datePublished": "2027-04-06",
+          "publisher": {
+            "@type": "Organization",
+            "name": "North of Oxford"
           }
         }
       }
