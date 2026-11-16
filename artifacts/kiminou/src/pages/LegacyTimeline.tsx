@@ -81,7 +81,7 @@ const MILESTONES: Milestone[] = [
     date: "2025",
     pillar: "Athletics",
     title: "Varsity Athlete, Cristo Rey De La Salle",
-    detail: "Competing as a forward/center, 6'8\", representing Cristo Rey De La Salle in basketball and football.",
+    detail: "Competing as a forward/center, 6'7\", representing Cristo Rey De La Salle in basketball and football.",
     link: { label: "NCSA profile", href: "https://www.ncsasports.org/mens-basketball-recruiting/california/concord/ygnacio-valley-high-school/kiminou-knox" },
   },
   {

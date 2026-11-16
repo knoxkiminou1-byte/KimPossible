@@ -12,7 +12,7 @@ const MILESTONES = [
   {
     year: "2019",
     title: "Athletic Emergence",
-    detail: "Reaches 6'8\" and begins excelling on the basketball court across multiple sports.",
+    detail: "Reaches 6'7\" and begins excelling on the basketball court across multiple sports.",
     category: "athletic",
     x: 28, y: 55,
   },

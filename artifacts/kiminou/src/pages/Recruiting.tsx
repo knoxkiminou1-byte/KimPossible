@@ -9,7 +9,7 @@ import { KIMINOU_IMAGES } from "@/lib/kiminouMedia";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const MEASURABLES = [
-  { label: "Height", value: "6'8\"", source: "NCSA" },
+  { label: "Height", value: "6'7\"", source: "Official" },
   { label: "Weight", value: "235 lbs", source: "NCSA" },
   { label: "Position", value: "Forward / Center", source: "MaxPreps" },
   { label: "Class", value: "2025", source: "NCSA" },

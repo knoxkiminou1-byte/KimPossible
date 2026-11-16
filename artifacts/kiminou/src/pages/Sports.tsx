@@ -22,7 +22,7 @@ const LockerRoom3D = lazy(() => import("@/components/LuxuryFX/LockerRoom3D"));
 
 /* ─── Data ──────────────────────────────────────────────── */
 const measurables = [
-  { label: "Height", value: "6'8\"", numericEnd: null, sub: "Forward / Center", icon: TrendingUp, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
+  { label: "Height", value: "6'7\"", numericEnd: null, sub: "Forward / Center", icon: TrendingUp, source: "Official" },
   { label: "Weight", value: "235", numericEnd: 235, unit: "lbs", sub: "Elite Athletic Build", icon: Target, source: "NCSA", sourceUrl: "https://www.ncsasports.org" },
   { label: "Position", value: "F / C", numericEnd: null, sub: "Ygnacio Valley, Class of 2025", icon: Trophy, source: "MaxPreps", sourceUrl: "https://www.maxpreps.com" },
 ];
@@ -207,21 +207,21 @@ export default function Sports() {
   return (
     <>
       <Helmet>
-        <title>Kiminou Knox — Basketball Athlete Profile | 6'8" Forward/Center, Ygnacio Valley Class of 2025</title>
-        <meta name="description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete (Forward/Center), Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
+        <title>Kiminou Knox — Basketball Athlete Profile | 6'7" Forward/Center, Ygnacio Valley Class of 2025</title>
+        <meta name="description" content={"Kiminou Knox is a 6'7\" 235lb basketball athlete (Forward/Center), Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <link rel="canonical" href="https://www.kiminouknox.com/sports" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://www.kiminouknox.com/sports" />
-        <meta property="og:title" content={"Kiminou Knox — Basketball Athlete Profile | 6'8\" Forward/Center, Ygnacio Valley Class of 2025"} />
-        <meta property="og:description" content={"Kiminou Knox is a 6'8\" 235lb basketball athlete, Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
+        <meta property="og:title" content={"Kiminou Knox — Basketball Athlete Profile | 6'7\" Forward/Center, Ygnacio Valley Class of 2025"} />
+        <meta property="og:description" content={"Kiminou Knox is a 6'7\" 235lb basketball athlete, Ygnacio Valley Class of 2025. Former Cristo Rey De La Salle varsity captain, CaliHoop top-team selection."} />
         <meta property="og:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballMediaPortrait.src}`} />
         <meta property="og:site_name" content="Kiminou Knox" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@KnoxKiminou" />
         <meta name="twitter:creator" content="@KnoxKiminou" />
         <meta name="twitter:title" content="Kiminou Knox — Basketball Athlete Profile" />
-        <meta name="twitter:description" content={"6'8\" multi-sport athlete. Former Cristo Rey De La Salle captain. CaliHoop top-team selection. Ygnacio Valley Class of 2025."} />
+        <meta name="twitter:description" content={"6'7\" multi-sport athlete. Former Cristo Rey De La Salle captain. CaliHoop top-team selection. Ygnacio Valley Class of 2025."} />
         <meta name="twitter:image" content={`${SITE_URL}${KIMINOU_IMAGES.basketballMediaPortrait.src}`} />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -323,7 +323,7 @@ export default function Sports() {
               <motion.div className="flex flex-wrap gap-4 mt-10"
                 initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1.3 }}>
-                {["6'8\"", "235 lbs", "F / C", "Multi-Sport"].map((badge) => (
+                {["6'7\"", "235 lbs", "F / C", "Multi-Sport"].map((badge) => (
                   <motion.span key={badge}
                     className="px-4 py-1.5 border border-amber-400/35 text-amber-300/80 text-xs uppercase tracking-[0.2em] font-medium"
                     style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(8px)" }}
