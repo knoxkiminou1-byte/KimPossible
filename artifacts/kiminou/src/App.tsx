@@ -43,6 +43,8 @@ const Author = lazy(() => import("@/pages/Author"));
 const LegacyTimeline = lazy(() => import("@/pages/LegacyTimeline"));
 const ReadingList = lazy(() => import("@/pages/ReadingList"));
 const Podcast = lazy(() => import("@/pages/Podcast"));
+const StartHere = lazy(() => import("@/pages/StartHere"));
+const SeoLibraryPage = lazy(() => import("@/pages/SeoLibraryPage"));
 
 const POEM_FRAGMENTS = [
   "They called me wise before I learned what wisdom cost.",
@@ -162,6 +164,11 @@ function Router() {
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/reading-list" component={ReadingList} />
         <Route path="/podcast" component={Podcast} />
+        <Route path="/start-here" component={StartHere} />
+        <Route path="/poetry" component={SeoLibraryPage} />
+        <Route path="/poetry/:topic" component={SeoLibraryPage} />
+        <Route path="/quotes" component={SeoLibraryPage} />
+        <Route path="/quotes/:topic" component={SeoLibraryPage} />
         <Route path="/kimyaps">
           <Redirect to="/podcast" />
         </Route>
