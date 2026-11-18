@@ -417,6 +417,15 @@ const routes = [
   { loc: "/portfolio", changefreq: "monthly", priority: "0.75", lastmod: today },
   { loc: "/blog", changefreq: "weekly", priority: "0.9", lastmod: today },
   { loc: "/reading-list", changefreq: "monthly", priority: "0.75", lastmod: today },
+  { loc: "/start-here", changefreq: "monthly", priority: "0.9", lastmod: today },
+  { loc: "/poetry", changefreq: "monthly", priority: "0.85", lastmod: today },
+  { loc: "/poetry/faith", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/poetry/discipline", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/poetry/healing", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/poetry/love", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/quotes", changefreq: "monthly", priority: "0.85", lastmod: today },
+  { loc: "/quotes/faith-and-purpose", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { loc: "/quotes/discipline-and-excellence", changefreq: "monthly", priority: "0.8", lastmod: today },
 ];
 
 for (const book of books) {
@@ -764,6 +773,145 @@ const baseRouteMeta = [
       },
     ],
     schemaType: "CollectionPage",
+  },
+  {
+    loc: "/poetry",
+    title: "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+    description:
+      "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox poetry", "Kiminou Knox poet", "poetry books", "Black poet", "faith poetry"],
+    sections: [
+      {
+        heading: "Core Themes",
+        text: "Faith, discipline, healing, love, Black boyhood, knowledge, identity, and purpose run through Kiminou Knox's poetry and public writing.",
+      },
+      {
+        heading: "Where To Go Next",
+        text: "Use this page as the clean archive, then read the books page, author profile, and individual poetry theme pages for deeper context.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/poetry/faith",
+    title: "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+    description:
+      "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox faith poetry", "Christian poetry", "God and purpose", "Our Father Kiminou Knox"],
+    sections: [
+      {
+        heading: "Why This Lane Matters",
+        text: "The faith work gives readers a direct path into Our Father?, KimYaps, and the spiritual questions that shape Kiminou's public voice.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/poetry/discipline",
+    title: "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+    description:
+      "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["discipline poetry", "Kiminou Knox athlete author", "discipline quotes", "excellence poetry"],
+    sections: [
+      {
+        heading: "The Thread",
+        text: "Discipline is the bridge between Kiminou's books, sport, speaking, and youth work.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/poetry/healing",
+    title: "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+    description:
+      "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["healing poetry", "Black men healing", "Boys Raised in Silence", "Kiminou Knox healing poetry"],
+    sections: [
+      {
+        heading: "Reader Path",
+        text: "Start with Boys Raised in Silence, then move into the KimYaps episodes and essays that talk through pain, pressure, relationships, and grace.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/poetry/love",
+    title: "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+    description:
+      "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["love poetry", "Hopeless Romantic Kiminou Knox", "healing love poems", "poetry book"],
+    sections: [
+      {
+        heading: "Book Lane",
+        text: "Hopeless Romantic is the direct book path for readers who find Kiminou through love poems, heartbreak quotes, and tender lines.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/quotes",
+    title: "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+    description:
+      "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox quotes", "faith quotes", "discipline quotes", "poetry quotes", "purpose quotes"],
+    sections: [
+      {
+        heading: "Use This Page",
+        text: "This quote page links every short line back to a book, essay, or deeper theme page so readers can follow the work.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/quotes/faith-and-purpose",
+    title: "Faith and Purpose Quotes by Kiminou Knox",
+    description:
+      "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["faith and purpose quotes", "God and purpose", "Kiminou Knox faith", "Christian poetry quotes"],
+    sections: [
+      {
+        heading: "Reader Path",
+        text: "These lines point readers toward Our Father?, KimYaps, and the faith-centered essays on the official site.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/quotes/discipline-and-excellence",
+    title: "Discipline and Excellence Quotes by Kiminou Knox",
+    description:
+      "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["discipline quotes", "excellence quotes", "Kiminou Knox discipline", "athlete author quotes"],
+    sections: [
+      {
+        heading: "Reader Path",
+        text: "These quotes are built for readers who find Kiminou through sports, motivation, purpose, writing, and the discipline of becoming.",
+      }
+    ],
+    schemaType: "CollectionPage",
+  },
+  {
+    loc: "/start-here",
+    title: "Start Here | Kiminou Knox",
+    description:
+      "New to Kiminou Knox? Start here: ten published books, the KimYaps podcast, speaking, and press, with the fastest paths into the work.",
+    image: "/kiminou-knox-social-share.png",
+    keywords: ["Kiminou Knox", "start here", "Kiminou Knox books", "KimYaps"],
+    sections: [
+      {
+        heading: "Start Here",
+        text: "The fastest paths into the work of Kiminou Knox: the books, the author, speaking, and the verified press record.",
+      },
+    ],
+    schemaType: "WebPage",
   },
 ];
 

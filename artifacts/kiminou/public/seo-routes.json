@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T21:27:54.099Z",
+  "generatedAt": "2026-11-18T03:22:42.529Z",
   "site": {
     "name": "Kiminou Knox",
     "url": "https://www.kiminouknox.com",
@@ -66,7 +66,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -107,7 +107,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -130,7 +130,7 @@
       ],
       "schemaType": "AboutPage",
       "url": "https://www.kiminouknox.com/about",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -171,7 +171,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -194,7 +194,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/works",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -218,7 +218,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -241,7 +241,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/author",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -282,7 +282,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -305,7 +305,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/work",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -346,7 +346,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -368,7 +368,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/legacy",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -409,7 +409,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -432,7 +432,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -456,7 +456,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -478,7 +478,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/books/universe",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -502,7 +502,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -526,7 +526,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/speaking",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -567,7 +567,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -587,6 +587,10 @@
         {
           "heading": "KimYaps",
           "text": "KimYaps is where Kiminou Knox talks through faith, Black boyhood, masculinity, relationships, culture, grief, discipline, purpose, love, and the parts of life people usually struggle to say plainly."
+        },
+        {
+          "heading": "So I'm Back",
+          "text": "2026-11-18. In this episode of Kim Yaps, the host reflects on personal growth, the concept of peace, and the current political climate in America. The conversation explores the contradictions of seeking peace while navigating life's challenges and the implications of political decisions on society. Takeaways Peace requires sacrifice Political trust is declining Chapters 00:00 Return to the Podcast 01:20 The Quest for Peace 07..."
         },
         {
           "heading": "\"Protecting My Peace\" Is Making You Lonely",
@@ -643,10 +647,6 @@
         {
           "heading": "Trauma Bonds and Jesus | KimYaps",
           "text": "2026-05-09. Kiminou Knox unpacks trauma bonds, confusion, pain, relief, and the difference between attachment that keeps you stuck and the love of Jesus that tells the truth and makes room for healing. KimYaps is hosted by Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, speaker, and youth-centered builder. Start here: https://www.kiminouknox.com/start-here Podcast home: https://www.k..."
-        },
-        {
-          "heading": "What We Inherit: Generational Trauma and Healing | KimYaps",
-          "text": "2026-04-15. This KimYaps episode explores cultural inheritance, intergenerational trauma, family patterns, emotional baggage, and the work of breaking cycles without pretending the weight was never real. KimYaps is hosted by Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, speaker, and youth-centered builder. Start here: https://www.kiminouknox.com/start-here Podcast home: https://www..."
         }
       ],
       "schemaType": "CollectionPage",
@@ -669,6 +669,21 @@
           "https://www.youtube.com/@KiminouKnoxOfficial"
         ],
         "episode": [
+          {
+            "@type": "PodcastEpisode",
+            "name": "So I'm Back",
+            "datePublished": "2026-11-18",
+            "timeRequired": "PT26M16S",
+            "description": "In this episode of Kim Yaps, the host reflects on personal growth, the concept of peace, and the current political climate in America. The conversation explores the contradictions of seeking peace while navigating life's challenges and the implications of political decisions on society. Takeaways Peace requires sacrifice Political trust is declining Chapters 00:00 Return to the Podcast 01:20 The Quest for Peace 07...",
+            "associatedMedia": {
+              "@type": "MediaObject",
+              "contentUrl": "https://api.riverside.com/hosting-analytics/media/74396c73cad323eb3b39ccf7ac3b1fbc951a9cc50c0629b9ae9ed6df5f0bb33f/eyJlcGlzb2RlSWQiOiI3ZDkzNDUyYy1mOGJkLTQ1NGUtYTdlYi1lMzA2MTJhZmNkMjIiLCJwb2RjYXN0SWQiOiJmYjFkOWEzMS1jMTk4LTQxYmMtODlmMC01NTA1NTE5MDllMWQiLCJhY2NvdW50SWQiOiI2OTA3ZmYxNmU4YjYyODJiNDRkMDQ4ZjAiLCJwYXRoIjoibWVkaWEvY2xpcHMvNmFmZDA5MzM4N2Y4MjZkZTE0MTQ4NDMwL2tpbWlub3VzLXN0dWRpby0yMDI2LTExLTE4X18yLTExLTAubXAzIn0=.mp3",
+              "encodingFormat": "audio/mpeg"
+            },
+            "partOfSeries": {
+              "@id": "https://www.kiminouknox.com/#podcast"
+            }
+          },
           {
             "@type": "PodcastEpisode",
             "name": "\"Protecting My Peace\" Is Making You Lonely",
@@ -878,26 +893,11 @@
             "partOfSeries": {
               "@id": "https://www.kiminouknox.com/#podcast"
             }
-          },
-          {
-            "@type": "PodcastEpisode",
-            "name": "What We Inherit: Generational Trauma and Healing | KimYaps",
-            "datePublished": "2026-04-15",
-            "timeRequired": "PT27M4S",
-            "description": "This KimYaps episode explores cultural inheritance, intergenerational trauma, family patterns, emotional baggage, and the work of breaking cycles without pretending the weight was never real. KimYaps is hosted by Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, speaker, and youth-centered builder. Start here: https://www.kiminouknox.com/start-here Podcast home: https://www...",
-            "associatedMedia": {
-              "@type": "MediaObject",
-              "contentUrl": "https://api.riverside.com/hosting-analytics/media/e952f12d49b62eaf01e499994e357078e2baf379fa8e0401a3621710b57963eb/eyJlcGlzb2RlSWQiOiJhMWRkZDc4Ni04ZjQ0LTQ2ODEtOWYzMi0wNzE0Y2RiMmNiYTYiLCJwb2RjYXN0SWQiOiJmYjFkOWEzMS1jMTk4LTQxYmMtODlmMC01NTA1NTE5MDllMWQiLCJhY2NvdW50SWQiOiI2OTA3ZmYxNmU4YjYyODJiNDRkMDQ4ZjAiLCJwYXRoIjoibWVkaWEvY2xpcHMvNjlkOTU0MmI2ZDg4ZDFmYjY1NjM0YjgyL2tpbWlub3VzLXN0dWRpby1jb21wb3Nlci0yMDI2LTQtMTBfXzIxLTQ4LTU5Lm1wMyJ9.mp3",
-              "encodingFormat": "audio/mpeg"
-            },
-            "partOfSeries": {
-              "@id": "https://www.kiminouknox.com/#podcast"
-            }
           }
         ]
       },
       "url": "https://www.kiminouknox.com/podcast",
-      "lastmod": "2026-09-25",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -938,7 +938,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-09-25"
+          "dateModified": "2026-11-18"
         },
         {
           "@context": "https://schema.org",
@@ -959,6 +959,21 @@
             "https://www.youtube.com/@KiminouKnoxOfficial"
           ],
           "episode": [
+            {
+              "@type": "PodcastEpisode",
+              "name": "So I'm Back",
+              "datePublished": "2026-11-18",
+              "timeRequired": "PT26M16S",
+              "description": "In this episode of Kim Yaps, the host reflects on personal growth, the concept of peace, and the current political climate in America. The conversation explores the contradictions of seeking peace while navigating life's challenges and the implications of political decisions on society. Takeaways Peace requires sacrifice Political trust is declining Chapters 00:00 Return to the Podcast 01:20 The Quest for Peace 07...",
+              "associatedMedia": {
+                "@type": "MediaObject",
+                "contentUrl": "https://api.riverside.com/hosting-analytics/media/74396c73cad323eb3b39ccf7ac3b1fbc951a9cc50c0629b9ae9ed6df5f0bb33f/eyJlcGlzb2RlSWQiOiI3ZDkzNDUyYy1mOGJkLTQ1NGUtYTdlYi1lMzA2MTJhZmNkMjIiLCJwb2RjYXN0SWQiOiJmYjFkOWEzMS1jMTk4LTQxYmMtODlmMC01NTA1NTE5MDllMWQiLCJhY2NvdW50SWQiOiI2OTA3ZmYxNmU4YjYyODJiNDRkMDQ4ZjAiLCJwYXRoIjoibWVkaWEvY2xpcHMvNmFmZDA5MzM4N2Y4MjZkZTE0MTQ4NDMwL2tpbWlub3VzLXN0dWRpby0yMDI2LTExLTE4X18yLTExLTAubXAzIn0=.mp3",
+                "encodingFormat": "audio/mpeg"
+              },
+              "partOfSeries": {
+                "@id": "https://www.kiminouknox.com/#podcast"
+              }
+            },
             {
               "@type": "PodcastEpisode",
               "name": "\"Protecting My Peace\" Is Making You Lonely",
@@ -1168,21 +1183,6 @@
               "partOfSeries": {
                 "@id": "https://www.kiminouknox.com/#podcast"
               }
-            },
-            {
-              "@type": "PodcastEpisode",
-              "name": "What We Inherit: Generational Trauma and Healing | KimYaps",
-              "datePublished": "2026-04-15",
-              "timeRequired": "PT27M4S",
-              "description": "This KimYaps episode explores cultural inheritance, intergenerational trauma, family patterns, emotional baggage, and the work of breaking cycles without pretending the weight was never real. KimYaps is hosted by Kiminou Knox, a Bay Area raised, New Orleans based author and poet of ten published books, speaker, and youth-centered builder. Start here: https://www.kiminouknox.com/start-here Podcast home: https://www...",
-              "associatedMedia": {
-                "@type": "MediaObject",
-                "contentUrl": "https://api.riverside.com/hosting-analytics/media/e952f12d49b62eaf01e499994e357078e2baf379fa8e0401a3621710b57963eb/eyJlcGlzb2RlSWQiOiJhMWRkZDc4Ni04ZjQ0LTQ2ODEtOWYzMi0wNzE0Y2RiMmNiYTYiLCJwb2RjYXN0SWQiOiJmYjFkOWEzMS1jMTk4LTQxYmMtODlmMC01NTA1NTE5MDllMWQiLCJhY2NvdW50SWQiOiI2OTA3ZmYxNmU4YjYyODJiNDRkMDQ4ZjAiLCJwYXRoIjoibWVkaWEvY2xpcHMvNjlkOTU0MmI2ZDg4ZDFmYjY1NjM0YjgyL2tpbWlub3VzLXN0dWRpby1jb21wb3Nlci0yMDI2LTQtMTBfXzIxLTQ4LTU5Lm1wMyJ9.mp3",
-                "encodingFormat": "audio/mpeg"
-              },
-              "partOfSeries": {
-                "@id": "https://www.kiminouknox.com/#podcast"
-              }
             }
           ]
         }
@@ -1206,7 +1206,7 @@
       ],
       "schemaType": "ContactPage",
       "url": "https://www.kiminouknox.com/contact",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1247,7 +1247,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -1268,7 +1268,7 @@
       ],
       "schemaType": "WebPage",
       "url": "https://www.kiminouknox.com/now",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1309,7 +1309,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -1544,7 +1544,7 @@
         ]
       },
       "url": "https://www.kiminouknox.com/press",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1585,7 +1585,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         },
         {
           "@context": "https://schema.org",
@@ -1813,7 +1813,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/media",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 1536,
       "imageType": "image/jpeg",
@@ -1854,7 +1854,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -1876,7 +1876,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1440,
       "imageHeight": 1794,
       "imageType": "image/jpeg",
@@ -1917,7 +1917,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -1939,7 +1939,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/sports/recruiting",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1440,
       "imageHeight": 1794,
       "imageType": "image/jpeg",
@@ -1980,7 +1980,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -2002,7 +2002,7 @@
       ],
       "schemaType": "ProfilePage",
       "url": "https://www.kiminouknox.com/portfolio",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "imageWidth": 1152,
       "imageHeight": 2048,
       "imageType": "image/jpeg",
@@ -2043,7 +2043,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -2066,7 +2066,7 @@
       ],
       "schemaType": "Blog",
       "url": "https://www.kiminouknox.com/blog",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -2090,7 +2090,7 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
         }
       ]
     },
@@ -2112,7 +2112,7 @@
       ],
       "schemaType": "CollectionPage",
       "url": "https://www.kiminouknox.com/reading-list",
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-18",
       "schemas": [
         {
           "@context": "https://schema.org",
@@ -2136,7 +2136,436 @@
             "@id": "https://www.kiminouknox.com/#person"
           },
           "inLanguage": "en-US",
-          "dateModified": "2026-11-16"
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/poetry",
+      "title": "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+      "description": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox poetry",
+        "Kiminou Knox poet",
+        "poetry books",
+        "Black poet",
+        "faith poetry"
+      ],
+      "sections": [
+        {
+          "heading": "Core Themes",
+          "text": "Faith, discipline, healing, love, Black boyhood, knowledge, identity, and purpose run through Kiminou Knox's poetry and public writing."
+        },
+        {
+          "heading": "Where To Go Next",
+          "text": "Use this page as the clean archive, then read the books page, author profile, and individual poetry theme pages for deeper context."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/poetry",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry#webpage",
+          "url": "https://www.kiminouknox.com/poetry",
+          "name": "Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood",
+          "description": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/faith",
+      "title": "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+      "description": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox faith poetry",
+        "Christian poetry",
+        "God and purpose",
+        "Our Father Kiminou Knox"
+      ],
+      "sections": [
+        {
+          "heading": "Why This Lane Matters",
+          "text": "The faith work gives readers a direct path into Our Father?, KimYaps, and the spiritual questions that shape Kiminou's public voice."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/poetry/faith",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/faith#webpage",
+          "url": "https://www.kiminouknox.com/poetry/faith",
+          "name": "Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence",
+          "description": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/discipline",
+      "title": "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+      "description": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "discipline poetry",
+        "Kiminou Knox athlete author",
+        "discipline quotes",
+        "excellence poetry"
+      ],
+      "sections": [
+        {
+          "heading": "The Thread",
+          "text": "Discipline is the bridge between Kiminou's books, sport, speaking, and youth work."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/poetry/discipline",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/discipline#webpage",
+          "url": "https://www.kiminouknox.com/poetry/discipline",
+          "name": "Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice",
+          "description": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/healing",
+      "title": "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+      "description": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "healing poetry",
+        "Black men healing",
+        "Boys Raised in Silence",
+        "Kiminou Knox healing poetry"
+      ],
+      "sections": [
+        {
+          "heading": "Reader Path",
+          "text": "Start with Boys Raised in Silence, then move into the KimYaps episodes and essays that talk through pain, pressure, relationships, and grace."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/poetry/healing",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/healing#webpage",
+          "url": "https://www.kiminouknox.com/poetry/healing",
+          "name": "Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice",
+          "description": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/poetry/love",
+      "title": "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+      "description": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "love poetry",
+        "Hopeless Romantic Kiminou Knox",
+        "healing love poems",
+        "poetry book"
+      ],
+      "sections": [
+        {
+          "heading": "Book Lane",
+          "text": "Hopeless Romantic is the direct book path for readers who find Kiminou through love poems, heartbreak quotes, and tender lines."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/poetry/love",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/poetry/love#webpage",
+          "url": "https://www.kiminouknox.com/poetry/love",
+          "name": "Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines",
+          "description": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/quotes",
+      "title": "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+      "description": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox quotes",
+        "faith quotes",
+        "discipline quotes",
+        "poetry quotes",
+        "purpose quotes"
+      ],
+      "sections": [
+        {
+          "heading": "Use This Page",
+          "text": "This quote page links every short line back to a book, essay, or deeper theme page so readers can follow the work."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/quotes",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes#webpage",
+          "url": "https://www.kiminouknox.com/quotes",
+          "name": "Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose",
+          "description": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/quotes/faith-and-purpose",
+      "title": "Faith and Purpose Quotes by Kiminou Knox",
+      "description": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "faith and purpose quotes",
+        "God and purpose",
+        "Kiminou Knox faith",
+        "Christian poetry quotes"
+      ],
+      "sections": [
+        {
+          "heading": "Reader Path",
+          "text": "These lines point readers toward Our Father?, KimYaps, and the faith-centered essays on the official site."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes/faith-and-purpose#webpage",
+          "url": "https://www.kiminouknox.com/quotes/faith-and-purpose",
+          "name": "Faith and Purpose Quotes by Kiminou Knox",
+          "description": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/quotes/discipline-and-excellence",
+      "title": "Discipline and Excellence Quotes by Kiminou Knox",
+      "description": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "discipline quotes",
+        "excellence quotes",
+        "Kiminou Knox discipline",
+        "athlete author quotes"
+      ],
+      "sections": [
+        {
+          "heading": "Reader Path",
+          "text": "These quotes are built for readers who find Kiminou through sports, motivation, purpose, writing, and the discipline of becoming."
+        }
+      ],
+      "schemaType": "CollectionPage",
+      "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.kiminouknox.com/quotes/discipline-and-excellence#webpage",
+          "url": "https://www.kiminouknox.com/quotes/discipline-and-excellence",
+          "name": "Discipline and Excellence Quotes by Kiminou Knox",
+          "description": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "loc": "/start-here",
+      "title": "Start Here | Kiminou Knox",
+      "description": "New to Kiminou Knox? Start here: ten published books, the KimYaps podcast, speaking, and press, with the fastest paths into the work.",
+      "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+      "keywords": [
+        "Kiminou Knox",
+        "start here",
+        "Kiminou Knox books",
+        "KimYaps"
+      ],
+      "sections": [
+        {
+          "heading": "Start Here",
+          "text": "The fastest paths into the work of Kiminou Knox: the books, the author, speaking, and the verified press record."
+        }
+      ],
+      "schemaType": "WebPage",
+      "url": "https://www.kiminouknox.com/start-here",
+      "lastmod": "2026-11-18",
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://www.kiminouknox.com/start-here#webpage",
+          "url": "https://www.kiminouknox.com/start-here",
+          "name": "Start Here | Kiminou Knox",
+          "description": "New to Kiminou Knox? Start here: ten published books, the KimYaps podcast, speaking, and press, with the fastest paths into the work.",
+          "image": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "thumbnailUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "contentUrl": "https://www.kiminouknox.com/kiminou-knox-social-share.png",
+            "caption": "New to Kiminou Knox? Start here: ten published books, the KimYaps podcast, speaking, and press, with the fastest paths into the work."
+          },
+          "isPartOf": {
+            "@id": "https://www.kiminouknox.com/#website"
+          },
+          "about": {
+            "@id": "https://www.kiminouknox.com/#person"
+          },
+          "inLanguage": "en-US",
+          "dateModified": "2026-11-18"
         }
       ]
     },

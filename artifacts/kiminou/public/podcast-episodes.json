@@ -1,7 +1,19 @@
 {
   "source": "https://api.riverside.fm/hosting/Qs2CJYe0.rss",
-  "generatedAt": "2026-11-12T01:49:24.026Z",
+  "generatedAt": "2026-11-18T03:22:42.529Z",
   "episodes": [
+    {
+      "title": "So I'm Back",
+      "guid": "7d93452c-f8bd-454e-a7eb-e30612afcd22",
+      "link": "",
+      "datePublished": "2026-11-18",
+      "duration": "PT26M16S",
+      "description": "In this episode of Kim Yaps, the host reflects on personal growth, the concept of peace, and the current political climate in America. The conversation explores the contradictions of seeking peace while navigating life's challenges and the implications of political decisions on society. Takeaways Peace requires sacrifice Political trust is declining Chapters 00:00 Return to the Podcast 01:20 The Quest for Peace 07...",
+      "audioUrl": "https://api.riverside.com/hosting-analytics/media/74396c73cad323eb3b39ccf7ac3b1fbc951a9cc50c0629b9ae9ed6df5f0bb33f/eyJlcGlzb2RlSWQiOiI3ZDkzNDUyYy1mOGJkLTQ1NGUtYTdlYi1lMzA2MTJhZmNkMjIiLCJwb2RjYXN0SWQiOiJmYjFkOWEzMS1jMTk4LTQxYmMtODlmMC01NTA1NTE5MDllMWQiLCJhY2NvdW50SWQiOiI2OTA3ZmYxNmU4YjYyODJiNDRkMDQ4ZjAiLCJwYXRoIjoibWVkaWEvY2xpcHMvNmFmZDA5MzM4N2Y4MjZkZTE0MTQ4NDMwL2tpbWlub3VzLXN0dWRpby0yMDI2LTExLTE4X18yLTExLTAubXAzIn0=.mp3",
+      "audioType": "audio/mpeg",
+      "transcriptUrl": "https://hosting-media.riverside.com/media/podcasts/fb1d9a31-c198-41bc-89f0-550551909e1d/episodes/7d93452c-f8bd-454e-a7eb-e30612afcd22/transcripts/b6e4fd8a-5662-49f8-8be2-9428e80145bc.txt",
+      "transcriptType": "text/plain"
+    },
     {
       "title": "\"Protecting My Peace\" Is Making You Lonely",
       "guid": "f830d616-b01a-41ee-b802-74d9a738e63c",

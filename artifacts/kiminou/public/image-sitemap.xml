@@ -465,6 +465,87 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.kiminouknox.com/poetry</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Kiminou Knox Poetry | Faith, Love, Discipline, and Black Boyhood</image:title>
+      <image:caption>Read selected poetry excerpts by Kiminou Knox across faith, love, discipline, healing, identity, and Black boyhood, with links to books and author pages.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/poetry/faith</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Faith Poetry by Kiminou Knox | Our Father?, Purpose, and Divine Silence</image:title>
+      <image:caption>Selected faith poetry by Kiminou Knox from Our Father? and related work on God, doubt, prayer, purpose, and spiritual honesty.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/poetry/discipline</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Discipline Poetry by Kiminou Knox | Excellence, Sport, and Voice</image:title>
+      <image:caption>Poetry and writing by Kiminou Knox on discipline, excellence, athletics, creative work, and the cost of showing up.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/poetry/healing</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Healing Poetry by Kiminou Knox | Silence, Masculinity, and Voice</image:title>
+      <image:caption>Healing poetry by Kiminou Knox from Boys Raised in Silence and related work on masculinity, emotional honesty, and finding voice.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/poetry/love</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Love Poetry by Kiminou Knox | Hopeless Romantic and Honest Lines</image:title>
+      <image:caption>Love poetry by Kiminou Knox from Hopeless Romantic and related writing on heartbreak, tenderness, closure, longing, and honest love.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/quotes</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Kiminou Knox Quotes | Faith, Discipline, Love, and Purpose</image:title>
+      <image:caption>Selected quotes and short lines by Kiminou Knox for readers looking for faith, discipline, healing, love, identity, and purpose.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/quotes/faith-and-purpose</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Faith and Purpose Quotes by Kiminou Knox</image:title>
+      <image:caption>Faith and purpose quotes by Kiminou Knox from poetry, essays, Our Father?, KimYaps themes, and the public author voice.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/quotes/discipline-and-excellence</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Discipline and Excellence Quotes by Kiminou Knox</image:title>
+      <image:caption>Discipline and excellence quotes by Kiminou Knox connected to sport, writing, leadership, purpose, and creative work.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.kiminouknox.com/start-here</loc>
+    <image:image>
+      <image:loc>https://www.kiminouknox.com/kiminou-knox-social-share.png</image:loc>
+      <image:title>Start Here | Kiminou Knox</image:title>
+      <image:caption>New to Kiminou Knox? Start here: ten published books, the KimYaps podcast, speaking, and press, with the fastest paths into the work.</image:caption>
+
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.kiminouknox.com/books/spirit-solomon</loc>
     <image:image>
       <image:loc>https://www.kiminouknox.com/books/spirit-of-solomon-cover.jpg</image:loc>
